@@ -1,4 +1,13 @@
 header(role='banner')
 	//- .b-flexline
 	#header-mid
-		img(alt="", src="assets/i/logo-robonomics.png", srcset="assets/i/logo-robonomics@2x.png")
+		img#logo-robonomics(alt="", src="assets/i/logo-robonomics.svg")
+		img#logo-ethereum(alt="", src="assets/i/logo-ethereum.svg")
+
+		svg#header-canvas(width="100%", height="100%")
+		//- canvas#header-canvas
+
+
+
+script(src='assets/js/Snap.svg-0.5.1/dist/snap.svg-min.js')
+script(src='assets/js/canvas-header.js')

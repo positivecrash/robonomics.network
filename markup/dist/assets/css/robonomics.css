@@ -2731,25 +2731,35 @@ li.fancybox-thumbs-loading {
     right: 0;
   }
 }
-.hamburger .line {
-  width: 30px;
-  height: 2px;
-  display: block;
-  margin: 8px auto;
-  border-radius: 2px;
-  transition: all .3s ease-in-out;
+header[role='banner'] {
+  text-align: center;
 }
 
-.dropdown:hover .hamburger .line:nth-child(2) {
-  opacity: 0;
+#header-mid {
+  padding-top: 108px;
+  padding-bottom: 108px;
+  position: relative;
 }
-.dropdown:hover .hamburger .line:nth-child(1) {
-  -webkit-transform: translateY(10px) rotate(45deg);
-          transform: translateY(10px) rotate(45deg);
+#header-mid #header-canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
-.dropdown:hover .hamburger .line:nth-child(3) {
-  -webkit-transform: translateY(-10px) rotate(-45deg);
-          transform: translateY(-10px) rotate(-45deg);
+
+#logo-robonomics {
+  display: inline-block;
+  width: 200px;
+}
+
+#logo-ethereum {
+  position: absolute;
+  width: 37px;
+  top: 50px;
+  left: 50%;
+  margin-left: -175px;
 }
 
 html, body {
@@ -2765,8 +2775,8 @@ body {
   background-color: #fff;
   position: relative;
   opacity: 0;
-  -webkit-animation: 0.4s fadeIn ease-in forwards;
-          animation: 0.4s fadeIn ease-in forwards;
+  -webkit-animation: 0.4s FadeIn ease-in forwards;
+          animation: 0.4s FadeIn ease-in forwards;
 }
 
 /*====== Set width of container ======*/
