@@ -1,0 +1,49 @@
+$iconsBrowsers: (
+    spriteBrowsersMap: (width: 49.67px, height: 266px, pngPath: '../i/sprite_browsers.png?1', svgPath: '../i/sprite_browsers.svg?1'),
+    chrome: (width: 44px, height: 44px, backgroundX: 0px, backgroundY: 0px),
+    chrome_hover: (width: 44px, height: 44px, backgroundX: 0px, backgroundY: -44px),
+    firefox: (width: 49.67px, height: 44.42px, backgroundX: 0px, backgroundY: -88px),
+    firefox_hover: (width: 49.67px, height: 44.42px, backgroundX: 0px, backgroundY: -133px),
+    opera: (width: 43.94px, height: 44px, backgroundX: 0px, backgroundY: -178px),
+    opera_hover: (width: 43.94px, height: 44px, backgroundX: 0px, backgroundY: -222px),
+);
+
+$spriteBrowsers: map-get($iconsBrowsers, spriteBrowsersMap);
+
+%browsers_back_svg{ background-image: url(map-get($spriteBrowsers, svgPath)); }
+%browsers_back_png{ background-image: url(map-get($spriteBrowsers, pngPath)); }
+%base_styles {
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+@mixin get-spritebrowsers($spritename){
+    $spritename: map-get($iconsBrowsers, $spritename);
+    
+    width: map-get($spritename, width);
+    height: map-get($spritename, height);
+    background-position: map-get($spritename, backgroundX) map-get($spritename, backgroundY);
+    @extend %base_styles;
+
+    @extend %browsers_back_png;
+    .svg & { @extend %browsers_back_svg; }
+}
+
+.sprite-browsers-chrome{
+  @include get-spritebrowsers('chrome');
+}
+.sprite-browsers-chrome_hover{
+  @include get-spritebrowsers('chrome_hover');
+}
+.sprite-browsers-firefox{
+  @include get-spritebrowsers('firefox');
+}
+.sprite-browsers-firefox_hover{
+  @include get-spritebrowsers('firefox_hover');
+}
+.sprite-browsers-opera{
+  @include get-spritebrowsers('opera');
+}
+.sprite-browsers-opera_hover{
+  @include get-spritebrowsers('opera_hover');
+}

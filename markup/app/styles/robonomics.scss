@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+@import "compass";
+
+@import "utilities/my_reset";
+@import "utilities/media";
+@import "utilities/variables";
+
+@import "utilities/extends";
+@import "utilities/mixins";
+
+@import "utilities/text";
+@import "utilities/animation";
+
+@import "utilities/sprite";
+@import "utilities/spriteBrowsers";
+@import "utilities/sprites_init";
+
+@import "plugins/bootstrap/bootstrap-grid";
+@import "plugins/fancybox";
+
+@import "sections/header";
+@import "sections/footer";
+@import "sections/forms";
+
+@import "pages/index";
+
+
+html, body
+  {
+    height: 100%;
+    min-height: 100%;
+  }
+
+
+html
+  {
+    position: relative;
+  }
+
+
+body
+  {
+    background-color: #fff;
+
+    position: relative;
+
+    opacity: 0;
+    animation: 0.4s fadeIn ease-in forwards;
+  }
+
+
+
+
+
+/*====== Set width of container ======*/
+.secw-base
+  { @include secw($mq-desktop); }
+
+.secw-full
+  {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+
+/*====== end of Set width of container ======*/
+
+
+
+
+
+/*====== Flow elements ======*/
+
+.f-zoom
+  { overflow: hidden; }
+.f-left
+  { float: left; }
+.f-right
+  { float: right; }
+
+
+.d-t
+  {
+    display: table;
+
+    & > *{
+      display: table-cell;
+    }
+  }
+
+.d-t_row
+  { display: table-row; }
+.d-t_cell 
+  { display: table-cell; }
+
+
+.d-ib
+  { display: inline-block; }
+.d-b
+  { display: block; }
+
+
+.d-flexline
+  { 
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    align-items: center;
+  }
+
+/*====== Flow elements ======*/
+
+
+
+
+
+
+/*====== Transitions ======*/
+
+.fadeOut, .visible { transition: 0.3s ease-in-out opacity; }
+.fadeOut { opacity: 0; height: 0; }
+.visible { opacity: 1; height: auto; }
+
+
+.dropdown
+  {
+    position: relative;
+
+    .dropdown-content
+      {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+    &:hover
+      {
+        .dropdown-content { animation: 0.2s FadeIn 0.4s ease-out forwards; }
+      }
+  }
+
+/*====== end of Transitions ======*/
+
+
+
+
+
+
+/*====== Bootstrap ======*/
+.row
+  {
+    margin-left: -#{$padding-fields}px; 
+    margin-right: -#{$padding-fields}px; 
+
+    *[class*='col-']
+    {
+      @include rem('margin-bottom', $margin-sec);
+    }
+  }
+/*====== end of Bootstrap ======*/
+
+
+
+
+
+
+
+/*====== Sections ======*/
+
+section
+  {
+    @include rem('margin-top', $margin-sec);
+    @include rem('margin-bottom', $margin-sec);
+  }
+
+.sec-colored
+  {
+    @include rem('padding-top', $margin-sec);
+    @include rem('padding-bottom', $margin-sec);
+  }
+/*====== end of Sections ======*/
+
+

@@ -1,0 +1,30 @@
+$icons: (
+    sprite: (width: 46px, height: 21.07px, pngPath: '../i/sprite.png?1', svgPath: '../i/sprite.svg?1'),
+    check: (width: 28.36px, height: 16.31px, backgroundX: 0px, backgroundY: 0px),
+    copy: (width: 16.87px, height: 21.07px, backgroundX: -29px, backgroundY: 0px),
+);
+
+$sprite: map-get($icons, sprite);
+
+%back_svg{ background-image: url(map-get($sprite, svgPath)); }
+%back_png{ background-image: url(map-get($sprite, pngPath)); }
+
+@mixin get-sprite($spritename){
+    $spritename: map-get($icons, $spritename);
+    
+    width: map-get($spritename, width);
+    height: map-get($spritename, height);
+    background-position: map-get($spritename, backgroundX) map-get($spritename, backgroundY);
+
+    @extend %back_png;
+    .svg & { @extend %back_svg; }
+}
+
+.sprite-basic-check{
+  @include get-sprite('check');
+  display: inline-block;
+}
+.sprite-basic-copy{
+  @include get-sprite('copy');
+  display: inline-block;
+}

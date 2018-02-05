@@ -1,0 +1,3 @@
+.sprite-browsers-chrome:hover { @include get-spritebrowsers('chrome_hover'); }
+.sprite-browsers-firefox:hover { @include get-spritebrowsers('firefox_hover'); }
+.sprite-browsers-opera:hover { @include get-spritebrowsers('opera_hover'); }
