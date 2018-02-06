@@ -5,9 +5,10 @@ header[role='banner']
 
 #header-mid
   {
-    padding-top: 108px;
-    padding-bottom: 108px;
+    padding-top: 68px;
+    padding-bottom: 122px;
     position: relative;
+    overflow: hidden;
 
 
     #header-canvas
@@ -15,7 +16,8 @@ header[role='banner']
         display: block;
         position: absolute;
         top: 0;
-        left: 0;
+        left: 50%;
+        // left: 0;
         right: 0;
         bottom: 0;
       }
