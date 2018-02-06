@@ -33,7 +33,8 @@ jQuery(document).ready(function($){
 
 	//Text styles
 	var
-		TextStyleRobonomics = { fontSize: 24, fontWeight: '300', fill: '#F15A24'}
+		TextStyleRobonomicsStart = { fontSize: 24, fontWeight: '300', fill: '#282B38'},
+		TextStyleRobonomics = { fill: '#F15A24'};
 
 
 
@@ -45,7 +46,7 @@ jQuery(document).ready(function($){
 				return s
 					.circle(x, y, 0)
 					.attr(attrDotIn)
-					.animate(attrDotOut, 1500, mina.elastic);
+					.animate(attrDotOut, 5000, mina.elastic);
 
 			if (animate == 'false')
 				return s
@@ -93,11 +94,12 @@ jQuery(document).ready(function($){
 				{
 					if (num == i)
 					{
-						array[i].stop().animate({'r': 0}, 50, mina.linear);
+						array[i].stop().animate({'r': 0}, 450, mina.elastic);
 
 						s
 							.text(array[i].getBBox().cx+x, array[i].getBBox().cy+y, text)
-							.attr(style);
+							.attr(TextStyleRobonomicsStart)
+							.animate(style, 5000, mina.elastic);
 					}
 				}
   		}
@@ -157,7 +159,7 @@ jQuery(document).ready(function($){
 		drawGrid('true');
   	}, 500);
 
-	var TextRobonomicsDelay = [1000, 1000, 1300, 1000, 1600, 1700, 1200, 1100, 1100, 1100];
+	var TextRobonomicsDelay = [2700, 2500, 2600, 2000, 2800, 3300, 3000, 3100, 3200, 2900];
 	TextRobonomics(TextRobonomicsDelay);
 
 
