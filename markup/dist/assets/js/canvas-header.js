@@ -1,20 +1,31 @@
 jQuery(document).ready(function($){
 
-
+	//Objects
 	var
 		$w = $(window),
 		s = Snap('#header-canvas'),
-		obj = $('#header-mid'),
+		obj = $('#header-mid');
+
+
+
+	//Measures
+	var
 		cw = 0,
 		ch = 0,
 		distX = 90,
 		distY = 90,
-		radius = 3.5,
-		dCol = '#cccccc',
-		dot;
+		radius = 3.5;
+
+
+	//Colors
+	var
+		colorDot = '#cccccc',
+		colorDotHov = '#03A5ED';
 
 
 
+
+	//Draw dots in grid
 	function drawGrid()
 		{
 			cw = obj.outerWidth(true);
@@ -22,21 +33,24 @@ jQuery(document).ready(function($){
 
 			for (var x = cw/2+distX/2+radius; x < cw; x += distX) {
 				for (var y = radius; y < ch; y += distY) {
-					dot = s.circle(x, y, radius);
-					dot.attr({ fill: dCol });
+					s
+						.circle(x, y, radius)
+						.attr({ fill: colorDot });
 				}
 			}
 
 			for (var x = cw/2+distX/2+radius; x > 0; x -= distX) {
 				for (var y = radius; y < ch; y += distY) {
-					dot = s.circle(x, y, radius);
-					dot.attr({ fill: dCol });
+					s
+						.circle(x, y, radius)
+						.attr({ fill: colorDot });
 				}
 			}
 			
 		}
 
 	drawGrid();
+
 
 	$w.on('resize', function(){
 		s.attr({  width: obj.outerWidth(true), height: obj.outerHeight(true) });
@@ -46,42 +60,29 @@ jQuery(document).ready(function($){
 
 
 
-	// var
-	// 	obj = $('#header-mid'),
-	// 	canvas = document.getElementById('header-canvas'),
-	// 	context = canvas.getContext('2d'),
-	// 	$w = $(window),
-	// 	cw = obj.outerWidth(true),
-	//   	ch = obj.outerHeight(true),
-	//   	r = 7,
-	//   	distX = 90,
-	// 	distY = 90;
 
+	//Hover effect on main SVG object
 
+	s.hover(
+		function(e){
+			e = e || window.event;
 
-	// function drawDots() {
-	//   for (var x = cw/2+distX/2; x < cw; x+=distX) {
-	//     for (var y = r; y < ch; y+=distY) {
-	//         context.fillStyle = '#cccccc';   
-	//         context.fillRect(x-r/2,y-r/2,r,r);
-	//       }
-	//   }
-	// }
+			Snap(e.target).animate({
+	          fill: colorDotHov
+	        },500);
+		}
 
+		,function(e){
+			e = e || window.event;
 
+			setTimeout(function(){
+	         Snap(e.target).animate({
+	            fill: colorDot
+	          }, 1000);
+	        }, 3000);
+		}
+	);
 
-	// function resizeCanvas() {
-	//   canvas.width = obj.outerWidth(true);
-	//   canvas.height = obj.outerHeight(true);
-	//   drawDots();
-	// }
-
-
-	// resizeCanvas();
-
-	// $w.on('resize', function(){
-	//   	resizeCanvas();
-	// });
 
 
 });

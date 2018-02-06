@@ -2757,9 +2757,9 @@ header[role='banner'] {
 #logo-ethereum {
   position: absolute;
   width: 37px;
-  top: 50px;
+  top: 17px;
   left: 50%;
-  margin-left: -175px;
+  margin-left: -195px;
 }
 
 html, body {
