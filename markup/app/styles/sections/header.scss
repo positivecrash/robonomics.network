@@ -3,6 +3,133 @@ header[role='banner']
     text-align: center;
   }
 
+
+
+/*====== Top section ======*/
+
+#header-top__logo
+  {
+    @include mobile()
+      {
+        animation: FadeIn 1s ease forwards;
+      }
+  }
+
+
+.header-top__nav
+  {
+    & > *
+      {
+        display: inline-block;
+        margin-right: 60px;
+
+        &:last-child
+          {
+            margin-right: 0;
+          }
+      }
+
+    a
+      {
+        @extend %link_noline;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1;
+        color: $c-text;
+      }
+
+
+    .dropdown
+      {
+        & > a
+          {
+            position: relative;
+
+            &:before, &:after
+              {
+                content:"";
+                height: 1px;
+                background-color: $c-violet-dark;
+                position: absolute;
+                bottom: -2px;
+                transition: all 0.2s ease-in-out;
+                width: 50%;
+              }
+
+            &:before
+              {
+                left: 0;
+                right: 50%;
+              }
+
+            &:after
+              {
+                left: 50%;
+                right: 0;
+              }
+          }
+
+
+        &:hover
+          {
+              & > a
+                {
+                  &:before, &:after
+                    {
+                      bottom: -10px;
+                      width: 14px;
+                      left: 50%;
+                      right: auto;
+                    }
+
+                  &:before
+                    {
+                      transform: rotate(30deg);
+                      transform-origin: 100% 0;
+                      margin-left: -13px;
+                    }
+
+                  &:after
+                    {
+                      transform: rotate(-30deg);
+                      transform-origin: 0 0;
+                    }
+                }
+          }
+      }
+
+
+      
+  }
+
+
+
+#header-top
+  {
+    & > .secw-base
+      {
+        display: table;
+        width: 100%;
+     }
+  }
+
+.header-top__sec
+  {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 20px 0 30px;
+
+    &:last-child { text-align: right; }
+  }
+
+/*====== end of Top section ======*/
+
+
+
+
+
+
+/*====== Middle section ======*/
 #header-mid
   {
     position: relative;
@@ -20,7 +147,7 @@ header[role='banner']
     opacity: 0;
     transform: scale(.3);
 
-    animation: Bounce-in 1s ease forwards;
+    animation: BounceIn 1s ease forwards;
   }
 
 #logo-ethereum
@@ -34,10 +161,15 @@ header[role='banner']
     opacity: 0;
     transform: scale(.3);
 
-    animation: 0.5s Bounce-in 1s ease forwards;
+    animation: 0.5s BounceIn 1s ease forwards;
   }
 
 
+
+
+
+
+/*====== Canvas ======*/
 #header-canvas-wrap
   {
     overflow: hidden;
@@ -75,6 +207,11 @@ header[role='banner']
   }
 
 
+
+
+
+
+/*====== Titles ======*/
 #header-title
   {
     margin-top: 97px;
@@ -99,6 +236,12 @@ header[role='banner']
     font-weight: 300;
     margin-top: 20px;
   }
+
+
+
+
+
+
 
 // .hamburger{
 //   .line{

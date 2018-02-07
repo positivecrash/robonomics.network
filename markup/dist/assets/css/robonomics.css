@@ -39,6 +39,11 @@ input, select {
 /*====== Colors ======*/
 /*====== Classes ======*/
 /*====== Bootstrap ======*/
+.header-top__nav a, .header-top__nav a:hover, .header-top__nav a:focus, .header-top__nav a:visited {
+  text-decoration: none;
+  text-decoration: none !important;
+}
+
 body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -235,7 +240,7 @@ table td, table th {
     opacity: 1;
   }
 }
-@-webkit-keyframes Bounce-in {
+@-webkit-keyframes BounceIn {
   0% {
     opacity: 0;
     -webkit-transform: scale(0.3);
@@ -256,7 +261,7 @@ table td, table th {
             transform: scale(1);
   }
 }
-@keyframes Bounce-in {
+@keyframes BounceIn {
   0% {
     opacity: 0;
     -webkit-transform: scale(0.3);
@@ -2777,6 +2782,83 @@ header[role='banner'] {
   text-align: center;
 }
 
+/*====== Top section ======*/
+@media screen and (max-width: 570px) {
+  #header-top__logo {
+    -webkit-animation: FadeIn 1s ease forwards;
+            animation: FadeIn 1s ease forwards;
+  }
+}
+
+.header-top__nav > * {
+  display: inline-block;
+  margin-right: 60px;
+}
+.header-top__nav > *:last-child {
+  margin-right: 0;
+}
+.header-top__nav a {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  color: #282B38;
+}
+.header-top__nav .dropdown > a {
+  position: relative;
+}
+.header-top__nav .dropdown > a:before, .header-top__nav .dropdown > a:after {
+  content: "";
+  height: 1px;
+  background-color: #282B38;
+  position: absolute;
+  bottom: -2px;
+  transition: all 0.2s ease-in-out;
+  width: 50%;
+}
+.header-top__nav .dropdown > a:before {
+  left: 0;
+  right: 50%;
+}
+.header-top__nav .dropdown > a:after {
+  left: 50%;
+  right: 0;
+}
+.header-top__nav .dropdown:hover > a:before, .header-top__nav .dropdown:hover > a:after {
+  bottom: -10px;
+  width: 14px;
+  left: 50%;
+  right: auto;
+}
+.header-top__nav .dropdown:hover > a:before {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  margin-left: -13px;
+}
+.header-top__nav .dropdown:hover > a:after {
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+#header-top > .secw-base {
+  display: table;
+  width: 100%;
+}
+
+.header-top__sec {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 20px 0 30px;
+}
+.header-top__sec:last-child {
+  text-align: right;
+}
+
+/*====== end of Top section ======*/
+/*====== Middle section ======*/
 #header-mid {
   position: relative;
   padding-top: 68px;
@@ -2790,8 +2872,8 @@ header[role='banner'] {
   opacity: 0;
   -webkit-transform: scale(0.3);
           transform: scale(0.3);
-  -webkit-animation: Bounce-in 1s ease forwards;
-          animation: Bounce-in 1s ease forwards;
+  -webkit-animation: BounceIn 1s ease forwards;
+          animation: BounceIn 1s ease forwards;
 }
 
 #logo-ethereum {
@@ -2803,10 +2885,11 @@ header[role='banner'] {
   opacity: 0;
   -webkit-transform: scale(0.3);
           transform: scale(0.3);
-  -webkit-animation: 0.5s Bounce-in 1s ease forwards;
-          animation: 0.5s Bounce-in 1s ease forwards;
+  -webkit-animation: 0.5s BounceIn 1s ease forwards;
+          animation: 0.5s BounceIn 1s ease forwards;
 }
 
+/*====== Canvas ======*/
 #header-canvas-wrap {
   overflow: hidden;
   position: absolute;
@@ -2834,6 +2917,7 @@ header[role='banner'] {
   z-index: 1;
 }
 
+/*====== Titles ======*/
 #header-title {
   margin-top: 97px;
 }
@@ -2944,23 +3028,27 @@ body {
 }
 
 .fadeOut {
+  visibility: hidden;
   opacity: 0;
-  height: 0;
 }
 
 .visible {
   opacity: 1;
-  height: auto;
+  visibility: visible;
 }
 
 .dropdown {
   position: relative;
 }
-.dropdown .dropdown-content {
+.dropdown > .dropdown-content {
   visibility: hidden;
   opacity: 0;
+  position: absolute;
+  top: 16px;
+  left: 0;
+  z-index: 1;
 }
-.dropdown:hover .dropdown-content {
+.dropdown:hover > .dropdown-content {
   -webkit-animation: 0.2s FadeIn 0.4s ease-out forwards;
           animation: 0.2s FadeIn 0.4s ease-out forwards;
 }
