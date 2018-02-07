@@ -90,7 +90,7 @@ jQuery(document).ready(function($){
 				{
 					if (num == i)
 					{
-						array[i].stop().animate({'r': 0}, 450, mina.elastic);
+						array[i].stop().animate({'r': 0}, 100, mina.linear);
 
 						s
 							.text(array[i].getBBox().cx+x, array[i].getBBox().cy+y, text)
