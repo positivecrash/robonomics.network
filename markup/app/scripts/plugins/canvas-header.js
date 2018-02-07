@@ -6,7 +6,8 @@ jQuery(document).ready(function($){
 		s = Snap('#header-canvas'),
 		obj = $('#header-mid'),
 		dotsLeft = [],
-		dotsRight = [];
+		dotsRight = [],
+		dots = [];
 
 
 
@@ -33,7 +34,7 @@ jQuery(document).ready(function($){
 
 	//Text styles
 	var
-		TextStyleStart = { fontSize: 24, fontWeight: '300', fill: '#282B38'},
+		TextStyleStart = { fontSize: '24px', fontWeight: '300', fill: '#282B38'},
 		TextStyleRobonomics = { fill: '#F15A24'},
 		TextStyleEthereum = { fill: '#535974'};
 
@@ -69,12 +70,14 @@ jQuery(document).ready(function($){
 			//reset arrays
 			dotsRight = [];
 			dotsLeft = [];
+			dots = [];
 
 
 			for (var x = cw/2+distX/2+radius; x < cw; x += distX) {
 				for (var y = radius; y < ch; y += distY) {
 					oDot = showDot(x, y, animate);
 					dotsRight.push(oDot);
+					// dots.push(oDot);
 				}
 			}
 
@@ -82,6 +85,7 @@ jQuery(document).ready(function($){
 				for (var y = radius; y < ch; y += distY) {
 					oDot = showDot(x, y, animate);
 					dotsLeft.push(oDot);
+					// dots.push(oDot);
 				}
 			}
 		}
@@ -134,6 +138,8 @@ jQuery(document).ready(function($){
 			}, delay);
   		}
 
+
+  	
 
 
 
