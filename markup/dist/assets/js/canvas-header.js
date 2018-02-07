@@ -39,6 +39,10 @@ jQuery(document).ready(function($){
 
 
 
+
+	//DO IT
+
+
 	//Draw dots in grid
 	function showDot(x, y, animate)
 		{
@@ -79,10 +83,6 @@ jQuery(document).ready(function($){
 					dotsLeft.push(oDot);
 				}
 			}
-
-			// console.log(dotsRight[15].node.getBoundingClientRect().y);
-			// console.log('dotsRight ' + dotsRight.length);
-			// console.log('dotsLeft ' + dotsLeft.length);
 		}
 
 
@@ -129,12 +129,14 @@ jQuery(document).ready(function($){
 			for (i = 0; i<dotsLeft.length; i++)
 				{
 					s.text(dotsLeft[i].node.getBoundingClientRect().x, dotsLeft[i].node.getBoundingClientRect().y, i);
-					// dotsLeft[i].stop().attr({'r': 0});
 				}
 			}, delay);
   		}
 
 
+
+
+  	// Show text 'Robonomics'
   	function TextRobonomics(delayArray)
   		{
   			var y = 6;
@@ -153,6 +155,10 @@ jQuery(document).ready(function($){
 
 
 
+
+
+
+
   	//ACTION!
 
 	setTimeout(function(){
@@ -162,15 +168,6 @@ jQuery(document).ready(function($){
 	var TextRobonomicsDelay = [2700, 2500, 2600, 2000, 2800, 3300, 3000, 3100, 3200, 2900];
 	TextRobonomics(TextRobonomicsDelay);
 
-
-
-	// function SvgPosition()
-	// 	{
-	// 		var paddingLeft = $('#header-canvas').outerWidth(true)/2;
-	// 		$('#header-canvas').css('margin-left', - paddingLeft);
-	// 	}
-
-	// SvgPosition();
 
 
   	$w.on('resize', function(){
@@ -186,7 +183,10 @@ jQuery(document).ready(function($){
 
 
 
-	//Hover effect on main SVG object
+
+
+
+	//HOVER
 
 	s.mouseover(
 		function(e){
