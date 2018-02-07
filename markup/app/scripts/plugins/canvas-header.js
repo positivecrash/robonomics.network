@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
 	var
 		$w = $(window),
 		s = Snap('#header-canvas'),
-		obj = $('#header-mid'),
+		obj = $('#header-canvas-wrap'),
 		dotsLeft = [],
 		dotsRight = [];
 
@@ -28,7 +28,9 @@ jQuery(document).ready(function($){
 	//Attributes
 	var
 		attrDotIn =  {fill: '#ffffff', r: 0},
-		attrDotOut = {fill: colorDot, r: radius};
+		attrDotOut = {fill: colorDot, r: radius},
+		attrDotHide = {fill: '#ffffff', r: radius*3},
+		airaLines = { stroke: "#ccc", strokeWidth: 1, scale: 0 };
 
 
 	//Text styles
@@ -38,10 +40,25 @@ jQuery(document).ready(function($){
 		TextStyleEthereum = { fill: '#535974'};
 
 
+	var classDel = 'deleted';
+
 
 
 
 	//DO IT
+
+	function testNums()
+  		{
+				for (i = 0; i<dotsRight.length; i++)
+				{
+					s.text(dotsRight[i].node.getBoundingClientRect().x, dotsRight[i].node.getBoundingClientRect().y, i);
+				}
+
+				for (i = 0; i<dotsLeft.length; i++)
+				{
+					s.text(dotsLeft[i].node.getBoundingClientRect().x, dotsLeft[i].node.getBoundingClientRect().y, i);
+				}
+  		}
 
 
 	//Draw dots in grid
@@ -69,7 +86,6 @@ jQuery(document).ready(function($){
 			//reset arrays
 			dotsRight = [];
 			dotsLeft = [];
-			dots = [];
 
 
 			for (var x = cw/2+distX/2+radius; x < cw; x += distX) {
@@ -92,18 +108,12 @@ jQuery(document).ready(function($){
   	//Draw letters
   	function replaceDot(array,num,x,y,text,styleFrom,styleTo)
   		{
-  			for (i = 0; i<array.length; i++)
-				{
-					if (num == i)
-					{
-						array[i].stop().animate({'r': 0}, 100, mina.linear);
+  			array[num].stop().animate(attrDotHide, 100, mina.linear).addClass(classDel);
 
-						s
-							.text(array[i].getBBox().cx+x, array[i].getBBox().cy+y, text)
-							.attr(styleFrom)
-							.animate(styleTo, 5000, mina.elastic);
-					}
-				}
+			s
+				.text(array[num].getBBox().cx+x, array[num].getBBox().cy+y, text)
+				.attr(styleFrom)
+				.animate(styleTo, 5000, mina.elastic);
   		}
 
   	function drawLetter(side,i,x,y,text,styleFrom,styleTo,delay)
@@ -118,25 +128,9 @@ jQuery(document).ready(function($){
 		  			{
 		  				replaceDot(dotsRight,i,x,y,text,styleFrom,styleTo);
 		  			}
-
-		  	
-
-
-
-  	// 		for (i = 0; i<dotsRight.length; i++)
-			// 	{
-			// 		s.text(dotsRight[i].node.getBoundingClientRect().x, dotsRight[i].node.getBoundingClientRect().y, i);
-			// 	}
-
-			// for (i = 0; i<dotsLeft.length; i++)
-			// 	{
-			// 		s.text(dotsLeft[i].node.getBoundingClientRect().x, dotsLeft[i].node.getBoundingClientRect().y, i);
-			// 	}
 			}, delay);
   		}
 
-
-  	
 
 
 
@@ -175,18 +169,40 @@ jQuery(document).ready(function($){
 
 
 
+	//Draw AIRA logo in lines
+	function drawLines(points, start, duration)
+		{	
+			setTimeout(function(){
+				for(i=1; i<points.length; i++)
+				{
+					var l = s
+						.line(dotsRight[points[i-1]].getBBox().cx, dotsRight[points[i-1]].getBBox().cy, dotsRight[points[i-1]].getBBox().cx, dotsRight[points[i-1]].getBBox().cy)
+						.attr(airaLines)
+						.animate({x2: dotsRight[points[i]].getBBox().cx, y2: dotsRight[points[i]].getBBox().cy}, duration, mina.easeinout);
+
+					s.prepend(l);
+				}
+			}, start);
+		}
+
+
+
+
   	//ACTION!
 
-	// Draw dots in grid
 	setTimeout(function(){
 		drawGrid('true');
+		// testNums();
+
+		var TextDelay = [2000, 2500, 2600, 2700, 2800, 2900, 3000, 3100, 3200, 3300];
+		TextRobonomics(TextDelay);
+		TextEthereum(TextDelay);
+
+		//AIRA logo
+		drawLines(['13','17','21','22','23','18','13','17','18','22'], 3200, 2000);
   	}, 1500);
 
-
-	// Show text
-	var TextDelay = [2700, 2500, 2600, 2000, 2800, 3300, 3000, 3100, 3200, 2900];
-	TextRobonomics(TextDelay);
-	TextEthereum(TextDelay);
+	
 
 
 
@@ -215,10 +231,7 @@ jQuery(document).ready(function($){
 		function(e){
 			e = e || window.event;
 
-			// console.log(e.target.getBBox());
-			// console.log(Snap(e.target).type);
-
-			if (Snap(e.target).type == 'circle'){
+			if ( (Snap(e.target).type == 'circle') && (!Snap(e.target).hasClass(classDel)) ){
 				Snap(e.target).animate({
 		          fill: colorDotHov
 		        },500);
@@ -230,12 +243,12 @@ jQuery(document).ready(function($){
 		function(e){
 			e = e || window.event;
 
-			if (Snap(e.target).type == 'circle'){
+			if ( (Snap(e.target).type == 'circle') && (!Snap(e.target).hasClass(classDel)) ){
 				setTimeout(function(){
 		         Snap(e.target).animate({
 		            fill: colorDot
 		          }, 1000);
-		        }, 3000);
+		        }, 10000);
 			}
 		}
 	);

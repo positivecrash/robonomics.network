@@ -5,26 +5,10 @@ header[role='banner']
 
 #header-mid
   {
-    padding-top: 68px;
-    padding-bottom: 122px;
     position: relative;
-    overflow: hidden;
-
-
-    #header-canvas
-      {
-        display: block;
-        position: absolute;
-        top: 0;
-        // left: 0;
-        left: 50%;
-        right: 0;
-        bottom: 0;
-
-        width: 3400px;
-        height: 100%;
-        margin-left: -1700px;
-      }
+    padding-top: 68px;
+    min-height: 370px;
+    box-sizing: border-box;
 
   }
 
@@ -54,8 +38,57 @@ header[role='banner']
   }
 
 
+#header-canvas-wrap
+  {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 370px;
+    z-index: 0;
+  }
 
 
+#header-canvas
+  {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 100%;
+    
+    // width: 100%;
+    // left: 0;
+
+    width: 3400px;
+    margin-left: -1700px;
+    left: 50%;
+  }
+
+#header-mid__content
+  {
+    position: relative;
+    z-index: 1;
+  }
+
+
+#header-title
+  {
+    margin-top: 30px;
+
+    span
+      {
+        display: inline-block;
+        text-transform: uppercase;
+        background-color: $c-violet-mid;
+        color: #fff;
+        letter-spacing: 2px;
+        padding: 3px 20px;
+      }
+  }
 
 // .hamburger{
 //   .line{
