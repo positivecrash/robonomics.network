@@ -16,9 +16,14 @@ header[role='banner']
         display: block;
         position: absolute;
         top: 0;
-        left: 0;
+        // left: 0;
+        left: 50%;
         right: 0;
         bottom: 0;
+
+        width: 3400px;
+        height: 100%;
+        margin-left: -1700px;
       }
 
   }

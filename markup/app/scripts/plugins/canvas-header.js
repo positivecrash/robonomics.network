@@ -62,8 +62,8 @@ jQuery(document).ready(function($){
 
 	function drawGrid(animate)
 		{
-			// cw = 3400;
-			cw = obj.outerWidth(true);
+			cw = 3400;
+			// cw = obj.outerWidth(true);
 			ch = obj.outerHeight(true);
 
 			//reset arrays
@@ -175,12 +175,6 @@ jQuery(document).ready(function($){
 
 
 
-
-
-
-
-
-
   	//ACTION!
 
 	// Draw dots in grid
@@ -196,17 +190,16 @@ jQuery(document).ready(function($){
 
 
 
+ //  	$w.on('resize', function(){
+ //  		s.clear();
+	// 	s.attr({  width: obj.outerWidth(true), height: obj.outerHeight(true) });
 
-  	$w.on('resize', function(){
-  		s.clear();
-		s.attr({  width: obj.outerWidth(true), height: obj.outerHeight(true) });
+	// 	drawGrid('false');
 
-		drawGrid('false');
-
-		TextDelay = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-		TextRobonomics(TextDelay);
-		TextEthereum(TextDelay);
-	});
+	// 	TextDelay = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+	// 	TextRobonomics(TextDelay);
+	// 	TextEthereum(TextDelay);
+	// });
 
 
 
