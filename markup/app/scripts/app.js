@@ -1,8 +1,8 @@
-jQuery(document).ready(function($){
-	/*====== BASICS ======*/
+// jQuery(document).ready(function($){
+// 	/*====== BASICS ======*/
 
-	var $w = $(window);
-	var $d = $(document);
-	var $page = $('body');
+// 	var $w = $(window);
+// 	var $d = $(document);
+// 	var $page = $('body');
 
-});
+// });

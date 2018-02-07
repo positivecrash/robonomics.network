@@ -175,6 +175,9 @@ jQuery(document).ready(function($){
 
 
 
+
+
+
   	//ACTION!
 
 	// Draw dots in grid
@@ -201,6 +204,8 @@ jQuery(document).ready(function($){
 		TextRobonomics(TextDelay);
 		TextEthereum(TextDelay);
 	});
+
+
 
 
 
