@@ -235,6 +235,48 @@ table td, table th {
     opacity: 1;
   }
 }
+@-webkit-keyframes Bounce-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  70% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes Bounce-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  70% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
 .svg .sprite-basic-check, .svg .sprite-basic-copy {
   background-image: url("../i/sprite.svg?1");
 }
@@ -2753,6 +2795,11 @@ header[role='banner'] {
 #logo-robonomics {
   display: inline-block;
   width: 200px;
+  opacity: 0;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  -webkit-animation: Bounce-in 1s ease forwards;
+          animation: Bounce-in 1s ease forwards;
 }
 
 #logo-ethereum {
@@ -2761,6 +2808,11 @@ header[role='banner'] {
   top: 17px;
   left: 50%;
   margin-left: -195px;
+  opacity: 0;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  -webkit-animation: 0.5s Bounce-in 1s ease forwards;
+          animation: 0.5s Bounce-in 1s ease forwards;
 }
 
 html, body {

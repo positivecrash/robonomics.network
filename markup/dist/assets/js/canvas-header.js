@@ -157,7 +157,7 @@ jQuery(document).ready(function($){
 
 	setTimeout(function(){
 		drawGrid('true');
-  	}, 500);
+  	}, 1500);
 
 	var TextRobonomicsDelay = [2700, 2500, 2600, 2000, 2800, 3300, 3000, 3100, 3200, 2900];
 	TextRobonomics(TextRobonomicsDelay);
@@ -168,7 +168,6 @@ jQuery(document).ready(function($){
 		{
 			var paddingLeft = $('#header-canvas').outerWidth(true)/2;
 			$('#header-canvas').css('margin-left', - paddingLeft);
-			console.log($('#header-canvas').outerWidth(true));
 		}
 
 	SvgPosition();
