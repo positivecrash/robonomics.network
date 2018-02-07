@@ -77,7 +77,7 @@ header[role='banner']
 
 #header-title
   {
-    margin-top: 30px;
+    margin-top: 97px;
 
     span
       {
@@ -87,7 +87,17 @@ header[role='banner']
         color: #fff;
         letter-spacing: 2px;
         padding: 3px 20px;
+        font-size: 22px;
       }
+  }
+
+
+#header-subtitle
+  {
+    color: $c-violet-mid;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 20px;
   }
 
 // .hamburger{

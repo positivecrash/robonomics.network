@@ -231,6 +231,8 @@ jQuery(document).ready(function($){
 		function(e){
 			e = e || window.event;
 
+			console.log(Snap(e.target).type);
+
 			if ( (Snap(e.target).type == 'circle') && (!Snap(e.target).hasClass(classDel)) ){
 				Snap(e.target).animate({
 		          fill: colorDotHov
