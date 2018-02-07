@@ -79,10 +79,6 @@ jQuery(document).ready(function($){
 					dotsLeft.push(oDot);
 				}
 			}
-
-			// console.log(dotsRight[15].node.getBoundingClientRect().y);
-			// console.log('dotsRight ' + dotsRight.length);
-			// console.log('dotsLeft ' + dotsLeft.length);
 		}
 
 
@@ -171,18 +167,6 @@ jQuery(document).ready(function($){
 		}
 
 	SvgPosition();
-
-
- //  	$w.on('resize', function(){
-	// 	s.attr({  width: obj.outerWidth(true), height: obj.outerHeight(true) });
-	// 	s.clear();
-
-	// 	drawGrid('false');
-
-	// 	TextRobonomicsDelay = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-	// 	TextRobonomics(TextRobonomicsDelay);
-	// });
-
 
 
 
