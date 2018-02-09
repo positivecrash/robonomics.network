@@ -79,8 +79,8 @@ jQuery(document).ready(function($){
 
 	function drawGrid(animate)
 		{
-			// cw = 3400;
-			cw = obj.outerWidth(true);
+			cw = 3400;
+			// cw = obj.outerWidth(true);
 			ch = obj.outerHeight(true);
 
 			//reset arrays
@@ -192,14 +192,14 @@ jQuery(document).ready(function($){
 
 	setTimeout(function(){
 		drawGrid('true');
-		testNums();
+		// testNums();
 
 		var TextDelay = [2000, 2500, 2600, 2700, 2800, 2900, 3000, 3100, 3200, 3300];
 		TextRobonomics(TextDelay);
 		TextEthereum(TextDelay);
 
 		//AIRA logo
-		drawLines(['16','21','26','27','28','22','16','21','26','27'], 3200, 2000);
+		drawLines(['16','21','26','27','28','22','16','21','22','27'], 3200, 2000);
 		// drawLines(['13','17','21','22','23','18','13','17','18','22'], 3200, 2000);
   	}, 1500);
 

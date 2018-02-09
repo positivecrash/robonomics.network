@@ -185,6 +185,12 @@ section
     @include rem('padding-top', $margin-sec);
     @include rem('padding-bottom', $margin-sec);
   }
+
+.sec-dark
+  {
+    background-color: $c-violet-dark;
+    color: #fff;
+  }
 /*====== end of Sections ======*/
 
 

@@ -2856,7 +2856,6 @@ header[role='banner'] {
   margin-right: 0;
 }
 .header-top__nav a {
-  font-weight: 500;
   font-size: 20px;
   line-height: 1;
   color: #282B38;
@@ -2922,14 +2921,14 @@ header[role='banner'] {
 .hamburger .line:first-child {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
-  -webkit-animation: 1s HamburgerLineDown 0.8s forwards;
-          animation: 1s HamburgerLineDown 0.8s forwards;
+  -webkit-animation: 1.5s HamburgerLineDown 0.8s forwards;
+          animation: 1.5s HamburgerLineDown 0.8s forwards;
 }
 .hamburger .line:last-child {
   -webkit-transform: translateY(5px);
           transform: translateY(5px);
-  -webkit-animation: 1s HamburgerLineUp 0.8s forwards;
-          animation: 1s HamburgerLineUp 0.8s forwards;
+  -webkit-animation: 1.5s HamburgerLineUp 0.8s forwards;
+          animation: 1.5s HamburgerLineUp 0.8s forwards;
 }
 @media screen and (max-width: 570px) {
   .hamburger {
@@ -2940,8 +2939,8 @@ header[role='banner'] {
 
 @media screen and (min-width: 570px) {
   .nav-mobilehide {
-    -webkit-animation: 0.8s FadeIn 1.7s linear forwards;
-            animation: 0.8s FadeIn 1.7s linear forwards;
+    -webkit-animation: 0.8s FadeIn 6s linear forwards;
+            animation: 0.8s FadeIn 6s linear forwards;
   }
 }
 
@@ -2995,8 +2994,9 @@ header[role='banner'] {
   right: 0;
   bottom: 0;
   height: 100%;
-  width: 100%;
-  left: 0;
+  width: 3400px;
+  margin-left: -1700px;
+  left: 50%;
 }
 
 #header-mid__content {
@@ -3166,6 +3166,11 @@ section {
   padding-top: 3rem;
   padding-bottom: 48px;
   padding-bottom: 3rem;
+}
+
+.sec-dark {
+  background-color: #282B38;
+  color: #fff;
 }
 
 /*====== end of Sections ======*/

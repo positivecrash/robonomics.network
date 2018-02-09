@@ -54,7 +54,7 @@ header[role='banner']
     a
       {
         @extend %link_noline;
-        font-weight: 500;
+        // font-weight: 500;
         font-size: 20px;
         line-height: 1;
         color: $c-text;
@@ -156,12 +156,12 @@ header[role='banner']
         &:first-child
           {
             transform: translateY(-5px);
-            animation: 1s HamburgerLineDown 0.8s forwards;
+            animation: 1.5s HamburgerLineDown 0.8s forwards;
           }
         &:last-child
           {
             transform: translateY(5px);
-            animation: 1s HamburgerLineUp 0.8s forwards;
+            animation: 1.5s HamburgerLineUp 0.8s forwards;
           }
       }
 
@@ -181,7 +181,7 @@ header[role='banner']
 
     @media screen and (min-width: $mq-menuhide) 
       {
-        animation: 0.8s FadeIn 1.7s linear forwards;
+        animation: 0.8s FadeIn 6s linear forwards;
       }
   }
 
@@ -255,12 +255,12 @@ header[role='banner']
 
     height: 100%;
     
-    width: 100%;
-    left: 0;
+    // width: 100%;
+    // left: 0;
 
-    // width: 3400px;
-    // margin-left: -1700px;
-    // left: 50%;
+    width: 3400px;
+    margin-left: -1700px;
+    left: 50%;
   }
 
 #header-mid__content
