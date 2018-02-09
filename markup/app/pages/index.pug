@@ -5,8 +5,21 @@ block head
 
 block content
 	main(role="main")
-		section.sec-dark.sec-colored
+		section.sec-dark.sec-colored.contentBlock-about
 			.secw-base
 				.row
-					.col-md-6 test
-					.col-md-6 test
+					.col-sm-6
+						a(href="#").block-video
+						.block-white.text-hyphened
+							img.img-block(alt="", src="assets/i/about-1.png", srcset="assets/i/about-1@2x.png")
+							| Объединение экономической и технической детализации транзакции к автономной системе  в одну транзакцию.
+					.col-sm-6
+						.block-white.text-hyphened
+							img.img-block(alt="", src="assets/i/about-2.png", srcset="assets/i/about-2@2x.png")
+							| Создание автоматизированного управления экономическими отношениями умных фабрик.
+
+						.block-white.text-hyphened
+							img.img-block(alt="", src="assets/i/about-3.png", srcset="assets/i/about-3@2x.png")
+							| Использования следящей системы для киберфизических систем на базе пиринговой сети.
+
+			svg.snapsvg-darkDots

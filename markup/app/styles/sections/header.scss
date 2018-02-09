@@ -10,11 +10,45 @@ header[role='banner']
 
 #header-top
   {
-    position: fixed;
+    position: absolute;
     top: 45px;
     left: 0;
     right: 0;
     z-index: 1000;
+
+    transition: all 0.2s linear;
+    @extend %FadeOut;
+    animation: 0.8s FadeIn 5s linear forwards;
+
+    &.fixed
+      {
+        position: fixed;
+        background-color: $c-violet-dark;
+        top: 0;
+
+        &, a { color: #fff; }
+        .header-top__sec { padding: 4px 0; }
+        .header-top__nav a
+          {
+              // font-weight: 300;
+              font-size: 18px;
+          }
+
+        #header-top__logo
+          {
+            display: block;
+          }
+
+
+        .dropdown-content
+          {
+            background-color: $c-violet-dark;
+          }
+      }
+
+
+
+
 
     & > .secw-base
       {
@@ -34,7 +68,13 @@ header[role='banner']
 
 #header-top__logo
   {
-    @extend %FadeOut;
+    display: none;
+
+    img
+      {
+        display: block;
+        height: 30px;
+      }
   }
 
 
@@ -55,7 +95,7 @@ header[role='banner']
       {
         @extend %link_noline;
         // font-weight: 500;
-        font-size: 20px;
+        font-size: 22px;
         line-height: 1;
         color: $c-text;
       }
@@ -169,7 +209,7 @@ header[role='banner']
 
       @media screen and (max-width: $mq-menuhide) 
         {
-          animation: 0.8s FadeIn 0.8s linear forwards;
+          animation: 0.2s FadeIn 0.2s linear forwards;
         }
   }
 
@@ -181,7 +221,7 @@ header[role='banner']
 
     @media screen and (min-width: $mq-menuhide) 
       {
-        animation: 0.8s FadeIn 6s linear forwards;
+        animation: 0.2s FadeIn 0.2s linear forwards;
       }
   }
 
@@ -240,7 +280,7 @@ header[role='banner']
 
 
 /*====== Canvas ======*/
-#header-canvas-wrap
+#snapsvg-header-wrap
   {
     overflow: hidden;
     position: absolute;
@@ -263,28 +303,14 @@ header[role='banner']
   }
 
 
-#header-canvas
+#snapsvg-header
   {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-
-    height: 100%;
-    
-    // width: 100%;
-    // left: 0;
-
-    width: 3400px;
-    margin-left: -1700px;
-    left: 50%;
+    @extend %svgBack;
   }
 
 #header-mid__content
   {
-    position: relative;
-    z-index: 1;
+    @extend %svgBackContent;
   }
 
 
@@ -303,9 +329,10 @@ header[role='banner']
         text-transform: uppercase;
         background-color: $c-violet-mid;
         color: #fff;
-        letter-spacing: 2px;
+        letter-spacing: 4px;
         padding: 3px 20px;
-        font-size: 22px;
+        font-size: 26px;
+        font-weight: 300;
       }
   }
 
@@ -313,7 +340,7 @@ header[role='banner']
 #header-subtitle
   {
     color: $c-violet-mid;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 300;
     margin-top: 20px;
   }

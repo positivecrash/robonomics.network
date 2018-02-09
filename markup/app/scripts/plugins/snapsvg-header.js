@@ -3,8 +3,8 @@ jQuery(document).ready(function($){
 	//Objects
 	var
 		$w = $(window),
-		s = Snap('#header-canvas'),
-		obj = $('#header-canvas-wrap'),
+		s = Snap('#snapsvg-header'),
+		obj = $('#snapsvg-header-wrap'),
 		dotsLeft = [],
 		dotsRight = [];
 
@@ -137,7 +137,6 @@ jQuery(document).ready(function($){
   	// Show text 'Robonomics'
   	function TextRobonomics(posArray, delayArray)
   		{
-  			console.log('TextRobonomics');
   			var y = 6;
 
 			drawLetter('left', posArray[0], -3, y, 'r', TextStyleStart, TextStyleRobonomics, delayArray[0]);
@@ -234,33 +233,33 @@ jQuery(document).ready(function($){
 
 	//HOVER
 
-	s.mouseover(
-		function(e){
-			e = e || window.event;
+	// s.mouseover(
+	// 	function(e){
+	// 		e = e || window.event;
 
-			console.log(Snap(e.target).type);
+	// 		console.log(Snap(e.target).type);
 
-			if ( (Snap(e.target).type == 'circle') && (!Snap(e.target).hasClass(classDel)) ){
-				Snap(e.target).animate({
-		          fill: colorDotHov
-		        },500);
-			}
+	// 		if ( (Snap(e.target).type == 'circle') && (!Snap(e.target).hasClass(classDel)) ){
+	// 			Snap(e.target).animate({
+	// 	          fill: colorDotHov
+	// 	        },500);
+	// 		}
 
-		}
-	)
-	.mouseout(
-		function(e){
-			e = e || window.event;
+	// 	}
+	// )
+	// .mouseout(
+	// 	function(e){
+	// 		e = e || window.event;
 
-			if ( (Snap(e.target).type == 'circle') && (!Snap(e.target).hasClass(classDel)) ){
-				setTimeout(function(){
-		         Snap(e.target).animate({
-		            fill: colorDot
-		          }, 1000);
-		        }, 10000);
-			}
-		}
-	);
+	// 		if ( (Snap(e.target).type == 'circle') && (!Snap(e.target).hasClass(classDel)) ){
+	// 			setTimeout(function(){
+	// 	         Snap(e.target).animate({
+	// 	            fill: colorDot
+	// 	          }, 1000);
+	// 	        }, 10000);
+	// 		}
+	// 	}
+	// );
 
 
 

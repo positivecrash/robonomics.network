@@ -18,8 +18,8 @@ $mq-desktop: 1280px;
 $mq-tablet: 750px;
 $mq-mobile: 570px;
 
-$mq-menuhide: $mq-mobile;
 $mq-mobileCanvas: 890px;
+$mq-menuhide: $mq-mobileCanvas;
 
 
 
@@ -28,9 +28,10 @@ $mq-mobileCanvas: 890px;
 $c-blue: #03A5ED;
 $c-violet-dark: #282B38;
 $c-violet-mid: #535974;
+$c-violet-light: #B5C0F1;
 $c-red: #F15A24;
 
-$c-text: $c-violet-dark;
+$c-text: $c-violet-mid;
 
 
 

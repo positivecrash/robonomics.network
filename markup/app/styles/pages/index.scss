@@ -1,0 +1,62 @@
+.contentBlock-about
+	{
+
+		.row [class*=col-]
+		{
+			margin-bottom: 0;
+
+			&:first-child
+				{
+					.block-white, .block-video
+						{
+							float: right;
+							clear: right;
+						}
+				}
+
+			@media screen and (min-width: $bootstrap-sm)
+				{
+					&:last-child
+						{
+							padding-top: 40px;
+						}
+				}
+		}
+
+		.block-white, .block-video
+			{
+				display: block;
+				width: 276px;
+				min-height: 155px;
+				box-sizing: border-box;
+				margin-bottom: 30px;
+				transition: all 0.2s linear;
+
+				@media screen and (min-width: $bootstrap-sm)
+					{
+						
+						&:last-child
+							{
+								margin-bottom: 0;
+							}
+					}
+
+				@media screen and (max-width: $bootstrap-sm)
+					{
+						width: 100%;
+					}
+			}
+
+		.block-video
+			{
+				background-color: $c-violet-mid;
+			}
+
+		.block-white
+			{
+				img
+					{
+						margin-bottom: 20px;
+					}
+			}
+	}
