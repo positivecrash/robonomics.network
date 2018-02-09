@@ -79,8 +79,8 @@ jQuery(document).ready(function($){
 
 	function drawGrid(animate)
 		{
-			cw = 3400;
-			// cw = obj.outerWidth(true);
+			// cw = 3400;
+			cw = obj.outerWidth(true);
 			ch = obj.outerHeight(true);
 
 			//reset arrays
@@ -139,16 +139,16 @@ jQuery(document).ready(function($){
   		{
   			var y = 6;
 
-  			drawLetter('left', 23, -3, y, 'r', TextStyleStart, TextStyleRobonomics, delayArray[0]);
-			drawLetter('left', 18, -7, y, 'o', TextStyleStart, TextStyleRobonomics, delayArray[1]);
-			drawLetter('left', 13, -7, y, 'b', TextStyleStart, TextStyleRobonomics, delayArray[2]);
-			drawLetter('left', 8, -7, y, 'o', TextStyleStart, TextStyleRobonomics, delayArray[3]);
-			drawLetter('left', 3, -7, y, 'n', TextStyleStart, TextStyleRobonomics, delayArray[4]);
-			drawLetter('right', 3, -7, y, 'o', TextStyleStart, TextStyleRobonomics, delayArray[5]);
-			drawLetter('right', 8, -10, y, 'm', TextStyleStart, TextStyleRobonomics, delayArray[6]);
-			drawLetter('right', 13, -3, y, 'i', TextStyleStart, TextStyleRobonomics, delayArray[7]);
-			drawLetter('right', 18, -7, y, 'c', TextStyleStart, TextStyleRobonomics, delayArray[8]);
-			drawLetter('right', 23, -7, y, 's', TextStyleStart, TextStyleRobonomics, delayArray[9]);
+  			drawLetter('left', 28, -3, y, 'r', TextStyleStart, TextStyleRobonomics, delayArray[0]);
+			drawLetter('left', 22, -7, y, 'o', TextStyleStart, TextStyleRobonomics, delayArray[1]);
+			drawLetter('left', 16, -7, y, 'b', TextStyleStart, TextStyleRobonomics, delayArray[2]);
+			drawLetter('left', 10, -7, y, 'o', TextStyleStart, TextStyleRobonomics, delayArray[3]);
+			drawLetter('left', 4, -7, y, 'n', TextStyleStart, TextStyleRobonomics, delayArray[4]);
+			drawLetter('right', 4, -7, y, 'o', TextStyleStart, TextStyleRobonomics, delayArray[5]);
+			drawLetter('right', 10, -10, y, 'm', TextStyleStart, TextStyleRobonomics, delayArray[6]);
+			drawLetter('right', 16, -3, y, 'i', TextStyleStart, TextStyleRobonomics, delayArray[7]);
+			drawLetter('right', 22, -7, y, 'c', TextStyleStart, TextStyleRobonomics, delayArray[8]);
+			drawLetter('right', 28, -7, y, 's', TextStyleStart, TextStyleRobonomics, delayArray[9]);
   		}
 
 
@@ -157,14 +157,14 @@ jQuery(document).ready(function($){
 		{
 			var y = 6;
 
-			drawLetter('left', 16, -3, y, 'e', TextStyleStart, TextStyleEthereum, delayArray[0]);
-			drawLetter('left', 11, -4, y, 't', TextStyleStart, TextStyleEthereum, delayArray[1]);
-			drawLetter('left', 6, -7, y, 'h', TextStyleStart, TextStyleEthereum, delayArray[2]);
-			drawLetter('left', 1, -7, y, 'e', TextStyleStart, TextStyleEthereum, delayArray[3]);
-			drawLetter('right', 1, -4, y, 'r', TextStyleStart, TextStyleEthereum, delayArray[4]);
-			drawLetter('right', 6, -7, y, 'e', TextStyleStart, TextStyleEthereum, delayArray[5]);
-			drawLetter('right', 11, -7, y, 'u', TextStyleStart, TextStyleEthereum, delayArray[6]);
-			drawLetter('right', 16, -10, y, 'm', TextStyleStart, TextStyleEthereum, delayArray[7]);
+			drawLetter('left', 20, -3, y, 'e', TextStyleStart, TextStyleEthereum, delayArray[0]);
+			drawLetter('left', 14, -4, y, 't', TextStyleStart, TextStyleEthereum, delayArray[1]);
+			drawLetter('left', 8, -7, y, 'h', TextStyleStart, TextStyleEthereum, delayArray[2]);
+			drawLetter('left', 2, -7, y, 'e', TextStyleStart, TextStyleEthereum, delayArray[3]);
+			drawLetter('right', 2, -4, y, 'r', TextStyleStart, TextStyleEthereum, delayArray[4]);
+			drawLetter('right', 8, -7, y, 'e', TextStyleStart, TextStyleEthereum, delayArray[5]);
+			drawLetter('right', 14, -7, y, 'u', TextStyleStart, TextStyleEthereum, delayArray[6]);
+			drawLetter('right', 20, -10, y, 'm', TextStyleStart, TextStyleEthereum, delayArray[7]);
 		}
 
 
@@ -192,14 +192,15 @@ jQuery(document).ready(function($){
 
 	setTimeout(function(){
 		drawGrid('true');
-		// testNums();
+		testNums();
 
 		var TextDelay = [2000, 2500, 2600, 2700, 2800, 2900, 3000, 3100, 3200, 3300];
 		TextRobonomics(TextDelay);
 		TextEthereum(TextDelay);
 
 		//AIRA logo
-		drawLines(['13','17','21','22','23','18','13','17','18','22'], 3200, 2000);
+		drawLines(['16','21','26','27','28','22','16','21','26','27'], 3200, 2000);
+		// drawLines(['13','17','21','22','23','18','13','17','18','22'], 3200, 2000);
   	}, 1500);
 
 	
