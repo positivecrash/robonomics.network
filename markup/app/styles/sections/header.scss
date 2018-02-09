@@ -196,9 +196,16 @@ header[role='banner']
 #header-mid
   {
     position: relative;
-    padding-top: 157px;
-    min-height: 460px;
     box-sizing: border-box;
+
+    padding-top: 68px;
+    min-height: 370px;
+
+    @media screen and (min-width: $mq-mobileCanvas)
+      {
+        padding-top: 157px;
+        min-height: 460px;
+      }
 
   }
 
@@ -240,8 +247,19 @@ header[role='banner']
     top: 0;
     left: 0;
     width: 100%;
-    height: 460px;
     z-index: 0;
+
+    height: 370px;
+
+    @media screen and (min-width: $mq-mobileCanvas)
+      {
+        height: 460px;
+      }
+
+    @media screen and (max-width: $mq-mobileCanvas)
+      {
+        line, text { display: none; }
+      }
   }
 
 

@@ -2948,9 +2948,15 @@ header[role='banner'] {
 /*====== Middle section ======*/
 #header-mid {
   position: relative;
-  padding-top: 157px;
-  min-height: 460px;
   box-sizing: border-box;
+  padding-top: 68px;
+  min-height: 370px;
+}
+@media screen and (min-width: 890px) {
+  #header-mid {
+    padding-top: 157px;
+    min-height: 460px;
+  }
 }
 
 #logo-robonomics {
@@ -2983,8 +2989,18 @@ header[role='banner'] {
   top: 0;
   left: 0;
   width: 100%;
-  height: 460px;
   z-index: 0;
+  height: 370px;
+}
+@media screen and (min-width: 890px) {
+  #header-canvas-wrap {
+    height: 460px;
+  }
+}
+@media screen and (max-width: 890px) {
+  #header-canvas-wrap line, #header-canvas-wrap text {
+    display: none;
+  }
 }
 
 #header-canvas {

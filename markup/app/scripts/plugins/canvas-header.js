@@ -135,36 +135,37 @@ jQuery(document).ready(function($){
 
 
   	// Show text 'Robonomics'
-  	function TextRobonomics(delayArray)
+  	function TextRobonomics(posArray, delayArray)
   		{
+  			console.log('TextRobonomics');
   			var y = 6;
 
-  			drawLetter('left', 28, -3, y, 'r', TextStyleStart, TextStyleRobonomics, delayArray[0]);
-			drawLetter('left', 22, -7, y, 'o', TextStyleStart, TextStyleRobonomics, delayArray[1]);
-			drawLetter('left', 16, -7, y, 'b', TextStyleStart, TextStyleRobonomics, delayArray[2]);
-			drawLetter('left', 10, -7, y, 'o', TextStyleStart, TextStyleRobonomics, delayArray[3]);
-			drawLetter('left', 4, -7, y, 'n', TextStyleStart, TextStyleRobonomics, delayArray[4]);
-			drawLetter('right', 4, -7, y, 'o', TextStyleStart, TextStyleRobonomics, delayArray[5]);
-			drawLetter('right', 10, -10, y, 'm', TextStyleStart, TextStyleRobonomics, delayArray[6]);
-			drawLetter('right', 16, -3, y, 'i', TextStyleStart, TextStyleRobonomics, delayArray[7]);
-			drawLetter('right', 22, -7, y, 'c', TextStyleStart, TextStyleRobonomics, delayArray[8]);
-			drawLetter('right', 28, -7, y, 's', TextStyleStart, TextStyleRobonomics, delayArray[9]);
+			drawLetter('left', posArray[0], -3, y, 'r', TextStyleStart, TextStyleRobonomics, delayArray[0]);
+			drawLetter('left', posArray[1], -7, y, 'o', TextStyleStart, TextStyleRobonomics, delayArray[1]);
+			drawLetter('left', posArray[2], -7, y, 'b', TextStyleStart, TextStyleRobonomics, delayArray[2]);
+			drawLetter('left', posArray[3], -7, y, 'o', TextStyleStart, TextStyleRobonomics, delayArray[3]);
+			drawLetter('left', posArray[4], -7, y, 'n', TextStyleStart, TextStyleRobonomics, delayArray[4]);
+			drawLetter('right', posArray[5], -7, y, 'o', TextStyleStart, TextStyleRobonomics, delayArray[5]);
+			drawLetter('right', posArray[6], -10, y, 'm', TextStyleStart, TextStyleRobonomics, delayArray[6]);
+			drawLetter('right', posArray[7], -3, y, 'i', TextStyleStart, TextStyleRobonomics, delayArray[7]);
+			drawLetter('right', posArray[8], -7, y, 'c', TextStyleStart, TextStyleRobonomics, delayArray[8]);
+			drawLetter('right', posArray[9], -7, y, 's', TextStyleStart, TextStyleRobonomics, delayArray[9]);
   		}
 
 
   	// Show text 'Ethethereum'
-  	function TextEthereum(delayArray)
+  	function TextEthereum(posArray, delayArray)
 		{
 			var y = 6;
 
-			drawLetter('left', 20, -3, y, 'e', TextStyleStart, TextStyleEthereum, delayArray[0]);
-			drawLetter('left', 14, -4, y, 't', TextStyleStart, TextStyleEthereum, delayArray[1]);
-			drawLetter('left', 8, -7, y, 'h', TextStyleStart, TextStyleEthereum, delayArray[2]);
-			drawLetter('left', 2, -7, y, 'e', TextStyleStart, TextStyleEthereum, delayArray[3]);
-			drawLetter('right', 2, -4, y, 'r', TextStyleStart, TextStyleEthereum, delayArray[4]);
-			drawLetter('right', 8, -7, y, 'e', TextStyleStart, TextStyleEthereum, delayArray[5]);
-			drawLetter('right', 14, -7, y, 'u', TextStyleStart, TextStyleEthereum, delayArray[6]);
-			drawLetter('right', 20, -10, y, 'm', TextStyleStart, TextStyleEthereum, delayArray[7]);
+			drawLetter('left', posArray[0], -3, y, 'e', TextStyleStart, TextStyleEthereum, delayArray[0]);
+			drawLetter('left', posArray[1], -4, y, 't', TextStyleStart, TextStyleEthereum, delayArray[1]);
+			drawLetter('left', posArray[2], -7, y, 'h', TextStyleStart, TextStyleEthereum, delayArray[2]);
+			drawLetter('left', posArray[3], -7, y, 'e', TextStyleStart, TextStyleEthereum, delayArray[3]);
+			drawLetter('right', posArray[4], -4, y, 'r', TextStyleStart, TextStyleEthereum, delayArray[4]);
+			drawLetter('right', posArray[5], -7, y, 'e', TextStyleStart, TextStyleEthereum, delayArray[5]);
+			drawLetter('right', posArray[6], -7, y, 'u', TextStyleStart, TextStyleEthereum, delayArray[6]);
+			drawLetter('right', posArray[7], -10, y, 'm', TextStyleStart, TextStyleEthereum, delayArray[7]);
 		}
 
 
@@ -190,35 +191,40 @@ jQuery(document).ready(function($){
 
   	//ACTION!
 
+
+  	function draw()
+  		{
+  			setTimeout(function(){
+  				var TextDelay = [2000, 2500, 2600, 2700, 2800, 2900, 3000, 3100, 3200, 3300];
+
+	  			s.stop().clear();
+
+	  			if($w.width() > 890)
+	  				{
+	  					drawGrid('true');
+
+						TextRobonomics([28,22,16,10,4,4,10,16,22,28], TextDelay);
+						TextEthereum([20,14,8,2,2,8,14,20], TextDelay);
+
+						//AIRA logo
+						drawLines(['16','21','26','27','28','22','16','21','22','27'], 3200, 2000);
+	  				}
+	  			else{
+	  				
+	  		// 		TextRobonomics([23,18,13,8,3,3,8,13,18,23], TextDelay);
+					// TextEthereum([16,11,6,1,1,6,11,16], TextDelay);
+
+					drawGrid('true');
+
+	  				// //AIRA logo
+	  				// drawLines(['13','17','21','22','23','18','13','17','18','22'], 3200, 2000);
+		  		}	
+		  	}, 500);
+  		}
+
 	setTimeout(function(){
-		drawGrid('true');
-		// testNums();
-
-		var TextDelay = [2000, 2500, 2600, 2700, 2800, 2900, 3000, 3100, 3200, 3300];
-		TextRobonomics(TextDelay);
-		TextEthereum(TextDelay);
-
-		//AIRA logo
-		drawLines(['16','21','26','27','28','22','16','21','22','27'], 3200, 2000);
-		// drawLines(['13','17','21','22','23','18','13','17','18','22'], 3200, 2000);
+		draw();
   	}, 1500);
-
-	
-
-
-
- //  	$w.on('resize', function(){
- //  		s.clear();
-	// 	s.attr({  width: obj.outerWidth(true), height: obj.outerHeight(true) });
-
-	// 	drawGrid('false');
-
-	// 	TextDelay = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-	// 	TextRobonomics(TextDelay);
-	// 	TextEthereum(TextDelay);
-	// });
-
-
 
 
 
