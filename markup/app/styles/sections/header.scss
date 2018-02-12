@@ -282,90 +282,226 @@ header[role='banner']
 
 
 
-// @keyframes rotate
-//   {
-//     50%
-//       {
-//         transform: rotatex(0deg) rotateY(180deg) rotatez(0deg);
-//       }
+@keyframes rotate
+  {
+    50%
+      {
+        transform: rotatex(0deg) rotateY(180deg) rotatez(0deg);
+      }
 
-//     100%
-//       {
-//         transform: rotatex(0deg) rotateY(360deg) rotatez(0deg);
-//       }
-//   }
+    100%
+      {
+        transform: rotatex(0deg) rotateY(360deg) rotatez(0deg);
+      }
+  }
 
-// .logo-robonomics
-//   {
-//     position: relative;
-//     width: 300px;
-//     height: 300px;
 
-//     div[class *= 'logo-robonomics__dot-']
-//       {
-//         position: absolute;
-//         width: 10px;
-//         height: 10px;
-//         border-radius: 5px;
-//         background-color: $c-blue;
-//       }
-//   }
+@keyframes logoAnim
+  {
+    0%
+      {
+        clip-path: polygon(50% 99%, 100% 100%, 0% 100%);
+      }
 
-// .logo-robonomics__tetr
-//   {
-//     width: 250px;
-//   }
+    100%
+      {
+        clip-path: polygon(50% 0, 100% 100%, 0% 100%);
+      }
+  }
 
-// .tetrahedron
-//   {
-//     position: relative;
-//     width: 40%;
-//     padding-bottom: 34.64%;
-//     margin: 0 auto;
-//     transform-style: preserve-3d;
-//     transform: rotatex(0deg) rotateY(0deg) rotatez(0deg);
-//     transform-origin: 50% 50%;
-//     animation: 10s rotate 3s linear infinite;
 
-//     div
-//       {
-//         position:absolute;
-//         top:0;
-//         left:0;
-//         width:100%;
-//         height:100%;
-//         transform-style: preserve-3d;
-//         clip-path: polygon(50% 0, 100% 100%, 0% 100%);
-//         background: $c-blue;
-//       }
+@keyframes face2
+  {
+    0%
+      {
+        background: $c-blue;
+      }
 
-//     .face1
-//       {
-//         background: $c-violet-mid;
-//       }
+    25%
+      {
+        background: $c-violet-mid;
+      }
 
-//     .face2
-//       {
-//         transform-origin: 0% 100%;
-//         transform: rotate(-60deg) rotatex(-109.5deg);
-        
-//       }
+    50%
+      {
+        background: $c-blue;
+      }
 
-//     .face3
-//     {
-//       transform-origin: 100% 100%;
-//       transform: rotate(60deg) rotatex(-109.5deg);
-//       background: $c-violet-light;
-//     }
+     75%
+      {
+        background: $c-violet-light;
+      }
 
-//     .face4
-//       {
-//         transform-origin:50% 100%;
-//         transform:rotate(180deg) rotatex(-109.5deg);
-//         background: $c-violet-dark;
-//       }
+    100%
+      {
+        background: $c-blue;
+      }
+  }
 
-//   }
+
+@keyframes face2
+  {
+    0%
+      {
+        background: $c-blue;
+      }
+
+    25%
+      {
+        background: $c-blue;
+      }
+
+    50%
+      {
+        background: $c-blue;
+      }
+
+     75%
+      {
+        background: $c-violet-light;
+      }
+
+    100%
+      {
+        background: $c-blue;
+      }
+  }
+
+
+@keyframes face3
+  {
+    0%
+      {
+        background: $c-violet-light;
+      }
+
+    25%
+      {
+        background: #ccc;
+      }
+
+    50%
+      {
+        background: $c-blue;
+      }
+
+     75%
+      {
+        background: $c-blue;
+      }
+
+    100%
+      {
+        background: $c-violet-light;
+      }
+  }
+
+
+@keyframes face4
+  {
+    0%
+      {
+        background: $c-violet-mid;
+      }
+
+    25%
+      {
+        background: $c-violet-light;
+      }
+
+    50%
+      {
+        background: $c-violet-light;
+      }
+
+     75%
+      {
+        background: $c-violet-dark;
+      }
+
+    100%
+      {
+        background: $c-violet-mid;
+      }
+  }
+
+
+
+.logo-robonomics
+  {
+    position: relative;
+    width: 300px;
+    height: 300px;
+
+    div[class *= 'logo-robonomics__dot-']
+      {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: $c-blue;
+      }
+  }
+
+.logo-robonomics__tetr
+  {
+    width: 250px;
+  }
+
+.tetrahedron
+  {
+    position: relative;
+    width: 40%;
+    padding-bottom: 34.64%;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    transform: rotatex(0deg) rotateY(0deg) rotatez(0deg);
+    transform-origin: 50% 50%;
+    // animation: 10s rotate 3s linear infinite;
+
+    div
+      {
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        transform-style: preserve-3d;
+        clip-path: polygon(50% 0, 100% 100%, 0% 100%);
+        // clip-path: polygon(50% 99%, 100% 100%, 0% 100%);
+        // animation: 0.8s logoAnim 1s linear forwards;
+        background: $c-blue;
+      }
+
+    .face1
+      {
+        background: $c-violet-mid;
+      }
+
+    .face2
+      {
+        transform-origin: 0% 100%;
+        transform: rotate(-60deg) rotatex(-109.5deg);
+        animation: 15s face2 1s linear infinite;
+      }
+
+    .face3
+    {
+      transform-origin: 100% 100%;
+      transform: rotate(60deg) rotatex(-109.5deg);
+      background: $c-violet-light;
+      animation: 15s face3 1s linear infinite;
+    }
+
+    .face4
+      {
+        transform-origin:50% 100%;
+        transform: otate(180deg) rotatex(-109.5deg);
+        background: $c-violet-mid;
+        animation: 15s face4 1s linear infinite;
+      }
+
+  }
 
 
 

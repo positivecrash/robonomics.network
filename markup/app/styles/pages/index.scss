@@ -2,7 +2,7 @@
 	{
 
 		@include rem('padding-top', $margin-sec*2);
-	 	@include rem('padding-bottom', $margin-sec*2);
+	 	@include rem('padding-bottom', $margin-sec*3);
 
 		.row [class*=col-]
 		{
@@ -16,14 +16,6 @@
 							clear: right;
 						}
 				}
-
-			// @media screen and (min-width: $bootstrap-sm)
-			// 	{
-			// 		&:last-child
-			// 			{
-			// 				padding-top: 40px;
-			// 			}
-			// 	}
 		}
 
 		.block-white, .block-video
