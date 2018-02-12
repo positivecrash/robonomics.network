@@ -27,7 +27,15 @@ jQuery(document).ready(function($){
 
 
     var $about = $('.contentBlock-about');
-    $about.find('.col-sm-6:nth-child(1)').paroller({ factor: '0.1', type: 'foreground' });
-    $about.find('.col-sm-6:nth-child(2)').paroller({ factor: '-0.1', type: 'foreground' });
+    if ( $about.length > 0 ){
+
+        $about.find('.col-sm-6:nth-child(1)').paroller({ factor: '-0.1', type: 'foreground' });
+        $about.find('.col-sm-6:nth-child(2)').paroller({ factor: '0.1', type: 'foreground' });
+        
+    }
+        
+
+
+
 
 });

@@ -21,7 +21,8 @@ jQuery(document).ready(function($){
 
 	//Colors
 	var
-		colorDot = '#393d50';
+		colorDot = '#535974';
+		// colorDot = '#393d50';
 
 
 	//Attributes

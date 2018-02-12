@@ -192,12 +192,12 @@ section
     color: #fff;
 
     position: relative;
+    overflow: hidden;
 
     .snapsvg-darkDots
       {
         @extend %svgBack;
-        // top: 45px;
-        top: 0;
+        top: 90px;
       }
 
     & > .secw-base
