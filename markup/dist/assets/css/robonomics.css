@@ -222,7 +222,7 @@ table td, table th {
 }
 
 /*====== end of Other ======*/
-#header-top, .hamburger, .nav-mobilehide {
+#header-top, .hamburger, .nav-mobilehide, #logo-robonomics, #logo-ethereum {
   visibility: hidden;
   opacity: 0;
 }
@@ -3015,11 +3015,8 @@ header[role='banner'] {
 #logo-robonomics {
   display: inline-block;
   width: 200px;
-  opacity: 0;
-  -webkit-transform: scale(0.3);
-          transform: scale(0.3);
-  -webkit-animation: BounceIn 1s ease forwards;
-          animation: BounceIn 1s ease forwards;
+  -webkit-animation: 0.5s FadeIn 1s ease forwards;
+          animation: 0.5s FadeIn 1s ease forwards;
 }
 
 #logo-ethereum {
@@ -3028,11 +3025,8 @@ header[role='banner'] {
   top: 17px;
   left: 50%;
   margin-left: -195px;
-  opacity: 0;
-  -webkit-transform: scale(0.3);
-          transform: scale(0.3);
-  -webkit-animation: 0.5s BounceIn 1s ease forwards;
-          animation: 0.5s BounceIn 1s ease forwards;
+  -webkit-animation: 0.5s FadeIn 1s ease forwards;
+          animation: 0.5s FadeIn 1s ease forwards;
 }
 
 /*====== Canvas ======*/

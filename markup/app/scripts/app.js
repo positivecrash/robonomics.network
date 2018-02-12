@@ -9,7 +9,6 @@ jQuery(document).ready(function($){
 
 	/*---  Fix navigation on top ---*/
 
-
     function FixNav(){
 
     	var navPos = 1300;
@@ -26,16 +25,36 @@ jQuery(document).ready(function($){
 
 
 
-    var $about = $('.contentBlock-about');
-    if ( $about.length > 0 ){
-
-        $about.find('.col-sm-6:nth-child(1)').paroller({ factor: '-0.1', type: 'foreground' });
-        $about.find('.col-sm-6:nth-child(2)').paroller({ factor: '0.1', type: 'foreground' });
-        
-    }
-        
 
 
+    /*---  Parallax effects ---*/
+
+    function parallax()
+        {
+            $.plax.disable();
+
+            if ($w.width() > 576){
+                $('.js-paroller').paroller();
+                $('.plaxify').plaxify();
+                $.plax.enable();
+            }
+        }
+
+
+    parallax();
+
+    $w.on('resize', function(){
+        parallax();
+    });
+
+    // $('#header-mid').zlayer([
+    //     {
+    //         layer:'#logo-robonomics'
+    //     },
+    //     {
+    //         layer:'#logo-ethereum'
+    //     }
+    // ]);
 
 
 });

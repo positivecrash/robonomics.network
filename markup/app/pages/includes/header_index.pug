@@ -23,12 +23,25 @@ header(role='banner')
 
 	#header-mid
 		#header-mid__content
-			img#logo-robonomics(alt="", src="assets/i/logo-robonomics.svg")
-			img#logo-ethereum(alt="", src="assets/i/logo-ethereum.svg")
+			img#logo-robonomics(alt="", src="assets/i/logo-robonomics.svg", data-xrange="25", data-yrange="25").plaxify
+			img#logo-ethereum(alt="", src="assets/i/logo-ethereum.svg", data-xrange="50", data-yrange="50").plaxify
+
+
+			//- .logo-robonomics
+			//- 	.logo-robonomics__dot-1
+			//- 	.logo-robonomics__dot-2
+			//- 	.logo-robonomics__dot-3
+
+			//- 	.logo-robonomics__tetr
+			//- 		.tetrahedron
+			//- 			.face1
+			//- 			.face2
+			//- 			.face3
+			//- 			.face4
 
 			.secw-base
 				#header-title: span ПЛАТФОРМА РОБОНОМИКИ
 				#header-subtitle { Инфраструктура сети Ethereum для умных фабрик и городов }
 
-		#snapsvg-header-wrap
+		#snapsvg-header-wrap.plaxify(data-xrange="10", data-yrange="10")
 			svg#snapsvg-header

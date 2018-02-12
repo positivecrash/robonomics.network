@@ -80,7 +80,8 @@ jQuery(document).ready(function($){
   	//ACTION!
   	
   	setTimeout(function(){
-		drawGrid('true');
+		if ($w.width() > 576)
+			drawGrid('true');
   	}, 8000);
 
 
