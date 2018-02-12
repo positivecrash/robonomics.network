@@ -196,7 +196,8 @@ section
     .snapsvg-darkDots
       {
         @extend %svgBack;
-        top: 45px;
+        // top: 45px;
+        top: 0;
       }
 
     & > .secw-base

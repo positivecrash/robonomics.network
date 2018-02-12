@@ -1,5 +1,8 @@
-.contentBlock-about
+.contentBlock-about.sec-colored
 	{
+
+		@include rem('padding-top', $margin-sec*2);
+	 	@include rem('padding-bottom', $margin-sec*2);
 
 		.row [class*=col-]
 		{
@@ -14,13 +17,13 @@
 						}
 				}
 
-			@media screen and (min-width: $bootstrap-sm)
-				{
-					&:last-child
-						{
-							padding-top: 40px;
-						}
-				}
+			// @media screen and (min-width: $bootstrap-sm)
+			// 	{
+			// 		&:last-child
+			// 			{
+			// 				padding-top: 40px;
+			// 			}
+			// 	}
 		}
 
 		.block-white, .block-video

@@ -12,7 +12,7 @@ jQuery(document).ready(function($){
 
     function FixNav(){
 
-    	var navPos = 1000;
+    	var navPos = 1300;
     	var $nav = $('#header-top');
 
         if( $w.scrollTop() >= navPos)
@@ -23,5 +23,11 @@ jQuery(document).ready(function($){
 
     FixNav();
     $w.bind('scroll', FixNav);
+
+
+
+    var $about = $('.contentBlock-about');
+    $about.find('.col-sm-6:nth-child(1)').paroller({ factor: '0.1', type: 'foreground' });
+    $about.find('.col-sm-6:nth-child(2)').paroller({ factor: '-0.1', type: 'foreground' });
 
 });
