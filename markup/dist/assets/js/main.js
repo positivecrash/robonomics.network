@@ -6686,7 +6686,7 @@ jQuery(document).ready(function($){
 	var
 		$w = $(window),
 		s2 = Snap('.snapsvg-darkDots'),
-		obj = $('.snapsvg-darkDots').parent('.sec-dark'),
+		obj = $('.snapsvg-darkDots').parent(),
 		dotsLeft = [],
 		dotsRight = [];
 
@@ -6703,7 +6703,7 @@ jQuery(document).ready(function($){
 
 	//Colors
 	var
-		colorDot = '#535974';
+		colorDot = '#42475f';
 		// colorDot = '#393d50';
 
 

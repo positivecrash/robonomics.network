@@ -44,7 +44,7 @@ input, select {
   text-decoration: none !important;
 }
 
-#snapsvg-header, .sec-dark .snapsvg-darkDots {
+#snapsvg-header, .sec-dark .snapsvg-darkDots, .sec-mid .snapsvg-darkDots {
   display: block;
   position: absolute;
   top: 0;
@@ -56,7 +56,7 @@ input, select {
   left: 50%;
 }
 
-#header-mid__content, .sec-dark > .secw-base {
+#header-mid__content, .sec-dark > .secw-base, .sec-mid > .secw-base {
   position: relative;
   z-index: 1;
 }
@@ -3008,7 +3008,7 @@ header[role='banner'] {
 }
 
 /*====== end of Header navigation ======*/
-/*====== Middle section ======*/
+/*====== MIDDLE SECTION ======*/
 #header-mid {
   position: relative;
   box-sizing: border-box;
@@ -3032,6 +3032,7 @@ header[role='banner'] {
           animation: 0.5s FadeIn 1s ease forwards;
 }
 
+/*====== end of MIDDLE SECTION ======*/
 /*====== LOGO ROBONOMICS ======*/
 @-webkit-keyframes logo-triangle-1 {
   0% {
@@ -3171,7 +3172,7 @@ header[role='banner'] {
 }
 
 /*====== end of LOGO ROBONOMICS ======*/
-/*====== Canvas ======*/
+/*====== HEADER SVG ======*/
 #snapsvg-header-wrap {
   overflow: hidden;
   position: absolute;
@@ -3192,7 +3193,8 @@ header[role='banner'] {
   }
 }
 
-/*====== Titles ======*/
+/*====== end of HEADER SVG ======*/
+/*====== TITLES ======*/
 #header-title {
   margin-top: 97px;
 }
@@ -3214,6 +3216,7 @@ header[role='banner'] {
   margin-top: 20px;
 }
 
+/*====== end of TITLES ======*/
 .contentBlock-about.sec-colored {
   padding-top: 96px;
   padding-top: 6rem;
@@ -3246,7 +3249,7 @@ header[role='banner'] {
   }
 }
 .contentBlock-about.sec-colored .block-video {
-  background-color: #535974;
+  background-color: #282B38;
 }
 .contentBlock-about.sec-colored .block-white img {
   margin-bottom: 20px;
@@ -3402,6 +3405,16 @@ section {
   overflow: hidden;
 }
 .sec-dark .snapsvg-darkDots {
+  top: 90px;
+}
+
+.sec-mid {
+  background-color: #535974;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.sec-mid .snapsvg-darkDots {
   top: 90px;
 }
 

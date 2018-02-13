@@ -231,7 +231,8 @@ header[role='banner']
 
 
 
-/*====== Middle section ======*/
+/*====== MIDDLE SECTION ======*/
+
 #header-mid
   {
     position: relative;
@@ -263,7 +264,7 @@ header[role='banner']
     // animation: 0.5s BounceIn 1s ease forwards;
   }
 
-
+  /*====== end of MIDDLE SECTION ======*/
 
 
 
@@ -357,11 +358,8 @@ $delay: 1s;
 
 
 
+/*====== HEADER SVG ======*/
 
-
-
-
-/*====== Canvas ======*/
 #snapsvg-header-wrap
   {
     overflow: hidden;
@@ -396,11 +394,16 @@ $delay: 1s;
   }
 
 
+/*====== end of HEADER SVG ======*/
 
 
 
 
-/*====== Titles ======*/
+
+
+
+/*====== TITLES ======*/
+
 #header-title
   {
     margin-top: 97px;
@@ -427,7 +430,7 @@ $delay: 1s;
     margin-top: 20px;
   }
 
-
+/*====== end of TITLES ======*/
 
 
 
