@@ -311,13 +311,23 @@ $delay: 1s;
 
 .logo-robonomics
   {
-    .dot { fill: $c-blue; }
+    .dot
+      {
+        fill: $c-blue;
+
+        @extend %FadeOut;
+        animation: 0.5s FadeIn 4s ease forwards;
+      }
 
     .line
       {
         fill:none;
         stroke:#03A5ED;
         stroke-miterlimit:10;
+
+        stroke-dasharray: 700;
+        stroke-dashoffset: 700;
+        animation: 1s DrawSvgPath 3s ease-in-out forwards; 
       }
 
     .triangle-1

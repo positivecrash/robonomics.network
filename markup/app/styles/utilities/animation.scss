@@ -70,3 +70,11 @@
 			transform: scale(1);
 		}
 	}
+	
+
+@keyframes DrawSvgPath
+	{
+	 to {
+	    stroke-dashoffset: 0;
+	  }
+	}

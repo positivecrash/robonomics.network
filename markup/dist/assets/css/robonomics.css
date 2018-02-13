@@ -222,7 +222,7 @@ table td, table th {
 }
 
 /*====== end of Other ======*/
-#header-top, .hamburger, .nav-mobilehide, #logo-ethereum, #header-logo-robonomics {
+#header-top, .hamburger, .nav-mobilehide, #logo-ethereum, #header-logo-robonomics, .logo-robonomics .dot {
   visibility: hidden;
   opacity: 0;
 }
@@ -348,6 +348,16 @@ table td, table th {
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+}
+@-webkit-keyframes DrawSvgPath {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes DrawSvgPath {
+  to {
+    stroke-dashoffset: 0;
   }
 }
 .svg .sprite-basic-check, .svg .sprite-basic-copy {
@@ -3132,11 +3142,17 @@ header[role='banner'] {
 
 .logo-robonomics .dot {
   fill: #03A5ED;
+  -webkit-animation: 0.5s FadeIn 4s ease forwards;
+          animation: 0.5s FadeIn 4s ease forwards;
 }
 .logo-robonomics .line {
   fill: none;
   stroke: #03A5ED;
   stroke-miterlimit: 10;
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  -webkit-animation: 1s DrawSvgPath 3s ease-in-out forwards;
+          animation: 1s DrawSvgPath 3s ease-in-out forwards;
 }
 .logo-robonomics .triangle-1 {
   fill: #03A5ED;
