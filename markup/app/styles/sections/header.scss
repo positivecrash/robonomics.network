@@ -4,11 +4,6 @@ header[role='banner']
     padding-top: 45px;
   }
 
-// .plaxify
-//   {
-//     position: absolute;
-//   }
-
 
 /*====== Top section ======*/
 
@@ -253,18 +248,6 @@ header[role='banner']
 
   }
 
-#logo-robonomics
-  {
-    display: inline-block;
-    width: 200px;
-
-    @extend %FadeOut;
-    animation: 0.5s FadeIn 1s ease forwards;
-    // transform: scale(.3);
-
-    // animation: BounceIn 1s ease forwards;
-  }
-
 #logo-ethereum
   {
     position: absolute;
@@ -282,226 +265,89 @@ header[role='banner']
 
 
 
-@keyframes rotate
-  {
-    50%
-      {
-        transform: rotatex(0deg) rotateY(180deg) rotatez(0deg);
-      }
 
-    100%
-      {
-        transform: rotatex(0deg) rotateY(360deg) rotatez(0deg);
-      }
+
+
+
+
+
+/*====== LOGO ROBONOMICS ======*/
+
+@keyframes logo-triangle-1
+  {
+    0% { fill: $c-blue; }
+    25% { fill: $c-blue; }
+    50% { fill: $c-blue; }
+    75% { fill: $c-violet-light; }
+    100% { fill: $c-blue; }
   }
 
-
-@keyframes logoAnim
+@keyframes logo-triangle-2
   {
-    0%
-      {
-        clip-path: polygon(50% 99%, 100% 100%, 0% 100%);
-      }
-
-    100%
-      {
-        clip-path: polygon(50% 0, 100% 100%, 0% 100%);
-      }
+    0% { fill: $c-violet-light; }
+    25% { fill: #E0BDED; }
+    50% { fill: $c-blue; }
+    75% { fill: $c-blue; }
+    100% { fill: $c-violet-light; }
   }
 
-
-@keyframes face2
+@keyframes logo-triangle-3
   {
-    0%
-      {
-        background: $c-blue;
-      }
-
-    25%
-      {
-        background: $c-violet-mid;
-      }
-
-    50%
-      {
-        background: $c-blue;
-      }
-
-     75%
-      {
-        background: $c-violet-light;
-      }
-
-    100%
-      {
-        background: $c-blue;
-      }
+    0% { fill: $c-violet-mid; }
+    25% { fill: $c-violet-light; }
+    50% { fill: $c-violet-light; }
+    75% { fill: $c-violet-dark; }
+    100% { fill: $c-violet-mid; }
   }
 
+$duration: 15s;
+$delay: 1s;
 
-@keyframes face2
+#header-logo-robonomics
   {
-    0%
-      {
-        background: $c-blue;
-      }
-
-    25%
-      {
-        background: $c-blue;
-      }
-
-    50%
-      {
-        background: $c-blue;
-      }
-
-     75%
-      {
-        background: $c-violet-light;
-      }
-
-    100%
-      {
-        background: $c-blue;
-      }
+    @extend %FadeOut;
+    animation: 0.5s FadeIn 1s ease forwards;
   }
-
-
-@keyframes face3
-  {
-    0%
-      {
-        background: $c-violet-light;
-      }
-
-    25%
-      {
-        background: #ccc;
-      }
-
-    50%
-      {
-        background: $c-blue;
-      }
-
-     75%
-      {
-        background: $c-blue;
-      }
-
-    100%
-      {
-        background: $c-violet-light;
-      }
-  }
-
-
-@keyframes face4
-  {
-    0%
-      {
-        background: $c-violet-mid;
-      }
-
-    25%
-      {
-        background: $c-violet-light;
-      }
-
-    50%
-      {
-        background: $c-violet-light;
-      }
-
-     75%
-      {
-        background: $c-violet-dark;
-      }
-
-    100%
-      {
-        background: $c-violet-mid;
-      }
-  }
-
-
 
 .logo-robonomics
   {
-    position: relative;
-    width: 300px;
-    height: 300px;
+    .dot { fill: $c-blue; }
 
-    div[class *= 'logo-robonomics__dot-']
+    .line
       {
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        border-radius: 5px;
-        background-color: $c-blue;
+        fill:none;
+        stroke:#03A5ED;
+        stroke-miterlimit:10;
+      }
+
+    .triangle-1
+      {
+        fill: $c-blue;
+        animation: $duration logo-triangle-1 $delay linear infinite;
+      }
+
+    .triangle-2
+      {
+        fill: $c-violet-light;
+        animation: $duration logo-triangle-2 $delay linear infinite;
+      }
+
+    .triangle-3
+      {
+        fill: $c-violet-mid;
+        animation: $duration logo-triangle-3 $delay linear infinite;
       }
   }
 
-.logo-robonomics__tetr
-  {
-    width: 250px;
-  }
 
-.tetrahedron
-  {
-    position: relative;
-    width: 40%;
-    padding-bottom: 34.64%;
-    margin: 0 auto;
-    transform-style: preserve-3d;
-    transform: rotatex(0deg) rotateY(0deg) rotatez(0deg);
-    transform-origin: 50% 50%;
-    // animation: 10s rotate 3s linear infinite;
+/*====== end of LOGO ROBONOMICS ======*/
 
-    div
-      {
-        position:absolute;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-        transform-style: preserve-3d;
-        clip-path: polygon(50% 0, 100% 100%, 0% 100%);
-        // clip-path: polygon(50% 99%, 100% 100%, 0% 100%);
-        // animation: 0.8s logoAnim 1s linear forwards;
-        background: $c-blue;
-      }
 
-    .face1
-      {
-        background: $c-violet-mid;
-      }
 
-    .face2
-      {
-        transform-origin: 0% 100%;
-        transform: rotate(-60deg) rotatex(-109.5deg);
-        animation: 15s face2 1s linear infinite;
-      }
 
-    .face3
-    {
-      transform-origin: 100% 100%;
-      transform: rotate(60deg) rotatex(-109.5deg);
-      background: $c-violet-light;
-      animation: 15s face3 1s linear infinite;
-    }
 
-    .face4
-      {
-        transform-origin:50% 100%;
-        transform: otate(180deg) rotatex(-109.5deg);
-        background: $c-violet-mid;
-        animation: 15s face4 1s linear infinite;
-      }
 
-  }
+
 
 
 
