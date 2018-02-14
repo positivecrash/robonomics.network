@@ -3012,6 +3012,7 @@ header[role='banner'] {
 #header-mid {
   position: relative;
   box-sizing: border-box;
+  overflow: hidden;
   padding-top: 68px;
   min-height: 370px;
 }
