@@ -63,8 +63,34 @@
 
 .contentBlock-shemes
 	{
-		.js-slider
+		*[data-anyslide-slide]
 			{
-				
+				cursor: pointer;
+				color: $c-violet-light;
+				opacity: 0.6;
+				transition: 0.2s all linear;
+
+				&:hover
+					{
+						opacity: 1;
+					}
+
+				&.active
+					{
+						color: #fff;
+						opacity: 1;
+					}
+			}
+
+		.row
+			{
+				margin-left: -40px;
+				margin-right: -40px;
+			}
+
+		div[class *= 'col-']
+			{
+				padding-left: 40px;
+				padding-right: 40px;
 			}
 	}
