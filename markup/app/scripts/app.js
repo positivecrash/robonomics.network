@@ -47,14 +47,9 @@ jQuery(document).ready(function($){
         parallax();
     });
 
-    // $('#header-mid').zlayer([
-    //     {
-    //         layer:'#logo-robonomics'
-    //     },
-    //     {
-    //         layer:'#logo-ethereum'
-    //     }
-    // ]);
 
+
+    /*---  Slider  ---*/
+    $('.js-slider').AnySlide();
 
 });

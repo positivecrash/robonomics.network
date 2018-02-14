@@ -22,7 +22,7 @@
 
       // PAGER
       tab: '.js-slider-pager',
-      tabEl: 'a',
+      tabEl: '[data-anyslide-slide]',
 
       // CONTROLS
       controls: '.js-slider-controls',
@@ -90,13 +90,13 @@
       slider.config = $.extend({}, defaults, options);
 
       // store tabs
-      slider.tab = el.children(slider.config.tab).children(slider.config.tabEl);
+      slider.tab = el.find(slider.config.tab).find(slider.config.tabEl);
 
       // store containers for content
-      slider.content = el.children(slider.config.content).children(slider.config.contentEl);
+      slider.content = el.find(slider.config.content).find(slider.config.contentEl);
 
       // store container for controls
-      slider.controls = el.children(slider.config.controls);
+      slider.controls = el.find(slider.config.controls);
 
       // used if singleContainer == true
       slider.activeslide = 'init';
@@ -304,7 +304,7 @@
           e.preventDefault();
           e.stopPropagation();
 
-          show($(this).index());
+          show($(this).data('anyslide-slide'));
 
         });
       }
@@ -7083,14 +7083,9 @@ jQuery(document).ready(function($){
         parallax();
     });
 
-    // $('#header-mid').zlayer([
-    //     {
-    //         layer:'#logo-robonomics'
-    //     },
-    //     {
-    //         layer:'#logo-ethereum'
-    //     }
-    // ]);
 
+
+    /*---  Slider  ---*/
+    $('.js-slider').AnySlide();
 
 });

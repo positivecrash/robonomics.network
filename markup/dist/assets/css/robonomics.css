@@ -78,6 +78,13 @@ html {
 /*====== Text sizes & Headers ======*/
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
+  margin-top: 24px;
+  margin-top: 1.5rem;
+  margin-bottom: 48px;
+  margin-bottom: 3rem;
+}
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+  margin-top: 0;
 }
 
 h2 {
@@ -479,6 +486,97 @@ table td, table th {
   background-position: 0px -222px;
 }
 
+.anyslide[data-anyslide~='controls'] {
+  position: relative;
+}
+.anyslide[data-anyslide~='controls'] .js-slider-controls {
+  position: absolute;
+  top: 50%;
+  margin-top: -24px;
+  left: 0;
+  right: 0;
+}
+.anyslide[data-anyslide~='controls'] .js-slider-controls .prev, .anyslide[data-anyslide~='controls'] .js-slider-controls .next {
+  position: absolute;
+  top: 0;
+  display: block;
+}
+.anyslide[data-anyslide~='controls'] .js-slider-controls .prev.disabled, .anyslide[data-anyslide~='controls'] .js-slider-controls .next.disabled {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: 0.5;
+  cursor: default;
+}
+.anyslide[data-anyslide~='controls'] .js-slider-controls .prev {
+  left: 0;
+}
+.anyslide[data-anyslide~='controls'] .js-slider-controls .next {
+  right: 0;
+}
+
+.js-slider-viewport .slide {
+  display: none;
+  opacity: 0;
+}
+.js-slider-viewport .slide.active {
+  display: block;
+  -webkit-animation: 0.2s FadeIn ease-in-out forwards;
+          animation: 0.2s FadeIn ease-in-out forwards;
+}
+
+.anyslide-loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  position: relative;
+  margin: 40px auto;
+}
+.anyslide-loader:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 5px solid transparent;
+  border-top-color: #03A5ED;
+  border-left-color: #03A5ED;
+  border-bottom-color: #03A5ED;
+  -webkit-animation: Spin 1s infinite;
+          animation: Spin 1s infinite;
+}
+
+@keyframes FadeIn {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes Spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes Spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 @-ms-viewport {
   width: device-width;
 }

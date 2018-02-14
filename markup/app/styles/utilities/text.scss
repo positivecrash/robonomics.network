@@ -29,6 +29,14 @@ body
 #{headings()}
 	{
 		line-height: $scale-sm;
+
+		@include rem('margin-top', $vertical-rythm);
+  		@include rem('margin-bottom', $vertical-rythm*2);
+
+  		&:first-child
+  			{
+  				margin-top: 0;
+  			}
 	}
 
 
@@ -48,7 +56,9 @@ body
 
 
 h1
-	{ @include rem('font-size', $font-size-title); }
+	{
+		@include rem('font-size', $font-size-title);
+	}
 
 /*====== end of Text sizes & Headers ======*/
 
