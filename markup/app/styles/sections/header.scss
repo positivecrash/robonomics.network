@@ -222,6 +222,11 @@ header[role='banner']
       {
         animation: 0.2s FadeIn 0.2s linear forwards;
       }
+
+    @media screen and (max-width: $mq-menuhide) 
+      {
+        display: none;
+      }
   }
 
 /*====== end of Header navigation ======*/

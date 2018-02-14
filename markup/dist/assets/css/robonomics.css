@@ -75,37 +75,57 @@ html {
   font-size: 100%;
 }
 
-/*====== Text sizes ======*/
+/*====== Text sizes & Headers ======*/
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
 h2 {
-  font-size: 34px;
-  font-size: 2.125rem;
+  font-size: 30px;
+  font-size: 1.875rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #F15A24;
+  letter-spacing: 3px;
+  word-spacing: 4px;
 }
 
 h3 {
-  font-size: 30px;
-  font-size: 1.875rem;
+  font-size: 26px;
+  font-size: 1.625rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #F15A24;
+  letter-spacing: 3px;
+  word-spacing: 4px;
 }
 
 h4 {
-  font-size: 26px;
-  font-size: 1.625rem;
+  font-size: 22px;
+  font-size: 1.375rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #F15A24;
+  letter-spacing: 3px;
+  word-spacing: 4px;
 }
 
 h5 {
-  font-size: 22px;
-  font-size: 1.375rem;
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #F15A24;
+  letter-spacing: 3px;
+  word-spacing: 4px;
 }
 
 h1 {
-  font-size: 42px;
-  font-size: 2.625rem;
+  font-size: 38px;
+  font-size: 2.375rem;
 }
 
-/*====== end of Text sizes ======*/
+/*====== end of Text sizes & Headers ======*/
 /*====== Text styles ======*/
 body {
   color: #535974;
@@ -203,6 +223,16 @@ table td, table th {
 }
 
 /*====== end of Text elements ======*/
+/*====== Margins & paddings ======*/
+.m-t-0 {
+  margin-top: 0;
+}
+
+.m-b-0 {
+  margin-bottom: 0;
+}
+
+/*====== end of Margins & paddings ======*/
 /*====== Other ======*/
 .embed-video iframe, .embed-video object, .embed-video embed {
   border: 0;
@@ -3004,6 +3034,11 @@ header[role='banner'] {
   .nav-mobilehide {
     -webkit-animation: 0.2s FadeIn 0.2s linear forwards;
             animation: 0.2s FadeIn 0.2s linear forwards;
+  }
+}
+@media screen and (max-width: 890px) {
+  .nav-mobilehide {
+    display: none;
   }
 }
 

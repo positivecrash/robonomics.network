@@ -24,7 +24,7 @@ body
 
 
 
-/*====== Text sizes ======*/
+/*====== Text sizes & Headers ======*/
 
 #{headings()}
 	{
@@ -34,16 +34,23 @@ body
 
 @for $i from 2 through 5
 	{
-	  h#{$i}{
-	  	@include rem('font-size', $font-size-title - 4 * $i);
-	  }
+	  h#{$i}
+		  {
+		  	@include rem('font-size', $font-size-title - 4 * $i);
+
+		  	font-weight: 300;
+		  	text-transform: uppercase;
+		  	color: $c-orange;
+		  	letter-spacing: 3px;
+		  	word-spacing: 4px;
+		  }
 	}
 
 
 h1
 	{ @include rem('font-size', $font-size-title); }
 
-/*====== end of Text sizes ======*/
+/*====== end of Text sizes & Headers ======*/
 
 
 
@@ -163,6 +170,16 @@ table
 /*====== end of Text elements ======*/
 
 
+
+
+
+
+/*====== Margins & paddings ======*/
+
+.m-t-0 { margin-top: 0; }
+.m-b-0 { margin-bottom: 0; }
+
+/*====== end of Margins & paddings ======*/
 
 
 
