@@ -94,7 +94,6 @@ header[role='banner']
     a
       {
         @extend %link_noline;
-        // font-weight: 500;
         font-size: 22px;
         line-height: 1;
         color: $c-text;
@@ -134,29 +133,36 @@ header[role='banner']
 
         &:hover
           {
-              & > a
-                {
-                  &:before, &:after
-                    {
-                      bottom: -10px;
-                      width: 14px;
-                      left: 50%;
-                      right: auto;
-                    }
+            a
+              {
+                color: $c-orange;
+              }
 
-                  &:before
-                    {
-                      transform: rotate(30deg);
-                      transform-origin: 100% 0;
-                      margin-left: -13px;
-                    }
+            & > a
+              {
+                &:before, &:after
+                  {
+                    bottom: -10px;
+                    width: 14px;
+                    left: 50%;
+                    right: auto;
 
-                  &:after
-                    {
-                      transform: rotate(-30deg);
-                      transform-origin: 0 0;
-                    }
-                }
+                    background-color: $c-orange;
+                  }
+
+                &:before
+                  {
+                    transform: rotate(30deg);
+                    transform-origin: 100% 0;
+                    margin-left: -13px;
+                  }
+
+                &:after
+                  {
+                    transform: rotate(-30deg);
+                    transform-origin: 0 0;
+                  }
+              }
           }
       }
 
@@ -173,6 +179,43 @@ header[role='banner']
 
 
 /*====== end of Top section ======*/
+
+
+
+
+
+
+/*====== NAV: Social links ======*/
+
+.lk-headerSocial
+  {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1.5px solid $c-orange;
+    margin-bottom: 10px;
+
+    & > span
+      {
+        display: table-cell;
+        width: 50px;
+        height: 50px;
+        vertical-align: middle;
+        text-align: center;
+      }
+
+    path
+      {
+        fill: $c-orange;
+      }
+  }
+
+/*====== end of NAV: Social links ======*/
+
+
+
+
 
 
 
