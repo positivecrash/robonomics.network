@@ -85,7 +85,7 @@ section.contentBlock-about
 						opacity: 1;
 					}
 
-				@include mobile(){
+				@include maxTablet(){
 					color: #fff;
 					opacity: 1;
 					cursor: default;
@@ -111,7 +111,7 @@ section.contentBlock-about
 				margin-left: 60px;
 				margin-right: 60px;
 
-				@include mobile(){
+				@include maxTablet(){
 					display: none;
 				}
 			}
@@ -122,7 +122,7 @@ section.contentBlock-about
 				top: 500px;
 				width: 100%;
 
-				@include mobile(){
+				@include maxTablet(){
 					display: none;
 				}
 			}
@@ -148,7 +148,7 @@ section.contentBlock-about
 						margin-top: 10px;
 						color: $c-violet-light;
 
-						@include mobile(){
+						@include maxTablet(){
 							display: block;
 						}
 					}

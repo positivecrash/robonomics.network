@@ -7059,6 +7059,34 @@ jQuery(document).ready(function($){
     FixNav();
     $w.bind('scroll', FixNav);
 
+    /*---  end of Fix navigation on top ---*/
+
+
+
+
+
+    /*---  HEADER: open mobile nav ---*/
+
+    $('.hamburger').on('click', function(){
+        $this = $(this);
+        var $nav = $('.nav-mobilehide');
+        var c = 'opened';
+
+        if ( $this.hasClass(c) )
+            {
+                $this.removeClass(c);
+                $nav.removeClass(c);
+            }
+        else
+        {
+            $this.addClass(c);
+            $nav.addClass(c);
+        }
+    });
+
+    /*---  end of HEADER: open mobile nav ---*/
+
+
 
 
 
@@ -7086,10 +7114,18 @@ jQuery(document).ready(function($){
             });
         }
 
+    /*---  end of Parallax effects ---*/
+
+
+
+
 
 
     /*---  Slider  ---*/
     $('.js-slider').AnySlide();
+
+
+
 
 
 
@@ -7112,9 +7148,6 @@ jQuery(document).ready(function($){
                 inViewAction();
             });
         }
-
-
-
 
 
 
@@ -7147,6 +7180,7 @@ jQuery(document).ready(function($){
             });
         }
     
+    /*---  end of Index page  ---*/
     
 
 });
