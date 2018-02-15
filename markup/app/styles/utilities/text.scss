@@ -30,7 +30,7 @@ body
 	{
 		line-height: $scale-sm;
 
-		@include rem('margin-top', $vertical-rythm);
+		@include rem('margin-top', $vertical-rythm*2);
   		@include rem('margin-bottom', $vertical-rythm*2);
 
   		&:first-child
@@ -45,12 +45,6 @@ body
 	  h#{$i}
 		  {
 		  	@include rem('font-size', $font-size-title - 4 * $i);
-
-		  	font-weight: 300;
-		  	text-transform: uppercase;
-		  	color: $c-orange;
-		  	letter-spacing: 3px;
-		  	word-spacing: 4px;
 		  }
 	}
 
@@ -60,6 +54,27 @@ h1
 		@include rem('font-size', $font-size-title);
 	}
 
+
+h2
+	{
+		font-weight: 300;
+	  	text-transform: uppercase;
+	  	color: $c-orange;
+	  	letter-spacing: 3px;
+	  	word-spacing: 4px;
+	}
+
+h3
+	{
+		font-weight: 500;
+		color: #000;
+	}
+
+.t-big
+	{
+		@include rem('font-size', 22);
+		font-weight: 300;
+	}
 /*====== end of Text sizes & Headers ======*/
 
 
@@ -101,6 +116,9 @@ b
 
 .t-left
 	{ text-align: left; }
+
+
+.t-blue { color: $c-blue; color: $c-blue !important; }
 
 /*====== end of Text styles ======*/
 

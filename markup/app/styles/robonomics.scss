@@ -38,6 +38,7 @@ html, body
 html
   {
     position: relative;
+    overflow-x: hidden;
   }
 
 
@@ -178,15 +179,10 @@ body
 
 section
   {
-    @include rem('margin-top', $margin-sec);
-    @include rem('margin-bottom', $margin-sec);
-  }
-
-.sec-colored
-  {
     @include rem('padding-top', $margin-sec);
     @include rem('padding-bottom', $margin-sec);
   }
+
 
 .sec-dark
   {
@@ -206,6 +202,12 @@ section
       {
         @extend %svgBackContent;
       }
+  }
+
+.sec-white
+  {
+      background-color: #fff;
+      color: $c-violet-mid;
   }
 
 
@@ -229,7 +231,25 @@ section
       }
   }
 
+.sec-black
+  {
+    background-color: #000;
 
+    h2
+      {
+        color: $c-violet-light;
+      }
+  }
+
+.sec-pad
+  {
+    @include rem('padding-left', 60);
+  }
+
+.sec-dots__gray
+  {
+    background: image-url('pattern_dot_gray.svg');
+  }
 
 .block-white
   {
@@ -297,6 +317,99 @@ section
           }
       }
   }
+
+
+
+.block-gList
+  {
+
+    &, .col-sm-4
+      {
+        @extend %margPadNull;
+      }
+
+    .block-gList__text
+      {
+        padding-right: 40px;
+        font-weight: 500;
+        color: #000;
+      }
+
+    .block-gList__bul
+      {
+        display: inline-block;
+        padding: 10px;
+        border-radius: 54px;
+        border: 1px dashed #000;
+        line-height: 1;
+
+        position: relative;
+
+        @include rem('margin-bottom', $vertical-rythm);
+
+        span
+          {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            width: 88px;
+            height: 88px;
+            border-radius: 44px;
+            background-color: #000;
+            color: #fff;
+            font-weight: 100;
+            font-size: 72px;
+            line-height: 1;
+          }
+      }
+
+
+      .col-sm-4
+        {
+          overflow: hidden;
+
+          &:nth-child(1), &:nth-child(2)
+            {
+              .block-gList__bul:after
+                {
+                  content:"";
+                  position: absolute;
+                  left: 115px;
+                  height: 2px;
+                  border-bottom: 1px dashed #000;
+                  top: 50%;
+                  margin-top: -1px;
+                  right: 0;
+                  width: 500px;
+
+
+                  @include mobile()
+                    {
+                      display: none;
+                    }
+                }
+            }
+        }
+  }
 /*====== end of Sections ======*/
+
+
+
+
+/*====== Logos ======*/
+
+.logo-robonomics-outline
+  {
+    path
+      {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+      }
+  }
+
+/*====== end of Logos ======*/
 
 

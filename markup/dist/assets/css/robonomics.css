@@ -35,10 +35,10 @@ input, select {
 
 /*====== Fonts ======*/
 /*====== Margins, paddings ======*/
+/*====== Bootstrap ======*/
 /*====== Media queries ======*/
 /*====== Colors ======*/
 /*====== Classes ======*/
-/*====== Bootstrap ======*/
 .header-top__nav a, .header-top__nav a:hover, .header-top__nav a:focus, .header-top__nav a:visited {
   text-decoration: none;
   text-decoration: none !important;
@@ -61,6 +61,13 @@ input, select {
   z-index: 1;
 }
 
+.contentBlock-roadmap .row, .contentBlock-roadmap div[class*='col-'], .block-gList, .block-gList .col-sm-4 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -78,8 +85,8 @@ html {
 /*====== Text sizes & Headers ======*/
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
-  margin-top: 24px;
-  margin-top: 1.5rem;
+  margin-top: 48px;
+  margin-top: 3rem;
   margin-bottom: 48px;
   margin-bottom: 3rem;
 }
@@ -90,6 +97,29 @@ h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, 
 h2 {
   font-size: 30px;
   font-size: 1.875rem;
+}
+
+h3 {
+  font-size: 26px;
+  font-size: 1.625rem;
+}
+
+h4 {
+  font-size: 22px;
+  font-size: 1.375rem;
+}
+
+h5 {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+h1 {
+  font-size: 38px;
+  font-size: 2.375rem;
+}
+
+h2 {
   font-weight: 300;
   text-transform: uppercase;
   color: #F15A24;
@@ -98,38 +128,14 @@ h2 {
 }
 
 h3 {
-  font-size: 26px;
-  font-size: 1.625rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  color: #F15A24;
-  letter-spacing: 3px;
-  word-spacing: 4px;
+  font-weight: 500;
+  color: #000;
 }
 
-h4 {
+.t-big {
   font-size: 22px;
   font-size: 1.375rem;
   font-weight: 300;
-  text-transform: uppercase;
-  color: #F15A24;
-  letter-spacing: 3px;
-  word-spacing: 4px;
-}
-
-h5 {
-  font-size: 18px;
-  font-size: 1.125rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  color: #F15A24;
-  letter-spacing: 3px;
-  word-spacing: 4px;
-}
-
-h1 {
-  font-size: 38px;
-  font-size: 2.375rem;
 }
 
 /*====== end of Text sizes & Headers ======*/
@@ -170,6 +176,11 @@ b {
   text-align: left;
 }
 
+.t-blue {
+  color: #03A5ED;
+  color: #03A5ED !important;
+}
+
 /*====== end of Text styles ======*/
 /*====== Text elements ======*/
 ul, ol {
@@ -201,7 +212,7 @@ table td, table th {
   padding: 12px;
   padding: 0.75rem;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   table td, table th {
     display: block;
     padding: 7.2px;
@@ -259,7 +270,7 @@ table td, table th {
 }
 
 /*====== end of Other ======*/
-#header-top, .hamburger, .nav-mobilehide, #logo-ethereum, #header-logo-robonomics, .logo-robonomics .dot {
+#header-top, .hamburger, .nav-mobilehide, #logo-ethereum, #header-logo-robonomics, .logo-robonomics .dot, .contentBlock-token__info .logo-robonomics-outline circle {
   visibility: hidden;
   opacity: 0;
 }
@@ -492,7 +503,6 @@ table td, table th {
 .anyslide[data-anyslide~='controls'] .js-slider-controls {
   position: absolute;
   top: 50%;
-  margin-top: -24px;
   left: 0;
   right: 0;
 }
@@ -520,8 +530,8 @@ table td, table th {
 }
 .js-slider-viewport .slide.active {
   display: block;
-  -webkit-animation: 0.2s FadeIn ease-in-out forwards;
-          animation: 0.2s FadeIn ease-in-out forwards;
+  -webkit-animation: 0.8s FadeIn ease-in-out forwards;
+          animation: 0.8s FadeIn ease-in-out forwards;
 }
 
 .anyslide-loader {
@@ -2987,6 +2997,8 @@ li.fancybox-thumbs-loading {
 header[role='banner'] {
   text-align: center;
   padding-top: 45px;
+  padding-bottom: 48px;
+  padding-bottom: 3rem;
 }
 
 /*====== Top section ======*/
@@ -3002,7 +3014,7 @@ header[role='banner'] {
 }
 #header-top.fixed {
   position: fixed;
-  background-color: #282B38;
+  background-color: #000;
   top: 0;
 }
 #header-top.fixed, #header-top.fixed a {
@@ -3018,7 +3030,7 @@ header[role='banner'] {
   display: block;
 }
 #header-top.fixed .dropdown-content {
-  background-color: #282B38;
+  background-color: #000;
 }
 #header-top > .secw-base {
   display: table;
@@ -3164,6 +3176,11 @@ header[role='banner'] {
   margin-left: -195px;
   -webkit-animation: 0.5s FadeIn 1s ease forwards;
           animation: 0.5s FadeIn 1s ease forwards;
+}
+@media screen and (max-width: 576px) {
+  #logo-ethereum {
+    display: none;
+  }
 }
 
 /*====== end of MIDDLE SECTION ======*/
@@ -3351,20 +3368,22 @@ header[role='banner'] {
 }
 
 /*====== end of TITLES ======*/
-.contentBlock-about.sec-colored {
-  padding-top: 96px;
-  padding-top: 6rem;
-  padding-bottom: 144px;
-  padding-bottom: 9rem;
+@media screen and (min-width: 576px) {
+  section.contentBlock-about {
+    padding-top: 96px;
+    padding-top: 6rem;
+    padding-bottom: 96px;
+    padding-bottom: 6rem;
+  }
 }
-.contentBlock-about.sec-colored .row [class*=col-] {
+section.contentBlock-about .row [class*=col-] {
   margin-bottom: 0;
 }
-.contentBlock-about.sec-colored .row [class*=col-]:first-child .block-white, .contentBlock-about.sec-colored .row [class*=col-]:first-child .block-video {
+section.contentBlock-about .row [class*=col-]:first-child .block-white, section.contentBlock-about .row [class*=col-]:first-child .block-video {
   float: right;
   clear: right;
 }
-.contentBlock-about.sec-colored .block-white, .contentBlock-about.sec-colored .block-video {
+section.contentBlock-about .block-white, section.contentBlock-about .block-video {
   display: block;
   width: 276px;
   min-height: 155px;
@@ -3373,19 +3392,19 @@ header[role='banner'] {
   transition: all 0.2s linear;
 }
 @media screen and (min-width: 576px) {
-  .contentBlock-about.sec-colored .block-white:last-child, .contentBlock-about.sec-colored .block-video:last-child {
+  section.contentBlock-about .block-white:last-child, section.contentBlock-about .block-video:last-child {
     margin-bottom: 0;
   }
 }
 @media screen and (max-width: 576px) {
-  .contentBlock-about.sec-colored .block-white, .contentBlock-about.sec-colored .block-video {
+  section.contentBlock-about .block-white, section.contentBlock-about .block-video {
     width: 100%;
   }
 }
-.contentBlock-about.sec-colored .block-video {
+section.contentBlock-about .block-video {
   background-color: #282B38;
 }
-.contentBlock-about.sec-colored .block-white img {
+section.contentBlock-about .block-white img {
   margin-bottom: 20px;
 }
 
@@ -3402,13 +3421,154 @@ header[role='banner'] {
   color: #fff;
   opacity: 1;
 }
+@media screen and (max-width: 576px) {
+  .contentBlock-shemes *[data-anyslide-slide] {
+    color: #fff;
+    opacity: 1;
+    cursor: default;
+  }
+}
 .contentBlock-shemes .row {
-  margin-left: -40px;
+  margin-left: 20px;
   margin-right: -40px;
 }
 .contentBlock-shemes div[class*='col-'] {
   padding-left: 40px;
   padding-right: 40px;
+}
+.contentBlock-shemes .js-slider-viewport {
+  padding: 96px;
+  padding: 6rem;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+@media screen and (max-width: 576px) {
+  .contentBlock-shemes .js-slider-viewport {
+    display: none;
+  }
+}
+.contentBlock-shemes .anyslide .js-slider-controls {
+  top: 500px;
+  width: 100%;
+}
+@media screen and (max-width: 576px) {
+  .contentBlock-shemes .anyslide .js-slider-controls {
+    display: none;
+  }
+}
+.contentBlock-shemes .img-block {
+  margin-bottom: 96px;
+  margin-bottom: 6rem;
+}
+.contentBlock-shemes .js-slider-pager p {
+  margin-bottom: 0;
+}
+.contentBlock-shemes .js-slider-pager a {
+  display: none;
+  margin-top: 10px;
+  color: #B5C0F1;
+}
+@media screen and (max-width: 576px) {
+  .contentBlock-shemes .js-slider-pager a {
+    display: block;
+  }
+}
+
+.arrow {
+  width: 30px;
+}
+.arrow path {
+  fill: none;
+  stroke: #fff;
+}
+
+.contentBlock-token {
+  position: relative;
+  padding-bottom: 122px;
+}
+.contentBlock-token:after {
+  content: "";
+  position: absolute;
+  bottom: 48;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 74px;
+  background: url('../i/pattern_token.svg?1518619377') repeat-x 0 100%;
+}
+
+.contentBlock-token__info {
+  padding-right: 230px;
+  position: relative;
+}
+.contentBlock-token__info .logo-robonomics-outline {
+  position: absolute;
+  width: 190px;
+  right: 0;
+  top: 0;
+}
+.contentBlock-token__info .logo-robonomics-outline path {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+}
+.contentBlock-token__info .logo-robonomics-outline.animate path {
+  -webkit-animation: 2s DrawSvgPath 1s ease-in-out forwards;
+          animation: 2s DrawSvgPath 1s ease-in-out forwards;
+}
+.contentBlock-token__info .logo-robonomics-outline.animate circle {
+  -webkit-animation: 0.2s FadeIn 0.8s linear forwards;
+          animation: 0.2s FadeIn 0.8s linear forwards;
+}
+@media screen and (max-width: 576px) {
+  .contentBlock-token__info {
+    padding-right: 0;
+    margin-bottom: 48px;
+    margin-bottom: 3rem;
+  }
+  .contentBlock-token__info .logo-robonomics-outline {
+    position: static;
+    margin-bottom: 48px;
+    margin-bottom: 3rem;
+  }
+}
+
+.contentBlock-roadmap .roadmap-title, .contentBlock-roadmap .roadmap-desc {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.contentBlock-roadmap .roadmap-title {
+  border-bottom: 2px solid #F15A24;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  padding-bottom: 10px;
+}
+.contentBlock-roadmap .roadmap-title b, .contentBlock-roadmap .roadmap-title span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #F15A24;
+}
+.contentBlock-roadmap .roadmap-title b {
+  font-size: 24px;
+}
+.contentBlock-roadmap .roadmap-title span {
+  font-weight: 300;
+}
+.contentBlock-roadmap .roadmap-desc {
+  font-weight: 100;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.contentBlock-roadmap .roadmap-gray .roadmap-title {
+  border-color: #ccc;
+}
+.contentBlock-roadmap .roadmap-gray .roadmap-title b, .contentBlock-roadmap .roadmap-gray .roadmap-title span {
+  color: #ccc;
+}
+@media screen and (min-width: 768px) {
+  .contentBlock-roadmap .col-12 {
+    text-align: center;
+  }
 }
 
 html, body {
@@ -3418,6 +3578,7 @@ html, body {
 
 html {
   position: relative;
+  overflow-x: hidden;
 }
 
 body {
@@ -3541,13 +3702,6 @@ body {
 /*====== end of Bootstrap ======*/
 /*====== Sections ======*/
 section {
-  margin-top: 48px;
-  margin-top: 3rem;
-  margin-bottom: 48px;
-  margin-bottom: 3rem;
-}
-
-.sec-colored {
   padding-top: 48px;
   padding-top: 3rem;
   padding-bottom: 48px;
@@ -3564,6 +3718,11 @@ section {
   top: 90px;
 }
 
+.sec-white {
+  background-color: #fff;
+  color: #535974;
+}
+
 .sec-mid {
   background-color: #535974;
   color: #fff;
@@ -3572,6 +3731,22 @@ section {
 }
 .sec-mid .snapsvg-darkDots {
   top: 90px;
+}
+
+.sec-black {
+  background-color: #000;
+}
+.sec-black h2 {
+  color: #B5C0F1;
+}
+
+.sec-pad {
+  padding-left: 60px;
+  padding-left: 3.75rem;
+}
+
+.sec-dots__gray {
+  background: url('../i/pattern_dot_gray.svg?1518618655');
 }
 
 .block-white {
@@ -3626,4 +3801,62 @@ section {
           animation: 0.3s Scale 0.2s ease-in-out forwards;
 }
 
+.block-gList .block-gList__text {
+  padding-right: 40px;
+  font-weight: 500;
+  color: #000;
+}
+.block-gList .block-gList__bul {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 54px;
+  border: 1px dashed #000;
+  line-height: 1;
+  position: relative;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+.block-gList .block-gList__bul span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 88px;
+  height: 88px;
+  border-radius: 44px;
+  background-color: #000;
+  color: #fff;
+  font-weight: 100;
+  font-size: 72px;
+  line-height: 1;
+}
+.block-gList .col-sm-4 {
+  overflow: hidden;
+}
+.block-gList .col-sm-4:nth-child(1) .block-gList__bul:after, .block-gList .col-sm-4:nth-child(2) .block-gList__bul:after {
+  content: "";
+  position: absolute;
+  left: 115px;
+  height: 2px;
+  border-bottom: 1px dashed #000;
+  top: 50%;
+  margin-top: -1px;
+  right: 0;
+  width: 500px;
+}
+@media screen and (max-width: 576px) {
+  .block-gList .col-sm-4:nth-child(1) .block-gList__bul:after, .block-gList .col-sm-4:nth-child(2) .block-gList__bul:after {
+    display: none;
+  }
+}
+
 /*====== end of Sections ======*/
+/*====== Logos ======*/
+.logo-robonomics-outline path {
+  fill: none;
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+/*====== end of Logos ======*/

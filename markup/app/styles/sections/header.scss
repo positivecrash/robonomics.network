@@ -2,6 +2,7 @@ header[role='banner']
   {
     text-align: center;
     padding-top: 45px;
+    @include rem('padding-bottom', $margin-sec);
   }
 
 
@@ -22,7 +23,7 @@ header[role='banner']
     &.fixed
       {
         position: fixed;
-        background-color: $c-violet-dark;
+        background-color: #000;
         top: 0;
 
         &, a { color: #fff; }
@@ -41,7 +42,7 @@ header[role='banner']
 
         .dropdown-content
           {
-            background-color: $c-violet-dark;
+            background-color: #000;
           }
       }
 
@@ -268,6 +269,10 @@ header[role='banner']
 
     // transform: scale(.3);
     // animation: 0.5s BounceIn 1s ease forwards;
+
+    @include mobile(){
+      display: none;
+    }
   }
 
   /*====== end of MIDDLE SECTION ======*/
@@ -318,6 +323,7 @@ $delay: 1s;
 
 .logo-robonomics
   {
+
     .dot
       {
         fill: $c-blue;

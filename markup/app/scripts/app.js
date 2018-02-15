@@ -41,15 +41,76 @@ jQuery(document).ready(function($){
         }
 
 
-    parallax();
+    if ( $('.plaxify').length > 0 )
+        {
+            parallax();
 
-    $w.on('resize', function(){
-        parallax();
-    });
+            $w.on('resize', function(){
+                parallax();
+            });
+        }
 
 
 
     /*---  Slider  ---*/
     $('.js-slider').AnySlide();
+
+
+
+    /*---  Index page  ---*/
+
+    function inViewAction()
+        {
+             if ( $('.contentBlock-token .logo-robonomics-outline').visible() )
+                {
+                    $('.contentBlock-token .logo-robonomics-outline').addClass('animate');
+                }
+        }
+
+
+    if ( $('.contentBlock-token').length > 0 )
+        {
+            inViewAction();
+
+            $w.on('scroll', function(){
+                inViewAction();
+            });
+        }
+
+
+
+
+
+
+    function set_height(source, set, outer){
+        
+        var counter = 0;
+
+        $(source).each(function(){
+            if ( outer ){
+                if ( $(this).outerHeight(true) > counter )
+                    counter = $(this).outerHeight(true);
+            }
+            else
+            {
+                if ( $(this).height() > counter )
+                    counter = $(this).height();
+            }
+        });
+
+        $(set).height(counter);
+    }
+
+
+    if ( $('.roadmap-title').length > 0 )
+        {
+            set_height('.roadmap-title__in', '.roadmap-title', false);
+
+            $w.on('resize', function(){
+                set_height('.roadmap-title__in', '.roadmap-title', false);
+            });
+        }
+    
+    
 
 });

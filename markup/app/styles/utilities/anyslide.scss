@@ -7,7 +7,6 @@ $color-loader: #03A5ED;
     .js-slider-controls{
       position: absolute;
       top: 50%;
-      margin-top: -24px;
       left: 0;
       right: 0;
 
@@ -63,7 +62,7 @@ $color-loader: #03A5ED;
 
       &.active{
         display: block;
-        animation: 0.2s FadeIn ease-in-out forwards;
+        animation: 0.8s FadeIn ease-in-out forwards;
       }
     }
   }

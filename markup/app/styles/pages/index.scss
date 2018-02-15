@@ -1,8 +1,12 @@
-.contentBlock-about.sec-colored
+section.contentBlock-about
 	{
 
-		@include rem('padding-top', $margin-sec*2);
-	 	@include rem('padding-bottom', $margin-sec*3);
+		@include minMobile(){
+			@include rem('padding-top', $margin-sec*2);
+	 		@include rem('padding-bottom', $margin-sec*2);
+		}
+
+		
 
 		.row [class*=col-]
 		{
@@ -80,11 +84,17 @@
 						color: #fff;
 						opacity: 1;
 					}
+
+				@include mobile(){
+					color: #fff;
+					opacity: 1;
+					cursor: default;
+				}
 			}
 
 		.row
 			{
-				margin-left: -40px;
+				margin-left: 20px;
 				margin-right: -40px;
 			}
 
@@ -93,4 +103,217 @@
 				padding-left: 40px;
 				padding-right: 40px;
 			}
+
+
+		.js-slider-viewport
+			{
+				@include rem('padding', $margin-sec*2);
+				margin-left: 60px;
+				margin-right: 60px;
+
+				@include mobile(){
+					display: none;
+				}
+			}
+
+
+		.anyslide .js-slider-controls
+			{
+				top: 500px;
+				width: 100%;
+
+				@include mobile(){
+					display: none;
+				}
+			}
+
+
+		.img-block
+			{
+				@include rem('margin-bottom', $margin-sec * 2);
+			}
+
+		.js-slider-pager
+			{
+
+				p
+					{
+						margin-bottom: 0;
+					}
+
+
+				a
+					{
+						display: none;
+						margin-top: 10px;
+						color: $c-violet-light;
+
+						@include mobile(){
+							display: block;
+						}
+					}
+			}
+	}
+
+
+.arrow
+	{
+		width: 30px;
+
+		path
+			{
+				fill: none;
+				stroke: #fff;
+			}
+	}
+
+
+
+.contentBlock-token
+	{
+		position: relative;
+		padding-bottom: image-height('pattern_token.png') + $margin-sec;
+
+		&:after
+			{
+				content:"";
+				position: absolute;
+				bottom: $margin-sec;
+				left: 0;
+				right: 0;
+				z-index: 1;
+
+				height: image-height('pattern_token.png');
+				background: image_url('pattern_token.svg') repeat-x 0 100%;
+			}
+	}
+
+
+.contentBlock-token__info
+	{
+		padding-right: 230px;
+		position: relative;
+
+		.logo-robonomics-outline
+			{
+				position: absolute;
+				width: 190px;
+				right: 0;
+				top: 0;
+
+				path
+					{
+						stroke-dasharray: 700;
+        				stroke-dashoffset: 700;
+					}
+
+				circle
+					{
+						@extend %FadeOut;
+					}
+
+				&.animate
+					{
+						path
+							{
+		        				animation: 2s DrawSvgPath 1s ease-in-out forwards;
+		        			}
+
+		        		circle
+		        			{
+		        				animation: 0.2s FadeIn 0.8s linear forwards;
+		        			}
+					}
+			}
+
+
+		@include mobile()
+			{
+				padding-right: 0;
+				@include rem('margin-bottom', $margin-sec);
+
+				.logo-robonomics-outline
+					{
+						position: static;
+						@include rem('margin-bottom', $margin-sec);
+					}
+			}
+
+	}
+
+
+
+
+.contentBlock-roadmap
+	{
+
+		.roadmap-title, .roadmap-desc
+			{
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
+		.roadmap-title
+			{
+				border-bottom: 2px solid $c-orange;
+				@include rem('margin-bottom', $vertical-rythm);
+				padding-bottom: 10px;
+
+				b, span
+					{
+						display: block;
+						text-transform: uppercase;
+						letter-spacing: 2px;
+						color: $c-orange;
+					}
+
+				b
+					{
+						
+						font-size: 24px;
+					}
+
+				span
+					{
+						font-weight: 300;
+					}
+			}
+
+
+		.roadmap-desc
+			{
+				font-weight: 100;
+				letter-spacing: 1px;
+				color: #fff;
+			}
+
+
+		.roadmap-gray
+			{
+				.roadmap-title
+					{
+						border-color: $c-gray;
+
+						b, span
+							{
+								color: $c-gray;
+							}
+						
+					}
+			}
+
+
+		.row, div[class *= 'col-']
+			{
+				@extend %margPadNull;
+			}
+
+
+		.col-12
+			{
+				@include minTablet(){
+					text-align: center;
+				}
+			}
+
 	}

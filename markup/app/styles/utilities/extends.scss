@@ -40,3 +40,12 @@
 	 	position: relative;
     	z-index: 1;
 	}
+
+
+%margPadNull
+	{
+		margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+	}

@@ -4,6 +4,12 @@
     	opacity: 0;
 	}
 
+%BounceStart
+	{
+		opacity: 0;
+    	transform: scale(.3);
+    	transform-origin: 50% 50%;
+	}
 
 @keyframes FadeIn
 	{

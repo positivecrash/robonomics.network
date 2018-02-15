@@ -12,11 +12,15 @@ $margin-sec: $vertical-rythm * 2;
 $padding-fields: 20;
 
 
+/*====== Bootstrap ======*/
+$bootstrap-sm: 576px;
+$bootstrap-md: 768px;
+
 
 /*====== Media queries ======*/
 $mq-desktop: 1280px;
-$mq-tablet: 750px;
-$mq-mobile: 570px;
+$mq-tablet: $bootstrap-md;
+$mq-mobile: $bootstrap-sm;
 
 $mq-mobileCanvas: 890px;
 $mq-menuhide: $mq-mobileCanvas;
@@ -30,6 +34,7 @@ $c-violet-dark: #282B38;
 $c-violet-mid: #535974;
 $c-violet-light: #B5C0F1;
 $c-orange: #F15A24;
+$c-gray: #ccc;
 
 $c-text: $c-violet-mid;
 
@@ -39,9 +44,3 @@ $c-text: $c-violet-mid;
 $modernizr-nosvg: '.no-svg';
 $modernizr-svg: '.svg';
 $modernizr-cssanimations: '.cssanimations';
-
-
-
-/*====== Bootstrap ======*/
-$bootstrap-sm: 576px;
-$bootstrap-md: 768px;
