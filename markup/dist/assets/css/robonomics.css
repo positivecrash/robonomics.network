@@ -148,6 +148,10 @@ b {
   font-weight: 500;
 }
 
+a {
+  color: #03A5ED;
+}
+
 .text-hyphened {
   text-align: justify;
   -webkit-hyphens: auto;
@@ -408,95 +412,6 @@ table td, table th {
     stroke-dashoffset: 0;
   }
 }
-.svg .sprite-basic-check, .svg .sprite-basic-copy {
-  background-image: url("../i/sprite.svg?1");
-}
-
-.sprite-basic-check, .sprite-basic-copy {
-  background-image: url("../i/sprite.png?1");
-}
-
-.sprite-basic-check {
-  width: 28.36px;
-  height: 16.31px;
-  background-position: 0px 0px;
-  display: inline-block;
-}
-
-.sprite-basic-copy {
-  width: 16.87px;
-  height: 21.07px;
-  background-position: -29px 0px;
-  display: inline-block;
-}
-
-.svg .sprite-browsers-chrome, .svg .sprite-browsers-chrome_hover, .svg .sprite-browsers-firefox, .svg .sprite-browsers-firefox_hover, .svg .sprite-browsers-opera, .svg .sprite-browsers-opera_hover, .svg .sprite-browsers-chrome:hover, .svg .sprite-browsers-firefox:hover, .svg .sprite-browsers-opera:hover {
-  background-image: url("../i/sprite_browsers.svg?1");
-}
-
-.sprite-browsers-chrome, .sprite-browsers-chrome_hover, .sprite-browsers-firefox, .sprite-browsers-firefox_hover, .sprite-browsers-opera, .sprite-browsers-opera_hover, .sprite-browsers-chrome:hover, .sprite-browsers-firefox:hover, .sprite-browsers-opera:hover {
-  background-image: url("../i/sprite_browsers.png?1");
-}
-
-.sprite-browsers-chrome, .sprite-browsers-chrome_hover, .sprite-browsers-firefox, .sprite-browsers-firefox_hover, .sprite-browsers-opera, .sprite-browsers-opera_hover, .sprite-browsers-chrome:hover, .sprite-browsers-firefox:hover, .sprite-browsers-opera:hover {
-  background-repeat: no-repeat;
-  display: inline-block;
-}
-
-.sprite-browsers-chrome {
-  width: 44px;
-  height: 44px;
-  background-position: 0px 0px;
-}
-
-.sprite-browsers-chrome_hover {
-  width: 44px;
-  height: 44px;
-  background-position: 0px -44px;
-}
-
-.sprite-browsers-firefox {
-  width: 49.67px;
-  height: 44.42px;
-  background-position: 0px -88px;
-}
-
-.sprite-browsers-firefox_hover {
-  width: 49.67px;
-  height: 44.42px;
-  background-position: 0px -133px;
-}
-
-.sprite-browsers-opera {
-  width: 43.94px;
-  height: 44px;
-  background-position: 0px -178px;
-}
-
-.sprite-browsers-opera_hover {
-  width: 43.94px;
-  height: 44px;
-  background-position: 0px -222px;
-}
-
-.sprite-browsers-chrome:hover {
-  width: 44px;
-  height: 44px;
-  background-position: 0px -44px;
-}
-
-.sprite-browsers-firefox:hover {
-  width: 49.67px;
-  height: 44.42px;
-  background-position: 0px -133px;
-}
-
-.sprite-browsers-opera:hover {
-  width: 43.94px;
-  height: 44px;
-  background-position: 0px -222px;
-}
-
 .anyslide[data-anyslide~='controls'] {
   position: relative;
 }
