@@ -13,7 +13,7 @@
 @import "utilities/animation";
 
 // @import "utilities/sprite";
-// @import "utilities/spriteBrowsers";
+@import "utilities/spriteBrowsers";
 // @import "utilities/sprites_init";
 
 @import "utilities/anyslide";
@@ -26,6 +26,7 @@
 @import "sections/forms";
 
 @import "pages/index";
+@import "pages/outdated";
 
 
 html, body
@@ -370,25 +371,30 @@ section
         {
           overflow: hidden;
 
-          &:nth-child(1), &:nth-child(2)
+          .block-gList__bul:after
+            {
+              content:"";
+              position: absolute;
+              left: 115px;
+              height: 2px;
+              border-bottom: 1px dashed #000;
+              top: 50%;
+              margin-top: -1px;
+              right: 0;
+              width: 500px;
+
+
+              @include mobile()
+                {
+                  display: none;
+                }
+            }
+
+          &:last-child
             {
               .block-gList__bul:after
                 {
-                  content:"";
-                  position: absolute;
-                  left: 115px;
-                  height: 2px;
-                  border-bottom: 1px dashed #000;
-                  top: 50%;
-                  margin-top: -1px;
-                  right: 0;
-                  width: 500px;
-
-
-                  @include mobile()
-                    {
-                      display: none;
-                    }
+                  display: none;
                 }
             }
         }
@@ -413,5 +419,62 @@ section
   }
 
 /*====== end of Logos ======*/
+
+
+
+
+/*====== Fancybox define ======*/
+  .plugin-fancybox__popup
+    {
+      display: none;
+    }
+/*====== end of Fancybox define ======*/
+
+
+
+/*====== Fancybox rewrite ======*/
+  .fancybox-container .fancybox-bg
+    {
+      transform: scale(0);
+    }
+
+  .fancybox-container--ready .fancybox-bg
+    {
+      background-color: $c-violet-mid;
+      opacity: 1;
+      transform: scale(1);
+    }
+
+  .fancybox-slide>*
+    {
+      width: 80%;
+      min-width: 200px;
+      max-width: 1000px;
+      overflow: visible;
+    }
+
+  .fancybox-close-small
+    {
+      font-weight: 100;
+      font-family: $font-family-base;
+      font-size: 60px;
+      height: auto;
+
+      top: -40px;
+      right: -40px;
+      color: $c-orange;
+
+      &, &:hover, &:active
+        {
+          background: none;
+          outline: none;
+        }
+
+      &:hover
+        {
+          color: #fff;
+        }
+    }
+/*====== end of Fancybox rewrite ======*/
 
 

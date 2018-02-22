@@ -75,6 +75,12 @@ h3
 		@include rem('font-size', 22);
 		font-weight: 300;
 	}
+
+.t-mid
+	{
+		@include rem('font-size', 18);
+		font-weight: 300;
+	}
 /*====== end of Text sizes & Headers ======*/
 
 

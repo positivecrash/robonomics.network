@@ -9,7 +9,7 @@ block content
 			.secw-base
 				.row
 					.col-sm-6.js-paroller(data-paroller-factor="-0.1", data-paroller-type="foreground")
-						a(href="#").block-video
+						a(href="#", data-src="#index-video", data-fancybox).block-video
 						.block-white.text-hyphened
 							img.img-block(alt="", src="assets/i/about-1.png", srcset="assets/i/about-1@2x.png")
 							| Объединение экономической и технической детализации транзакции к автономной системе  в одну транзакцию.
@@ -21,6 +21,30 @@ block content
 						.block-white.text-hyphened
 							img.img-block(alt="", src="assets/i/about-3.png", srcset="assets/i/about-3@2x.png")
 							| Использования следящей системы для киберфизических систем на базе пиринговой сети.
+
+				#index-video.plugin-fancybox__popup
+					.js-slider.anyslide(data-anyslide="controls")
+						.js-slider-pager
+							.row
+								.col-md-4(data-anyslide-slide="0") What is the economy of robots?
+								.col-md-4(data-anyslide-slide="1") Why people need robot economics?
+								.col-md-4(data-anyslide-slide="2") Why robot needs Blockchain?
+
+						.js-slider-viewport.sec-white
+							.slide: img.img-block(alt="", src="assets/i/video-1.jpg", srcset="assets/i/video-1@2x.jpg")
+							.slide: img.img-block(alt="", src="assets/i/video-2.jpg", srcset="assets/i/video-2@2x.jpg")
+							.slide: img.img-block(alt="", src="assets/i/video-3.jpg", srcset="assets/i/video-3@2x.jpg")
+
+						.js-slider-controls
+							a.prev(href="javascript:;")
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.9 119.6" xml:space="preserve" class="arrow">
+									<path d="M41.5,0.3L0.6,58.4l41.9,60.9"/>
+								</svg>
+
+							a.next(href="javascript:;")
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.9 119.6" xml:space="preserve" class="arrow">
+									<path d="M1.4,119.3l40.9-58.1L0.4,0.3"/>
+								</svg>
 
 			svg.snapsvg-darkDots.plaxify(data-xrange="10", data-yrange="10")
 

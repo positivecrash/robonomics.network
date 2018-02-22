@@ -64,6 +64,19 @@ header[role='banner']
     display: table-cell;
     vertical-align: middle;
     padding: 20px 0 30px;
+
+    .svgi-github, .svgi-telegram
+      {
+        position: relative;
+        left: 1px;
+        top: 2px;
+      }
+
+    .svgi-telegram
+      {
+        left: -3px;
+        top: 1px;
+      }
   }
 
 

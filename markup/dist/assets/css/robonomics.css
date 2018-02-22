@@ -138,6 +138,12 @@ h3 {
   font-weight: 300;
 }
 
+.t-mid {
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
 /*====== end of Text sizes & Headers ======*/
 /*====== Text styles ======*/
 body {
@@ -412,6 +418,37 @@ table td, table th {
     stroke-dashoffset: 0;
   }
 }
+.svg .sprite-browsers-chrome, .svg .sprite-browsers-firefox, .svg .sprite-browsers-opera {
+  background-image: url("../i/sprite_browsers.svg?1");
+}
+
+.sprite-browsers-chrome, .sprite-browsers-firefox, .sprite-browsers-opera {
+  background-image: url("../i/sprite_browsers.png?1");
+}
+
+.sprite-browsers-chrome, .sprite-browsers-firefox, .sprite-browsers-opera {
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.sprite-browsers-chrome {
+  width: 44px;
+  height: 44px;
+  background-position: 0px 0px;
+}
+
+.sprite-browsers-firefox {
+  width: 49.7px;
+  height: 44.4px;
+  background-position: 0px -44px;
+}
+
+.sprite-browsers-opera {
+  width: 43.9px;
+  height: 44px;
+  background-position: 0px -89px;
+}
+
 .anyslide[data-anyslide~='controls'] {
   position: relative;
 }
@@ -2963,6 +3000,15 @@ header[role='banner'] {
   vertical-align: middle;
   padding: 20px 0 30px;
 }
+.header-top__sec .svgi-github, .header-top__sec .svgi-telegram {
+  position: relative;
+  left: 1px;
+  top: 2px;
+}
+.header-top__sec .svgi-telegram {
+  left: -3px;
+  top: 1px;
+}
 
 #header-top__logo {
   display: none;
@@ -3556,17 +3602,16 @@ section.contentBlock-about .block-white img {
   margin-bottom: 1.5rem;
   padding-bottom: 10px;
 }
-.contentBlock-roadmap .roadmap-title b, .contentBlock-roadmap .roadmap-title span {
+.contentBlock-roadmap .roadmap-title__in div {
   display: block;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #F15A24;
-}
-.contentBlock-roadmap .roadmap-title b {
-  font-size: 24px;
-}
-.contentBlock-roadmap .roadmap-title span {
   font-weight: 300;
+}
+.contentBlock-roadmap .roadmap-title__in div:first-child {
+  font-size: 24px;
+  font-weight: 500;
 }
 .contentBlock-roadmap .roadmap-desc {
   font-weight: 100;
@@ -3576,13 +3621,86 @@ section.contentBlock-about .block-white img {
 .contentBlock-roadmap .roadmap-gray .roadmap-title {
   border-color: #ccc;
 }
-.contentBlock-roadmap .roadmap-gray .roadmap-title b, .contentBlock-roadmap .roadmap-gray .roadmap-title span {
+.contentBlock-roadmap .roadmap-gray .roadmap-title div {
   color: #ccc;
 }
 @media screen and (min-width: 768px) {
   .contentBlock-roadmap .col-12 {
     text-align: center;
   }
+}
+
+/*--- VIDEOS ---*/
+#index-video .js-slider-pager {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+#index-video .js-slider-pager .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+#index-video .js-slider-pager [data-anyslide-slide] {
+  cursor: pointer;
+  position: relative;
+  padding-right: 50px;
+}
+#index-video .js-slider-pager [data-anyslide-slide]:before {
+  content: "";
+  width: 1px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #535974;
+}
+#index-video .js-slider-pager [data-anyslide-slide].active {
+  color: #F15A24;
+  cursor: default;
+}
+#index-video .js-slider-pager [data-anyslide-slide].active:before {
+  background-color: #F15A24;
+}
+#index-video .js-slider-viewport {
+  margin: 0 50px;
+}
+#index-video .js-slider-controls {
+  width: 100%;
+  margin-top: -45px;
+}
+#index-video .js-slider-controls path {
+  stroke: #03A5ED;
+}
+
+/*--- end of VIDEOS ---*/
+.page-outdated {
+  background-color: #282B38;
+  color: #B5C0F1;
+}
+.page-outdated a {
+  color: #fff;
+}
+
+#page-outdated__content {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+#page-outdated__content .img-block {
+  margin-bottom: 80px;
+}
+#page-outdated__content h2 {
+  text-align: center;
+}
+#page-outdated__content .sprite {
+  display: block;
+}
+#page-outdated__content .d-t {
+  margin: 0 auto;
+}
+#page-outdated__content .d-t_cell {
+  padding: 0 15px;
 }
 
 html, body {
@@ -3848,7 +3966,7 @@ section {
 .block-gList .col-sm-4 {
   overflow: hidden;
 }
-.block-gList .col-sm-4:nth-child(1) .block-gList__bul:after, .block-gList .col-sm-4:nth-child(2) .block-gList__bul:after {
+.block-gList .col-sm-4 .block-gList__bul:after {
   content: "";
   position: absolute;
   left: 115px;
@@ -3860,9 +3978,12 @@ section {
   width: 500px;
 }
 @media screen and (max-width: 576px) {
-  .block-gList .col-sm-4:nth-child(1) .block-gList__bul:after, .block-gList .col-sm-4:nth-child(2) .block-gList__bul:after {
+  .block-gList .col-sm-4 .block-gList__bul:after {
     display: none;
   }
+}
+.block-gList .col-sm-4:last-child .block-gList__bul:after {
+  display: none;
 }
 
 /*====== end of Sections ======*/
@@ -3876,3 +3997,47 @@ section {
 }
 
 /*====== end of Logos ======*/
+/*====== Fancybox define ======*/
+.plugin-fancybox__popup {
+  display: none;
+}
+
+/*====== end of Fancybox define ======*/
+/*====== Fancybox rewrite ======*/
+.fancybox-container .fancybox-bg {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.fancybox-container--ready .fancybox-bg {
+  background-color: #535974;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.fancybox-slide > * {
+  width: 80%;
+  min-width: 200px;
+  max-width: 1000px;
+  overflow: visible;
+}
+
+.fancybox-close-small {
+  font-weight: 100;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  height: auto;
+  top: -40px;
+  right: -40px;
+  color: #F15A24;
+}
+.fancybox-close-small, .fancybox-close-small:hover, .fancybox-close-small:active {
+  background: none;
+  outline: none;
+}
+.fancybox-close-small:hover {
+  color: #fff;
+}
+
+/*====== end of Fancybox rewrite ======*/

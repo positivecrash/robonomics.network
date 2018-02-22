@@ -258,24 +258,24 @@ section.contentBlock-about
 				border-bottom: 2px solid $c-orange;
 				@include rem('margin-bottom', $vertical-rythm);
 				padding-bottom: 10px;
+			}
 
-				b, span
+
+		.roadmap-title__in
+			{
+				div
 					{
 						display: block;
 						text-transform: uppercase;
 						letter-spacing: 2px;
 						color: $c-orange;
-					}
-
-				b
-					{
-						
-						font-size: 24px;
-					}
-
-				span
-					{
 						font-weight: 300;
+
+						&:first-child
+							{
+								font-size: 24px;
+								font-weight: 500;
+							}
 					}
 			}
 
@@ -294,7 +294,7 @@ section.contentBlock-about
 					{
 						border-color: $c-gray;
 
-						b, span
+						div
 							{
 								color: $c-gray;
 							}
@@ -317,3 +317,76 @@ section.contentBlock-about
 			}
 
 	}
+
+
+
+
+
+
+/*--- VIDEOS ---*/
+
+	#index-video
+		{
+			.js-slider-pager
+				{
+					font-weight: 300;
+					text-transform: uppercase;
+					letter-spacing: 2px;
+
+					.row
+						{
+							margin-left: 0;
+							margin-right: 0;
+						}
+
+
+					[data-anyslide-slide]
+						{
+							cursor: pointer;
+							position: relative;
+							padding-right: 50px;
+
+							&:before
+								{
+									content:"";
+									width: 1px;
+									position: absolute;
+									top: 0;
+									bottom: 0;
+									left: 0;
+									background-color: $c-text;
+								}
+
+							&.active
+								{
+									color: $c-orange;
+									cursor: default;
+
+									&:before
+										{
+											background-color: $c-orange;
+										}
+								}
+						}
+				}
+
+
+			.js-slider-viewport
+				{
+					margin: 0 50px;
+				}
+
+			.js-slider-controls
+				{
+					width: 100%;
+					margin-top: -45px;
+
+					path
+						{
+							stroke: $c-blue;
+						}
+				}
+		}
+
+/*--- end of VIDEOS ---*/
+
