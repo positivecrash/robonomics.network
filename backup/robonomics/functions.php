@@ -57,7 +57,7 @@ add_action( 'after_setup_theme', 'robonomics_setup' );
 function robonomics_scripts() {
 	if( !is_admin()){
 
-		wp_enqueue_style("robonomics-style", get_template_directory_uri()."/assets/css/robonomics.min.css", array(), '1.0.2');
+		wp_enqueue_style("robonomics-style", get_template_directory_uri()."/assets/css/robonomics.min.css", array(), '1.0.3');
 
 		wp_deregister_script('jquery');
 		wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', array(), '1', true);
@@ -126,5 +126,6 @@ remove_action( 'wp_head', 'wp_oembed_add_host_js' );
 require get_template_directory() . '/inc/simple-menu-walker.php';
 require get_template_directory() . '/inc/plugin-polylang.php';
 require get_template_directory() . '/inc/plugin-acf.php';
+require get_template_directory() . '/inc/template-functions.php';
 
 ?>
