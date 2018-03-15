@@ -39,7 +39,7 @@ input, select {
 /*====== Media queries ======*/
 /*====== Colors ======*/
 /*====== Classes ======*/
-.header-top__nav a, .header-top__nav a:hover, .header-top__nav a:focus, .header-top__nav a:visited {
+a, .header-top__nav a, .sec-synopsis, a:hover, .sec-synopsis:hover, a:focus, .sec-synopsis:focus, a:visited, .sec-synopsis:visited {
   text-decoration: none;
   text-decoration: none !important;
 }
@@ -156,6 +156,11 @@ b {
 
 a {
   color: #03A5ED;
+}
+a:hover {
+  color: #27bbfc;
+  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 .text-hyphened {
@@ -418,6 +423,49 @@ table td, table th {
     stroke-dashoffset: 0;
   }
 }
+.svg .sprite-basic-aira, .svg .sprite-basic-ethereum, .svg .sprite-basic-ipfs, .svg .sprite-basic-nixos, .svg .sprite-basic-ros {
+  background-image: url("../i/sprite.svg?1");
+}
+
+.sprite-basic-aira, .sprite-basic-ethereum, .sprite-basic-ipfs, .sprite-basic-nixos, .sprite-basic-ros {
+  background-image: url("../i/sprite.png?1");
+}
+
+.sprite-basic-aira {
+  width: 100.23px;
+  height: 23.44px;
+  background-position: 0px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-ethereum {
+  width: 35.84px;
+  height: 58.02px;
+  background-position: -101px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-ipfs {
+  width: 103.48px;
+  height: 45.02px;
+  background-position: -137px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-nixos {
+  width: 121.4px;
+  height: 36.65px;
+  background-position: -241px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-ros {
+  width: 87.51px;
+  height: 23.15px;
+  background-position: -363px 0px;
+  display: inline-block;
+}
+
 .svg .sprite-browsers-chrome, .svg .sprite-browsers-firefox, .svg .sprite-browsers-opera {
   background-image: url("../i/sprite_browsers.svg?1");
 }
@@ -2952,6 +3000,9 @@ header[role='banner'] {
   padding-bottom: 48px;
   padding-bottom: 3rem;
 }
+header[role='banner'] .el-social {
+  background-color: #fff;
+}
 
 /*====== Top section ======*/
 #header-top {
@@ -2999,15 +3050,6 @@ header[role='banner'] {
   display: table-cell;
   vertical-align: middle;
   padding: 20px 0 30px;
-}
-.header-top__sec .svgi-github, .header-top__sec .svgi-telegram {
-  position: relative;
-  left: 1px;
-  top: 2px;
-}
-.header-top__sec .svgi-telegram {
-  left: -3px;
-  top: 1px;
 }
 
 #header-top__logo {
@@ -3078,27 +3120,6 @@ header[role='banner'] {
 }
 
 /*====== end of Top section ======*/
-/*====== NAV: Social links ======*/
-.lk-headerSocial {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  border: 1.5px solid #F15A24;
-  margin-bottom: 10px;
-}
-.lk-headerSocial > span {
-  display: table-cell;
-  width: 50px;
-  height: 50px;
-  vertical-align: middle;
-  text-align: center;
-}
-.lk-headerSocial path {
-  fill: #F15A24;
-}
-
-/*====== end of NAV: Social links ======*/
 /*====== Header navigation ======*/
 .hamburger {
   display: inline-block;
@@ -3428,6 +3449,61 @@ header[role='banner'] {
 }
 
 /*====== end of TITLES ======*/
+footer[role='contentinfo'] {
+  font-weight: 300;
+}
+footer[role='contentinfo'] .col-md-6 section:first-child {
+  padding-top: 0;
+}
+footer[role='contentinfo'] a {
+  color: #F15A24;
+}
+footer[role='contentinfo'] a:hover {
+  color: #f47e54;
+}
+footer[role='contentinfo'] h2 {
+  margin-bottom: 22px;
+}
+footer[role='contentinfo'] .el-social {
+  margin-right: 22px;
+  transition: background-color 0.2s ease;
+}
+footer[role='contentinfo'] .el-social:last-child {
+  margin-right: 0;
+}
+footer[role='contentinfo'] .el-social:hover {
+  background-color: #fff;
+}
+footer[role='contentinfo'] .sec-techs {
+  opacity: 0.7;
+}
+
+.sec-synopsis {
+  display: block;
+  border: 1px solid #357B9E;
+  overflow: hidden;
+  padding: 20px;
+}
+.sec-synopsis, .sec-synopsis:hover, .sec-synopsis h2, .sec-synopsis h2:hover {
+  color: #357B9E !important;
+}
+.sec-synopsis h2 {
+  font-size: 24px;
+}
+.sec-synopsis .sec-synopsis__text {
+  padding-left: 144px;
+}
+.sec-synopsis .logo-robonomics-outline {
+  width: 124px;
+  float: left;
+}
+.sec-synopsis .logo-robonomics-outline path {
+  stroke: #357B9E;
+}
+.sec-synopsis .logo-robonomics-outline circle {
+  fill: #357B9E;
+}
+
 @media screen and (min-width: 576px) {
   section.contentBlock-about {
     padding-top: 96px;
@@ -3997,6 +4073,48 @@ section {
 }
 
 /*====== end of Logos ======*/
+/*====== Socials ======*/
+.el-social {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: 1.5px solid #F15A24;
+  margin-bottom: 10px;
+}
+.el-social > span {
+  display: table-cell;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  text-align: center;
+}
+.el-social path {
+  fill: #F15A24;
+}
+.el-social .svgi-github, .el-social .svgi-telegram {
+  position: relative;
+  left: 1px;
+  top: 2px;
+}
+.el-social .svgi-telegram {
+  left: -3px;
+  top: 1px;
+}
+
+/*====== end of Socials ======*/
+/*====== Technologies ======*/
+.sec-techs span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 22px;
+  margin-bottom: 22px;
+}
+.sec-techs span:last-child {
+  margin-right: 0;
+}
+
+/*====== end of Technologies ======*/
 /*====== Fancybox define ======*/
 .plugin-fancybox__popup {
   display: none;

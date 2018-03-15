@@ -101,7 +101,18 @@ b
 	{ font-weight: 500; }
 
 
-a { color: $c-blue; }
+a 
+	{
+		color: $c-blue;
+		@extend %link_noline;
+
+		&:hover
+			{
+				color: lighten($c-blue, 10%);
+				text-decoration: underline;
+				text-decoration: underline !important;
+			}
+	}
 
 .text-hyphened
 	{

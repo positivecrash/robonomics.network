@@ -96,17 +96,8 @@ block content
 				.secw-base
 					.sec-pad
 						.contentBlock-token__info
-							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 152.9 133.7" xml:space="preserve" class="logo-robonomics-outline">
-								<g transform="translate(3037 2448)">
-									<circle cx="-2960.3" cy="-2443" r="5"/>
-									<circle cx="-3032" cy="-2319.3" r="5"/>
-									<circle cx="-2889.1" cy="-2319.3" r="5"/>
-									<path d="M-2960.5-2443l-71.5,123.7h142.9L-2960.5-2443z"/>
-									<path d="M-2959.8-2359.1l-33.9,17.8h67.8L-2959.8-2359.1z"/>
-									<path d="M-2959.8-2400l-33.9,58.7l34-17.8L-2959.8-2400z"/>
-									<path d="M-2959.8-2400l0.3,40.7l33.6,18L-2959.8-2400z"/>
-								</g>
-							</svg>
+							include mixins/tokenLined.pug
+							+tokenLined()
 
 
 							.t-big
@@ -139,34 +130,35 @@ block content
 						.col-md-3.roadmap-gray
 							.roadmap-title
 								.roadmap-title__in
-									b Q1 2018
-									span Lighthouse
+									div Q1 2018
+									div Lighthouse
 							.roadmap-desc Релиз сигнализирующий о начале работы платформы для разработчиков решений Умных городов и Индустрии 4.0. Следящие узлы системы сообщают в блоках сети Ethereum о поддержке релиза.
 
 						.col-md-3
 							.roadmap-title
 								.roadmap-title__in
-									b Q2 2018
-									span Observerer
+									div Q2 2018
+									div Observerer
 							.roadmap-desc С данного релиза начинается измерения важных для платформы показателей работы сети за счет сравнения результатов работы эталонной ноды и результатов, получаемых от сети.
 
 						.col-md-3
 							.roadmap-title
 								.roadmap-title__in
-									b Q1-Q2 2019
-									span Cybernetics economy
+									div Q1-Q2 2019
+									div Cybernetics economy
 							.roadmap-desc Участники сети обладают необходимыми возможностями для работы умных городов и умных фабрик в ответ на экономически значимые транзакции.
 
 						.col-md-3
 							.roadmap-title
 								.roadmap-title__in
-									b Q3 2019 - Q2 2020
-									span Lights-out
+									div Q3 2019 - Q2 2020
+									div Lights-out
 							.roadmap-desc Сеть способна взять на себя задачи по управлению роботизированными цепочками обеспечения.
 
 
 					.row
 						.col-12
 							.roadmap-title
-								b Robonomics future
+								.roadmap-title__in
+									div Robonomics future
 							.roadmap-desc Мы верим в счастливое будущее Робономики

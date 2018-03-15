@@ -3,6 +3,12 @@ header[role='banner']
     text-align: center;
     padding-top: 45px;
     @include rem('padding-bottom', $margin-sec);
+
+
+    .el-social
+      {
+        background-color: #fff;
+      }
   }
 
 
@@ -64,19 +70,6 @@ header[role='banner']
     display: table-cell;
     vertical-align: middle;
     padding: 20px 0 30px;
-
-    .svgi-github, .svgi-telegram
-      {
-        position: relative;
-        left: 1px;
-        top: 2px;
-      }
-
-    .svgi-telegram
-      {
-        left: -3px;
-        top: 1px;
-      }
   }
 
 
@@ -195,38 +188,6 @@ header[role='banner']
 
 /*====== end of Top section ======*/
 
-
-
-
-
-
-/*====== NAV: Social links ======*/
-
-.lk-headerSocial
-  {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    border: 1.5px solid $c-orange;
-    margin-bottom: 10px;
-
-    & > span
-      {
-        display: table-cell;
-        width: 50px;
-        height: 50px;
-        vertical-align: middle;
-        text-align: center;
-      }
-
-    path
-      {
-        fill: $c-orange;
-      }
-  }
-
-/*====== end of NAV: Social links ======*/
 
 
 

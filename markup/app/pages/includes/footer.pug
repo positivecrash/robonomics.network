@@ -1,6 +1,48 @@
 footer(role='contentinfo')
 	section.sec-dark
 		.secw-base
-			h2 Новости
+			.row
+				.col-md-6
+					section
+						a(href="#").sec-synopsis
+							include ../mixins/tokenLined.pug
+							+tokenLined()
 
-			<a class="twitter-timeline" data-height="400" data-theme="dark" data-link-color="#F5F8FA" allowtransparency="true" data-chrome="nofooter noborders transparent noscrollbar noheader" href="https://twitter.com/AIRA_Robonomics">Tweets by AIRA_Robonomics</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+							.sec-synopsis__text
+								h2 Robonomics network
+								p Платформа робономики – инфраструктура сети Ethereum для Умных Городов и Индустрии 4.0
+
+					section
+						h2 Новости
+
+						<a class="twitter-timeline" data-height="400" data-theme="dark" data-link-color="#F5F8FA" allowtransparency="true" data-chrome="nofooter noborders transparent noscrollbar noheader" href="https://twitter.com/AIRA_Robonomics">Tweets by AIRA_Robonomics</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+				.col-md-6
+					section
+						h2 Технологии
+						.sec-techs
+							span.sprite-basic-ethereum
+							span.sprite-basic-aira
+							span.sprite-basic-ros
+							span.sprite-basic-ipfs
+							span.sprite-basic-nixos
+
+					section
+						h2 Сообщество
+
+						include ../mixins/socials.pug
+						+socials()
+
+					section
+						h2 Контакты
+						p
+							a(href="") research@aira.life
+							| &nbsp;– Research department (global vision and partnership)
+
+						p
+							a(href="") engineering@aira.life
+							| &nbsp;– Engineer department (tech support)
+
+						p
+							a(href="") community@aira.life
+							| &nbsp;– Community department (design and talk)
