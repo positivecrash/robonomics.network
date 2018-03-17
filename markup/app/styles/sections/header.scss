@@ -105,6 +105,11 @@ header[role='banner']
         font-size: 22px;
         line-height: 1;
         color: $c-text;
+
+        &, &:hover
+          {
+            text-decoration: none !important;
+          }
       }
 
 
@@ -113,6 +118,7 @@ header[role='banner']
         & > a
           {
             position: relative;
+
 
             &:before, &:after
               {

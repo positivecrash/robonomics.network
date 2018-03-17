@@ -3077,6 +3077,9 @@ header[role='banner'] .el-social {
   line-height: 1;
   color: #535974;
 }
+.header-top__nav a, .header-top__nav a:hover {
+  text-decoration: none !important;
+}
 .header-top__nav .dropdown > a {
   position: relative;
 }
