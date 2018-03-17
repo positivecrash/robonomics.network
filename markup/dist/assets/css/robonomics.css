@@ -506,6 +506,11 @@ table td, table th {
   left: 0;
   right: 0;
 }
+@media screen and (max-width: 768px) {
+  .anyslide[data-anyslide~='controls'] .js-slider-controls {
+    display: none;
+  }
+}
 .anyslide[data-anyslide~='controls'] .js-slider-controls .prev, .anyslide[data-anyslide~='controls'] .js-slider-controls .next {
   position: absolute;
   top: 0;
@@ -3737,8 +3742,10 @@ section.contentBlock-about .block-white img {
 #index-video .js-slider-pager [data-anyslide-slide].active:before {
   background-color: #F15A24;
 }
-#index-video .js-slider-viewport {
-  margin: 0 50px;
+@media screen and (min-width: 768px) {
+  #index-video .js-slider-viewport {
+    margin: 0 50px;
+  }
 }
 #index-video .js-slider-controls {
   width: 100%;
@@ -4063,6 +4070,22 @@ section {
 }
 
 /*====== end of Sections ======*/
+/*====== Random ======*/
+.embed-video-fluid {
+  width: 100%;
+  position: relative;
+  padding: 0;
+  padding-top: 56.25%;
+}
+.embed-video-fluid iframe, .embed-video-fluid object, .embed-video-fluid embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*====== end of Random ======*/
 /*====== Logos ======*/
 .logo-robonomics-outline path {
   fill: none;
@@ -4137,7 +4160,7 @@ section {
 .fancybox-slide > * {
   width: 80%;
   min-width: 200px;
-  max-width: 1000px;
+  max-width: 1500px;
   overflow: visible;
 }
 

@@ -26,14 +26,20 @@ block content
 					.js-slider.anyslide(data-anyslide="controls")
 						.js-slider-pager
 							.row
-								.col-md-4(data-anyslide-slide="0") What is the economy of robots?
-								.col-md-4(data-anyslide-slide="1") Why people need robot economics?
-								.col-md-4(data-anyslide-slide="2") Why robot needs Blockchain?
+								.col-md-4(data-anyslide-slide="0") 1. What is the economy of robots?
+								.col-md-4(data-anyslide-slide="1") 2. Why people need robot economics?
+								.col-md-4(data-anyslide-slide="2") 3. Why robot needs Blockchain?
 
 						.js-slider-viewport.sec-white
-							.slide: img.img-block(alt="", src="assets/i/video-1.jpg", srcset="assets/i/video-1@2x.jpg")
+
+							.slide
+								div.pretty-embed(data-pe-videoid="IwT30VOD8K8?controls=0&listType=user_uploads&list=Airalab&modestbranding=1&rel=0&showinfo=0", data-pe-custom-preview-image="assets/i/videopreview-1.jpg", data-pe-show-related="false", data-pe-fitvids="true")
+
 							.slide: img.img-block(alt="", src="assets/i/video-2.jpg", srcset="assets/i/video-2@2x.jpg")
-							.slide: img.img-block(alt="", src="assets/i/video-3.jpg", srcset="assets/i/video-3@2x.jpg")
+							.slide
+								div.pretty-embed(data-pe-videoid="FkR8OJvRpeE?controls=0&listType=user_uploads&list=Airalab&modestbranding=1&rel=0&showinfo=0", data-pe-custom-preview-image="assets/i/videopreview-3.jpg", data-pe-show-related="false", data-pe-fitvids="true")
+							
+							
 
 						.js-slider-controls
 							a.prev(href="javascript:;")

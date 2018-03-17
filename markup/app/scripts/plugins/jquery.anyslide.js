@@ -11,7 +11,7 @@
 
       // GENERAL
       content: '.js-slider-viewport',
-      contentEl: 'div',
+      contentEl: '.slide',
       classActive: 'active',  // this class for both – tabs and content
       loadFirst: false,   // should we check if all element in content of slider is loaded. There should be a selector in parametr
       anchorSupport: false,  //it is only for NOT single content so far
@@ -196,7 +196,9 @@
 
     var show = function(index) {
 
+     
       setActiveIndex(index);
+
 
       if ( slider.hascontent ){
         showContent(index);

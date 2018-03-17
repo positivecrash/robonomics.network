@@ -371,10 +371,15 @@ section.contentBlock-about
 				}
 
 
-			.js-slider-viewport
-				{
-					margin: 0 50px;
+			@include minTablet(){
+					.js-slider-viewport
+						{
+							margin: 0 50px;
+						}
 				}
+
+
+				
 
 			.js-slider-controls
 				{

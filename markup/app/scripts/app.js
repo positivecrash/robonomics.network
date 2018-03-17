@@ -145,6 +145,10 @@ jQuery(document).ready(function($){
         }
     
     /*---  end of Index page  ---*/
+
+
+
+    $().prettyEmbed({ useFitVids: true });
     
 
 });

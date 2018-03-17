@@ -1,4 +1,5 @@
 $color-loader: #03A5ED;
+$mq-tablet: $mq-tablet;
 
 .anyslide[data-anyslide ~= 'controls']
   {
@@ -9,6 +10,11 @@ $color-loader: #03A5ED;
       top: 50%;
       left: 0;
       right: 0;
+
+      @media screen and (max-width: $mq-tablet) 
+        {
+          display: none;
+        }
 
       .prev, .next{
         position: absolute;
@@ -30,6 +36,8 @@ $color-loader: #03A5ED;
         right: 0;
       }
     }
+
+   
   }
 
 
