@@ -1,31 +1,6 @@
-header(role='banner')
-	#header-top
-		.secw-base
-			.header-top__sec
-				a(href="#")#header-top__logo: img(alt="", src="assets/i/logo-robonomics-2.svg")
-			.header-top__sec.t-right
-				.hamburger
-					.line
-					.line
-					.line
-
-			.header-top__sec.t-right.nav-mobilehide
-				nav.header-top__nav
-					a(href="#") Robonomics OS
-					a(href="#") Robonomics OS
-					.dropdown
-						a(href="javascript:;") Join us
-						.dropdown-content
-							include ../mixins/socials.pug
-							+socials()
-
-
-
-
-					.dropdown
-						a(href="javascript:;") RU
-						.dropdown-content
-							a(href="#", target="_blank") EN
+header(role='banner')#header-index
+	include ../mixins/sections.pug
+	+header_top()
 
 	#header-mid
 		#header-mid__content
@@ -50,5 +25,31 @@ header(role='banner')
 				#header-title: span ПЛАТФОРМА РОБОНОМИКИ
 				#header-subtitle { Инфраструктура сети Ethereum для умных фабрик и городов }
 
-		#snapsvg-header-wrap.plaxify(data-xrange="10", data-yrange="10")
-			svg#snapsvg-header
+		#snapsvg-header-wrap.snapsvg-wrap-1.plaxify(data-xrange="10", data-yrange="10")
+			svg#snapsvg-header.snapsvg
+
+	//- #header-mid
+	//- 	#header-mid__content
+	//- 		div#header-logo-robonomics(data-xrange="20", data-yrange="20").plaxify
+	//- 			<svg class="logo-robonomics" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="196.9px" height="170.3px" viewBox="0 0 196.9 170.3" style="enable-background:new 0 0 196.9 170.3;" xml:space="preserve">
+	//- 				<g transform="translate(2530 155)">
+	//- 					<circle class="dot" cx="-2339.7" cy="8.7" r="6.6"/>
+	//- 					<circle class="dot" cx="-2523.4" cy="8.2" r="6.6"/>
+	//- 					<circle class="dot" cx="-2430.8" cy="-148.4" r="6.6"/>
+	//- 					<path class="line" d="M-2523.4,7.9l184.2,0.5l-91.7-158.1L-2523.4,7.9z"/>
+	//- 					<path class="triangle-1" d="M-2477.3-18.3l92.1,0.3l-45.8-79L-2477.3-18.3z"/>
+	//- 					<path class="triangle-2" d="M-2431.2-18.1l46,0.1l-45.8-79L-2431.2-18.1z"/>
+	//- 					<path class="triangle-3" d="M-2477.3-18.3l92.1,0.3l-46-20.3L-2477.3-18.3z"/>
+	//- 				</g>
+	//- 			</svg>
+
+
+	//- 		img#logo-ethereum(alt="", src="assets/i/logo-ethereum.svg", data-xrange="50", data-yrange="50").plaxify
+
+
+	//- 		.secw-base
+	//- 			#header-title: span ПЛАТФОРМА РОБОНОМИКИ
+	//- 			#header-subtitle { Инфраструктура сети Ethereum для умных фабрик и городов }
+
+	//- 	#snapsvg-header-wrap.plaxify(data-xrange="10", data-yrange="10")
+	//- 		svg#snapsvg-header

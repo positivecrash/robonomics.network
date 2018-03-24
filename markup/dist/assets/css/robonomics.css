@@ -51,8 +51,8 @@ a, .header-top__nav a, .sec-synopsis, a:hover, .sec-synopsis:hover, a:focus, .se
   right: 0;
   bottom: 0;
   height: 100%;
-  width: 3400px;
-  margin-left: -1700px;
+  width: 3596px;
+  margin-left: -1798px;
   left: 50%;
 }
 
@@ -3037,14 +3037,14 @@ header[role='banner'] .el-social {
 #header-top.fixed .header-top__nav a {
   font-size: 18px;
 }
-#header-top.fixed #header-top__logo {
-  display: block;
-}
 #header-top.fixed .hamburger .line {
   background-color: #fff;
 }
 #header-top.fixed .hamburger.opened {
   top: 4px;
+}
+#header-top.fixed #header-top__logo img {
+  height: 30px;
 }
 #header-top > .secw-base {
   display: table;
@@ -3057,12 +3057,9 @@ header[role='banner'] .el-social {
   padding: 20px 0 30px;
 }
 
-#header-top__logo {
-  display: none;
-}
 #header-top__logo img {
   display: block;
-  height: 30px;
+  height: 45px;
 }
 
 .header-top__nav > * {
@@ -3229,15 +3226,12 @@ header[role='banner'] .el-social {
   .nav-mobilehide.opened .dropdown-content, .nav-mobilehide.opened .dropdown-content a {
     color: #fff;
   }
-  .nav-mobilehide.opened .lk-headerSocial {
+  .nav-mobilehide.opened .el-social {
     margin-right: 15px;
     border-color: #fff;
   }
-  .nav-mobilehide.opened .lk-headerSocial:last-child {
+  .nav-mobilehide.opened .el-social:last-child {
     margin-right: 0;
-  }
-  .nav-mobilehide.opened .lk-headerSocial path {
-    fill: #fff;
   }
 }
 
@@ -3248,12 +3242,10 @@ header[role='banner'] .el-social {
   box-sizing: border-box;
   overflow: hidden;
   padding-top: 68px;
-  min-height: 370px;
 }
 @media screen and (min-width: 890px) {
   #header-mid {
     padding-top: 157px;
-    min-height: 460px;
   }
 }
 
@@ -3419,13 +3411,8 @@ header[role='banner'] .el-social {
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   z-index: 0;
-  height: 370px;
-}
-@media screen and (min-width: 890px) {
-  #snapsvg-header-wrap {
-    height: 460px;
-  }
 }
 @media screen and (max-width: 890px) {
   #snapsvg-header-wrap line, #snapsvg-header-wrap text {
@@ -3457,6 +3444,10 @@ header[role='banner'] .el-social {
 }
 
 /*====== end of TITLES ======*/
+#header-index #header-top__logo {
+  display: none;
+}
+
 footer[role='contentinfo'] {
   font-weight: 300;
 }

@@ -1,0 +1,26 @@
+mixin header_top()
+	#header-top
+		.secw-base
+			.header-top__sec
+				a(href="#")#header-top__logo: img(alt="", src="assets/i/logo-robonomics-2.svg")
+			.header-top__sec.t-right
+				.hamburger
+					.line
+					.line
+					.line
+
+			.header-top__sec.t-right.nav-mobilehide
+				nav.header-top__nav
+					a(href="#") Tokens
+					a(href="#") Roadmap
+					a(href="#") Robonomics OS
+					.dropdown
+						a(href="javascript:;") Join us
+						.dropdown-content
+							include ../mixins/socials.pug
+							+socials()
+
+					.dropdown
+						a(href="javascript:;") RU
+						.dropdown-content
+							a(href="#", target="_blank") EN
