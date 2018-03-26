@@ -577,6 +577,11 @@ $delay: 1s;
           animation: FadeIn ease-in-out forwards;
           animation-duration: 0.4s;
         }
+
+        @media screen and (max-width: $mq-menuhide) 
+          {
+            display: none
+          }
       }
 
     #header-index__ethereum

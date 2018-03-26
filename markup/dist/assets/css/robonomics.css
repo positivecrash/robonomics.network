@@ -3472,6 +3472,11 @@ header[role='banner'] .el-social {
   -webkit-animation-duration: 0.4s;
           animation-duration: 0.4s;
 }
+@media screen and (max-width: 890px) {
+  #header-index .snapsvgoutside-text {
+    display: none;
+  }
+}
 #header-index #header-index__ethereum {
   top: 10px;
 }
