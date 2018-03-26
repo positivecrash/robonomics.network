@@ -12,7 +12,10 @@
 		colorHidden: '#ffffff',
 		dotsAnimate: true,
 		svgEl: '.snapsvg',
-		dotsQuantX: 38
+		dotsQuantX: 38,
+
+		// CALLBACKS
+		onInit: function(index) { return true; }
 	};
 
 	$.fn.SnapSvgNet = function (options) {
@@ -58,7 +61,6 @@
       		snap.config.canvasHeight = el.outerHeight(true);
       		snap.config.canvasWidth = ((snap.config.dotRadius*2) + snap.config.distX) * (snap.config.dotsQuantX - 1) + snap.config.dotRadius*2;
       		snap.Y = Math.floor(snap.config.canvasHeight / ((snap.config.dotRadius*2) + snap.config.distX)) - 1;
-      		console.log(snap.Y * snap.config.dotsQuantX);
       		
       		snap.dotAttrHide = {fill: snap.config.colorHidden, r: 0};
       		snap.dotAttrShow = {fill: snap.config.color, r: snap.config.dotRadius};
@@ -69,7 +71,9 @@
       		dots = [];
 
       		drawGrid();
-      		drawRandomLine();
+      		drawRandomLines();
+
+      		snap.config.onInit.call(el);
     	}
 
 
@@ -93,9 +97,9 @@
 
     	var drawGrid = function() {
 
-    		for (var x = snap.config.distX; x < (snap.config.canvasWidth - snap.config.distX); x += snap.config.distX) {
+    		for (var y = snap.config.distY/2; y < (snap.config.canvasHeight-snap.config.distY); y += snap.config.distY) {
 
-    			for (var y = snap.config.distY; y < (snap.config.canvasHeight-snap.config.distY); y += snap.config.distY) {
+    			for (var x = snap.config.distX; x < (snap.config.canvasWidth - snap.config.distX); x += snap.config.distX) {
 
     				oDot = drawDot(x, y, snap.config.dotsAnimate);
     				dots.push(oDot);
@@ -107,40 +111,111 @@
     		}
     	}
 
-    	var drawRandomLine = function(){
+
+   //  	var drawLine = function(point1, point2){
     		
-    		var r1 = randomInteger(20, dots.length - 40);
-    		// var r1 = Math.floor(Math.random() * dots.length);
-    		console.log(r1);
-    		var k = Math.floor(Math.random() * 5 + 1);
-    		var k2 = Math.floor(Math.random() * 3 + 1);
-    		var k3 = Math.floor(Math.random() * 7 + 1);
+   //  		l = snap.svg
+			// 	.line(dots[point1].getBBox().cx, dots[point1].getBBox().cy, dots[point1].getBBox().cx, dots[point1].getBBox().cy)
+			// 	.attr(snap.lineAttr)
+			// 	.animate({x2: dots[point2].getBBox().cx, y2: dots[point2].getBBox().cy}, 1000);
+
+			// snap.svg.prepend(l);
+			// removeLine(l, dots[point2].getBBox().cx, dots[point2].getBBox().cy);
+   //  	}
 
 
-			l = snap.svg
-				.line(dots[r1].getBBox().cx, dots[r1].getBBox().cy, dots[r1+k].getBBox().cx, dots[r1+k].getBBox().cy)
-				.attr(snap.lineAttr);
+   //  	var removeLine = function(obj, x2, y2){
+    		
+   //  		setTimeout(function(){
+  	// 			obj
+  	// 				.animate({x1: x2, y1: y2}, 1000)
+			// }, 3500);
 
-			snap.svg.prepend(l);
+   //  	}
 
-			l = snap.svg
-				.line(dots[r1+k].getBBox().cx, dots[r1+k].getBBox().cy, dots[r1+k2].getBBox().cx, dots[r1+k2].getBBox().cy)
-				.attr(snap.lineAttr);
+   //  	var drawTrainOfLines = function(startPoint){
 
-			snap.svg.prepend(l);
+   //  		var k, endpoint;
+   //  		var direction = Math.random()*2|0 || -1;
+
+   //  		for (var i = 0; i < 4; i++)
+   //  		{
+   //  			setTimeout(function(){
+   //  				// k = direction * Math.floor(Math.random() * 7 + 1);
+   //  				k = randomInteger(3, 5);
+	  //   			endpoint = startPoint + k;
+
+	  //   			drawLine(startPoint, endpoint);
+	  //   			startPoint = endpoint;
+	  //   		}, i*1000);
+   //  		}
+
+   //  	}
 
 
-			l = snap.svg
-				.line(dots[r1+k2].getBBox().cx, dots[r1+k2].getBBox().cy, dots[r1+k3].getBBox().cx, dots[r1+k3].getBBox().cy)
-				.attr(snap.lineAttr);
 
-			snap.svg.prepend(l);
-
-			
-
-			
+    	var removeLine = function(obj, x2, y2){
+    		
+    		setTimeout(function(){
+  				obj
+  					.animate({x1: x2, y1: y2}, 1000)
+			}, 3500);
 
     	}
+
+
+    	var drawLine = function(x1, y1, x2, y2){
+    		
+    		l = snap.svg
+				.line(x1, y1, x1, y1)
+				.attr(snap.lineAttr)
+				.animate({x2: x2, y2: y2}, 1000);
+
+			snap.svg.prepend(l);
+			removeLine(l, x2, y2);
+    	}
+
+
+
+    	var drawTrainOfLines = function(startPoint){
+
+    		var
+    			direction = Math.random()*2|0 || -1,
+    			x1 = dots[startPoint].getBBox().cx,
+    			y1 = dots[startPoint].getBBox().cy,
+    			koefsX = [0, snap.config.distX],
+    			koefsY = [0, snap.config.distY];
+
+
+			for (var i = 0; i < 4; i++)
+    		{
+    			setTimeout(function(){
+
+    				x2 = x1 + direction * koefsX[Math.floor(Math.random() * 2)];
+    				y2 = y1 + direction * koefsY[Math.floor(Math.random() * 2)];
+
+    				drawLine(x1, y1, x2, y2);
+    				x1 = x2;
+    				y1 = y2;
+
+	    		}, i*1000);
+    		}
+
+    	}
+
+
+
+
+    	var drawRandomLines = function(){
+
+    		setInterval(function(){
+  				start = randomInteger(20, dots.length - 20);
+  				drawTrainOfLines(start);
+			}, 500);	
+
+    	}
+
+
 
 
 
@@ -160,4 +235,5 @@
 
 jQuery(document).ready(function($){
 	$('.snapsvg-wrap-1').SnapSvgNet();
+	$('#snapsvg-index').SnapSvgNet();
 });

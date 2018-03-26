@@ -4,4 +4,20 @@ block head
 	- var pageTitle = 'Robot economic infrastructure'
 
 block content
+	header(role='banner')
+		include mixins/sections.pug
+		+header_top()
+
+		.header-mid
+			.el-FrontContent
+				
+				.secw-base
+					h1 XRT токены в робономике
+					p Для создания экономических стимулов поддержания работы Умных Городов и Индустрии 4.0 в инфраструктуре сети Ethereum будет выпущен внутренний токен Робономики – Robonomics token (XRT).
+					p XRT будет требоваться каждый раз, когда возникает необходимость получить услугу киберфизической системы.
+
+		.snapsvg-wrap.snapsvg-wrap-1.plaxify(data-xrange="10", data-yrange="10")
+			svg.snapsvg
+
+
 	main(role="main")

@@ -44,7 +44,7 @@ a, .header-top__nav a, .sec-synopsis, a:hover, .sec-synopsis:hover, a:focus, .se
   text-decoration: none !important;
 }
 
-#snapsvg-header, .sec-dark .snapsvg-darkDots, .sec-mid .snapsvg-darkDots {
+.snapsvg-wrap svg.snapsvg, .sec-dark .snapsvg-darkDots, .sec-mid .snapsvg-darkDots {
   display: block;
   position: absolute;
   top: 0;
@@ -56,7 +56,7 @@ a, .header-top__nav a, .sec-synopsis, a:hover, .sec-synopsis:hover, a:focus, .se
   left: 50%;
 }
 
-#header-mid__content, .sec-dark > .secw-base, .sec-mid > .secw-base {
+.sec-dark > .secw-base, .sec-mid > .secw-base, .el-FrontContent {
   position: relative;
   z-index: 1;
 }
@@ -3004,6 +3004,7 @@ header[role='banner'] {
   padding-top: 45px;
   padding-bottom: 48px;
   padding-bottom: 3rem;
+  position: relative;
 }
 header[role='banner'] .el-social {
   background-color: #fff;
@@ -3237,14 +3238,14 @@ header[role='banner'] .el-social {
 
 /*====== end of Header navigation ======*/
 /*====== MIDDLE SECTION ======*/
-#header-mid {
+.header-mid {
   position: relative;
   box-sizing: border-box;
   overflow: hidden;
   padding-top: 68px;
 }
 @media screen and (min-width: 890px) {
-  #header-mid {
+  .header-mid {
     padding-top: 157px;
   }
 }
@@ -3405,7 +3406,7 @@ header[role='banner'] .el-social {
 
 /*====== end of LOGO ROBONOMICS ======*/
 /*====== HEADER SVG ======*/
-#snapsvg-header-wrap {
+.snapsvg-wrap {
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -3415,7 +3416,7 @@ header[role='banner'] .el-social {
   z-index: 0;
 }
 @media screen and (max-width: 890px) {
-  #snapsvg-header-wrap line, #snapsvg-header-wrap text {
+  .snapsvg-wrap line, .snapsvg-wrap text {
     display: none;
   }
 }

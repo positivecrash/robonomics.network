@@ -3,6 +3,7 @@ header[role='banner']
     text-align: center;
     padding-top: 45px;
     @include rem('padding-bottom', $margin-sec);
+    position: relative;
 
 
     .el-social
@@ -350,7 +351,7 @@ header[role='banner']
 
 /*====== MIDDLE SECTION ======*/
 
-#header-mid
+.header-mid
   {
     position: relative;
     box-sizing: border-box;
@@ -364,6 +365,7 @@ header[role='banner']
       }
 
   }
+
 
 #logo-ethereum
   {
@@ -478,7 +480,7 @@ $delay: 1s;
 
 /*====== HEADER SVG ======*/
 
-#snapsvg-header-wrap
+.snapsvg-wrap
   {
     overflow: hidden;
     position: absolute;
@@ -488,24 +490,16 @@ $delay: 1s;
     height: 100%;
     z-index: 0;
 
+    svg.snapsvg
+      {
+        @extend %svgBack;
+      }
+
     @media screen and (max-width: $mq-mobileCanvas)
       {
         line, text { display: none; }
       }
   }
-
-
-#snapsvg-header
-  {
-    @extend %svgBack;
-  }
-
-#header-mid__content
-  {
-    @extend %svgBackContent;
-  }
-
-
 /*====== end of HEADER SVG ======*/
 
 
