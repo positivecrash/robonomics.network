@@ -6739,12 +6739,12 @@ return z(b.cx||0,b.cy||0,b.rx,b.ry)},rect:function(a){var b=Y(a);return y(b.x||0
       		// merge user-supplied options with the defaults
       		snap.config = $.extend({}, defaults, options);
 
-
-      		snap.svg = Snap(snap.config.svgEl);
+          var svgEl = (el.find(snap.config.svgEl))[0];
+      		snap.svg = Snap(svgEl);
 
       		snap.config.canvasHeight = el.outerHeight(true);
       		snap.config.canvasWidth = ((snap.config.dotRadius*2) + snap.config.distX) * (snap.config.dotsQuantX - 1) + snap.config.dotRadius*2;
-      		snap.Y = Math.floor(snap.config.canvasHeight / ((snap.config.dotRadius*2) + snap.config.distX)) - 1;
+      		snap.Y = Math.floor(snap.config.canvasHeight / snap.config.distY);
       		
       		snap.dotAttrHide = {fill: snap.config.colorHidden, r: 0};
       		snap.dotAttrShow = {fill: snap.config.color, r: snap.config.dotRadius};
@@ -6781,12 +6781,14 @@ return z(b.cx||0,b.cy||0,b.rx,b.ry)},rect:function(a){var b=Y(a);return y(b.x||0
 
     	var drawGrid = function() {
 
-    		for (var y = snap.config.distY/2; y < (snap.config.canvasHeight - snap.config.distY); y += snap.config.distY) {
 
-    			for (var x = snap.config.distX; x < (snap.config.canvasWidth - snap.config.distX); x += snap.config.distX) {
+    		for (var y = snap.config.distY/2; y < snap.config.canvasHeight; y += snap.config.distY) {
+
+    			for (var x = snap.config.distX; x < snap.config.canvasWidth; x += snap.config.distX) {
 
     				oDot = drawDot(x, y, snap.config.dotsAnimate);
     				dots.push(oDot);
+
 
     				// snap.svg.text(x, y, dots.length);
 
@@ -6803,6 +6805,7 @@ return z(b.cx||0,b.cy||0,b.rx,b.ry)},rect:function(a){var b=Y(a);return y(b.x||0
     		setTimeout(function(){
   				obj
   					.animate({x1: x2, y1: y2}, 1000)
+            .remove();
 			}, 3500);
 
     	}
@@ -6888,7 +6891,13 @@ return z(b.cx||0,b.cy||0,b.rx,b.ry)},rect:function(a){var b=Y(a);return y(b.x||0
 
 
 jQuery(document).ready(function($){
-	$('.snapsvg-wrap-1').SnapSvgNet();
+
+  $('.snapsvg-wrap-1').SnapSvgNet();
+
+	$('.snapsvg-wrap-2').SnapSvgNet({
+    color: '#42475f',
+    colorHidden: '#535974'
+  });
 
 	$('#snapsvg-index').SnapSvgNet();
 });

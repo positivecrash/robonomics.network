@@ -96,27 +96,26 @@ h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, 
 
 h2 {
   font-size: 30px;
-  font-size: 1.875rem;
 }
 
 h3 {
   font-size: 26px;
-  font-size: 1.625rem;
 }
 
 h4 {
   font-size: 22px;
-  font-size: 1.375rem;
 }
 
 h5 {
   font-size: 18px;
-  font-size: 1.125rem;
 }
 
 h1 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
   font-size: 38px;
-  font-size: 2.375rem;
+  font-weight: 300;
+  color: #000;
 }
 
 h2 {
@@ -3255,7 +3254,7 @@ header[role='banner'] .el-social {
   width: 37px;
   top: 17px;
   left: 50%;
-  margin-left: -108px;
+  margin-left: -198px;
   -webkit-animation: 0.5s FadeIn 1s ease forwards;
           animation: 0.5s FadeIn 1s ease forwards;
 }
@@ -3438,15 +3437,13 @@ header[role='banner'] .el-social {
 #header-title {
   margin-top: 97px;
 }
-#header-title span {
+#header-title h1 {
   display: inline-block;
-  text-transform: uppercase;
   background-color: #535974;
   color: #fff;
-  letter-spacing: 4px;
-  padding: 3px 20px;
+  padding: 6px 20px;
+  margin-bottom: 0;
   font-size: 26px;
-  font-weight: 300;
 }
 
 #header-subtitle {
@@ -3555,6 +3552,10 @@ header[role='banner'] .el-social {
 #header-index #header-index__robonomics span:nth-child(10) {
   -webkit-animation-delay: 4s;
           animation-delay: 4s;
+}
+#header-index #snapsvg-index {
+  height: auto;
+  bottom: 128px;
 }
 
 footer[role='contentinfo'] {

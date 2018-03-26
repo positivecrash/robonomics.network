@@ -44,14 +44,18 @@ body
 	{
 	  h#{$i}
 		  {
-		  	@include rem('font-size', $font-size-title - 4 * $i);
+		  	font-size: $font-size-title - 4 * $i;
 		  }
 	}
 
 
 h1
 	{
-		@include rem('font-size', $font-size-title);
+		text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: $font-size-title;
+        font-weight: 300;
+        color: #000;
 	}
 
 

@@ -373,7 +373,8 @@ header[role='banner']
     width: 37px;
     top: 17px;
     left: 50%;
-    margin-left: -108px;
+    // margin-left: -108px;
+    margin-left: -198px;
 
     @extend %FadeOut;
     animation: 0.5s FadeIn 1s ease forwards;
@@ -531,16 +532,14 @@ $delay: 1s;
   {
     margin-top: 97px;
 
-    span
+    h1
       {
         display: inline-block;
-        text-transform: uppercase;
         background-color: $c-violet-mid;
         color: #fff;
-        letter-spacing: 4px;
-        padding: 3px 20px;
+        padding: 6px 20px;
+        margin-bottom: 0;
         font-size: 26px;
-        font-weight: 300;
       }
   }
 
@@ -609,6 +608,13 @@ $delay: 1s;
               animation-delay: #{2+$i*0.2}s;
             }
         }
+      }
+
+
+    #snapsvg-index
+      {
+        height: auto;
+        bottom: 128px;
       }
   }
 
