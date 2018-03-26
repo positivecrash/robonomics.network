@@ -373,7 +373,7 @@ header[role='banner']
     width: 37px;
     top: 17px;
     left: 50%;
-    margin-left: -195px;
+    margin-left: -108px;
 
     @extend %FadeOut;
     animation: 0.5s FadeIn 1s ease forwards;
@@ -442,8 +442,8 @@ $delay: 1s;
 
     .line
       {
-        fill:none;
-        stroke:#03A5ED;
+        fill: #fff;
+        stroke: #03A5ED;
         stroke-miterlimit:10;
 
         stroke-dasharray: 700;
@@ -500,6 +500,23 @@ $delay: 1s;
         line, text { display: none; }
       }
   }
+
+
+.snapsvgoutside-text
+  {
+    text-align: center;
+
+    span
+      {
+        display: inline-block;
+        width: 24px;
+        margin: 0 33px;
+
+        font-size: 24px;
+        line-height: 1;
+        font-weight: 300;
+      }
+  }
 /*====== end of HEADER SVG ======*/
 
 
@@ -547,16 +564,47 @@ $delay: 1s;
       {
         display: none;
       }
+
+    .snapsvgoutside-text
+      {
+        position: absolute;
+        left: 0;
+        right: 0;
+
+        span {
+          @extend %FadeOut;
+          background-color: #fff;
+          animation: FadeIn ease-in-out forwards;
+          animation-duration: 0.4s;
+        }
+      }
+
+    #header-index__ethereum
+      {
+        top: 10px;
+
+        @for $i from 1 through 8
+        {
+          span:nth-child(#{$i})
+            {
+              animation-delay: #{2+$i*0.2}s;
+            }
+        }
+      }
+
+    #header-index__robonomics
+      {
+        color: $c-orange;
+        top: 188px;
+
+        @for $i from 1 through 10
+        {
+          span:nth-child(#{$i})
+            {
+              animation-delay: #{2+$i*0.2}s;
+            }
+        }
+      }
   }
 
 
-
-
-// .dropdown:hover
-//   {
-//     .hamburger .line{
-//         &:nth-child(2){ opacity: 0; }
-//         &:nth-child(1) { transform: translateY(10px) rotate(45deg); }
-//         &:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
-//       }
-//   }

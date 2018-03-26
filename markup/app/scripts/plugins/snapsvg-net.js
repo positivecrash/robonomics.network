@@ -97,7 +97,7 @@
 
     	var drawGrid = function() {
 
-    		for (var y = snap.config.distY/2; y < (snap.config.canvasHeight-snap.config.distY); y += snap.config.distY) {
+    		for (var y = snap.config.distY/2; y < (snap.config.canvasHeight - snap.config.distY); y += snap.config.distY) {
 
     			for (var x = snap.config.distX; x < (snap.config.canvasWidth - snap.config.distX); x += snap.config.distX) {
 
@@ -111,46 +111,6 @@
     		}
     	}
 
-
-   //  	var drawLine = function(point1, point2){
-    		
-   //  		l = snap.svg
-			// 	.line(dots[point1].getBBox().cx, dots[point1].getBBox().cy, dots[point1].getBBox().cx, dots[point1].getBBox().cy)
-			// 	.attr(snap.lineAttr)
-			// 	.animate({x2: dots[point2].getBBox().cx, y2: dots[point2].getBBox().cy}, 1000);
-
-			// snap.svg.prepend(l);
-			// removeLine(l, dots[point2].getBBox().cx, dots[point2].getBBox().cy);
-   //  	}
-
-
-   //  	var removeLine = function(obj, x2, y2){
-    		
-   //  		setTimeout(function(){
-  	// 			obj
-  	// 				.animate({x1: x2, y1: y2}, 1000)
-			// }, 3500);
-
-   //  	}
-
-   //  	var drawTrainOfLines = function(startPoint){
-
-   //  		var k, endpoint;
-   //  		var direction = Math.random()*2|0 || -1;
-
-   //  		for (var i = 0; i < 4; i++)
-   //  		{
-   //  			setTimeout(function(){
-   //  				// k = direction * Math.floor(Math.random() * 7 + 1);
-   //  				k = randomInteger(3, 5);
-	  //   			endpoint = startPoint + k;
-
-	  //   			drawLine(startPoint, endpoint);
-	  //   			startPoint = endpoint;
-	  //   		}, i*1000);
-   //  		}
-
-   //  	}
 
 
 
@@ -204,8 +164,6 @@
     	}
 
 
-
-
     	var drawRandomLines = function(){
 
     		setInterval(function(){
@@ -213,6 +171,18 @@
   				drawTrainOfLines(start);
 			}, 500);	
 
+    	}
+
+
+    	var drawText = function(text, x, y, styleFrom, styleTo){
+    		
+    		t = snap.svg
+				.text(x, y, text)
+				.attr(styleFrom)
+				.animate(styleTo, 5000, mina.elastic);
+
+			snap.svg.prepend(t);
+			return t;
     	}
 
 
@@ -235,5 +205,6 @@
 
 jQuery(document).ready(function($){
 	$('.snapsvg-wrap-1').SnapSvgNet();
+
 	$('#snapsvg-index').SnapSvgNet();
 });

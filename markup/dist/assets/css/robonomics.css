@@ -52,7 +52,7 @@ a, .header-top__nav a, .sec-synopsis, a:hover, .sec-synopsis:hover, a:focus, .se
   bottom: 0;
   height: 100%;
   width: 3596px;
-  margin-left: -1798px;
+  margin-left: -1753px;
   left: 50%;
 }
 
@@ -285,7 +285,7 @@ table td, table th {
 }
 
 /*====== end of Other ======*/
-#header-top, .hamburger, .nav-mobilehide, #logo-ethereum, #header-logo-robonomics, .logo-robonomics .dot, .contentBlock-token__info .logo-robonomics-outline circle {
+#header-top, .hamburger, .nav-mobilehide, #logo-ethereum, #header-logo-robonomics, .logo-robonomics .dot, #header-index .snapsvgoutside-text span, .contentBlock-token__info .logo-robonomics-outline circle {
   visibility: hidden;
   opacity: 0;
 }
@@ -3255,7 +3255,7 @@ header[role='banner'] .el-social {
   width: 37px;
   top: 17px;
   left: 50%;
-  margin-left: -195px;
+  margin-left: -108px;
   -webkit-animation: 0.5s FadeIn 1s ease forwards;
           animation: 0.5s FadeIn 1s ease forwards;
 }
@@ -3380,7 +3380,7 @@ header[role='banner'] .el-social {
           animation: 0.5s FadeIn 4s ease forwards;
 }
 .logo-robonomics .line {
-  fill: none;
+  fill: #fff;
   stroke: #03A5ED;
   stroke-miterlimit: 10;
   stroke-dasharray: 700;
@@ -3421,6 +3421,18 @@ header[role='banner'] .el-social {
   }
 }
 
+.snapsvgoutside-text {
+  text-align: center;
+}
+.snapsvgoutside-text span {
+  display: inline-block;
+  width: 24px;
+  margin: 0 33px;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 300;
+}
+
 /*====== end of HEADER SVG ======*/
 /*====== TITLES ======*/
 #header-title {
@@ -3447,6 +3459,97 @@ header[role='banner'] .el-social {
 /*====== end of TITLES ======*/
 #header-index #header-top__logo {
   display: none;
+}
+#header-index .snapsvgoutside-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+#header-index .snapsvgoutside-text span {
+  background-color: #fff;
+  -webkit-animation: FadeIn ease-in-out forwards;
+          animation: FadeIn ease-in-out forwards;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+}
+#header-index #header-index__ethereum {
+  top: 10px;
+}
+#header-index #header-index__ethereum span:nth-child(1) {
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+}
+#header-index #header-index__ethereum span:nth-child(2) {
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+#header-index #header-index__ethereum span:nth-child(3) {
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
+}
+#header-index #header-index__ethereum span:nth-child(4) {
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
+}
+#header-index #header-index__ethereum span:nth-child(5) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+#header-index #header-index__ethereum span:nth-child(6) {
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s;
+}
+#header-index #header-index__ethereum span:nth-child(7) {
+  -webkit-animation-delay: 3.4s;
+          animation-delay: 3.4s;
+}
+#header-index #header-index__ethereum span:nth-child(8) {
+  -webkit-animation-delay: 3.6s;
+          animation-delay: 3.6s;
+}
+#header-index #header-index__robonomics {
+  color: #F15A24;
+  top: 188px;
+}
+#header-index #header-index__robonomics span:nth-child(1) {
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+}
+#header-index #header-index__robonomics span:nth-child(2) {
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+#header-index #header-index__robonomics span:nth-child(3) {
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
+}
+#header-index #header-index__robonomics span:nth-child(4) {
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
+}
+#header-index #header-index__robonomics span:nth-child(5) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+#header-index #header-index__robonomics span:nth-child(6) {
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s;
+}
+#header-index #header-index__robonomics span:nth-child(7) {
+  -webkit-animation-delay: 3.4s;
+          animation-delay: 3.4s;
+}
+#header-index #header-index__robonomics span:nth-child(8) {
+  -webkit-animation-delay: 3.6s;
+          animation-delay: 3.6s;
+}
+#header-index #header-index__robonomics span:nth-child(9) {
+  -webkit-animation-delay: 3.8s;
+          animation-delay: 3.8s;
+}
+#header-index #header-index__robonomics span:nth-child(10) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
 
 footer[role='contentinfo'] {
