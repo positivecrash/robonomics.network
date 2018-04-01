@@ -70,10 +70,11 @@ a, .header-top__nav a, .sec-synopsis, a:hover, .sec-synopsis:hover, a:focus, .se
 
 body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 300;
+  letter-spacing: 2px;
   word-spacing: normal;
   letter-spacing: 0;
 }
@@ -85,10 +86,10 @@ html {
 /*====== Text sizes & Headers ======*/
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
-  margin-top: 48px;
-  margin-top: 3rem;
-  margin-bottom: 48px;
-  margin-bottom: 3rem;
+  margin-top: 54px;
+  margin-top: 3.375rem;
+  margin-bottom: 54px;
+  margin-bottom: 3.375rem;
 }
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
   margin-top: 0;
@@ -191,26 +192,22 @@ a:hover {
   color: #03A5ED !important;
 }
 
-.font-light {
-  font-weight: 300;
-}
-
 /*====== end of Text styles ======*/
 /*====== Text elements ======*/
 ul, ol {
   margin-left: 20px;
   margin-left: 1.25rem;
-  margin-bottom: 24px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 27px;
+  margin-bottom: 1.6875rem;
 }
 ul ul, ul ol, ol ul, ol ol {
-  margin-top: 24px;
-  margin-top: 1.5rem;
+  margin-top: 27px;
+  margin-top: 1.6875rem;
 }
 
 li, p, blockquote {
-  margin-bottom: 24px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 27px;
+  margin-bottom: 1.6875rem;
 }
 li:last-child, p:last-child, blockquote:last-child {
   margin-bottom: 0;
@@ -223,21 +220,21 @@ code {
 
 table td, table th {
   vertical-align: top;
-  padding: 12px;
-  padding: 0.75rem;
+  padding: 13.5px;
+  padding: 0.84375rem;
 }
 @media screen and (max-width: 768px) {
   table td, table th {
     display: block;
-    padding: 7.2px;
-    padding: 0.45rem;
+    padding: 8.1px;
+    padding: 0.50625rem;
     padding-left: 0;
     padding-right: 0;
   }
   table td:first-child, table th:first-child {
     font-weight: bold;
-    padding-top: 24px;
-    padding-top: 1.5rem;
+    padding-top: 27px;
+    padding-top: 1.6875rem;
   }
 }
 
@@ -3000,8 +2997,8 @@ li.fancybox-thumbs-loading {
 }
 header[role='banner'] {
   padding-top: 45px;
-  padding-bottom: 48px;
-  padding-bottom: 3rem;
+  padding-bottom: 54px;
+  padding-bottom: 3.375rem;
   position: relative;
 }
 header[role='banner'] .el-social {
@@ -3010,10 +3007,7 @@ header[role='banner'] .el-social {
 
 /*====== Top section ======*/
 #header-top {
-  position: absolute;
-  top: 45px;
-  left: 0;
-  right: 0;
+  position: relative;
   z-index: 1000;
   transition: all 0.2s linear;
   -webkit-animation: 0.8s FadeIn 0.2s linear forwards;
@@ -3023,6 +3017,8 @@ header[role='banner'] .el-social {
   position: fixed;
   background-color: #000;
   top: 0;
+  left: 0;
+  right: 0;
 }
 #header-top.fixed, #header-top.fixed .header-top__nav > a, #header-top.fixed .header-top__nav .dropdown > a {
   color: #fff;
@@ -3241,11 +3237,6 @@ header[role='banner'] .el-social {
   box-sizing: border-box;
   overflow: hidden;
   padding-top: 68px;
-}
-@media screen and (min-width: 890px) {
-  .header-mid {
-    padding-top: 157px;
-  }
 }
 
 #logo-ethereum {
@@ -3693,10 +3684,10 @@ span.loader {
 
 @media screen and (min-width: 576px) {
   section.contentBlock-about {
-    padding-top: 96px;
-    padding-top: 6rem;
-    padding-bottom: 96px;
-    padding-bottom: 6rem;
+    padding-top: 108px;
+    padding-top: 6.75rem;
+    padding-bottom: 108px;
+    padding-bottom: 6.75rem;
   }
 }
 section.contentBlock-about .row [class*=col-] {
@@ -3760,8 +3751,8 @@ section.contentBlock-about .block-white img {
   padding-right: 40px;
 }
 .contentBlock-shemes .js-slider-viewport {
-  padding: 96px;
-  padding: 6rem;
+  padding: 108px;
+  padding: 6.75rem;
   margin-left: 60px;
   margin-right: 60px;
 }
@@ -3780,8 +3771,8 @@ section.contentBlock-about .block-white img {
   }
 }
 .contentBlock-shemes .img-block {
-  margin-bottom: 96px;
-  margin-bottom: 6rem;
+  margin-bottom: 108px;
+  margin-bottom: 6.75rem;
 }
 .contentBlock-shemes .js-slider-pager p {
   margin-bottom: 0;
@@ -3807,12 +3798,12 @@ section.contentBlock-about .block-white img {
 
 .contentBlock-token {
   position: relative;
-  padding-bottom: 122px;
+  padding-bottom: 128px;
 }
 .contentBlock-token:after {
   content: "";
   position: absolute;
-  bottom: 48;
+  bottom: 54;
   left: 0;
   right: 0;
   z-index: 1;
@@ -3845,13 +3836,13 @@ section.contentBlock-about .block-white img {
 @media screen and (max-width: 576px) {
   .contentBlock-token__info {
     padding-right: 0;
-    margin-bottom: 48px;
-    margin-bottom: 3rem;
+    margin-bottom: 54px;
+    margin-bottom: 3.375rem;
   }
   .contentBlock-token__info .logo-robonomics-outline {
     position: static;
-    margin-bottom: 48px;
-    margin-bottom: 3rem;
+    margin-bottom: 54px;
+    margin-bottom: 3.375rem;
   }
 }
 
@@ -3861,8 +3852,8 @@ section.contentBlock-about .block-white img {
 }
 .contentBlock-roadmap .roadmap-title {
   border-bottom: 2px solid #F15A24;
-  margin-bottom: 24px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 27px;
+  margin-bottom: 1.6875rem;
   padding-bottom: 10px;
 }
 .contentBlock-roadmap .roadmap-title__in div {
@@ -4101,17 +4092,17 @@ body {
 /*====== end of Transitions ======*/
 /*====== Bootstrap ======*/
 .row *[class*='col-'] {
-  margin-bottom: 48px;
-  margin-bottom: 3rem;
+  margin-bottom: 54px;
+  margin-bottom: 3.375rem;
 }
 
 /*====== end of Bootstrap ======*/
 /*====== Sections ======*/
 section {
-  padding-top: 48px;
-  padding-top: 3rem;
-  padding-bottom: 48px;
-  padding-bottom: 3rem;
+  padding-top: 54px;
+  padding-top: 3.375rem;
+  padding-bottom: 54px;
+  padding-bottom: 3.375rem;
 }
 
 .sec-dark {
@@ -4235,8 +4226,8 @@ section {
   border: 1px dashed #000;
   line-height: 1;
   position: relative;
-  margin-bottom: 24px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 27px;
+  margin-bottom: 1.6875rem;
 }
 .block-gList .block-gList__bul span {
   display: table-cell;

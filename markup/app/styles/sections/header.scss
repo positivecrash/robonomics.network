@@ -16,10 +16,11 @@ header[role='banner']
 
 #header-top
   {
-    position: absolute;
-    top: 45px;
-    left: 0;
-    right: 0;
+    // position: absolute;
+    // top: 45px;
+    // left: 0;
+    // right: 0;
+    position: relative;
     z-index: 1000;
 
     transition: all 0.2s linear;
@@ -31,6 +32,8 @@ header[role='banner']
         position: fixed;
         background-color: #000;
         top: 0;
+        left: 0;
+        right: 0;
 
         &, .header-top__nav > a , .header-top__nav .dropdown > a
         { color: #fff; }
@@ -358,10 +361,10 @@ header[role='banner']
 
     padding-top: 68px;
 
-    @media screen and (min-width: $mq-mobileCanvas)
-      {
-        padding-top: 157px;
-      }
+    // @media screen and (min-width: $mq-mobileCanvas)
+    //   {
+    //     padding-top: 157px;
+    //   }
 
   }
 
