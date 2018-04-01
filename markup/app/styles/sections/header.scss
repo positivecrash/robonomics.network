@@ -1,6 +1,5 @@
 header[role='banner']
   {
-    text-align: center;
     padding-top: 45px;
     @include rem('padding-bottom', $margin-sec);
     position: relative;
@@ -25,7 +24,7 @@ header[role='banner']
 
     transition: all 0.2s linear;
     @extend %FadeOut;
-    animation: 0.8s FadeIn 5s linear forwards;
+    animation: 0.8s FadeIn 0.2s linear forwards;
 
     &.fixed
       {
@@ -99,7 +98,7 @@ header[role='banner']
         @extend %link_noline;
         font-size: 22px;
         line-height: 1;
-        color: $c-text;
+        color: $c-violet-mid;
 
         &, &:hover
           {
@@ -559,6 +558,11 @@ $delay: 1s;
 
 #header-index
   {
+    text-align: center;
+    
+    #header-top { animation-delay: 4s; }
+
+
     #header-top__logo
       {
         display: none;

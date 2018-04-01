@@ -28,7 +28,7 @@ body
 
 #{headings()}
 	{
-		line-height: $scale-sm;
+		line-height: 1.5;
 
 		@include rem('margin-top', $vertical-rythm*2);
   		@include rem('margin-bottom', $vertical-rythm*2);
@@ -48,31 +48,28 @@ body
 		  }
 	}
 
+h1, h2, h3
+	{
+		text-transform: uppercase;
+        letter-spacing: 2px;
+	  	word-spacing: 4px;
+	  	font-weight: 300;
+	}
+
 
 h1
 	{
-		text-transform: uppercase;
-        letter-spacing: 4px;
         font-size: $font-size-title;
-        font-weight: 300;
-        color: #000;
+        text-align: center;
 	}
 
 
 h2
 	{
-		font-weight: 300;
 	  	text-transform: uppercase;
 	  	color: $c-orange;
-	  	letter-spacing: 3px;
-	  	word-spacing: 4px;
 	}
 
-h3
-	{
-		font-weight: 500;
-		color: #000;
-	}
 
 .t-big
 	{
@@ -142,6 +139,8 @@ a
 
 
 .t-blue { color: $c-blue; color: $c-blue !important; }
+
+.font-light { font-weight: 300; }
 
 /*====== end of Text styles ======*/
 

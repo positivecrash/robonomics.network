@@ -1,0 +1,91 @@
+$c-inptext-back: #fff;
+$c-inpbtn-back: $c-orange;
+$c-inptext-type: $c-text;
+$c-inpbtn-type: #fff;
+
+
+%inp-basic-styles
+	{
+		border-radius: 2px;
+		font-size: 18px;
+		line-height: 1;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		border: 0;
+		font-weight: 300;
+
+		display: block;
+		padding: 12px 24px;
+		box-sizing: border-box;
+		width: 100%;
+		height: 46px;
+	}
+
+
+
+
+input:not([type='submit']), input:not([type='button'])
+	{
+		@extend %inp-basic-styles;
+		background-color: $c-inptext-back;
+		color: $c-inptext-type;
+	}
+
+input[type='submit'], input[type='button'], button
+	{
+		@extend %inp-basic-styles;
+		background-color: $c-inpbtn-back;
+		color: $c-inpbtn-type;
+		cursor: pointer;
+		text-align: center;
+	}
+
+
+
+@keyframes rotateLoader
+	{
+		0%
+			{
+				transform:rotate(0deg);
+			}
+		100%
+			{
+				transform:rotate(360deg);
+			}
+	}
+
+span.loader
+	{
+		position: relative;
+		display: inline-block;
+		height: 20px;
+		width: 20px;
+		border-radius: 20px;
+		border-color: rgba($c-inpbtn-type, 5);
+		border-top: 1px solid $c-inpbtn-type;
+		border-right: 1px solid $c-inpbtn-type;
+
+		animation: 0.8s rotateLoader ease-in-out infinite;
+	}
+
+
+
+
+%msg
+	{
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 16px;
+		line-height: 1.2;
+
+		display: block;
+		padding: 10px 20px;
+
+		background-color: lighten($c-blue-mute-2, 10%);
+		border: 1px solid $c-blue-mute-2;
+	}
+
+.msg-ok
+	{
+		@extend %msg;
+	}

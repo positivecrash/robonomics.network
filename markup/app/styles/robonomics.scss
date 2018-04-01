@@ -27,6 +27,7 @@
 
 @import "pages/index";
 @import "pages/outdated";
+@import "pages/token";
 
 
 html, body
@@ -58,8 +59,8 @@ body
 
 
 /*====== Set width of container ======*/
-.secw-base
-  { @include secw($mq-desktop); }
+.secw-narrow { @include secw(720px); }
+.secw-base { @include secw($mq-desktop); }
 
 .secw-full
   {
@@ -162,8 +163,8 @@ body
 /*====== Bootstrap ======*/
 .row
   {
-    margin-left: -#{$padding-fields}px; 
-    margin-right: -#{$padding-fields}px; 
+    // margin-left: -#{$padding-fields}px; 
+    // margin-right: -#{$padding-fields}px; 
 
     *[class*='col-']
     {
@@ -237,8 +238,9 @@ section
 .sec-black
   {
     background-color: #000;
+    color: #fff;
 
-    h2
+    h2, h3
       {
         color: $c-violet-light;
       }
@@ -252,6 +254,25 @@ section
 .sec-dots__gray
   {
     background: image-url('pattern_dot_gray.svg');
+  }
+
+.sec-city
+  {
+    box-sizing: border-box;
+    min-height: 306px;
+    
+    h2, h3 
+      {
+        color: $c-blue-mute-2;
+      }
+
+    @media screen and (min-width: $mq-tablet) 
+    {
+      background-image: image-url('pattern-city.svg');
+      background-repeat: repeat-x;
+      background-position: 100% 0;
+    }
+
   }
 
 .block-white
