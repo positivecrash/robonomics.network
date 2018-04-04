@@ -1,0 +1,559 @@
+html, body
+  {
+    height: 100%;
+    min-height: 100%;
+  }
+
+
+html
+  {
+    position: relative;
+    overflow-x: hidden;
+  }
+
+
+body
+  {
+    background-color: #fff;
+
+    position: relative;
+
+    opacity: 0;
+    animation: 0.4s FadeIn ease-in forwards;
+  }
+
+
+
+
+
+/*====== Set width of container ======*/
+.secw-narrow { @include secw(720px); }
+.secw-base { @include secw($mq-desktop); }
+
+.secw-full
+  {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+
+/*====== end of Set width of container ======*/
+
+
+
+
+
+/*====== Flow elements ======*/
+
+.f-zoom
+  { overflow: hidden; }
+.f-left
+  { float: left; }
+.f-right
+  { float: right; }
+
+
+.d-t
+  {
+    display: table;
+
+    & > *{
+      display: table-cell;
+    }
+  }
+
+.d-t_row
+  { display: table-row; }
+.d-t_cell 
+  { display: table-cell; }
+
+
+.d-ib
+  { display: inline-block; }
+.d-b
+  { display: block; }
+
+
+.d-flexline
+  { 
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    align-items: center;
+  }
+
+/*====== Flow elements ======*/
+
+
+
+
+
+
+/*====== Transitions ======*/
+
+.fadeOut, .visible { transition: 0.3s ease-in-out opacity; }
+.fadeOut { visibility: hidden; opacity: 0; }
+.visible { opacity: 1; visibility: visible; }
+
+
+.dropdown
+  {
+    position: relative;
+
+    & > .dropdown-content
+      {
+        visibility: hidden;
+        opacity: 0;
+
+        position: absolute;
+        top: 20px;
+        left: 0;
+        z-index: 1;
+        padding: 30px 0;
+        width: 100%;
+        text-align: center;
+      }
+
+    &:hover
+      {
+        & > .dropdown-content { animation: 0.2s FadeIn 0.4s ease-out forwards; }
+      }
+  }
+
+/*====== end of Transitions ======*/
+
+
+
+
+
+
+/*====== Bootstrap ======*/
+.row
+  {
+    // margin-left: -#{$padding-fields}px; 
+    // margin-right: -#{$padding-fields}px; 
+
+    *[class*='col-']
+    {
+      @include rem('margin-bottom', $margin-sec);
+    }
+  }
+/*====== end of Bootstrap ======*/
+
+
+
+
+
+
+
+/*====== Sections ======*/
+
+section
+  {
+    @include rem('padding-top', $margin-sec);
+    @include rem('padding-bottom', $margin-sec);
+  }
+
+
+.sec-dark
+  {
+    background-color: $c-violet-dark;
+    color: #fff;
+
+    position: relative;
+    overflow: hidden;
+
+    .snapsvg-darkDots
+      {
+        @extend %svgBack;
+        top: 90px;
+      }
+
+    & > .secw-base
+      {
+        @extend %FrontContent;
+      }
+  }
+
+.sec-white
+  {
+      background-color: #fff;
+      color: $c-violet-mid;
+  }
+
+
+.sec-mid
+  {
+    background-color: $c-violet-mid;
+    color: #fff;
+
+    position: relative;
+    overflow: hidden;
+
+    .snapsvg-darkDots
+      {
+        @extend %svgBack;
+        top: 90px;
+      }
+
+    & > .secw-base
+      {
+        @extend %FrontContent;
+      }
+  }
+
+.sec-black
+  {
+    background-color: #000;
+    color: #fff;
+
+    h2, h3
+      {
+        color: $c-violet-light;
+      }
+  }
+
+.sec-pad
+  {
+    @include rem('padding-left', 60);
+  }
+
+.sec-dots__gray
+  {
+    background: image-url('pattern_dot_gray.svg');
+  }
+
+.sec-city
+  {
+    box-sizing: border-box;
+    min-height: 306px;
+    
+    h2, h3 
+      {
+        color: $c-blue-mute-2;
+      }
+
+    @media screen and (min-width: $mq-tablet) 
+    {
+      background-image: image-url('pattern-city.svg');
+      background-repeat: repeat-x;
+      background-position: 100% 0;
+    }
+
+  }
+
+.block-white
+  {
+    background-color: #fff;
+    color: $c-text;
+    padding: 15px;
+  }
+
+.block-video
+  {
+    position: relative;
+
+    &:before, &:after
+      {
+        content:"";
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+        width: 0;
+        height: 0;
+      }
+
+    &:before
+      { 
+        border-top: 27px solid transparent;
+        border-bottom: 27px solid transparent;
+        border-left: 54px solid $c-violet-light;
+
+        z-index: 0;
+        margin-left: -27px;
+        margin-top: -27px;
+      }
+
+    &:after
+      { 
+        border-top: 22px solid transparent;
+        border-bottom: 22px solid transparent;
+        border-left: 44px solid $c-blue;
+
+        z-index: 1;
+        margin-left: -23px;
+        margin-top: -22px;
+      }
+
+    &:hover
+      {
+        &:before
+          {
+            border: 0;
+            background-color: $c-violet-light;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+
+            width: 100%;
+            height: 100%;
+            transform: scale(0);
+            transform-origin: 50% 50%;
+            animation: 0.3s Scale 0.2s ease-in-out forwards;
+            
+          }
+      }
+  }
+
+
+
+.block-gList
+  {
+
+    &, .col-sm-4
+      {
+        @extend %margPadNull;
+      }
+
+    .block-gList__text
+      {
+        padding-right: 40px;
+        font-weight: 500;
+        color: #000;
+      }
+
+    .block-gList__bul
+      {
+        display: inline-block;
+        padding: 10px;
+        border-radius: 54px;
+        border: 1px dashed #000;
+        line-height: 1;
+
+        position: relative;
+
+        @include rem('margin-bottom', $vertical-rythm);
+
+        span
+          {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            width: 88px;
+            height: 88px;
+            border-radius: 44px;
+            background-color: #000;
+            color: #fff;
+            font-weight: 100;
+            font-size: 72px;
+            line-height: 1;
+          }
+      }
+
+
+      .col-sm-4
+        {
+          overflow: hidden;
+
+          .block-gList__bul:after
+            {
+              content:"";
+              position: absolute;
+              left: 115px;
+              height: 2px;
+              border-bottom: 1px dashed #000;
+              top: 50%;
+              margin-top: -1px;
+              right: 0;
+              width: 500px;
+
+
+              @include mobile()
+                {
+                  display: none;
+                }
+            }
+
+          &:last-child
+            {
+              .block-gList__bul:after
+                {
+                  display: none;
+                }
+            }
+        }
+  }
+/*====== end of Sections ======*/
+
+
+
+
+/*====== Random ======*/
+  .embed-video-fluid
+    {
+      width: 100%;
+      position: relative;
+      padding: 0;
+      padding-top: 56.25%;
+
+    
+      iframe, object, embed
+        {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+
+    }
+
+  .el-FrontContent
+    {
+      @extend %FrontContent;
+    }
+/*====== end of Random ======*/
+
+
+
+
+/*====== Logos ======*/
+
+.logo-robonomics-outline
+  {
+    path
+      {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+      }
+  }
+
+/*====== end of Logos ======*/
+
+
+
+
+/*====== Socials ======*/
+.el-social
+  {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1.5px solid $c-orange;
+    margin-bottom: 10px;
+
+    & > span
+      {
+        display: table-cell;
+        width: 50px;
+        height: 50px;
+        vertical-align: middle;
+        text-align: center;
+      }
+
+    path
+      {
+        fill: $c-orange;
+      }
+
+    .svgi-github, .svgi-telegram
+      {
+        position: relative;
+        left: 1px;
+        top: 2px;
+      }
+
+    .svgi-telegram
+      {
+        left: -3px;
+        top: 1px;
+      }
+  }
+
+/*====== end of Socials ======*/
+
+
+/*====== Technologies ======*/
+.sec-techs
+  {
+    span
+      {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 22px;
+        margin-bottom: 22px;
+
+        &:last-child
+          {
+            margin-right: 0;
+          }
+      }
+  }
+/*====== end of Technologies ======*/
+
+
+
+
+/*====== Fancybox define ======*/
+  .plugin-fancybox__popup
+    {
+      display: none;
+    }
+/*====== end of Fancybox define ======*/
+
+
+
+/*====== Fancybox rewrite ======*/
+  .fancybox-container .fancybox-bg
+    {
+      transform: scale(0);
+    }
+
+  .fancybox-container--ready .fancybox-bg
+    {
+      background-color: $c-violet-mid;
+      opacity: 1;
+      transform: scale(1);
+    }
+
+  .fancybox-slide>*
+    {
+      width: 80%;
+      min-width: 200px;
+      max-width: 1500px;
+      overflow: visible;
+    }
+
+  .fancybox-close-small
+    {
+      font-weight: 100;
+      font-family: $font-family-base;
+      font-size: 60px;
+      height: auto;
+
+      top: -40px;
+      right: -40px;
+      color: $c-orange;
+
+      &, &:hover, &:active
+        {
+          background: none;
+          outline: none;
+        }
+
+      &:hover
+        {
+          color: #fff;
+        }
+    }
+/*====== end of Fancybox rewrite ======*/
+

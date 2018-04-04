@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="7676 2778.975 35.837 58.018">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        opacity: 0.6;
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4 {
+        opacity: 0.8;
+      }
+
+      .cls-5 {
+        clip-path: url(#clip-path-2);
+      }
+
+      .cls-6 {
+        opacity: 0.45;
+      }
+
+      .cls-7 {
+        clip-path: url(#clip-path-3);
+      }
+
+      .cls-8 {
+        clip-path: url(#clip-path-4);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="35.644" height="18.597"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_4" data-name="Rectangle 4" width="17.822" height="40.099"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect id="Rectangle_5" data-name="Rectangle 5" class="cls-1" width="17.822" height="25.086"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <rect id="Rectangle_6" data-name="Rectangle 6" width="17.822" height="25.086"/>
+    </clipPath>
+  </defs>
+  <g id="Group_769" data-name="Group 769" transform="translate(7676 2778.975)">
+    <g id="Group_12" data-name="Group 12" class="cls-2" transform="translate(0 21.503)">
+      <g id="Group_11" data-name="Group 11">
+        <g id="Group_10" data-name="Group 10" class="cls-3">
+          <path id="Path_5" data-name="Path 5" class="cls-1" d="M17.822,22.2,0,30.239,17.822,40.8,35.644,30.239Z" transform="translate(0 -22.2)"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_18" data-name="Group 18" class="cls-4" transform="translate(18.016)">
+      <g id="Group_17" data-name="Group 17">
+        <g id="Group_16" data-name="Group 16" class="cls-5">
+          <path id="Path_7" data-name="Path 7" class="cls-1" d="M18.6,0V40.1L36.422,29.542Z" transform="translate(-18.6)"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_21" data-name="Group 21" class="cls-6" transform="translate(0 32.932)">
+      <g id="Group_20" data-name="Group 20">
+        <g id="Group_19" data-name="Group 19" class="cls-7">
+          <path id="Path_8" data-name="Path 8" class="cls-1" d="M0,34,17.822,59.086V44.558Z" transform="translate(0 -34)"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_24" data-name="Group 24" class="cls-4" transform="translate(17.822 32.932)">
+      <g id="Group_23" data-name="Group 23">
+        <g id="Group_22" data-name="Group 22" class="cls-8">
+          <path id="Path_9" data-name="Path 9" class="cls-1" d="M18.4,44.558V59.086L36.222,34Z" transform="translate(-18.4 -34)"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_15" data-name="Group 15" class="cls-6" transform="translate(0.194)">
+      <g id="Group_14" data-name="Group 14">
+        <g id="Group_13" data-name="Group 13" class="cls-5">
+          <path id="Path_6" data-name="Path 6" class="cls-1" d="M.2,29.542,18.022,40.1V0Z" transform="translate(-0.2)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

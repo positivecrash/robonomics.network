@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 212 212" style="enable-background:new 0 0 212 212;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.602;}
+	.st1{fill:none;}
+	.st2{fill:none;stroke:#03A5ED;stroke-width:40;}
+	.st3{fill:none;stroke:#FFFFFF;stroke-width:10;}
+	.st4{fill:#282B38;}
+	.st5{font-family:'Roboto-Light';}
+	.st6{font-size:13px;}
+	.st7{font-family:'Roboto-Medium';}
+	.st8{font-size:25px;}
+</style>
+<g id="Group_2003" transform="translate(6906)">
+	<g id="Group_653" transform="translate(-488 -120)">
+		<g id="Ellipse_189" transform="translate(536 1439)" class="st0">
+			<circle class="st1" cx="-6848" cy="-1213" r="106"/>
+			<circle class="st2" cx="-6848" cy="-1213" r="86"/>
+		</g>
+		<path id="Path_747" class="st3" d="M-6287.7,172.5l35.2-45.7"/>
+		<path id="Path_808" class="st3" d="M-6272.7,186.5l35.2-45.7"/>
+		<path id="Path_809" class="st3" d="M-6259.7,202.5l35.2-45.7"/>
+	</g>
+	<text transform="matrix(1 0 0 1 -6890 91)" class="st4 st5 st6">initial issue</text>
+	<text transform="matrix(1 0 0 1 -6890 117)" class="st4 st7 st8">10 000 000 XRT</text>
+</g>
+</svg>

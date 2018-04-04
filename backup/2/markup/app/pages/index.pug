@@ -1,0 +1,232 @@
+extends extends/layout.pug
+
+block head
+	- var pageTitle = 'Robot economic infrastructure'
+
+block content
+	header(role='banner')#header-index
+		include mixins/sections.pug
+		+header_top()
+
+		.header-mid
+			.el-FrontContent
+				.el-FrontContent
+					div#header-logo-robonomics(data-xrange="20", data-yrange="20").plaxify
+						<svg class="logo-robonomics" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="196.9px" height="170.3px" viewBox="0 0 196.9 170.3" style="enable-background:new 0 0 196.9 170.3;" xml:space="preserve">
+							<g transform="translate(2530 155)">
+								<path class="line" d="M-2523.4,7.9l184.2,0.5l-91.7-158.1L-2523.4,7.9z"/>
+
+								<circle class="dot" cx="-2339.7" cy="8.7" r="6.6"/>
+								<circle class="dot" cx="-2523.4" cy="8.2" r="6.6"/>
+								<circle class="dot" cx="-2430.8" cy="-148.4" r="6.6"/>
+								
+								<path class="triangle-1" d="M-2477.3-18.3l92.1,0.3l-45.8-79L-2477.3-18.3z"/>
+								<path class="triangle-2" d="M-2431.2-18.1l46,0.1l-45.8-79L-2431.2-18.1z"/>
+								<path class="triangle-3" d="M-2477.3-18.3l92.1,0.3l-46-20.3L-2477.3-18.3z"/>
+							</g>
+						</svg>
+
+
+					img#logo-ethereum(alt="", src="assets/i/logo-ethereum.svg", data-xrange="50", data-yrange="50").plaxify
+
+
+					.secw-base
+						#header-title: h1 ПЛАТФОРМА РОБОНОМИКИ
+						#header-subtitle { Инфраструктура сети Ethereum для умных фабрик и городов }
+
+				#header-index__ethereum.snapsvgoutside-text.plaxify(data-xrange="10", data-yrange="10")
+					span e
+					span t
+					span h
+					span e
+					span r
+					span e
+					span u
+					span m
+
+
+				#header-index__robonomics.snapsvgoutside-text.plaxify(data-xrange="10", data-yrange="10")
+					span r
+					span o
+					span b
+					span o
+					span n
+					span o
+					span m
+					span i
+					span c
+					span s
+
+
+		#snapsvg-index.snapsvg-wrap.plaxify(data-xrange="10", data-yrange="10")
+			svg.snapsvg
+
+
+
+	main(role="main")
+		section.sec-mid.contentBlock-about
+			.secw-base
+				.row
+					.col-sm-6.js-paroller(data-paroller-factor="-0.1", data-paroller-type="foreground")
+						a(href="#", data-src="#index-video", data-fancybox).block-video
+						.block-white.text-hyphened
+							img.img-block(alt="", src="assets/i/about-1.png", srcset="assets/i/about-1@2x.png")
+							| Объединение экономической и технической детализации транзакции к автономной системе  в одну транзакцию.
+					.col-sm-6.js-paroller(data-paroller-factor="0.1", data-paroller-type="foreground")
+						.block-white.text-hyphened
+							img.img-block(alt="", src="assets/i/about-2.png", srcset="assets/i/about-2@2x.png")
+							| Создание автоматизированного управления экономическими отношениями умных фабрик.
+
+						.block-white.text-hyphened
+							img.img-block(alt="", src="assets/i/about-3.png", srcset="assets/i/about-3@2x.png")
+							| Использования следящей системы для киберфизических систем на базе пиринговой сети.
+
+				#index-video.plugin-fancybox__popup
+					.js-slider.anyslide(data-anyslide="controls")
+						.js-slider-pager
+							.row
+								.col-md-4(data-anyslide-slide="0") 1. What is the economy of robots?
+								.col-md-4(data-anyslide-slide="1") 2. Why people need robot economics?
+								.col-md-4(data-anyslide-slide="2") 3. Why robot needs Blockchain?
+
+						.js-slider-viewport.sec-white
+
+							.slide
+								.embed-video-fluid
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/IwT30VOD8K8?controls=0&listType=user_uploads&list=Airalab&modestbranding=1&rel=0&showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+							.slide: img.img-block(alt="", src="assets/i/video-2.jpg", srcset="assets/i/video-2@2x.jpg")
+							.slide
+								.embed-video-fluid
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/FkR8OJvRpeE?controls=0&listType=user_uploads&list=Airalab&modestbranding=1&rel=0&showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							
+							
+
+						.js-slider-controls
+							a.prev(href="javascript:;")
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.9 119.6" xml:space="preserve" class="arrow">
+									<path d="M41.5,0.3L0.6,58.4l41.9,60.9"/>
+								</svg>
+
+							a.next(href="javascript:;")
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.9 119.6" xml:space="preserve" class="arrow">
+									<path d="M1.4,119.3l40.9-58.1L0.4,0.3"/>
+								</svg>
+
+			.snapsvg-wrap-2.snapsvg-wrap.plaxify(data-xrange="10", data-yrange="10")
+				svg.snapsvg
+
+
+		section.sec-dark.contentBlock-shemes
+			.secw-base
+				h2 Для проектировщиков умных городов и фабрик
+
+				.js-slider.anyslide(data-anyslide="controls")
+					.js-slider-pager
+						.row
+							.col-md-4
+								div(data-anyslide-slide="0")
+									p Создавайте добавочную стоимость повышая прозрачность технологических процессов при производстве товаров умными фабриками.
+								a(href="file:///Users/nicetea/Work/Projects/Airalab/robonomics.network/markup/dist/assets/i/sheme-1@2x.jpg", target="_blank") Смотреть схему 1 &rarr;
+							.col-md-4(data-anyslide-slide="1") Создавайте модели поведения умных фабрик и городов 	на основе экономически значимых транзакций, поселяющихся в публичный Ethereum Blockchain.
+							.col-md-4(data-anyslide-slide="2") Проектируйте модели верификации исполнения контрактных обязательств автономными фабриками перед человеком и между собой.
+
+					.js-slider-viewport.sec-white
+						.slide
+							img.img-block(alt="", src="assets/i/sheme-1.jpg", srcset="assets/i/sheme-1@2x.jpg")
+							p: a(href="file:///Users/nicetea/Work/Projects/Airalab/robonomics.network/markup/dist/assets/i/sheme-1@2x.jpg", target="_blank") Схема 1. Открыть в новой вкладке &rarr;
+							p.t-big Умная фабрика загружает информацию о продукте в децентрализованную torrent-подобную сеть (IPFS/Swarm), а также сохраняет хеш-значение функции от данных в цепочке блоков. Так информация о продукте фиксируется на момент загрузки и не может быть изменена в будущем. Так, обретая иммутабельность, данные с сенсоров создают добавочную стоимость.
+						.slide
+							img.img-block(alt="", src="assets/i/sheme-2.jpg", srcset="assets/i/sheme-2@2x.jpg")
+							p: a(href="file:///Users/nicetea/Work/Projects/Airalab/robonomics.network/markup/dist/assets/i/sheme-2@2x.jpg", target="_blank") Схема 2. Открыть в новой вкладке &rarr;
+							p.t-big Сложным вопросом в Industry 4.0 является доступ потребителя к умной фабрике. IT-компании предлагают свои порталы для отправки заказа умной фабрике. Эта схема не работает. К умной фабрике имеет доступ IT-компания, но не потребитель. Мы решаем эту проблему посредника умным контрактом и Robonomics OS. Здесь AIRA (Robonomics OS) предоставляет возможность системе, в которой нет человека, интегрироваться с экономикой человека. На основании контракта фабрика выполняет заказ. Так потребитель имеет прямой доступ к умной фабрике без рисков централизации.
+						.slide
+							img.img-block(alt="", src="assets/i/sheme-3.jpg", srcset="assets/i/sheme-3@2x.jpg")
+							p: a(href="file:///Users/nicetea/Work/Projects/Airalab/robonomics.network/markup/dist/assets/i/sheme-3@2x.jpg", target="_blank") Схема 3. Открыть в новой вкладке &rarr;
+							p.t-big Третьим вопросом является наблюдение за работой умной фабрики. Как держатели акций могут быть уверены в том, что фабрика производит товар в соответствии со спецификацией. Требуется наблюдатель. Эта роль не может быть отдана кому-то одному, например, IT-компании, регулятору. Наблюдение может выполняться только децентрализованной сетью, независимой третьей стороной. Так образуются социальные стейкхолдеры, а процесс производства становится прозрачным и открытым.
+
+					.js-slider-controls
+						a.prev(href="javascript:;")
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.9 119.6" xml:space="preserve" class="arrow">
+								<path d="M41.5,0.3L0.6,58.4l41.9,60.9"/>
+							</svg>
+
+						a.next(href="javascript:;")
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.9 119.6" xml:space="preserve" class="arrow">
+								<path d="M1.4,119.3l40.9-58.1L0.4,0.3"/>
+							</svg>
+
+		section.contentBlock-token
+			.secw-base
+				h2 Для держателей токенов и майнеров
+
+			.sec-dots__gray
+				.secw-base
+					.sec-pad
+						.contentBlock-token__info
+							include mixins/tokenLined.pug
+							+tokenLined()
+
+
+							.t-big
+								p Для создания экономических стимулов поддержания работы инфраструктуры в пиринговой сети Ethereum будет выпущен внутренний токен Robonomics token (XRT).
+								p XRT будет требоваться каждый раз, когда возникнет необходимость обеспечить верификацию результата исполнения работы умной фабрики или города.
+
+							
+
+						h3 XRT TGE в 3 этапа
+
+						.block-gList.row
+							.col-sm-4
+								.block-gList__bul: span.t-blue 1
+								.block-gList__text Распродажа токенов доступа к инфраструктуре сети робономики в формате Голландского аукциона для поиска рыночной цены перед выходом токена на биржу.
+							.col-sm-4
+								.block-gList__bul: span 2
+								.block-gList__text Выделение XRT токенов на поддержку сети майнеров за актуальную версию ПО, выполняющую тестовую функцию.
+							.col-sm-4
+								.block-gList__bul: span 3
+								.block-gList__text Запуск перегонного куба для конвертации AIR токенов, баунти релиза “Маяк” и токенов Голландского аукциона.
+
+
+
+		section.sec-black
+			.secw-base
+				h2 План развития инфраструктуры
+
+				.sec-pad.contentBlock-roadmap
+					.row
+						.col-md-3.roadmap-gray
+							.roadmap-title
+								.roadmap-title__in
+									div Q1 2018
+									div Lighthouse
+							.roadmap-desc Релиз сигнализирующий о начале работы платформы для разработчиков решений Умных городов и Индустрии 4.0. Следящие узлы системы сообщают в блоках сети Ethereum о поддержке релиза.
+
+						.col-md-3
+							.roadmap-title
+								.roadmap-title__in
+									div Q2 2018
+									div Observerer
+							.roadmap-desc С данного релиза начинается измерения важных для платформы показателей работы сети за счет сравнения результатов работы эталонной ноды и результатов, получаемых от сети.
+
+						.col-md-3
+							.roadmap-title
+								.roadmap-title__in
+									div Q1-Q2 2019
+									div Cybernetics economy
+							.roadmap-desc Участники сети обладают необходимыми возможностями для работы умных городов и умных фабрик в ответ на экономически значимые транзакции.
+
+						.col-md-3
+							.roadmap-title
+								.roadmap-title__in
+									div Q3 2019 - Q2 2020
+									div Lights-out
+							.roadmap-desc Сеть способна взять на себя задачи по управлению роботизированными цепочками обеспечения.
+
+
+					.row
+						.col-12
+							.roadmap-title
+								.roadmap-title__in
+									div Robonomics future
+							.roadmap-desc Мы верим в счастливое будущее Робономики

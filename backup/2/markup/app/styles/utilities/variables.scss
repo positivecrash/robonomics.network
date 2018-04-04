@@ -1,0 +1,50 @@
+/*====== Fonts ======*/
+$font-family-base:  'Roboto', Arial, Helvetica, sans-serif;
+$scale: 1.5; //для вычисления интерлиньяжа
+$scale-sm: 1.2; //для вычисления интерлиньяжа заголовков
+$font-size-base: 18;
+$font-size-title: 35px; //h1
+
+
+/*====== Margins, paddings ======*/
+$vertical-rythm: $font-size-base * $scale;
+$margin-sec: $vertical-rythm * 2;
+$padding-fields: 20;
+
+
+/*====== Bootstrap ======*/
+$bootstrap-sm: 576px;
+$bootstrap-md: 768px;
+
+
+/*====== Media queries ======*/
+$mq-desktop: 1280px;
+$mq-tablet: $bootstrap-md;
+$mq-mobile: $bootstrap-sm;
+
+$mq-mobileCanvas: 890px;
+$mq-menuhide: $mq-mobileCanvas;
+
+
+
+
+/*====== Colors ======*/
+$c-blue: #03A5ED;
+$c-violet-dark: #282B38;
+$c-violet-mid: #535974;
+$c-violet-light: #B5C0F1;
+$c-orange: #F15A24;
+$c-gray: #ccc;
+
+$c-blue-mute: #357B9E;
+$c-blue-mute-2: #6D8CAD;
+
+$c-text: #000;
+
+
+
+
+/*====== Classes ======*/
+$modernizr-nosvg: '.no-svg';
+$modernizr-svg: '.svg';
+$modernizr-cssanimations: '.cssanimations';

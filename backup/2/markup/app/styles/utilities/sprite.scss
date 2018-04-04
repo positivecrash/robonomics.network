@@ -1,0 +1,45 @@
+$icons: (
+    sprite: (width: 451px, height: 58.02px, pngPath: '../i/sprite.png?1', svgPath: '../i/sprite.svg?1'),
+    aira: (width: 100.23px, height: 23.44px, backgroundX: 0px, backgroundY: 0px),
+    ethereum: (width: 35.84px, height: 58.02px, backgroundX: -101px, backgroundY: 0px),
+    ipfs: (width: 103.48px, height: 45.02px, backgroundX: -137px, backgroundY: 0px),
+    nixos: (width: 121.4px, height: 36.65px, backgroundX: -241px, backgroundY: 0px),
+    ros: (width: 87.51px, height: 23.15px, backgroundX: -363px, backgroundY: 0px),
+);
+
+$sprite: map-get($icons, sprite);
+
+%back_svg{ background-image: url(map-get($sprite, svgPath)); }
+%back_png{ background-image: url(map-get($sprite, pngPath)); }
+
+@mixin get-sprite($spritename){
+    $spritename: map-get($icons, $spritename);
+    
+    width: map-get($spritename, width);
+    height: map-get($spritename, height);
+    background-position: map-get($spritename, backgroundX) map-get($spritename, backgroundY);
+
+    @extend %back_png;
+    .svg & { @extend %back_svg; }
+}
+
+.sprite-basic-aira{
+  @include get-sprite('aira');
+  display: inline-block;
+}
+.sprite-basic-ethereum{
+  @include get-sprite('ethereum');
+  display: inline-block;
+}
+.sprite-basic-ipfs{
+  @include get-sprite('ipfs');
+  display: inline-block;
+}
+.sprite-basic-nixos{
+  @include get-sprite('nixos');
+  display: inline-block;
+}
+.sprite-basic-ros{
+  @include get-sprite('ros');
+  display: inline-block;
+}

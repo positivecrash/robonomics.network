@@ -1,0 +1,628 @@
+header[role='banner']
+  {
+    padding-top: 45px;
+    @include rem('padding-bottom', $margin-sec);
+    position: relative;
+
+
+    .el-social
+      {
+        background-color: #fff;
+      }
+  }
+
+
+/*====== Top section ======*/
+
+#header-top
+  {
+    // position: absolute;
+    // top: 45px;
+    // left: 0;
+    // right: 0;
+    position: relative;
+    z-index: 1000;
+
+    transition: all 0.2s linear;
+    @extend %FadeOut;
+    animation: 0.8s FadeIn 0.2s linear forwards;
+
+    &.fixed
+      {
+        position: fixed;
+        background-color: #000;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        &, .header-top__nav > a , .header-top__nav .dropdown > a
+        { color: #fff; }
+
+        .header-top__nav .dropdown:hover > a
+        { color: $c-orange; }
+
+        .header-top__sec { padding: 4px 0; }
+        .header-top__nav a
+          {
+              font-size: 18px;
+          }
+
+        .hamburger .line { background-color: #fff; }
+        .hamburger.opened { top: 4px; }
+
+        #header-top__logo img { height: 30px; }
+      }
+
+
+
+
+
+    & > .secw-base
+      {
+        display: table;
+        width: 100%;
+     }
+  }
+
+.header-top__sec
+  {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 20px 0 30px;
+  }
+
+
+
+#header-top__logo
+  {
+    img
+      {
+        display: block;
+        height: 45px;
+      }
+  }
+
+
+.header-top__nav
+  {
+    & > *
+      {
+        display: inline-block;
+        margin-right: 60px;
+
+        &:last-child
+          {
+            margin-right: 0;
+          }
+      }
+
+    a
+      {
+        @extend %link_noline;
+        font-size: 22px;
+        line-height: 1;
+        color: $c-violet-mid;
+
+        &, &:hover
+          {
+            text-decoration: none !important;
+          }
+      }
+
+
+    .dropdown
+      {
+        & > a
+          {
+            position: relative;
+
+
+            &:before, &:after
+              {
+                content:"";
+                height: 1px;
+                background-color: $c-violet-dark;
+                position: absolute;
+                bottom: -2px;
+                transition: all 0.2s ease-in-out;
+                width: 50%;
+              }
+
+            &:before
+              {
+                left: 0;
+                right: 50%;
+              }
+
+            &:after
+              {
+                left: 50%;
+                right: 0;
+              }
+          }
+
+
+        &:hover
+          {
+            a
+              {
+                color: $c-orange;
+              }
+
+            & > a
+              {
+                &:before, &:after
+                  {
+                    bottom: -10px;
+                    width: 14px;
+                    left: 50%;
+                    right: auto;
+
+                    background-color: $c-orange;
+                  }
+
+                &:before
+                  {
+                    transform: rotate(30deg);
+                    transform-origin: 100% 0;
+                    margin-left: -13px;
+                  }
+
+                &:after
+                  {
+                    transform: rotate(-30deg);
+                    transform-origin: 0 0;
+                  }
+              }
+          }
+      }
+
+
+
+      .dropdown-content
+        {
+          &, a { font-weight: 300; }
+        }
+
+
+      
+  }
+
+
+/*====== end of Top section ======*/
+
+
+
+
+
+
+
+
+/*====== Header navigation ======*/
+
+.hamburger
+  {
+    display: inline-block;
+    cursor: pointer;
+
+    .line
+      {
+        width: 30px;
+        height: 2px;
+        background-color: $c-violet-dark;
+        display: block;
+        margin: 8px auto;
+        border-radius: 2px;
+        transition: all .3s ease-in-out;
+      }
+
+     @extend %FadeOut;
+
+      @media screen and (max-width: $mq-menuhide) 
+        {
+          animation: 0.2s FadeIn 0.2s linear forwards;
+        }
+
+
+    &.opened
+      {
+        position: fixed;
+        z-index: 2;
+        top: 65px;
+        right: 20px;
+
+        .line
+          {
+            background-color: #fff;
+            &:nth-child(2){ opacity: 0; }
+            &:nth-child(1) { transform: translateY(10px) rotate(45deg); }
+            &:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
+          }
+      }
+  }
+
+
+.nav-mobilehide
+  {
+
+    @extend %FadeOut;
+
+    @media screen and (min-width: $mq-menuhide) 
+      {
+        animation: 0.2s FadeIn 0.2s linear forwards;
+      }
+
+    @media screen and (max-width: $mq-menuhide) 
+      {
+        display: none;
+
+        &.opened
+          {
+            display: block;
+            
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            overflow-y: auto;
+            
+            background: #000;
+            text-align: left;
+            padding: 130px 40px;
+            padding: 130px 40px !important;
+            
+            animation: 0.1s FadeIn linear forwards;
+
+
+            .header-top__nav
+              {
+                & > a
+                 {
+                  color: #fff;
+                 }
+
+                & > *
+                  {
+                    display: block;
+
+                    margin-top: 30px;
+
+                    &:first-child
+                      {
+                        margin-top: 0;
+                      }
+                  }
+              }
+
+
+            .dropdown
+              {
+                margin-top: 50px;
+
+                &:first-child
+                  {
+                    margin-top: 0
+                  }
+
+                & > a
+                  {
+                    color: $c-orange;
+
+                    &:before, &:after
+                      {
+                        display: none;
+                      }
+                  }
+                
+              }
+
+            .dropdown-content
+              {
+                visibility: visible;
+                opacity: 1;
+                animation: none !important;
+
+                position: static;
+                text-align: left;
+                padding: 10px 0 0;
+
+                &, a { color: #fff; }
+              }
+
+            .el-social
+              {
+                margin-right: 15px;
+                border-color: #fff;
+
+                &:last-child { margin-right: 0; }
+              }
+          }
+
+
+      }
+  }
+
+/*====== end of Header navigation ======*/
+
+
+
+
+
+
+/*====== MIDDLE SECTION ======*/
+
+.header-mid
+  {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    padding-top: 68px;
+
+    // @media screen and (min-width: $mq-mobileCanvas)
+    //   {
+    //     padding-top: 157px;
+    //   }
+
+  }
+
+
+#logo-ethereum
+  {
+    position: absolute;
+    width: 37px;
+    top: 17px;
+    left: 50%;
+    // margin-left: -108px;
+    margin-left: -198px;
+
+    @extend %FadeOut;
+    animation: 0.5s FadeIn 1s ease forwards;
+
+    @include mobile(){
+      display: none;
+    }
+  }
+
+  /*====== end of MIDDLE SECTION ======*/
+
+
+
+
+
+
+
+/*====== LOGO ROBONOMICS ======*/
+
+@keyframes logo-triangle-1
+  {
+    0% { fill: $c-blue; }
+    25% { fill: $c-blue; }
+    50% { fill: $c-blue; }
+    75% { fill: $c-violet-light; }
+    100% { fill: $c-blue; }
+  }
+
+@keyframes logo-triangle-2
+  {
+    0% { fill: $c-violet-light; }
+    25% { fill: #E0BDED; }
+    50% { fill: $c-blue; }
+    75% { fill: $c-blue; }
+    100% { fill: $c-violet-light; }
+  }
+
+@keyframes logo-triangle-3
+  {
+    0% { fill: $c-violet-mid; }
+    25% { fill: $c-violet-light; }
+    50% { fill: $c-violet-light; }
+    75% { fill: $c-violet-dark; }
+    100% { fill: $c-violet-mid; }
+  }
+
+$duration: 15s;
+$delay: 1s;
+
+#header-logo-robonomics
+  {
+    @extend %FadeOut;
+    animation: 0.5s FadeIn 1s ease forwards;
+  }
+
+.logo-robonomics
+  {
+
+    .dot
+      {
+        fill: $c-blue;
+
+        @extend %FadeOut;
+        animation: 0.5s FadeIn 4s ease forwards;
+      }
+
+    .line
+      {
+        fill: #fff;
+        stroke: #03A5ED;
+        stroke-miterlimit:10;
+
+        stroke-dasharray: 700;
+        stroke-dashoffset: 700;
+        animation: 1s DrawSvgPath 3s ease-in-out forwards; 
+      }
+
+    .triangle-1
+      {
+        fill: $c-blue;
+        animation: $duration logo-triangle-1 $delay linear infinite;
+      }
+
+    .triangle-2
+      {
+        fill: $c-violet-light;
+        animation: $duration logo-triangle-2 $delay linear infinite;
+      }
+
+    .triangle-3
+      {
+        fill: $c-violet-mid;
+        animation: $duration logo-triangle-3 $delay linear infinite;
+      }
+  }
+
+
+/*====== end of LOGO ROBONOMICS ======*/
+
+
+
+
+
+
+/*====== HEADER SVG ======*/
+
+.snapsvg-wrap
+  {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    svg.snapsvg
+      {
+        @extend %svgBack;
+      }
+
+    @media screen and (max-width: $mq-mobileCanvas)
+      {
+        line, text { display: none; }
+      }
+  }
+
+
+.snapsvgoutside-text
+  {
+    text-align: center;
+
+    span
+      {
+        display: inline-block;
+        width: 24px;
+        margin: 0 33px;
+
+        font-size: 24px;
+        line-height: 1;
+        font-weight: 300;
+      }
+  }
+/*====== end of HEADER SVG ======*/
+
+
+
+
+
+
+
+/*====== TITLES ======*/
+
+#header-title
+  {
+    margin-top: 97px;
+
+    h1
+      {
+        display: inline-block;
+        background-color: $c-violet-mid;
+        color: #fff;
+        padding: 6px 20px;
+        margin-bottom: 0;
+        font-size: 26px;
+      }
+  }
+
+
+#header-subtitle
+  {
+    color: $c-violet-mid;
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 20px;
+  }
+
+/*====== end of TITLES ======*/
+
+
+
+
+#header-index
+  {
+    text-align: center;
+    
+    #header-top { animation-delay: 4s; }
+
+
+    #header-top__logo
+      {
+        display: none;
+      }
+
+    .snapsvgoutside-text
+      {
+        position: absolute;
+        left: 0;
+        right: 0;
+
+        span {
+          @extend %FadeOut;
+          background-color: #fff;
+          animation: FadeIn ease-in-out forwards;
+          animation-duration: 0.4s;
+        }
+
+        @media screen and (max-width: $mq-menuhide) 
+          {
+            display: none
+          }
+      }
+
+    #header-index__ethereum
+      {
+        top: 10px;
+
+        @for $i from 1 through 8
+        {
+          span:nth-child(#{$i})
+            {
+              animation-delay: #{2+$i*0.2}s;
+            }
+        }
+      }
+
+    #header-index__robonomics
+      {
+        color: $c-orange;
+        top: 188px;
+
+        @for $i from 1 through 10
+        {
+          span:nth-child(#{$i})
+            {
+              animation-delay: #{2+$i*0.2}s;
+            }
+        }
+      }
+
+
+    #snapsvg-index
+      {
+        height: auto;
+        bottom: 128px;
+      }
+  }
+
+
