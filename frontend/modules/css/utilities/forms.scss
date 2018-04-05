@@ -38,6 +38,12 @@ input[type='submit'], input[type='button'], button
 		color: $c-inpbtn-type;
 		cursor: pointer;
 		text-align: center;
+
+		&[disabled]
+			{
+				background-color: $c-gray;
+				cursor: default;
+			}
 	}
 
 

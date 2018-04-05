@@ -1,8 +1,9 @@
 $c-gray-dark: #707070;
+$c-gray-mid: #CCC;
 
 html, body
   {
-    height: 100%;
+    height: auto;
     min-height: 100%;
   }
 
@@ -29,7 +30,7 @@ body
 
 
 /*====== Set width of container ======*/
-.secw-narrow { @include secw(600px); }
+.secw-narrow { @include secw(720px); }
 .secw-base { @include secw($mq-desktop); }
 
 .secw-full

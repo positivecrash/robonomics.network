@@ -96,19 +96,19 @@ h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, 
 }
 
 h2 {
-  font-size: 27px;
+  font-size: 25px;
 }
 
 h3 {
-  font-size: 23px;
+  font-size: 20px;
 }
 
 h4 {
-  font-size: 19px;
+  font-size: 15px;
 }
 
 h5 {
-  font-size: 15px;
+  font-size: 10px;
 }
 
 h1, h2, h3 {
@@ -228,13 +228,6 @@ table td, table th {
     display: block;
     padding: 8.1px;
     padding: 0.50625rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  table td:first-child, table th:first-child {
-    font-weight: bold;
-    padding-top: 27px;
-    padding-top: 1.6875rem;
   }
 }
 
@@ -443,6 +436,10 @@ input[type='submit'], input[type='button'], button {
   color: #fff;
   cursor: pointer;
   text-align: center;
+}
+input[type='submit'][disabled], input[type='button'][disabled], button[disabled] {
+  background-color: #ccc;
+  cursor: default;
 }
 
 @keyframes rotateLoader {
@@ -2721,7 +2718,7 @@ footer[role='contentinfo'] .sec-techs {
 }
 
 html, body {
-  height: 100%;
+  height: auto;
   min-height: 100%;
 }
 
@@ -2739,7 +2736,7 @@ body {
 
 /*====== Set width of container ======*/
 .secw-narrow {
-  max-width: 560px;
+  max-width: 680px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
@@ -3131,12 +3128,77 @@ input:not([type='submit']), input:not([type='button']), select {
 
 input[type='submit'], input[type='button'], button {
   border-radius: 8px;
+  height: auto;
 }
 
 body.step-1 {
-  position: relative;
   background-image: url('../i/step-1-back@2x.png?1522912809');
   background-repeat: no-repeat;
   background-position: 50% 100%;
   background-size: 3000px 400px;
+}
+
+body.step-2 .secw-narrow, body.step-2 .secw-base {
+  position: relative;
+  z-index: 1;
+}
+body.step-2 .lighthouse {
+  display: block;
+  width: 549px;
+  height: 497px;
+  position: absolute;
+  bottom: -7px;
+  right: -225px;
+  z-index: 0;
+}
+body.step-2 h2 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+body.step-2 .sec-white {
+  padding: 0;
+  border: 1px solid #CCC;
+}
+body.step-2 .sec-white .d-t_cell {
+  padding: 20px;
+}
+body.step-2 table {
+  width: 100%;
+}
+body.step-2 table td {
+  border-bottom: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+}
+body.step-2 table td:last-child {
+  border-right: 0;
+}
+body.step-2 table tr:last-child td {
+  border-bottom: 0;
+}
+
+.step-2-actions .d-t_cell {
+  width: 50%;
+}
+.step-2-actions .img-block, .step-2-actions button {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.step-2-market {
+  padding-bottom: 40px;
+}
+.step-2-market .col-md-4 {
+  margin-bottom: 0;
+  border-right: 1px solid #CCC;
+  padding: 40px;
+}
+.step-2-market .col-md-4:last-child {
+  border-right: 0;
+}
+.step-2-market p.t-break {
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 10px;
+}
+.step-2-market p.t-break:last-child {
+  border-bottom: 0;
 }
