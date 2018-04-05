@@ -1,0 +1,26 @@
+.step-1-secwhite 
+	{
+		border: 1px solid $c-gray-dark;
+		color: $c-gray-dark;
+	}
+
+input:not([type='submit']), input:not([type='button']), select
+	{
+		border-radius: 8px;
+		border: 1px solid $c-gray-dark;
+	}
+
+input[type='submit'], input[type='button'], button
+	{
+		border-radius: 8px;
+	}
+
+
+body.step-1
+	{
+		position: relative;
+
+		background-image: image-url('step-1-back.png');
+		background-repeat: no-repeat;
+		background-position: 50% 100%;
+	}

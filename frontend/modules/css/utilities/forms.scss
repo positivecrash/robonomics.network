@@ -24,7 +24,7 @@ $c-inpbtn-type: #fff;
 
 
 
-input:not([type='submit']), input:not([type='button'])
+input:not([type='submit']), input:not([type='button']), select
 	{
 		@extend %inp-basic-styles;
 		background-color: $c-inptext-back;

@@ -1,0 +1,28 @@
+extends extends/layout.pug
+
+block head
+	- var pageTitle = 'Robot economic infrastructure'
+	- var bodyclass = 'step-1'
+
+include includes/sections.pug
+
+block content
+	header(role='banner')
+		.secw-narrow
+			+header()
+
+	main(role="main")
+		.secw-narrow
+			section.sec-white.step-1-secwhite
+				p Choose existing lighthouse
+					br/
+					select
+						option 0xc2f821d99f469d5818ce368543bcd9389e4e04c1
+
+				p or 
+					a(href="#") create your own
+					br/
+					input(type="text" value="0xc2f821d99f469d5818ce368543bcd9389e4e04c1")
+
+
+				button Connect to network
