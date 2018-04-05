@@ -474,6 +474,7 @@ span.loader {
   padding: 10px 20px;
   background-color: #8ea6bf;
   border: 1px solid #6D8CAD;
+  color: #fff;
 }
 
 @-ms-viewport {

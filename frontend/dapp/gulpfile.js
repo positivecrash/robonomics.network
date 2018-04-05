@@ -31,7 +31,7 @@ var paths = {
 
     dist: 'dist',
     dist_css: 'dist/assets/css',
-    dist_css_main: 'robonomics_website',
+    dist_css_main: 'robonomics_dapp',
     dist_js: 'dist/assets/js',
     dist_js_main: 'robonomics_plugins.js',
     dist_img: 'dist/assets/i'
