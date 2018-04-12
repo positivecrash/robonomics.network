@@ -46,3 +46,10 @@
         padding-left: 0 !important;
         padding-right: 0 !important;
 	}
+
+%text_uppercase
+	{
+		text-transform: uppercase;
+        letter-spacing: 2px;
+	  	word-spacing: 4px;
+	}

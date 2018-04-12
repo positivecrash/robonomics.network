@@ -136,7 +136,7 @@ body
 
     *[class*='col-']
     {
-      @include rem('margin-bottom', $margin-sec);
+      margin-bottom: $margin-sec;
     }
   }
 /*====== end of Bootstrap ======*/
@@ -151,8 +151,8 @@ body
 
 section
   {
-    @include rem('padding-top', $margin-sec);
-    @include rem('padding-bottom', $margin-sec);
+    padding-top: $margin-sec;
+    padding-bottom: $margin-sec;
   }
 
 
@@ -216,7 +216,7 @@ section
 
 .sec-pad
   {
-    @include rem('padding-left', 60);
+    padding-left: 60px;
   }
 
 .sec-dots__gray
@@ -242,6 +242,41 @@ section
     }
 
   }
+
+.sec-contents
+  {
+    padding-top: 0;
+    position: relative;
+
+    & > .secw-narrow
+      {
+        border-top: 6px solid $c-orange;
+        padding-top: $vertical-rythm;
+
+        a
+          {
+            color: $c-text;
+            @extend %text_uppercase;
+          }
+      }
+
+    &:after
+      {
+        content:"";
+        height: 6px;
+        background-color: $c-orange;
+        position: absolute;
+        left: 50%;
+        right: 0;
+        top: 0;
+      }
+
+  }
+
+
+
+
+
 
 .block-white
   {
@@ -337,7 +372,7 @@ section
 
         position: relative;
 
-        @include rem('margin-bottom', $vertical-rythm);
+        margin-bottom: $vertical-rythm;
 
         span
           {

@@ -2,8 +2,8 @@ section.contentBlock-about
 	{
 
 		@include minMobile(){
-			@include rem('padding-top', $margin-sec*2);
-	 		@include rem('padding-bottom', $margin-sec*2);
+			padding-top: $margin-sec*2;
+	 		padding-bottom: $margin-sec*2;
 		}
 
 		
@@ -107,7 +107,7 @@ section.contentBlock-about
 
 		.js-slider-viewport
 			{
-				@include rem('padding', $margin-sec*2);
+				padding: $margin-sec*2;
 				margin-left: 60px;
 				margin-right: 60px;
 
@@ -130,7 +130,7 @@ section.contentBlock-about
 
 		.img-block
 			{
-				@include rem('margin-bottom', $margin-sec * 2);
+				margin-bottom: $margin-sec * 2;
 			}
 
 		.js-slider-pager
@@ -230,12 +230,12 @@ section.contentBlock-about
 		@include mobile()
 			{
 				padding-right: 0;
-				@include rem('margin-bottom', $margin-sec);
+				margin-bottom: $margin-sec;
 
 				.logo-robonomics-outline
 					{
 						position: static;
-						@include rem('margin-bottom', $margin-sec);
+						margin-bottom: $margin-sec;
 					}
 			}
 
@@ -256,7 +256,7 @@ section.contentBlock-about
 		.roadmap-title
 			{
 				border-bottom: 2px solid $c-orange;
-				@include rem('margin-bottom', $vertical-rythm);
+				margin-bottom: $vertical-rythm;
 				padding-bottom: 10px;
 			}
 

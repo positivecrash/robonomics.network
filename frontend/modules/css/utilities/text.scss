@@ -1,8 +1,7 @@
 %font_base
 	{
 		font-family: $font-family-base;
-		
-		@include rem('font-size', $font-size-base);
+		font-size: $font-size-base;
 		line-height: 1.5;
 		font-weight: 300;
 		letter-spacing: 2px;
@@ -31,8 +30,8 @@ body
 	{
 		line-height: 1.5;
 
-		@include rem('margin-top', $vertical-rythm*2);
-  		@include rem('margin-bottom', $vertical-rythm*2);
+		margin-top: $vertical-rythm;
+  		margin-bottom: $vertical-rythm;
 
   		&:first-child
   			{
@@ -54,14 +53,18 @@ h1, h2, h3
 		text-transform: uppercase;
         letter-spacing: 2px;
 	  	word-spacing: 4px;
-	  	font-weight: 300;
+	}
+
+h2, h3
+	{
+		font-weight: 300;
 	}
 
 
 h1
 	{
         font-size: $font-size-title;
-        text-align: center;
+        font-weight: 500;
 	}
 
 
@@ -74,13 +77,13 @@ h2
 
 .t-big
 	{
-		@include rem('font-size', 22);
+		font-size: 22px;
 		font-weight: 300;
 	}
 
 .t-mid
 	{
-		@include rem('font-size', 18);
+		font-size: 18px;
 		font-weight: 300;
 	}
 /*====== end of Text sizes & Headers ======*/
@@ -153,18 +156,18 @@ a
 
 ul, ol
 	{
-	  @include rem('margin-left', 20);
-	  @include rem('margin-bottom', $vertical-rythm);
+	  margin-left: 20px;
+	  margin-bottom: $vertical-rythm;
 
 	  ul, ol{
-	  	@include rem('margin-top', $vertical-rythm);
+	  	margin-top: $vertical-rythm;
 	  }
 	}
 
 
 li, p, blockquote
 	{
-	  @include rem('margin-bottom', $vertical-rythm);
+	  margin-bottom: $vertical-rythm;
 
 	  &:last-child{
 	  	margin-bottom: 0;
@@ -182,20 +185,13 @@ table
 	{
 		td, th {
 			vertical-align: top;
-			@include rem('padding', $vertical-rythm * 0.5);
+			padding: $vertical-rythm * 0.5;
 		}
 
 		@include maxTablet(){
 			td, th {
 				display: block;
-				@include rem('padding', $vertical-rythm * 0.3);
-				// padding-left: 0;
-				// padding-right: 0;
-
-				// &:first-child{
-				// 	font-weight: bold;
-				// 	@include rem('padding-top', $vertical-rythm);
-				// }
+				padding: $vertical-rythm * 0.3;
 			}
 		}
 	}

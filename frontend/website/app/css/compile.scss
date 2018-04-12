@@ -1,6 +1,9 @@
 @charset "UTF-8";
 @import "compass";
 
+@import "../../../modules/css/plugins/bootstrap/bootstrap-grid";
+@import "../../../modules/css/plugins/fancybox";
+
 @import "../../../modules/css/utilities/my_reset";
 @import "../../../modules/css/utilities/media";
 @import "../../../modules/css/utilities/variables";
@@ -10,9 +13,6 @@
 @import "../../../modules/css/utilities/animation";
 @import "../../../modules/css/utilities/anyslide";
 @import "../../../modules/css/utilities/forms";
-
-@import "../../../modules/css/plugins/bootstrap/bootstrap-grid";
-@import "../../../modules/css/plugins/fancybox";
 
 @import "utilities/sprite";
 @import "utilities/spriteBrowsers";
