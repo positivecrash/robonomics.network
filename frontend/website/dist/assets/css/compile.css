@@ -2237,6 +2237,13 @@ a, .header-top__nav a, .sec-synopsis, .sec-contents > .secw-narrow a, a:hover, .
   letter-spacing: 1px;
 }
 
+.sec-contents > .secw-narrow a:not([class~='js-listexpand']):after, .sec-contents a.js-expand-toggle:after {
+  content: "";
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
 body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 18px;
@@ -2435,7 +2442,7 @@ table td, table th {
 }
 
 /*====== end of Other ======*/
-#header-top, .hamburger, .nav-mobilehide, #logo-ethereum, #header-logo-robonomics, .logo-robonomics .dot, #header-index .snapsvgoutside-text span, .contentBlock-token__info .logo-robonomics-outline circle, .js-listexpand .hide {
+#header-top, .hamburger, .nav-mobilehide, #logo-ethereum, #header-logo-robonomics, .logo-robonomics .dot, #header-index .snapsvgoutside-text span, .contentBlock-token__info .logo-robonomics-outline circle, .sec-contents > .secw-narrow a:not([class~='js-listexpand']):after, .js-listexpand .hide {
   visibility: hidden;
   opacity: 0;
 }
@@ -2622,11 +2629,11 @@ span.loader {
   color: #fff;
 }
 
-.svg .sprite-basic-aira, .svg .sprite-basic-anchor, .svg .sprite-basic-ethereum, .svg .sprite-basic-expand-arrow, .svg .sprite-basic-ipfs, .svg .sprite-basic-nixos, .svg .sprite-basic-ros, .svg .sec-contents a.js-expand-toggle:after {
+.svg .sprite-basic-aira, .svg .sprite-basic-anchor, .svg .sprite-basic-ethereum, .svg .sprite-basic-expand-arrow, .svg .sprite-basic-ipfs, .svg .sprite-basic-nixos, .svg .sprite-basic-ros, .svg .sec-contents > .secw-narrow a:not([class~='js-listexpand']):after, .svg .sec-contents a.js-expand-toggle:after {
   background-image: url("../i/sprite.svg?1");
 }
 
-.sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-ipfs, .sprite-basic-nixos, .sprite-basic-ros, .sec-contents a.js-expand-toggle:after {
+.sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-ipfs, .sprite-basic-nixos, .sprite-basic-ros, .sec-contents > .secw-narrow a:not([class~='js-listexpand']):after, .sec-contents a.js-expand-toggle:after {
   background-image: url("../i/sprite.png?1");
 }
 
@@ -3708,15 +3715,25 @@ section {
   padding-top: 27px;
 }
 .sec-contents > .secw-narrow a {
-  color: #000;
   font-size: 16px;
   font-weight: 500;
   display: block;
   margin-bottom: 27px;
 }
-.sec-contents > .secw-narrow a:hover {
+.sec-contents > .secw-narrow a:not([class~='js-listexpand']) {
+  color: #000;
+}
+.sec-contents > .secw-narrow a:not([class~='js-listexpand']):hover {
   color: #03A5ED;
   transition: color 0.2s ease-in-out;
+}
+.sec-contents > .secw-narrow a:not([class~='js-listexpand']):after {
+  width: 15.08px;
+  height: 17.09px;
+  background-position: -101px 0px;
+}
+.sec-contents > .secw-narrow a:not([class~='js-listexpand']):hover:after {
+  animation: 0.6s BounceVertical ease-in-out forwards;
 }
 .sec-contents:after {
   content: "";
@@ -3734,13 +3751,9 @@ section {
   color: #F15A24;
 }
 .sec-contents a.js-expand-toggle:after {
-  content: "";
   width: 13.13px;
   height: 18.67px;
   background-position: -153px 0px;
-  display: inline-block;
-  margin-left: 10px;
-  vertical-align: middle;
 }
 .sec-contents a.js-expand-toggle:hover:after {
   animation: 0.6s BounceVertical ease-in-out forwards;

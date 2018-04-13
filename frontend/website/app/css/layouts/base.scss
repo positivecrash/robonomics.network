@@ -305,7 +305,6 @@ section
 
         a
           {
-            color: $c-text;
             @extend %text_uppercase;
             font-size: $font-size-base - 2;
             font-weight: 500;
@@ -313,11 +312,29 @@ section
             margin-bottom: $vertical-rythm;
             @extend %link_noline;
 
-            &:hover
-              {
-                color: $c-link;
-                transition: color 0.2s ease-in-out;
-              }
+            &:not([class~='js-listexpand']) //check later
+            {
+              color: $c-text;
+
+              &:hover
+                {
+                  color: $c-link;
+                  transition: color 0.2s ease-in-out;
+                }
+
+              &:after
+                {
+                  @include get-sprite('anchor');
+                  @extend %AfterContent;
+                  @extend %FadeOut;
+                }
+
+              &:hover:after
+                {
+                  animation: 0.6s BounceVertical ease-in-out forwards;
+                }
+            }
+
           }
       }
 
@@ -345,11 +362,8 @@ section
           &, &:hover { color: $c-orange; }
           &:after
             {
-              content:"";
               @include get-sprite('expand-arrow');
-              display: inline-block;
-              margin-left: 10px;
-              vertical-align: middle;
+              @extend %AfterContent;
             }
 
           &:hover:after

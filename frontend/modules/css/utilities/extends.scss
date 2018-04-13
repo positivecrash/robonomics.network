@@ -52,3 +52,11 @@
 		text-transform: uppercase;
         letter-spacing: 1px;
 	}
+
+%AfterContent
+	{
+        content:"";
+        display: inline-block;
+        margin-left: 10px;
+        vertical-align: middle;
+	}
