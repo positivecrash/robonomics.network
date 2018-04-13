@@ -36,3 +36,28 @@
 	    stroke-dashoffset: 0;
 	  }
 	}
+
+
+@keyframes BounceVertical
+	{
+		0%
+		{
+			transform: translateY(0px);
+		}
+		20%
+		{
+			transform: translateY(-5px);
+		}
+		40%
+		{
+			transform: translateY(0px);
+		}
+		70%
+		{
+			transform: translateY(5px);
+		}
+		100%
+		{
+			transform: translateY(0);
+		}
+	}

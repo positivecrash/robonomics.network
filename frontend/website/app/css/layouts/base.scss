@@ -351,6 +351,11 @@ section
               margin-left: 10px;
               vertical-align: middle;
             }
+
+          &:hover:after
+            {
+              animation: 0.6s BounceVertical ease-in-out forwards;
+            }
         }
 
   }
