@@ -78,6 +78,7 @@ gulp.task('templates', function() {
       pretty: true
     }))
     .pipe(gulp.dest(paths.dist))
+    .pipe(livereload());
 });
 
 

@@ -649,16 +649,19 @@
 
         items.each(function(){
           c++;
+          var $this = $(this);
 
           if(c > expand.config.itemshow)
               {
-                if (!$(this).hasClass(expand.config.toggle)){
-                  $(this).addClass(expand.config.classHide);
+                if (!$this.hasClass(expand.config.toggle)){
+                  $this
+                    .addClass(expand.config.classHide)
+                    .data('toggle', 'true');
                 }
               }
         });
 
-        toggler.data('hidden');
+        toggler.data('status', 'hidden');
       }
 
 
@@ -666,14 +669,14 @@
         items.each(function(){
           $(this).removeClass(expand.config.classHide).addClass(expand.config.classShow);
         });
-        toggler.data('opened');
+        toggler.data('status','opened');
       }
 
       var hideItems = function() {
         items.each(function(){
           $(this).removeClass(expand.config.classShow).addClass(expand.config.classHide);
         });
-        toggler.data('hidden');
+        toggler.data('status','hidden');
       }
 
 
@@ -685,7 +688,7 @@
       		// merge user-supplied options with the defaults
       		expand.config = $.extend({}, defaults, options);
           items = el.find(expand.config.itemType);
-          toggler = el.find(expand.config.toggle);
+          toggler = el.find('.'+expand.config.toggle);
 
           initialHide();
 
@@ -693,7 +696,7 @@
             e.preventDefault();
             e.stopPropagation();
 
-            if (toggler.data('hidden')){
+            if (toggler.data('status') == 'hidden'){
               showItems();
             }
             else{
