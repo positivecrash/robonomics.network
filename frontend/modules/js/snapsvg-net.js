@@ -26,7 +26,7 @@
 	    // support multiple elements
 	    if (this.length > 1) {
 	      this.each(function() {
-	        $(this).AnySlide(options);
+	        $(this).SnapSvgNet(options);
 	      });
 	      return this;
 	    }

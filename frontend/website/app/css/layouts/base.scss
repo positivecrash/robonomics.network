@@ -142,6 +142,46 @@ body
 /*====== end of Bootstrap ======*/
 
 
+/*====== SNAP SVG ======*/
+
+.snapsvg-wrap
+  {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    svg.snapsvg
+      {
+        @extend %svgBack;
+      }
+
+    @media screen and (max-width: $mq-mobileCanvas)
+      {
+        line, text { display: none; }
+      }
+  }
+
+
+.snapsvgoutside-text
+  {
+    text-align: center;
+
+    span
+      {
+        display: inline-block;
+        width: 24px;
+        margin: 0 33px;
+
+        font-size: 24px;
+        line-height: 1;
+        font-weight: 300;
+      }
+  }
+/*====== end of SNAP SVG ======*/
 
 
 
@@ -243,20 +283,42 @@ section
 
   }
 
+
+
+/* SECTION - with content */
 .sec-contents
   {
     padding-top: 0;
     position: relative;
 
+    .snapsvg-wrap
+      {
+        height: 500px;
+      }
+
+
     & > .secw-narrow
       {
         border-top: 6px solid $c-orange;
         padding-top: $vertical-rythm;
+        @extend %FrontContent;
 
         a
           {
             color: $c-text;
             @extend %text_uppercase;
+            font-size: $font-size-base - 2;
+            font-weight: 500;
+            // line-height: 1.2;
+            display: block;
+            margin-bottom: $vertical-rythm;
+            @extend %link_noline;
+
+            &:hover
+              {
+                color: $c-link;
+                transition: color 0.2s ease-in-out;
+              }
           }
       }
 
@@ -271,7 +333,43 @@ section
         top: 0;
       }
 
+      .js-listexpand
+        {
+          .hide
+            {
+              margin: 0;
+            }
+        }
+
+      a.js-expand-toggle
+        {
+          &, &:hover { color: $c-orange; }
+          &:after
+            {
+              content:"";
+              @include get-sprite('expand-arrow');
+              display: inline-block;
+              margin-left: 10px;
+              vertical-align: middle;
+            }
+        }
+
   }
+
+
+.js-listexpand
+  {
+    .hide
+      {
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+      }
+  }
+
+
+/* end of SECTION - with content */
+
 
 
 
@@ -591,4 +689,3 @@ section
         }
     }
 /*====== end of Fancybox rewrite ======*/
-
