@@ -70,6 +70,23 @@
                 }
               }
         });
+
+        toggler.data('hidden');
+      }
+
+
+      var showItems = function() {
+        items.each(function(){
+          $(this).removeClass(expand.config.classHide).addClass(expand.config.classShow);
+        });
+        toggler.data('opened');
+      }
+
+      var hideItems = function() {
+        items.each(function(){
+          $(this).removeClass(expand.config.classShow).addClass(expand.config.classHide);
+        });
+        toggler.data('hidden');
       }
 
 
@@ -81,7 +98,21 @@
       		// merge user-supplied options with the defaults
       		expand.config = $.extend({}, defaults, options);
           items = el.find(expand.config.itemType);
+          toggler = el.find(expand.config.toggle);
+
           initialHide();
+
+          toggler.on('click', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (toggler.data('hidden')){
+              showItems();
+            }
+            else{
+              hideItems();
+            }
+          });
     	}
 
 
