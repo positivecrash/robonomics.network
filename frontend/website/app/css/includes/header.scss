@@ -360,12 +360,6 @@ header[role='banner']
     overflow: hidden;
 
     padding-top: 68px;
-
-    // @media screen and (min-width: $mq-mobileCanvas)
-    //   {
-    //     padding-top: 157px;
-    //   }
-
   }
 
 
@@ -375,7 +369,6 @@ header[role='banner']
     width: 37px;
     top: 17px;
     left: 50%;
-    // margin-left: -108px;
     margin-left: -198px;
 
     @extend %FadeOut;

@@ -2467,22 +2467,6 @@ table td, table th {
     transform: scale(1);
   }
 }
-@keyframes HamburgerLineDown {
-  0% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes HamburgerLineUp {
-  0% {
-    transform: translateY(5px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 @keyframes Scale {
   0% {
     transform: scale(0);
@@ -3756,6 +3740,7 @@ section {
   background-position: -153px 0px;
   display: inline-block;
   margin-left: 10px;
+  vertical-align: middle;
 }
 
 .js-listexpand .hide {

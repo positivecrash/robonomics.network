@@ -309,7 +309,6 @@ section
             @extend %text_uppercase;
             font-size: $font-size-base - 2;
             font-weight: 500;
-            // line-height: 1.2;
             display: block;
             margin-bottom: $vertical-rythm;
             @extend %link_noline;
@@ -361,9 +360,14 @@ section
   {
     .hide
       {
-        visibility: hidden;
-        opacity: 0;
+        @extend %FadeOut;
         height: 0;
+      }
+
+    .show
+      {
+        animation: 0.3s FadeIn ease-in-out forwards;
+        height: auto;
       }
   }
 
@@ -437,7 +441,7 @@ section
             height: 100%;
             transform: scale(0);
             transform-origin: 50% 50%;
-            animation: 0.3s Scale 0.2s ease-in-out forwards;
+            animation: 0.3s ScaleIn 0.2s ease-in-out forwards;
             
           }
       }
