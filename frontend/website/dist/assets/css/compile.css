@@ -2237,7 +2237,7 @@ a, .header-top__nav a, .sec-synopsis, .sec-contents > .secw-narrow a, a:hover, .
   letter-spacing: 1px;
 }
 
-.sec-contents > .secw-narrow a:not([class~='js-listexpand']):after, .sec-contents a.js-expand-toggle:after {
+.sec-contents > .secw-narrow a:not(.js-expand-toggle):after, .sec-contents a.js-expand-toggle:after {
   content: "";
   display: inline-block;
   margin-left: 10px;
@@ -2442,7 +2442,7 @@ table td, table th {
 }
 
 /*====== end of Other ======*/
-#header-top, .hamburger, .nav-mobilehide, #logo-ethereum, #header-logo-robonomics, .logo-robonomics .dot, #header-index .snapsvgoutside-text span, .contentBlock-token__info .logo-robonomics-outline circle, .sec-contents > .secw-narrow a:not([class~='js-listexpand']):after, .js-listexpand .hide {
+#header-top, .hamburger, .nav-mobilehide, #logo-ethereum, #header-logo-robonomics, .logo-robonomics .dot, #header-index .snapsvgoutside-text span, .contentBlock-token__info .logo-robonomics-outline circle, .sec-contents > .secw-narrow a:not(.js-expand-toggle):after, .js-listexpand .hide {
   visibility: hidden;
   opacity: 0;
 }
@@ -2474,17 +2474,11 @@ table td, table th {
   0% {
     transform: translateY(0px);
   }
-  20% {
-    transform: translateY(-5px);
-  }
-  40% {
-    transform: translateY(0px);
-  }
-  70% {
-    transform: translateY(5px);
+  50% {
+    transform: translateY(3px);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(-3px);
   }
 }
 .anyslide[data-anyslide~='controls'] {
@@ -2629,11 +2623,11 @@ span.loader {
   color: #fff;
 }
 
-.svg .sprite-basic-aira, .svg .sprite-basic-anchor, .svg .sprite-basic-ethereum, .svg .sprite-basic-expand-arrow, .svg .sprite-basic-ipfs, .svg .sprite-basic-nixos, .svg .sprite-basic-ros, .svg .sec-contents > .secw-narrow a:not([class~='js-listexpand']):after, .svg .sec-contents a.js-expand-toggle:after {
+.svg .sprite-basic-aira, .svg .sprite-basic-anchor, .svg .sprite-basic-ethereum, .svg .sprite-basic-expand-arrow, .svg .sprite-basic-ipfs, .svg .sprite-basic-nixos, .svg .sprite-basic-ros, .svg .sec-contents > .secw-narrow a:not(.js-expand-toggle):after, .svg .sec-contents a.js-expand-toggle:after {
   background-image: url("../i/sprite.svg?1");
 }
 
-.sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-ipfs, .sprite-basic-nixos, .sprite-basic-ros, .sec-contents > .secw-narrow a:not([class~='js-listexpand']):after, .sec-contents a.js-expand-toggle:after {
+.sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-ipfs, .sprite-basic-nixos, .sprite-basic-ros, .sec-contents > .secw-narrow a:not(.js-expand-toggle):after, .sec-contents a.js-expand-toggle:after {
   background-image: url("../i/sprite.png?1");
 }
 
@@ -3720,20 +3714,20 @@ section {
   display: block;
   margin-bottom: 27px;
 }
-.sec-contents > .secw-narrow a:not([class~='js-listexpand']) {
+.sec-contents > .secw-narrow a:not(.js-expand-toggle) {
   color: #000;
 }
-.sec-contents > .secw-narrow a:not([class~='js-listexpand']):hover {
+.sec-contents > .secw-narrow a:not(.js-expand-toggle):hover {
   color: #03A5ED;
   transition: color 0.2s ease-in-out;
 }
-.sec-contents > .secw-narrow a:not([class~='js-listexpand']):after {
+.sec-contents > .secw-narrow a:not(.js-expand-toggle):after {
   width: 15.08px;
   height: 17.09px;
   background-position: -101px 0px;
 }
-.sec-contents > .secw-narrow a:not([class~='js-listexpand']):hover:after {
-  animation: 0.6s BounceVertical ease-in-out forwards;
+.sec-contents > .secw-narrow a:not(.js-expand-toggle):hover:after {
+  animation: 0.4s FadeIn forwards;
 }
 .sec-contents:after {
   content: "";
@@ -3756,7 +3750,7 @@ section {
   background-position: -153px 0px;
 }
 .sec-contents a.js-expand-toggle:hover:after {
-  animation: 0.6s BounceVertical ease-in-out forwards;
+  animation: 0.4s 0.6s BounceVertical ease-in-out 3;
 }
 
 .js-listexpand .hide {
