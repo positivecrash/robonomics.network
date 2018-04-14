@@ -667,14 +667,16 @@
 
       var showItems = function() {
         items.each(function(){
-          $(this).removeClass(expand.config.classHide).addClass(expand.config.classShow);
+          if( $(this).data('toggle') == 'true')
+            $(this).removeClass(expand.config.classHide).addClass(expand.config.classShow);
         });
         toggler.data('status','opened');
       }
 
       var hideItems = function() {
         items.each(function(){
-          $(this).removeClass(expand.config.classShow).addClass(expand.config.classHide);
+          if( $(this).data('toggle') == 'true')
+            $(this).removeClass(expand.config.classShow).addClass(expand.config.classHide);
         });
         toggler.data('status','hidden');
       }
