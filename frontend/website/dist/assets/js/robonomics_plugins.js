@@ -675,14 +675,24 @@
 
 
       var hideItems = function() {
+        var h = 0;
+
         items.each(function(){
+
+          h += $(this).outerHeight(true);
+
           $(this)
             .removeClass(expand.config.classOpened)
             .addClass(expand.config.classHidden);
         });
 
-
+        movePageUp(h);
         toggler.data('expand-status','hidden');
+      }
+
+
+      var movePageUp = function(distance) {
+        $('html, body').animate({scrollTop: -distance }, 600);
       }
 
 
