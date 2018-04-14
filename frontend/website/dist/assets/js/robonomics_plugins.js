@@ -591,28 +591,30 @@
 // <div class="js-expand">
 // <a href="#">List item 1</a>
 // <a href="#">List item 2</a>
+// <div class="js-expand-content">
 // <a href="#">List item 3</a>
 // <a href="#">List item 4</a>
+// </div>
 // <a href="#" class="js-expand-toggle">Expand</a>
 // </div>
 //
 // JS example
-// $('.js-expand').expand({itemshow:3});
+// $('.js-expand').expand();
 //
 // Resualt in this case:
 // List item 4 will be hidden by default and will appear by clicking element with class js-expand-toggle
 //
 // Don't forget to add styles for hide and show
 // e.g.
-// .hide { visibility: hidden; opacity: 0; }
+// .hidden { visibility: hidden; opacity: 0; height: 0; }
+// .opened { visibility: visible; opacity: 1; height: auto; }
 
 
 (function($) {
 
 	var defaults = {
-		itemshow: 10,
-    itemType: '> a',
-    toggle: 'js-expand-toggle',
+    toggle: 'js-expand-toggle', //class name
+    content: 'js-expand-content', //class name
     textin: 'Expand all',
     textout: 'Reduce',
     classHidden: 'hidden',
@@ -646,42 +648,45 @@
     	el = this;
 
 
+
+
       var initialHide = function() {
-        var c = 0;
-
         items.each(function(){
-          c++;
-          var $this = $(this);
-
-          if(c > expand.config.itemshow)
-              {
-                if (!$this.hasClass(expand.config.toggle)){
-                  $this
-                    .addClass(expand.config.classHidden)
-                    .data('expand-toggle', 'true');
-                }
-              }
+          $(this).addClass(expand.config.classHidden);
         });
 
         toggler.data('expand-status', 'hidden');
       }
 
 
+
+
+
       var showItems = function() {
         items.each(function(){
-          if( $(this).data('expand-toggle') == 'true')
-            $(this).removeClass(expand.config.classHidden).addClass(expand.config.classOpened);
+          $(this)
+            .removeClass(expand.config.classHidden)
+            .addClass(expand.config.classOpened);
         });
         toggler.data('expand-status','opened');
       }
 
+
+
+
       var hideItems = function() {
         items.each(function(){
-          if( $(this).data('expand-toggle') == 'true')
-            $(this).removeClass(expand.config.classOpened).addClass(expand.config.classHidden);
+          $(this)
+            .removeClass(expand.config.classOpened)
+            .addClass(expand.config.classHidden);
         });
+
+
         toggler.data('expand-status','hidden');
       }
+
+
+
 
       var toggleText = function() {
         if ( toggler.data('expand-status') == 'hidden' )
@@ -699,6 +704,8 @@
       }
 
 
+
+
     	var init = function() {
     		// Return if slider is already initialized
       		if ($(el).data('expand')) { return; }
@@ -706,12 +713,13 @@
 
       		// merge user-supplied options with the defaults
       		expand.config = $.extend({}, defaults, options);
-          items = el.find(expand.config.itemType);
+
+          items = el.find('.'+expand.config.content);
           toggler = el.find('.'+expand.config.toggle);
 
           initialHide();
           toggleText();
-          
+
 
           toggler.on('click', function(e){
             e.preventDefault();
