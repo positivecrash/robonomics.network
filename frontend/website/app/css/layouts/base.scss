@@ -351,7 +351,7 @@ section
 
       .js-listexpand
         {
-          .hide
+          .hidden
             {
               margin: 0;
             }
@@ -365,10 +365,22 @@ section
               @include get-sprite('expand-arrow');
               @extend %AfterContent;
             }
-          &:hover:after
-              {
-                animation: 0.4s 0.6s BounceVertical ease-in-out 3;
-              }
+          
+          &.open
+            {
+              &:hover:after
+                {
+                  animation: 0.4s 0.6s BounceVertical ease-in-out 3;
+                }
+            }
+              
+          &.hide
+            {
+              &:after
+                {
+                  transform: rotate(-180deg);
+                }
+            }
         }
 
   }
@@ -376,13 +388,13 @@ section
 
 .js-listexpand
   {
-    .hide
+    .hidden
       {
         @extend %FadeOut;
         height: 0;
       }
 
-    .show
+    .opened
       {
         animation: 0.3s FadeIn ease-in-out forwards;
         height: auto;

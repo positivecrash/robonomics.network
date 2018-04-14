@@ -2442,7 +2442,7 @@ table td, table th {
 }
 
 /*====== end of Other ======*/
-#header-top, .hamburger, .nav-mobilehide, #logo-ethereum, #header-logo-robonomics, .logo-robonomics .dot, #header-index .snapsvgoutside-text span, .contentBlock-token__info .logo-robonomics-outline circle, .sec-contents > .secw-narrow a:not(.js-expand-toggle):after, .js-listexpand .hide {
+#header-top, .hamburger, .nav-mobilehide, #logo-ethereum, #header-logo-robonomics, .logo-robonomics .dot, #header-index .snapsvgoutside-text span, .contentBlock-token__info .logo-robonomics-outline circle, .sec-contents > .secw-narrow a:not(.js-expand-toggle):after, .js-listexpand .hidden {
   visibility: hidden;
   opacity: 0;
 }
@@ -3738,7 +3738,7 @@ section {
   right: 0;
   top: 0;
 }
-.sec-contents .js-listexpand .hide {
+.sec-contents .js-listexpand .hidden {
   margin: 0;
 }
 .sec-contents a.js-expand-toggle, .sec-contents a.js-expand-toggle:hover {
@@ -3749,14 +3749,17 @@ section {
   height: 18.67px;
   background-position: -153px 0px;
 }
-.sec-contents a.js-expand-toggle:hover:after {
+.sec-contents a.js-expand-toggle.open:hover:after {
   animation: 0.4s 0.6s BounceVertical ease-in-out 3;
 }
+.sec-contents a.js-expand-toggle.hide:after {
+  transform: rotate(-180deg);
+}
 
-.js-listexpand .hide {
+.js-listexpand .hidden {
   height: 0;
 }
-.js-listexpand .show {
+.js-listexpand .opened {
   animation: 0.3s FadeIn ease-in-out forwards;
   height: auto;
 }

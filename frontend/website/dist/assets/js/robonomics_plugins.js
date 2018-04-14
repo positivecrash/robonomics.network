@@ -615,8 +615,10 @@
     toggle: 'js-expand-toggle',
     textin: 'Expand all',
     textout: 'Reduce',
-    classHide: 'hide',
-    classShow: 'show',
+    classHidden: 'hidden',
+    classOpened: 'opened',
+    classTogHide: 'hide',
+    classTogOpen: 'open',
 
 		// CALLBACKS
     onExpand: function(index) { return true; },
@@ -655,30 +657,45 @@
               {
                 if (!$this.hasClass(expand.config.toggle)){
                   $this
-                    .addClass(expand.config.classHide)
-                    .data('toggle', 'true');
+                    .addClass(expand.config.classHidden)
+                    .data('expand-toggle', 'true');
                 }
               }
         });
 
-        toggler.data('status', 'hidden');
+        toggler.data('expand-status', 'hidden');
       }
 
 
       var showItems = function() {
         items.each(function(){
-          if( $(this).data('toggle') == 'true')
-            $(this).removeClass(expand.config.classHide).addClass(expand.config.classShow);
+          if( $(this).data('expand-toggle') == 'true')
+            $(this).removeClass(expand.config.classHidden).addClass(expand.config.classOpened);
         });
-        toggler.data('status','opened');
+        toggler.data('expand-status','opened');
       }
 
       var hideItems = function() {
         items.each(function(){
-          if( $(this).data('toggle') == 'true')
-            $(this).removeClass(expand.config.classShow).addClass(expand.config.classHide);
+          if( $(this).data('expand-toggle') == 'true')
+            $(this).removeClass(expand.config.classOpened).addClass(expand.config.classHidden);
         });
-        toggler.data('status','hidden');
+        toggler.data('expand-status','hidden');
+      }
+
+      var toggleText = function() {
+        if ( toggler.data('expand-status') == 'hidden' )
+          {
+            toggler
+              .html(expand.config.textin)
+              .removeClass(expand.config.classTogHide).addClass(expand.config.classTogOpen);
+          }
+        else
+          {
+            toggler
+              .html(expand.config.textout)
+              .removeClass(expand.config.classTogOpen).addClass(expand.config.classTogHide);
+          }
       }
 
 
@@ -693,17 +710,21 @@
           toggler = el.find('.'+expand.config.toggle);
 
           initialHide();
+          toggleText();
+          
 
           toggler.on('click', function(e){
             e.preventDefault();
             e.stopPropagation();
 
-            if (toggler.data('status') == 'hidden'){
+            if (toggler.data('expand-status') == 'hidden'){
               showItems();
             }
             else{
               hideItems();
             }
+
+            toggleText();
           });
     	}
 
