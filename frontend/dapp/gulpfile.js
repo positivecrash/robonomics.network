@@ -150,8 +150,9 @@ gulp.task('live', function() {
 	livereload.listen();
 
 	//watch .scss files
-	gulp.watch(['app/css/utilities/*.scss', 'app/css/includes/*.scss', 'app/css/layouts/*.scss', 'app/css/templates/*.scss', 'app/styles/compile.scss'], ['styles']);
-
+	// gulp.watch(['app/css/utilities/*.scss', 'app/css/includes/*.scss', 'app/css/layouts/*.scss', 'app/css/templates/*.scss', 'app/styles/compile.scss'], ['styles']);
+    gulp.watch([paths.app_css_all], ['styles']);
+    
 	//watch .js files
 	gulp.watch(paths.app_js_all, ['scripts']);
 

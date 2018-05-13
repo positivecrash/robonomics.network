@@ -2624,11 +2624,11 @@ span.loader {
 }
 
 .svg .sprite-basic-aira, .svg .sprite-basic-anchor, .svg .sprite-basic-ethereum, .svg .sprite-basic-expand-arrow, .svg .sprite-basic-ipfs, .svg .sprite-basic-nixos, .svg .sprite-basic-ros, .svg .sec-contents > .secw-narrow a:not(.js-expand-toggle):after, .svg .sec-contents a.js-expand-toggle:after {
-  background-image: url("../i/sprite.svg?1");
+  background-image: url("../i/sprite.svg?2");
 }
 
 .sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-ipfs, .sprite-basic-nixos, .sprite-basic-ros, .sec-contents > .secw-narrow a:not(.js-expand-toggle):after, .sec-contents a.js-expand-toggle:after {
-  background-image: url("../i/sprite.png?1");
+  background-image: url("../i/sprite.png?2");
 }
 
 .sprite-basic-aira {
@@ -2942,6 +2942,11 @@ header[role='banner'] .el-social {
   box-sizing: border-box;
   overflow: hidden;
   padding-top: 68px;
+  padding-bottom: 100px;
+}
+.header-mid h1 {
+  font-weight: 300;
+  text-align: center;
 }
 
 #logo-ethereum {

@@ -22,9 +22,9 @@ $c-inpbtn-type: #fff;
 	}
 
 
+// input:not([type='submit']), input:not([type='button']), input:not([type='checkbox']), select
 
-
-input:not([type='submit']), input:not([type='button']), select
+input[type='text'], input[type='email'], input[type='tel'], select
 	{
 		@extend %inp-basic-styles;
 		background-color: $c-inptext-back;
@@ -46,6 +46,18 @@ input[type='submit'], input[type='button'], button
 			}
 	}
 
+input[type='checkbox'], input[type='radio']
+	{
+		&[disabled]
+			{
+				opacity: 0.7;
+
+				& + label
+					{
+						opacity: 0.3;
+					}
+			}
+	}
 
 
 @keyframes rotateLoader

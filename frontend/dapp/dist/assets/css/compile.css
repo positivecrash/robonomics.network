@@ -71,7 +71,6 @@ a, .sec-synopsis, a:hover, .sec-synopsis:hover, a:focus, .sec-synopsis:focus, a:
 body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 18px;
-  font-size: 1.125rem;
   line-height: 1.5;
   font-weight: 300;
   letter-spacing: 2px;
@@ -86,10 +85,8 @@ html {
 /*====== Text sizes & Headers ======*/
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
-  margin-top: 54px;
-  margin-top: 3.375rem;
-  margin-bottom: 54px;
-  margin-bottom: 3.375rem;
+  margin-top: 27px;
+  margin-bottom: 27px;
 }
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
   margin-top: 0;
@@ -115,12 +112,15 @@ h1, h2, h3 {
   text-transform: uppercase;
   letter-spacing: 2px;
   word-spacing: 4px;
+}
+
+h2, h3 {
   font-weight: 300;
 }
 
 h1 {
   font-size: 35px;
-  text-align: center;
+  font-weight: 500;
 }
 
 h2 {
@@ -130,13 +130,11 @@ h2 {
 
 .t-big {
   font-size: 22px;
-  font-size: 1.375rem;
   font-weight: 300;
 }
 
 .t-mid {
   font-size: 18px;
-  font-size: 1.125rem;
   font-weight: 300;
 }
 
@@ -192,22 +190,22 @@ a:hover {
   color: #03A5ED !important;
 }
 
+.text-case_normal {
+  text-transform: none;
+}
+
 /*====== end of Text styles ======*/
 /*====== Text elements ======*/
 ul, ol {
   margin-left: 20px;
-  margin-left: 1.25rem;
   margin-bottom: 27px;
-  margin-bottom: 1.6875rem;
 }
 ul ul, ul ol, ol ul, ol ol {
   margin-top: 27px;
-  margin-top: 1.6875rem;
 }
 
 li, p, blockquote {
   margin-bottom: 27px;
-  margin-bottom: 1.6875rem;
 }
 li:last-child, p:last-child, blockquote:last-child {
   margin-bottom: 0;
@@ -221,13 +219,11 @@ code {
 table td, table th {
   vertical-align: top;
   padding: 13.5px;
-  padding: 0.84375rem;
 }
 @media screen and (max-width: 768px) {
   table td, table th {
     display: block;
     padding: 8.1px;
-    padding: 0.50625rem;
   }
 }
 
@@ -284,40 +280,7 @@ table td, table th {
     opacity: 1;
   }
 }
-@keyframes BounceIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-  70% {
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-@keyframes HamburgerLineDown {
-  0% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes HamburgerLineUp {
-  0% {
-    transform: translateY(5px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes Scale {
+@keyframes ScaleIn {
   0% {
     transform: scale(0);
   }
@@ -328,6 +291,17 @@ table td, table th {
 @keyframes DrawSvgPath {
   to {
     stroke-dashoffset: 0;
+  }
+}
+@keyframes BounceVertical {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(-3px);
   }
 }
 .anyslide[data-anyslide~='controls'] {
@@ -411,7 +385,7 @@ table td, table th {
     transform: rotate(360deg);
   }
 }
-input:not([type='submit']), input:not([type='button']), select, input[type='submit'], input[type='button'], button {
+input[type='text'], input[type='email'], input[type='tel'], select, input[type='submit'], input[type='button'], button {
   border-radius: 2px;
   font-size: 18px;
   line-height: 1;
@@ -426,7 +400,7 @@ input:not([type='submit']), input:not([type='button']), select, input[type='subm
   height: 46px;
 }
 
-input:not([type='submit']), input:not([type='button']), select {
+input[type='text'], input[type='email'], input[type='tel'], select {
   background-color: #fff;
   color: #000;
 }
@@ -440,6 +414,13 @@ input[type='submit'], input[type='button'], button {
 input[type='submit'][disabled], input[type='button'][disabled], button[disabled] {
   background-color: #ccc;
   cursor: default;
+}
+
+input[type='checkbox'][disabled], input[type='radio'][disabled] {
+  opacity: 0.7;
+}
+input[type='checkbox'][disabled] + label, input[type='radio'][disabled] + label {
+  opacity: 0.3;
 }
 
 @keyframes rotateLoader {
@@ -2839,8 +2820,8 @@ body {
 /*====== end of Transitions ======*/
 /*====== Bootstrap ======*/
 .row *[class*='col-'] {
-  margin-bottom: 54px;
-  margin-bottom: 3.375rem;
+  margin-bottom: 54pxpx;
+  margin-bottom: 3.375pxrem;
 }
 
 /*====== end of Bootstrap ======*/
@@ -2966,8 +2947,8 @@ section {
   border: 1px dashed #000;
   line-height: 1;
   position: relative;
-  margin-bottom: 27px;
-  margin-bottom: 1.6875rem;
+  margin-bottom: 27pxpx;
+  margin-bottom: 1.6875pxrem;
 }
 .block-gList .block-gList__bul span {
   display: table-cell;
@@ -3116,6 +3097,19 @@ section {
 }
 
 /*====== end of Fancybox rewrite ======*/
+.m-b-0 {
+  margin-bottom: 0;
+}
+
+.m-l-5 {
+  margin-left: 5px;
+}
+
+.cols-text-3 {
+  -moz-column-count: 3;
+       column-count: 3;
+}
+
 .step-1-secwhite {
   border: 1px solid #707070;
   color: #707070;
@@ -3156,7 +3150,6 @@ body.step-2 h2 {
   margin-bottom: 10px;
 }
 body.step-2 .sec-white {
-  padding: 0;
   border: 1px solid #CCC;
 }
 body.step-2 .sec-white .d-t_cell {
