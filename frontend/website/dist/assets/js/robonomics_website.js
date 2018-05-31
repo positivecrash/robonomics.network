@@ -82,17 +82,6 @@ jQuery(document).ready(function($){
 
 
 
-
-
-
-    /*---  Slider  ---*/
-    $('.js-slider').AnySlide();
-
-
-
-
-
-
     /*---  Index page  ---*/
 
     function inViewAction()

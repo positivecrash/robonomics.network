@@ -183,5 +183,4 @@ gulp.task('live', function() {
 
 
 //default
-// gulp.task('default', ['scripts', 'styles', 'templates', 'sprite', 'fonts', 'live']);
 gulp.task('default', ['styles', 'scripts', 'templates', 'sprite', 'live']);
