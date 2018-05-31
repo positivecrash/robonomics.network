@@ -23,8 +23,8 @@ var paths = {
 
     app: 'app',
     app_css: 'app/css/',
-    app_css_files: 'app/css/*.scss',
-    app_css_all: ['app/css/*.scss', 'app/css/*/*.scss'],
+    app_css_compile: 'app/css/*.scss',
+    app_css_all: 'app/css/*',
     app_js: 'app/js/',
     app_js_all: '../modules/js/*.js',
     app_layouts: 'app/layouts/*.pug',
@@ -40,7 +40,7 @@ var paths = {
 
 
 gulp.task('styles', function() {
-	return gulp.src([paths.app_css_files])
+	return gulp.src(['app/css/compile.scss'])
 		.pipe(compass({
 			css: paths.dist_css,
 			sass: paths.app_css,
@@ -159,6 +159,19 @@ gulp.task('sprite', ['pngSprite']);
 
 
 
+
+// // Generate different formats for Fonts
+// gulp.task('fonts', function(){
+//   gulp.src(['dist/assets/fonts/*.ttf'])
+//     .pipe(ttf2eot())
+//     .pipe(gulp.dest('dist/assets/fonts/'));
+
+//   gulp.src(['dist/assets/fonts/*.ttf'])
+//     .pipe(ttf2woff())
+//     .pipe(gulp.dest('dist/assets/fonts/'));
+// });
+
+
 // Watch
 gulp.task('live', function() {
 	livereload.listen();
@@ -176,6 +189,8 @@ gulp.task('live', function() {
 	// //svg and png sprites
 	gulp.watch(['app/sprite/basic/*.svg', 'app/sprite/browsers/*.svg'], ['sprite']);
 
+	// //font generate if ttf changes
+	// gulp.watch('dist/assets/fonts/*.ttf', ['fonts']);
 });
 
 

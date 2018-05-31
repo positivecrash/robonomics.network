@@ -1,0 +1,20 @@
+extends extends/layout.pug
+
+block head
+	- var pageTitle = 'Robot economic infrastructure'
+	- var bodyclass = 'step-1'
+
+include includes/sections.pug
+
+block content
+	header(role='banner')
+		.secw-narrow
+			+header_consensys2018()
+
+	main(role="main")
+		.secw-narrow
+			section.sec-white.step-1-secwhite
+				p Please, connect to Kovan Test Net to use dApp
+
+
+	//- img.lighthouse(alt="", src="assets/i/lighthouse.svg")

@@ -1,0 +1,25 @@
+$icons: (
+    sprite: (width: 101px, height: 23.44px, pngPath: '../i/sprite.png?1', svgPath: '../i/sprite.svg?1'),
+    aira: (width: 100.23px, height: 23.44px, backgroundX: 0px, backgroundY: 0px),
+);
+
+$sprite: map-get($icons, sprite);
+
+%back_svg{ background-image: url(map-get($sprite, svgPath)); }
+%back_png{ background-image: url(map-get($sprite, pngPath)); }
+
+@mixin get-sprite($spritename){
+    $spritename: map-get($icons, $spritename);
+    
+    width: map-get($spritename, width);
+    height: map-get($spritename, height);
+    background-position: map-get($spritename, backgroundX) map-get($spritename, backgroundY);
+
+    @extend %back_png;
+    .svg & { @extend %back_svg; }
+}
+
+.sprite-basic-aira{
+  @include get-sprite('aira');
+  display: inline-block;
+}

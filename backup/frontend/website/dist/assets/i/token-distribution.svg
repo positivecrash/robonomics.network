@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="6954 1319 212 212">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-6 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #03a5ed;
+        stroke-width: 40px;
+        opacity: 0.602;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+        stroke-width: 10px;
+      }
+
+      .cls-3 {
+        fill: #282b38;
+        font-size: 13px;
+        font-family: Roboto-Light, Roboto;
+        font-weight: 300;
+      }
+
+      .cls-4 {
+        font-size: 25px;
+        font-family: Roboto-Medium, Roboto;
+        font-weight: 500;
+      }
+
+      .cls-5 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_2003" data-name="Group 2003" transform="translate(6906)">
+    <g id="Group_653" data-name="Group 653" transform="translate(-488 -120)">
+      <g id="Ellipse_189" data-name="Ellipse 189" class="cls-1" transform="translate(536 1439)">
+        <circle class="cls-5" cx="106" cy="106" r="106"/>
+        <circle class="cls-6" cx="106" cy="106" r="86"/>
+      </g>
+      <path id="Path_747" data-name="Path 747" class="cls-2" d="M6246.563,1532.677l18.269,54.747" transform="matrix(-0.559, -0.829, 0.829, -0.559, 2887.5, 7526.629)"/>
+      <path id="Path_808" data-name="Path 808" class="cls-2" d="M6246.563,1532.677l18.269,54.747" transform="matrix(-0.559, -0.829, 0.829, -0.559, 2902.5, 7540.629)"/>
+      <path id="Path_809" data-name="Path 809" class="cls-2" d="M6246.563,1532.677l18.269,54.747" transform="matrix(-0.559, -0.829, 0.829, -0.559, 2915.5, 7556.629)"/>
+    </g>
+    <text id="начальный_выпуск_10_000_000_XRT" data-name="начальный выпуск
+10 000 000 XRT" class="cls-3" transform="translate(64 1398)"><tspan x="0" y="12">начальный выпуск</tspan><tspan class="cls-4"><tspan x="0" y="38">10 000 000 XRT</tspan></tspan></text>
+  </g>
+</svg>

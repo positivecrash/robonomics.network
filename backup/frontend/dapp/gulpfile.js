@@ -23,15 +23,15 @@ var paths = {
 
     app: 'app',
     app_css: 'app/css/',
-    app_css_files: 'app/css/*.scss',
-    app_css_all: ['app/css/*.scss', 'app/css/*/*.scss'],
+    app_css_compile: 'app/css/*.scss',
+    app_css_all: 'app/css/*',
     app_js: 'app/js/',
     app_js_all: '../modules/js/*.js',
     app_layouts: 'app/layouts/*.pug',
 
     dist: 'dist',
     dist_css: 'dist/assets/css',
-    dist_css_main: 'robonomics_website',
+    dist_css_main: 'robonomics_dapp',
     dist_js: 'dist/assets/js',
     dist_js_main: 'robonomics_plugins.js',
     dist_img: 'dist/assets/i'
@@ -40,7 +40,7 @@ var paths = {
 
 
 gulp.task('styles', function() {
-	return gulp.src([paths.app_css_files])
+	return gulp.src(['app/css/compile.scss'])
 		.pipe(compass({
 			css: paths.dist_css,
 			sass: paths.app_css,
@@ -111,31 +111,8 @@ gulp.task('svgSprite', function () {
     .pipe(gulp.dest('dist/assets/i'));
 
 
-    var browsers = gulp.src('app/sprite/browsers/*.svg')
-    .pipe(image())
-    .pipe(svgSprite({
-        "mode": {
-            "css": {
-                "spacing": {
-                    "padding": 2
-                },
-                "dest": "./",
-                "layout": "vertical",
-                "sprite": "sprite_browsers.svg",
-                "bust": false,
-                "render": {
-                    "scss": {
-                        "dest": "../../../app/css/utilities/spriteBrowsers.scss",
-                        "template": "app/css/templates/sprite-browsers-template.scss"
-                    }
-                }
-            }
-        }
-    }))
-    .pipe(gulp.dest('dist/assets/i'));
-
-
-  return merge(basic, browsers);
+  // return merge(basic, browsers);
+  return basic;
 
 });
 
@@ -147,16 +124,25 @@ gulp.task('pngSprite', ['svgSprite'], function() {
         .pipe(image())
         .pipe(gulp.dest('dist/assets/i'));
 
-    var browsers = gulp.src('dist/assets/i/sprite_browsers.svg')
-        .pipe(svg2png())
-        .pipe(image())
-        .pipe(gulp.dest('dist/assets/i'));
-
-  return merge(basic, browsers);
+  // return merge(basic, browsers);
+  return basic;
 });
 
 gulp.task('sprite', ['pngSprite']);
 
+
+
+
+// // Generate different formats for Fonts
+// gulp.task('fonts', function(){
+//   gulp.src(['dist/assets/fonts/*.ttf'])
+//     .pipe(ttf2eot())
+//     .pipe(gulp.dest('dist/assets/fonts/'));
+
+//   gulp.src(['dist/assets/fonts/*.ttf'])
+//     .pipe(ttf2woff())
+//     .pipe(gulp.dest('dist/assets/fonts/'));
+// });
 
 
 // Watch
@@ -164,8 +150,9 @@ gulp.task('live', function() {
 	livereload.listen();
 
 	//watch .scss files
-	gulp.watch([paths.app_css_all], ['styles']);
-
+	// gulp.watch(['app/css/utilities/*.scss', 'app/css/includes/*.scss', 'app/css/layouts/*.scss', 'app/css/templates/*.scss', 'app/styles/compile.scss'], ['styles']);
+    gulp.watch([paths.app_css_all], ['styles']);
+    
 	//watch .js files
 	gulp.watch(paths.app_js_all, ['scripts']);
 
@@ -174,8 +161,10 @@ gulp.task('live', function() {
 
 
 	// //svg and png sprites
-	gulp.watch(['app/sprite/basic/*.svg', 'app/sprite/browsers/*.svg'], ['sprite']);
+	gulp.watch(['app/sprite/basic/*.svg'], ['sprite']);
 
+	// //font generate if ttf changes
+	// gulp.watch('dist/assets/fonts/*.ttf', ['fonts']);
 });
 
 

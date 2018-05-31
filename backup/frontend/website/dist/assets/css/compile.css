@@ -2366,10 +2366,6 @@ a:hover {
   color: #03A5ED !important;
 }
 
-.text-case_normal {
-  text-transform: none;
-}
-
 /*====== end of Text styles ======*/
 /*====== Text elements ======*/
 ul, ol {
@@ -2564,7 +2560,7 @@ table td, table th {
     transform: rotate(360deg);
   }
 }
-input[type='text'], input[type='email'], input[type='tel'], select, input[type='submit'], input[type='button'], button {
+input:not([type='submit']), input:not([type='button']), select, input[type='submit'], input[type='button'], button {
   border-radius: 2px;
   font-size: 18px;
   line-height: 1;
@@ -2579,7 +2575,7 @@ input[type='text'], input[type='email'], input[type='tel'], select, input[type='
   height: 46px;
 }
 
-input[type='text'], input[type='email'], input[type='tel'], select {
+input:not([type='submit']), input:not([type='button']), select {
   background-color: #fff;
   color: #000;
 }
@@ -2593,13 +2589,6 @@ input[type='submit'], input[type='button'], button {
 input[type='submit'][disabled], input[type='button'][disabled], button[disabled] {
   background-color: #ccc;
   cursor: default;
-}
-
-input[type='checkbox'][disabled], input[type='radio'][disabled] {
-  opacity: 0.7;
-}
-input[type='checkbox'][disabled] + label, input[type='radio'][disabled] + label {
-  opacity: 0.3;
 }
 
 @keyframes rotateLoader {

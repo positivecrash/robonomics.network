@@ -1,0 +1,130 @@
+.step-1-secwhite 
+	{
+		border: 1px solid $c-gray-dark;
+		color: $c-gray-dark;
+	}
+
+input:not([type='submit']), input:not([type='button']), select
+	{
+		border-radius: 8px;
+		border: 1px solid $c-gray-dark;
+	}
+
+input[type='submit'], input[type='button'], button
+	{
+		border-radius: 8px;
+		height: auto;
+	}
+
+
+body.step-1
+	{
+		background-image: image-url('step-1-back@2x.png');
+		background-repeat: no-repeat;
+		background-position: 50% 100%;
+		background-size: 3000px 400px;
+	}
+
+
+body.step-2
+	{
+		.secw-narrow, .secw-base
+			{
+				position: relative;
+				z-index: 1;
+			}
+
+		.lighthouse
+			{
+				display: block;
+				width: 549px;
+				height: 497px;
+
+				position: absolute;
+			    bottom: -7px;
+    			right: -225px;
+    			z-index: 0;
+			}
+
+		h2
+			{
+				margin-top: 40px;
+				margin-bottom: 10px;
+			}
+
+		.sec-white
+			{
+				// padding: 0;
+				border: 1px solid $c-gray-mid;
+
+				.d-t_cell
+					{
+						padding: 20px;
+					}
+			}
+
+		table
+			{
+				width: 100%;
+
+				td
+					{
+						border-bottom: 1px solid $c-gray-mid;
+						border-right: 1px solid $c-gray-mid;
+
+						&:last-child
+							{
+								border-right: 0;
+							}
+					}
+
+				tr:last-child
+					{
+						td
+							{
+								border-bottom: 0;
+							}
+					}
+			}
+	}
+
+
+.step-2-actions
+	{
+		.d-t_cell
+			{
+				width: 50%;
+			}
+
+		.img-block, button
+			{
+				max-width: 90%;
+				margin: 0 auto;
+			}
+	}
+
+.step-2-market
+	{
+		padding-bottom: 40px;
+		
+		.col-md-4
+			{
+				margin-bottom: 0;
+				border-right: 1px solid $c-gray-mid;
+
+				&:last-child { border-right:0; }
+
+				padding: 40px;
+			}
+
+		p.t-break
+			{
+				border-bottom: 1px solid $c-gray-mid;
+				padding-bottom: 10px;
+
+				&:last-child
+				{
+					border-bottom: 0;
+				}
+			}
+	}

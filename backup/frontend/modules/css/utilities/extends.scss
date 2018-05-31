@@ -1,0 +1,62 @@
+%width_base
+	{
+		max-width: $mq-desktop - $padding-fields * 2; 
+		padding-left: #{$padding-fields}px; 
+		padding-right: #{$padding-fields}px; 
+		margin: 0 auto;
+	}
+
+
+%link_noline
+	{
+	  &, &:hover, &:focus, &:visited{
+	    text-decoration: none;
+	    text-decoration: none !important;
+	  }
+	}
+
+
+%svgBack
+	{
+		display: block;
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+
+	    height: 100%;
+
+	    width: 3596px;
+	    margin-left: -(3596px/2) + 45px;
+	    left: 50%;
+	}
+
+
+%FrontContent
+	{
+	 	position: relative;
+    	z-index: 1;
+	}
+
+
+%margPadNull
+	{
+		margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+	}
+
+%text_uppercase
+	{
+		text-transform: uppercase;
+        letter-spacing: 1px;
+	}
+
+%AfterContent
+	{
+        content:"";
+        display: inline-block;
+        margin-left: 10px;
+        vertical-align: middle;
+	}

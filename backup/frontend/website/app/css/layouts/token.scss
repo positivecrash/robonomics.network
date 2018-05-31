@@ -1,0 +1,7 @@
+.token-distribution
+	{
+		div[class*='col-md-']:not(:first-child)
+			{
+				padding-top: 30px;
+			}
+	}
