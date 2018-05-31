@@ -96,9 +96,9 @@
     	}
 
     	var drawGrid = function() {
+        console.log('test 2');
 
-
-    		for (var y = snap.config.distY/2; y < snap.config.canvasHeight; y += snap.config.distY) {
+    		for (var y = snap.config.dotRadius*2; y < snap.config.canvasHeight; y += snap.config.distY) {
 
     			for (var x = snap.config.distX; x < snap.config.canvasWidth; x += snap.config.distX) {
 
@@ -207,6 +207,8 @@
 
 
 jQuery(document).ready(function($){
+
+  console.log('test');
 
   $('.snapsvg-wrap-1').SnapSvgNet();
 

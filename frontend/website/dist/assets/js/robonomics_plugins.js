@@ -6960,9 +6960,9 @@ return z(b.cx||0,b.cy||0,b.rx,b.ry)},rect:function(a){var b=Y(a);return y(b.x||0
     	}
 
     	var drawGrid = function() {
+        console.log('test 2');
 
-
-    		for (var y = snap.config.distY/2; y < snap.config.canvasHeight; y += snap.config.distY) {
+    		for (var y = snap.config.dotRadius*2; y < snap.config.canvasHeight; y += snap.config.distY) {
 
     			for (var x = snap.config.distX; x < snap.config.canvasWidth; x += snap.config.distX) {
 
@@ -7071,6 +7071,8 @@ return z(b.cx||0,b.cy||0,b.rx,b.ry)},rect:function(a){var b=Y(a);return y(b.x||0
 
 
 jQuery(document).ready(function($){
+
+  console.log('test');
 
   $('.snapsvg-wrap-1').SnapSvgNet();
 

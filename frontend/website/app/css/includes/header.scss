@@ -1,7 +1,7 @@
 header[role='banner']
   {
-    padding-top: 45px;
-    @include rem('padding-bottom', $margin-sec);
+    padding-top: $vertical-rythm;
+    padding-bottom: $vertical-rythm;
     position: relative;
 
 
@@ -19,10 +19,6 @@ header[role='banner']
     position: relative;
     z-index: 1000;
 
-    transition: all 0.2s linear;
-    @extend %FadeOut;
-    animation: 0.8s FadeIn 0.2s linear forwards;
-
     &.fixed
       {
         position: fixed;
@@ -38,19 +34,9 @@ header[role='banner']
         { color: $c-orange; }
 
         .header-top__sec { padding: 4px 0; }
-        .header-top__nav a
-          {
-              font-size: 18px;
-          }
-
         .hamburger .line { background-color: #fff; }
         .hamburger.opened { top: 4px; }
-
-        #header-top__logo img { height: 30px; }
       }
-
-
-
 
 
     & > .secw-base
@@ -64,7 +50,6 @@ header[role='banner']
   {
     display: table-cell;
     vertical-align: middle;
-    padding: 20px 0 30px;
   }
 
 
@@ -95,8 +80,10 @@ header[role='banner']
     a
       {
         @extend %link_noline;
-        font-size: 22px;
+        font-weight: 500;
+        text-transform: uppercase;
         line-height: 1;
+        letter-spacing: 1px;
         color: $c-violet-mid;
 
         &, &:hover
@@ -355,6 +342,7 @@ header[role='banner']
     box-sizing: border-box;
     overflow: hidden;
 
+    margin-top: 10px;
     padding-top: 68px;
     padding-bottom: 100px;
 
@@ -506,12 +494,6 @@ $delay: 1s;
     text-align: center;
     
     #header-top { animation-delay: 4s; }
-
-
-    #header-top__logo
-      {
-        display: none;
-      }
 
     .snapsvgoutside-text
       {

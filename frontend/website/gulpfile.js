@@ -18,69 +18,81 @@ var gulp             = require('gulp'),
     ttf2woff         = require('gulp-ttf2woff');
 
 
-var paths = {
-    // modules: '../modules',
+var path = {
 
-    app: 'app',
-    app_css: 'app/css/',
-    app_css_files: 'app/css/*.scss',
-    app_css_all: ['app/css/*.scss', 'app/css/*/*.scss'],
-    app_js_files: 'app/js/*.js',
-    app_js_all: ['../modules/js/*.js', '../modules/js/*/*.js'],
-    app_layouts_files: 'app/layouts/*.pug',
-    app_layouts_all: ['app/layouts/*.pug', 'app/layouts/*/*.pug'],
-    app_sprites: 'app/sprite',
-    sprites_templates: '../modules/css/templates',
+    app:{
+        app: 'app',
+        css: 'app/css',
+        js: 'app/js',
+        sprites: 'app/sprite',
+        templates: '../modules/css/templates'
+    },
 
-    dist: 'dist',
-    dist_css: 'dist/assets/css',
-    dist_css_main: 'robonomics_website',
-    dist_js: 'dist/assets/js',
-    dist_js_main: 'robonomics_plugins.js',
-    dist_img: 'dist/assets/i'
+    dist:{
+        dist: 'dist',
+        css: 'dist/assets/css',
+        js: 'dist/assets/js',
+        img: 'dist/assets/i'
+    }
+};
+
+var file = {
+
+    path:{
+        css: ['app/css/*.scss', 'app/css/*/*.scss'],
+        compilecss: 'app/css/compile.scss',
+        js: ['../modules/js/*.js', '../modules/js/*/*.js'],
+        layouts: ['app/layouts/*.pug', 'app/layouts/*/*.pug']
+    },
+    name:{
+        css: 'robonomics_website',
+        js: 'robonomics_plugins.js'
+    }
 };
 
 
 
 gulp.task('styles', function() {
-	return gulp.src([paths.app_css_files])
+	return gulp.src(file.path.compilecss)
 		.pipe(compass({
-			css: paths.dist_css,
-			sass: paths.app_css,
-			image: paths.dist_img
+			css: path.dist.css,
+			sass: path.app.css,
+			image: path.dist.img
 		}))
-		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-		.pipe(gulp.dest(paths.dist_css))
 		.pipe(rename({
-            basename: paths.dist_css_main,
-            suffix: '.min'
+            basename: file.name.css
         }))
-		.pipe(cleancss({
+        .pipe(gulp.dest(path.dist.css))
+        .pipe(cleancss({
           compatibility: 'ie8'
         }))
-		.pipe(gulp.dest(paths.dist_css))
+		.pipe(rename({
+            basename: file.name.css,
+            suffix: '.min'
+        }))
+		.pipe(gulp.dest(path.dist.css))
 		.pipe(livereload());
 });
 
 
 
 gulp.task('scripts', function() {
-	return gulp.src([paths.app_js_files])
-		.pipe(concat(paths.dist_js_main))
-		.pipe(gulp.dest(paths.dist_js))
+	return gulp.src(file.path.js)
+		.pipe(concat(file.name.js))
+		.pipe(gulp.dest(path.dist.js))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(uglify())
-		.pipe(gulp.dest(paths.dist_js))
+		.pipe(gulp.dest(path.dist.js))
 		.pipe(livereload());
 });
 
 
 gulp.task('templates', function() {
-  return gulp.src(paths.app_layouts_files)
+  return gulp.src(file.path.layouts)
     .pipe(pug({
       pretty: true
     }))
-    .pipe(gulp.dest(paths.dist))
+    .pipe(gulp.dest(path.dist.dist))
     .pipe(livereload());
 });
 
@@ -88,7 +100,7 @@ gulp.task('templates', function() {
 // //svg and png sprites
 gulp.task('svgSprite', function () {
 
-  var basic = gulp.src(paths.app_sprites + '/basic/*.svg')
+  var basic = gulp.src(path.app.sprites + '/basic/*.svg')
     .pipe(image())
     .pipe(svgSprite({
         "shape": {
@@ -105,16 +117,16 @@ gulp.task('svgSprite', function () {
                 "render": {
                     "scss": {
                         "dest": "../../../app/css/utilities/sprite.scss",
-                        "template": paths.sprites_templates + "/sprite-template.scss"
+                        "template": path.app.templates + "/sprite-template.scss"
                     }
                 }
             }
         }
     }))
-    .pipe(gulp.dest(paths.dist_img));
+    .pipe(gulp.dest(path.dist.img));
 
 
-    var browsers = gulp.src(paths.app_sprites + '/browsers/*.svg')
+    var browsers = gulp.src(path.app.sprites + '/browsers/*.svg')
     .pipe(image())
     .pipe(svgSprite({
         "mode": {
@@ -129,13 +141,13 @@ gulp.task('svgSprite', function () {
                 "render": {
                     "scss": {
                         "dest": "../../../app/css/utilities/spriteBrowsers.scss",
-                        "template": paths.sprites_templates + "/sprite-browsers-template.scss"
+                        "template": path.app.templates + "/sprite-browsers-template.scss"
                     }
                 }
             }
         }
     }))
-    .pipe(gulp.dest(paths.dist_img));
+    .pipe(gulp.dest(path.dist.img));
 
 
   return merge(basic, browsers);
@@ -145,15 +157,15 @@ gulp.task('svgSprite', function () {
 
 
 gulp.task('pngSprite', ['svgSprite'], function() {
-    var basic = gulp.src(paths.dist_img + '/sprite.svg')
+    var basic = gulp.src(path.dist.img + '/sprite.svg')
         .pipe(svg2png())
         .pipe(image())
-        .pipe(gulp.dest(paths.dist_img));
+        .pipe(gulp.dest(path.dist.img));
 
-    var browsers = gulp.src(paths.dist_img+'/sprite_browsers.svg')
+    var browsers = gulp.src(path.dist.img + '/sprite_browsers.svg')
         .pipe(svg2png())
         .pipe(image())
-        .pipe(gulp.dest(paths.dist_img));
+        .pipe(gulp.dest(path.dist.img));
 
   return merge(basic, browsers);
 });
@@ -167,17 +179,17 @@ gulp.task('live', function() {
 	livereload.listen();
 
 	//watch .scss files
-	gulp.watch([paths.app_css_all], ['styles']);
+	gulp.watch(file.path.css, ['styles']);
 
 	//watch .js files
-	gulp.watch(paths.app_js_all, ['scripts']);
+	gulp.watch(file.path.js, ['scripts']);
 
 	// //watch .jade files
-	gulp.watch(paths.app_layouts_all, ['templates']);
+	gulp.watch(file.path.layouts, ['templates']);
 
 
 	// //svg and png sprites
-	gulp.watch([paths.app_sprites + '/basic/*.svg', paths.app_sprites + '/browsers/*.svg'], ['sprite']);
+	gulp.watch([path.app.sprites + '/basic/*.svg', path.app.sprites + '/browsers/*.svg'], ['sprite']);
 
 });
 
