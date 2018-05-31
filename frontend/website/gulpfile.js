@@ -29,6 +29,8 @@ var paths = {
     app_js_all: ['../modules/js/*.js', '../modules/js/*/*.js'],
     app_layouts_files: 'app/layouts/*.pug',
     app_layouts_all: ['app/layouts/*.pug', 'app/layouts/*/*.pug'],
+    app_sprites: 'app/sprite',
+    sprites_templates: '../modules/css/templates',
 
     dist: 'dist',
     dist_css: 'dist/assets/css',
@@ -86,7 +88,7 @@ gulp.task('templates', function() {
 // //svg and png sprites
 gulp.task('svgSprite', function () {
 
-  var basic = gulp.src('app/sprite/basic/*.svg')
+  var basic = gulp.src(paths.app_sprites + '/basic/*.svg')
     .pipe(image())
     .pipe(svgSprite({
         "shape": {
@@ -103,16 +105,16 @@ gulp.task('svgSprite', function () {
                 "render": {
                     "scss": {
                         "dest": "../../../app/css/utilities/sprite.scss",
-                        "template": "app/css/templates/sprite-template.scss"
+                        "template": paths.sprites_templates + "/sprite-template.scss"
                     }
                 }
             }
         }
     }))
-    .pipe(gulp.dest('dist/assets/i'));
+    .pipe(gulp.dest(paths.dist_img));
 
 
-    var browsers = gulp.src('app/sprite/browsers/*.svg')
+    var browsers = gulp.src(paths.app_sprites + '/browsers/*.svg')
     .pipe(image())
     .pipe(svgSprite({
         "mode": {
@@ -127,13 +129,13 @@ gulp.task('svgSprite', function () {
                 "render": {
                     "scss": {
                         "dest": "../../../app/css/utilities/spriteBrowsers.scss",
-                        "template": "app/css/templates/sprite-browsers-template.scss"
+                        "template": paths.sprites_templates + "/sprite-browsers-template.scss"
                     }
                 }
             }
         }
     }))
-    .pipe(gulp.dest('dist/assets/i'));
+    .pipe(gulp.dest(paths.dist_img));
 
 
   return merge(basic, browsers);
@@ -143,15 +145,15 @@ gulp.task('svgSprite', function () {
 
 
 gulp.task('pngSprite', ['svgSprite'], function() {
-    var basic = gulp.src('dist/assets/i/sprite.svg')
+    var basic = gulp.src(paths.dist_img + '/sprite.svg')
         .pipe(svg2png())
         .pipe(image())
-        .pipe(gulp.dest('dist/assets/i'));
+        .pipe(gulp.dest(paths.dist_img));
 
-    var browsers = gulp.src('dist/assets/i/sprite_browsers.svg')
+    var browsers = gulp.src(paths.dist_img+'/sprite_browsers.svg')
         .pipe(svg2png())
         .pipe(image())
-        .pipe(gulp.dest('dist/assets/i'));
+        .pipe(gulp.dest(paths.dist_img));
 
   return merge(basic, browsers);
 });
@@ -175,7 +177,7 @@ gulp.task('live', function() {
 
 
 	// //svg and png sprites
-	gulp.watch(['app/sprite/basic/*.svg', 'app/sprite/browsers/*.svg'], ['sprite']);
+	gulp.watch([paths.app_sprites + '/basic/*.svg', paths.app_sprites + '/browsers/*.svg'], ['sprite']);
 
 });
 
