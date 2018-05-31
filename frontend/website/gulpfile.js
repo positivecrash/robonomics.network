@@ -19,15 +19,16 @@ var gulp             = require('gulp'),
 
 
 var paths = {
-    modules: '../../modules',
+    // modules: '../modules',
 
     app: 'app',
     app_css: 'app/css/',
     app_css_files: 'app/css/*.scss',
     app_css_all: ['app/css/*.scss', 'app/css/*/*.scss'],
-    app_js: 'app/js/',
-    app_js_all: '../modules/js/*.js',
-    app_layouts: 'app/layouts/*.pug',
+    app_js_files: 'app/js/*.js',
+    app_js_all: ['../modules/js/*.js', '../modules/js/*/*.js'],
+    app_layouts_files: 'app/layouts/*.pug',
+    app_layouts_all: ['app/layouts/*.pug', 'app/layouts/*/*.pug'],
 
     dist: 'dist',
     dist_css: 'dist/assets/css',
@@ -62,7 +63,7 @@ gulp.task('styles', function() {
 
 
 gulp.task('scripts', function() {
-	return gulp.src([paths.app_js_all])
+	return gulp.src([paths.app_js_files])
 		.pipe(concat(paths.dist_js_main))
 		.pipe(gulp.dest(paths.dist_js))
 		.pipe(rename({ suffix: '.min' }))
@@ -73,7 +74,7 @@ gulp.task('scripts', function() {
 
 
 gulp.task('templates', function() {
-  return gulp.src(paths.app_layouts)
+  return gulp.src(paths.app_layouts_files)
     .pipe(pug({
       pretty: true
     }))
@@ -170,7 +171,7 @@ gulp.task('live', function() {
 	gulp.watch(paths.app_js_all, ['scripts']);
 
 	// //watch .jade files
-	gulp.watch(paths.app_layouts, ['templates']);
+	gulp.watch(paths.app_layouts_all, ['templates']);
 
 
 	// //svg and png sprites
