@@ -91,8 +91,8 @@
       <div id="header-link__down"><a href="#index-console">Попробовать</a></div>
     </header>
     <main role="main">
-      <section id="index-console"><h3 v-html="step"></h3>
-<div id="app">
+      <section id="index-console"><div id="app">
+<h3> {{ step }} </h3>
 <p class="cmd" v-html="entry" v-for="entry in history">{{ entry }}</p>
 <p class="input">
 <input type="text" v-model="cmd" @keyup.enter="process" autofocus>

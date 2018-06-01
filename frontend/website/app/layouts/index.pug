@@ -71,8 +71,9 @@ block content
 
 		section#index-console
 
-			<h3 v-html="step"></h3>
+			
 			<div id="app">
+				<h3> {{ step }} </h3>
 				<p class="cmd" v-html="entry" v-for="entry in history">{{ entry }}</p>
 				<p class="input">
 				<input type="text" v-model="cmd" @keyup.enter="process" autofocus>
