@@ -2845,6 +2845,7 @@ header[role='banner'] .el-social {
 /*====== end of TITLES ======*/
 #header-index {
   text-align: center;
+  min-height: 740px;
 }
 #header-index #header-top {
   animation-delay: 4s;

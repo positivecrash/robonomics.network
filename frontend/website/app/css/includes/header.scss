@@ -6,7 +6,6 @@ header[role='banner']
     // padding-bottom: $vertical-rythm;
     position: relative;
 
-
     .el-social
       {
         background-color: #fff;
@@ -507,6 +506,7 @@ $delay: 1s;
 #header-index
   {
     text-align: center;
+    min-height: 740px;
     
     #header-top { animation-delay: 4s; }
 
