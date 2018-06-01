@@ -23,8 +23,19 @@ body
   }
 
 
+.screen
+  {
+    box-sizing: border-box;
+    min-height: 100%;
+    height: 100%;
+  }
 
-
+.align-vertical
+  {
+     /* align content vertically */
+    display: flex;
+    align-items: center;
+  }
 
 /*====== Set width of container ======*/
 .secw-narrow { @include secw(720px); }

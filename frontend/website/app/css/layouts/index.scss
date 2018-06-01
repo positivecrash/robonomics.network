@@ -1,3 +1,16 @@
+#index-console{
+	margin: 40px;
+
+	p.input input{
+		background: #eee;
+	}
+
+	p.cmd
+		{
+			border-bottom: 1px solid #222;
+		}
+}
+
 .contentBlock-token
 	{
 		position: relative;

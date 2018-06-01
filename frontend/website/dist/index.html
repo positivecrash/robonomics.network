@@ -17,7 +17,7 @@
     <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
   </head>
   <body>
-    <header role="banner" id="header-index">
+    <header class="screen" role="banner" id="header-index">
             <div id="header-top">
               <div class="secw-base">
                 <div class="header-top__sec"><a href="#" id="header-top__logo"><img alt="" src="assets/i/logo-robonomics-2.svg"></a></div>
@@ -59,8 +59,8 @@
                 </div>
               </div>
             </div>
-      <div class="header-mid">
-        <div class="el-FrontContent">
+      <div class="screen align-vertical" id="header-mid">
+        <div class="el-FrontContent secw-full">
           <div class="el-FrontContent">
             <div class="plaxify" id="header-logo-robonomics" data-xrange="20" data-yrange="20"><svg class="logo-robonomics" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="196.9px" height="170.3px" viewBox="0 0 196.9 170.3" style="enable-background:new 0 0 196.9 170.3;" xml:space="preserve">
 <g transform="translate(2530 155)">
@@ -78,7 +78,7 @@
               <div id="header-title">
                 <h1>ПЛАТФОРМА РОБОНОМИКИ</h1>
               </div>
-              <div id="header-subtitle">{ Инфраструктура сети Ethereum для умных фабрик и городов }</div>
+              <div id="header-subtitle">Инфраструктура сети Ethereum для интеграции кибер-физических систем в умные города и Индустрии 4.0</div>
             </div>
           </div>
           <div class="snapsvgoutside-text plaxify" id="header-index__ethereum" data-xrange="10" data-yrange="10"><span>e</span><span>t</span><span>h</span><span>e</span><span>r</span><span>e</span><span>u</span><span>m</span></div>
@@ -88,8 +88,19 @@
           <svg class="snapsvg"></svg>
         </div>
       </div>
+      <div id="header-link__down"><a href="#index-console">Попробовать</a></div>
     </header>
     <main role="main">
+      <section id="index-console"><h3 v-html="step"></h3>
+<div id="app">
+<p class="cmd" v-html="entry" v-for="entry in history">{{ entry }}</p>
+<p class="input">
+<input type="text" v-model="cmd" @keyup.enter="process" autofocus>
+</p>
+</div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="assets/js/vue-init.js"></script>
+      </section>
       <section class="contentBlock-token">
         <div class="secw-base">
           <h2>Для держателей токенов и майнеров</h2>

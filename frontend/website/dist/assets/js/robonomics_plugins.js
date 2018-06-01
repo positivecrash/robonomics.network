@@ -6922,7 +6922,8 @@ return z(b.cx||0,b.cy||0,b.rx,b.ry)},rect:function(a){var b=Y(a);return y(b.x||0
           var svgEl = (el.find(snap.config.svgEl))[0];
       		snap.svg = Snap(svgEl);
 
-      		snap.config.canvasHeight = el.outerHeight(true);
+          snap.config.canvasHeight = 1000;
+      		// snap.config.canvasHeight = el.outerHeight(true);
       		snap.config.canvasWidth = ((snap.config.dotRadius*2) + snap.config.distX) * (snap.config.dotsQuantX - 1) + snap.config.dotRadius*2;
       		snap.Y = Math.floor(snap.config.canvasHeight / snap.config.distY);
       		
@@ -6960,7 +6961,6 @@ return z(b.cx||0,b.cy||0,b.rx,b.ry)},rect:function(a){var b=Y(a);return y(b.x||0
     	}
 
     	var drawGrid = function() {
-        console.log('test 2');
 
     		for (var y = snap.config.dotRadius*2; y < snap.config.canvasHeight; y += snap.config.distY) {
 
@@ -7000,6 +7000,9 @@ return z(b.cx||0,b.cy||0,b.rx,b.ry)},rect:function(a){var b=Y(a);return y(b.x||0
 
 			snap.svg.prepend(l);
 			removeLine(l, x2, y2);
+
+      // var c = $('#snapsvg-index .snapsvg').find('line').length;
+      // console.log(c);
     	}
 
 
@@ -7072,7 +7075,6 @@ return z(b.cx||0,b.cy||0,b.rx,b.ry)},rect:function(a){var b=Y(a);return y(b.x||0
 
 jQuery(document).ready(function($){
 
-  console.log('test');
 
   $('.snapsvg-wrap-1').SnapSvgNet();
 

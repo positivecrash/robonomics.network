@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Robot economic infrastructure | robonomics.network</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="index-header-background">
+        <svg width="800" height="200">
+            <dot v-for="(dot,i) in dots" v-bind:dots="dot" v-bind:key="dot.id"></dot>
+        </svg>
+    </div>
+    <!-- <script type="text/x-template" id="index-header-background">
+        <dots-background></dots-background>
+    </script> -->
+
+    <script type="text/javascript">
+        Vue.component('dot', {
+          props: ['dots'],
+          template: `<circle :cx="100" :cy="100" :fill="dots.fill" :r="dots.r"></circle>`
+        });
+
+        new Vue({
+            el: '#index-header-background',
+            data: {
+                dots: [
+                    { id: 0, fill: '#ccc', r: '100' },
+                    { id: 1, fill: 'red', r: '100' }
+                ]
+            }
+        });
+    </script>
+
+
+  </body>
+  </html>

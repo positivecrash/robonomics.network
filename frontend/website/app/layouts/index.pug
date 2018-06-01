@@ -4,12 +4,13 @@ block head
 	- var pageTitle = 'Robot economic infrastructure'
 
 block content
-	header(role='banner')#header-index
+	header(role='banner')#header-index.screen
+
 		include mixins/sections.pug
 		+header_top()
 
-		.header-mid
-			.el-FrontContent
+		#header-mid.screen.align-vertical
+			.el-FrontContent.secw-full
 				.el-FrontContent
 					div#header-logo-robonomics(data-xrange="20", data-yrange="20").plaxify
 						<svg class="logo-robonomics" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="196.9px" height="170.3px" viewBox="0 0 196.9 170.3" style="enable-background:new 0 0 196.9 170.3;" xml:space="preserve">
@@ -32,7 +33,7 @@ block content
 
 					.secw-base
 						#header-title: h1 ПЛАТФОРМА РОБОНОМИКИ
-						#header-subtitle { Инфраструктура сети Ethereum для умных фабрик и городов }
+						#header-subtitle Инфраструктура сети Ethereum для интеграции кибер-физических систем в умные города и Индустрии 4.0
 
 				#header-index__ethereum.snapsvgoutside-text.plaxify(data-xrange="10", data-yrange="10")
 					span e
@@ -61,9 +62,24 @@ block content
 			#snapsvg-index.snapsvg-wrap.plaxify(data-xrange="10", data-yrange="10")
 				svg.snapsvg
 
+		#header-link__down
+			a(href="#index-console") Попробовать
+
 
 
 	main(role="main")
+
+		section#index-console
+
+			<h3 v-html="step"></h3>
+			<div id="app">
+				<p class="cmd" v-html="entry" v-for="entry in history">{{ entry }}</p>
+				<p class="input">
+				<input type="text" v-model="cmd" @keyup.enter="process" autofocus>
+			</p>
+			</div>
+			script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
+			script(src='assets/js/vue-init.js')
 		
 		section.contentBlock-token
 			.secw-base
