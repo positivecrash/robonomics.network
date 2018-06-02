@@ -45,7 +45,7 @@ new Vue({
             |std_msgs/String | /avg_engine_temperature | 85 C |
             |std_msgs/String | /tyres_check | ok |
             |std_msgs/String | /Cruise_control_module | ok |
-            `},
+            `}
         ]
     },
     
@@ -56,7 +56,7 @@ new Vue({
         this.history.push(this.cmd);
 
         var curInd = this.commands
-          .map(function (element) {return element.command;})
+          .map(function (element) {if (element) return element.command;})
           .indexOf(this.cmd);
 
 
@@ -73,11 +73,41 @@ new Vue({
         }
 
         this.cmd = '';
+ 
+      },
 
-
-
-         
+      setCmd (e) {
+        // console.log(e.target.textContent);
+        this.cmd = e.target.textContent;
       }
-      
+    },
+
+    computed: {
+      progress () {
+        if ( this.step < this.commands.length){
+          let w = (100 / this.commands.length) * this.step;
+          return{
+            width: w + '%'
+          }
+        }
+        else{
+          return{
+            width: '100%'
+          }
+        }
+      },
+
+      curStep () {
+        if ( this.step == 0 )
+          return Number(this.step)+1;
+        else
+          return this.step;
+      },
+
+      getCmd () {
+        // console.log(this.commands[this.step].command);
+        return this.commands[this.step].command
+      }
     }
-})
+});
+

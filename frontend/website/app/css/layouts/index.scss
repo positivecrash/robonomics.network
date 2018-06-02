@@ -1,15 +1,58 @@
 #index-console{
-	margin: 40px;
+	padding-top: 0;
+	padding-bottom: 0;
 
-	p.input input{
-		background: #eee;
+	&, .secw-base { background-color: $c-gray-light; }
+	
+	.col-md-6 {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+
+#index-console__info.row{
+	padding-left: 10%;
+	padding-right: 5%;
+	padding-top: 10%;
+
+	h3{
+		font-weight: 500;
+		margin-bottom: 10%;
+	}
+}
+
+#index-console__step{
+	color: $c-blue;
+	text-align: right;
+
+	b{
+		font-size: 28px;
+		font-weight: 500;
+		text-transform: uppercase;
+		display: block;
+		white-space: nowrap;
+	}
+}
+
+.progress{
+	width: 100%;
+	background-color: $c-gray;
+
+	.progress, .progress-bar{
+		height: 7px;
 	}
 
-	p.cmd
-		{
-			border-bottom: 1px solid #222;
-		}
+	.progress-bar{
+		background-color: $c-blue;
+		transition: width 0.2s ease-in-out;
+	}
 }
+
+
+
+
+
 
 .contentBlock-token
 	{

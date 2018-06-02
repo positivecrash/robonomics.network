@@ -12,14 +12,6 @@ header[role='banner']
       }
   }
 
-#header-link__down
-  {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding-bottom: 50px;
-  }
-
 
 /*====== Top section ======*/
 
@@ -214,7 +206,7 @@ header[role='banner']
       {
         position: fixed;
         z-index: 2;
-        top: 38px;
+        top: 30px;
         right: 20px;
 
         .line
@@ -343,7 +335,6 @@ header[role='banner']
     box-sizing: border-box;
     overflow: hidden;
 
-    // margin-top: $vertical-rythm + 10;
     padding-top: 100px;
     padding-bottom: 100px;
 
@@ -506,7 +497,7 @@ $delay: 1s;
 #header-index
   {
     text-align: center;
-    min-height: 740px;
+    min-height: 780px;
     
     #header-top { animation-delay: 4s; }
 
@@ -566,22 +557,51 @@ $delay: 1s;
   }
 
 
-#header-link__down a
+#header-link__down
   {
-    font-size: 20px;
-    line-height: 1;
-    @extend %link_noline;
-    @extend %text_uppercase;
-    color: $c-orange;
-    margin-top: 65px;
-    display: inline-block;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    background-color: #fff;
 
-    @media screen and (max-height: 768px) {
-      margin-top: 20px;
-    }
+    a
+      {
+        font-size: 20px;
+        line-height: 1;
+        @extend %link_noline;
+        @extend %text_uppercase;
+        color: $c-orange;
+        display: inline-block;
+        position: relative;
+        padding-bottom: 33px;
 
-    // @include maxTablet(){
-    //   margin-top: 20px;
-    // }
+
+        &:before, &:after
+          {
+            content:"";
+            height: 1px;
+            background-color: $c-orange;
+            position: absolute;
+
+            width: 32px;
+            right: auto;
+            top: 40px;
+          }
+
+          &:before
+            {
+              right: 50%;
+              transform: rotate(38deg);
+              margin-right: -3.5px;
+            }
+
+          &:after
+            {
+              left: 50%;
+              transform: rotate(-38deg);
+              margin-left: -3.5px;
+            }
+      }
   }
-
