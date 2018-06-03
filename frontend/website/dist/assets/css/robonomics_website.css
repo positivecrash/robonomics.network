@@ -3121,6 +3121,18 @@ footer[role='contentinfo'] .sec-techs {
   width: 100%;
   box-sizing: border-box;
   border: 0;
+  display: inline-block;
+}
+.terminal__window_content p.cmd, .terminal__window_content p.input {
+  position: relative;
+  padding-left: 25px;
+}
+.terminal__window_content p.cmd:nth-child(2n):before, .terminal__window_content p.input:nth-child(2n):before {
+  content: "$ ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #03A5ED;
 }
 
 .progress {

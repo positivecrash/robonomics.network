@@ -8,16 +8,6 @@
 		margin: 0;
 		padding: 0;
 	}
-
-	// .terminal__window
-	// 	{
-	// 		&:first-child{
-	// 			height: 60%;
-	// 		}
-	// 		&:last-child{
-	// 			height: 40%;
-	// 		}
-	// 	}
 }
 
 
@@ -87,6 +77,22 @@
     	width: 100%;
     	box-sizing: border-box;
     	border: 0;
+    	display: inline-block;
+    }
+
+    p.cmd, p.input{
+    	position: relative;
+    	padding-left: 25px;
+
+    	&:nth-child(2n){
+    		&:before{
+    			content: "$ ";
+    			position: absolute;
+    			left: 0;
+    			top: 0;	
+    			color: $c-blue;
+    		}
+    	}
     }
 }
 
