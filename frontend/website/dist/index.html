@@ -93,7 +93,7 @@
     <section id="index-terminal">
       <div class="secw-base" id="app">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-5 col-null">
             <div class="progress">
               <div class="progress-bar" v-bind:style="progress"></div>
             </div>
@@ -102,14 +102,14 @@
                 <div id="index-terminal__step"><b>{{ curStep }} шаг</b>из {{ commands.length }}</div>
               </div>
               <div class="col-9">
-                <h3>НАЧАЛО РАБОТЫ С СЕТЬЮ РОБОНОМИКА</h3>
+                <h3>Начало работы с сетью робономика</h3>
                 <p>Робономика – это большая децентрализованная сеть контроля и оказания услуг кибер-физическими системами, адаптирующаяся к потребностям человека.</p>
                 <p>Для работы с сетью создайте экземпляр объекта сети, набрав в терминале команду:</p>
                 <p><a id="index-terminal__info_cmd" href="#" @click.prevent="setCmd">{{ getCmd }}</a></p>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-7 col-null">
             <div class="terminal__window">
               <div class="terminal__window_head">Terminal</div>
               <div class="terminal__window_content">

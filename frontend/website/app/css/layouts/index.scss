@@ -3,11 +3,6 @@
 	padding-bottom: 0;
 
 	&, .secw-base { background-color: $c-gray-light; }
-	
-	.col-md-6 {
-		margin: 0;
-		padding: 0;
-	}
 }
 
 
@@ -78,6 +73,7 @@
     	box-sizing: border-box;
     	border: 0;
     	display: inline-block;
+    	resize: none;
     }
 
     p.cmd, p.input{

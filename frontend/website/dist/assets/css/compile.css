@@ -2180,6 +2180,11 @@ table td, table th {
   margin-bottom: 0;
 }
 
+.col-null {
+  margin: 0;
+  padding: 0;
+}
+
 /*====== end of Margins & paddings ======*/
 /*====== Other ======*/
 .embed-video iframe, .embed-video object, .embed-video embed {
@@ -3056,10 +3061,6 @@ footer[role='contentinfo'] .sec-techs {
 #index-terminal, #index-terminal .secw-base {
   background-color: #F2F2F2;
 }
-#index-terminal .col-md-6 {
-  margin: 0;
-  padding: 0;
-}
 
 #index-terminal__info.row {
   padding-left: 10%;
@@ -3122,6 +3123,7 @@ footer[role='contentinfo'] .sec-techs {
   box-sizing: border-box;
   border: 0;
   display: inline-block;
+  resize: none;
 }
 .terminal__window_content p.cmd, .terminal__window_content p.input {
   position: relative;

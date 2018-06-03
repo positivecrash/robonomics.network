@@ -69,7 +69,7 @@ block content
 	section#index-terminal
 		#app.secw-base
 			.row
-				.col-md-6
+				.col-md-5.col-null
 					.progress
 						.progress-bar(v-bind:style="progress")
 
@@ -79,12 +79,12 @@ block content
 								b {{ curStep }} шаг
 								| из {{ commands.length }}
 						.col-9
-							h3 НАЧАЛО РАБОТЫ С СЕТЬЮ РОБОНОМИКА
+							h3 Начало работы с сетью робономика
 							p Робономика – это большая децентрализованная сеть контроля и оказания услуг кибер-физическими системами, адаптирующаяся к потребностям человека.
 							p Для работы с сетью создайте экземпляр объекта сети, набрав в терминале команду:
 							p: a#index-terminal__info_cmd(href="#", @click.prevent="setCmd") {{ getCmd }}
 
-				.col-md-6
+				.col-md-7.col-null
 					.terminal__window
 						.terminal__window_head Terminal
 						.terminal__window_content
