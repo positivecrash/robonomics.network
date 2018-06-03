@@ -63,33 +63,43 @@ block content
 				svg.snapsvg
 
 		#header-link__down
-			a(href="#index-console") Попробовать
+			a(href="#index-terminal") Попробовать
 
 
-	section#index-console.screen
+	section#index-terminal
 		#app.secw-base
 			.row
 				.col-md-6
 					.progress
 						.progress-bar(v-bind:style="progress")
 
-					#index-console__info.row
+					#index-terminal__info.row
 						.col-3
-							#index-console__step
+							#index-terminal__step
 								b {{ curStep }} шаг
 								| из {{ commands.length }}
 						.col-9
 							h3 НАЧАЛО РАБОТЫ С СЕТЬЮ РОБОНОМИКА
 							p Робономика – это большая децентрализованная сеть контроля и оказания услуг кибер-физическими системами, адаптирующаяся к потребностям человека.
 							p Для работы с сетью создайте экземпляр объекта сети, набрав в терминале команду:
-							p: a#index-console__info_cmd(href="#", @click.prevent="setCmd") {{ getCmd }}
-							p {{ step }}
+							p: a#index-terminal__info_cmd(href="#", @click.prevent="setCmd") {{ getCmd }}
 
 				.col-md-6
-					<p class="input">
-						<input type="text" v-model="cmd" @keyup.enter="process" autofocus>
-					</p>
-					<p class="cmd" v-html="entry" v-for="entry in history">{{ entry }}</p>
+					.terminal__window
+						.terminal__window_head Terminal
+						.terminal__window_content
+							p Press enter to submit commands
+							<p class="cmd" v-html="entry" v-for="entry in history">{{ entry }}</p>
+							<p class="input">
+								//- <input type="text" v-model="cmd" @keyup.enter="process" autofocus>
+								<textarea v-model.trim="cmd" @keyup.enter="process" autofocus></textarea>
+							</p>
+					.terminal__window
+						.terminal__window_head Terminal
+						.terminal__window_content 1
+
+					
+					
 					
 		script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
 		script(src='assets/js/vue-init.js')

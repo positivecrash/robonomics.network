@@ -53,11 +53,17 @@ new Vue({
       
       process () {
 
+        // this.cmd = this.cmd;
+
         this.history.push(this.cmd);
 
         var curInd = this.commands
-          .map(function (element) {if (element) return element.command;})
+          .map(function (element) { if (element) return element.command; })
           .indexOf(this.cmd);
+
+
+        console.log(this.cmd);
+        console.log(curInd);
 
 
         if ( curInd == this.step ){
@@ -77,7 +83,6 @@ new Vue({
       },
 
       setCmd (e) {
-        // console.log(e.target.textContent);
         this.cmd = e.target.textContent;
       }
     },
@@ -105,8 +110,8 @@ new Vue({
       },
 
       getCmd () {
-        // console.log(this.commands[this.step].command);
-        return this.commands[this.step].command
+        if (this.commands[this.step])
+          return this.commands[this.step].command
       }
     }
 });
