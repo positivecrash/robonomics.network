@@ -92,7 +92,7 @@ block content
 							<p class="cmd" v-html="entry" v-for="entry in history">{{ entry }}</p>
 							<p class="input">
 								//- <input type="text" v-model="cmd" @keyup.enter="process" autofocus>
-								<textarea v-model.trim="cmd" @keyup.enter="process" autofocus></textarea>
+								<textarea ref="cmdInput" v-model.trim="cmd" @keyup.enter="process" autofocus></textarea>
 							</p>
 					.terminal__window
 						.terminal__window_head Terminal

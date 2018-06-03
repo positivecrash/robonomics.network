@@ -79,10 +79,12 @@ new Vue({
         }
 
         this.cmd = '';
+        this.$refs.cmdInput.focus(); //set focus for input command
  
       },
 
       setCmd (e) {
+        this.$refs.cmdInput.focus(); //set focus for input command
         this.cmd = e.target.textContent;
       }
     },

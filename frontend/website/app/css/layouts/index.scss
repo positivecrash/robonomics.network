@@ -74,6 +74,8 @@
 	height: 85%;
     box-sizing: border-box;
     margin: 5px 10px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
 
     .input input, .input textarea{
     	@extend %terminal_text;

@@ -3109,6 +3109,8 @@ footer[role='contentinfo'] .sec-techs {
   height: 85%;
   box-sizing: border-box;
   margin: 5px 10px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }
 .terminal__window_content .input input, .terminal__window_content .input textarea {
   background-color: transparent;
