@@ -100,10 +100,8 @@ new Vue({
       },
 
       curStep () {
-        if ( this.step == 0 )
-          return Number(this.step)+1;
-        else
-          return this.step;
+          if(this.step < this.commands.length)
+            return Number(this.step)+1;
       },
 
       getCmd () {

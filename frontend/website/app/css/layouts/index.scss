@@ -3,6 +3,7 @@
 	padding-bottom: 0;
 
 	&, .secw-base { background-color: $c-gray-light; }
+	.col-md-5 { padding-right: 2% !important; }
 }
 
 
@@ -27,6 +28,22 @@
 		text-transform: uppercase;
 		display: block;
 		white-space: nowrap;
+	}
+}
+
+#index-terminal__info_cmd{
+	display: inline-block;
+	padding: 10px 15px;
+	border-radius: 2px;
+	background-color: darken($c-gray-light,5%);
+	letter-spacing: 1px;
+	@extend %link_noline;
+
+	&:before{
+		content:">";
+		font-weight: 500;
+		color: $c-gray-mid;
+		margin-right: 10px;
 	}
 }
 

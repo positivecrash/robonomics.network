@@ -1958,7 +1958,7 @@ input, select {
 /*====== Media queries ======*/
 /*====== Colors ======*/
 /*====== Classes ======*/
-a, .header-top__nav a, #header-link__down a, .sec-synopsis, .sec-contents > .secw-narrow a, a:hover, #header-link__down a:hover, .sec-synopsis:hover, .sec-contents > .secw-narrow a:hover, a:focus, #header-link__down a:focus, .sec-synopsis:focus, .sec-contents > .secw-narrow a:focus, a:visited, #header-link__down a:visited, .sec-synopsis:visited, .sec-contents > .secw-narrow a:visited {
+a, .header-top__nav a, #header-link__down a, .sec-synopsis, #index-terminal__info_cmd, .sec-contents > .secw-narrow a, a:hover, #header-link__down a:hover, .sec-synopsis:hover, #index-terminal__info_cmd:hover, .sec-contents > .secw-narrow a:hover, a:focus, #header-link__down a:focus, .sec-synopsis:focus, #index-terminal__info_cmd:focus, .sec-contents > .secw-narrow a:focus, a:visited, #header-link__down a:visited, .sec-synopsis:visited, #index-terminal__info_cmd:visited, .sec-contents > .secw-narrow a:visited {
   text-decoration: none;
   text-decoration: none !important;
 }
@@ -2134,10 +2134,10 @@ ul ul, ul ol, ol ul, ol ol {
   margin-top: 27px;
 }
 
-li, p, blockquote {
+li, p, blockquote, .m-b-base {
   margin-bottom: 27px;
 }
-li:last-child, p:last-child, blockquote:last-child {
+li:last-child, p:last-child, blockquote:last-child, .m-b-base:last-child {
   margin-bottom: 0;
 }
 
@@ -2181,8 +2181,8 @@ table td, table th {
 }
 
 .col-null {
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /*====== end of Margins & paddings ======*/
@@ -3061,6 +3061,9 @@ footer[role='contentinfo'] .sec-techs {
 #index-terminal, #index-terminal .secw-base {
   background-color: #F2F2F2;
 }
+#index-terminal .col-md-5 {
+  padding-right: 2% !important;
+}
 
 #index-terminal__info.row {
   padding-left: 10%;
@@ -3082,6 +3085,20 @@ footer[role='contentinfo'] .sec-techs {
   text-transform: uppercase;
   display: block;
   white-space: nowrap;
+}
+
+#index-terminal__info_cmd {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 2px;
+  background-color: #e5e5e5;
+  letter-spacing: 1px;
+}
+#index-terminal__info_cmd:before {
+  content: ">";
+  font-weight: 500;
+  color: #A0A0A0;
+  margin-right: 10px;
 }
 
 .terminal__window {

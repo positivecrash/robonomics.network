@@ -171,7 +171,7 @@ ul, ol
 	}
 
 
-li, p, blockquote
+li, p, blockquote, .m-b-base
 	{
 	  margin-bottom: $vertical-rythm;
 
@@ -231,9 +231,9 @@ table
 .m-b-0 { margin-bottom: 0; }
 
 .col-null {
-		margin: 0;
-		padding: 0;
-	}
+	margin: 0 !important;
+	padding: 0 !important;
+}
 
 /*====== end of Margins & paddings ======*/
 
