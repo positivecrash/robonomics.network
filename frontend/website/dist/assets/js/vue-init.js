@@ -1,5 +1,41 @@
+/*COMPONENTS*/
+
+/*Progress bar. Use anywhere you want*/
+Vue.component('progress-bar', {
+  props: {
+    max: Number,
+    val: Number
+  },
+  computed: {
+    width(){
+      let w = (100 / this.max) * this.val;
+
+      if(w > 100){
+        w = 100;
+      }
+      else if(w < 0){
+        w = 0;
+      }
+
+      return {
+        width: w + '%'
+      }
+    }
+  },
+  template: `
+<div class="progress">
+<div class="progress-bar" v-bind:style="width">
+</div>
+</div>
+`
+});
+
+
+
+
+
 new Vue({
-    el: '#app',
+    el: '#index-terminal',
     data: {
       cmd: '',
       step: '0',
@@ -50,15 +86,13 @@ new Vue({
       process () {
 
         this.$refs.cmdInput.focus(); //set focus for input command
+        
+
         this.history.push(this.cmd);
 
         var curInd = this.commands
           .map(function (element) { if (element) return element.command; })
           .indexOf(this.cmd);
-
-
-        console.log(this.cmd);
-        console.log(curInd);
 
 
         if ( curInd == this.step ){
@@ -85,20 +119,6 @@ new Vue({
     },
 
     computed: {
-      progress () {
-        if ( this.step < this.commands.length){
-          let w = (100 / this.commands.length) * this.step;
-          return{
-            width: w + '%'
-          }
-        }
-        else{
-          return{
-            width: '100%'
-          }
-        }
-      },
-
       curStep () {
           if(this.step < this.commands.length)
             return Number(this.step)+1;
@@ -110,4 +130,5 @@ new Vue({
       }
     }
 });
+
 

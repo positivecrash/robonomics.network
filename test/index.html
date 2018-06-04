@@ -7,14 +7,11 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
-    <div id="index-header-background">
+<!--     <div id="index-header-background">
         <svg width="800" height="200">
-            <dot v-for="(dot,i) in dots" v-bind:dots="dot" v-bind:key="dot.id"></dot>
+            <dot v-for="(dot,i) in dots" v-bind:dots="dot"></dot>
         </svg>
     </div>
-    <!-- <script type="text/x-template" id="index-header-background">
-        <dots-background></dots-background>
-    </script> -->
 
     <script type="text/javascript">
         Vue.component('dot', {
@@ -32,6 +29,40 @@
             }
         });
     </script>
+ -->
+
+
+     <div id="index-header-background">
+        <svg width="800" height="200">
+            <point :radius="3.5" :fillColor="#ccc"></point>
+        </svg>
+    </div>
+
+    <script type="text/javascript">
+        Vue.component('point', {
+          props: {
+            radius: Number,
+            fillColor: String
+          }
+          template: `<circle :cx="100" :cy="100" :fill="fillColor" :r="radius"></circle>`
+        });
+
+        new Vue({
+            el: '#index-header-background'
+            // data: {
+            //     dots: [
+            //         { id: 0, fill: '#ccc', r: '100' },
+            //         { id: 1, fill: 'red', r: '100' }
+            //     ],
+            //     methods: {
+            //       generate () {
+
+            //       }
+            //     }
+            // }
+        });
+    </script>
+
 
 
   </body>

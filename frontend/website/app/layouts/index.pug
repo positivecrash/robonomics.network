@@ -67,11 +67,10 @@ block content
 
 
 	section#index-terminal
-		#app.secw-base
+		#index-terminal.secw-base
 			.row
 				.col-md-5.col-null
-					.progress
-						.progress-bar(v-bind:style="progress")
+					progress-bar(:val="Number(curStep)", :max="Number(commands.length)")
 
 					#index-terminal__info.row
 						.col-3
