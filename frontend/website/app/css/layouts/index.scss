@@ -109,6 +109,37 @@
     }
 }
 
+#index-terminal-result{
+	padding: 0;
+}
+
+.index-terminal-result__step{
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+    height: 100%;
+}
+
+img.index-terminal-result__grid{
+	display: block;
+	width: image-width('Terminal-Result-1.png');
+	height: image-height('Terminal-Result-1.png');
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -(image-height('Terminal-Result-1.png')/2);
+	margin-left: -(image-width('Terminal-Result-1.png')/2);
+
+	transition: 0.8s opacity ease;
+	opacity: 0;
+	visibility: hidden;
+
+	&.active{
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
 
 .progress{
 	width: 100%;
