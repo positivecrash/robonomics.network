@@ -33,7 +33,7 @@ block content
 
 					.secw-base
 						#header-title: h1 ПЛАТФОРМА РОБОНОМИКИ
-						#header-subtitle Инфраструктура сети Ethereum для интеграции кибер-физических систем в умные города и Индустрии 4.0
+						#header-subtitle Инфраструктура сети Ethereum для интеграции кибер-физических систем в Умные города и Индустрию 4.0
 
 				#header-index__ethereum.snapsvgoutside-text.plaxify(data-xrange="10", data-yrange="10")
 					span e
@@ -70,19 +70,20 @@ block content
 		#index-terminal.secw-base
 			.row
 				.col-md-5.col-null
-					progress-bar(:val="Number(curStep)", :max="Number(commands.length)")
+					progress-bar(:val="Number(step)", :max="Number(commands.length)")
 
 					#index-terminal__info.row
-						.col-3
+						.col-lg-3
 							#index-terminal__step(v-if="curStep")
-								b {{ curStep }} шаг
+								b {{ step }} шаг
 								| из {{ commands.length }}
-						.col-9
+						.col-lg-9
 							h3(v-if="step == 0") Начало работы с сетью робономика
 							h3(v-if="step == 1") Обзор существующих рынков в сети
 							h3(v-if="step == 2") Обзор возможности рынка исполнить заказ
 							h3(v-if="step == 3") Выставление своего заказа на рынок 
 							h3(v-if="step == 4") Получение заказа
+							h3(v-if="step == 5") Поздравляем!
 
 							div.m-b-base.text-hyphened
 								div(v-if="step == 0")
@@ -94,16 +95,19 @@ block content
 									p Введите в терминале команду:
 
 								div(v-if="step == 2")
-									p Мы получили рынки. Теперь видим, что в сети Робономика есть рынок умных фабрик в Тольятти. Посмотрим, есть ли на нем кто-нибудь, готовый исполнить наш заказ (например, персонализированную вазу).
+									p Мы получили рынки. Теперь видим, что в сети Робономика есть три рынка: рынок автономных фабрик, рынок умных городов, рынок беспилотной логистики. Давайте выберем рынок автономных фабрик и посмотрим, есть ли на нем кто-нибудь и что там предлагают.
 									p Отправим запрос, введя в терминале команду:
 
 								div(v-if="step == 3")
-									p Теперь мы знаем, что на рынке есть участники, готовые исполнить наш заказ. Сформулируем предложение и выставим его на рынок. Сеть Робономики создаст для нас и умной фабрики контракт обязательства.
+									p Теперь мы знаем, что на рынке есть автономная фабрика, готовая исполнить заказ по производству персонализированных ваз. Сформулируем предложение, загрузив параметры вазы в ipfs, и выставим его на рынок. Сеть Робономики создаст для нас и умной фабрики контракт обязательства.
 									p Введите в терминале команду:
 
 								div(v-if="step == 4")
 									p Теперь начнём слушать событие об исполнении обязательства автономной фабрикой. Как только фабрика исполнит своё обязательство, мы получим лог её операций.
 									p Введите в терминале команду:
+
+								div(v-if="step == 5")
+									p Теперь ваш черед - создавайте новое поколение децентрализованных приложений для Умных городов и Индустрии 4.0 на платформе Робономика.
 
 							
 							p(v-if="getCmd"): a#index-terminal__info_cmd(href="#", @click.prevent="setCmd", title="Кликните, чтобы автоматически скопировать команду в терминал") {{ getCmd }}
@@ -120,12 +124,21 @@ block content
 					.terminal__window
 						.terminal__window_head Result
 						.terminal__window_content#index-terminal-result
-							.index-terminal-result__step
-								img.index-terminal-result__grid(v-bind:class="{'active' : (step == 0)}", alt="", src="assets/i/Terminal-Result-1.png", srcset="assets/i/Terminal-Result-1@2x.png")
-								img.index-terminal-result__grid(v-bind:class="{'active' : (step == 1)}", alt="", src="assets/i/Terminal-Result-2.png", srcset="assets/i/Terminal-Result-2@2x.png")
-								img.index-terminal-result__grid(v-bind:class="{'active' : (step == 2)}", alt="", src="assets/i/Terminal-Result-3.png", srcset="assets/i/Terminal-Result-3@2x.png")
-								img.index-terminal-result__grid(v-bind:class="{'active' : (step == 3)}", alt="", src="assets/i/Terminal-Result-4.png", srcset="assets/i/Terminal-Result-4@2x.png")
-								img.index-terminal-result__grid(v-bind:class="{'active' : (step == 4)}", alt="", src="assets/i/Terminal-Result-5.png", srcset="assets/i/Terminal-Result-5@2x.png")
+
+							.index-terminal-result__grid
+								img(v-bind:class="{'active' : (step >= 0)}", alt="", src="assets/i/Terminal-Result-1.png", srcset="assets/i/Terminal-Result-1@2x.png")
+								img(v-bind:class="{'active' : (step >= 1)}", alt="", src="assets/i/Terminal-Result-2.png", srcset="assets/i/Terminal-Result-2@2x.png")
+								img(v-bind:class="{'active' : (step >= 2)}", alt="", src="assets/i/Terminal-Result-3.png", srcset="assets/i/Terminal-Result-3@2x.png")
+								img(v-bind:class="{'active' : (step >= 3)}", alt="", src="assets/i/Terminal-Result-4.png", srcset="assets/i/Terminal-Result-4@2x.png")
+								img(v-bind:class="{'active' : (step >= 5)}", alt="", src="assets/i/Terminal-Result-5.png", srcset="assets/i/Terminal-Result-5@2x.png")
+							
+							.index-terminal-result__step(v-bind:class="{'active-step-3' : (step == 3), 'active-step-4' : (step == 4), 'active-step-5' : (step == 5)}")
+								img.index-terminal-result__factory(alt="", src="assets/i/factory.svg")
+								img.index-terminal-result__order(alt="", src="assets/i/Terminal-newOrder.svg")
+								.index-terminal-result__process
+									span.sprite-basic-hourglass
+								.index-terminal-result__ok
+									span.sprite-basic-ok
 
 					
 					

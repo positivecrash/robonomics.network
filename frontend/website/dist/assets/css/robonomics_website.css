@@ -2205,11 +2205,21 @@ table td, table th {
 }
 
 /*====== end of Other ======*/
-.hamburger, .nav-mobilehide, #logo-ethereum, #header-logo-robonomics, .logo-robonomics .dot, #header-index .snapsvgoutside-text span, .contentBlock-token__info .logo-robonomics-outline circle, .sec-contents > .secw-narrow a:not(.js-expand-toggle):after, .js-listexpand .hidden {
+.hamburger, .nav-mobilehide, #logo-ethereum, #header-logo-robonomics, .logo-robonomics .dot, #header-index .snapsvgoutside-text span, .index-terminal-result__grid img, .index-terminal-result__step > *, .contentBlock-token__info .logo-robonomics-outline circle, .sec-contents > .secw-narrow a:not(.js-expand-toggle):after, .js-listexpand .hidden {
   visibility: hidden;
   opacity: 0;
 }
 
+@keyframes FadeOut {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
 @keyframes FadeIn {
   0% {
     visibility: hidden;
@@ -2393,11 +2403,11 @@ span.loader {
   color: #fff;
 }
 
-.svg .sprite-basic-aira, .svg .sprite-basic-anchor, .svg .sprite-basic-ethereum, .svg .sprite-basic-expand-arrow, .svg .sprite-basic-ipfs, .svg .sprite-basic-nixos, .svg .sprite-basic-ros, .svg .sec-contents > .secw-narrow a:not(.js-expand-toggle):after, .svg .sec-contents a.js-expand-toggle:after {
+.svg .sprite-basic-aira, .svg .sprite-basic-anchor, .svg .sprite-basic-ethereum, .svg .sprite-basic-expand-arrow, .svg .sprite-basic-hourglass, .svg .sprite-basic-ipfs, .svg .sprite-basic-nixos, .svg .sprite-basic-ok, .svg .sprite-basic-ros, .svg .sec-contents > .secw-narrow a:not(.js-expand-toggle):after, .svg .sec-contents a.js-expand-toggle:after {
   background-image: url("../i/sprite.svg?1");
 }
 
-.sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-ipfs, .sprite-basic-nixos, .sprite-basic-ros, .sec-contents > .secw-narrow a:not(.js-expand-toggle):after, .sec-contents a.js-expand-toggle:after {
+.sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-hourglass, .sprite-basic-ipfs, .sprite-basic-nixos, .sprite-basic-ok, .sprite-basic-ros, .sec-contents > .secw-narrow a:not(.js-expand-toggle):after, .sec-contents a.js-expand-toggle:after {
   background-image: url("../i/sprite.png?1");
 }
 
@@ -2429,24 +2439,38 @@ span.loader {
   display: inline-block;
 }
 
+.sprite-basic-hourglass {
+  width: 21.32px;
+  height: 25.58px;
+  background-position: -167px 0px;
+  display: inline-block;
+}
+
 .sprite-basic-ipfs {
   width: 103.48px;
   height: 45.02px;
-  background-position: -167px 0px;
+  background-position: -189px 0px;
   display: inline-block;
 }
 
 .sprite-basic-nixos {
   width: 121.4px;
   height: 36.65px;
-  background-position: -271px 0px;
+  background-position: -293px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-ok {
+  width: 27.96px;
+  height: 19.66px;
+  background-position: -415px 0px;
   display: inline-block;
 }
 
 .sprite-basic-ros {
   width: 87.51px;
   height: 23.15px;
-  background-position: -393px 0px;
+  background-position: -443px 0px;
   display: inline-block;
 }
 
@@ -3156,16 +3180,10 @@ footer[role='contentinfo'] .sec-techs {
 
 #index-terminal-result {
   padding: 0;
-}
-
-.index-terminal-result__step {
-  overflow: hidden;
   position: relative;
-  width: 100%;
-  height: 100%;
 }
 
-img.index-terminal-result__grid {
+.index-terminal-result__grid img {
   display: block;
   width: 689px;
   height: 263px;
@@ -3174,15 +3192,122 @@ img.index-terminal-result__grid {
   left: 50%;
   margin-top: -131.5px;
   margin-left: -344.5px;
-  transition: 0.8s opacity ease;
-  opacity: 0;
-  visibility: hidden;
 }
-img.index-terminal-result__grid.active {
-  opacity: 1;
-  visibility: visible;
+.index-terminal-result__grid img.active {
+  animation: 0.8s FadeIn 0.2s ease-in-out forwards;
 }
 
+.index-terminal-result__step {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.index-terminal-result__step .index-terminal-result__factory {
+  width: 96px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -35px;
+  margin-top: -48px;
+  transform: scale(0);
+}
+.index-terminal-result__step .index-terminal-result__order {
+  width: 120px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  transform: scale(0);
+}
+.index-terminal-result__step .index-terminal-result__process, .index-terminal-result__step .index-terminal-result__ok {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -65px;
+  margin-left: 60px;
+}
+.index-terminal-result__step .index-terminal-result__ok {
+  background-color: #54CE63;
+}
+.index-terminal-result__step .index-terminal-result__factory, .index-terminal-result__step .index-terminal-result__order, .index-terminal-result__step .index-terminal-result__process, .index-terminal-result__step .index-terminal-result__ok {
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.index-terminal-result__step.active-step-3 .index-terminal-result__factory {
+  animation-name: FadeIn, ScaleIn;
+  animation-duration: 1.2s, 0.4s;
+  animation-delay: 1s, 1.4s;
+}
+.index-terminal-result__step.active-step-4 .index-terminal-result__factory {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+.index-terminal-result__step.active-step-4 .index-terminal-result__order {
+  animation-name: FadeIn, ScaleIn, TerminalOrderMove;
+  animation-delay: 0s, 0s, 1.6s;
+  animation-duration: 1.2s, 0.4s, 0.8s;
+}
+.index-terminal-result__step.active-step-4 .index-terminal-result__process {
+  animation-name: FadeIn, ScaleIn, FadeOut;
+  animation-delay: 2.4s, 2.2s, 6s;
+  animation-duration: 0.6s, 0.2s, 0.2s;
+}
+.index-terminal-result__step.active-step-4 .sprite-basic-hourglass {
+  animation: HourglassSpin 1.5s ease-in-out 2.8s infinite;
+  animation-iteration-count: 3;
+}
+.index-terminal-result__step.active-step-4 .index-terminal-result__ok {
+  animation-name: FadeIn, ScaleIn;
+  animation-delay: 6.4s, 6.2s;
+  animation-duration: 0.6s, 0.2s;
+}
+.index-terminal-result__step.active-step-5 .index-terminal-result__factory {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  animation-name: FactoryScaleOut, FadeOut;
+  animation-delay: 0.2s, 0.8s;
+  animation-duration: 0.8s, 1.5s;
+  transform-origin: 50% 50%;
+}
+
+@keyframes FactoryScaleOut {
+  0% {
+    transform: scale(1);
+    transform-origin: 50% 50%;
+  }
+  100% {
+    transform: scale(12);
+    transform-origin: 50% 80%;
+  }
+}
+@keyframes TerminalOrderMove {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    transform: translateX(250px) scale(0);
+  }
+}
+@keyframes HourglassSpin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .progress {
   width: 100%;
   background-color: #ccc;

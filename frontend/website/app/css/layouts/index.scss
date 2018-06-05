@@ -111,34 +111,177 @@
 
 #index-terminal-result{
 	padding: 0;
+	position: relative;
 }
+
+.index-terminal-result__grid{
+	img{
+		display: block;
+		width: image-width('Terminal-Result-1.png');
+		height: image-height('Terminal-Result-1.png');
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -(image-height('Terminal-Result-1.png')/2);
+		margin-left: -(image-width('Terminal-Result-1.png')/2);
+		@extend %FadeOut;
+
+		&.active{
+			animation: 0.8s FadeIn 0.2s ease-in-out forwards;
+		}
+	}
+	
+}
+
 
 .index-terminal-result__step{
 	overflow: hidden;
-	position: relative;
 	width: 100%;
     height: 100%;
-}
+    position: absolute;
+    top: 0;
+    left: 0;
 
-img.index-terminal-result__grid{
-	display: block;
-	width: image-width('Terminal-Result-1.png');
-	height: image-height('Terminal-Result-1.png');
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -(image-height('Terminal-Result-1.png')/2);
-	margin-left: -(image-width('Terminal-Result-1.png')/2);
+	.index-terminal-result__factory{
+		width: 96px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -35px;
+		margin-top: -48px;
+		// margin-left: -80px;
+		// margin-top: -48px;
+		transform: scale(0);
+	}
 
-	transition: 0.8s opacity ease;
-	opacity: 0;
-	visibility: hidden;
+	.index-terminal-result__order{
+		width: 120px;
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		transform: scale(0);
+	}
 
-	&.active{
-		opacity: 1;
-		visibility: visible;
+	.index-terminal-result__process, .index-terminal-result__ok{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 46px;
+		height: 46px;
+		background-color: #fff;
+		border:1px solid #000;
+		border-radius: 23px;
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+	    margin-top: -65px;
+    	margin-left: 60px;
+	}
+
+	.index-terminal-result__ok{
+		background-color: $c-green;
+	}
+
+	& > *{
+		@extend %FadeOut;
+	}
+	
+	.index-terminal-result__factory, .index-terminal-result__order, .index-terminal-result__process, .index-terminal-result__ok{
+			
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+
+		// animation: FadeIn 0.8s ease-in-out 1.4s forwards, ScaleIn 0.4s ease-in-out 1.4s forwards;
+	}
+
+	&.active-step-3{
+		.index-terminal-result__factory{
+			animation-name: FadeIn, ScaleIn;
+			animation-duration: 1.2s, 0.4s;
+			animation-delay: 1s, 1.4s;
+		}
+	}
+
+
+	&.active-step-4{
+
+		.index-terminal-result__factory{
+		 	visibility: visible;
+			opacity: 1;
+			transform: scale(1);
+		}
+		
+		.index-terminal-result__order{
+			animation-name: FadeIn, ScaleIn, TerminalOrderMove;
+			animation-delay: 0s, 0s, 1.6s;
+			animation-duration: 1.2s, 0.4s, 0.8s;
+		}
+
+		.index-terminal-result__process{
+			animation-name: FadeIn, ScaleIn, FadeOut;
+			animation-delay: 2.4s, 2.2s, 6s;
+			animation-duration: 0.6s, 0.2s, 0.2s;
+		}
+
+		.sprite-basic-hourglass{
+			animation: HourglassSpin 1.5s ease-in-out 2.8s infinite;
+			animation-iteration-count: 3;
+		}
+
+		.index-terminal-result__ok{
+			animation-name: FadeIn, ScaleIn;
+			animation-delay: 6.4s, 6.2s;
+			animation-duration: 0.6s, 0.2s;
+		}
+
+	}
+
+	&.active-step-5{
+		.index-terminal-result__factory{
+		 	visibility: visible;
+			opacity: 1;
+			transform: scale(1);
+
+			animation-name: FactoryScaleOut, FadeOut;
+			animation-delay: 0.2s, 0.8s;
+			animation-duration: 0.8s, 1.5s;
+			transform-origin: 50% 50%;
+		}
 	}
 }
+
+@keyframes FactoryScaleOut
+	{
+	  0% {
+	    transform: scale(1);
+	    transform-origin: 50% 50%;
+	  }
+	  100% {
+	    transform: scale(12);
+	    transform-origin: 50% 80%;
+	  }
+	}
+
+@keyframes TerminalOrderMove
+	{
+	  0% {
+	    transform: translateX(0) scale(1);
+	  }
+	  100% {
+	    transform: translateX(250px) scale(0);
+	  }
+	}
+
+@keyframes HourglassSpin
+	{
+	  0% {
+	    transform: rotate(0);
+	  }
+	  100% {
+	    transform: rotate(360deg);
+	  }
+	}
+
 
 
 .progress{

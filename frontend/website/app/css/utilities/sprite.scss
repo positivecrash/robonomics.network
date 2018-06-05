@@ -1,12 +1,14 @@
 $icons: (
-    sprite: (width: 481px, height: 58.02px, pngPath: '../i/sprite.png?1', svgPath: '../i/sprite.svg?1'),
+    sprite: (width: 531px, height: 58.02px, pngPath: '../i/sprite.png?1', svgPath: '../i/sprite.svg?1'),
     aira: (width: 100.23px, height: 23.44px, backgroundX: 0px, backgroundY: 0px),
     anchor: (width: 15.08px, height: 17.09px, backgroundX: -101px, backgroundY: 0px),
     ethereum: (width: 35.84px, height: 58.02px, backgroundX: -117px, backgroundY: 0px),
     expand-arrow: (width: 13.13px, height: 18.67px, backgroundX: -153px, backgroundY: 0px),
-    ipfs: (width: 103.48px, height: 45.02px, backgroundX: -167px, backgroundY: 0px),
-    nixos: (width: 121.4px, height: 36.65px, backgroundX: -271px, backgroundY: 0px),
-    ros: (width: 87.51px, height: 23.15px, backgroundX: -393px, backgroundY: 0px),
+    hourglass: (width: 21.32px, height: 25.58px, backgroundX: -167px, backgroundY: 0px),
+    ipfs: (width: 103.48px, height: 45.02px, backgroundX: -189px, backgroundY: 0px),
+    nixos: (width: 121.4px, height: 36.65px, backgroundX: -293px, backgroundY: 0px),
+    ok: (width: 27.96px, height: 19.66px, backgroundX: -415px, backgroundY: 0px),
+    ros: (width: 87.51px, height: 23.15px, backgroundX: -443px, backgroundY: 0px),
 );
 
 $sprite: map-get($icons, sprite);
@@ -41,12 +43,20 @@ $sprite: map-get($icons, sprite);
   @include get-sprite('expand-arrow');
   display: inline-block;
 }
+.sprite-basic-hourglass{
+  @include get-sprite('hourglass');
+  display: inline-block;
+}
 .sprite-basic-ipfs{
   @include get-sprite('ipfs');
   display: inline-block;
 }
 .sprite-basic-nixos{
   @include get-sprite('nixos');
+  display: inline-block;
+}
+.sprite-basic-ok{
+  @include get-sprite('ok');
   display: inline-block;
 }
 .sprite-basic-ros{
