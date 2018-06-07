@@ -72,6 +72,8 @@ block content
 				.col-md-5.col-null
 					progress-bar(:val="Number(step)", :max="Number(commands.length)")
 
+					a(href="#", @click.prevent="setCmdByClick(5)") Step 5
+
 					#index-terminal__info.row
 						.col-lg-3
 							#index-terminal__step(v-if="curStep")
@@ -110,7 +112,7 @@ block content
 									p Теперь ваш черед - создавайте новое поколение децентрализованных приложений для Умных городов и Индустрии 4.0 на платформе Робономика.
 
 							
-							p(v-if="getCmd"): a#index-terminal__info_cmd(href="#", @click.prevent="setCmd", title="Кликните, чтобы автоматически скопировать команду в терминал") {{ getCmd }}
+							p(v-if="getCmd"): a#index-terminal__info_cmd(href="#", @click.prevent="setCmdByButton", title="Кликните, чтобы автоматически скопировать команду в терминал") {{ getCmd }}
 
 				.col-md-7.col-null
 					.terminal__window
@@ -139,6 +141,10 @@ block content
 									span.sprite-basic-hourglass
 								.index-terminal-result__ok
 									span.sprite-basic-ok
+
+								#terminal-way-up
+									img(alt="", src="assets/i/Terminal-way.svg")
+								#terminal-way-down
 
 					
 					

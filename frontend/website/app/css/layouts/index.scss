@@ -184,15 +184,17 @@
 
 	& > *{
 		@extend %FadeOut;
-	}
-	
-	.index-terminal-result__factory, .index-terminal-result__order, .index-terminal-result__process, .index-terminal-result__ok{
-			
 		animation-timing-function: ease-in-out;
 		animation-fill-mode: forwards;
-
-		// animation: FadeIn 0.8s ease-in-out 1.4s forwards, ScaleIn 0.4s ease-in-out 1.4s forwards;
 	}
+	
+	// .index-terminal-result__factory, .index-terminal-result__order, .index-terminal-result__process, .index-terminal-result__ok{
+			
+	// 	animation-timing-function: ease-in-out;
+	// 	animation-fill-mode: forwards;
+
+	// 	// animation: FadeIn 0.8s ease-in-out 1.4s forwards, ScaleIn 0.4s ease-in-out 1.4s forwards;
+	// }
 
 	&.active-step-3{
 		.index-terminal-result__factory{
@@ -224,7 +226,7 @@
 		}
 
 		.sprite-basic-hourglass{
-			animation: HourglassSpin 1.5s ease-in-out 2.8s infinite;
+			animation: HourglassSpin 1.5s ease-in-out 2.8s;
 			animation-iteration-count: 3;
 		}
 
@@ -246,6 +248,50 @@
 			animation-delay: 0.2s, 0.8s;
 			animation-duration: 0.8s, 1.5s;
 			transform-origin: 50% 50%;
+		}
+
+		#terminal-way-down, #terminal-way-up{
+			animation-delay: 1.4s, 1.4s;
+			animation-duration: 0.4s, 0.8s;
+			transform-origin: 50% 100%;
+		}
+
+		#terminal-way-down{
+			background-color: #707070;
+			width: 100%;
+			height: 27px;
+			position: absolute;
+			bottom: 0;
+
+			transform: translateY(30px) scaleY(0);
+
+			animation-name: FadeIn, TerminalWayScale1;
+		}
+
+		#terminal-way-up{
+			background-color: #919295;
+			width: 100%;
+			height: 7px;
+			position: absolute;
+			bottom: 27px;
+
+			transform: translateY(40px) scaleY(0);
+
+			animation-name: FadeIn, TerminalWayScale2;
+
+			img{
+				position: absolute;
+				left: 0;
+				top: 0;
+
+				transform: translateX(0);
+				animation-name: TerminalWayGo;
+				animation-delay: 1.8s;
+				animation-duration: 10s;
+				animation-timing-function: ease-in-out;
+				animation-iteration-count: infinite;
+				// animation-iteration-count: 10;
+			}
 		}
 	}
 }
@@ -281,6 +327,44 @@
 	    transform: rotate(360deg);
 	  }
 	}
+
+@keyframes TerminalWayScale1
+	{
+	  0% {
+	    transform: translateY(30px) scaleY(0);
+	  }
+	  70%{
+	  	transform: translateY(-30px) scaleY(1.4);
+	  }
+	  100% {
+	    transform: translateY(0) scaleY(1);
+	  }
+	}
+
+@keyframes TerminalWayScale2
+	{
+	  0% {
+	    transform: translateY(37px) scaleY(0);
+	  }
+	  70%{
+	  	transform: translateY(-50px) scaleY(1.6);
+	  }
+	  100% {
+	    transform: translateY(0) scaleY(1);
+	  }
+	}
+
+@keyframes TerminalWayGo{
+	0%{
+		transform: translateX(0);
+	}
+	50%{
+		transform: translateX(552px);
+	}
+	100%{
+		transform: translateX(0);
+	}
+}
 
 
 

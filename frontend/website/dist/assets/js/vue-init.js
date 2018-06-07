@@ -72,7 +72,7 @@ new Vue({
           {command: `liability.getResult(result => console.log(result); console.log(r.fancyResult(result))`, result: `“QmWboFP8XeBtFMbNYK3Ne8Z3gKFBSR5iQzkKgeNgQz3dz2” 
 
 +-----------+---------+------+
-| std_msgs/String | /avg_speed | 47 km/h|
+|std_msgs/String | /avg_speed | 47 km/h|
 |std_msgs/String | /high_speed | 167 km/h |
 |std_msgs/String | /distance | 111 km |
 |std_msgs/String | /avg_engine_temperature | 85 C |
@@ -112,9 +112,15 @@ new Vue({
  
       },
 
-      setCmd (e) {
+      setCmdByButton (e) {
         this.$refs.cmdInput.focus(); //set focus for input command
         this.cmd = e.target.textContent;
+      },
+
+      setCmdByClick (step) { //доделать
+        this.step = step;
+        this.cmd = this.commands[step].command;
+        this.process();
       }
     },
 

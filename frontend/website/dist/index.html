@@ -94,7 +94,7 @@
       <div class="secw-base" id="index-terminal">
         <div class="row">
           <div class="col-md-5 col-null">
-            <progress-bar :val="Number(step)" :max="Number(commands.length)"></progress-bar>
+            <progress-bar :val="Number(step)" :max="Number(commands.length)"></progress-bar><a href="#" @click.prevent="setCmdByClick(5)">Step 5</a>
             <div class="row" id="index-terminal__info">
               <div class="col-lg-3">
                 <div id="index-terminal__step" v-if="curStep"><b>{{ step }} шаг</b>из {{ commands.length }}</div>
@@ -131,7 +131,7 @@
                     <p>Теперь ваш черед - создавайте новое поколение децентрализованных приложений для Умных городов и Индустрии 4.0 на платформе Робономика.</p>
                   </div>
                 </div>
-                <p v-if="getCmd"><a id="index-terminal__info_cmd" href="#" @click.prevent="setCmd" title="Кликните, чтобы автоматически скопировать команду в терминал">{{ getCmd }}</a></p>
+                <p v-if="getCmd"><a id="index-terminal__info_cmd" href="#" @click.prevent="setCmdByButton" title="Кликните, чтобы автоматически скопировать команду в терминал">{{ getCmd }}</a></p>
               </div>
             </div>
           </div>
@@ -152,6 +152,8 @@
                 <div class="index-terminal-result__step" v-bind:class="{'active-step-3' : (step == 3), 'active-step-4' : (step == 4), 'active-step-5' : (step == 5)}"><img class="index-terminal-result__factory" alt="" src="assets/i/factory.svg"><img class="index-terminal-result__order" alt="" src="assets/i/Terminal-newOrder.svg">
                   <div class="index-terminal-result__process"><span class="sprite-basic-hourglass"></span></div>
                   <div class="index-terminal-result__ok"><span class="sprite-basic-ok"></span></div>
+                  <div id="terminal-way-up"><img alt="" src="assets/i/Terminal-way.svg"></div>
+                  <div id="terminal-way-down"></div>
                 </div>
               </div>
             </div>
