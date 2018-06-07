@@ -279,19 +279,52 @@
 
 			animation-name: FadeIn, TerminalWayScale2;
 
-			img{
+			span{
+				display: block;
 				position: absolute;
 				left: 0;
 				top: 0;
+				right: 0;
+				height: 7px;
 
-				transform: translateX(0);
 				animation-name: TerminalWayGo;
-				animation-delay: 1.8s;
-				animation-duration: 10s;
-				animation-timing-function: ease-in-out;
+				animation-delay: 2.2s;
+				animation-duration: 15s;
+				animation-timing-function: linear;
 				animation-iteration-count: infinite;
-				// animation-iteration-count: 10;
+
+				background-image: image_url('Terminal-way.svg');
+				background-repeat: repeat-x;
+				background-position: 0 0;
 			}
+
+		}
+
+		#terminal-cars{
+			animation-name: FadeIn;
+			animation-delay: 2.4s;
+
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: 126px;
+			bottom: 35px;
+		}
+
+		#terminal-car-0{
+			background-image: image_url('Terminal-car-1.svg');
+			background-repeat: repeat-x;
+			background-position: 0 0;
+
+			width: 100%;
+			height: 100%;
+
+			animation-name: TerminalWayGo;
+			animation-delay: 1.8s;
+			animation-duration: 5s;
+			animation-timing-function: linear;
+			animation-iteration-count: 1.5;
+			animation-fill-mode: forwards;
 		}
 	}
 }
@@ -356,13 +389,10 @@
 
 @keyframes TerminalWayGo{
 	0%{
-		transform: translateX(0);
-	}
-	50%{
-		transform: translateX(552px);
+		background-position: 0 0;
 	}
 	100%{
-		transform: translateX(0);
+		background-position: 100% 0;
 	}
 }
 

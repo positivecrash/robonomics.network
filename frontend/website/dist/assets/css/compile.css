@@ -3304,16 +3304,43 @@ footer[role='contentinfo'] .sec-techs {
   transform: translateY(40px) scaleY(0);
   animation-name: FadeIn, TerminalWayScale2;
 }
-.index-terminal-result__step.active-step-5 #terminal-way-up img {
+.index-terminal-result__step.active-step-5 #terminal-way-up span {
+  display: block;
   position: absolute;
   left: 0;
   top: 0;
-  transform: translateX(0);
+  right: 0;
+  height: 7px;
+  animation-name: TerminalWayGo;
+  animation-delay: 2.2s;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  background-image: url('../i/Terminal-way.svg?1528396641');
+  background-repeat: repeat-x;
+  background-position: 0 0;
+}
+.index-terminal-result__step.active-step-5 #terminal-cars {
+  animation-name: FadeIn;
+  animation-delay: 2.4s;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 126px;
+  bottom: 35px;
+}
+.index-terminal-result__step.active-step-5 #terminal-car-0 {
+  background-image: url('../i/Terminal-car-1.svg?1528397430');
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  width: 100%;
+  height: 100%;
   animation-name: TerminalWayGo;
   animation-delay: 1.8s;
-  animation-duration: 10s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1.5;
+  animation-fill-mode: forwards;
 }
 
 @keyframes FactoryScaleOut {
@@ -3366,13 +3393,10 @@ footer[role='contentinfo'] .sec-techs {
 }
 @keyframes TerminalWayGo {
   0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(552px);
+    background-position: 0 0;
   }
   100% {
-    transform: translateX(0);
+    background-position: 100% 0;
   }
 }
 .progress {
