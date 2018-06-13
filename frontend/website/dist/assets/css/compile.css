@@ -3205,7 +3205,7 @@ footer[role='contentinfo'] .sec-techs {
   top: 0;
   left: 0;
 }
-.index-terminal-result__step .index-terminal-result__factory {
+.index-terminal-result__step #index-terminal-result__factory {
   width: 96px;
   position: absolute;
   top: 50%;
@@ -3214,14 +3214,14 @@ footer[role='contentinfo'] .sec-techs {
   margin-top: -48px;
   transform: scale(0);
 }
-.index-terminal-result__step .index-terminal-result__order {
+.index-terminal-result__step #index-terminal-result__ordernew {
   width: 120px;
   position: absolute;
   top: 15px;
   left: 15px;
   transform: scale(0);
 }
-.index-terminal-result__step .index-terminal-result__process, .index-terminal-result__step .index-terminal-result__ok {
+.index-terminal-result__step #index-terminal-result__process, .index-terminal-result__step #index-terminal-result__ok {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -3236,14 +3236,14 @@ footer[role='contentinfo'] .sec-techs {
   margin-top: -65px;
   margin-left: 60px;
 }
-.index-terminal-result__step .index-terminal-result__ok {
+.index-terminal-result__step #index-terminal-result__ok {
   background-color: #54CE63;
 }
 .index-terminal-result__step > * {
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
-.index-terminal-result__step.active-step-3 .index-terminal-result__factory {
+.index-terminal-result__step.active-step-3 #index-terminal-result__factory {
   animation-name: FadeIn, ScaleIn;
   animation-duration: 1.2s, 0.4s;
   animation-delay: 1s, 1.4s;
@@ -3253,12 +3253,12 @@ footer[role='contentinfo'] .sec-techs {
   opacity: 1;
   transform: scale(1);
 }
-.index-terminal-result__step.active-step-4 .index-terminal-result__order {
+.index-terminal-result__step.active-step-4 #index-terminal-result__ordernew {
   animation-name: FadeIn, ScaleIn, TerminalOrderMove;
   animation-delay: 0s, 0s, 1.6s;
   animation-duration: 1.2s, 0.4s, 0.8s;
 }
-.index-terminal-result__step.active-step-4 .index-terminal-result__process {
+.index-terminal-result__step.active-step-4 #index-terminal-result__process {
   animation-name: FadeIn, ScaleIn, FadeOut;
   animation-delay: 2.4s, 2.2s, 6s;
   animation-duration: 0.6s, 0.2s, 0.2s;
@@ -3267,7 +3267,7 @@ footer[role='contentinfo'] .sec-techs {
   animation: HourglassSpin 1.5s ease-in-out 2.8s;
   animation-iteration-count: 3;
 }
-.index-terminal-result__step.active-step-4 .index-terminal-result__ok {
+.index-terminal-result__step.active-step-4 #index-terminal-result__ok {
   animation-name: FadeIn, ScaleIn;
   animation-delay: 6.4s, 6.2s;
   animation-duration: 0.6s, 0.2s;
