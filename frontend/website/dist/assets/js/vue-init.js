@@ -119,14 +119,14 @@ new Vue({
 
       setCmdByClick (step) { //доделать
         this.step = step;
-        this.cmd = this.commands[step].command;
+        this.cmd = this.commands[this.step].command;
         this.process();
       }
     },
 
     computed: {
       curStep () {
-          if(this.step < this.commands.length)
+          if(this.step <= this.commands.length)
             return Number(this.step)+1;
       },
 
