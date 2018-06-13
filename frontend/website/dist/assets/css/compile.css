@@ -2244,14 +2244,11 @@ table td, table th {
   }
 }
 @keyframes BounceVertical {
-  0% {
-    transform: translateY(0px);
-  }
   50% {
-    transform: translateY(3px);
+    transform: translateY(4px);
   }
   100% {
-    transform: translateY(-3px);
+    transform: translateY(0);
   }
 }
 .anyslide[data-anyslide~='controls'] {
@@ -3239,6 +3236,12 @@ footer[role='contentinfo'] .sec-techs {
 .index-terminal-result__step #index-terminal-result__ok {
   background-color: #54CE63;
 }
+.index-terminal-result__step #index-terminal-result__orderdone {
+  width: 70px;
+  position: absolute;
+  top: 15px;
+  left: 72px;
+}
 .index-terminal-result__step > * {
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
@@ -3335,6 +3338,12 @@ footer[role='contentinfo'] .sec-techs {
   animation-timing-function: linear;
   animation-fill-mode: forwards;
   background-size: 1202px 102px;
+}
+.index-terminal-result__step.active-step-5 #index-terminal-result__orderdone {
+  animation-name: FadeIn, BounceVertical;
+  animation-delay: 6.4s, 6.4s;
+  animation-duration: 0.4s, 1.6s;
+  animation-iteration-count: 1, infinite;
 }
 
 @keyframes FactoryScaleOut {

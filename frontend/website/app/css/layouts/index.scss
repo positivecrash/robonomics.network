@@ -180,6 +180,13 @@
 		background-color: $c-green;
 	}
 
+	#index-terminal-result__orderdone{
+		width: 70px;
+		position: absolute;
+		top: 15px;
+		left: 72px;
+	}
+
 	& > *{
 		@extend %FadeOut;
 		animation-timing-function: ease-in-out;
@@ -288,7 +295,6 @@
 				background-repeat: repeat-x;
 				background-position: 0 0;
 			}
-
 		}
 
 		#terminal-cars{
@@ -309,6 +315,13 @@
 			animation-fill-mode: forwards;
 
 			background-size: 1202px 102px;
+		}
+
+		#index-terminal-result__orderdone{
+			animation-name: FadeIn, BounceVertical;
+			animation-delay: 6.4s, 6.4s;
+			animation-duration: 0.4s, 1.6s;
+			animation-iteration-count: 1, infinite;
 		}
 	}
 }
