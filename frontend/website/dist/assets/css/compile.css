@@ -3315,7 +3315,7 @@ footer[role='contentinfo'] .sec-techs {
   animation-delay: 2.2s;
   animation-duration: 15s;
   animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 0.3;
   background-image: url('../i/Terminal-way.svg?1528396641');
   background-repeat: repeat-x;
   background-position: 0 0;
