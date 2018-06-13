@@ -3248,7 +3248,7 @@ footer[role='contentinfo'] .sec-techs {
   animation-duration: 1.2s, 0.4s;
   animation-delay: 1s, 1.4s;
 }
-.index-terminal-result__step.active-step-4 .index-terminal-result__factory {
+.index-terminal-result__step.active-step-4 #index-terminal-result__factory {
   visibility: visible;
   opacity: 1;
   transform: scale(1);
@@ -3272,7 +3272,7 @@ footer[role='contentinfo'] .sec-techs {
   animation-delay: 6.4s, 6.2s;
   animation-duration: 0.6s, 0.2s;
 }
-.index-terminal-result__step.active-step-5 .index-terminal-result__factory {
+.index-terminal-result__step.active-step-5 #index-terminal-result__factory {
   visibility: visible;
   opacity: 1;
   transform: scale(1);

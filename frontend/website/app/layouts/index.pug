@@ -135,7 +135,7 @@ block content
 								img(v-bind:class="{'active' : (step >= 5)}", alt="", src="assets/i/Terminal-Result-5.png", srcset="assets/i/Terminal-Result-5@2x.png")
 							
 							.index-terminal-result__step(v-bind:class="{'active-step-3' : (step == 3), 'active-step-4' : (step == 4), 'active-step-5' : (step == 5)}")
-								img.index-terminal-result__factory(alt="", src="assets/i/factory.svg")
+								img#index-terminal-result__factory(alt="", src="assets/i/factory.svg")
 								img.index-terminal-result__order(alt="", src="assets/i/Terminal-newOrder.svg")
 								.index-terminal-result__process
 									span.sprite-basic-hourglass
@@ -151,9 +151,9 @@ block content
 					
 					
 					
-		script(src="assets/js/vue.js")
-		//- script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
-		script(src='assets/js/vue-init.js')
+	script(src="assets/js/vue.js")
+	//- script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
+	script(src='assets/js/vue-init.js')
 
 
 
