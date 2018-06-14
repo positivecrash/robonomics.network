@@ -39,8 +39,8 @@ new Vue({
     data: {
       cmd: '',
       step: '0',
-      prevstep: '0',
-      gonext: true,
+      maxstep: '5',
+      position: '0',
       history: [],
       commands: [
           {command: `r = new Robonomics()`, result: `Robonomics({version: 0})`},
@@ -79,127 +79,100 @@ new Vue({
 |std_msgs/String | /distance | 111 km |
 |std_msgs/String | /avg_engine_temperature | 85 C |
 |std_msgs/String | /tyres_check | ok |
-|std_msgs/String | /Cruise_control_module | ok |`}
+|std_msgs/String | /Cruise_control_module | ok |`},
+    {command: `exit`, result: `done`}
         ],
     },
     
     methods: {
 
-      setcmd(cmd) {
-        console.log('setcmd');
-        this.cmd = cmd;
+      getstep(step) {
+        if (this.cmd){
+          this.position = this.commands.map(function (element) { if (element) return element.command; }).indexOf(this.cmd);
+
+          if ( (this.position < this.maxstep) && (this.position >= 0))
+            this.step = this.position;
+        }
+        else if (step){
+          this.step = step;
+          this.position = this.step;
+        }
+        else {
+          console.log('Missing info for getting step');
+        }
+      },
+
+      getcmd(e) {
+        
+        if(e.target.textContent){ // by click (should be text with command inside the element)
+          this.cmd = e.target.textContent;
+        }
+        else if (this.step){ // by current step
+          this.cmd = this.commands[this.step].command;
+        }
+        else {
+          console.log('Missing info for getting command');
+        }
       },
 
       cmddisplay() {
-        console.log('cmddisplay');
         if (this.cmd)
           this.history.push(this.cmd);
       },
 
       cmdresponse() {
-        console.log('cmdresponse');
 
-        console.log('PREVSTEP ' + this.prevstep);
-
-        var curInd = this.commands
-          .map(function (element) { if (element) return element.command; })
-          .indexOf(this.cmd);
-
-        if (  ( curInd < 0 ) || ( curInd === undefined ) ) {
-            if(this.prevstep == (this.commands.length-1)){
-              this.history.push('exit');
-              this.history.push('You are done with the lesson. Please, follow our further instructions in the Info panel');
-            }
-            else{
-              this.history.push(this.cmd + ': command not found');
-            }
-            
-            this.gonext = false;
+        if (  ( this.position < 0 ) || ( this.position === undefined ) ) {
+            this.history.push(this.cmd + ': command not found');
         }
         else {
            this.history.push(this.commands[this.step].result);
-           this.gonext = true;
         }
 
-        this.cmd = '';
-        this.$refs.cmdInput.focus(); //set focus for input command
+      },
+
+      nextcmd() {
+
       },
 
       setCmdByTerminal() {
-        console.log('setCmdByTerminal');
 
         this.$refs.cmdInput.focus(); //set focus for input command
-        
+
         this.cmddisplay();
-        this.setcmd(this.cmd);
-        // this.cmdresponse();
-        
-        // if (this.cmdresponse())
-        //   this.step++;
-
+        this.getstep();
         this.cmdresponse();
-        if (this.gonext){
-          this.prevstep = this.step - 1;
-          this.step++;
-        }
 
-        // this.history.push(this.cmd);
-
-        // var curInd = this.commands
-        //   .map(function (element) { if (element) return element.command; })
-        //   .indexOf(this.cmd);
-
-
-        // if ( curInd == this.step ){
-        //     this.history.push(this.commands[this.step].result);
-        //     this.step++;
-        // } else if (  ( curInd < 0 ) || ( curInd === undefined ) ) {
-        //     this.history.push(this.cmd + ': command not found');
-        // } else {
-        //     if ( this.step >= this.commands.length )
-        //       this.history.push('You are done with the lesson. Please, follow our further instructions in the Info panel');
-        //     else
-        //       this.history.push(this.cmd + ': this command is not expected now');
-        // }
-
-        // this.cmd = '';
-        // this.$refs.cmdInput.focus(); //set focus for input command
+        this.cmd = '';
+        this.$refs.cmdInput.focus(); //set focus for input command
  
       },
 
-      setCmdByButton (e) {
-        console.log('setCmdByButton');
-        this.$refs.cmdInput.focus(); //set focus for input command
-        this.cmd = e.target.textContent;
-      },
+      // setCmdByButton (e) {
+      //   this.$refs.cmdInput.focus(); //set focus for input command
+      //   this.cmd = e.target.textContent;
+      // },
 
-      setCmdByClick (step) { //доделать
-        console.log('setCmdByClick');
-        this.prevstep = step-1;
-        this.step = step;
-  
-        if (this.commands[this.step]) //вот тут что-то надо сделать с посл шагом
-          this.setcmd(this.commands[this.step].command);
+      setCmdByClick (step) {
+
+        this.getstep(step);
+        this.getcmd();
 
         this.cmddisplay();
         this.cmdresponse();
-        // this.step++;
-        // this.step--;
       }
 
-    },
-
-    computed: {
-      curStep () {
-          if(this.step <= this.commands.length)
-            return Number(this.step)+1;
-      },
-
-      getCmd () {
-        if (this.commands[this.step])
-          return this.commands[this.step].command
-      }
     }
+
+    // computed: {
+    //   getCmd () {
+    //     if (this.commands[this.step])
+    //       return this.commands[this.step].command
+    //   }
+    // }
 });
+
+
+
 
 

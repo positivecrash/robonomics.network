@@ -177,7 +177,13 @@ new Vue({
         console.log('setCmdByClick');
         this.prevstep = step-1;
         this.step = step;
-  
+        // this.cmd = this.commands[this.step].command;
+        // if (this.step > 0){
+        //   this.setcmd();
+        //   this.cmddisplay();
+        //   this.cmdresponse();
+        // }
+
         if (this.commands[this.step]) //вот тут что-то надо сделать с посл шагом
           this.setcmd(this.commands[this.step].command);
 
