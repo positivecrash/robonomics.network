@@ -72,11 +72,16 @@ block content
 				.col-md-5.col-null
 					progress-bar(:val="Number(step)", :max="Number(commands.length)")
 
+					a(href="#", @click.prevent="setCmdByClick(0)") Step 0
+					a(href="#", @click.prevent="setCmdByClick(1)") Step 1
+					a(href="#", @click.prevent="setCmdByClick(2)") Step 2
+					a(href="#", @click.prevent="setCmdByClick(3)") Step 3
+					a(href="#", @click.prevent="setCmdByClick(4)") Step 4
 					a(href="#", @click.prevent="setCmdByClick(5)") Step 5
 
 					#index-terminal__info.row
 						.col-lg-3
-							#index-terminal__step(v-if="curStep")
+							#index-terminal__step(v-if="step")
 								b {{ step }} шаг
 								| из {{ commands.length }}
 						.col-lg-9
@@ -121,14 +126,14 @@ block content
 							p Press enter to submit commands
 							<p class="cmd" v-html="entry" v-for="entry in history">{{ entry }}</p>
 							<p class="input">
-								<textarea ref="cmdInput" v-model.trim="cmd" @keyup.enter="process" autofocus></textarea>
+								<textarea ref="cmdInput" v-model.trim="cmd" @keyup.enter="setCmdByTerminal" autofocus></textarea>
 							</p>
 					.terminal__window
 						.terminal__window_head Result
 						.terminal__window_content#index-terminal-result
 
 							.index-terminal-result__grid
-								img(v-bind:class="{'active' : (step >= 0)}", alt="", src="assets/i/Terminal-Result-1.png", srcset="assets/i/Terminal-Result-1@2x.png")
+								img(class="active", alt="", src="assets/i/Terminal-Result-1.png", srcset="assets/i/Terminal-Result-1@2x.png")
 								img(v-bind:class="{'active' : (step >= 1)}", alt="", src="assets/i/Terminal-Result-2.png", srcset="assets/i/Terminal-Result-2@2x.png")
 								img(v-bind:class="{'active' : (step >= 2)}", alt="", src="assets/i/Terminal-Result-3.png", srcset="assets/i/Terminal-Result-3@2x.png")
 								img(v-bind:class="{'active' : (step >= 3)}", alt="", src="assets/i/Terminal-Result-4.png", srcset="assets/i/Terminal-Result-4@2x.png")

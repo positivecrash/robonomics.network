@@ -94,10 +94,10 @@
       <div class="secw-base" id="index-terminal">
         <div class="row">
           <div class="col-md-5 col-null">
-            <progress-bar :val="Number(step)" :max="Number(commands.length)"></progress-bar><a href="#" @click.prevent="setCmdByClick(5)">Step 5</a>
+            <progress-bar :val="Number(step)" :max="Number(commands.length)"></progress-bar><a href="#" @click.prevent="setCmdByClick(0)">Step 0</a><a href="#" @click.prevent="setCmdByClick(1)">Step 1</a><a href="#" @click.prevent="setCmdByClick(2)">Step 2</a><a href="#" @click.prevent="setCmdByClick(3)">Step 3</a><a href="#" @click.prevent="setCmdByClick(4)">Step 4</a><a href="#" @click.prevent="setCmdByClick(5)">Step 5</a>
             <div class="row" id="index-terminal__info">
               <div class="col-lg-3">
-                <div id="index-terminal__step" v-if="curStep"><b>{{ step }} шаг</b>из {{ commands.length }}</div>
+                <div id="index-terminal__step" v-if="step"><b>{{ step }} шаг</b>из {{ commands.length }}</div>
               </div>
               <div class="col-lg-9">
                 <h3 v-if="step == 0">Начало работы с сетью робономика</h3>
@@ -141,14 +141,14 @@
               <div class="terminal__window_content">
                 <p>Press enter to submit commands</p><p class="cmd" v-html="entry" v-for="entry in history">{{ entry }}</p>
 <p class="input">
-<textarea ref="cmdInput" v-model.trim="cmd" @keyup.enter="process" autofocus></textarea>
+<textarea ref="cmdInput" v-model.trim="cmd" @keyup.enter="setCmdByTerminal" autofocus></textarea>
 </p>
               </div>
             </div>
             <div class="terminal__window">
               <div class="terminal__window_head">Result</div>
               <div class="terminal__window_content" id="index-terminal-result">
-                <div class="index-terminal-result__grid"><img v-bind:class="{'active' : (step &gt;= 0)}" alt="" src="assets/i/Terminal-Result-1.png" srcset="assets/i/Terminal-Result-1@2x.png"><img v-bind:class="{'active' : (step &gt;= 1)}" alt="" src="assets/i/Terminal-Result-2.png" srcset="assets/i/Terminal-Result-2@2x.png"><img v-bind:class="{'active' : (step &gt;= 2)}" alt="" src="assets/i/Terminal-Result-3.png" srcset="assets/i/Terminal-Result-3@2x.png"><img v-bind:class="{'active' : (step &gt;= 3)}" alt="" src="assets/i/Terminal-Result-4.png" srcset="assets/i/Terminal-Result-4@2x.png"><img v-bind:class="{'active' : (step &gt;= 5)}" alt="" src="assets/i/Terminal-Result-5.png" srcset="assets/i/Terminal-Result-5@2x.png"></div>
+                <div class="index-terminal-result__grid"><img class="active" alt="" src="assets/i/Terminal-Result-1.png" srcset="assets/i/Terminal-Result-1@2x.png"><img v-bind:class="{'active' : (step &gt;= 1)}" alt="" src="assets/i/Terminal-Result-2.png" srcset="assets/i/Terminal-Result-2@2x.png"><img v-bind:class="{'active' : (step &gt;= 2)}" alt="" src="assets/i/Terminal-Result-3.png" srcset="assets/i/Terminal-Result-3@2x.png"><img v-bind:class="{'active' : (step &gt;= 3)}" alt="" src="assets/i/Terminal-Result-4.png" srcset="assets/i/Terminal-Result-4@2x.png"><img v-bind:class="{'active' : (step &gt;= 5)}" alt="" src="assets/i/Terminal-Result-5.png" srcset="assets/i/Terminal-Result-5@2x.png"></div>
                 <div class="index-terminal-result__step" v-bind:class="{'active-step-3' : (step == 3), 'active-step-4' : (step == 4), 'active-step-5' : (step == 5)}"><img id="index-terminal-result__factory" alt="" src="assets/i/factory.svg"><img id="index-terminal-result__ordernew" alt="" src="assets/i/Terminal-newOrder.svg">
                   <div id="index-terminal-result__process"><span class="sprite-basic-hourglass"></span></div>
                   <div id="index-terminal-result__ok"><span class="sprite-basic-ok"></span></div>
