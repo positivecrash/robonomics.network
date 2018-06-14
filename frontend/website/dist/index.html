@@ -94,7 +94,7 @@
       <div class="secw-base" id="index-terminal">
         <div class="row">
           <div class="col-md-5 col-null">
-            <progress-bar :val="Number(step)" :max="Number(commands.length)"></progress-bar><a href="#" @click.prevent="setCmdByClick(0)">Step 0</a><a href="#" @click.prevent="setCmdByClick(1)">Step 1</a><a href="#" @click.prevent="setCmdByClick(2)">Step 2</a><a href="#" @click.prevent="setCmdByClick(3)">Step 3</a><a href="#" @click.prevent="setCmdByClick(4)">Step 4</a><a href="#" @click.prevent="setCmdByClick(5)">Step 5</a>
+            <progress-bar :val="Number(step)" :max="Number(commands.length)"></progress-bar>
             <div class="row" id="index-terminal__info">
               <div class="col-lg-3">
                 <div id="index-terminal__step" v-if="step"><b>{{ step }} шаг</b>из {{ commands.length }}</div>
@@ -131,7 +131,7 @@
                     <p>Теперь ваш черед - создавайте новое поколение децентрализованных приложений для Умных городов и Индустрии 4.0 на платформе Робономика.</p>
                   </div>
                 </div>
-                <p v-if="getCmd"><a id="index-terminal__info_cmd" href="#" @click.prevent="setCmdByButton" title="Кликните, чтобы автоматически скопировать команду в терминал">{{ getCmd }}</a></p>
+                <p v-if="getCmd"><a id="index-terminal__info_cmd" href="#" @click.prevent="setCmd" title="Кликните, чтобы автоматически скопировать команду в терминал">{{ getCmd }}</a></p>
               </div>
             </div>
           </div>
@@ -141,7 +141,7 @@
               <div class="terminal__window_content">
                 <p>Press enter to submit commands</p><p class="cmd" v-html="entry" v-for="entry in history">{{ entry }}</p>
 <p class="input">
-<textarea ref="cmdInput" v-model.trim="cmd" @keyup.enter="setCmdByTerminal" autofocus></textarea>
+<textarea ref="cmdInput" v-model.trim="cmd" @keyup.enter="process" autofocus></textarea>
 </p>
               </div>
             </div>

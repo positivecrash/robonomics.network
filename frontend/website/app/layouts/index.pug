@@ -72,13 +72,6 @@ block content
 				.col-md-5.col-null
 					progress-bar(:val="Number(step)", :max="Number(commands.length)")
 
-					a(href="#", @click.prevent="setCmdByClick(0)") Step 0
-					a(href="#", @click.prevent="setCmdByClick(1)") Step 1
-					a(href="#", @click.prevent="setCmdByClick(2)") Step 2
-					a(href="#", @click.prevent="setCmdByClick(3)") Step 3
-					a(href="#", @click.prevent="setCmdByClick(4)") Step 4
-					a(href="#", @click.prevent="setCmdByClick(5)") Step 5
-
 					#index-terminal__info.row
 						.col-lg-3
 							#index-terminal__step(v-if="step")
@@ -117,7 +110,7 @@ block content
 									p Теперь ваш черед - создавайте новое поколение децентрализованных приложений для Умных городов и Индустрии 4.0 на платформе Робономика.
 
 							
-							p(v-if="getCmd"): a#index-terminal__info_cmd(href="#", @click.prevent="setCmdByButton", title="Кликните, чтобы автоматически скопировать команду в терминал") {{ getCmd }}
+							p(v-if="getCmd"): a#index-terminal__info_cmd(href="#", @click.prevent="setCmd", title="Кликните, чтобы автоматически скопировать команду в терминал") {{ getCmd }}
 
 				.col-md-7.col-null
 					.terminal__window
@@ -126,7 +119,7 @@ block content
 							p Press enter to submit commands
 							<p class="cmd" v-html="entry" v-for="entry in history">{{ entry }}</p>
 							<p class="input">
-								<textarea ref="cmdInput" v-model.trim="cmd" @keyup.enter="setCmdByTerminal" autofocus></textarea>
+								<textarea ref="cmdInput" v-model.trim="cmd" @keyup.enter="process" autofocus></textarea>
 							</p>
 					.terminal__window
 						.terminal__window_head Result
