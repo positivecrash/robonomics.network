@@ -112,9 +112,18 @@ new Vue({
       },
 
       setCmd (e) {
-        this.$refs.cmdInput.focus(); //set focus for input command
         this.cmd = e.target.textContent;
-      }
+        this.$refs.cmdInput.focus(); //set focus for input command
+        this.focus();
+      },
+
+      focus() {
+        document.getElementById('index-terminal-window')
+        .scrollIntoView({
+          block:    "start",
+            behavior: "smooth"
+        });
+      } 
     },
 
     computed: {
@@ -127,5 +136,6 @@ new Vue({
         if (this.commands[this.step])
           return this.commands[this.step].command
       }
+      
     }
 });

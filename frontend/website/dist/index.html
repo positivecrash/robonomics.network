@@ -8,7 +8,7 @@
     <meta name="keywords" content="">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,&amp;amp;subset=cyrillic,cyrillic-ext" type="text/css" media="all">
     <link href="assets/css/robonomics_website.min.css?v=1" rel="stylesheet">
-    <script src="assets/js/jquery-2.1.4.min.js?v=1"></script>
+    <script src="assets/js/jquery-2.1.4.min.js?v=1"></script><script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="assets/js/robonomics_plugins.js?v=1"></script>
     <script src="assets/js/robonomics_website.js?v=1"></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -88,7 +88,7 @@
           <svg class="snapsvg"></svg>
         </div>
       </div>
-      <div id="header-link__down"><a href="#index-terminal">Попробовать</a></div>
+      <div id="header-link__down"><a href="#index-terminal" data-scroll>Попробовать</a></div>
     </header>
     <section id="index-terminal">
       <div class="secw-base" id="index-terminal">
@@ -129,6 +129,8 @@
                   </div>
                   <div v-if="step == 5">
                     <p>Теперь ваш черед - создавайте новое поколение децентрализованных приложений для Умных городов и Индустрии 4.0 на платформе Робономика.</p>
+                    <p><a class="btn-primary" href="#" target="_blank">Перейти в SDK</a></p>
+                    <p><a class="btn-border" href="#" target="_blank">Общаться с разработчиками</a></p>
                   </div>
                 </div>
                 <p v-if="getCmd"><a id="index-terminal__info_cmd" href="#" @click.prevent="setCmd" title="Кликните, чтобы автоматически скопировать команду в терминал">{{ getCmd }}</a></p>

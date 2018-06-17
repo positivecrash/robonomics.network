@@ -1958,7 +1958,7 @@ input, select {
 /*====== Media queries ======*/
 /*====== Colors ======*/
 /*====== Classes ======*/
-a, .header-top__nav a, #header-link__down a, .sec-synopsis, #index-terminal__info_cmd, .sec-contents > .secw-narrow a, a:hover, #header-link__down a:hover, .sec-synopsis:hover, #index-terminal__info_cmd:hover, .sec-contents > .secw-narrow a:hover, a:focus, #header-link__down a:focus, .sec-synopsis:focus, #index-terminal__info_cmd:focus, .sec-contents > .secw-narrow a:focus, a:visited, #header-link__down a:visited, .sec-synopsis:visited, #index-terminal__info_cmd:visited, .sec-contents > .secw-narrow a:visited {
+a, *[class*='btn-'], .header-top__nav a, #header-link__down a, .sec-synopsis, #index-terminal__info_cmd, .sec-contents > .secw-narrow a, a:hover, [class*='btn-']:hover, #header-link__down a:hover, .sec-synopsis:hover, #index-terminal__info_cmd:hover, .sec-contents > .secw-narrow a:hover, a:focus, [class*='btn-']:focus, #header-link__down a:focus, .sec-synopsis:focus, #index-terminal__info_cmd:focus, .sec-contents > .secw-narrow a:focus, a:visited, [class*='btn-']:visited, #header-link__down a:visited, .sec-synopsis:visited, #index-terminal__info_cmd:visited, .sec-contents > .secw-narrow a:visited {
   text-decoration: none;
   text-decoration: none !important;
 }
@@ -2330,7 +2330,7 @@ table td, table th {
     transform: rotate(360deg);
   }
 }
-input[type='text'], input[type='email'], input[type='tel'], select, input[type='submit'], input[type='button'], button {
+input[type='text'], input[type='email'], input[type='tel'], select, input[type='submit'], input[type='button'], button, *[class*='btn-'] {
   border-radius: 2px;
   font-size: 18px;
   line-height: 1;
@@ -2342,7 +2342,6 @@ input[type='text'], input[type='email'], input[type='tel'], select, input[type='
   padding: 12px 24px;
   box-sizing: border-box;
   width: 100%;
-  height: 46px;
 }
 
 input[type='text'], input[type='email'], input[type='tel'], select {
@@ -2350,15 +2349,20 @@ input[type='text'], input[type='email'], input[type='tel'], select {
   color: #000;
 }
 
-input[type='submit'], input[type='button'], button {
+input[type='submit'], input[type='button'], button, *[class*='btn-'] {
   background-color: #F15A24;
-  color: #fff;
   cursor: pointer;
   text-align: center;
 }
-input[type='submit'][disabled], input[type='button'][disabled], button[disabled] {
+input[type='submit'][disabled], input[type='button'][disabled], button[disabled], *[class*='btn-'][disabled] {
   background-color: #ccc;
   cursor: default;
+}
+input[type='submit'], input[type='submit']:hover, input[type='button'], input[type='button']:hover, button, button:hover, *[class*='btn-'], *[class*='btn-']:hover {
+  color: #fff;
+}
+input[type='submit']:hover, input[type='button']:hover, button:hover, *[class*='btn-']:hover {
+  background-color: #ff5316;
 }
 
 input[type='checkbox'][disabled], input[type='radio'][disabled] {
@@ -2366,6 +2370,18 @@ input[type='checkbox'][disabled], input[type='radio'][disabled] {
 }
 input[type='checkbox'][disabled] + label, input[type='radio'][disabled] + label {
   opacity: 0.3;
+}
+
+.btn-border {
+  border: 1px solid #F15A24;
+}
+.btn-border, .btn-border:hover {
+  background-color: transparent;
+  color: #F15A24;
+}
+.btn-border:hover {
+  border-color: #ff5316;
+  color: #ff5316;
 }
 
 @keyframes rotateLoader {

@@ -63,7 +63,7 @@ block content
 				svg.snapsvg
 
 		#header-link__down
-			a(href="#index-terminal") Попробовать
+			a(href="#index-terminal", data-scroll) Попробовать
 
 
 	section#index-terminal
@@ -108,6 +108,8 @@ block content
 
 								div(v-if="step == 5")
 									p Теперь ваш черед - создавайте новое поколение децентрализованных приложений для Умных городов и Индустрии 4.0 на платформе Робономика.
+									p: a(href="#", target="_blank").btn-primary Перейти в SDK
+									p: a(href="#", target="_blank").btn-border Общаться с разработчиками
 
 							
 							p(v-if="getCmd"): a#index-terminal__info_cmd(href="#", @click.prevent="setCmd", title="Кликните, чтобы автоматически скопировать команду в терминал") {{ getCmd }}

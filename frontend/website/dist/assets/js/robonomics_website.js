@@ -1,3 +1,9 @@
+/*JavaScript*/
+
+var scroll = new SmoothScroll('a[data-scroll]');
+
+
+
 jQuery(document).ready(function($){
 	/*====== BASICS ======*/
 

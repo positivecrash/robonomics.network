@@ -18,7 +18,7 @@ $c-inpbtn-type: #fff;
 		padding: 12px 24px;
 		box-sizing: border-box;
 		width: 100%;
-		height: 46px;
+		// height: 46px;
 	}
 
 
@@ -31,11 +31,10 @@ input[type='text'], input[type='email'], input[type='tel'], select
 		color: $c-inptext-type;
 	}
 
-input[type='submit'], input[type='button'], button
+input[type='submit'], input[type='button'], button, *[class *= 'btn-']
 	{
 		@extend %inp-basic-styles;
 		background-color: $c-inpbtn-back;
-		color: $c-inpbtn-type;
 		cursor: pointer;
 		text-align: center;
 
@@ -43,6 +42,16 @@ input[type='submit'], input[type='button'], button
 			{
 				background-color: $c-gray;
 				cursor: default;
+			}
+
+		&, &:hover
+			{
+				color: $c-inpbtn-type;
+			}
+
+		&:hover
+			{
+				background-color: saturate($c-inpbtn-back, 40%);
 			}
 	}
 
@@ -56,6 +65,29 @@ input[type='checkbox'], input[type='radio']
 					{
 						opacity: 0.3;
 					}
+			}
+	}
+
+
+*[class *= 'btn-']
+	{
+		@extend %link_noline;
+	}
+
+.btn-border
+	{
+		border: 1px solid $c-inpbtn-back;
+
+		&, &:hover
+			{
+				background-color: transparent;
+				color: $c-inpbtn-back;
+			}
+
+		&:hover
+			{
+				border-color: saturate($c-inpbtn-back, 40%);
+				color: saturate($c-inpbtn-back, 40%);
 			}
 	}
 
