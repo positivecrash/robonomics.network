@@ -81,7 +81,7 @@ gulp.task('scripts', function() {
 		.pipe(concat(file.name.js))
 		.pipe(gulp.dest(path.dist.js))
 		.pipe(rename({ suffix: '.min' }))
-		// .pipe(uglify())
+		.pipe(uglify())
 		.pipe(gulp.dest(path.dist.js))
 		.pipe(livereload());
 });
