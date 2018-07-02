@@ -29,6 +29,7 @@ get_header(); ?>
 		              	<?php endif; ?>
 
 	            	</div>
+		            
 
 		            <div class="col-sm-6 js-paroller" data-paroller-factor="0.1" data-paroller-type="foreground">
 		          		<?php if( get_field('info_section_2')): ?>

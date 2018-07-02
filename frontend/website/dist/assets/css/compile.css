@@ -3091,14 +3091,14 @@ footer[role='contentinfo'] .sec-techs {
   padding-top: 30px;
 }
 
-#index-terminal {
+#index-terminal_wrap {
   padding-top: 0;
   padding-bottom: 0;
 }
-#index-terminal, #index-terminal .secw-base {
+#index-terminal_wrap, #index-terminal_wrap .secw-base {
   background-color: #F2F2F2;
 }
-#index-terminal .col-md-5 {
+#index-terminal_wrap .col-md-5 {
   padding-right: 2% !important;
 }
 

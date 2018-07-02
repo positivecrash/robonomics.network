@@ -88,9 +88,9 @@
           <svg class="snapsvg"></svg>
         </div>
       </div>
-      <div id="header-link__down"><a href="#index-terminal" data-scroll>Попробовать</a></div>
+      <div id="header-link__down"><a href="#index-terminal_wrap" data-scroll>Попробовать</a></div>
     </header>
-    <section id="index-terminal">
+    <section id="index-terminal_wrap">
       <div class="secw-base" id="index-terminal">
         <div class="row">
           <div class="col-md-5 col-null">
@@ -143,7 +143,7 @@
               <div class="terminal__window_content">
                 <p>Press enter to submit commands</p><p class="cmd" v-html="entry" v-for="entry in history">{{ entry }}</p>
 <p class="input">
-<textarea ref="cmdInput" v-model.trim="cmd" @keyup.enter="process" autofocus></textarea>
+<textarea ref="cmdInput" v-model.trim="cmd" @keyup.enter="process"></textarea>
 </p>
               </div>
             </div>

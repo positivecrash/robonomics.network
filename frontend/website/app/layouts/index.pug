@@ -63,10 +63,10 @@ block content
 				svg.snapsvg
 
 		#header-link__down
-			a(href="#index-terminal", data-scroll) Попробовать
+			a(href="#index-terminal_wrap", data-scroll) Попробовать
 
 
-	section#index-terminal
+	section#index-terminal_wrap
 		#index-terminal.secw-base
 			.row
 				.col-md-5.col-null
@@ -121,7 +121,7 @@ block content
 							p Press enter to submit commands
 							<p class="cmd" v-html="entry" v-for="entry in history">{{ entry }}</p>
 							<p class="input">
-								<textarea ref="cmdInput" v-model.trim="cmd" @keyup.enter="process" autofocus></textarea>
+								<textarea ref="cmdInput" v-model.trim="cmd" @keyup.enter="process"></textarea>
 							</p>
 					.terminal__window
 						.terminal__window_head Result
