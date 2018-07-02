@@ -35,7 +35,7 @@ Vue.component('progress-bar', {
 
 
 new Vue({
-    el: '#index-terminal',
+    el: '#index-terminal_window',
     data: {
       cmd: '',
       step: '0',
