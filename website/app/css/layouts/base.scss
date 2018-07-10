@@ -317,6 +317,7 @@ section
     .sec_mid__left
       {
         top: $vertical-rythm + 7px;
+        right: 53%;
 
         &:before
         {
@@ -329,6 +330,10 @@ section
           height: image-height('bg-news.png');
           top: 100px;
           right: 390px;
+        }
+
+        @include maxTablet(){
+          display: none;
         }
       }
 

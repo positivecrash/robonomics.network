@@ -3817,6 +3817,7 @@ section {
 }
 .sec_news .sec_mid__left {
   top: 31px;
+  right: 53%;
 }
 .sec_news .sec_mid__left:before {
   content: "";
@@ -3827,6 +3828,11 @@ section {
   height: 197px;
   top: 100px;
   right: 390px;
+}
+@media screen and (max-width: 768px) {
+  .sec_news .sec_mid__left {
+    display: none;
+  }
 }
 
 /* SECTION - lined */
