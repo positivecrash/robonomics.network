@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @-ms-viewport {
   width: device-width;
 }
@@ -1989,7 +1990,7 @@ a, input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn
   padding-right: 0 !important;
 }
 
-input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, #header-link__down a, .terminal__window_head, .section__contents > .secw-narrow a {
+input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .msg_ok, .msg_error, #header-link__down a, .terminal__window_head, .section__contents > .secw-narrow a {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -2001,7 +2002,7 @@ input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-r
   vertical-align: middle;
 }
 
-body, input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, input:not([type='submit'])::placeholder, input[type='submit']::placeholder, button::placeholder, a.btn-red::placeholder, input.btn-red::placeholder, button.btn-red::placeholder, a.btn-blue::placeholder, input.btn-blue::placeholder, button.btn-blue::placeholder {
+body, input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, input:not([type='submit'])::placeholder, input[type='submit']::placeholder, button::placeholder, a.btn-red::placeholder, input.btn-red::placeholder, button.btn-red::placeholder, a.btn-blue::placeholder, input.btn-blue::placeholder, button.btn-blue::placeholder, .msg_ok, .msg_error {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -2344,7 +2345,6 @@ input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-r
 }
 input[disabled]:not([type='submit']), input[disabled][type='submit'], button[disabled], a[disabled].btn-red, input[disabled].btn-red, a[disabled].btn-blue, input[disabled].btn-blue {
   cursor: default;
-  opacity: 0.8;
 }
 input:not([type='submit'])::placeholder, input[type='submit']::placeholder, button::placeholder, a.btn-red::placeholder, input.btn-red::placeholder, button.btn-red::placeholder, a.btn-blue::placeholder, input.btn-blue::placeholder, button.btn-blue::placeholder {
   font-size: 16px;
@@ -2363,10 +2363,19 @@ input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-bl
 input.error[type='submit'], button.error, a.error.btn-red, input.error.btn-red, a.error.btn-blue, input.error.btn-blue, input.error[type='submit']:hover, button.error:hover, a.error.btn-red:hover, input.error.btn-red:hover, a.error.btn-blue:hover, input.error.btn-blue:hover {
   background-color: #E84004;
 }
+input[disabled][type='submit'], button[disabled], a[disabled].btn-red, input[disabled].btn-red, a[disabled].btn-blue, input[disabled].btn-blue, input[disabled][type='submit']:hover, button[disabled]:hover, a[disabled].btn-red:hover, input[disabled].btn-red:hover, a[disabled].btn-blue:hover, input[disabled].btn-blue:hover {
+  background-color: #282B38;
+}
 
 /*======== INPUTS =========*/
 input:not([type='submit']) {
   color: #000;
+}
+input:not([type='submit']).error {
+  border-color: #E84004;
+}
+input:not([type='submit'])[disabled] {
+  opacity: 0.8;
 }
 
 /*======== BUTTONS =========*/
@@ -2377,9 +2386,6 @@ input[type='submit'], button {
 input[type='submit']:hover, button:hover {
   background-color: #40c851;
 }
-input[type='submit'][disabled], button[disabled] {
-  background-color: #54CE63;
-}
 
 a.btn-red, input.btn-red, button.btn-red {
   background-color: #F15A24;
@@ -2388,9 +2394,6 @@ a.btn-red, input.btn-red, button.btn-red {
 a.btn-red:hover, input.btn-red:hover, button.btn-red:hover {
   background-color: #ec490f;
 }
-a.btn-red[disabled], input.btn-red[disabled], button.btn-red[disabled] {
-  background-color: #F15A24;
-}
 
 a.btn-blue, input.btn-blue, button.btn-blue {
   background-color: #03A5ED;
@@ -2398,9 +2401,6 @@ a.btn-blue, input.btn-blue, button.btn-blue {
 }
 a.btn-blue:hover, input.btn-blue:hover, button.btn-blue:hover {
   background-color: #0393d4;
-}
-a.btn-blue[disabled], input.btn-blue[disabled], button.btn-blue[disabled] {
-  background-color: #03A5ED;
 }
 
 @keyframes rotateLoader {
@@ -2423,16 +2423,20 @@ span.loader {
   animation: 0.8s rotateLoader ease-in-out infinite;
 }
 
-.msg-ok {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 16px;
-  line-height: 1.2;
-  display: block;
-  padding: 10px 20px;
-  background-color: #8ea6bf;
-  border: 1px solid #6D8CAD;
-  color: #fff;
+.msg_ok, .msg_error {
+  font-weight: 500;
+}
+
+.msg_error:before {
+  content: "✘ ";
+  color: #E84004;
+  font-size: 26px;
+}
+
+.msg_ok:before {
+  content: "✓ ";
+  color: #54CE63;
+  font-size: 26px;
 }
 
 .svg .sprite-basic-aira, .svg .sprite-basic-anchor, .svg .sprite-basic-ethereum, .svg .sprite-basic-expand-arrow, .svg .sprite-basic-hourglass, .svg .sprite-basic-ipfs, .svg .sprite-basic-nixos, .svg .sprite-basic-ok, .svg .sprite-basic-ros, .svg .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .svg .section__contents a.js-expand-toggle:after {

@@ -9,7 +9,9 @@ $color-input-background: #fff;
 $color-input-border: $c-gray-mid;
 $color-input-text: $c-text;
 $color-input-placeholder: $c-gray-mid;
-$color-disabled-button-background: darken($c-gray, 5%);
+$color-disabled-button-background: $c-violet-dark;
+$color-error: $c-red;
+$color-ok: $c-green;
 
 $fontsize-input: $font-size-base;
 
@@ -29,7 +31,6 @@ $fontsize-input: $font-size-base;
 
   	&[disabled]{
 	    cursor: default;
-	    opacity: 0.8;
   	}
 
   	&::placeholder
@@ -41,7 +42,7 @@ $fontsize-input: $font-size-base;
 
 	&.error
 		{
-			border-color: $c-red;
+			border-color: $color-error;
 		}
 }
 
@@ -55,8 +56,12 @@ $fontsize-input: $font-size-base;
 
   	&.error
 		{
-			&, &:hover { background-color: $c-red; }
+			&, &:hover { background-color: $color-error; }
 		}
+
+	&[disabled]{
+		&, &:hover { background-color: $color-disabled-button-background; }
+	}
 }
 
 @mixin btn_col($back, $text: #fff){
@@ -65,10 +70,6 @@ $fontsize-input: $font-size-base;
 
 	&:hover{
 		background-color: darken($back, 5%);
-	}
-
-	&[disabled]{
-		background-color: $back;
 	}
 }
 
@@ -80,6 +81,16 @@ $fontsize-input: $font-size-base;
 input:not([type='submit']){
   @extend %form_e_base;
   color: $color-input-text;
+
+  &.error
+  	{
+  		border-color: $color-error;
+  	}
+
+  &[disabled]
+  	{
+  		opacity: 0.8;
+  	}
 }
 
 
@@ -138,22 +149,30 @@ span.loader
 
 
 
-%msg
+
+.msg_ok, .msg_error
 	{
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		font-size: 16px;
-		line-height: 1.2;
-
-		display: block;
-		padding: 10px 20px;
-
-		background-color: lighten($c-blue-mute-2, 10%);
-		border: 1px solid $c-blue-mute-2;
-		color: #fff;
+		@extend %font_base;
+		@extend %text_uppercase;
+		font-weight: 500;
 	}
 
-.msg-ok
+.msg_error
 	{
-		@extend %msg;
+		&:before
+			{
+				content: "✘ ";
+				color: $color-error;
+				font-size: 26px;
+			}
+	}
+
+.msg_ok
+	{
+		&:before
+			{
+				content: "✓ ";
+				color: $color-ok;
+				font-size: 26px;
+			}
 	}

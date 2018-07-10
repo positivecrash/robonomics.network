@@ -18,8 +18,9 @@ block content
 					.row
 						.col-sm-6
 							form
-								p: input.secw-full(type="email", placeholder="Ваш e-mail")
-								p: input.secw-full(type="submit", value="Подписаться")
+								p: input.secw-full.error(type="email", placeholder="Ваш e-mail")
+								p: input.secw-full(type="submit", value="Подписаться", disabled)
+								p.msg_error Ошибка: кажется, вы не ввели или ввели некорректно email адрес
 						.col-sm-6
 							.text-hyphened
 								p Подпишитесь на регулярные email новости о сети Робономика. Вы будете в курсе новостей новых релизах, возможностях для майнеров и участников сети, о проведении TGE, о наших митапах, новых статьях и видео об исследованиях робототехники в области экономики.
