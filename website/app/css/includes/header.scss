@@ -1,8 +1,8 @@
 header[role='banner']
   {
-    padding-top: 110px;
-    padding-bottom: 120px;
     position: relative;
+    padding-top: #{$padding-fields * 2}px;
+    padding-bottom: #{$padding-fields * 2}px;
 
     .el-social
       {
@@ -17,9 +17,6 @@ header[role='banner']
   {
     position: relative;
     z-index: 1000;
-    position: absolute;
-    top: 30px;
-    width: 100%;
 
     &.fixed
       {
@@ -496,8 +493,17 @@ $delay: 1s;
   {
     text-align: center;
     min-height: 780px;
+    padding-top: 110px;
+    padding-bottom: 120px;
     
-    #header-top { animation-delay: 4s; }
+    #header-top
+      {
+        animation-delay: 4s;
+
+        position: absolute;
+        top: 30px;
+        width: 100%;
+      }
 
     .snapsvgoutside-text
       {

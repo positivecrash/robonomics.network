@@ -1,95 +1,215 @@
-$c-inptext-back: #fff;
-$c-inpbtn-back: $c-orange;
-$c-inptext-type: $c-text;
-$c-inpbtn-type: #fff;
+/*======== FORMS VARIABLES & MIXINS & EXTENDS =========*/
+$btn-padding-v: 10px;
+$inp-padding-v: $btn-padding-v;
+$inp-padding-g: 20px;
 
+$inp-margin-b: $vertical-rythm * 0.7;
 
-%inp-basic-styles
-	{
-		border-radius: 2px;
-		font-size: 18px;
-		line-height: 1;
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		border: 0;
-		font-weight: 300;
+$color-input-background: #fff;
+$color-input-border: $c-gray-mid;
+$color-input-text: $c-text;
+$color-input-placeholder: $c-gray-mid;
+$color-disabled-button-background: darken($c-gray, 5%);
 
-		display: block;
-		padding: 12px 24px;
-		box-sizing: border-box;
-		width: 100%;
-		// height: 46px;
+$fontsize-input: $font-size-base;
+
+%form_e_base{
+	@extend %font_base;
+	font-size: $fontsize-input;
+	@extend %text_uppercase;
+	font-weight: 500;
+	text-align: center;
+	background-color: $color-input-background;
+  	border: 1px solid $color-input-border;
+  	border-radius: 4px;
+
+  	display: inline-block;
+  	box-sizing: border-box;
+  	padding: $inp-padding-v $inp-padding-g;
+
+  	&[disabled]{
+	    cursor: default;
+	    opacity: 0.8;
+  	}
+
+  	&::placeholder
+	  	{
+	  		@extend %font_base;
+	  		font-size: $fontsize-input;
+	  		color: $color-input-placeholder;
+	  	}
+
+	&.error
+		{
+			border-color: $c-red;
+		}
+}
+
+%form_b_base{
+	@extend %link_noline;
+
+  	appearance: none;
+  	border: 0;
+  	cursor: pointer;
+  	transition: all 0.2s ease-in-out;
+
+  	&.error
+		{
+			&, &:hover { background-color: $c-red; }
+		}
+}
+
+@mixin btn_col($back, $text: #fff){
+	background-color: $back;
+	color: $text;
+
+	&:hover{
+		background-color: darken($back, 5%);
 	}
 
-
-// input:not([type='submit']), input:not([type='button']), input:not([type='checkbox']), select
-
-input[type='text'], input[type='email'], input[type='tel'], select
-	{
-		@extend %inp-basic-styles;
-		background-color: $c-inptext-back;
-		color: $c-inptext-type;
+	&[disabled]{
+		background-color: $back;
 	}
-
-input[type='submit'], input[type='button'], button, *[class *= 'btn-']
-	{
-		@extend %inp-basic-styles;
-		background-color: $c-inpbtn-back;
-		cursor: pointer;
-		text-align: center;
-
-		&[disabled]
-			{
-				background-color: $c-gray;
-				cursor: default;
-			}
-
-		&, &:hover
-			{
-				color: $c-inpbtn-type;
-			}
-
-		&:hover
-			{
-				background-color: saturate($c-inpbtn-back, 40%);
-			}
-	}
-
-input[type='checkbox'], input[type='radio']
-	{
-		&[disabled]
-			{
-				opacity: 0.7;
-
-				& + label
-					{
-						opacity: 0.3;
-					}
-			}
-	}
+}
 
 
-*[class *= 'btn-']
-	{
-		@extend %link_noline;
-	}
 
-.btn-border
-	{
-		border: 1px solid $c-inpbtn-back;
 
-		&, &:hover
-			{
-				background-color: transparent;
-				color: $c-inpbtn-back;
-			}
+/*======== INPUTS =========*/
 
-		&:hover
-			{
-				border-color: saturate($c-inpbtn-back, 40%);
-				color: saturate($c-inpbtn-back, 40%);
-			}
-	}
+input:not([type='submit']){
+  @extend %form_e_base;
+  color: $color-input-text;
+}
+
+
+
+/*======== BUTTONS =========*/
+input[type='submit'], button{
+
+	@extend %form_e_base;
+	@extend %form_b_base;
+	@include btn_col($c-green);
+}
+
+a.btn-red, input.btn-red, button.btn-red{
+	@extend %form_e_base;
+	@extend %form_b_base;
+
+	@include btn_col($c-orange);
+}
+
+a.btn-blue, input.btn-blue, button.btn-blue{
+	@extend %form_e_base;
+	@extend %form_b_base;
+
+	@include btn_col($c-blue);
+}
+
+
+
+
+
+
+
+// $c-inptext-back: #fff;
+// $c-inpbtn-back: $c-green;
+// $c-inptext-type: $c-text;
+// $c-inpbtn-type: #fff;
+
+// $fontsize-input: 18px;
+
+
+// %inp-basic-styles
+// 	{
+// 		border-radius: 4px;
+// 		font-size: $fontsize-input;
+// 		line-height: 1;
+// 		text-transform: uppercase;
+// 		letter-spacing: 1px;
+
+// 		display: block;
+// 		padding: 12px 24px;
+// 		box-sizing: border-box;
+// 		width: 100%;
+// 		text-align: center;
+// 	}
+
+
+// // input:not([type='submit']), input:not([type='button']), input:not([type='checkbox']), select
+
+// input[type='text'], input[type='email'], input[type='tel'], select
+// 	{
+// 		@extend %inp-basic-styles;
+// 		background-color: $c-inptext-back;
+// 		color: $c-inptext-type;
+
+// 		&::placeholder
+// 		  	{
+// 		  		@extend %font_base;
+// 		  		font-size: $fontsize-input;
+// 		  		color: $c-text;
+// 		  	}
+// 	}
+
+// input[type='submit'], input[type='button'], button, *[class *= 'btn-']
+// 	{
+// 		@extend %inp-basic-styles;
+// 		background-color: $c-inpbtn-back;
+// 		cursor: pointer;
+
+// 		&[disabled]
+// 			{
+// 				background-color: $c-gray;
+// 				cursor: default;
+// 			}
+
+// 		&, &:hover
+// 			{
+// 				color: $c-inpbtn-type;
+// 			}
+
+// 		&:hover
+// 			{
+// 				background-color: darken($c-inpbtn-back, 5%);
+// 			}
+// 	}
+
+// input[type='checkbox'], input[type='radio']
+// 	{
+// 		&[disabled]
+// 			{
+// 				opacity: 0.7;
+
+// 				& + label
+// 					{
+// 						opacity: 0.3;
+// 					}
+// 			}
+// 	}
+
+
+// *[class *= 'btn-']
+// 	{
+// 		@extend %link_noline;
+// 	}
+
+// .btn-border
+// 	{
+// 		border: 1px solid $c-inpbtn-back;
+
+// 		&, &:hover
+// 			{
+// 				background-color: transparent;
+// 				color: $c-inpbtn-back;
+// 			}
+
+// 		&:hover
+// 			{
+// 				border-color: saturate($c-inpbtn-back, 40%);
+// 				color: saturate($c-inpbtn-back, 40%);
+// 			}
+// 	}
 
 
 @keyframes rotateLoader
@@ -111,9 +231,9 @@ span.loader
 		height: 20px;
 		width: 20px;
 		border-radius: 20px;
-		border-color: rgba($c-inpbtn-type, 5);
-		border-top: 1px solid $c-inpbtn-type;
-		border-right: 1px solid $c-inpbtn-type;
+		border-color: rgba($color-input-text, 5);
+		border-top: 1px solid $color-input-text;
+		border-right: 1px solid $color-input-text;
 
 		animation: 0.8s rotateLoader ease-in-out infinite;
 	}

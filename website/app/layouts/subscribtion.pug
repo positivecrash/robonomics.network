@@ -1,0 +1,29 @@
+extends extends/layout.pug
+
+block head
+	- var pageTitle = 'Robot economic infrastructure'
+
+block content
+	header(role='banner')
+		include mixins/sections.pug
+		+header_top()
+
+	main(role="main")
+		section
+			.secw-narrow
+				h1 Подписка на новости
+
+			section.sec-contents.section_lined__gray.sec_news
+				.secw-narrow
+					.row
+						.col-sm-6
+							form
+								p: input.secw-full(type="email", placeholder="Ваш e-mail")
+								p: input.secw-full(type="submit", value="Подписаться")
+						.col-sm-6
+							.text-hyphened
+								p Подпишитесь на регулярные email новости о сети Робономика. Вы будете в курсе новостей новых релизах, возможностях для майнеров и участников сети, о проведении TGE, о наших митапах, новых статьях и видео об исследованиях робототехники в области экономики.
+								p Мы не передаем ваши email адреса сторонним проектам и не занимаемся другими злыми вещами по передаче email адресов сторонним людям.
+
+
+				.sec-dots__gray.sec_mid__left
