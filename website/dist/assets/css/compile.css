@@ -2004,7 +2004,7 @@ input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-r
 
 body, input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, input:not([type='submit'])::placeholder, input[type='submit']::placeholder, button::placeholder, a.btn-red::placeholder, input.btn-red::placeholder, button.btn-red::placeholder, a.btn-blue::placeholder, input.btn-blue::placeholder, button.btn-blue::placeholder, .msg_ok, .msg_error {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   font-weight: 300;
   letter-spacing: 2px;
@@ -2019,8 +2019,8 @@ html {
 /*====== Text sizes & Headers ======*/
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 27px;
+  margin-bottom: 27px;
 }
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
   margin-top: 0;
@@ -2129,14 +2129,14 @@ a:hover {
 /*====== Text elements ======*/
 ul, ol {
   margin-left: 20px;
-  margin-bottom: 24px;
+  margin-bottom: 27px;
 }
 ul ul, ul ol, ol ul, ol ol {
-  margin-top: 24px;
+  margin-top: 27px;
 }
 
 li, p, blockquote, .m-b-base {
-  margin-bottom: 24px;
+  margin-bottom: 27px;
 }
 li:last-child, p:last-child, blockquote:last-child, .m-b-base:last-child {
   margin-bottom: 0;
@@ -2149,12 +2149,12 @@ code {
 
 table td, table th {
   vertical-align: top;
-  padding: 12px;
+  padding: 13.5px;
 }
 @media screen and (max-width: 768px) {
   table td, table th {
     display: block;
-    padding: 7.2px;
+    padding: 8.1px;
   }
 }
 
@@ -2333,7 +2333,7 @@ table td, table th {
 }
 /*======== FORMS VARIABLES & MIXINS & EXTENDS =========*/
 input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   text-align: center;
   background-color: #fff;
@@ -2347,7 +2347,7 @@ input[disabled]:not([type='submit']), input[disabled][type='submit'], button[dis
   cursor: default;
 }
 input:not([type='submit'])::placeholder, input[type='submit']::placeholder, button::placeholder, a.btn-red::placeholder, input.btn-red::placeholder, button.btn-red::placeholder, a.btn-blue::placeholder, input.btn-blue::placeholder, button.btn-blue::placeholder {
-  font-size: 16px;
+  font-size: 18px;
   color: #A0A0A0;
 }
 input.error:not([type='submit']), input.error[type='submit'], button.error, a.error.btn-red, input.error.btn-red, a.error.btn-blue, input.error.btn-blue {
@@ -2768,7 +2768,7 @@ header[role='banner'] .el-social {
 }
 @media screen and (max-width: 576px) {
   #header-mid {
-    padding-bottom: 48px;
+    padding-bottom: 54px;
   }
 }
 
@@ -3179,7 +3179,7 @@ footer[role='contentinfo'] .sec-techs {
 .terminal__window_content, .terminal__window_content .input input, .terminal__window_content .input textarea {
   color: #fff;
   font-family: 'Courier', monospace;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.2;
 }
 
@@ -3457,12 +3457,12 @@ footer[role='contentinfo'] .sec-techs {
 
 .contentBlock-token {
   position: relative;
-  padding-bottom: 122px;
+  padding-bottom: 128px;
 }
 .contentBlock-token:after {
   content: "";
   position: absolute;
-  bottom: 48px;
+  bottom: 54px;
   left: 0;
   right: 0;
   z-index: 1;
@@ -3493,11 +3493,11 @@ footer[role='contentinfo'] .sec-techs {
 @media screen and (max-width: 576px) {
   .contentBlock-token__info {
     padding-right: 0;
-    margin-bottom: 48px;
+    margin-bottom: 54px;
   }
   .contentBlock-token__info .logo-robonomics-outline {
     position: static;
-    margin-bottom: 48px;
+    margin-bottom: 54px;
   }
 }
 
@@ -3507,7 +3507,7 @@ footer[role='contentinfo'] .sec-techs {
 }
 .contentBlock-roadmap .roadmap-title {
   border-bottom: 2px solid #F15A24;
-  margin-bottom: 24px;
+  margin-bottom: 27px;
   padding-bottom: 10px;
 }
 .contentBlock-roadmap .roadmap-title__in div {
@@ -3713,7 +3713,7 @@ body {
 /*====== end of Transitions ======*/
 /*====== Bootstrap ======*/
 .row *[class*='col-'] {
-  margin-bottom: 48px;
+  margin-bottom: 54px;
 }
 
 /*====== end of Bootstrap ======*/
@@ -3748,8 +3748,8 @@ body {
 /*====== end of SNAP SVG ======*/
 /*====== Sections ======*/
 section {
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: 54px;
+  padding-bottom: 54px;
 }
 
 .sec-dark {
@@ -3816,29 +3816,6 @@ section {
   bottom: 0;
 }
 
-.sec_news .sec-dots__gray {
-  background-position: 100% 0;
-}
-.sec_news .sec_mid__left {
-  top: 31px;
-  right: 53%;
-}
-.sec_news .sec_mid__left:before {
-  content: "";
-  background-image: url('../i/bg-news.png?1531217100');
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 199px;
-  height: 197px;
-  top: 100px;
-  right: 390px;
-}
-@media screen and (max-width: 768px) {
-  .sec_news .sec_mid__left {
-    display: none;
-  }
-}
-
 /* SECTION - lined */
 .section_lined__red, .section_lined__gray {
   padding-top: 0;
@@ -3847,7 +3824,7 @@ section {
 .section_lined__red > .secw-narrow, .section_lined__gray > .secw-narrow {
   border-width: 6px 0 0;
   border-style: solid;
-  padding-top: 24px;
+  padding-top: 27px;
 }
 .section_lined__red:after, .section_lined__gray:after {
   content: "";
@@ -3878,10 +3855,10 @@ section {
   height: 500px;
 }
 .section__contents > .secw-narrow a {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 27px;
 }
 .section__contents > .secw-narrow a:not(.js-expand-toggle) {
   color: #000;
@@ -3986,7 +3963,7 @@ section {
   border: 1px dashed #000;
   line-height: 1;
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 27px;
 }
 .block-gList .block-gList__bul span {
   display: table-cell;
@@ -4079,3 +4056,28 @@ section {
 }
 
 /*====== end of Technologies ======*/
+#page-news {
+  font-size: 16px;
+}
+#page-news .sec-dots__gray {
+  background-position: 100% 0;
+}
+#page-news .sec_mid__left {
+  top: 34px;
+  right: 53%;
+}
+#page-news .sec_mid__left:before {
+  content: "";
+  background-image: url('../i/bg-news.png?1531217100');
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 199px;
+  height: 197px;
+  top: 100px;
+  right: 390px;
+}
+@media screen and (max-width: 768px) {
+  #page-news .sec_mid__left {
+    display: none;
+  }
+}
