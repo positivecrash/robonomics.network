@@ -8,12 +8,12 @@ block content
 		include mixins/sections.pug
 		+header_top()
 
-		.header-mid
+		section.header-mid
 			.el-FrontContent
 				
 				.secw-narrow.text-hyphened
 					img.img-block(alt="", src="assets/i/TokenAndRobots.png", srcset="assets/i/TokenAndRobots@2x.png")
-					h1 XRT токены в робономике
+					h1: span.t-center.d-b XRT токены в робономике
 					p Для создания экономических стимулов поддержания работы Умных Городов и Индустрии 4.0 в инфраструктуре сети Ethereum будет выпущен внутренний токен Робономики – Robonomics token (XRT).
 					p XRT будет требоваться каждый раз, когда возникает необходимость получить услугу киберфизической системы.
 
@@ -24,15 +24,15 @@ block content
 	main(role="main")
 		section.sec-black.sec-city
 			.secw-narrow
-				h3 Token sale будет произведен в формате голландского аукциона весной 2018
+				h2 Token sale будет произведен в формате голландского аукциона весной 2018
 				form
-					.msg-ok E-mail адрес email@mail.rr подписан на оповещение об старте продаж токена XRT  
+					.msg_ok E-mail адрес email@mail.rr подписан на оповещение о старте продаж токена XRT  
 					.row
 						.col-md-8
-							input(type="text", value="", placeholder="Your e-mail")
+							input(type="text", value="", placeholder="Your e-mail").secw-full
 						.col-md-4
-							button Sign up
-							button: span.loader
+							button.secw-full Sign up
+							//- button: span.loader
 
 
 		section.token-distribution

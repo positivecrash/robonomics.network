@@ -12,6 +12,7 @@ $color-input-placeholder: $c-gray-mid;
 $color-disabled-button-background: $c-violet-dark;
 $color-error: $c-red;
 $color-ok: $c-green;
+$color-wait: $c-yellow;
 
 $fontsize-input: $font-size-base;
 
@@ -29,7 +30,7 @@ $fontsize-input: $font-size-base;
   	box-sizing: border-box;
   	padding: $inp-padding-v $inp-padding-g;
 
-  	&[disabled]{
+  	&[disabled], &.disabled{
 	    cursor: default;
   	}
 
@@ -59,17 +60,22 @@ $fontsize-input: $font-size-base;
 			&, &:hover { background-color: $color-error; }
 		}
 
-	&[disabled]{
-		&, &:hover { background-color: $color-disabled-button-background; }
+	&[disabled], &.disabled{
+		&, &:hover
+			{
+				background-color: $color-disabled-button-background;
+				cursor: default;
+			}
 	}
 }
 
 @mixin btn_col($back, $text: #fff){
 	background-color: $back;
 	color: $text;
+	transition: 0.2s all ease-in;
 
 	&:hover{
-		background-color: darken($back, 5%);
+		background-color: darken($back, 10%);
 	}
 }
 
@@ -78,7 +84,7 @@ $fontsize-input: $font-size-base;
 
 /*======== INPUTS =========*/
 
-input:not([type='submit']){
+input:not([type='submit']):not([type='button']){
   @extend %form_e_base;
   color: $color-input-text;
 
@@ -96,11 +102,12 @@ input:not([type='submit']){
 
 
 /*======== BUTTONS =========*/
-input[type='submit'], button{
+input[type='submit'], input[type='button'], button, a.btn-green{
 
 	@extend %form_e_base;
 	@extend %form_b_base;
 	@include btn_col($c-green);
+	@extend %link_noline;
 }
 
 a.btn-red, input.btn-red, button.btn-red{
@@ -150,7 +157,7 @@ span.loader
 
 
 
-.msg_ok, .msg_error
+.msg_ok, .msg_error, .msg_wait
 	{
 		@extend %font_base;
 		@extend %text_uppercase;
@@ -173,6 +180,16 @@ span.loader
 			{
 				content: "✓ ";
 				color: $color-ok;
+				font-size: 26px;
+			}
+	}
+
+.msg_wait
+	{
+		&:before
+			{
+				content: "✓ ";
+				color: $color-wait;
 				font-size: 26px;
 			}
 	}

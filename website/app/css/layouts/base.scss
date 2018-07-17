@@ -265,6 +265,14 @@ section
       }
   }
 
+.sec-gray
+  {
+    background-color: $c-gray-light;
+    color: #000;
+  }
+
+
+
 .sec-pad
   {
     padding-left: 60px;
@@ -280,17 +288,40 @@ section
     box-sizing: border-box;
     min-height: 306px;
     
-    h2, h3 
-      {
-        color: $c-blue-mute-2;
-      }
+    h2, h3 { font-weight: 500; }
 
     @media screen and (min-width: $mq-tablet) 
     {
-      background-image: inline-image('pattern-city.svg');
       background-repeat: repeat-x;
       background-position: 100% 0;
     }
+
+
+    &.sec-black
+      {
+        @media screen and (min-width: $mq-tablet) 
+          {
+            background-image: inline-image('pattern-city-dark.svg');
+          }
+
+        h2, h3 
+          {
+            color: $c-blue-mute-2;
+          }
+      }
+
+    &.sec-gray
+      {
+        @media screen and (min-width: $mq-tablet) 
+          {
+            background-image: inline-image('pattern-city-light.svg');
+          }
+
+        h2, h3 
+          {
+            color: #000;
+          }
+      }
 
   }
 

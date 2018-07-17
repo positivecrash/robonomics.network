@@ -1,0 +1,22 @@
+extends extends/layout.pug
+
+block head
+	- var pageTitle = 'Robot economic infrastructure'
+
+block content
+	header(role='banner')
+		include mixins/sections.pug
+		+header_top()
+
+	main(role="main")
+		section.sec-black.sec-city
+			.secw-narrow
+				h2.t-center Подпишитесь на email рассылку, чтобы быть в курсе новостей сети Робономика
+				.t-center
+					a(href="#").btn-green Подписаться
+
+		section.sec-gray.sec-city
+			.secw-narrow
+				h2.t-center Подпишитесь на email рассылку, чтобы быть в курсе новостей сети Робономика
+				.t-center
+					a(href="#").btn-green Подписаться
