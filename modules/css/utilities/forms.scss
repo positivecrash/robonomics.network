@@ -51,6 +51,7 @@ $fontsize-input: $font-size-base;
 	@extend %link_noline;
 
   	appearance: none;
+  	-webkit-appearance: none;
   	border: 0;
   	cursor: pointer;
   	transition: all 0.2s ease-in-out;
