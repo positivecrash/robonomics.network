@@ -1,17 +1,3 @@
-%font_base
-	{
-		font-family: $font-family-base;
-		font-size: $font-size-base;
-		line-height: 1.5;
-		font-weight: 300;
-		letter-spacing: 2px;
-
-		word-spacing: normal;
-		letter-spacing: 0;
-	}
-
-
-
 html
 	{ font-size: 100%; }
 
@@ -52,8 +38,8 @@ body
 h1, h2, h3
 	{
 		text-transform: uppercase;
-        letter-spacing: 2px;
-	  	word-spacing: 4px;
+        letter-spacing: 1px;
+	  	word-spacing: 2px;
 	}
 
 h2, h3

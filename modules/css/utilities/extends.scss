@@ -6,6 +6,17 @@
 		margin: 0 auto;
 	}
 
+%font_base
+	{
+		font-family: $font-family-base;
+		font-size: $font-size-base;
+		line-height: 1.5;
+		font-weight: 300;
+
+		word-spacing: normal;
+		letter-spacing: 0;
+	}
+
 
 %link_noline
 	{
@@ -54,7 +65,7 @@
 %text_uppercase
 	{
 		text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 1.4px;
 	}
 
 %AfterContent

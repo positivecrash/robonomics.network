@@ -18,8 +18,8 @@ $fontsize-input: $font-size-base;
 
 %form_e_base{
 	@extend %font_base;
-	font-size: $fontsize-input;
 	@extend %text_uppercase;
+	font-size: $fontsize-input;
 	font-weight: 500;
 	text-align: center;
 	background-color: $color-input-background;
