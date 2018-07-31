@@ -2215,7 +2215,7 @@ table td, table th {
 }
 
 /*====== end of Other ======*/
-.hamburger, .nav-mobilehide, #logo-ethereum, #header-logo-robonomics, .logo-robonomics .dot, #header-index .snapsvgoutside-text span, .index-terminal-result__grid img, .index-terminal-result__step > *, .contentBlock-token__info .logo-robonomics-outline circle, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .js-listexpand .hidden {
+.hamburger, .nav-mobilehide, #logo-ethereum, #header-logo-robonomics, .logo-robonomics .dot, #header-index .snapsvgoutside-text span, .index-terminal-result__grid img, .index-terminal-result__step > *, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .js-listexpand .hidden {
   visibility: hidden;
   opacity: 0;
 }
@@ -3462,52 +3462,6 @@ footer[role='contentinfo'] .sec-techs {
 .progress .progress-bar {
   background-color: #03A5ED;
   transition: width 0.2s ease-in-out;
-}
-
-.contentBlock-token {
-  position: relative;
-  padding-bottom: 128px;
-}
-.contentBlock-token:after {
-  content: "";
-  position: absolute;
-  bottom: 54px;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  height: 74px;
-  background: url('../i/pattern_token.svg?1530639707') repeat-x 0 100%;
-}
-
-.contentBlock-token__info {
-  padding-right: 230px;
-  position: relative;
-}
-.contentBlock-token__info .logo-robonomics-outline {
-  position: absolute;
-  width: 190px;
-  right: 0;
-  top: 0;
-}
-.contentBlock-token__info .logo-robonomics-outline path {
-  stroke-dasharray: 700;
-  stroke-dashoffset: 700;
-}
-.contentBlock-token__info .logo-robonomics-outline.animate path {
-  animation: 2s DrawSvgPath 1s ease-in-out forwards;
-}
-.contentBlock-token__info .logo-robonomics-outline.animate circle {
-  animation: 0.2s FadeIn 0.8s linear forwards;
-}
-@media screen and (max-width: 576px) {
-  .contentBlock-token__info {
-    padding-right: 0;
-    margin-bottom: 54px;
-  }
-  .contentBlock-token__info .logo-robonomics-outline {
-    position: static;
-    margin-bottom: 54px;
-  }
 }
 
 .contentBlock-roadmap .roadmap-title, .contentBlock-roadmap .roadmap-desc {
