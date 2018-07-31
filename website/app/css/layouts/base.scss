@@ -268,7 +268,8 @@ section
 .sec-gray
   {
     background-color: $c-gray-light;
-    color: #000;
+    
+    &, h2 { color: #000; }
   }
 
 

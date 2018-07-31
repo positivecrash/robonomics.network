@@ -2021,25 +2021,26 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
   margin-top: 27px;
   margin-bottom: 27px;
+  text-align: center;
 }
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
   margin-top: 0;
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 28px;
 }
 
 h3 {
-  font-size: 17px;
+  font-size: 24px;
 }
 
 h4 {
-  font-size: 12px;
+  font-size: 20px;
 }
 
 h5 {
-  font-size: 7px;
+  font-size: 16px;
 }
 
 h1, h2, h3 {
@@ -2053,7 +2054,7 @@ h2, h3 {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 500;
 }
 
@@ -3127,13 +3128,6 @@ footer[role='contentinfo'] .sec-techs {
   padding-top: 30px;
 }
 
-#index-terminal {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-#index-terminal, #index-terminal .secw-base {
-  background-color: #F2F2F2;
-}
 #index-terminal .col-md-5 {
   padding-right: 2% !important;
 }
@@ -3146,6 +3140,11 @@ footer[role='contentinfo'] .sec-techs {
 #index-terminal__info.row h3 {
   font-weight: 500;
   margin-bottom: 10%;
+}
+@media screen and (max-width: 768px) {
+  #index-terminal__info.row .col-lg-3 {
+    display: none;
+  }
 }
 
 #index-terminal__step {
@@ -3798,6 +3797,8 @@ section {
 
 .sec-gray {
   background-color: #F2F2F2;
+}
+.sec-gray, .sec-gray h2 {
   color: #000;
 }
 
