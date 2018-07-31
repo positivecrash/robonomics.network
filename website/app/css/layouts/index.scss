@@ -416,6 +416,17 @@
 
 
 
+@mixin roadmapStage($color, $sprite){
+	.roadmap-title {
+		color: $color;
+		border-color: $color;
+	}
+
+	.roadmap-title__name:before
+		{
+			@include get-sprite($sprite);
+		}
+}
 
 .contentBlock-roadmap
 	{
@@ -428,20 +439,20 @@
 
 		.roadmap-title
 			{
+				color: $c-orange;
 				border-bottom: 2px solid $c-orange;
 				margin-bottom: $vertical-rythm;
 				padding-bottom: 10px;
+				box-sizing: border-box;
 			}
 
 
 		.roadmap-title__in
 			{
+
 				div
 					{
-						display: block;
-						text-transform: uppercase;
-						letter-spacing: 2px;
-						color: $c-orange;
+						@extend %text_uppercase;
 						font-weight: 300;
 
 						&:first-child
@@ -452,27 +463,33 @@
 					}
 			}
 
+		.roadmap-title__name
+			{
+				white-space: nowrap;
+
+				&:before
+					{
+						content: "";
+						display: inline-block;
+						vertical-align: middle;
+						margin-right: 10px;
+					}
+
+				span
+					{
+						display: inline-block;
+						vertical-align: middle;
+						overflow: hidden;
+						white-space: normal;
+					}
+			}
+
 
 		.roadmap-desc
 			{
 				font-weight: 100;
 				letter-spacing: 1px;
 				color: #fff;
-			}
-
-
-		.roadmap-gray
-			{
-				.roadmap-title
-					{
-						border-color: $c-gray;
-
-						div
-							{
-								color: $c-gray;
-							}
-						
-					}
 			}
 
 
@@ -489,6 +506,11 @@
 				}
 			}
 
+
+		.roadmap-done { @include roadmapStage(#fff, 'status-done'); }
+		.roadmap-progress { @include roadmapStage($c-violet-light, 'status-progress'); }
+		.roadmap-waiting { @include roadmapStage($c-orange, 'status-waiting'); }
+		.roadmap-planning { @include roadmapStage($c-orange, 'status-planning'); }
 	}
 
 

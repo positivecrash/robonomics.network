@@ -1,5 +1,5 @@
 $icons: (
-    sprite: (width: 531px, height: 58.02px, pngPath: '../i/sprite.png?1', svgPath: '../i/sprite.svg?1'),
+    sprite: (width: 624px, height: 58.02px, pngPath: '../i/sprite.png?1', svgPath: '../i/sprite.svg?1'),
     aira: (width: 100.23px, height: 23.44px, backgroundX: 0px, backgroundY: 0px),
     anchor: (width: 15.08px, height: 17.09px, backgroundX: -101px, backgroundY: 0px),
     ethereum: (width: 35.84px, height: 58.02px, backgroundX: -117px, backgroundY: 0px),
@@ -9,6 +9,10 @@ $icons: (
     nixos: (width: 121.4px, height: 36.65px, backgroundX: -293px, backgroundY: 0px),
     ok: (width: 27.96px, height: 19.66px, backgroundX: -415px, backgroundY: 0px),
     ros: (width: 87.51px, height: 23.15px, backgroundX: -443px, backgroundY: 0px),
+    status-done: (width: 20.49px, height: 11.78px, backgroundX: -531px, backgroundY: 0px),
+    status-planning: (width: 27.83px, height: 25.44px, backgroundX: -552px, backgroundY: 0px),
+    status-progress: (width: 21.51px, height: 21.51px, backgroundX: -580px, backgroundY: 0px),
+    status-waiting: (width: 21.77px, height: 21.61px, backgroundX: -602px, backgroundY: 0px),
 );
 
 $sprite: map-get($icons, sprite);
@@ -61,5 +65,21 @@ $sprite: map-get($icons, sprite);
 }
 .sprite-basic-ros{
   @include get-sprite('ros');
+  display: inline-block;
+}
+.sprite-basic-status-done{
+  @include get-sprite('status-done');
+  display: inline-block;
+}
+.sprite-basic-status-planning{
+  @include get-sprite('status-planning');
+  display: inline-block;
+}
+.sprite-basic-status-progress{
+  @include get-sprite('status-progress');
+  display: inline-block;
+}
+.sprite-basic-status-waiting{
+  @include get-sprite('status-waiting');
   display: inline-block;
 }

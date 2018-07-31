@@ -1999,7 +1999,7 @@ a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, i
   padding-right: 0 !important;
 }
 
-input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .msg_ok, .msg_error, .msg_wait, #header-link__down a, #header-banner--text, .terminal__window_head, .section__contents > .secw-narrow a {
+input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .msg_ok, .msg_error, .msg_wait, #header-link__down a, #header-banner--text, .terminal__window_head, .contentBlock-roadmap .roadmap-title__in div, .section__contents > .secw-narrow a {
   text-transform: uppercase;
   letter-spacing: 1.4px;
 }
@@ -2458,11 +2458,11 @@ span.loader {
   font-size: 26px;
 }
 
-.svg .sprite-basic-aira, .svg .sprite-basic-anchor, .svg .sprite-basic-ethereum, .svg .sprite-basic-expand-arrow, .svg .sprite-basic-hourglass, .svg .sprite-basic-ipfs, .svg .sprite-basic-nixos, .svg .sprite-basic-ok, .svg .sprite-basic-ros, .svg .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .svg .section__contents a.js-expand-toggle:after {
+.svg .sprite-basic-aira, .svg .sprite-basic-anchor, .svg .sprite-basic-ethereum, .svg .sprite-basic-expand-arrow, .svg .sprite-basic-hourglass, .svg .sprite-basic-ipfs, .svg .sprite-basic-nixos, .svg .sprite-basic-ok, .svg .sprite-basic-ros, .svg .sprite-basic-status-done, .svg .sprite-basic-status-planning, .svg .sprite-basic-status-progress, .svg .sprite-basic-status-waiting, .svg .contentBlock-roadmap .roadmap-done .roadmap-title__name:before, .svg .contentBlock-roadmap .roadmap-progress .roadmap-title__name:before, .svg .contentBlock-roadmap .roadmap-waiting .roadmap-title__name:before, .svg .contentBlock-roadmap .roadmap-planning .roadmap-title__name:before, .svg .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .svg .section__contents a.js-expand-toggle:after {
   background-image: url("../i/sprite.svg?1");
 }
 
-.sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-hourglass, .sprite-basic-ipfs, .sprite-basic-nixos, .sprite-basic-ok, .sprite-basic-ros, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .section__contents a.js-expand-toggle:after {
+.sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-hourglass, .sprite-basic-ipfs, .sprite-basic-nixos, .sprite-basic-ok, .sprite-basic-ros, .sprite-basic-status-done, .sprite-basic-status-planning, .sprite-basic-status-progress, .sprite-basic-status-waiting, .contentBlock-roadmap .roadmap-done .roadmap-title__name:before, .contentBlock-roadmap .roadmap-progress .roadmap-title__name:before, .contentBlock-roadmap .roadmap-waiting .roadmap-title__name:before, .contentBlock-roadmap .roadmap-planning .roadmap-title__name:before, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .section__contents a.js-expand-toggle:after {
   background-image: url("../i/sprite.png?1");
 }
 
@@ -2526,6 +2526,34 @@ span.loader {
   width: 87.51px;
   height: 23.15px;
   background-position: -443px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-status-done {
+  width: 20.49px;
+  height: 11.78px;
+  background-position: -531px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-status-planning {
+  width: 27.83px;
+  height: 25.44px;
+  background-position: -552px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-status-progress {
+  width: 21.51px;
+  height: 21.51px;
+  background-position: -580px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-status-waiting {
+  width: 21.77px;
+  height: 21.61px;
+  background-position: -602px 0px;
   display: inline-block;
 }
 
@@ -3469,36 +3497,79 @@ footer[role='contentinfo'] .sec-techs {
   padding-right: 20px;
 }
 .contentBlock-roadmap .roadmap-title {
+  color: #F15A24;
   border-bottom: 2px solid #F15A24;
   margin-bottom: 27px;
   padding-bottom: 10px;
+  box-sizing: border-box;
 }
 .contentBlock-roadmap .roadmap-title__in div {
-  display: block;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #F15A24;
   font-weight: 300;
 }
 .contentBlock-roadmap .roadmap-title__in div:first-child {
   font-size: 24px;
   font-weight: 500;
 }
+.contentBlock-roadmap .roadmap-title__name {
+  white-space: nowrap;
+}
+.contentBlock-roadmap .roadmap-title__name:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.contentBlock-roadmap .roadmap-title__name span {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  white-space: normal;
+}
 .contentBlock-roadmap .roadmap-desc {
   font-weight: 100;
   letter-spacing: 1px;
   color: #fff;
 }
-.contentBlock-roadmap .roadmap-gray .roadmap-title {
-  border-color: #ccc;
-}
-.contentBlock-roadmap .roadmap-gray .roadmap-title div {
-  color: #ccc;
-}
 @media screen and (min-width: 768px) {
   .contentBlock-roadmap .col-12 {
     text-align: center;
   }
+}
+.contentBlock-roadmap .roadmap-done .roadmap-title {
+  color: #fff;
+  border-color: #fff;
+}
+.contentBlock-roadmap .roadmap-done .roadmap-title__name:before {
+  width: 20.49px;
+  height: 11.78px;
+  background-position: -531px 0px;
+}
+.contentBlock-roadmap .roadmap-progress .roadmap-title {
+  color: #B5C0F1;
+  border-color: #B5C0F1;
+}
+.contentBlock-roadmap .roadmap-progress .roadmap-title__name:before {
+  width: 21.51px;
+  height: 21.51px;
+  background-position: -580px 0px;
+}
+.contentBlock-roadmap .roadmap-waiting .roadmap-title {
+  color: #F15A24;
+  border-color: #F15A24;
+}
+.contentBlock-roadmap .roadmap-waiting .roadmap-title__name:before {
+  width: 21.77px;
+  height: 21.61px;
+  background-position: -602px 0px;
+}
+.contentBlock-roadmap .roadmap-planning .roadmap-title {
+  color: #F15A24;
+  border-color: #F15A24;
+}
+.contentBlock-roadmap .roadmap-planning .roadmap-title__name:before {
+  width: 27.83px;
+  height: 25.44px;
+  background-position: -552px 0px;
 }
 
 /*--- VIDEOS ---*/
@@ -3732,9 +3803,11 @@ section {
 
 .sec-mid {
   background-color: #42475F;
-  color: #fff;
   position: relative;
   overflow: hidden;
+}
+.sec-mid, .sec-mid h2 {
+  color: #fff;
 }
 .sec-mid .snapsvg-darkDots {
   top: 90px;
