@@ -87,89 +87,88 @@
         <div class="snapsvg-wrap plaxify" id="snapsvg-index" data-xrange="10" data-yrange="10">
           <svg class="snapsvg"></svg>
         </div>
-      </div>
-      <div id="header-link__down"><a href="#index-termina" data-scroll>Попробовать</a></div>
+      </div><a class="btn-green" href="#index-terminal" data-scroll>Alfa релиз для майнеров</a>
     </header>
-    <section class="sec-gray" id="index-terminal">
-      <div class="secw-base">
-        <h2>Для Ethereum js разработчиков: создавайте свои dapp умного города</h2>
-      </div>
-      <div class="secw-base" id="index-terminal_window">
-        <div class="row">
-          <div class="col-md-5 col-null">
-            <progress-bar :val="Number(step)" :max="Number(commands.length)"></progress-bar>
-            <div class="row" id="index-terminal__info">
-              <div class="col-lg-3">
-                <div id="index-terminal__step" v-if="step"><b>{{ step }} шаг</b>из {{ commands.length }}</div>
-              </div>
-              <div class="col-lg-9">
-                <h3 v-if="step == 0">Начало работы с сетью робономика</h3>
-                <h3 v-if="step == 1">Обзор существующих рынков в сети</h3>
-                <h3 v-if="step == 2">Обзор возможности рынка исполнить заказ</h3>
-                <h3 v-if="step == 3">Выставление своего заказа на рынок </h3>
-                <h3 v-if="step == 4">Получение заказа</h3>
-                <h3 v-if="step == 5">Поздравляем!</h3>
-                <div class="m-b-base text-hyphened">
-                  <div v-if="step == 0">
-                    <p>Робономика – это большая децентрализованная сеть контроля и оказания услуг кибер-физическими системами, адаптирующаяся к потребностям человека.</p>
-                    <p>Для работы с сетью создайте экземпляр объекта сети, набрав в терминале команду:</p>
-                  </div>
-                  <div v-if="step == 1">
-                    <p>В основе Робономики лежит рыночный механизм, а значит в сети существуют рынки. Для работы с сетью посмотрите, какие рынки в сети существуют на данный момент.</p>
-                    <p>Введите в терминале команду:</p>
-                  </div>
-                  <div v-if="step == 2">
-                    <p>Мы получили рынки. Теперь видим, что в сети Робономика есть три рынка: рынок автономных фабрик, рынок умных городов, рынок беспилотной логистики. Давайте выберем рынок автономных фабрик и посмотрим, есть ли на нем кто-нибудь и что там предлагают.</p>
-                    <p>Отправим запрос, введя в терминале команду:</p>
-                  </div>
-                  <div v-if="step == 3">
-                    <p>Теперь мы знаем, что на рынке есть автономная фабрика, готовая исполнить заказ по производству персонализированных ваз. Сформулируем предложение, загрузив параметры вазы в ipfs, и выставим его на рынок. Сеть Робономики создаст для нас и умной фабрики контракт обязательства.</p>
-                    <p>Введите в терминале команду:</p>
-                  </div>
-                  <div v-if="step == 4">
-                    <p>Теперь начнём слушать событие об исполнении обязательства автономной фабрикой. Как только фабрика исполнит своё обязательство, мы получим лог её операций.</p>
-                    <p>Введите в терминале команду:</p>
-                  </div>
-                  <div v-if="step == 5">
-                    <p>Теперь ваш черед - создавайте новое поколение децентрализованных приложений для Умных городов и Индустрии 4.0 на платформе Робономика.</p>
-                    <p><a class="btn-primary" href="#" target="_blank">Перейти в SDK</a></p>
-                    <p><a class="btn-border" href="#" target="_blank">Общаться с разработчиками</a></p>
-                  </div>
+    <main role="main">
+      <section class="sec-gray" id="index-terminal">
+        <div class="secw-base">
+          <h2>Для Ethereum js разработчиков: создавайте свои dapp умного города</h2>
+        </div>
+        <div class="secw-base" id="index-terminal_window">
+          <div class="row">
+            <div class="col-md-5 col-null">
+              <progress-bar :val="Number(step)" :max="Number(commands.length)"></progress-bar>
+              <div class="row" id="index-terminal__info">
+                <div class="col-lg-3">
+                  <div id="index-terminal__step" v-if="step"><b>{{ step }} шаг</b>из {{ commands.length }}</div>
                 </div>
-                <p v-if="getCmd"><a id="index-terminal__info_cmd" href="#" @click.prevent="setCmd" title="Кликните, чтобы автоматически скопировать команду в терминал">{{ getCmd }}</a></p>
+                <div class="col-lg-9">
+                  <h3 v-if="step == 0">Начало работы с сетью робономика</h3>
+                  <h3 v-if="step == 1">Обзор существующих рынков в сети</h3>
+                  <h3 v-if="step == 2">Обзор возможности рынка исполнить заказ</h3>
+                  <h3 v-if="step == 3">Выставление своего заказа на рынок </h3>
+                  <h3 v-if="step == 4">Получение заказа</h3>
+                  <h3 v-if="step == 5">Поздравляем!</h3>
+                  <div class="m-b-base text-hyphened">
+                    <div v-if="step == 0">
+                      <p>Робономика – это большая децентрализованная сеть контроля и оказания услуг кибер-физическими системами, адаптирующаяся к потребностям человека.</p>
+                      <p>Для работы с сетью создайте экземпляр объекта сети, набрав в терминале команду:</p>
+                    </div>
+                    <div v-if="step == 1">
+                      <p>В основе Робономики лежит рыночный механизм, а значит в сети существуют рынки. Для работы с сетью посмотрите, какие рынки в сети существуют на данный момент.</p>
+                      <p>Введите в терминале команду:</p>
+                    </div>
+                    <div v-if="step == 2">
+                      <p>Мы получили рынки. Теперь видим, что в сети Робономика есть три рынка: рынок автономных фабрик, рынок умных городов, рынок беспилотной логистики. Давайте выберем рынок автономных фабрик и посмотрим, есть ли на нем кто-нибудь и что там предлагают.</p>
+                      <p>Отправим запрос, введя в терминале команду:</p>
+                    </div>
+                    <div v-if="step == 3">
+                      <p>Теперь мы знаем, что на рынке есть автономная фабрика, готовая исполнить заказ по производству персонализированных ваз. Сформулируем предложение, загрузив параметры вазы в ipfs, и выставим его на рынок. Сеть Робономики создаст для нас и умной фабрики контракт обязательства.</p>
+                      <p>Введите в терминале команду:</p>
+                    </div>
+                    <div v-if="step == 4">
+                      <p>Теперь начнём слушать событие об исполнении обязательства автономной фабрикой. Как только фабрика исполнит своё обязательство, мы получим лог её операций.</p>
+                      <p>Введите в терминале команду:</p>
+                    </div>
+                    <div v-if="step == 5">
+                      <p>Теперь ваш черед - создавайте новое поколение децентрализованных приложений для Умных городов и Индустрии 4.0 на платформе Робономика.</p>
+                      <p><a class="btn-primary" href="#" target="_blank">Перейти в SDK</a></p>
+                      <p><a class="btn-border" href="#" target="_blank">Общаться с разработчиками</a></p>
+                    </div>
+                  </div>
+                  <p v-if="getCmd"><a id="index-terminal__info_cmd" href="#" @click.prevent="setCmd" title="Кликните, чтобы автоматически скопировать команду в терминал">{{ getCmd }}</a></p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-7 col-null">
-            <div class="terminal__window">
-              <div class="terminal__window_head">Terminal</div>
-              <div class="terminal__window_content">
-                <p>Press enter to submit commands</p><p class="cmd" v-html="entry" v-for="entry in history">{{ entry }}</p>
+            <div class="col-md-7 col-null">
+              <div class="terminal__window">
+                <div class="terminal__window_head">Terminal</div>
+                <div class="terminal__window_content">
+                  <p>Press enter to submit commands</p><p class="cmd" v-html="entry" v-for="entry in history">{{ entry }}</p>
 <p class="input">
 <textarea ref="cmdInput" v-model.trim="cmd" @keyup.enter="process"></textarea>
 </p>
+                </div>
               </div>
-            </div>
-            <div class="terminal__window">
-              <div class="terminal__window_head">Result</div>
-              <div class="terminal__window_content" id="index-terminal-result">
-                <div class="index-terminal-result__grid"><img class="active" alt="" src="assets/i/Terminal-Result-1.png" srcset="assets/i/Terminal-Result-1@2x.png"><img v-bind:class="{'active' : (step &gt;= 1)}" alt="" src="assets/i/Terminal-Result-2.png" srcset="assets/i/Terminal-Result-2@2x.png"><img v-bind:class="{'active' : (step &gt;= 2)}" alt="" src="assets/i/Terminal-Result-3.png" srcset="assets/i/Terminal-Result-3@2x.png"><img v-bind:class="{'active' : (step &gt;= 3)}" alt="" src="assets/i/Terminal-Result-4.png" srcset="assets/i/Terminal-Result-4@2x.png"><img v-bind:class="{'active' : (step &gt;= 5)}" alt="" src="assets/i/Terminal-Result-5.png" srcset="assets/i/Terminal-Result-5@2x.png"></div>
-                <div class="index-terminal-result__step" v-bind:class="{'active-step-3' : (step == 3), 'active-step-4' : (step == 4), 'active-step-5' : (step == 5)}"><img id="index-terminal-result__factory" alt="" src="assets/i/factory.svg"><img id="index-terminal-result__ordernew" alt="" src="assets/i/Terminal-newOrder.svg">
-                  <div id="index-terminal-result__process"><span class="sprite-basic-hourglass"></span></div>
-                  <div id="index-terminal-result__ok"><span class="sprite-basic-ok"></span></div>
-                  <div id="terminal-way-up"><span></span></div>
-                  <div id="terminal-way-down"></div>
-                  <div id="terminal-cars"></div><img id="index-terminal-result__orderdone" alt="" src="assets/i/Terminal-doneOrder.svg">
+              <div class="terminal__window">
+                <div class="terminal__window_head">Result</div>
+                <div class="terminal__window_content" id="index-terminal-result">
+                  <div class="index-terminal-result__grid"><img class="active" alt="" src="assets/i/Terminal-Result-1.png" srcset="assets/i/Terminal-Result-1@2x.png"><img v-bind:class="{'active' : (step &gt;= 1)}" alt="" src="assets/i/Terminal-Result-2.png" srcset="assets/i/Terminal-Result-2@2x.png"><img v-bind:class="{'active' : (step &gt;= 2)}" alt="" src="assets/i/Terminal-Result-3.png" srcset="assets/i/Terminal-Result-3@2x.png"><img v-bind:class="{'active' : (step &gt;= 3)}" alt="" src="assets/i/Terminal-Result-4.png" srcset="assets/i/Terminal-Result-4@2x.png"><img v-bind:class="{'active' : (step &gt;= 5)}" alt="" src="assets/i/Terminal-Result-5.png" srcset="assets/i/Terminal-Result-5@2x.png"></div>
+                  <div class="index-terminal-result__step" v-bind:class="{'active-step-3' : (step == 3), 'active-step-4' : (step == 4), 'active-step-5' : (step == 5)}"><img id="index-terminal-result__factory" alt="" src="assets/i/factory.svg"><img id="index-terminal-result__ordernew" alt="" src="assets/i/Terminal-newOrder.svg">
+                    <div id="index-terminal-result__process"><span class="sprite-basic-hourglass"></span></div>
+                    <div id="index-terminal-result__ok"><span class="sprite-basic-ok"></span></div>
+                    <div id="terminal-way-up"><span></span></div>
+                    <div id="terminal-way-down"></div>
+                    <div id="terminal-cars"></div><img id="index-terminal-result__orderdone" alt="" src="assets/i/Terminal-doneOrder.svg">
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <script src="assets/js/vue.js"></script>
-    <script src="assets/js/vue-init.js"></script>
-    <main role="main">
+      </section>
+      <script src="assets/js/vue.js"></script>
+      <script src="assets/js/vue-init.js"></script>
       <section class="sec-black">
         <div class="secw-base">
           <h2>План развития инфраструктуры</h2>
