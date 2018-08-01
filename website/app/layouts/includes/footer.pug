@@ -1,5 +1,5 @@
 footer(role='contentinfo')
-	section.sec-dark
+	section.sec-black
 		.secw-base
 			.row
 				.col-md-6
@@ -15,7 +15,7 @@ footer(role='contentinfo')
 					section
 						h2 Новости
 
-						<a class="twitter-timeline" data-height="400" data-theme="dark" data-link-color="#F5F8FA" allowtransparency="true" data-chrome="nofooter noborders transparent noscrollbar noheader" href="https://twitter.com/AIRA_Robonomics">Tweets by AIRA_Robonomics</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+						<a class="twitter-timeline" data-height="520" data-theme="dark" data-link-color="#03a5ed" allowtransparency="true" data-chrome="nofooter noborders transparent noscrollbar noheader" href="https://twitter.com/AIRA_Robonomics?ref_src=twsrc%5Etfw">Tweets by AIRA_Robonomics</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 				.col-md-6
 					section
@@ -29,9 +29,40 @@ footer(role='contentinfo')
 
 					section
 						h2 Сообщество
+						.row
+							.col-sm-6
+								p: a(href="#", target="_blank").link-social
+									span.icon: i.sprite-basic-github
+									span GitHub
 
-						include ../mixins/socials.pug
-						+socials()
+								p: a(href="#", target="_blank").link-social
+									span.icon: i.sprite-basic-medium
+									span Blog (EN)
+
+								p: a(href="#", target="_blank").link-social
+									span.icon: i.sprite-basic-blog
+									span Blog (RU)
+
+								p: a(href="#", target="_blank").link-social
+									span.icon: i.sprite-basic-twitter
+									span Twitter
+
+								p: a(href="#", target="_blank").link-social
+									span.icon: i.sprite-basic-youtube
+									span YouTube
+
+							.col-sm-6
+								p: a(href="#", target="_blank").link-social
+									span.icon: i.sprite-basic-telegram
+									span Telegram chat
+
+								p: a(href="#", target="_blank").link-social
+									span.icon: i.sprite-basic-facebook
+									span Facebook
+
+								p: a(href="#", target="_blank").link-social
+									span.icon: i.sprite-basic-forum
+									span BitcoinTalk
 
 					section
 						h2 Контакты
@@ -46,3 +77,7 @@ footer(role='contentinfo')
 						p
 							a(href="") community@aira.life
 							| &nbsp;– Community department (design and talk)
+
+						p
+							a(href="") webmaster@robonomics.network
+							| &nbsp;– Your suggetions for the website

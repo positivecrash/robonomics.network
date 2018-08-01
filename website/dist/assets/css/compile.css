@@ -1968,7 +1968,7 @@ body, input:not([type='submit']):not([type='button']), input[type='submit'], inp
   letter-spacing: 0;
 }
 
-a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .header-top__nav a, #header-link__down a, #header-banner--text, .sec-synopsis, #index-terminal__info_cmd, .section__contents > .secw-narrow a, a:hover, input[type='submit']:hover, input[type='button']:hover, button:hover, input.btn-red:hover, input.btn-blue:hover, #header-link__down a:hover, #header-banner--text:hover, .sec-synopsis:hover, #index-terminal__info_cmd:hover, .section__contents > .secw-narrow a:hover, a:focus, input[type='submit']:focus, input[type='button']:focus, button:focus, input.btn-red:focus, input.btn-blue:focus, #header-link__down a:focus, #header-banner--text:focus, .sec-synopsis:focus, #index-terminal__info_cmd:focus, .section__contents > .secw-narrow a:focus, a:visited, input[type='submit']:visited, input[type='button']:visited, button:visited, input.btn-red:visited, input.btn-blue:visited, #header-link__down a:visited, #header-banner--text:visited, .sec-synopsis:visited, #index-terminal__info_cmd:visited, .section__contents > .secw-narrow a:visited {
+a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .header-top__nav a, #header-link__down a, #header-banner--text, .link-social, .sec-synopsis, #index-terminal__info_cmd, .section__contents > .secw-narrow a, a:hover, input[type='submit']:hover, input[type='button']:hover, button:hover, input.btn-red:hover, input.btn-blue:hover, #header-link__down a:hover, #header-banner--text:hover, .link-social:hover, .sec-synopsis:hover, #index-terminal__info_cmd:hover, .section__contents > .secw-narrow a:hover, a:focus, input[type='submit']:focus, input[type='button']:focus, button:focus, input.btn-red:focus, input.btn-blue:focus, #header-link__down a:focus, #header-banner--text:focus, .link-social:focus, .sec-synopsis:focus, #index-terminal__info_cmd:focus, .section__contents > .secw-narrow a:focus, a:visited, input[type='submit']:visited, input[type='button']:visited, button:visited, input.btn-red:visited, input.btn-blue:visited, #header-link__down a:visited, #header-banner--text:visited, .link-social:visited, .sec-synopsis:visited, #index-terminal__info_cmd:visited, .section__contents > .secw-narrow a:visited {
   text-decoration: none;
   text-decoration: none !important;
 }
@@ -2365,6 +2365,7 @@ input.error:not([type='submit']):not([type='button']), input.error[type='submit'
 
 input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue {
   appearance: none;
+  -webkit-appearance: none;
   border: 0;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -2458,11 +2459,11 @@ span.loader {
   font-size: 26px;
 }
 
-.svg .sprite-basic-aira, .svg .sprite-basic-anchor, .svg .sprite-basic-ethereum, .svg .sprite-basic-expand-arrow, .svg .sprite-basic-hourglass, .svg .sprite-basic-ipfs, .svg .sprite-basic-nixos, .svg .sprite-basic-ok, .svg .sprite-basic-ros, .svg .sprite-basic-status-done, .svg .sprite-basic-status-planning, .svg .sprite-basic-status-progress, .svg .sprite-basic-status-waiting, .svg .contentBlock-roadmap .roadmap-done .roadmap-title__name:before, .svg .contentBlock-roadmap .roadmap-progress .roadmap-title__name:before, .svg .contentBlock-roadmap .roadmap-waiting .roadmap-title__name:before, .svg .contentBlock-roadmap .roadmap-planning .roadmap-title__name:before, .svg .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .svg .section__contents a.js-expand-toggle:after {
+.svg .sprite-basic-aira, .svg .sprite-basic-anchor, .svg .sprite-basic-blog, .svg .sprite-basic-ethereum, .svg .sprite-basic-expand-arrow, .svg .sprite-basic-facebook, .svg .sprite-basic-forum, .svg .sprite-basic-github, .svg .sprite-basic-hourglass, .svg .sprite-basic-ipfs, .svg .sprite-basic-medium, .svg .sprite-basic-nixos, .svg .sprite-basic-ok, .svg .sprite-basic-reddit, .svg .sprite-basic-ros, .svg .sprite-basic-status-done, .svg .sprite-basic-status-planning, .svg .sprite-basic-status-progress, .svg .sprite-basic-status-waiting, .svg .sprite-basic-telegram, .svg .sprite-basic-twitter, .svg .sprite-basic-youtube, .svg .contentBlock-roadmap .roadmap-done .roadmap-title__name:before, .svg .contentBlock-roadmap .roadmap-progress .roadmap-title__name:before, .svg .contentBlock-roadmap .roadmap-waiting .roadmap-title__name:before, .svg .contentBlock-roadmap .roadmap-planning .roadmap-title__name:before, .svg .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .svg .section__contents a.js-expand-toggle:after {
   background-image: url("../i/sprite.svg?1");
 }
 
-.sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-hourglass, .sprite-basic-ipfs, .sprite-basic-nixos, .sprite-basic-ok, .sprite-basic-ros, .sprite-basic-status-done, .sprite-basic-status-planning, .sprite-basic-status-progress, .sprite-basic-status-waiting, .contentBlock-roadmap .roadmap-done .roadmap-title__name:before, .contentBlock-roadmap .roadmap-progress .roadmap-title__name:before, .contentBlock-roadmap .roadmap-waiting .roadmap-title__name:before, .contentBlock-roadmap .roadmap-planning .roadmap-title__name:before, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .section__contents a.js-expand-toggle:after {
+.sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-blog, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-facebook, .sprite-basic-forum, .sprite-basic-github, .sprite-basic-hourglass, .sprite-basic-ipfs, .sprite-basic-medium, .sprite-basic-nixos, .sprite-basic-ok, .sprite-basic-reddit, .sprite-basic-ros, .sprite-basic-status-done, .sprite-basic-status-planning, .sprite-basic-status-progress, .sprite-basic-status-waiting, .sprite-basic-telegram, .sprite-basic-twitter, .sprite-basic-youtube, .contentBlock-roadmap .roadmap-done .roadmap-title__name:before, .contentBlock-roadmap .roadmap-progress .roadmap-title__name:before, .contentBlock-roadmap .roadmap-waiting .roadmap-title__name:before, .contentBlock-roadmap .roadmap-planning .roadmap-title__name:before, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .section__contents a.js-expand-toggle:after {
   background-image: url("../i/sprite.png?1");
 }
 
@@ -2480,80 +2481,143 @@ span.loader {
   display: inline-block;
 }
 
+.sprite-basic-blog {
+  width: 20.33px;
+  height: 20.33px;
+  background-position: -117px 0px;
+  display: inline-block;
+}
+
 .sprite-basic-ethereum {
   width: 35.84px;
   height: 58.02px;
-  background-position: -117px 0px;
+  background-position: -138px 0px;
   display: inline-block;
 }
 
 .sprite-basic-expand-arrow {
   width: 13.13px;
   height: 18.67px;
-  background-position: -153px 0px;
+  background-position: -174px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-facebook {
+  width: 21.4px;
+  height: 21.4px;
+  background-position: -188px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-forum {
+  width: 24.3px;
+  height: 19.72px;
+  background-position: -210px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-github {
+  width: 20.33px;
+  height: 23.34px;
+  background-position: -235px 0px;
   display: inline-block;
 }
 
 .sprite-basic-hourglass {
   width: 21.32px;
   height: 25.58px;
-  background-position: -167px 0px;
+  background-position: -256px 0px;
   display: inline-block;
 }
 
 .sprite-basic-ipfs {
   width: 103.48px;
   height: 45.02px;
-  background-position: -189px 0px;
+  background-position: -278px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-medium {
+  width: 18.92px;
+  height: 15px;
+  background-position: -382px 0px;
   display: inline-block;
 }
 
 .sprite-basic-nixos {
   width: 121.4px;
   height: 36.65px;
-  background-position: -293px 0px;
+  background-position: -401px 0px;
   display: inline-block;
 }
 
 .sprite-basic-ok {
   width: 27.96px;
   height: 19.66px;
-  background-position: -415px 0px;
+  background-position: -523px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-reddit {
+  width: 22.59px;
+  height: 18.82px;
+  background-position: -551px 0px;
   display: inline-block;
 }
 
 .sprite-basic-ros {
   width: 87.51px;
   height: 23.15px;
-  background-position: -443px 0px;
+  background-position: -574px 0px;
   display: inline-block;
 }
 
 .sprite-basic-status-done {
   width: 20.49px;
   height: 11.78px;
-  background-position: -531px 0px;
+  background-position: -662px 0px;
   display: inline-block;
 }
 
 .sprite-basic-status-planning {
   width: 27.83px;
   height: 25.44px;
-  background-position: -552px 0px;
+  background-position: -683px 0px;
   display: inline-block;
 }
 
 .sprite-basic-status-progress {
   width: 21.51px;
   height: 21.51px;
-  background-position: -580px 0px;
+  background-position: -711px 0px;
   display: inline-block;
 }
 
 .sprite-basic-status-waiting {
   width: 21.77px;
   height: 21.61px;
-  background-position: -602px 0px;
+  background-position: -733px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-telegram {
+  width: 24.3px;
+  height: 21.16px;
+  background-position: -755px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-twitter {
+  width: 22.3px;
+  height: 18.1px;
+  background-position: -780px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-youtube {
+  width: 24.2px;
+  height: 17.03px;
+  background-position: -803px 0px;
   display: inline-block;
 }
 
@@ -3072,14 +3136,13 @@ footer[role='contentinfo'] {
 footer[role='contentinfo'] .col-md-6 section:first-child {
   padding-top: 0;
 }
-footer[role='contentinfo'] a {
-  color: #F15A24;
-}
-footer[role='contentinfo'] a:hover {
-  color: #f47e54;
-}
 footer[role='contentinfo'] h2 {
   margin-bottom: 22px;
+  text-align: left;
+}
+footer[role='contentinfo'] p {
+  margin-bottom: 13.5px;
+  line-height: 1.2;
 }
 footer[role='contentinfo'] .el-social {
   margin-right: 22px;
@@ -3091,18 +3154,33 @@ footer[role='contentinfo'] .el-social:last-child {
 footer[role='contentinfo'] .el-social:hover {
   background-color: #fff;
 }
-footer[role='contentinfo'] .sec-techs {
-  opacity: 0.7;
+
+.link-social {
+  white-space: nowrap;
+}
+.link-social, .link-social:hover {
+  color: #fff;
+}
+.link-social span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.link-social span:last-child {
+  margin-right: 0;
+}
+.link-social span.icon {
+  width: 24px;
 }
 
 .sec-synopsis {
   display: block;
-  border: 1px solid #357B9E;
+  border: 1px solid #03A5ED;
   overflow: hidden;
   padding: 20px;
 }
 .sec-synopsis, .sec-synopsis:hover, .sec-synopsis h2, .sec-synopsis h2:hover {
-  color: #357B9E !important;
+  color: #03A5ED !important;
 }
 .sec-synopsis h2 {
   font-size: 24px;
@@ -3115,10 +3193,10 @@ footer[role='contentinfo'] .sec-techs {
   float: left;
 }
 .sec-synopsis .logo-robonomics-outline path {
-  stroke: #357B9E;
+  stroke: #03A5ED;
 }
 .sec-synopsis .logo-robonomics-outline circle {
-  fill: #357B9E;
+  fill: #03A5ED;
 }
 
 .page-outdated {
@@ -3542,7 +3620,7 @@ footer[role='contentinfo'] .sec-techs {
 .contentBlock-roadmap .roadmap-done .roadmap-title__name:before {
   width: 20.49px;
   height: 11.78px;
-  background-position: -531px 0px;
+  background-position: -662px 0px;
 }
 .contentBlock-roadmap .roadmap-progress .roadmap-title {
   color: #B5C0F1;
@@ -3551,7 +3629,7 @@ footer[role='contentinfo'] .sec-techs {
 .contentBlock-roadmap .roadmap-progress .roadmap-title__name:before {
   width: 21.51px;
   height: 21.51px;
-  background-position: -580px 0px;
+  background-position: -711px 0px;
 }
 .contentBlock-roadmap .roadmap-waiting .roadmap-title {
   color: #F15A24;
@@ -3560,7 +3638,7 @@ footer[role='contentinfo'] .sec-techs {
 .contentBlock-roadmap .roadmap-waiting .roadmap-title__name:before {
   width: 21.77px;
   height: 21.61px;
-  background-position: -602px 0px;
+  background-position: -733px 0px;
 }
 .contentBlock-roadmap .roadmap-planning .roadmap-title {
   color: #F15A24;
@@ -3569,7 +3647,7 @@ footer[role='contentinfo'] .sec-techs {
 .contentBlock-roadmap .roadmap-planning .roadmap-title__name:before {
   width: 27.83px;
   height: 25.44px;
-  background-position: -552px 0px;
+  background-position: -683px 0px;
 }
 
 /*--- VIDEOS ---*/
@@ -3817,9 +3895,6 @@ section {
   background-color: #000;
   color: #fff;
 }
-.sec-black h2, .sec-black h3 {
-  color: #B5C0F1;
-}
 
 .sec-gray {
   background-color: #F2F2F2;
@@ -3942,7 +4017,7 @@ section {
 .section__contents a.js-expand-toggle:after {
   width: 13.13px;
   height: 18.67px;
-  background-position: -153px 0px;
+  background-position: -174px 0px;
 }
 .section__contents a.js-expand-toggle.open:hover:after {
   animation: 0.4s 0.6s BounceVertical ease-in-out 3;

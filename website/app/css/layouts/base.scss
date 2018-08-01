@@ -243,7 +243,7 @@ section
 
     &, h2 { color: #fff; }
 
-    
+
     .snapsvg-darkDots
       {
         @extend %svgBack;
@@ -260,11 +260,6 @@ section
   {
     background-color: #000;
     color: #fff;
-
-    h2, h3
-      {
-        color: $c-violet-light;
-      }
   }
 
 .sec-gray

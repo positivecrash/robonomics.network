@@ -14,19 +14,16 @@ footer[role='contentinfo']
 		  		}
 		  	}
 
-  	a
-  		{
-  			color: $c-orange;
-
-  			&:hover
-  				{
-  					color: lighten($c-orange, 10%);
-  				}
-  		}
-
   	h2
   		{
   			margin-bottom: 22px;
+  			text-align: left;
+  		}
+
+  	p
+  		{
+  			margin-bottom: $vertical-rythm/2;
+  			line-height: 1.2;
   		}
 
   	.el-social
@@ -44,20 +41,34 @@ footer[role='contentinfo']
   					background-color: #fff;
   				}
   		}
-
-
-  	.sec-techs
-  		{
-  			opacity: 0.7;
-  		}
   }
+
+
+.link-social
+	{
+		@extend %link_noline;
+		white-space: nowrap;
+		
+		&, &:hover { color: #fff; }
+
+		span
+			{
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 10px;
+
+				&:last-child { margin-right: 0; }
+
+				&.icon { width: 24px; }
+			}
+	}
 
 
 
 .sec-synopsis
 	{
 		display: block;
-		border: 1px solid $c-blue-mute;
+		border: 1px solid $c-blue;
 		overflow: hidden;
 		padding: 20px;
 
@@ -66,7 +77,7 @@ footer[role='contentinfo']
 		&, h2
 			{
 				&, &:hover
-					{ color: $c-blue-mute !important; }
+					{ color: $c-blue !important; }
 			}
 
 		h2 { font-size: 24px; }
@@ -83,9 +94,9 @@ footer[role='contentinfo']
 				float: left;
 				
 				path
-					{ stroke: $c-blue-mute; }
+					{ stroke: $c-blue; }
 
 				circle
-					{ fill: $c-blue-mute; }
+					{ fill: $c-blue; }
 			}
 	}
