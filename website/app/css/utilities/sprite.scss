@@ -36,8 +36,7 @@ $sprite: map-get($icons, sprite);
     height: map-get($spritename, height);
     background-position: map-get($spritename, backgroundX) map-get($spritename, backgroundY);
 
-    @extend %back_png;
-    .svg & { @extend %back_svg; }
+    @extend %back_svg;
 }
 
 .sprite-basic-aira{

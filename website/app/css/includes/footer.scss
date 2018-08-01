@@ -5,12 +5,22 @@ footer[role='contentinfo']
 
   	.col-md-6
   		{
+
 	  		section
-		  		{
-		  			&:first-child
+		  		{	
+		  			padding-left: $margin-sec;
+		  			padding-top: $margin-sec/2;
+		  			padding-bottom: $margin-sec/2;
+
+		  			&:last-child
 		  				{
-		  					padding-top: 0;
+		  					padding-bottom: 0;
 		  				}
+		  		}
+
+		  	&:first-child
+		  		{
+		  			section { padding-left: 0; }
 		  		}
 		  	}
 
