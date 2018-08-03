@@ -2703,6 +2703,14 @@ li:last-child, p:last-child, blockquote:last-child, .m-b-base:last-child {
   margin-bottom: 0;
 }
 
+blockquote {
+  border-width: 2px 0;
+  border-style: solid;
+  border-color: #F15A24;
+  font-weight: 500;
+  padding: 9px 0;
+}
+
 code {
   max-height: 120px;
   word-break: break-all;
@@ -4284,6 +4292,23 @@ footer[role='contentinfo'] .el-social:hover {
 }
 
 /*--- end of VIDEOS ---*/
+/* Page Bounty for miners - alfa release */
+.section__firstTransaction {
+  position: relative;
+}
+@media screen and (min-width: 576px) {
+  .section__firstTransaction:after {
+    content: "";
+    width: 557px;
+    height: 299px;
+    background: url('../i/XRT-first-transaction.png?1532763602') no-repeat 0 0;
+    background-size: contain;
+    position: absolute;
+    left: -300px;
+    bottom: 74px;
+  }
+}
+
 html, body {
   height: 100%;
   min-height: 100%;

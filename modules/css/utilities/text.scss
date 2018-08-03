@@ -162,6 +162,15 @@ li, p, blockquote, .m-b-base
 	  }
 	}
 
+blockquote
+	{
+		border-width: 2px 0;
+		border-style: solid;
+		border-color: $c-orange;
+		font-weight: 500;
+		padding: $vertical-rythm/3 0;
+	}
+
 code
 	{
 	    max-height: 120px;

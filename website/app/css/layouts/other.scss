@@ -1,0 +1,21 @@
+/* Page Bounty for miners - alfa release */
+
+.section__firstTransaction
+	{
+		position: relative;
+
+		@media screen and (min-width: $bootstrap-sm){
+			&:after{
+				content:"";
+				width: 557px;
+				height: 299px;
+				background: image-url('XRT-first-transaction.png') no-repeat 0 0;
+				background-size: contain;
+
+				position: absolute;
+			    left: -300px;
+	    		bottom: 74px;
+			}
+		}
+		
+	}
