@@ -2551,7 +2551,7 @@ a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, i
   z-index: 1;
 }
 
-.contentBlock-roadmap .row, .contentBlock-roadmap div[class*='col-'], .block-gList, .block-gList .col-sm-4 {
+.contentBlock-roadmap .row, .contentBlock-roadmap div[class*='col-'] {
   margin-left: 0 !important;
   margin-right: 0 !important;
   padding-left: 0 !important;
@@ -2819,86 +2819,6 @@ table td, table th {
   }
   100% {
     transform: translateY(0);
-  }
-}
-.anyslide[data-anyslide~='controls'] {
-  position: relative;
-}
-.anyslide[data-anyslide~='controls'] .js-slider-controls {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-}
-@media screen and (max-width: 768px) {
-  .anyslide[data-anyslide~='controls'] .js-slider-controls {
-    display: none;
-  }
-}
-.anyslide[data-anyslide~='controls'] .js-slider-controls .prev, .anyslide[data-anyslide~='controls'] .js-slider-controls .next {
-  position: absolute;
-  top: 0;
-  display: block;
-}
-.anyslide[data-anyslide~='controls'] .js-slider-controls .prev.disabled, .anyslide[data-anyslide~='controls'] .js-slider-controls .next.disabled {
-  filter: grayscale(1);
-  opacity: 0.5;
-  cursor: default;
-}
-.anyslide[data-anyslide~='controls'] .js-slider-controls .prev {
-  left: 0;
-}
-.anyslide[data-anyslide~='controls'] .js-slider-controls .next {
-  right: 0;
-}
-
-.js-slider-viewport .slide {
-  display: none;
-  opacity: 0;
-}
-.js-slider-viewport .slide.active {
-  display: block;
-  animation: 0.8s FadeIn ease-in-out forwards;
-}
-
-.anyslide-loader {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  position: relative;
-  margin: 40px auto;
-}
-.anyslide-loader:before {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  border: 5px solid transparent;
-  border-top-color: #03A5ED;
-  border-left-color: #03A5ED;
-  border-bottom-color: #03A5ED;
-  animation: Spin 1s infinite;
-}
-
-@keyframes FadeIn {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-@keyframes Spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
 /*======== FORMS VARIABLES & MIXINS & EXTENDS =========*/
@@ -4552,10 +4472,6 @@ section {
   color: #000;
 }
 
-.sec-pad {
-  padding-left: 60px;
-}
-
 .sec-dots__gray {
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSI5Ni45cHgiIGhlaWdodD0iOTdweCIgdmlld0JveD0iMCAwIDk2LjkgOTciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDk2LjkgOTc7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojQ0NDQ0NDO30KPC9zdHlsZT4KPGcgaWQ9IlN5bWJvbF8xXzEzLTIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgLTY4KSI+Cgk8Y2lyY2xlIGlkPSJFbGxpcHNlXzQtMTQiIGNsYXNzPSJzdDAiIGN4PSI5Mi40IiBjeT0iNzEuNSIgcj0iMy41Ii8+CjwvZz4KPC9zdmc+Cg==');
 }
@@ -4700,109 +4616,8 @@ section {
 }
 
 /* end of SECTION - pages */
-.block-white {
-  background-color: #fff;
-  color: #000;
-  padding: 15px;
-}
-
-.block-video {
-  position: relative;
-}
-.block-video:before, .block-video:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 0;
-  height: 0;
-}
-.block-video:before {
-  border-top: 27px solid transparent;
-  border-bottom: 27px solid transparent;
-  border-left: 54px solid #B5C0F1;
-  z-index: 0;
-  margin-left: -27px;
-  margin-top: -27px;
-}
-.block-video:after {
-  border-top: 22px solid transparent;
-  border-bottom: 22px solid transparent;
-  border-left: 44px solid #03A5ED;
-  z-index: 1;
-  margin-left: -23px;
-  margin-top: -22px;
-}
-.block-video:hover:before {
-  border: 0;
-  background-color: #B5C0F1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  transform: scale(0);
-  transform-origin: 50% 50%;
-  animation: 0.3s ScaleIn 0.2s ease-in-out forwards;
-}
-
-.block-gList .block-gList__text {
-  padding-right: 40px;
-  font-weight: 500;
-  color: #000;
-}
-.block-gList .block-gList__bul {
-  display: inline-block;
-  padding: 10px;
-  border-radius: 54px;
-  border: 1px dashed #000;
-  line-height: 1;
-  position: relative;
-  margin-bottom: 27px;
-}
-.block-gList .block-gList__bul span {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-  width: 88px;
-  height: 88px;
-  border-radius: 44px;
-  background-color: #000;
-  color: #fff;
-  font-weight: 100;
-  font-size: 72px;
-  line-height: 1;
-}
-.block-gList .col-sm-4 {
-  overflow: hidden;
-}
-.block-gList .col-sm-4 .block-gList__bul:after {
-  content: "";
-  position: absolute;
-  left: 115px;
-  height: 2px;
-  border-bottom: 1px dashed #000;
-  top: 50%;
-  margin-top: -1px;
-  right: 0;
-  width: 500px;
-}
-@media screen and (max-width: 576px) {
-  .block-gList .col-sm-4 .block-gList__bul:after {
-    display: none;
-  }
-}
-.block-gList .col-sm-4:last-child .block-gList__bul:after {
-  display: none;
-}
-
 /*====== end of Sections ======*/
 /*====== Random ======*/
-/*====== end of Random ======*/
-/*====== Logos ======*/
 .logo-robonomics-outline path {
   fill: none;
   stroke: #000;
@@ -4811,8 +4626,6 @@ section {
   stroke-miterlimit: 10;
 }
 
-/*====== end of Logos ======*/
-/*====== Socials ======*/
 .el-social {
   display: inline-block;
   width: 50px;
@@ -4841,8 +4654,6 @@ section {
   top: 1px;
 }
 
-/*====== end of Socials ======*/
-/*====== Technologies ======*/
 .sec-techs span {
   display: inline-block;
   vertical-align: middle;
@@ -4853,4 +4664,4 @@ section {
   margin-right: 0;
 }
 
-/*====== end of Technologies ======*/
+/*====== end of Random ======*/
