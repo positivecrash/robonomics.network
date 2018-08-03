@@ -1,3 +1,52 @@
+/* Page News subscription */
+
+#page-news
+  {
+
+    // font-size: 16px;
+
+    h3{
+    	color: #000;
+    }
+
+    .sec-dots__gray
+      {
+        background-position: 100% 0;
+      }
+
+    .sec_mid__left
+      {
+        top: $vertical-rythm + 7px;
+        right: 53%;
+
+        &:before
+        {
+          content:"";
+          background-image: image-url('bg-news.png');
+          background-repeat: no-repeat;
+
+          position: absolute;
+          width: image-width('bg-news.png');
+          height: image-height('bg-news.png');
+          top: 100px;
+          right: 390px;
+        }
+
+        @include maxTablet(){
+          display: none;
+        }
+      }
+
+
+     .section__intro_content{
+     	min-height: 400px;
+     }
+
+  }
+
+
+
+
 /* Page Bounty for miners - alfa release */
 
 .section__firstTransaction
