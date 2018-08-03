@@ -63,7 +63,7 @@ block content
 			#snapsvg-index.snapsvg-wrap.plaxify(data-xrange="10", data-yrange="10")
 				svg.snapsvg
 
-		a.btn-green(href="#index-terminal", data-scroll) Alfa релиз для майнеров
+		a.btn-green(href="#index-miners", data-scroll) Alfa релиз для майнеров
 
 
 	main(role="main")
@@ -156,7 +156,8 @@ block content
 		script(src='assets/js/vue-init.js')
 
 
-		+widget_miners_bounty()
+		#index-miners
+			+widget_miners_bounty()
 
 
 		section.sec-mid
