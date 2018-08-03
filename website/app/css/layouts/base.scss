@@ -231,7 +231,7 @@ section
   {
       background-color: #fff;
       color: $c-violet-mid;
-      
+
       padding-top: $margin-sec*1.5;
       padding-bottom: $margin-sec*1.5;
 
@@ -480,6 +480,24 @@ section
       }
   }
 
+
+
+.section__synopsis
+  {
+    min-height: 206px;
+    font-weight: 500;
+
+    .snapsvg-wrap
+      {
+        height: 206px;
+        top: 34px;
+      }
+
+    & > .secw-narrow
+      {
+        padding-top: 70px;
+      }
+  }
 
 /* end of SECTION - with content */
 

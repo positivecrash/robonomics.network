@@ -15,6 +15,7 @@ $color-ok: $c-green;
 $color-wait: $c-yellow;
 
 $fontsize-input: $font-size-base;
+$fontsize-btn: 20px;
 
 %form_e_base{
 	@extend %font_base;
@@ -57,6 +58,7 @@ $fontsize-input: $font-size-base;
   	transition: all 0.2s ease-in-out;
   	letter-spacing: 2px;
   	word-spacing: 3px;
+  	font-size: $fontsize-btn;
 
   	&.error
 		{
@@ -76,7 +78,7 @@ $fontsize-input: $font-size-base;
 	@extend %text_uppercase;
 	@extend %link_noline;
 	display: inline-block;
-	font-size: 22px;
+	font-size: $fontsize-btn;
 	font-weight: 400;
 	transition: 0.2s color ease-in;
 }

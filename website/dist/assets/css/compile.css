@@ -2020,26 +2020,26 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
   margin-top: 27px;
   margin-bottom: 27px;
-  text-align: center;
+  text-align: left;
 }
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
   margin-top: 0;
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 26px;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 21px;
 }
 
 h4 {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 h5 {
-  font-size: 16px;
+  font-size: 11px;
 }
 
 h1, h2, h3 {
@@ -2050,17 +2050,12 @@ h1, h2, h3 {
 
 h2, h3 {
   font-weight: 300;
+  color: #F15A24;
 }
 
 h1 {
   font-size: 36px;
   font-weight: 500;
-  text-align: left;
-}
-
-h2 {
-  text-transform: uppercase;
-  color: #F15A24;
 }
 
 .t-big {
@@ -2372,6 +2367,7 @@ input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, inpu
   transition: all 0.2s ease-in-out;
   letter-spacing: 2px;
   word-spacing: 3px;
+  font-size: 20px;
 }
 input.error[type='submit'], input.error[type='button'], button.error, a.error.btn-green, a.error.btn-red, input.error.btn-red, a.error.btn-blue, input.error.btn-blue, input.error[type='submit']:hover, input.error[type='button']:hover, button.error:hover, a.error.btn-green:hover, a.error.btn-red:hover, input.error.btn-red:hover, a.error.btn-blue:hover, input.error.btn-blue:hover {
   background-color: #E84004;
@@ -2383,7 +2379,7 @@ input[disabled][type='submit'], input[disabled][type='button'], button[disabled]
 
 a.btn__text_orange {
   display: inline-block;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
   transition: 0.2s color ease-in;
 }
@@ -3277,6 +3273,7 @@ footer[role='contentinfo'] .el-social:hover {
 #index-terminal__info.row h3 {
   font-weight: 500;
   margin-bottom: 10%;
+  color: #000;
 }
 @media screen and (max-width: 768px) {
   #index-terminal__info.row .col-lg-3 {
@@ -4069,6 +4066,18 @@ section {
 .js-listexpand .opened {
   animation: 0.3s FadeIn ease-in-out forwards;
   height: auto;
+}
+
+.section__synopsis {
+  min-height: 206px;
+  font-weight: 500;
+}
+.section__synopsis .snapsvg-wrap {
+  height: 206px;
+  top: 34px;
+}
+.section__synopsis > .secw-narrow {
+  padding-top: 70px;
 }
 
 /* end of SECTION - with content */
