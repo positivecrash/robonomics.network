@@ -90,26 +90,6 @@ jQuery(document).ready(function($){
 
     /*---  Index page  ---*/
 
-    function inViewAction()
-        {
-             if ( $('.contentBlock-token .logo-robonomics-outline').visible() )
-                {
-                    $('.contentBlock-token .logo-robonomics-outline').addClass('animate');
-                }
-        }
-
-
-    if ( $('.contentBlock-token').length > 0 )
-        {
-            inViewAction();
-
-            $w.on('scroll', function(){
-                inViewAction();
-            });
-        }
-
-
-
     function set_height(source, set, outer){
         
         var counter = 0;
