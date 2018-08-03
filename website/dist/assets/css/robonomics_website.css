@@ -1968,7 +1968,7 @@ body, input:not([type='submit']):not([type='button']), input[type='submit'], inp
   letter-spacing: 0;
 }
 
-a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .header-top__nav a, #header-link__down a, #header-banner--text, .link-social, .sec-synopsis, #index-terminal__info_cmd, .section__contents > .secw-narrow a, a:hover, input[type='submit']:hover, input[type='button']:hover, button:hover, input.btn-red:hover, input.btn-blue:hover, #header-link__down a:hover, #header-banner--text:hover, .link-social:hover, .sec-synopsis:hover, #index-terminal__info_cmd:hover, .section__contents > .secw-narrow a:hover, a:focus, input[type='submit']:focus, input[type='button']:focus, button:focus, input.btn-red:focus, input.btn-blue:focus, #header-link__down a:focus, #header-banner--text:focus, .link-social:focus, .sec-synopsis:focus, #index-terminal__info_cmd:focus, .section__contents > .secw-narrow a:focus, a:visited, input[type='submit']:visited, input[type='button']:visited, button:visited, input.btn-red:visited, input.btn-blue:visited, #header-link__down a:visited, #header-banner--text:visited, .link-social:visited, .sec-synopsis:visited, #index-terminal__info_cmd:visited, .section__contents > .secw-narrow a:visited {
+a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn__text_orange, .header-top__nav a, #header-link__down a, #header-banner--text, .link-social, .sec-synopsis, #index-terminal__info_cmd, .section__contents > .secw-narrow a, a:hover, input[type='submit']:hover, input[type='button']:hover, button:hover, input.btn-red:hover, input.btn-blue:hover, #header-link__down a:hover, #header-banner--text:hover, .link-social:hover, .sec-synopsis:hover, #index-terminal__info_cmd:hover, .section__contents > .secw-narrow a:hover, a:focus, input[type='submit']:focus, input[type='button']:focus, button:focus, input.btn-red:focus, input.btn-blue:focus, #header-link__down a:focus, #header-banner--text:focus, .link-social:focus, .sec-synopsis:focus, #index-terminal__info_cmd:focus, .section__contents > .secw-narrow a:focus, a:visited, input[type='submit']:visited, input[type='button']:visited, button:visited, input.btn-red:visited, input.btn-blue:visited, #header-link__down a:visited, #header-banner--text:visited, .link-social:visited, .sec-synopsis:visited, #index-terminal__info_cmd:visited, .section__contents > .secw-narrow a:visited {
   text-decoration: none;
   text-decoration: none !important;
 }
@@ -1999,7 +1999,7 @@ a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, i
   padding-right: 0 !important;
 }
 
-input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .msg_ok, .msg_error, .msg_wait, #header-link__down a, #header-banner--text, .terminal__window_head, .contentBlock-roadmap .roadmap-title__in div, .section__contents > .secw-narrow a {
+input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn__text_orange, .msg_ok, .msg_error, .msg_wait, #header-link__down a, #header-banner--text, .terminal__window_head, .contentBlock-roadmap .roadmap-title__in div, .section__contents > .secw-narrow a {
   text-transform: uppercase;
   letter-spacing: 1.4px;
 }
@@ -2055,6 +2055,7 @@ h2, h3 {
 h1 {
   font-size: 36px;
   font-weight: 500;
+  text-align: left;
 }
 
 h2 {
@@ -2369,6 +2370,8 @@ input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, inpu
   border: 0;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  letter-spacing: 2px;
+  word-spacing: 3px;
 }
 input.error[type='submit'], input.error[type='button'], button.error, a.error.btn-green, a.error.btn-red, input.error.btn-red, a.error.btn-blue, input.error.btn-blue, input.error[type='submit']:hover, input.error[type='button']:hover, button.error:hover, a.error.btn-green:hover, a.error.btn-red:hover, input.error.btn-red:hover, a.error.btn-blue:hover, input.error.btn-blue:hover {
   background-color: #E84004;
@@ -2376,6 +2379,13 @@ input.error[type='submit'], input.error[type='button'], button.error, a.error.bt
 input[disabled][type='submit'], input[disabled][type='button'], button[disabled], a[disabled].btn-green, a[disabled].btn-red, input[disabled].btn-red, a[disabled].btn-blue, input[disabled].btn-blue, input[disabled][type='submit']:hover, input[disabled][type='button']:hover, button[disabled]:hover, a[disabled].btn-green:hover, a[disabled].btn-red:hover, input[disabled].btn-red:hover, a[disabled].btn-blue:hover, input[disabled].btn-blue:hover, input.disabled[type='submit'], input.disabled[type='button'], button.disabled, a.disabled.btn-green, a.disabled.btn-red, input.disabled.btn-red, a.disabled.btn-blue, input.disabled.btn-blue, input.disabled[type='submit']:hover, input.disabled[type='button']:hover, button.disabled:hover, a.disabled.btn-green:hover, a.disabled.btn-red:hover, input.disabled.btn-red:hover, a.disabled.btn-blue:hover, input.disabled.btn-blue:hover {
   background-color: #282B38;
   cursor: default;
+}
+
+a.btn__text_orange {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 400;
+  transition: 0.2s color ease-in;
 }
 
 /*======== INPUTS =========*/
@@ -2415,6 +2425,13 @@ a.btn-blue, input.btn-blue, button.btn-blue {
 }
 a.btn-blue:hover, input.btn-blue:hover, button.btn-blue:hover {
   background-color: #0282bb;
+}
+
+a.btn__text_orange {
+  color: #F15A24;
+}
+a.btn__text_orange:hover {
+  color: #54CE63;
 }
 
 @keyframes rotateLoader {
@@ -2459,8 +2476,12 @@ span.loader {
   font-size: 26px;
 }
 
-.sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-blog, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-facebook, .sprite-basic-forum, .sprite-basic-github, .sprite-basic-hourglass, .sprite-basic-ipfs, .sprite-basic-medium, .sprite-basic-nixos, .sprite-basic-ok, .sprite-basic-reddit, .sprite-basic-ros, .sprite-basic-status-done, .sprite-basic-status-planning, .sprite-basic-status-progress, .sprite-basic-status-waiting, .sprite-basic-telegram, .sprite-basic-twitter, .sprite-basic-youtube, .contentBlock-roadmap .roadmap-done .roadmap-title__name:before, .contentBlock-roadmap .roadmap-progress .roadmap-title__name:before, .contentBlock-roadmap .roadmap-waiting .roadmap-title__name:before, .contentBlock-roadmap .roadmap-planning .roadmap-title__name:before, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .section__contents a.js-expand-toggle:after {
+.svg .sprite-basic-aira, .svg .sprite-basic-anchor, .svg .sprite-basic-blog, .svg .sprite-basic-ethereum, .svg .sprite-basic-expand-arrow, .svg .sprite-basic-facebook, .svg .sprite-basic-forum, .svg .sprite-basic-github, .svg .sprite-basic-hourglass, .svg .sprite-basic-ipfs, .svg .sprite-basic-medium, .svg .sprite-basic-nixos, .svg .sprite-basic-ok, .svg .sprite-basic-reddit, .svg .sprite-basic-ros, .svg .sprite-basic-status-done, .svg .sprite-basic-status-planning, .svg .sprite-basic-status-progress, .svg .sprite-basic-status-waiting, .svg .sprite-basic-telegram, .svg .sprite-basic-twitter, .svg .sprite-basic-youtube, .svg .contentBlock-roadmap .roadmap-done .roadmap-title__name:before, .svg .contentBlock-roadmap .roadmap-progress .roadmap-title__name:before, .svg .contentBlock-roadmap .roadmap-waiting .roadmap-title__name:before, .svg .contentBlock-roadmap .roadmap-planning .roadmap-title__name:before, .svg .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .svg .section__contents a.js-expand-toggle:after {
   background-image: url("../i/sprite.svg?1");
+}
+
+.sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-blog, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-facebook, .sprite-basic-forum, .sprite-basic-github, .sprite-basic-hourglass, .sprite-basic-ipfs, .sprite-basic-medium, .sprite-basic-nixos, .sprite-basic-ok, .sprite-basic-reddit, .sprite-basic-ros, .sprite-basic-status-done, .sprite-basic-status-planning, .sprite-basic-status-progress, .sprite-basic-status-waiting, .sprite-basic-telegram, .sprite-basic-twitter, .sprite-basic-youtube, .contentBlock-roadmap .roadmap-done .roadmap-title__name:before, .contentBlock-roadmap .roadmap-progress .roadmap-title__name:before, .contentBlock-roadmap .roadmap-waiting .roadmap-title__name:before, .contentBlock-roadmap .roadmap-planning .roadmap-title__name:before, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .section__contents a.js-expand-toggle:after {
+  background-image: url("../i/sprite.png?1");
 }
 
 .sprite-basic-aira {
@@ -3203,6 +3224,10 @@ footer[role='contentinfo'] .el-social:hover {
   fill: #03A5ED;
 }
 
+.widget__miners_bounty .logo-robonomics-outline {
+  height: 130px;
+}
+
 .page-outdated {
   background-color: #282B38;
   color: #B5C0F1;
@@ -3239,6 +3264,9 @@ footer[role='contentinfo'] .el-social:hover {
 
 #index-terminal .col-md-5 {
   padding-right: 2% !important;
+}
+#index-terminal h3 {
+  text-align: left;
 }
 
 #index-terminal__info.row {
@@ -3881,6 +3909,11 @@ section {
 .sec-white {
   background-color: #fff;
   color: #42475F;
+  padding-top: 81px;
+  padding-bottom: 81px;
+}
+.sec-white h2 {
+  color: #000;
 }
 
 .sec-mid {

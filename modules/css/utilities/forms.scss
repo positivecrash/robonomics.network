@@ -55,6 +55,8 @@ $fontsize-input: $font-size-base;
   	border: 0;
   	cursor: pointer;
   	transition: all 0.2s ease-in-out;
+  	letter-spacing: 2px;
+  	word-spacing: 3px;
 
   	&.error
 		{
@@ -68,6 +70,15 @@ $fontsize-input: $font-size-base;
 				cursor: default;
 			}
 	}
+}
+
+%btn_lined{
+	@extend %text_uppercase;
+	@extend %link_noline;
+	display: inline-block;
+	font-size: 22px;
+	font-weight: 400;
+	transition: 0.2s color ease-in;
 }
 
 @mixin btn_col($back, $text: #fff){
@@ -123,6 +134,16 @@ a.btn-blue, input.btn-blue, button.btn-blue{
 	@extend %form_b_base;
 
 	@include btn_col($c-blue);
+}
+
+
+a.btn__text_orange{
+	@extend %btn_lined;
+	color: $c-orange;
+
+	&:hover{
+		color: $c-green;
+	}
 }
 
 

@@ -1,3 +1,6 @@
+include svg.pug
+
+
 mixin header_top()
 	
 	#header-top
@@ -27,3 +30,14 @@ mixin header_top()
 						a(href="javascript:;") RU
 						.dropdown-content
 							a(href="#", target="_blank") EN
+
+
+mixin widget_miners_bounty()
+	section.widget__miners_bounty.sec-white
+		.secw-base.t-center
+			+xrt_lined()
+
+			h2 Для майнеров: участвуйте в альфа релизе
+			.secw-narrow
+				p.t-center С июня 2018 года Робономика запустилась в Ethereum mainnet и абсолютно любой держатель ETH может стать её провайдером. Участвуйте и получайте вознаграждение за тестирование сети.
+				a.btn__text_orange(href="#") Подробнее
