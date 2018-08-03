@@ -1,4 +1,5 @@
 extends extends/layout.pug
+include mixins/sections.pug
 
 block head
 	- var pageTitle = 'Robot economic infrastructure'
@@ -155,7 +156,6 @@ block content
 		script(src='assets/js/vue-init.js')
 
 
-		include mixins/sections.pug
 		+widget_miners_bounty()
 
 
@@ -194,8 +194,4 @@ block content
 							.roadmap-desc Сеть способна взять на себя задачи по управлению роботизированными цепочками обеспечения.
 
 
-		section.sec-gray.sec-city
-			.secw-narrow
-				h3.t-center Подпишитесь на email рассылку, чтобы быть в курсе новостей сети Робономика
-				.t-center
-					a(href="#").btn-green Подписаться
+		+widget_newssubscription_light()
