@@ -380,15 +380,71 @@ section
 
 
 
-/* SECTION - with content */
+/* SECTION - pages */
 
-.section__contents
+@mixin intro_dots($h){
+  min-height: $h;
+
+  .snapsvg-wrap{
+    height: $h;
+  }
+}
+
+.section__intro
   {
+    @include intro_dots(200px);
+    padding-top: 0;
+    position: relative;
+
+    &:after
+      {
+        content:"";
+        height: 6px;
+        position: absolute;
+        left: 50%;
+        right: 0;
+        top: 0;
+      }
+
+
 
     .snapsvg-wrap
       {
-        height: 500px;
+        top: 34px;
       }
+
+    .section__intro_content
+      {
+        padding-top: 70px;
+
+        border-width: 6px 0 0;
+        border-style: solid;
+        @extend %FrontContent;
+      }
+
+    &.red
+      {
+        .section__intro_content { border-color: $c-orange; }
+        &:after { background-color: $c-orange; }
+      }
+  }
+
+
+
+.section__synopsis
+  {
+    font-weight: 500;
+  }
+
+
+
+.section__contents
+  {
+    @include intro_dots(600px);
+
+    .snapsvg-wrap{
+      top: 14px;
+    }
 
     & > .secw-narrow
       {
@@ -423,6 +479,10 @@ section
                 {
                   animation: 0.4s FadeIn forwards;
                 }
+            }
+
+            &:last-child{
+              margin-bottom: 0;
             }
 
           }
@@ -482,24 +542,9 @@ section
 
 
 
-.section__synopsis
-  {
-    min-height: 206px;
-    font-weight: 500;
 
-    .snapsvg-wrap
-      {
-        height: 206px;
-        top: 34px;
-      }
 
-    & > .secw-narrow
-      {
-        padding-top: 70px;
-      }
-  }
-
-/* end of SECTION - with content */
+/* end of SECTION - pages */
 
 
 

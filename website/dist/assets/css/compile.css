@@ -1987,7 +1987,7 @@ a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, i
   top: 50%;
 }
 
-.sec-dark > .secw-base, .sec-mid > .secw-base, .section_lined__red > .secw-narrow, .section_lined__gray > .secw-narrow, .el-FrontContent {
+.sec-dark > .secw-base, .sec-mid > .secw-base, .section_lined__red > .secw-narrow, .section_lined__gray > .secw-narrow, .section__intro .section__intro_content, .el-FrontContent {
   position: relative;
   z-index: 1;
 }
@@ -2018,9 +2018,12 @@ html {
 /*====== Text sizes & Headers ======*/
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
-  margin-top: 27px;
+  margin-top: 67.5px;
   margin-bottom: 27px;
   text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
 }
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
   margin-top: 0;
@@ -2038,14 +2041,9 @@ h4 {
   font-size: 16px;
 }
 
-h5 {
-  font-size: 11px;
-}
-
-h1, h2, h3 {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  word-spacing: 2px;
+h1 {
+  font-size: 36px;
+  font-weight: 500;
 }
 
 h2, h3 {
@@ -2053,9 +2051,8 @@ h2, h3 {
   color: #F15A24;
 }
 
-h1 {
-  font-size: 36px;
-  font-weight: 500;
+h5 {
+  font-size: 18px;
 }
 
 .t-big {
@@ -2870,7 +2867,7 @@ header[role='banner'] .el-social {
 }
 @media screen and (max-width: 576px) {
   #header-mid {
-    padding-bottom: 54px;
+    padding-bottom: 67.5px;
   }
 }
 
@@ -3147,9 +3144,9 @@ footer[role='contentinfo'] {
   font-weight: 300;
 }
 footer[role='contentinfo'] .col-md-6 section {
-  padding-left: 54px;
-  padding-top: 27px;
-  padding-bottom: 27px;
+  padding-left: 67.5px;
+  padding-top: 33.75px;
+  padding-bottom: 33.75px;
 }
 footer[role='contentinfo'] .col-md-6 section:last-child {
   padding-bottom: 0;
@@ -3220,6 +3217,9 @@ footer[role='contentinfo'] .el-social:hover {
   fill: #03A5ED;
 }
 
+.widget__miners_bounty h2 {
+  margin-top: 27px;
+}
 .widget__miners_bounty .logo-robonomics-outline {
   height: 130px;
 }
@@ -3854,7 +3854,7 @@ body {
 /*====== end of Transitions ======*/
 /*====== Bootstrap ======*/
 .row *[class*='col-'] {
-  margin-bottom: 54px;
+  margin-bottom: 67.5px;
 }
 
 /*====== end of Bootstrap ======*/
@@ -3889,8 +3889,8 @@ body {
 /*====== end of SNAP SVG ======*/
 /*====== Sections ======*/
 section {
-  padding-top: 54px;
-  padding-bottom: 54px;
+  padding-top: 67.5px;
+  padding-bottom: 67.5px;
 }
 
 .sec-dark {
@@ -3906,8 +3906,8 @@ section {
 .sec-white {
   background-color: #fff;
   color: #42475F;
-  padding-top: 81px;
-  padding-bottom: 81px;
+  padding-top: 101.25px;
+  padding-bottom: 101.25px;
 }
 .sec-white h2 {
   color: #000;
@@ -4017,9 +4017,50 @@ section {
 }
 
 /* end SECTION - lined */
-/* SECTION - with content */
+/* SECTION - pages */
+.section__intro {
+  min-height: 200px;
+  padding-top: 0;
+  position: relative;
+}
+.section__intro .snapsvg-wrap {
+  height: 200px;
+}
+.section__intro:after {
+  content: "";
+  height: 6px;
+  position: absolute;
+  left: 50%;
+  right: 0;
+  top: 0;
+}
+.section__intro .snapsvg-wrap {
+  top: 34px;
+}
+.section__intro .section__intro_content {
+  padding-top: 70px;
+  border-width: 6px 0 0;
+  border-style: solid;
+}
+.section__intro.red .section__intro_content {
+  border-color: #F15A24;
+}
+.section__intro.red:after {
+  background-color: #F15A24;
+}
+
+.section__synopsis {
+  font-weight: 500;
+}
+
+.section__contents {
+  min-height: 600px;
+}
 .section__contents .snapsvg-wrap {
-  height: 500px;
+  height: 600px;
+}
+.section__contents .snapsvg-wrap {
+  top: 14px;
 }
 .section__contents > .secw-narrow a {
   font-size: 16px;
@@ -4041,6 +4082,9 @@ section {
 }
 .section__contents > .secw-narrow a:not(.js-expand-toggle):hover:after {
   animation: 0.4s FadeIn forwards;
+}
+.section__contents > .secw-narrow a:last-child {
+  margin-bottom: 0;
 }
 .section__contents .js-listexpand .hidden {
   margin: 0;
@@ -4068,19 +4112,7 @@ section {
   height: auto;
 }
 
-.section__synopsis {
-  min-height: 206px;
-  font-weight: 500;
-}
-.section__synopsis .snapsvg-wrap {
-  height: 206px;
-  top: 34px;
-}
-.section__synopsis > .secw-narrow {
-  padding-top: 70px;
-}
-
-/* end of SECTION - with content */
+/* end of SECTION - pages */
 .block-white {
   background-color: #fff;
   color: #000;

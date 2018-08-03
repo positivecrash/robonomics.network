@@ -16,9 +16,13 @@ body
 	{
 		line-height: 1.5;
 
-		margin-top: $vertical-rythm;
+		margin-top: $margin-sec;
   		margin-bottom: $vertical-rythm;
   		text-align: left;
+
+  		text-transform: uppercase;
+        letter-spacing: 1px;
+	  	word-spacing: 2px;
 
   		&:first-child
   			{
@@ -27,25 +31,12 @@ body
 	}
 
 
-@for $i from 2 through 5
+@for $i from 2 through 4
 	{
 	  h#{$i}
 		  {
 		  	font-size: $font-size-title - 5 * $i;
 		  }
-	}
-
-h1, h2, h3
-	{
-		text-transform: uppercase;
-        letter-spacing: 1px;
-	  	word-spacing: 2px;
-	}
-
-h2, h3
-	{
-		font-weight: 300;
-		color: $c-orange;
 	}
 
 
@@ -55,6 +46,15 @@ h1
         font-weight: 500;
 	}
 
+
+h2, h3
+	{
+		font-weight: 300;
+		color: $c-orange;
+	}
+
+
+h5 { font-size: $font-size-base; }
 
 .t-big
 	{
