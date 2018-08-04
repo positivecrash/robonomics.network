@@ -1,7 +1,7 @@
 header[role='banner']
   {
     position: relative;
-    padding-bottom: #{$padding-fields * 2}px;
+    padding-bottom: $margin-sec;
 
     .el-social
       {

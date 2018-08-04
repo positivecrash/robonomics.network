@@ -1,5 +1,5 @@
 $icons: (
-    sprite: (width: {{spriteWidth}}px, height: {{spriteHeight}}px, pngPath: '../i/sprite.png?1', svgPath: '../i/sprite.svg?1'),
+    sprite: (width: {{spriteWidth}}px, height: {{spriteHeight}}px, pngPath: '../i/sprite.png?2', svgPath: '../i/sprite.svg?2'),
 {{#shapes}}     
     {{base}}: (width: {{width.inner}}px, height: {{height.inner}}px, backgroundX: {{position.absolute.x}}px, backgroundY: {{position.absolute.y}}px),
 {{/shapes}});
@@ -16,8 +16,10 @@ $sprite: map-get($icons, sprite);
     height: map-get($spritename, height);
     background-position: map-get($spritename, backgroundX) map-get($spritename, backgroundY);
 
-    @extend %back_png;
-    .svg & { @extend %back_svg; }
+    @extend %back_svg;
+
+    // @extend %back_png;
+    // .svg & { @extend %back_svg; }
 }
 
 {{#shapes}}

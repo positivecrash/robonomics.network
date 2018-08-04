@@ -1,5 +1,5 @@
 $icons: (
-    sprite: (width: 828px, height: 58.02px, pngPath: '../i/sprite.png?1', svgPath: '../i/sprite.svg?1'),
+    sprite: (width: 828px, height: 58.02px, pngPath: '../i/sprite.png?2', svgPath: '../i/sprite.svg?2'),
     aira: (width: 100.23px, height: 23.44px, backgroundX: 0px, backgroundY: 0px),
     anchor: (width: 15.08px, height: 17.09px, backgroundX: -101px, backgroundY: 0px),
     blog: (width: 20.33px, height: 20.33px, backgroundX: -117px, backgroundY: 0px),
@@ -36,8 +36,10 @@ $sprite: map-get($icons, sprite);
     height: map-get($spritename, height);
     background-position: map-get($spritename, backgroundX) map-get($spritename, backgroundY);
 
-    @extend %back_png;
-    .svg & { @extend %back_svg; }
+    @extend %back_svg;
+
+    // @extend %back_png;
+    // .svg & { @extend %back_svg; }
 }
 
 .sprite-basic-aira{

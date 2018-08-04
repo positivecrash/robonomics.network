@@ -2957,12 +2957,8 @@ span.loader {
   font-size: 26px;
 }
 
-.svg .sprite-basic-aira, .svg .sprite-basic-anchor, .svg .sprite-basic-blog, .svg .sprite-basic-ethereum, .svg .sprite-basic-expand-arrow, .svg .sprite-basic-facebook, .svg .sprite-basic-forum, .svg .sprite-basic-github, .svg .sprite-basic-hourglass, .svg .sprite-basic-ipfs, .svg .sprite-basic-medium, .svg .sprite-basic-nixos, .svg .sprite-basic-ok, .svg .sprite-basic-reddit, .svg .sprite-basic-ros, .svg .sprite-basic-status-done, .svg .sprite-basic-status-planning, .svg .sprite-basic-status-progress, .svg .sprite-basic-status-waiting, .svg .sprite-basic-telegram, .svg .sprite-basic-twitter, .svg .sprite-basic-youtube, .svg .contentBlock-roadmap .roadmap-done .roadmap-title__name:before, .svg .contentBlock-roadmap .roadmap-progress .roadmap-title__name:before, .svg .contentBlock-roadmap .roadmap-waiting .roadmap-title__name:before, .svg .contentBlock-roadmap .roadmap-planning .roadmap-title__name:before, .svg .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .svg .section__contents a.js-expand-toggle:after {
-  background-image: url("../i/sprite.svg?1");
-}
-
 .sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-blog, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-facebook, .sprite-basic-forum, .sprite-basic-github, .sprite-basic-hourglass, .sprite-basic-ipfs, .sprite-basic-medium, .sprite-basic-nixos, .sprite-basic-ok, .sprite-basic-reddit, .sprite-basic-ros, .sprite-basic-status-done, .sprite-basic-status-planning, .sprite-basic-status-progress, .sprite-basic-status-waiting, .sprite-basic-telegram, .sprite-basic-twitter, .sprite-basic-youtube, .contentBlock-roadmap .roadmap-done .roadmap-title__name:before, .contentBlock-roadmap .roadmap-progress .roadmap-title__name:before, .contentBlock-roadmap .roadmap-waiting .roadmap-title__name:before, .contentBlock-roadmap .roadmap-planning .roadmap-title__name:before, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .section__contents a.js-expand-toggle:after {
-  background-image: url("../i/sprite.png?1");
+  background-image: url("../i/sprite.svg?2");
 }
 
 .sprite-basic-aira {
@@ -3152,7 +3148,7 @@ span.loader {
 
 header[role='banner'] {
   position: relative;
-  padding-bottom: 40px;
+  padding-bottom: 67.5px;
 }
 header[role='banner'] .el-social {
   background-color: #fff;
@@ -4255,7 +4251,7 @@ footer[role='contentinfo'] .el-social:hover {
     background-size: contain;
     position: absolute;
     left: -300px;
-    bottom: 74px;
+    bottom: -4px;
   }
 }
 
@@ -4469,6 +4465,28 @@ section {
   background-color: #F2F2F2;
 }
 .sec-gray, .sec-gray h2 {
+  color: #000;
+}
+
+.sec-orange {
+  background-color: #F15A24;
+}
+.sec-orange, .sec-orange h2 {
+  color: #fff;
+}
+.sec-orange h2 {
+  font-weight: 500;
+  font-size: 28px;
+}
+.sec-orange a {
+  font-size: 20px;
+  background-color: #fff;
+  display: inline-block;
+  padding: 2px 10px;
+  margin: 4px 0;
+}
+.sec-orange blockquote {
+  border-color: #000;
   color: #000;
 }
 
