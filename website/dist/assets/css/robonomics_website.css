@@ -4232,6 +4232,7 @@ footer[role='contentinfo'] .el-social:hover {
 #page-news .sec_mid__left {
   top: 34px;
   right: 53%;
+  bottom: 60px;
 }
 #page-news .sec_mid__left:before {
   content: "";
