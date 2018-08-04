@@ -5,3 +5,18 @@
 				padding-top: 30px;
 			}
 	}
+
+
+@media screen and (min-width: $bootstrap-md) 
+	{
+		.token-distribution .row [class*=col-md-] {
+			margin-bottom: 0;
+		}
+	}
+
+@media screen and (max-width: $bootstrap-md) 
+	{
+		.token-distribution .row [class*=col-md-]:last-child {
+			margin-bottom: 0;
+		}
+	}

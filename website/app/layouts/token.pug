@@ -1,4 +1,5 @@
 extends extends/layout.pug
+include mixins/sections.pug
 
 block head
 	- var pageTitle = 'Robot economic infrastructure'
@@ -35,7 +36,7 @@ block content
 							//- button: span.loader
 
 
-		section.token-distribution
+		section.token-distribution.sec-gray
 			.secw-base
 				h2 Информация о дистрибуции токенов
 
@@ -57,3 +58,6 @@ block content
 						ul
 							li Цена XRT начинается с высокой и снижается со временем
 							li В итоге распределения каждый платит одинаковую минимальную цену за XRT
+
+
+		+widget_miners_bounty()

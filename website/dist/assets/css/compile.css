@@ -2750,6 +2750,10 @@ table td, table th {
   margin-bottom: 0;
 }
 
+.p-t-0 {
+  padding-top: 0;
+}
+
 .col-null {
   margin: 0 !important;
   padding: 0 !important;
@@ -3148,7 +3152,7 @@ span.loader {
 
 header[role='banner'] {
   position: relative;
-  padding-bottom: 67.5px;
+  padding-bottom: 101.25px;
 }
 header[role='banner'] .el-social {
   background-color: #fff;
@@ -3742,6 +3746,16 @@ footer[role='contentinfo'] .el-social:hover {
   padding-top: 30px;
 }
 
+@media screen and (min-width: 768px) {
+  .token-distribution .row [class*=col-md-] {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .token-distribution .row [class*=col-md-]:last-child {
+    margin-bottom: 0;
+  }
+}
 #index-terminal .col-md-5 {
   padding-right: 2% !important;
 }
