@@ -2756,6 +2756,10 @@ table td, table th {
   padding-top: 0;
 }
 
+.p-b-0 {
+  padding-bottom: 0;
+}
+
 .col-null {
   margin: 0 !important;
   padding: 0 !important;
