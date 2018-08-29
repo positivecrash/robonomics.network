@@ -2616,12 +2616,10 @@ h5 {
 
 .t-big {
   font-size: 22px;
-  font-weight: 300;
 }
 
 .t-mid {
   font-size: 18px;
-  font-weight: 300;
 }
 
 /*====== end of Text sizes & Headers ======*/
@@ -2750,6 +2748,10 @@ table td, table th {
   margin-bottom: 0;
 }
 
+.m-b-half {
+  margin-bottom: 13.5px;
+}
+
 .p-t-0 {
   padding-top: 0;
 }
@@ -2779,6 +2781,35 @@ table td, table th {
 }
 
 /*====== end of Other ======*/
+.line-right-red {
+  height: 6px;
+  position: relative;
+}
+.line-right-red div {
+  width: 100%;
+  height: 100%;
+}
+.line-right-red:after {
+  content: "";
+  height: 6px;
+  position: absolute;
+  left: 50%;
+  right: 0;
+  top: 0;
+}
+.line-right-red div, .line-right-red:after {
+  background-color: #F15A24;
+}
+
+.img-preview-vivid {
+  display: inline-block;
+  border: 10px solid #70797C;
+}
+.img-preview-vivid img {
+  display: block;
+  max-width: 100%;
+}
+
 .hamburger, .nav-mobilehide, #logo-ethereum, #header-logo-robonomics, .logo-robonomics .dot, #header-index .snapsvgoutside-text span, .index-terminal-result__grid img, .index-terminal-result__step > *, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .js-listexpand .hidden {
   visibility: hidden;
   opacity: 0;
@@ -3712,6 +3743,29 @@ footer[role='contentinfo'] .el-social:hover {
   height: 130px;
 }
 
+.assets-logo {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 80%;
+}
+.assets-logo img {
+  display: block;
+  max-width: 100%;
+}
+
+.assets-logos-white {
+  background-color: #000;
+}
+@media screen and (min-width: 768px) {
+  .assets-logos-white {
+    display: inline-block;
+  }
+}
+
+.back-telegram {
+  background: url('../i/assets-back-telegram.png?1535539649');
+}
+
 .page-outdated {
   background-color: #282B38;
   color: #B5C0F1;
@@ -4293,10 +4347,14 @@ body {
   height: 100%;
 }
 
-.align-vertical {
+.align-vertical, .align-v {
   /* align content vertically */
   display: flex;
   align-items: center;
+}
+
+.align-g {
+  justify-content: center;
 }
 
 /*====== Set width of container ======*/
@@ -4304,14 +4362,18 @@ body {
   max-width: 680px;
   padding-left: 20px;
   padding-right: 20px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .secw-base {
   max-width: 1240px;
   padding-left: 20px;
   padding-right: 20px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .secw-full {
@@ -4399,8 +4461,10 @@ body {
 
 /*====== end of Transitions ======*/
 /*====== Bootstrap ======*/
-.row *[class*='col-'] {
-  margin-bottom: 67.5px;
+@media screen and (max-width: 576px) {
+  .row *[class*='col-md'] {
+    margin-bottom: 27px;
+  }
 }
 
 /*====== end of Bootstrap ======*/

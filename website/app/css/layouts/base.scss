@@ -30,12 +30,16 @@ body
     height: 100%;
   }
 
-.align-vertical
+.align-vertical, .align-v
   {
      /* align content vertically */
     display: flex;
     align-items: center;
   }
+
+.align-g{
+  justify-content: center;
+}
 
 /*====== Set width of container ======*/
 .secw-narrow { @include secw(720px); }
@@ -140,12 +144,15 @@ body
 .row
   {
     // margin-left: -#{$padding-fields}px; 
-    // margin-right: -#{$padding-fields}px; 
+    // margin-right: -#{$padding-fields}px;
 
-    *[class*='col-']
-    {
-      margin-bottom: $margin-sec;
+    @media screen and (max-width: $bootstrap-sm){
+      *[class*='col-md']
+        {
+          margin-bottom: $vertical-rythm;
+        }
     }
+
   }
 /*====== end of Bootstrap ======*/
 

@@ -1,0 +1,25 @@
+.assets-logo{
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 80%;
+
+	img{
+		display: block;
+		max-width: 100%;
+	}
+}
+
+.assets-logos-white{
+	background-color: #000;
+
+	@media screen and (min-width: $bootstrap-md){
+		// max-width: 164px;
+		// max-width: 90%;
+		display: inline-block;
+	}
+}
+
+
+.back-telegram{
+	background: image-url('assets-back-telegram.png');
+}

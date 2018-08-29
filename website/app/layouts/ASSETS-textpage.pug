@@ -1,0 +1,72 @@
+extends extends/layout.pug
+
+block head
+	- var pageTitle = 'Robot economic infrastructure'
+
+block content
+	header(role='banner')
+		include mixins/sections.pug
+		+header_top()
+
+	main(role="main")
+		.secw-narrow
+			h1 Logo & assets
+
+		.line-right-red
+			.secw-narrow
+				div
+
+		section
+			h2.secw-narrow Robonomics visual identity
+			.secw-base
+				.row
+					.col-md-4.col-sm-6
+						a.img-preview-vivid(href="#", target="_blank"): img(alt="", src="assets/i/preview-visual-identity@2x.png")
+					.col-md-5.col-sm-6
+						p Все о том, как использовать логотип и шрифты сети Робономика.
+						p Дата обновления: февраль 2018 
+						p: a(href="#", target="_blank") Robonomics Brandbook (pdf, ~12Mb)
+
+			h2.secw-narrow Robonomics logo
+			p: span.secw-narrow Наведите на логотип, чтобы загрузить в нужном вам формате. Или скачайте сразу 
+				a(href="#", target="_blank") весь архив с файлами (.PNG и .EPS)
+
+			.secw-base.t-center
+				.row
+					.col-md-3.t-center
+						a.assets-logo(href="#", target="_blank"): img(alt="", src="assets/i/logo-assets-previews/1_Robonomics_logo_color_preview.png")
+						a.assets-logo(href="#", target="_blank"): img(alt="", src="assets/i/logo-assets-previews/5_Robonomics_logo_xrt_color_preview.png")
+						a.assets-logo(href="#", target="_blank"): img(alt="", src="assets/i/logo-assets-previews/9_Robonomics_logo_title_color_preview.png")
+						a.assets-logo(href="#", target="_blank"): img(alt="", src="assets/i/logo-assets-previews/13_Robonomics_logo_line_color_preview.png")
+
+					.col-md-3.t-center
+						a.assets-logo(href="#", target="_blank"): img(alt="", src="assets/i/logo-assets-previews/2_Robonomics_logo_grayscale_preview.png")
+						a.assets-logo(href="#", target="_blank"): img(alt="", src="assets/i/logo-assets-previews/6_Robonomics_logo_xrt_grayscale_preview.png")
+						a.assets-logo(href="#", target="_blank"): img(alt="", src="assets/i/logo-assets-previews/10_Robonomics_logo_title_grayscale_preview.png")
+						a.assets-logo(href="#", target="_blank"): img(alt="", src="assets/i/logo-assets-previews/14_Robonomics_logo_line_grayscale_preview.png")
+
+					.col-md-3.t-center
+						.assets-logos-white
+							a.assets-logo(href="#", target="_blank"): img(alt="", src="assets/i/logo-assets-previews/3_Robonomics_logo_white_preview.png")
+							a.assets-logo(href="#", target="_blank"): img(alt="", src="assets/i/logo-assets-previews/7_Robonomics_logo_xrt_white_preview.png")
+							a.assets-logo(href="#", target="_blank"): img(alt="", src="assets/i/logo-assets-previews/11_Robonomics_logo_title_white_preview.png")
+							a.assets-logo(href="#", target="_blank"): img(alt="", src="assets/i/logo-assets-previews/15_Robonomics_logo_line_white_preview.png")
+
+					.col-md-3.t-center
+						a.assets-logo(href="#", target="_blank"): img(alt="", src="assets/i/logo-assets-previews/4_Robonomics_logo_black_preview.png")
+						a.assets-logo(href="#", target="_blank"): img(alt="", src="assets/i/logo-assets-previews/8_Robonomics_logo_xrt_black_preview.png")
+						a.assets-logo(href="#", target="_blank"): img(alt="", src="assets/i/logo-assets-previews/12_Robonomics_logo_title_black_preview.png")
+						a.assets-logo(href="#", target="_blank"): img(alt="", src="assets/i/logo-assets-previews/16_Robonomics_logo_line_black_preview.png")
+
+
+		section.sec-gray.back-telegram
+			.secw-narrow
+				h2.t-center Robonomics Telegram stickers
+				p: img.img-block(alt="", src="assets/i/assets-stickers-1@2x.png")
+				p.t-center.m-b-half: b.t-green.t-mid БОЛЕЕ 20 СТИКЕРОВ
+				p.t-center: a.btn-green(href="#", target="_blank") Добавить набор в Telegram
+
+				p: img.img-block(alt="", src="assets/i/assets-stickers-2@2x.png")
+
+		section
+			.secw-narrow.t-center Credits for graphic and brand design Anna Wimmer-Savinova, for web design and front-end Anastasiia Bakai @positivecrash.

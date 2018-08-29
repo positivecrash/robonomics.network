@@ -57,5 +57,7 @@
 		max-width: $w - $padding-fields * 2; 
 		padding-left: #{$padding-fields}px; 
 		padding-right: #{$padding-fields}px; 
-		margin: 0 auto;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
 	}
