@@ -3740,6 +3740,41 @@ footer[role='contentinfo'] .el-social:hover {
   fill: #03A5ED;
 }
 
+#footer-nav_lined {
+  background-color: #007AB1;
+  padding: 5px 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #004462;
+}
+#footer-nav_lined span, #footer-nav_lined a {
+  display: inline-block;
+  margin: 0 10px;
+}
+#footer-nav_lined span:first-child, #footer-nav_lined a:first-child {
+  margin-left: 0;
+}
+#footer-nav_lined span:last-child, #footer-nav_lined a:last-child {
+  margin-right: 0;
+}
+#footer-nav_lined a {
+  color: #fff;
+}
+#footer-nav_lined span:first-child {
+  margin-right: 20px;
+}
+@media screen and (max-width: 576px) {
+  #footer-nav_lined {
+    text-align: center;
+  }
+  #footer-nav_lined a, #footer-nav_lined span {
+    display: block;
+  }
+  #footer-nav_lined span:first-child {
+    display: none;
+  }
+}
+
 .widget__miners_bounty h2 {
   margin-top: 27px;
 }
@@ -3751,19 +3786,46 @@ footer[role='contentinfo'] .el-social:hover {
   display: inline-block;
   vertical-align: middle;
   max-width: 80%;
+  font-weight: 500;
+  position: relative;
+  padding: 10px 20px 30px;
+  transition: all 0.2s ease;
 }
 .assets-logo img {
   display: block;
   max-width: 100%;
 }
+.assets-logo .assets-logo-download {
+  display: none;
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.assets-logo:hover {
+  background-color: #F2F2F2;
+}
+.assets-logo:hover .assets-logo-download {
+  display: block;
+}
 
-.assets-logos-white {
+.assets-logos-white .assets-logo {
   background-color: #000;
 }
 @media screen and (min-width: 768px) {
   .assets-logos-white {
     display: inline-block;
   }
+}
+@media screen and (max-width: 768px) {
+  .assets-logos-white {
+    background-color: #000;
+  }
+}
+.assets-logos-white .assets-logo:hover {
+  background-color: #323234;
+  color: #fff;
 }
 
 .back-telegram {
@@ -4324,7 +4386,7 @@ footer[role='contentinfo'] .el-social:hover {
     background-size: contain;
     position: absolute;
     left: -300px;
-    bottom: -4px;
+    bottom: -36px;
   }
 }
 
