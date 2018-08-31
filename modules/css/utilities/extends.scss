@@ -1,8 +1,8 @@
 %width_base
 	{
 		max-width: $mq-desktop - $padding-fields * 2; 
-		padding-left: #{$padding-fields}px; 
-		padding-right: #{$padding-fields}px; 
+		padding-left: $padding-fields; 
+		padding-right: $padding-fields; 
 		margin: 0 auto;
 	}
 

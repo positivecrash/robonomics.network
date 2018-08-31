@@ -17,7 +17,7 @@ body
 		line-height: 1.5;
 
 		margin-top: $margin-sec;
-  		margin-bottom: $vertical-rythm;
+  		margin-bottom: $vertical-rythm/2;
   		text-align: left;
 
   		text-transform: uppercase;
@@ -35,7 +35,7 @@ body
 	{
 	  h#{$i}
 		  {
-		  	font-size: $font-size-title - 5 * $i;
+		  	font-size: $font-size-title - 4 * $i;
 		  }
 	}
 
@@ -278,7 +278,7 @@ table
 	    height: 6px;
 	    position: absolute;
 	    left: 50%;
-	    right: 0;
+	    right: $padding-fields;
 	    top: 0;
 	}
 

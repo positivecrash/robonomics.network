@@ -2578,7 +2578,7 @@ html {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
   margin-top: 67.5px;
-  margin-bottom: 27px;
+  margin-bottom: 13.5px;
   text-align: left;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -2589,15 +2589,15 @@ h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, 
 }
 
 h2 {
-  font-size: 26px;
+  font-size: 28px;
 }
 
 h3 {
-  font-size: 21px;
+  font-size: 24px;
 }
 
 h4 {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 h1 {
@@ -2798,7 +2798,7 @@ table td, table th {
   height: 6px;
   position: absolute;
   left: 50%;
-  right: 0;
+  right: 20px;
   top: 0;
 }
 .line-right-red div, .line-right-red:after {
@@ -2996,7 +2996,7 @@ span.loader {
   font-size: 26px;
 }
 
-.sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-blog, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-facebook, .sprite-basic-forum, .sprite-basic-github, .sprite-basic-hourglass, .sprite-basic-ipfs, .sprite-basic-medium, .sprite-basic-nixos, .sprite-basic-ok, .sprite-basic-reddit, .sprite-basic-ros, .sprite-basic-status-done, .sprite-basic-status-planning, .sprite-basic-status-progress, .sprite-basic-status-waiting, .sprite-basic-telegram, .sprite-basic-twitter, .sprite-basic-youtube, .contentBlock-roadmap .roadmap-done .roadmap-title__name:before, .contentBlock-roadmap .roadmap-progress .roadmap-title__name:before, .contentBlock-roadmap .roadmap-waiting .roadmap-title__name:before, .contentBlock-roadmap .roadmap-planning .roadmap-title__name:before, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .section__contents a.js-expand-toggle:after {
+.sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-blog, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-facebook, .sprite-basic-forum, .sprite-basic-github, .sprite-basic-hourglass, .sprite-basic-ipfs, .sprite-basic-medium, .sprite-basic-nixos, .sprite-basic-ok, .sprite-basic-pdf, .sprite-basic-reddit, .sprite-basic-ros, .sprite-basic-status-done, .sprite-basic-status-planning, .sprite-basic-status-progress, .sprite-basic-status-waiting, .sprite-basic-telegram, .sprite-basic-twitter, .sprite-basic-youtube, .contentBlock-roadmap .roadmap-done .roadmap-title__name:before, .contentBlock-roadmap .roadmap-progress .roadmap-title__name:before, .contentBlock-roadmap .roadmap-waiting .roadmap-title__name:before, .contentBlock-roadmap .roadmap-planning .roadmap-title__name:before, .sec-pdf:before, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .section__contents a.js-expand-toggle:after {
   background-image: url("../i/sprite.svg?2");
 }
 
@@ -3091,66 +3091,73 @@ span.loader {
   display: inline-block;
 }
 
+.sprite-basic-pdf {
+  width: 56.38px;
+  height: 64.43px;
+  background-position: -551px 0px;
+  display: inline-block;
+}
+
 .sprite-basic-reddit {
   width: 22.59px;
   height: 18.82px;
-  background-position: -551px 0px;
+  background-position: -608px 0px;
   display: inline-block;
 }
 
 .sprite-basic-ros {
   width: 87.51px;
   height: 23.15px;
-  background-position: -574px 0px;
+  background-position: -631px 0px;
   display: inline-block;
 }
 
 .sprite-basic-status-done {
   width: 20.49px;
   height: 11.78px;
-  background-position: -662px 0px;
+  background-position: -719px 0px;
   display: inline-block;
 }
 
 .sprite-basic-status-planning {
   width: 27.83px;
   height: 25.44px;
-  background-position: -683px 0px;
+  background-position: -740px 0px;
   display: inline-block;
 }
 
 .sprite-basic-status-progress {
   width: 21.51px;
   height: 21.51px;
-  background-position: -711px 0px;
+  background-position: -768px 0px;
   display: inline-block;
 }
 
 .sprite-basic-status-waiting {
   width: 21.77px;
   height: 21.61px;
-  background-position: -733px 0px;
+  background-position: -790px 0px;
   display: inline-block;
 }
 
 .sprite-basic-telegram {
   width: 24.3px;
   height: 21.16px;
-  background-position: -755px 0px;
+  background-position: -812px 0px;
   display: inline-block;
 }
 
 .sprite-basic-twitter {
   width: 22.3px;
   height: 18.1px;
-  background-position: -780px 0px;
+  background-position: -837px 0px;
   display: inline-block;
 }
 
 .sprite-basic-youtube {
   width: 24.2px;
   height: 17.03px;
-  background-position: -803px 0px;
+  background-position: -860px 0px;
   display: inline-block;
 }
 
@@ -3201,7 +3208,7 @@ header[role='banner'] .el-social {
 #header-top #header-top--nav {
   display: table;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 20pxpx;
 }
 
 .header-top__sec {
@@ -4267,7 +4274,7 @@ footer[role='contentinfo'] .el-social:hover {
 .contentBlock-roadmap .roadmap-done .roadmap-title__name:before {
   width: 20.49px;
   height: 11.78px;
-  background-position: -662px 0px;
+  background-position: -719px 0px;
 }
 .contentBlock-roadmap .roadmap-progress .roadmap-title {
   color: #B5C0F1;
@@ -4276,7 +4283,7 @@ footer[role='contentinfo'] .el-social:hover {
 .contentBlock-roadmap .roadmap-progress .roadmap-title__name:before {
   width: 21.51px;
   height: 21.51px;
-  background-position: -711px 0px;
+  background-position: -768px 0px;
 }
 .contentBlock-roadmap .roadmap-waiting .roadmap-title {
   color: #F15A24;
@@ -4285,7 +4292,7 @@ footer[role='contentinfo'] .el-social:hover {
 .contentBlock-roadmap .roadmap-waiting .roadmap-title__name:before {
   width: 21.77px;
   height: 21.61px;
-  background-position: -733px 0px;
+  background-position: -790px 0px;
 }
 .contentBlock-roadmap .roadmap-planning .roadmap-title {
   color: #F15A24;
@@ -4294,7 +4301,7 @@ footer[role='contentinfo'] .el-social:hover {
 .contentBlock-roadmap .roadmap-planning .roadmap-title__name:before {
   width: 27.83px;
   height: 25.44px;
-  background-position: -683px 0px;
+  background-position: -740px 0px;
 }
 
 /*--- VIDEOS ---*/
@@ -4426,8 +4433,8 @@ body {
 /*====== Set width of container ======*/
 .secw-narrow {
   max-width: 680px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 20pxpx;
+  padding-right: 20pxpx;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -4435,8 +4442,8 @@ body {
 
 .secw-base {
   max-width: 1240px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 20pxpx;
+  padding-right: 20pxpx;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -4675,6 +4682,21 @@ section {
   top: 0;
   right: 50%;
   bottom: 0;
+}
+
+.sec-pdf {
+  position: relative;
+  padding-left: 90.38px;
+}
+.sec-pdf:before {
+  content: "";
+  width: 56.38px;
+  height: 64.43px;
+  background-position: -551px 0px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* SECTION - pages */
