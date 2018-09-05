@@ -16,6 +16,7 @@ var gulp             = require('gulp'),
     
     ttf2eot          = require('gulp-ttf2eot'),
     ttf2woff         = require('gulp-ttf2woff');
+    // inlineImages     = require('gulp-inline-images');
 
 
 var path = {
@@ -93,6 +94,10 @@ gulp.task('templates', function() {
       pretty: true
     }))
     .pipe(gulp.dest(path.dist.dist))
+    // .pipe(inlineImages({
+    //     attribute: 'inline',
+    //     basedir: 'app/inline-images'
+    // }))
     .pipe(livereload());
 });
 
@@ -171,6 +176,18 @@ gulp.task('pngSprite', ['svgSprite'], function() {
 });
 
 gulp.task('sprite', ['pngSprite']);
+
+
+
+// gulp.task('inline-images', function(){
+//     return gulp.src([path.dist.dist+'*.html'])
+//     .pipe(inlineImages({
+//         attribute: 'inline',
+//         basedir: 'app/inline-images'
+//     }))
+//     .pipe(gulp.dest(path.dist.dist))
+//     .pipe(livereload());
+// });
 
 
 

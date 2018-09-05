@@ -143,8 +143,8 @@ body
 /*====== Bootstrap ======*/
 .row
   {
-    // margin-left: -#{$padding-fields}px; 
-    // margin-right: -#{$padding-fields}px;
+    // margin-left: - $padding-fields; 
+    // margin-right: - $padding-fields;
 
     @media screen and (max-width: $bootstrap-sm){
       *[class*='col-md']
