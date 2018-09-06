@@ -363,25 +363,6 @@ section
   }
 
 
-.sec-pdf
-  {
-    $sprite-pdf: map-get($icons, 'pdf');
-
-    position: relative;
-    padding-left: map-get($sprite-pdf, width) + 34;
-
-    &:before{
-      content:"";
-      @include get-sprite('pdf');
-      display: block;
-
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-  }
-
-
 
 /* SECTION - pages */
 

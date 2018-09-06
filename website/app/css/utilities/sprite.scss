@@ -1,5 +1,5 @@
 $icons: (
-    sprite: (width: 885px, height: 64.43px, pngPath: '../i/sprite.png?2', svgPath: '../i/sprite.svg?2'),
+    sprite: (width: 828px, height: 58.02px, pngPath: '../i/sprite.png?2', svgPath: '../i/sprite.svg?2'),
     aira: (width: 100.23px, height: 23.44px, backgroundX: 0px, backgroundY: 0px),
     anchor: (width: 15.08px, height: 17.09px, backgroundX: -101px, backgroundY: 0px),
     blog: (width: 20.33px, height: 20.33px, backgroundX: -117px, backgroundY: 0px),
@@ -13,16 +13,15 @@ $icons: (
     medium: (width: 18.92px, height: 15px, backgroundX: -382px, backgroundY: 0px),
     nixos: (width: 121.4px, height: 36.65px, backgroundX: -401px, backgroundY: 0px),
     ok: (width: 27.96px, height: 19.66px, backgroundX: -523px, backgroundY: 0px),
-    pdf: (width: 56.38px, height: 64.43px, backgroundX: -551px, backgroundY: 0px),
-    reddit: (width: 22.59px, height: 18.82px, backgroundX: -608px, backgroundY: 0px),
-    ros: (width: 87.51px, height: 23.15px, backgroundX: -631px, backgroundY: 0px),
-    status-done: (width: 20.49px, height: 11.78px, backgroundX: -719px, backgroundY: 0px),
-    status-planning: (width: 27.83px, height: 25.44px, backgroundX: -740px, backgroundY: 0px),
-    status-progress: (width: 21.51px, height: 21.51px, backgroundX: -768px, backgroundY: 0px),
-    status-waiting: (width: 21.77px, height: 21.61px, backgroundX: -790px, backgroundY: 0px),
-    telegram: (width: 24.3px, height: 21.16px, backgroundX: -812px, backgroundY: 0px),
-    twitter: (width: 22.3px, height: 18.1px, backgroundX: -837px, backgroundY: 0px),
-    youtube: (width: 24.2px, height: 17.03px, backgroundX: -860px, backgroundY: 0px),
+    reddit: (width: 22.59px, height: 18.82px, backgroundX: -551px, backgroundY: 0px),
+    ros: (width: 87.51px, height: 23.15px, backgroundX: -574px, backgroundY: 0px),
+    status-done: (width: 20.49px, height: 11.78px, backgroundX: -662px, backgroundY: 0px),
+    status-planning: (width: 27.83px, height: 25.44px, backgroundX: -683px, backgroundY: 0px),
+    status-progress: (width: 21.51px, height: 21.51px, backgroundX: -711px, backgroundY: 0px),
+    status-waiting: (width: 21.77px, height: 21.61px, backgroundX: -733px, backgroundY: 0px),
+    telegram: (width: 24.3px, height: 21.16px, backgroundX: -755px, backgroundY: 0px),
+    twitter: (width: 22.3px, height: 18.1px, backgroundX: -780px, backgroundY: 0px),
+    youtube: (width: 24.2px, height: 17.03px, backgroundX: -803px, backgroundY: 0px),
 );
 
 $sprite: map-get($icons, sprite);
@@ -93,10 +92,6 @@ $sprite: map-get($icons, sprite);
 }
 .sprite-basic-ok{
   @include get-sprite('ok');
-  display: inline-block;
-}
-.sprite-basic-pdf{
-  @include get-sprite('pdf');
   display: inline-block;
 }
 .sprite-basic-reddit{
