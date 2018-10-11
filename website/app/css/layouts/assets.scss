@@ -8,7 +8,7 @@
 	transition: all 0.2s ease;
 
 	img{
-		display: block;
+		display: inline-block;
 		max-width: 100%;
 	}
 
@@ -50,4 +50,19 @@
 
 .back-telegram{
 	background: image-url('assets-back-telegram.png');
+}
+
+
+.sec-assets-labels{
+	.assets-logo{
+		padding: 30px;
+
+		img{
+			max-width: 80%;
+		}
+
+		.assets-logo-download{
+			bottom: 0;
+		}
+	}
 }

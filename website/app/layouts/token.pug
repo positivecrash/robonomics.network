@@ -9,6 +9,9 @@ block content
 		include mixins/sections.pug
 		+header_top()
 
+
+	main(role="main")
+
 		section.header-mid
 			.el-FrontContent
 				
@@ -18,23 +21,11 @@ block content
 					p Для создания экономических стимулов поддержания работы Умных Городов и Индустрии 4.0 в инфраструктуре сети Ethereum будет выпущен внутренний токен Робономики – Robonomics token (XRT).
 					p XRT будет требоваться каждый раз, когда возникает необходимость получить услугу киберфизической системы.
 
-		.snapsvg-wrap.snapsvg-wrap-1
-			svg.snapsvg
+			.snapsvg-wrap.snapsvg-wrap-1
+				svg.snapsvg
 
-
-	main(role="main")
-		section.sec-black.sec-city
-			.secw-narrow
-				h2 Token sale будет произведен в формате голландского аукциона весной 2018
-				form
-					.msg_ok E-mail адрес email@mail.rr подписан на оповещение о старте продаж токена XRT  
-					.row
-						.col-md-8
-							input(type="text", value="", placeholder="Your e-mail").secw-full
-						.col-md-4
-							button.secw-full Sign up
-							//- button: span.loader
-
+				
+		+widget_newssubscription_dark()
 
 		section.token-distribution.sec-gray
 			.secw-base

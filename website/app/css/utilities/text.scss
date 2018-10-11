@@ -1,0 +1,298 @@
+html
+	{ font-size: 100%; }
+
+
+
+body 
+	{ @extend %font_base; }
+
+
+
+
+
+/*====== Text sizes & Headers ======*/
+
+#{headings()}
+	{
+		line-height: 1.5;
+
+		margin-top: $margin-sec;
+  		margin-bottom: $vertical-rythm/2;
+  		text-align: left;
+
+  		text-transform: uppercase;
+        letter-spacing: 1px;
+	  	word-spacing: 2px;
+
+  		&:first-child
+  			{
+  				margin-top: 0;
+  			}
+	}
+
+
+@for $i from 2 through 4
+	{
+	  h#{$i}
+		  {
+		  	font-size: $font-size-title - 4 * $i;
+		  }
+	}
+
+
+h1
+	{
+        font-size: $font-size-title;
+        font-weight: 500;
+	}
+
+
+h2, h3
+	{
+		font-weight: 300;
+		color: $c-orange;
+	}
+
+
+h5 { font-size: $font-size-base; }
+
+.t-big
+	{
+		font-size: 22px;
+		// font-weight: 300;
+	}
+
+.t-mid
+	{
+		font-size: 18px;
+		// font-weight: 300;
+	}
+/*====== end of Text sizes & Headers ======*/
+
+
+
+
+
+
+
+/*====== Text styles ======*/
+
+body
+	{
+		color: $c-text;
+	}
+
+
+b
+	{ font-weight: 500; }
+
+
+a 
+	{
+		color: $c-blue;
+		@extend %link_noline;
+
+		&:hover
+			{
+				color: lighten($c-blue, 10%);
+				text-decoration: underline;
+			}
+	}
+
+.text-hyphened
+	{
+		text-align: justify;
+		hyphens: auto;
+	}
+
+
+.t-break
+	{ word-break: break-all; }
+
+.t-nowrap
+	{ white-space: nowrap; }
+
+.t-center
+	{ text-align: center; }
+
+.t-right
+	{ text-align: right; }
+
+.t-left
+	{ text-align: left; }
+
+
+.t-blue { color: $c-blue; color: $c-blue !important; }
+.t-green { color: $c-green; color: $c-green !important; }
+.t-red { color: $c-red; color: $c-red !important; }
+
+
+.text-case_normal
+	{
+		text-transform: none;
+	}
+
+/*====== end of Text styles ======*/
+
+
+
+
+
+
+
+/*====== Text elements ======*/
+
+ul, ol
+	{
+	  margin-left: 20px;
+	  margin-bottom: $vertical-rythm;
+
+	  ul, ol{
+	  	margin-top: $vertical-rythm;
+	  }
+	}
+
+
+li, p, blockquote, .m-b-base
+	{
+	  margin-bottom: $vertical-rythm;
+
+	  &:last-child{
+	  	margin-bottom: 0;
+	  }
+	}
+
+blockquote
+	{
+		border-width: 2px 0;
+		border-style: solid;
+		border-color: $c-orange;
+		font-weight: 500;
+		padding: $vertical-rythm/3 0;
+	}
+
+code
+	{
+	    max-height: 120px;
+	    word-break: break-all;
+	}
+
+
+table
+	{
+		td, th {
+			vertical-align: top;
+			padding: $vertical-rythm * 0.5;
+		}
+
+		@include maxTablet(){
+			td, th {
+				display: block;
+				padding: $vertical-rythm * 0.3;
+			}
+		}
+	}
+
+
+.img-block
+	{
+	  display: block;
+	  max-width: 100%;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+
+.img-fullback
+	{
+	  background-size: cover;
+	  background-repeat: no-repeat;
+	  background-position: 50% 50%;
+	}
+
+/*====== end of Text elements ======*/
+
+
+
+
+
+
+/*====== Margins & paddings ======*/
+
+.m-t-0 { margin-top: 0; }
+.m-b-0 { margin-bottom: 0; }
+
+.m-b-half { margin-bottom: $vertical-rythm/2; }
+
+.p-t-0 { padding-top: 0; }
+.p-b-0 { padding-bottom: 0; }
+
+.col-null {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+/*====== end of Margins & paddings ======*/
+
+
+
+
+/*====== Other ======*/
+
+.embed-video
+	{
+	  iframe, object, embed{
+	    border: 0;
+	  }
+
+	  &.responsive-true{
+	    position: relative;
+	    padding-bottom: 56.2%;
+	    height: 0;
+	    overflow: hidden;
+
+	    iframe, object , embed{
+	      position: absolute;
+	      top: 0;
+	      left: 0;
+	      width: 100%;
+	      height: 100%;
+	    }
+	  }
+	}
+
+/*====== end of Other ======*/
+
+
+
+.line-right-red{
+	height: 6px;
+	position: relative;
+
+	div{
+		width: 100%;
+		height: 100%;
+	}
+
+	&:after{
+    	content: "";
+	    height: 6px;
+	    position: absolute;
+	    left: 50%;
+	    right: $padding-fields;
+	    top: 0;
+	}
+
+	div, &:after{
+		background-color: $c-orange;
+	}
+}
+
+.img-preview-vivid{
+	display: inline-block;
+	border: 10px solid $c-gray-blue;
+
+	img{
+		display: block;
+		max-width: 100%;
+	}
+}

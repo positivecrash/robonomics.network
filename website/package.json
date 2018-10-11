@@ -28,10 +28,10 @@
     "gulp-watch": "^5.0.0",
     "merge-stream": "^1.0.0",
     "pug": "^2.0.3",
-    "pug-loader": "^2.4.0",
-    "gulp-inline-images": "^1.2.6"
+    "pug-loader": "^2.4.0"
   },
   "dependencies": {
+    "browser-sync": "^2.26.0",
     "vue-static-terminal": "^1.0.2"
   }
 }
