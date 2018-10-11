@@ -3095,6 +3095,24 @@ footer[role='contentinfo'] .el-social:hover {
   height: 130px;
 }
 
+@media screen and (max-width: 768px) {
+  *[class^='col-'] {
+    margin-bottom: 27px;
+  }
+}
+
+.separator-dark {
+  height: 1px;
+  background-color: #000;
+}
+
+.separator-animated-inview {
+  transform: scale(0);
+}
+.separator-animated-inview.isInView {
+  animation: ScaleIn 0.6s 0.8s ease-in-out forwards;
+}
+
 .assets-logo {
   display: inline-block;
   vertical-align: middle;

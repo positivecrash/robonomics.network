@@ -2,7 +2,6 @@
 @import "compass";
 
 @import "plugins/bootstrap-4.0.0/scss/bootstrap-grid";
-// @import "plugins/fancybox";
 
 @import "utilities/my_reset";
 @import "utilities/variables";
@@ -20,6 +19,8 @@
 @import "includes/header.scss";
 @import "includes/footer.scss";
 @import "includes/widgets.scss";
+
+@import "includes/base.scss";
 
 @import "layouts/assets.scss";
 @import "layouts/outdated.scss";
