@@ -142,6 +142,172 @@ section.widget-miners_bounty
     }
   }
 
+ @keyframes robotHand2-show
+  {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+
+@keyframes robotHand2-1
+  {
+    0% {
+      transform: rotate(-3deg) translateY(8px) translateX(-3px);
+    }
+    100% {
+      transform: translateY(0) translateX(0) rotate(0);
+    }
+  }
+
+@keyframes robotHand2-2
+  {
+    0% {
+      transform: rotate(8deg) translateY(9px) translateX(-6px);
+    }
+    100% {
+      transform: translateY(0) translateX(0) rotate(0);
+    }
+  }
+
+@keyframes robotHand2-3
+  {
+    0% {
+      transform: rotate(-9deg) translateY(4px) translateX(-8px);
+    }
+    100% {
+      transform: translateY(0) translateX(0) rotate(0);
+    }
+  }
+
+@keyframes robotHand2-4
+  {
+    0% {
+      transform: rotate(-9deg) translateY(4px);
+    }
+    100% {
+      transform: translateY(0) rotate(0);
+    }
+  }
+
+
+@keyframes robotHand2-5
+  {
+    0% {
+      transform: rotate(-9deg) translateY(2px) translateX(3px);
+    }
+    100% {
+      transform: translateY(0) translateX(0) rotate(0);
+    }
+  }
+
+@keyframes robotHand2-6
+  {
+    0% {
+      transform: rotate(8deg) translateY(10px) translateX(5px);
+    }
+    100% {
+      transform: translateY(0) translateX(0) rotate(0);
+    }
+  }
+
+@keyframes robotHand2-7
+  {
+    0% {
+    	transform: rotate(11deg) translateY(5px) translateX(6px);
+    }
+    100% {
+      transform: translateY(0) translateX(0) rotate(0);
+    }
+  }
+
+@keyframes robotHand2-8
+  {
+    0% {
+    	transform: rotate(-15deg) translateY(2px) translateX(3px);
+    }
+    100% {
+      transform: translateY(0) translateX(0) rotate(0);
+    }
+  }
+
+@keyframes robotHand2-9
+  {
+    0% {
+    	transform: rotate(-4deg) translateY(17px);
+    }
+    100% {
+      transform: translateY(0) rotate(0);
+    }
+  }
+
+@keyframes robotHand2-10
+  {
+    0% {
+    	transform: rotate(-62deg) translateY(24px) translateX(10px);
+    }
+    100% {
+      transform: translateY(0) translateX(0) rotate(0);
+    }
+  }
+
+@keyframes robotHand2-11
+  {
+    0% {
+    	transform: rotate(-18deg) translateY(2px) translateX(3px);
+    }
+    100% {
+      transform: translateY(0) translateX(0) rotate(0);
+    }
+  }
+
+@keyframes robotHand2-12
+  {
+    0% {
+    	transform: translateY(18px) translateX(2px);
+    }
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+  }
+
+@keyframes robotHand2-13
+  {
+    0% {
+    	transform: rotate(-39deg) translateY(16px) translateX(6px);
+    }
+    100% {
+      transform: translateY(0) translateX(0) rotate(0);
+    }
+  }
+
+@keyframes robotHand2-14
+  {
+    0% {
+    	transform: rotate(10deg) translateY(2px);
+    }
+    100% {
+      transform: translateY(0) rotate(0);
+    }
+  }
+
+@keyframes robotHand2-15
+  {
+    0% {
+    	transform: rotate(10deg) translateY(14px);
+    }
+    100% {
+      transform: translateY(0) rotate(0);
+    }
+  }
+
+
+
 .decor-arms
   {
 
@@ -161,17 +327,19 @@ section.widget-miners_bounty
           }
       }
 
-    .arm-1
-      {
-      	width: 431px;
-    	height: 185px;
-        left: -50px;
-      }
+	.arm-1
+    	{
+    		width: 430px;
+    		height: 172px;
+    		left: -50px;
+    	}
 
-    .arm-2
-      {
-        right: 0;
-      }
+	.arm-2
+		{
+			width: 369px;
+			height: 168px;
+			right: -14px;
+		}
   }
 
 
@@ -181,28 +349,28 @@ section.widget-miners_bounty
 .sprite-basic-robotHand1-1
   {
     z-index: 5;
-    top: 43px;
+    top: 17px;
     right: 222px;
   }
 
 .sprite-basic-robotHand1-2
   {
     z-index: 4;
-    top: 43px;
+    top: 17px;
     right: 189px;
   }
 
 .sprite-basic-robotHand1-3
   {
     z-index: 5;
-    top: 26px;
+    top: 0;
     right: 106px;
   }
 
 .sprite-basic-robotHand1-4
   {
     z-index: 6;
-    top: 9px;
+    top: -17px;
     right: 0;
     transform: translateY(28px) rotate(0); /* если без анимации */
   }
@@ -210,42 +378,42 @@ section.widget-miners_bounty
 .sprite-basic-robotHand1-5
   {
     z-index: 7;
-    top: 33px;
+    top: 7px;
     right: 49px;
   }
 
 .sprite-basic-robotHand1-6
   {
     z-index: 4;
-    top: 30px;
+    top: 4px;
     right: 44px;
   }
 
 .sprite-basic-robotHand1-7
   {
     z-index: 3;
-    top: 67px;
+    top: 41px;
     right: 47px;
   }
 
 .sprite-basic-robotHand1-8
   {
     z-index: 2;
-    top: 42px;
+    top: 16px;
     right: 67px;
   }
 
 .sprite-basic-robotHand1-9
   {
     z-index: 1;
-    top: 77px;
+    top: 51px;
     right: 67px;
   }
 
 .sprite-basic-robotHand1-10
   {
     z-index: 6;
-    top: 40px;
+    top: 14px;
     right: 135px;
     transform: translateY(16px) translateX(-12px) rotate(0); /* если без анимации */
   }
@@ -253,9 +421,115 @@ section.widget-miners_bounty
 .sprite-basic-robotHand1-11
   {
     z-index: 5;
-    top: 99px;
+    top: 73px;
     right: 113px;
   }
+
+
+.sprite-basic-robotHand2-1
+	{
+		top: 4px;
+		left: 0;
+		z-index: 6;
+	}
+
+.sprite-basic-robotHand2-2
+	{
+		top: 6px;
+		left: 66px;
+		z-index: 6;
+	}
+
+.sprite-basic-robotHand2-3
+	{
+		top: 0;
+		left: 84px;
+		z-index: 5;
+	}
+
+.sprite-basic-robotHand2-4
+	{
+		top: 0;
+		left: 125px;
+		z-index: 4;
+	}
+
+.sprite-basic-robotHand2-5
+	{
+		top: 33px;
+		left: 114px;
+		z-index: 5;
+	}
+
+.sprite-basic-robotHand2-6
+	{
+		top: 42px;
+		left: 96px;
+		z-index: 6;
+	}
+
+.sprite-basic-robotHand2-7
+	{
+		top: 38px;
+		left: 55px;
+		z-index: 5;
+	}
+
+.sprite-basic-robotHand2-8
+	{
+		top: 46px;
+		left: 93px;
+		z-index: 3;
+	}
+
+.sprite-basic-robotHand2-9
+	{
+		top: 65px;
+		left: 84px;
+		z-index: 4;
+	}
+
+.sprite-basic-robotHand2-10
+	{
+		top: 78px;
+		left: 61px;
+		z-index: 3;
+	}
+
+.sprite-basic-robotHand2-11
+	{
+		top: 56px;
+		left: 105px;
+		z-index: 1;
+	}
+
+.sprite-basic-robotHand2-12
+	{
+		top: 75px;
+		left: 96px;
+		z-index: 2;
+	}
+
+.sprite-basic-robotHand2-13
+	{
+		top: 90px;
+		left: 88px;
+		z-index: 1;
+	}
+
+.sprite-basic-robotHand2-14
+	{
+		top: 38px;
+		left: 210px;
+		z-index: 1;
+	}
+
+.sprite-basic-robotHand2-15
+	{
+		top: 4px;
+		left: 235px;
+		z-index: 2;
+	}
 
 
 
@@ -286,6 +560,16 @@ section.widget-robotics
 						top: $margin-sec*1.5;
 					}
 			}
+
+		@media screen and (max-width: 712px) 
+			{
+				padding-top: $margin-sec*1.5;
+
+				.decor-arms
+					{
+						display: none;
+					}
+			}
 	}
 
 
@@ -298,10 +582,15 @@ section.widget-robotics.js-checkInView
 					span
 						{
 				      		transform-origin: 50% 50%;
-				      		animation-duration: 1s;
-				      		animation-delay: 1s;
+				      		animation-duration: 1.4s;
+				      		animation-delay: 1.4s;
 				      		animation-timing-function: linear;
 				      		animation-fill-mode: forwards;
+
+				      		@media screen and (min-width: 1600px){
+				      			animation-duration: 2.2s;
+				      			animation-delay: 2.2s;
+				      		}
 				      	}
 				}
 
@@ -310,13 +599,18 @@ section.widget-robotics.js-checkInView
 					transform: translateX(-100px);
 					opacity: 0;
 				}
+
+				.arm-2{
+					transform: translateX(100px);
+					opacity: 0;
+				}
 			}
 
 
 		.sprite-basic-robotHand1-1 { transform: translateY(-30px) rotate(19deg); }
 		.sprite-basic-robotHand1-2 { transform: rotate(-15deg); }
 		.sprite-basic-robotHand1-3{
-			transform-origin: 0 0;
+			transform-origin: 0 0 !important;
 			transform: rotate(-25deg);
 		}
 		.sprite-basic-robotHand1-4 { transform: translateY(-17px) rotate(-11deg); }
@@ -326,13 +620,38 @@ section.widget-robotics.js-checkInView
 		.sprite-basic-robotHand1-8 { transform: translateY(-32px) translateX(35px) rotate(-10deg); }
 		.sprite-basic-robotHand1-9 { transform: translateY(-52px) translateX(50px) rotate(-55deg); }
 		.sprite-basic-robotHand1-10 {
-			transform-origin: 0 0;
+			transform-origin: 0 0 !important;
     		transform: translateY(19px) translateX(-7px) rotate(-56deg);
 		}
 		.sprite-basic-robotHand1-11 {
-			transform-origin: 0 0;
+			transform-origin: 0 0 !important;
 			transform: translateY(-48px) translateX(27px) rotate(-32deg);
 		}
+
+		.sprite-basic-robotHand2-1 { transform: rotate(-3deg) translateY(8px) translateX(-3px); }
+		.sprite-basic-robotHand2-2 { transform: rotate(8deg) translateY(9px) translateX(-6px); }
+		.sprite-basic-robotHand2-3 { transform: rotate(-9deg) translateY(4px) translateX(-8px); }
+		.sprite-basic-robotHand2-4 { transform: rotate(-9deg) translateY(4px); }
+		.sprite-basic-robotHand2-5 {
+			transform: rotate(-9deg) translateY(2px) translateX(3px);
+			transform-origin: 100% 100%;
+		}
+		.sprite-basic-robotHand2-6 { transform: rotate(8deg) translateY(10px) translateX(5px); }
+		.sprite-basic-robotHand2-7 { transform: rotate(11deg) translateY(5px) translateX(6px); }
+		.sprite-basic-robotHand2-8 {
+			transform: rotate(-15deg) translateY(2px) translateX(3px);
+			transform-origin: 100% 100%;
+		}
+		.sprite-basic-robotHand2-9 { transform: rotate(-4deg) translateY(17px); }
+		.sprite-basic-robotHand2-10 { transform: rotate(-62deg) translateY(24px) translateX(10px); }
+		.sprite-basic-robotHand2-11 {
+			transform: rotate(-18deg) translateY(2px) translateX(3px);
+			transform-origin: 100% 100%;
+		}
+		.sprite-basic-robotHand2-12 { transform: translateY(18px) translateX(2px); }
+		.sprite-basic-robotHand2-13 { transform: rotate(-39deg) translateY(16px) translateX(6px); }
+		.sprite-basic-robotHand2-14 { transform: rotate(10deg) translateY(2px); }
+		.sprite-basic-robotHand2-15 { transform: rotate(10deg) translateY(14px); }
 	}
 
 
@@ -342,6 +661,14 @@ section.widget-robotics.isInView
 		.decor-arms
 			{
 				.arm-1 { animation: robotHand1-show 0.8s 1.2s linear forwards; }
+				.arm-2 { animation: robotHand2-show 0.8s 1.2s linear forwards; }
+
+				@media screen and (min-width: 1600px){
+	      			.arm-1, .arm-2{
+	      				animation-duration: 1.4s;
+	      				animation-delay: 1.8s;
+	      			}
+	      		}
 			}
 
 		.sprite-basic-robotHand1-1 { animation-name: robotHand1-1; }
@@ -355,6 +682,23 @@ section.widget-robotics.isInView
 		.sprite-basic-robotHand1-9 { animation-name: robotHand1-9; }
 		.sprite-basic-robotHand1-10 { animation-name: robotHand1-10; }
 		.sprite-basic-robotHand1-11 { animation-name: robotHand1-11; }
+
+
+		.sprite-basic-robotHand2-1 { animation-name: robotHand2-1; }
+		.sprite-basic-robotHand2-2 { animation-name: robotHand2-2; }
+		.sprite-basic-robotHand2-3 { animation-name: robotHand2-3; }
+		.sprite-basic-robotHand2-4 { animation-name: robotHand2-4; }
+		.sprite-basic-robotHand2-5 { animation-name: robotHand2-5; }
+		.sprite-basic-robotHand2-6 { animation-name: robotHand2-6; }
+		.sprite-basic-robotHand2-7 { animation-name: robotHand2-7; }
+		.sprite-basic-robotHand2-8 { animation-name: robotHand2-8; }
+		.sprite-basic-robotHand2-9 { animation-name: robotHand2-9; }
+		.sprite-basic-robotHand2-10 { animation-name: robotHand2-10; }
+		.sprite-basic-robotHand2-11 { animation-name: robotHand2-11; }
+		.sprite-basic-robotHand2-12 { animation-name: robotHand2-12; }
+		.sprite-basic-robotHand2-13 { animation-name: robotHand2-13; }
+		.sprite-basic-robotHand2-14 { animation-name: robotHand2-14; }
+		.sprite-basic-robotHand2-15 { animation-name: robotHand2-15; }
 	}
 
 

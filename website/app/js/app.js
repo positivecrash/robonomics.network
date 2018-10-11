@@ -6,11 +6,13 @@ window.addEventListener('load', function(){
 	*/
 	function IfInView(){
 		var 
-			el = document.querySelector('.js-checkInView'),
+			el = document.querySelectorAll('.js-checkInView'),
 			classview = 'isInView';
 
-		if(visibleY(el))
-			el.classList.add(classview);
+		el.forEach(function(item){
+			if(visibleY(item))
+				item.classList.add(classview);
+		});
 	}
 
 	IfInView();

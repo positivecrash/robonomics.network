@@ -1,5 +1,5 @@
 $icons: (
-    sprite: (width: 1686px, height: 153.86px, pngPath: '../i/sprite.png?2', svgPath: '../i/sprite.svg?2'),
+    sprite: (width: 2537px, height: 153.86px, pngPath: '../i/sprite.png?2', svgPath: '../i/sprite.svg?2'),
     aira: (width: 100.23px, height: 23.44px, backgroundX: 0px, backgroundY: 0px),
     anchor: (width: 15.08px, height: 17.09px, backgroundX: -101px, backgroundY: 0px),
     blog: (width: 20.33px, height: 20.33px, backgroundX: -117px, backgroundY: 0px),
@@ -25,14 +25,29 @@ $icons: (
     robotHand1-7: (width: 34.23px, height: 64.42px, backgroundX: -1300px, backgroundY: 0px),
     robotHand1-8: (width: 74.52px, height: 54.09px, backgroundX: -1335px, backgroundY: 0px),
     robotHand1-9: (width: 21.51px, height: 64.4px, backgroundX: -1410px, backgroundY: 0px),
-    ros: (width: 87.51px, height: 23.15px, backgroundX: -1432px, backgroundY: 0px),
-    status-done: (width: 20.49px, height: 11.78px, backgroundX: -1520px, backgroundY: 0px),
-    status-planning: (width: 27.83px, height: 25.44px, backgroundX: -1541px, backgroundY: 0px),
-    status-progress: (width: 21.51px, height: 21.51px, backgroundX: -1569px, backgroundY: 0px),
-    status-waiting: (width: 21.77px, height: 21.61px, backgroundX: -1591px, backgroundY: 0px),
-    telegram: (width: 24.3px, height: 21.16px, backgroundX: -1613px, backgroundY: 0px),
-    twitter: (width: 22.3px, height: 18.1px, backgroundX: -1638px, backgroundY: 0px),
-    youtube: (width: 24.2px, height: 17.03px, backgroundX: -1661px, backgroundY: 0px),
+    robotHand2-1: (width: 76.41px, height: 34.5px, backgroundX: -1432px, backgroundY: 0px),
+    robotHand2-10: (width: 39.31px, height: 76.01px, backgroundX: -1509px, backgroundY: 0px),
+    robotHand2-11: (width: 58.88px, height: 37.54px, backgroundX: -1549px, backgroundY: 0px),
+    robotHand2-12: (width: 23.99px, height: 23.39px, backgroundX: -1608px, backgroundY: 0px),
+    robotHand2-13: (width: 25.26px, height: 76.06px, backgroundX: -1632px, backgroundY: 0px),
+    robotHand2-14: (width: 56.95px, height: 22.94px, backgroundX: -1658px, backgroundY: 0px),
+    robotHand2-15: (width: 133px, height: 62.47px, backgroundX: -1715px, backgroundY: 0px),
+    robotHand2-2: (width: 27.91px, height: 15.6px, backgroundX: -1848px, backgroundY: 0px),
+    robotHand2-3: (width: 71.75px, height: 29.37px, backgroundX: -1876px, backgroundY: 0px),
+    robotHand2-4: (width: 102.09px, height: 96.76px, backgroundX: -1948px, backgroundY: 0px),
+    robotHand2-5: (width: 65.19px, height: 26.05px, backgroundX: -2051px, backgroundY: 0px),
+    robotHand2-6: (width: 28.22px, height: 13.99px, backgroundX: -2117px, backgroundY: 0px),
+    robotHand2-7: (width: 52.99px, height: 26.05px, backgroundX: -2146px, backgroundY: 0px),
+    robotHand2-8: (width: 58.97px, height: 36.88px, backgroundX: -2199px, backgroundY: 0px),
+    robotHand2-9: (width: 24.54px, height: 22.76px, backgroundX: -2258px, backgroundY: 0px),
+    ros: (width: 87.51px, height: 23.15px, backgroundX: -2283px, backgroundY: 0px),
+    status-done: (width: 20.49px, height: 11.78px, backgroundX: -2371px, backgroundY: 0px),
+    status-planning: (width: 27.83px, height: 25.44px, backgroundX: -2392px, backgroundY: 0px),
+    status-progress: (width: 21.51px, height: 21.51px, backgroundX: -2420px, backgroundY: 0px),
+    status-waiting: (width: 21.77px, height: 21.61px, backgroundX: -2442px, backgroundY: 0px),
+    telegram: (width: 24.3px, height: 21.16px, backgroundX: -2464px, backgroundY: 0px),
+    twitter: (width: 22.3px, height: 18.1px, backgroundX: -2489px, backgroundY: 0px),
+    youtube: (width: 24.2px, height: 17.03px, backgroundX: -2512px, backgroundY: 0px),
 );
 
 $sprite: map-get($icons, sprite);
@@ -151,6 +166,66 @@ $sprite: map-get($icons, sprite);
 }
 .sprite-basic-robotHand1-9{
   @include get-sprite('robotHand1-9');
+  display: inline-block;
+}
+.sprite-basic-robotHand2-1{
+  @include get-sprite('robotHand2-1');
+  display: inline-block;
+}
+.sprite-basic-robotHand2-10{
+  @include get-sprite('robotHand2-10');
+  display: inline-block;
+}
+.sprite-basic-robotHand2-11{
+  @include get-sprite('robotHand2-11');
+  display: inline-block;
+}
+.sprite-basic-robotHand2-12{
+  @include get-sprite('robotHand2-12');
+  display: inline-block;
+}
+.sprite-basic-robotHand2-13{
+  @include get-sprite('robotHand2-13');
+  display: inline-block;
+}
+.sprite-basic-robotHand2-14{
+  @include get-sprite('robotHand2-14');
+  display: inline-block;
+}
+.sprite-basic-robotHand2-15{
+  @include get-sprite('robotHand2-15');
+  display: inline-block;
+}
+.sprite-basic-robotHand2-2{
+  @include get-sprite('robotHand2-2');
+  display: inline-block;
+}
+.sprite-basic-robotHand2-3{
+  @include get-sprite('robotHand2-3');
+  display: inline-block;
+}
+.sprite-basic-robotHand2-4{
+  @include get-sprite('robotHand2-4');
+  display: inline-block;
+}
+.sprite-basic-robotHand2-5{
+  @include get-sprite('robotHand2-5');
+  display: inline-block;
+}
+.sprite-basic-robotHand2-6{
+  @include get-sprite('robotHand2-6');
+  display: inline-block;
+}
+.sprite-basic-robotHand2-7{
+  @include get-sprite('robotHand2-7');
+  display: inline-block;
+}
+.sprite-basic-robotHand2-8{
+  @include get-sprite('robotHand2-8');
+  display: inline-block;
+}
+.sprite-basic-robotHand2-9{
+  @include get-sprite('robotHand2-9');
   display: inline-block;
 }
 .sprite-basic-ros{
