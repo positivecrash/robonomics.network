@@ -5,8 +5,6 @@ window.addEventListener('load', function(){
 	1-inview.js
 	*/
 	function IfInView(){
-		console.log('fire');
-
 		var 
 			el = document.querySelector('.js-checkInView'),
 			classview = 'isInView';

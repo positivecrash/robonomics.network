@@ -2309,7 +2309,7 @@ span.loader {
   font-size: 26px;
 }
 
-.sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-blog, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-facebook, .sprite-basic-forum, .sprite-basic-github, .sprite-basic-hourglass, .sprite-basic-ipfs, .sprite-basic-medium, .sprite-basic-nixos, .sprite-basic-ok, .sprite-basic-reddit, .sprite-basic-ros, .sprite-basic-status-done, .sprite-basic-status-planning, .sprite-basic-status-progress, .sprite-basic-status-waiting, .sprite-basic-telegram, .sprite-basic-twitter, .sprite-basic-youtube, .contentBlock-roadmap .roadmap-done .roadmap-title__name:before, .contentBlock-roadmap .roadmap-progress .roadmap-title__name:before, .contentBlock-roadmap .roadmap-waiting .roadmap-title__name:before, .contentBlock-roadmap .roadmap-planning .roadmap-title__name:before, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .section__contents a.js-expand-toggle:after {
+.sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-blog, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-facebook, .sprite-basic-forum, .sprite-basic-github, .sprite-basic-hourglass, .sprite-basic-ipfs, .sprite-basic-medium, .sprite-basic-nixos, .sprite-basic-ok, .sprite-basic-reddit, .sprite-basic-robotHand1-1, .sprite-basic-robotHand1-10, .sprite-basic-robotHand1-11, .sprite-basic-robotHand1-2, .sprite-basic-robotHand1-3, .sprite-basic-robotHand1-4, .sprite-basic-robotHand1-5, .sprite-basic-robotHand1-6, .sprite-basic-robotHand1-7, .sprite-basic-robotHand1-8, .sprite-basic-robotHand1-9, .sprite-basic-ros, .sprite-basic-status-done, .sprite-basic-status-planning, .sprite-basic-status-progress, .sprite-basic-status-waiting, .sprite-basic-telegram, .sprite-basic-twitter, .sprite-basic-youtube, .contentBlock-roadmap .roadmap-done .roadmap-title__name:before, .contentBlock-roadmap .roadmap-progress .roadmap-title__name:before, .contentBlock-roadmap .roadmap-waiting .roadmap-title__name:before, .contentBlock-roadmap .roadmap-planning .roadmap-title__name:before, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .section__contents a.js-expand-toggle:after {
   background-image: url("../i/sprite.svg?2");
 }
 
@@ -2411,59 +2411,136 @@ span.loader {
   display: inline-block;
 }
 
+.sprite-basic-robotHand1-1 {
+  width: 208.11px;
+  height: 153.86px;
+  background-position: -574px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-robotHand1-10 {
+  width: 53.19px;
+  height: 68.43px;
+  background-position: -783px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-robotHand1-11 {
+  width: 56.02px;
+  height: 40.45px;
+  background-position: -837px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-robotHand1-2 {
+  width: 50.93px;
+  height: 35.61px;
+  background-position: -894px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-robotHand1-3 {
+  width: 108.83px;
+  height: 67.61px;
+  background-position: -945px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-robotHand1-4 {
+  width: 64.44px;
+  height: 34.66px;
+  background-position: -1054px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-robotHand1-5 {
+  width: 92.05px;
+  height: 32.75px;
+  background-position: -1119px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-robotHand1-6 {
+  width: 87.6px;
+  height: 57.13px;
+  background-position: -1212px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-robotHand1-7 {
+  width: 34.23px;
+  height: 64.42px;
+  background-position: -1300px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-robotHand1-8 {
+  width: 74.52px;
+  height: 54.09px;
+  background-position: -1335px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-robotHand1-9 {
+  width: 21.51px;
+  height: 64.4px;
+  background-position: -1410px 0px;
+  display: inline-block;
+}
+
 .sprite-basic-ros {
   width: 87.51px;
   height: 23.15px;
-  background-position: -574px 0px;
+  background-position: -1432px 0px;
   display: inline-block;
 }
 
 .sprite-basic-status-done {
   width: 20.49px;
   height: 11.78px;
-  background-position: -662px 0px;
+  background-position: -1520px 0px;
   display: inline-block;
 }
 
 .sprite-basic-status-planning {
   width: 27.83px;
   height: 25.44px;
-  background-position: -683px 0px;
+  background-position: -1541px 0px;
   display: inline-block;
 }
 
 .sprite-basic-status-progress {
   width: 21.51px;
   height: 21.51px;
-  background-position: -711px 0px;
+  background-position: -1569px 0px;
   display: inline-block;
 }
 
 .sprite-basic-status-waiting {
   width: 21.77px;
   height: 21.61px;
-  background-position: -733px 0px;
+  background-position: -1591px 0px;
   display: inline-block;
 }
 
 .sprite-basic-telegram {
   width: 24.3px;
   height: 21.16px;
-  background-position: -755px 0px;
+  background-position: -1613px 0px;
   display: inline-block;
 }
 
 .sprite-basic-twitter {
   width: 22.3px;
   height: 18.1px;
-  background-position: -780px 0px;
+  background-position: -1638px 0px;
   display: inline-block;
 }
 
 .sprite-basic-youtube {
   width: 24.2px;
   height: 17.03px;
-  background-position: -803px 0px;
+  background-position: -1661px 0px;
   display: inline-block;
 }
 
@@ -3088,29 +3165,310 @@ footer[role='contentinfo'] .el-social:hover {
   }
 }
 
-.widget-miners_bounty h2 {
+/* БЛОК ДЛЯ МАЙНЕРОВ */
+section.widget-miners_bounty h2 {
   margin-top: 27px;
 }
-.widget-miners_bounty .logo-robonomics-outline {
+section.widget-miners_bounty .logo-robonomics-outline {
   height: 130px;
 }
 
-@media screen and (max-width: 768px) {
-  *[class^='col-'] {
-    margin-bottom: 27px;
+/* БЛОК ДЛЯ РОБОТОТЕХНИКОВ */
+@keyframes robotHand1-1 {
+  0% {
+    transform: translateY(-30px) rotate(19deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes robotHand1-2 {
+  0% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes robotHand1-3 {
+  0% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes robotHand1-4 {
+  0% {
+    transform: translateY(-17px) rotate(-11deg);
+  }
+  100% {
+    transform: translateY(28px) rotate(0);
+  }
+}
+@keyframes robotHand1-5 {
+  0% {
+    transform: translateY(-39px) translateX(4px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+@keyframes robotHand1-6 {
+  0% {
+    transform: translateY(-39px) translateX(4px) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+}
+@keyframes robotHand1-7 {
+  0% {
+    transform: translateY(-55px) translateX(45px) rotate(-78deg);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+}
+@keyframes robotHand1-8 {
+  0% {
+    transform: translateY(-32px) translateX(35px) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+}
+@keyframes robotHand1-9 {
+  0% {
+    transform: translateY(-52px) translateX(50px) rotate(-55deg);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+}
+@keyframes robotHand1-10 {
+  0% {
+    transform: translateY(19px) translateX(-7px) rotate(-56deg);
+  }
+  100% {
+    transform: translateY(16px) translateX(-12px) rotate(0);
+  }
+}
+@keyframes robotHand1-11 {
+  0% {
+    transform: translateY(-48px) translateX(27px) rotate(-32deg);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+}
+@keyframes robotHand1-show {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.decor-arms {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.decor-arms .arm-1, .decor-arms .arm-2 {
+  position: absolute;
+  top: 0;
+}
+.decor-arms .arm-1 span, .decor-arms .arm-2 span {
+  position: absolute;
+}
+.decor-arms .arm-1 {
+  width: 431px;
+  height: 185px;
+  left: -50px;
+}
+.decor-arms .arm-2 {
+  right: 0;
+}
+
+.sprite-basic-robotHand1-1 {
+  z-index: 5;
+  top: 43px;
+  right: 222px;
+}
+
+.sprite-basic-robotHand1-2 {
+  z-index: 4;
+  top: 43px;
+  right: 189px;
+}
+
+.sprite-basic-robotHand1-3 {
+  z-index: 5;
+  top: 26px;
+  right: 106px;
+}
+
+.sprite-basic-robotHand1-4 {
+  z-index: 6;
+  top: 9px;
+  right: 0;
+  transform: translateY(28px) rotate(0);
+  /* если без анимации */
+}
+
+.sprite-basic-robotHand1-5 {
+  z-index: 7;
+  top: 33px;
+  right: 49px;
+}
+
+.sprite-basic-robotHand1-6 {
+  z-index: 4;
+  top: 30px;
+  right: 44px;
+}
+
+.sprite-basic-robotHand1-7 {
+  z-index: 3;
+  top: 67px;
+  right: 47px;
+}
+
+.sprite-basic-robotHand1-8 {
+  z-index: 2;
+  top: 42px;
+  right: 67px;
+}
+
+.sprite-basic-robotHand1-9 {
+  z-index: 1;
+  top: 77px;
+  right: 67px;
+}
+
+.sprite-basic-robotHand1-10 {
+  z-index: 6;
+  top: 40px;
+  right: 135px;
+  transform: translateY(16px) translateX(-12px) rotate(0);
+  /* если без анимации */
+}
+
+.sprite-basic-robotHand1-11 {
+  z-index: 5;
+  top: 99px;
+  right: 113px;
+}
+
+section.widget-robotics {
+  position: relative;
+}
+section.widget-robotics .secw-base {
+  position: relative;
+  z-index: 1;
+}
+section.widget-robotics .decor-arms {
+  z-index: 0;
+  top: 71.25px;
+}
+@media screen and (max-width: 1360px) {
+  section.widget-robotics {
+    padding-top: 261.25px;
+  }
+  section.widget-robotics .decor-arms {
+    top: 101.25px;
   }
 }
 
-.separator-dark {
-  height: 1px;
-  background-color: #000;
+/* подразумевается отложенная анимация */
+section.widget-robotics.js-checkInView .decor-arms .arm-1 span, section.widget-robotics.js-checkInView .decor-arms .arm-2 span {
+  transform-origin: 50% 50%;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+section.widget-robotics.js-checkInView .decor-arms .arm-1 {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-1 {
+  transform: translateY(-30px) rotate(19deg);
+}
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-2 {
+  transform: rotate(-15deg);
+}
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-3 {
+  transform-origin: 0 0;
+  transform: rotate(-25deg);
+}
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-4 {
+  transform: translateY(-17px) rotate(-11deg);
+}
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-5 {
+  transform: translateY(-39px) translateX(4px);
+}
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-6 {
+  transform: translateY(-39px) translateX(4px) rotate(-10deg);
+}
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-7 {
+  transform: translateY(-55px) translateX(45px) rotate(-78deg);
+}
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-8 {
+  transform: translateY(-32px) translateX(35px) rotate(-10deg);
+}
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-9 {
+  transform: translateY(-52px) translateX(50px) rotate(-55deg);
+}
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-10 {
+  transform-origin: 0 0;
+  transform: translateY(19px) translateX(-7px) rotate(-56deg);
+}
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-11 {
+  transform-origin: 0 0;
+  transform: translateY(-48px) translateX(27px) rotate(-32deg);
 }
 
-.separator-animated-inview {
-  transform: scale(0);
+/* а вот и анимация */
+section.widget-robotics.isInView .decor-arms .arm-1 {
+  animation: robotHand1-show 0.8s 1.2s linear forwards;
 }
-.separator-animated-inview.isInView {
-  animation: ScaleIn 0.6s 0.8s ease-in-out forwards;
+section.widget-robotics.isInView .sprite-basic-robotHand1-1 {
+  animation-name: robotHand1-1;
+}
+section.widget-robotics.isInView .sprite-basic-robotHand1-2 {
+  animation-name: robotHand1-2;
+}
+section.widget-robotics.isInView .sprite-basic-robotHand1-3 {
+  animation-name: robotHand1-3;
+}
+section.widget-robotics.isInView .sprite-basic-robotHand1-4 {
+  animation-name: robotHand1-4;
+}
+section.widget-robotics.isInView .sprite-basic-robotHand1-5 {
+  animation-name: robotHand1-5;
+}
+section.widget-robotics.isInView .sprite-basic-robotHand1-6 {
+  animation-name: robotHand1-6;
+}
+section.widget-robotics.isInView .sprite-basic-robotHand1-7 {
+  animation-name: robotHand1-7;
+}
+section.widget-robotics.isInView .sprite-basic-robotHand1-8 {
+  animation-name: robotHand1-8;
+}
+section.widget-robotics.isInView .sprite-basic-robotHand1-9 {
+  animation-name: robotHand1-9;
+}
+section.widget-robotics.isInView .sprite-basic-robotHand1-10 {
+  animation-name: robotHand1-10;
+}
+section.widget-robotics.isInView .sprite-basic-robotHand1-11 {
+  animation-name: robotHand1-11;
 }
 
 .assets-logo {
@@ -3608,7 +3966,7 @@ footer[role='contentinfo'] .el-social:hover {
 .contentBlock-roadmap .roadmap-done .roadmap-title__name:before {
   width: 20.49px;
   height: 11.78px;
-  background-position: -662px 0px;
+  background-position: -1520px 0px;
 }
 .contentBlock-roadmap .roadmap-progress .roadmap-title {
   color: #B5C0F1;
@@ -3617,7 +3975,7 @@ footer[role='contentinfo'] .el-social:hover {
 .contentBlock-roadmap .roadmap-progress .roadmap-title__name:before {
   width: 21.51px;
   height: 21.51px;
-  background-position: -711px 0px;
+  background-position: -1569px 0px;
 }
 .contentBlock-roadmap .roadmap-waiting .roadmap-title {
   color: #F15A24;
@@ -3626,7 +3984,7 @@ footer[role='contentinfo'] .el-social:hover {
 .contentBlock-roadmap .roadmap-waiting .roadmap-title__name:before {
   width: 21.77px;
   height: 21.61px;
-  background-position: -733px 0px;
+  background-position: -1591px 0px;
 }
 .contentBlock-roadmap .roadmap-planning .roadmap-title {
   color: #F15A24;
@@ -3635,7 +3993,7 @@ footer[role='contentinfo'] .el-social:hover {
 .contentBlock-roadmap .roadmap-planning .roadmap-title__name:before {
   width: 27.83px;
   height: 25.44px;
-  background-position: -683px 0px;
+  background-position: -1541px 0px;
 }
 
 /*--- VIDEOS ---*/
@@ -4170,3 +4528,20 @@ section {
 }
 
 /*====== end of Random ======*/
+@media screen and (max-width: 768px) {
+  *[class^='col-'] {
+    margin-bottom: 27px;
+  }
+}
+
+.separator-dark {
+  height: 1px;
+  background-color: #000;
+}
+
+.separator-animated-inview {
+  transform: scale(0);
+}
+.separator-animated-inview.isInView {
+  animation: ScaleIn 0.6s 0.8s ease-in-out forwards;
+}
