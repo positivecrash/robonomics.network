@@ -1831,7 +1831,7 @@ input, select {
 /*====== Media queries ======*/
 /*====== Colors ======*/
 /*====== Classes ======*/
-body, input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, input:not([type='button']):not([type='submit'])::placeholder, input[type='submit']::placeholder, input[type='button']::placeholder, button::placeholder, a.btn-green::placeholder, a.btn-red::placeholder, input.btn-red::placeholder, button.btn-red::placeholder, a.btn-blue::placeholder, input.btn-blue::placeholder, button.btn-blue::placeholder, .msg_ok, .msg_error, .msg_wait {
+body, input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line, input:not([type='button']):not([type='submit'])::placeholder, input[type='submit']::placeholder, input[type='button']::placeholder, button::placeholder, a.btn-green::placeholder, a.btn-red::placeholder, input.btn-red::placeholder, button.btn-red::placeholder, a.btn-blue::placeholder, input.btn-blue::placeholder, button.btn-blue::placeholder, .btn-line::placeholder, .msg_ok, .msg_error, .msg_wait {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 18px;
   line-height: 1.5;
@@ -1840,7 +1840,7 @@ body, input:not([type='submit']):not([type='button']), input[type='submit'], inp
   letter-spacing: 0;
 }
 
-a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn__text_orange, .header-top__nav a, #header-link__down a, #header-banner--text, .link-social, .sec-synopsis, #index-terminal__info_cmd, .section__contents > .secw-narrow a, a:hover, input[type='submit']:hover, input[type='button']:hover, button:hover, input.btn-red:hover, input.btn-blue:hover, #header-link__down a:hover, #header-banner--text:hover, .link-social:hover, .sec-synopsis:hover, #index-terminal__info_cmd:hover, .section__contents > .secw-narrow a:hover, a:focus, input[type='submit']:focus, input[type='button']:focus, button:focus, input.btn-red:focus, input.btn-blue:focus, #header-link__down a:focus, #header-banner--text:focus, .link-social:focus, .sec-synopsis:focus, #index-terminal__info_cmd:focus, .section__contents > .secw-narrow a:focus, a:visited, input[type='submit']:visited, input[type='button']:visited, button:visited, input.btn-red:visited, input.btn-blue:visited, #header-link__down a:visited, #header-banner--text:visited, .link-social:visited, .sec-synopsis:visited, #index-terminal__info_cmd:visited, .section__contents > .secw-narrow a:visited {
+a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line, a.btn__text_orange, .header-top__nav a, #header-link__down a, #header-banner--text, .link-social, .sec-synopsis, #index-terminal__info_cmd, .section__contents > .secw-narrow a, a:hover, input[type='submit']:hover, input[type='button']:hover, button:hover, input.btn-red:hover, input.btn-blue:hover, .btn-line:hover, #header-link__down a:hover, #header-banner--text:hover, .link-social:hover, .sec-synopsis:hover, #index-terminal__info_cmd:hover, .section__contents > .secw-narrow a:hover, a:focus, input[type='submit']:focus, input[type='button']:focus, button:focus, input.btn-red:focus, input.btn-blue:focus, .btn-line:focus, #header-link__down a:focus, #header-banner--text:focus, .link-social:focus, .sec-synopsis:focus, #index-terminal__info_cmd:focus, .section__contents > .secw-narrow a:focus, a:visited, input[type='submit']:visited, input[type='button']:visited, button:visited, input.btn-red:visited, input.btn-blue:visited, .btn-line:visited, #header-link__down a:visited, #header-banner--text:visited, .link-social:visited, .sec-synopsis:visited, #index-terminal__info_cmd:visited, .section__contents > .secw-narrow a:visited {
   text-decoration: none;
   text-decoration: none !important;
 }
@@ -1871,7 +1871,7 @@ a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, i
   padding-right: 0 !important;
 }
 
-input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn__text_orange, .msg_ok, .msg_error, .msg_wait, #header-link__down a, #header-banner--text, .terminal__window_head, .contentBlock-roadmap .roadmap-title__in div, .section__contents > .secw-narrow a {
+input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line, a.btn__text_orange, .msg_ok, .msg_error, .msg_wait, #header-link__down a, #header-banner--text, .terminal__window_head, .contentBlock-roadmap .roadmap-title__in div, .section__contents > .secw-narrow a {
   text-transform: uppercase;
   letter-spacing: 1.4px;
 }
@@ -2174,7 +2174,7 @@ table td, table th {
   }
 }
 /*======== FORMS VARIABLES & MIXINS & EXTENDS =========*/
-input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue {
+input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line {
   font-size: 18px;
   font-weight: 500;
   text-align: center;
@@ -2185,18 +2185,18 @@ input:not([type='submit']):not([type='button']), input[type='submit'], input[typ
   box-sizing: border-box;
   padding: 10px 20px;
 }
-input[disabled]:not([type='submit']):not([type='button']), input[disabled][type='submit'], input[disabled][type='button'], button[disabled], a[disabled].btn-green, a[disabled].btn-red, input[disabled].btn-red, a[disabled].btn-blue, input[disabled].btn-blue, input.disabled:not([type='submit']):not([type='button']), input.disabled[type='submit'], input.disabled[type='button'], button.disabled, a.disabled.btn-green, a.disabled.btn-red, input.disabled.btn-red, a.disabled.btn-blue, input.disabled.btn-blue {
+input[disabled]:not([type='submit']):not([type='button']), input[disabled][type='submit'], input[disabled][type='button'], button[disabled], a[disabled].btn-green, a[disabled].btn-red, input[disabled].btn-red, a[disabled].btn-blue, input[disabled].btn-blue, [disabled].btn-line, input.disabled:not([type='submit']):not([type='button']), input.disabled[type='submit'], input.disabled[type='button'], button.disabled, a.disabled.btn-green, a.disabled.btn-red, input.disabled.btn-red, a.disabled.btn-blue, input.disabled.btn-blue, .disabled.btn-line {
   cursor: default;
 }
-input:not([type='button']):not([type='submit'])::placeholder, input[type='submit']::placeholder, input[type='button']::placeholder, button::placeholder, a.btn-green::placeholder, a.btn-red::placeholder, input.btn-red::placeholder, button.btn-red::placeholder, a.btn-blue::placeholder, input.btn-blue::placeholder, button.btn-blue::placeholder {
+input:not([type='button']):not([type='submit'])::placeholder, input[type='submit']::placeholder, input[type='button']::placeholder, button::placeholder, a.btn-green::placeholder, a.btn-red::placeholder, input.btn-red::placeholder, button.btn-red::placeholder, a.btn-blue::placeholder, input.btn-blue::placeholder, button.btn-blue::placeholder, .btn-line::placeholder {
   font-size: 18px;
   color: #A0A0A0;
 }
-input.error:not([type='submit']):not([type='button']), input.error[type='submit'], input.error[type='button'], button.error, a.error.btn-green, a.error.btn-red, input.error.btn-red, a.error.btn-blue, input.error.btn-blue {
+input.error:not([type='submit']):not([type='button']), input.error[type='submit'], input.error[type='button'], button.error, a.error.btn-green, a.error.btn-red, input.error.btn-red, a.error.btn-blue, input.error.btn-blue, .error.btn-line {
   border-color: #E84004;
 }
 
-input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue {
+input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line {
   appearance: none;
   -webkit-appearance: none;
   border: 0;
@@ -2206,12 +2206,19 @@ input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, inpu
   word-spacing: 3px;
   font-size: 20px;
 }
-input.error[type='submit'], input.error[type='button'], button.error, a.error.btn-green, a.error.btn-red, input.error.btn-red, a.error.btn-blue, input.error.btn-blue, input.error[type='submit']:hover, input.error[type='button']:hover, button.error:hover, a.error.btn-green:hover, a.error.btn-red:hover, input.error.btn-red:hover, a.error.btn-blue:hover, input.error.btn-blue:hover {
+input.error[type='submit'], input.error[type='button'], button.error, a.error.btn-green, a.error.btn-red, input.error.btn-red, a.error.btn-blue, input.error.btn-blue, .error.btn-line, input.error[type='submit']:hover, input.error[type='button']:hover, button.error:hover, a.error.btn-green:hover, a.error.btn-red:hover, input.error.btn-red:hover, a.error.btn-blue:hover, input.error.btn-blue:hover, .error.btn-line:hover {
   background-color: #E84004;
 }
-input[disabled][type='submit'], input[disabled][type='button'], button[disabled], a[disabled].btn-green, a[disabled].btn-red, input[disabled].btn-red, a[disabled].btn-blue, input[disabled].btn-blue, input[disabled][type='submit']:hover, input[disabled][type='button']:hover, button[disabled]:hover, a[disabled].btn-green:hover, a[disabled].btn-red:hover, input[disabled].btn-red:hover, a[disabled].btn-blue:hover, input[disabled].btn-blue:hover, input.disabled[type='submit'], input.disabled[type='button'], button.disabled, a.disabled.btn-green, a.disabled.btn-red, input.disabled.btn-red, a.disabled.btn-blue, input.disabled.btn-blue, input.disabled[type='submit']:hover, input.disabled[type='button']:hover, button.disabled:hover, a.disabled.btn-green:hover, a.disabled.btn-red:hover, input.disabled.btn-red:hover, a.disabled.btn-blue:hover, input.disabled.btn-blue:hover {
+input[disabled][type='submit'], input[disabled][type='button'], button[disabled], a[disabled].btn-green, a[disabled].btn-red, input[disabled].btn-red, a[disabled].btn-blue, input[disabled].btn-blue, [disabled].btn-line, input[disabled][type='submit']:hover, input[disabled][type='button']:hover, button[disabled]:hover, a[disabled].btn-green:hover, a[disabled].btn-red:hover, input[disabled].btn-red:hover, a[disabled].btn-blue:hover, input[disabled].btn-blue:hover, [disabled].btn-line:hover, input.disabled[type='submit'], input.disabled[type='button'], button.disabled, a.disabled.btn-green, a.disabled.btn-red, input.disabled.btn-red, a.disabled.btn-blue, input.disabled.btn-blue, .disabled.btn-line, input.disabled[type='submit']:hover, input.disabled[type='button']:hover, button.disabled:hover, a.disabled.btn-green:hover, a.disabled.btn-red:hover, input.disabled.btn-red:hover, a.disabled.btn-blue:hover, input.disabled.btn-blue:hover, .disabled.btn-line:hover {
   background-color: #282B38;
   cursor: default;
+}
+
+.btn.btn-small {
+  letter-spacing: 1px;
+  word-spacing: normal;
+  font-size: 18px;
+  padding: 5px 10px;
 }
 
 a.btn__text_orange {
@@ -2236,7 +2243,6 @@ input:not([type='submit']):not([type='button'])[disabled] {
 input[type='submit'], input[type='button'], button, a.btn-green {
   background-color: #54CE63;
   color: #fff;
-  transition: 0.2s all ease-in;
 }
 input[type='submit']:hover, input[type='button']:hover, button:hover, a.btn-green:hover {
   background-color: #35ba46;
@@ -2245,7 +2251,6 @@ input[type='submit']:hover, input[type='button']:hover, button:hover, a.btn-gree
 a.btn-red, input.btn-red, button.btn-red {
   background-color: #F15A24;
   color: #fff;
-  transition: 0.2s all ease-in;
 }
 a.btn-red:hover, input.btn-red:hover, button.btn-red:hover {
   background-color: #d4420e;
@@ -2254,7 +2259,6 @@ a.btn-red:hover, input.btn-red:hover, button.btn-red:hover {
 a.btn-blue, input.btn-blue, button.btn-blue {
   background-color: #03A5ED;
   color: #fff;
-  transition: 0.2s all ease-in;
 }
 a.btn-blue:hover, input.btn-blue:hover, button.btn-blue:hover {
   background-color: #0282bb;
@@ -2265,6 +2269,16 @@ a.btn__text_orange {
 }
 a.btn__text_orange:hover {
   color: #54CE63;
+}
+
+.btn-line {
+  color: #03A5ED;
+  border: 1px solid #03A5ED;
+  background-color: transparent;
+}
+.btn-line:hover {
+  color: #54CE63;
+  border-color: #54CE63;
 }
 
 @keyframes rotateLoader {
@@ -4991,4 +5005,19 @@ section {
 }
 .separator-animated-inview.isInView {
   animation: ScaleIn 0.6s 0.8s ease-in-out forwards;
+}
+
+.msg--fixed {
+  position: fixed;
+  z-index: 1000;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.msg--fixed-bottom {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  color: #fff;
 }

@@ -1,17 +1,18 @@
 /* 0-cookie.js requires */
 
-// window.addEventListener('load', function(){
-// 	var
-// 		agreementMsg      = document.querySelector('#js-cookiePolicy'),
-// 		agreementBtn      = document.querySelector('#js-cookiePolicy .btn-line'),
-// 		agreementCookie   = 'policy';
+window.addEventListener('load', function(){
+	var
+		agreementMsg      = document.querySelector('#js-cookiePolicy'),
+		agreementBtn      = document.querySelector('#js-cookiePolicy .btn'),
+		agreementCookie   = 'policy';
 
-// 		if(getCookie(agreementCookie)){
-// 			agreementMsg.style.display = 'none';
-// 		}
+		if (agreementMsg && agreementBtn){
+			if(getCookie(agreementCookie))
+				agreementMsg.style.display = 'none';
 
-// 		agreementBtn.addEventListener('click', function(){
-// 			document.cookie = agreementCookie+'=true';
-// 			agreementMsg.style.display = 'none';
-// 		});
-// }, false);
+			agreementBtn.addEventListener('click', function(){
+				document.cookie = agreementCookie+'=true';
+				agreementMsg.style.display = 'none';
+			});
+		}
+}, false);

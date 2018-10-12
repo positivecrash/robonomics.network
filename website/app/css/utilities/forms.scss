@@ -74,6 +74,13 @@ $fontsize-btn: 20px;
 	}
 }
 
+%form_b_small{
+	letter-spacing: 1px;
+	word-spacing: normal;
+	font-size: $font-size-base;
+	padding: $inp-padding-v/2 $inp-padding-g/2;
+}
+
 %btn_lined{
 	@extend %text_uppercase;
 	@extend %link_noline;
@@ -86,10 +93,20 @@ $fontsize-btn: 20px;
 @mixin btn_col($back, $text: #fff){
 	background-color: $back;
 	color: $text;
-	transition: 0.2s all ease-in;
 
 	&:hover{
 		background-color: darken($back, 10%);
+	}
+}
+
+@mixin btn_col_lined($color: $c-link, $color_hover: $c-green){
+	color: $color;
+	border: 1px solid $color;
+	background-color: transparent;
+
+	&:hover{
+		color: $color_hover;
+		border-color: $color_hover;
 	}
 }
 
@@ -147,6 +164,18 @@ a.btn__text_orange{
 		color: $c-green;
 	}
 }
+
+.btn-line
+	{
+		@extend %form_e_base;
+		@extend %form_b_base;
+		@include btn_col_lined();
+	}
+
+.btn.btn-small
+	{
+		@extend %form_b_small;
+	}
 
 
 
