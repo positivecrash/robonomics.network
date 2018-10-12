@@ -35,8 +35,8 @@ window.addEventListener('load', function(){
 		agreementCookie   = 'policy';
 
 		if (agreementMsg && agreementBtn){
-			if(getCookie(agreementCookie))
-				agreementMsg.style.display = 'none';
+			if(!getCookie(agreementCookie))
+				agreementMsg.style.display = 'block';
 
 			agreementBtn.addEventListener('click', function(){
 				document.cookie = agreementCookie+'=true';
