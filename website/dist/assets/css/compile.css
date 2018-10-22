@@ -3707,6 +3707,7 @@ section.widget-miners_bounty .logo-robonomics-outline {
 
 section.widget-robotics {
   position: relative;
+  overflow: hidden;
 }
 section.widget-robotics .secw-base {
   position: relative;
