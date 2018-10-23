@@ -1,5 +1,5 @@
 $icons: (
-    sprite: (width: 2657px, height: 153.86px, pngPath: '../i/sprite.png?3', svgPath: '../i/sprite.svg?3'),
+    sprite: (width: 2657px, height: 153.86px, pngPath: '../i/sprite.png?4', svgPath: '../i/sprite.svg?4'),
     aira: (width: 100.23px, height: 23.44px, backgroundX: 0px, backgroundY: 0px),
     anchor: (width: 15.08px, height: 17.09px, backgroundX: -101px, backgroundY: 0px),
     blog: (width: 20.33px, height: 20.33px, backgroundX: -117px, backgroundY: 0px),
@@ -9,7 +9,7 @@ $icons: (
     flag-de: (width: 30px, height: 19.7px, backgroundX: -210px, backgroundY: 0px),
     flag-en: (width: 30px, height: 19.7px, backgroundX: -240px, backgroundY: 0px),
     flag-ru: (width: 30px, height: 19.7px, backgroundX: -270px, backgroundY: 0px),
-    flag-zn: (width: 30px, height: 19.7px, backgroundX: -300px, backgroundY: 0px),
+    flag-zh: (width: 30px, height: 19.7px, backgroundX: -300px, backgroundY: 0px),
     forum: (width: 24.3px, height: 19.72px, backgroundX: -330px, backgroundY: 0px),
     github: (width: 20.33px, height: 23.34px, backgroundX: -355px, backgroundY: 0px),
     hourglass: (width: 21.32px, height: 25.58px, backgroundX: -376px, backgroundY: 0px),
@@ -108,8 +108,8 @@ $sprite: map-get($icons, sprite);
   @include get-sprite('flag-ru');
   display: inline-block;
 }
-.sprite-basic-flag-zn{
-  @include get-sprite('flag-zn');
+.sprite-basic-flag-zh{
+  @include get-sprite('flag-zh');
   display: inline-block;
 }
 .sprite-basic-forum{
