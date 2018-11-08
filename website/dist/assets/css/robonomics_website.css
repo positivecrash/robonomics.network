@@ -1871,9 +1871,9 @@ a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, i
   padding-right: 0 !important;
 }
 
-input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line, a.btn__text_orange, .msg_ok, .msg_error, .msg_wait, #header-link__down a, #header-banner--text, .terminal__window_head, .contentBlock-roadmap .roadmap-title__in div, .section__contents > .secw-narrow a {
+table th, input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line, a.btn__text_orange, .msg_ok, .msg_error, .msg_wait, #header-link__down a, #header-banner--text, .terminal__window_head, .contentBlock-roadmap .roadmap-title__in div, .section__contents > .secw-narrow a {
   text-transform: uppercase;
-  letter-spacing: 1.4px;
+  letter-spacing: 1.2px;
 }
 
 .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .section__contents a.js-expand-toggle:after {
@@ -1999,6 +1999,13 @@ a:hover {
 
 /*====== end of Text styles ======*/
 /*====== Text elements ======*/
+li, p, blockquote, .m-b-base {
+  margin-bottom: 27px;
+}
+li:last-child, p:last-child, blockquote:last-child, .m-b-base:last-child {
+  margin-bottom: 0;
+}
+
 ul, ol {
   margin-left: 20px;
   margin-bottom: 27px;
@@ -2006,11 +2013,10 @@ ul, ol {
 ul ul, ul ol, ol ul, ol ol {
   margin-top: 27px;
 }
-
-li, p, blockquote, .m-b-base {
-  margin-bottom: 27px;
+ul.list-small li, ol.list-small li {
+  margin-bottom: 13.5px;
 }
-li:last-child, p:last-child, blockquote:last-child, .m-b-base:last-child {
+ul.list-small li:last-child, ol.list-small li:last-child {
   margin-bottom: 0;
 }
 
@@ -2029,12 +2035,44 @@ code {
 
 table td, table th {
   vertical-align: top;
-  padding: 13.5px;
+  padding: 27px 18.9px;
+  border: 1px solid #A0A0A0;
 }
 @media screen and (max-width: 768px) {
   table td, table th {
-    display: block;
     padding: 8.1px;
+  }
+}
+@media screen and (max-width: 576px) {
+  table th {
+    font-size: 13px;
+  }
+  table td {
+    font-size: 15px;
+  }
+}
+table th {
+  text-align: left;
+  background: #F2F2F2;
+}
+table.responsive td:before {
+  content: attr(data-th) ": ";
+  font-weight: bold;
+  margin-right: 30px;
+  display: none;
+}
+@media (max-width: 768px) {
+  table.responsive th {
+    display: none;
+  }
+  table.responsive td {
+    display: block;
+  }
+  table.responsive td:first-child {
+    background-color: #F2F2F2;
+  }
+  table.responsive td:before {
+    display: inline-block;
   }
 }
 
@@ -3283,10 +3321,11 @@ footer[role='contentinfo'] .el-social:hover {
 
 #footer-nav_lined {
   background-color: #007AB1;
-  padding: 5px 0;
+  padding: 15px 0;
   text-transform: uppercase;
   font-weight: 500;
   color: #004462;
+  text-align: center;
 }
 #footer-nav_lined span, #footer-nav_lined a {
   display: inline-block;

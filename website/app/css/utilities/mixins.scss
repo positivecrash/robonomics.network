@@ -61,3 +61,30 @@
 		margin-right: auto;
 		display: block;
 	}
+
+@mixin responsiveTable($breakpoint){
+  td:before {
+      content: attr(data-th)": ";
+      font-weight: bold;
+      margin-right: 30px;
+      display: none;
+  }
+
+
+  @media (max-width: $breakpoint){
+    th { display: none; }
+
+    td { 
+      display: block; 
+
+
+      &:first-child{
+      	background-color: $c-gray-light;
+      }
+      
+      &:before{
+        display: inline-block;
+      }
+    }
+  }
+}

@@ -142,17 +142,6 @@ a
 
 /*====== Text elements ======*/
 
-ul, ol
-	{
-	  margin-left: 20px;
-	  margin-bottom: $vertical-rythm;
-
-	  ul, ol{
-	  	margin-top: $vertical-rythm;
-	  }
-	}
-
-
 li, p, blockquote, .m-b-base
 	{
 	  margin-bottom: $vertical-rythm;
@@ -161,6 +150,28 @@ li, p, blockquote, .m-b-base
 	  	margin-bottom: 0;
 	  }
 	}
+
+
+ul, ol
+	{
+	  margin-left: 20px;
+	  margin-bottom: $vertical-rythm;
+
+	  ul, ol{
+	  	margin-top: $vertical-rythm;
+	  }
+
+	  &.list-small li{
+	  	margin-bottom: $vertical-rythm * 0.5;
+
+	  	&:last-child{
+	  		margin-bottom: 0;
+	  	}
+	  }
+	}
+
+
+
 
 blockquote
 	{
@@ -180,16 +191,32 @@ code
 
 table
 	{
+
 		td, th {
 			vertical-align: top;
-			padding: $vertical-rythm * 0.5;
+			padding: $vertical-rythm $vertical-rythm * 0.7;
+			border: 1px solid $c-gray-mid;
 		}
 
 		@include maxTablet(){
 			td, th {
-				display: block;
 				padding: $vertical-rythm * 0.3;
 			}
+		}
+
+		@include mobile(){
+			th { font-size: $font-size-base - 5; }
+			td { font-size: $font-size-base - 3; }
+		}
+
+		th{
+			@extend %text_uppercase;
+			text-align: left;
+			background: $c-gray-light;
+		}
+
+		&.responsive{
+			@include responsiveTable($mq-tablet);
 		}
 	}
 

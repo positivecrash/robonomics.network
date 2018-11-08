@@ -116,10 +116,11 @@ footer[role='contentinfo']
 
 #footer-nav_lined{
 	background-color: $c-blue-mute-3;
-	padding: 5px 0;
+	padding: 15px 0;
 	text-transform: uppercase;
 	font-weight: 500;
 	color: $c-blue-mute-4;
+	text-align: center;
 
 	span, a{
 		display: inline-block;

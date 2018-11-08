@@ -14,7 +14,7 @@ var gulp             = require('gulp'),
     image            = require('gulp-image'),
     
     ttf2eot          = require('gulp-ttf2eot'),
-    ttf2woff         = require('gulp-ttf2woff')
+    ttf2woff         = require('gulp-ttf2woff'),
 
     browserSync      = require('browser-sync');
 
