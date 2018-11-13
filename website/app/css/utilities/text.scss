@@ -58,13 +58,13 @@ h5 { font-size: $font-size-base; }
 
 .t-big
 	{
-		font-size: 22px;
+		font-size: $font-size-base + 4;
 		// font-weight: 300;
 	}
 
 .t-mid
 	{
-		font-size: 18px;
+		font-size: $font-size-base + 2;
 		// font-weight: 300;
 	}
 /*====== end of Text sizes & Headers ======*/
@@ -168,6 +168,28 @@ ul, ol
 	  		margin-bottom: 0;
 	  	}
 	  }
+
+	  &.list-lined
+	  	{
+	  		list-style: none;
+	  		margin-left: 0;
+
+		  	li
+		  		{
+					padding: $vertical-rythm 0;
+					margin: 0;
+					border-bottom: 1px solid $c-gray-mid;
+
+					&:last-child{
+						border-bottom: 0;
+						padding-bottom: 0;
+					}
+
+					&:first-child{
+						padding-top: 0;
+					}
+		  		}
+	  	}
 	}
 
 
@@ -325,3 +347,23 @@ table
 		max-width: 100%;
 	}
 }
+
+
+
+
+.label-blue, .label-dark
+	{
+		display: inline-block;
+		padding: 2px 8px;
+		color: #fff;
+	}
+
+.label-blue
+	{
+		background-color: $c-blue;
+	}
+
+.label-dark
+	{
+		background-color: $c-text;
+	}

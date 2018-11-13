@@ -1932,7 +1932,7 @@ h5 {
 }
 
 .t-mid {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 /*====== end of Text sizes & Headers ======*/
@@ -2018,6 +2018,22 @@ ul.list-small li, ol.list-small li {
 }
 ul.list-small li:last-child, ol.list-small li:last-child {
   margin-bottom: 0;
+}
+ul.list-lined, ol.list-lined {
+  list-style: none;
+  margin-left: 0;
+}
+ul.list-lined li, ol.list-lined li {
+  padding: 27px 0;
+  margin: 0;
+  border-bottom: 1px solid #A0A0A0;
+}
+ul.list-lined li:last-child, ol.list-lined li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+ul.list-lined li:first-child, ol.list-lined li:first-child {
+  padding-top: 0;
 }
 
 blockquote {
@@ -2167,6 +2183,20 @@ table.responsive td:before {
 .img-preview-vivid img {
   display: block;
   max-width: 100%;
+}
+
+.label-blue, .label-dark {
+  display: inline-block;
+  padding: 2px 8px;
+  color: #fff;
+}
+
+.label-blue {
+  background-color: #03A5ED;
+}
+
+.label-dark {
+  background-color: #000;
 }
 
 .hamburger, .nav-mobilehide, #logo-ethereum, #header-logo-robonomics, .logo-robonomics .dot, #header-index .snapsvgoutside-text span, .index-terminal-result__grid img, .index-terminal-result__step > *, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .js-listexpand .hidden {
