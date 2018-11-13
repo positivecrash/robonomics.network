@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.488 11.778">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.47 12.359">
   <defs>
     <style>
       .cls-1 {
-        fill: #fff;
+        fill: #54ce63;
       }
     </style>
   </defs>
-  <g id="check" transform="translate(0 -126.229)">
-    <g id="done-all" transform="translate(0 126.229)">
-      <path id="Path_450" data-name="Path 450" class="cls-1" d="M15.474,127.457l-1.228-1.228-5.539,5.539L9.935,133Zm3.692-1.228-9.232,9.318-3.692-3.692-1.228,1.228,4.923,4.923,10.55-10.55ZM0,133.084l4.923,4.923,1.228-1.228-4.923-4.926Z" transform="translate(0 -126.229)"/>
+  <g id="check_1_" transform="translate(0 -126.229)">
+    <g id="done-all_1_" transform="translate(0 126.229)">
+      <path id="Path_450_1_" class="cls-1" d="M16.234,1.257,14.872,0,9.112,5.76l1.257,1.257ZM20.109,0l-9.74,9.74L6.493,5.865,5.237,7.227l5.132,5.132,11.1-11.1ZM0,7.227l5.132,5.132L6.389,11.1,1.257,5.865Z"/>
     </g>
   </g>
 </svg>

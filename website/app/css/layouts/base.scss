@@ -595,10 +595,15 @@ section
 
 
 
-.separator-dark
+.separator-dark, .separator-light
   {
     height: 1px;
     background-color: $c-text;
+  }
+
+.separator-light
+  {
+    background-color: #fff;
   }
 
 .separator-animated-inview

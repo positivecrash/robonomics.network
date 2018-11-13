@@ -1,5 +1,5 @@
 $icons: (
-    sprite: (width: 2657px, height: 153.86px, pngPath: '../i/sprite.png?4', svgPath: '../i/sprite.svg?4'),
+    sprite: (width: 2624px, height: 153.86px, pngPath: '../i/sprite.png?4', svgPath: '../i/sprite.svg?4'),
     aira: (width: 100.23px, height: 23.44px, backgroundX: 0px, backgroundY: 0px),
     anchor: (width: 15.08px, height: 17.09px, backgroundX: -101px, backgroundY: 0px),
     blog: (width: 20.33px, height: 20.33px, backgroundX: -117px, backgroundY: 0px),
@@ -45,13 +45,12 @@ $icons: (
     robotHand2-8: (width: 58.97px, height: 36.88px, backgroundX: -2319px, backgroundY: 0px),
     robotHand2-9: (width: 24.54px, height: 22.76px, backgroundX: -2378px, backgroundY: 0px),
     ros: (width: 87.51px, height: 23.15px, backgroundX: -2403px, backgroundY: 0px),
-    status-done: (width: 20.49px, height: 11.78px, backgroundX: -2491px, backgroundY: 0px),
-    status-planning: (width: 27.83px, height: 25.44px, backgroundX: -2512px, backgroundY: 0px),
-    status-progress: (width: 21.51px, height: 21.51px, backgroundX: -2540px, backgroundY: 0px),
-    status-waiting: (width: 21.77px, height: 21.61px, backgroundX: -2562px, backgroundY: 0px),
-    telegram: (width: 24.3px, height: 21.16px, backgroundX: -2584px, backgroundY: 0px),
-    twitter: (width: 22.3px, height: 18.1px, backgroundX: -2609px, backgroundY: 0px),
-    youtube: (width: 24.2px, height: 17.03px, backgroundX: -2632px, backgroundY: 0px),
+    status-done: (width: 21.47px, height: 12.36px, backgroundX: -2491px, backgroundY: 0px),
+    status-progress: (width: 18.7px, height: 18.77px, backgroundX: -2513px, backgroundY: 0px),
+    status-waiting: (width: 18.88px, height: 18.77px, backgroundX: -2532px, backgroundY: 0px),
+    telegram: (width: 24.3px, height: 21.16px, backgroundX: -2551px, backgroundY: 0px),
+    twitter: (width: 22.3px, height: 18.1px, backgroundX: -2576px, backgroundY: 0px),
+    youtube: (width: 24.2px, height: 17.03px, backgroundX: -2599px, backgroundY: 0px),
 );
 
 $sprite: map-get($icons, sprite);
@@ -254,10 +253,6 @@ $sprite: map-get($icons, sprite);
 }
 .sprite-basic-status-done{
   @include get-sprite('status-done');
-  display: inline-block;
-}
-.sprite-basic-status-planning{
-  @include get-sprite('status-planning');
   display: inline-block;
 }
 .sprite-basic-status-progress{

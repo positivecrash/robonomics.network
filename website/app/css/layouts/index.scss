@@ -1,3 +1,8 @@
+.roadmap
+	{
+		margin-top: $margin-sec * 0.7;
+	}
+
 .roadmap-title, .roadmap-desc
 	{
 		padding-left: 20px;
@@ -6,7 +11,6 @@
 
 .roadmap-title
 	{
-		color: $c-orange;
 		border-bottom: 2px solid $c-orange;
 		margin-bottom: $vertical-rythm;
 		padding-bottom: 10px;
@@ -35,6 +39,20 @@
 		white-space: nowrap;
 	}
 
+.roadmap-title__date
+	{
+		position: relative;
+		display: inline-block;
+		padding-right: 30px;
+
+		&:before{
+			content:"";
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+
 
 .roadmap-desc
 	{
@@ -57,7 +75,26 @@
 	}
 
 
-// .roadmap-done { @include roadmapStage(#fff, 'status-done'); }
-// .roadmap-progress { @include roadmapStage($c-violet-light, 'status-progress'); }
-// .roadmap-waiting { @include roadmapStage($c-orange, 'status-waiting'); }
-// .roadmap-planning { @include roadmapStage($c-orange, 'status-planning'); }
+.roadmap-done
+	{
+		.roadmap-title
+			{
+				color: $c-green;
+				border-color: $c-green;
+			}
+
+		.roadmap-title__date:before { @include get-sprite('status-done'); }
+	}
+
+.roadmap-progress
+	{
+		.roadmap-title
+			{
+				color: $c-orange;
+				border-color: $c-orange;
+			}
+
+		.roadmap-title__date:before { @include get-sprite('status-progress'); }
+	}
+
+.roadmap-waiting .roadmap-title__date:before { @include get-sprite('status-waiting'); }
