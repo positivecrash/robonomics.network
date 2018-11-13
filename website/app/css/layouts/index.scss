@@ -11,7 +11,7 @@
 
 .roadmap-title
 	{
-		border-bottom: 2px solid $c-orange;
+		border-bottom: 2px solid rgba($c-gray, 0.5);
 		margin-bottom: $vertical-rythm;
 		padding-bottom: 10px;
 		box-sizing: border-box;
@@ -98,3 +98,21 @@
 	}
 
 .roadmap-waiting .roadmap-title__date:before { @include get-sprite('status-waiting'); }
+
+
+
+
+
+
+
+
+#index-releaseLink
+	{
+		position: relative;
+		top: -20px;
+		background: linear-gradient(rgba($c-gray-dark, 0), $c-gray-dark 70%);
+
+		.btn__text_orange{
+			padding-left: 30px;
+		}
+	}

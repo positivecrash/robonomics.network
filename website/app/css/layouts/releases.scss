@@ -1,0 +1,37 @@
+.release
+	{
+		border-left: 2px solid $c-gray-mid;
+		padding-left: 30px;
+		position: relative;
+		padding-bottom: $vertical-rythm*2;
+
+		&:before{
+			content:"";
+			background: $c-gray-mid;
+			display: block;
+			width: 20px;
+			height: 20px;
+			border-radius: 10px;
+
+			position: absolute;
+			top: 0;
+			left: -11px;
+		}
+	}
+
+.release-type
+	{
+		@extend %text_uppercase;
+		font-weight: 500;
+		margin-bottom: $vertical-rythm/2;
+	}
+
+.release-desc
+	{
+		font-size: $font-size-base - 4;
+
+		p, li
+			{
+				margin-bottom: $vertical-rythm/2;
+			}
+	}
