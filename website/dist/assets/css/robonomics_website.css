@@ -4210,8 +4210,10 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 
 #index-releaseLink {
   position: relative;
-  top: -20px;
-  background: linear-gradient(rgba(50, 50, 52, 0), #323234 70%);
+  top: -48px;
+  background: linear-gradient(rgba(50, 50, 52, 0), #323234);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 #index-releaseLink .btn__text_orange {
   padding-left: 30px;

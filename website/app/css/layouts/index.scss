@@ -109,8 +109,10 @@
 #index-releaseLink
 	{
 		position: relative;
-		top: -20px;
-		background: linear-gradient(rgba($c-gray-dark, 0), $c-gray-dark 70%);
+		top: -48px;
+		background: linear-gradient(rgba($c-gray-dark, 0), $c-gray-dark);
+		padding-top: 10px;
+		padding-bottom: 10px;
 
 		.btn__text_orange{
 			padding-left: 30px;
