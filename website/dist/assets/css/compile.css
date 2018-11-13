@@ -1845,7 +1845,7 @@ a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, i
   text-decoration: none !important;
 }
 
-.snapsvg-wrap svg.snapsvg, .sec-dark .snapsvg-darkDots, .sec-mid .snapsvg-darkDots {
+.snapsvg-wrap svg.snapsvg {
   display: block;
   position: absolute;
   top: 0;
@@ -1859,7 +1859,7 @@ a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, i
   top: 50%;
 }
 
-.sec-dark > .secw-base, .sec-mid > .secw-base, .section__intro .section__intro_content, .el-FrontContent {
+.section__intro .section__intro_content, .el-FrontContent {
   position: relative;
   z-index: 1;
 }
@@ -4832,16 +4832,6 @@ section {
   position: relative;
 }
 
-.sec-dark {
-  background-color: #282B38;
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-}
-.sec-dark .snapsvg-darkDots {
-  top: 90px;
-}
-
 .sec-white {
   background-color: #fff;
   color: #42475F;
@@ -4850,18 +4840,6 @@ section {
 }
 .sec-white h2 {
   color: #000;
-}
-
-.sec-mid {
-  background-color: #42475F;
-  position: relative;
-  overflow: hidden;
-}
-.sec-mid, .sec-mid h2 {
-  color: #fff;
-}
-.sec-mid .snapsvg-darkDots {
-  top: 90px;
 }
 
 .sec-black {
@@ -4874,6 +4852,11 @@ section {
 }
 .sec-gray, .sec-gray h2 {
   color: #000;
+}
+
+.sec-gray-dark {
+  background-color: #323234;
+  color: #fff;
 }
 
 .sec-orange {

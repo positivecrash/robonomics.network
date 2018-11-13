@@ -211,27 +211,6 @@ section
     position: relative;
   }
 
-
-.sec-dark
-  {
-    background-color: $c-violet-dark;
-    color: #fff;
-
-    position: relative;
-    overflow: hidden;
-
-    .snapsvg-darkDots
-      {
-        @extend %svgBack;
-        top: 90px;
-      }
-
-    & > .secw-base
-      {
-        @extend %FrontContent;
-      }
-  }
-
 .sec-white
   {
       background-color: #fff;
@@ -241,29 +220,6 @@ section
       padding-bottom: $margin-sec*1.5;
 
       h2 { color: #000; }
-  }
-
-
-.sec-mid
-  {
-    background-color: $c-violet-mid;
-
-    position: relative;
-    overflow: hidden;
-
-    &, h2 { color: #fff; }
-
-
-    .snapsvg-darkDots
-      {
-        @extend %svgBack;
-        top: 90px;
-      }
-
-    & > .secw-base
-      {
-        @extend %FrontContent;
-      }
   }
 
 .sec-black
@@ -277,6 +233,12 @@ section
     background-color: $c-gray-light;
     
     &, h2 { color: #000; }
+  }
+
+.sec-gray-dark
+  {
+    background-color: $c-gray-dark;
+    color: #fff;
   }
 
 .sec-orange

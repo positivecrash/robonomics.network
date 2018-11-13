@@ -67,95 +67,6 @@ block content
 
 	main(role="main")
 
-		//- section#index-terminal.sec-gray
-		//- 	.secw-base: h2.t-center Для Ethereum js разработчиков: создавайте свои dapp умного города
-		//- 	#index-terminal_window.secw-base
-		//- 		.row
-		//- 			.col-md-5.col-null
-		//- 				progress-bar(:val="Number(step)", :max="Number(commands.length)")
-
-		//- 				#index-terminal__info.row
-		//- 					.col-lg-3
-		//- 						#index-terminal__step(v-if="step")
-		//- 							b {{ step }} шаг
-		//- 							| из {{ commands.length }}
-		//- 					.col-lg-9
-		//- 						h3(v-if="step == 0") Начало работы с сетью робономика
-		//- 						h3(v-if="step == 1") Обзор существующих рынков в сети
-		//- 						h3(v-if="step == 2") Обзор возможности рынка исполнить заказ
-		//- 						h3(v-if="step == 3") Выставление своего заказа на рынок 
-		//- 						h3(v-if="step == 4") Получение заказа
-		//- 						h3(v-if="step == 5") Поздравляем!
-
-		//- 						div.m-b-base.text-hyphened
-		//- 							div(v-if="step == 0")
-		//- 								p Робономика – это большая децентрализованная сеть контроля и оказания услуг кибер-физическими системами, адаптирующаяся к потребностям человека.
-		//- 								p Для работы с сетью создайте экземпляр объекта сети, набрав в терминале команду:
-
-		//- 							div(v-if="step == 1")
-		//- 								p В основе Робономики лежит рыночный механизм, а значит в сети существуют рынки. Для работы с сетью посмотрите, какие рынки в сети существуют на данный момент.
-		//- 								p Введите в терминале команду:
-
-		//- 							div(v-if="step == 2")
-		//- 								p Мы получили рынки. Теперь видим, что в сети Робономика есть три рынка: рынок автономных фабрик, рынок умных городов, рынок беспилотной логистики. Давайте выберем рынок автономных фабрик и посмотрим, есть ли на нем кто-нибудь и что там предлагают.
-		//- 								p Отправим запрос, введя в терминале команду:
-
-		//- 							div(v-if="step == 3")
-		//- 								p Теперь мы знаем, что на рынке есть автономная фабрика, готовая исполнить заказ по производству персонализированных ваз. Сформулируем предложение, загрузив параметры вазы в ipfs, и выставим его на рынок. Сеть Робономики создаст для нас и умной фабрики контракт обязательства.
-		//- 								p Введите в терминале команду:
-
-		//- 							div(v-if="step == 4")
-		//- 								p Теперь начнём слушать событие об исполнении обязательства автономной фабрикой. Как только фабрика исполнит своё обязательство, мы получим лог её операций.
-		//- 								p Введите в терминале команду:
-
-		//- 							div(v-if="step == 5")
-		//- 								p Теперь ваш черед - создавайте новое поколение децентрализованных приложений для Умных городов и Индустрии 4.0 на платформе Робономика.
-		//- 								p: a(href="#", target="_blank").btn-primary Перейти в SDK
-		//- 								p: a(href="#", target="_blank").btn-border Общаться с разработчиками
-
-								
-		//- 						p(v-if="getCmd"): a#index-terminal__info_cmd(href="#", @click.prevent="setCmd", title="Кликните, чтобы автоматически скопировать команду в терминал") {{ getCmd }}
-
-		//- 			.col-md-7.col-null
-		//- 				.terminal__window
-		//- 					.terminal__window_head Terminal
-		//- 					.terminal__window_content
-		//- 						p Press enter to submit commands
-		//- 						<p class="cmd" v-html="entry" v-for="entry in history">{{ entry }}</p>
-		//- 						<p class="input">
-		//- 							<textarea ref="cmdInput" v-model.trim="cmd" @keyup.enter="process"></textarea>
-		//- 						</p>
-		//- 				.terminal__window
-		//- 					.terminal__window_head Result
-		//- 					.terminal__window_content#index-terminal-result
-
-		//- 						.index-terminal-result__grid
-		//- 							img(class="active", alt="", src="assets/i/Terminal-Result-1.png", srcset="assets/i/Terminal-Result-1@2x.png")
-		//- 							img(v-bind:class="{'active' : (step >= 1)}", alt="", src="assets/i/Terminal-Result-2.png", srcset="assets/i/Terminal-Result-2@2x.png")
-		//- 							img(v-bind:class="{'active' : (step >= 2)}", alt="", src="assets/i/Terminal-Result-3.png", srcset="assets/i/Terminal-Result-3@2x.png")
-		//- 							img(v-bind:class="{'active' : (step >= 3)}", alt="", src="assets/i/Terminal-Result-4.png", srcset="assets/i/Terminal-Result-4@2x.png")
-		//- 							img(v-bind:class="{'active' : (step >= 5)}", alt="", src="assets/i/Terminal-Result-5.png", srcset="assets/i/Terminal-Result-5@2x.png")
-								
-		//- 						.index-terminal-result__step(v-bind:class="{'active-step-3' : (step == 3), 'active-step-4' : (step == 4), 'active-step-5' : (step == 5)}")
-		//- 							img#index-terminal-result__factory(alt="", src="assets/i/factory.svg")
-		//- 							img#index-terminal-result__ordernew(alt="", src="assets/i/Terminal-newOrder.svg")
-		//- 							#index-terminal-result__process: span.sprite-basic-hourglass
-		//- 							#index-terminal-result__ok: span.sprite-basic-ok
-
-		//- 							#terminal-way-up: span
-		//- 							#terminal-way-down
-		//- 							#terminal-cars
-		//- 							img#index-terminal-result__orderdone(alt="", src="assets/i/Terminal-doneOrder.svg")
-
-						
-						
-						
-		//- script(src="assets/js/vue.js")
-		//- //- script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
-		//- script(src='assets/js/vue-init.js')
-
-
-
 		.separator-dark.separator-animated-inview.js-checkInView
 		+widget_etherdevelopers()
 		.separator-dark.separator-animated-inview.js-checkInView
@@ -164,39 +75,40 @@ block content
 		+widget_miners_bounty()
 
 
-		section.sec-mid
-			.secw-base
-				h2.t-center План развития инфраструктуры
+		.sec-gray-dark
+			section
+				.secw-base
+					h2.t-center План развития инфраструктуры
 
-				.contentBlock-roadmap
-					.row
-						.col-md-3.roadmap-done
-							.roadmap-title
-								.roadmap-title__in
-									div Q1 2018
-									div.roadmap-title__name: span Lighthouse
-							.roadmap-desc Релиз сигнализирующий о начале работы платформы для разработчиков решений Умных городов и Индустрии 4.0. Следящие узлы системы сообщают в блоках сети Ethereum о поддержке релиза.
+					.contentBlock-roadmap
+						.row
+							.col-md-3.roadmap-done
+								.roadmap-title
+									.roadmap-title__in
+										div Q1 2018
+										div.roadmap-title__name: span Lighthouse
+								.roadmap-desc Релиз сигнализирующий о начале работы платформы для разработчиков решений Умных городов и Индустрии 4.0. Следящие узлы системы сообщают в блоках сети Ethereum о поддержке релиза.
 
-						.col-md-3.roadmap-progress
-							.roadmap-title
-								.roadmap-title__in
-									div Q2 2018
-									div.roadmap-title__name: span Observerer
-							.roadmap-desc С данного релиза начинается измерения важных для платформы показателей работы сети за счет сравнения результатов работы эталонной ноды и результатов, получаемых от сети.
+							.col-md-3.roadmap-progress
+								.roadmap-title
+									.roadmap-title__in
+										div Q2 2018
+										div.roadmap-title__name: span Observerer
+								.roadmap-desc С данного релиза начинается измерения важных для платформы показателей работы сети за счет сравнения результатов работы эталонной ноды и результатов, получаемых от сети.
 
-						.col-md-3.roadmap-waiting
-							.roadmap-title
-								.roadmap-title__in
-									div Q1-Q2 2019
-									div.roadmap-title__name: span Cybernetics economy
-							.roadmap-desc Участники сети обладают необходимыми возможностями для работы умных городов и умных фабрик в ответ на экономически значимые транзакции.
+							.col-md-3.roadmap-waiting
+								.roadmap-title
+									.roadmap-title__in
+										div Q1-Q2 2019
+										div.roadmap-title__name: span Cybernetics economy
+								.roadmap-desc Участники сети обладают необходимыми возможностями для работы умных городов и умных фабрик в ответ на экономически значимые транзакции.
 
-						.col-md-3.roadmap-planning
-							.roadmap-title
-								.roadmap-title__in
-									div Q3 2019 - Q2 2020
-									div.roadmap-title__name: span Lights-out
-							.roadmap-desc Сеть способна взять на себя задачи по управлению роботизированными цепочками обеспечения.
+							.col-md-3.roadmap-planning
+								.roadmap-title
+									.roadmap-title__in
+										div Q3 2019 - Q2 2020
+										div.roadmap-title__name: span Lights-out
+								.roadmap-desc Сеть способна взять на себя задачи по управлению роботизированными цепочками обеспечения.
 
-
+							
 		+widget_newssubscription_light()
