@@ -1864,14 +1864,14 @@ a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, i
   z-index: 1;
 }
 
-.contentBlock-roadmap .row, .contentBlock-roadmap div[class*='col-'] {
+.row, div[class*='col-'] {
   margin-left: 0 !important;
   margin-right: 0 !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
-table th, input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line, a.btn__text_orange, .msg_ok, .msg_error, .msg_wait, #header-link__down a, #header-banner--text, .terminal__window_head, .contentBlock-roadmap .roadmap-title__in div, .section__contents > .secw-narrow a {
+table th, input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line, a.btn__text_orange, .msg_ok, .msg_error, .msg_wait, #header-link__down a, #header-banner--text, .terminal__window_head, .roadmap-title__in div, .section__contents > .secw-narrow a {
   text-transform: uppercase;
   letter-spacing: 1.2px;
 }
@@ -2395,7 +2395,7 @@ span.loader {
   font-size: 26px;
 }
 
-.sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-blog, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-facebook, .sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-forum, .sprite-basic-github, .sprite-basic-hourglass, .sprite-basic-ipfs, .sprite-basic-medium, .sprite-basic-nixos, .sprite-basic-ok, .sprite-basic-reddit, .sprite-basic-robotHand1-1, .sprite-basic-robotHand1-10, .sprite-basic-robotHand1-11, .sprite-basic-robotHand1-2, .sprite-basic-robotHand1-3, .sprite-basic-robotHand1-4, .sprite-basic-robotHand1-5, .sprite-basic-robotHand1-6, .sprite-basic-robotHand1-7, .sprite-basic-robotHand1-8, .sprite-basic-robotHand1-9, .sprite-basic-robotHand2-1, .sprite-basic-robotHand2-10, .sprite-basic-robotHand2-11, .sprite-basic-robotHand2-12, .sprite-basic-robotHand2-13, .sprite-basic-robotHand2-14, .sprite-basic-robotHand2-15, .sprite-basic-robotHand2-2, .sprite-basic-robotHand2-3, .sprite-basic-robotHand2-4, .sprite-basic-robotHand2-5, .sprite-basic-robotHand2-6, .sprite-basic-robotHand2-7, .sprite-basic-robotHand2-8, .sprite-basic-robotHand2-9, .sprite-basic-ros, .sprite-basic-status-done, .sprite-basic-status-planning, .sprite-basic-status-progress, .sprite-basic-status-waiting, .sprite-basic-telegram, .sprite-basic-twitter, .sprite-basic-youtube, .contentBlock-roadmap .roadmap-done .roadmap-title__name:before, .contentBlock-roadmap .roadmap-progress .roadmap-title__name:before, .contentBlock-roadmap .roadmap-waiting .roadmap-title__name:before, .contentBlock-roadmap .roadmap-planning .roadmap-title__name:before, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .section__contents a.js-expand-toggle:after {
+.sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-blog, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-facebook, .sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-forum, .sprite-basic-github, .sprite-basic-hourglass, .sprite-basic-ipfs, .sprite-basic-medium, .sprite-basic-nixos, .sprite-basic-ok, .sprite-basic-reddit, .sprite-basic-robotHand1-1, .sprite-basic-robotHand1-10, .sprite-basic-robotHand1-11, .sprite-basic-robotHand1-2, .sprite-basic-robotHand1-3, .sprite-basic-robotHand1-4, .sprite-basic-robotHand1-5, .sprite-basic-robotHand1-6, .sprite-basic-robotHand1-7, .sprite-basic-robotHand1-8, .sprite-basic-robotHand1-9, .sprite-basic-robotHand2-1, .sprite-basic-robotHand2-10, .sprite-basic-robotHand2-11, .sprite-basic-robotHand2-12, .sprite-basic-robotHand2-13, .sprite-basic-robotHand2-14, .sprite-basic-robotHand2-15, .sprite-basic-robotHand2-2, .sprite-basic-robotHand2-3, .sprite-basic-robotHand2-4, .sprite-basic-robotHand2-5, .sprite-basic-robotHand2-6, .sprite-basic-robotHand2-7, .sprite-basic-robotHand2-8, .sprite-basic-robotHand2-9, .sprite-basic-ros, .sprite-basic-status-done, .sprite-basic-status-planning, .sprite-basic-status-progress, .sprite-basic-status-waiting, .sprite-basic-telegram, .sprite-basic-twitter, .sprite-basic-youtube, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .section__contents a.js-expand-toggle:after {
   background-image: url("../i/sprite.svg?4");
 }
 
@@ -4479,84 +4479,40 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
   transition: width 0.2s ease-in-out;
 }
 
-.contentBlock-roadmap .roadmap-title, .contentBlock-roadmap .roadmap-desc {
+.roadmap-title, .roadmap-desc {
   padding-left: 20px;
   padding-right: 20px;
 }
-.contentBlock-roadmap .roadmap-title {
+
+.roadmap-title {
   color: #F15A24;
   border-bottom: 2px solid #F15A24;
   margin-bottom: 27px;
   padding-bottom: 10px;
   box-sizing: border-box;
 }
-.contentBlock-roadmap .roadmap-title__in div {
+
+.roadmap-title__in div {
   font-weight: 300;
 }
-.contentBlock-roadmap .roadmap-title__in div:first-child {
+.roadmap-title__in div:first-child {
   font-size: 24px;
   font-weight: 500;
 }
-.contentBlock-roadmap .roadmap-title__name {
+
+.roadmap-title__name {
   white-space: nowrap;
 }
-.contentBlock-roadmap .roadmap-title__name:before {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 10px;
-}
-.contentBlock-roadmap .roadmap-title__name span {
-  display: inline-block;
-  vertical-align: middle;
-  overflow: hidden;
-  white-space: normal;
-}
-.contentBlock-roadmap .roadmap-desc {
-  font-weight: 100;
+
+.roadmap-desc {
   letter-spacing: 1px;
   color: #fff;
 }
+
 @media screen and (min-width: 768px) {
-  .contentBlock-roadmap .col-12 {
+  .col-12 {
     text-align: center;
   }
-}
-.contentBlock-roadmap .roadmap-done .roadmap-title {
-  color: #fff;
-  border-color: #fff;
-}
-.contentBlock-roadmap .roadmap-done .roadmap-title__name:before {
-  width: 20.49px;
-  height: 11.78px;
-  background-position: -2491px 0px;
-}
-.contentBlock-roadmap .roadmap-progress .roadmap-title {
-  color: #B5C0F1;
-  border-color: #B5C0F1;
-}
-.contentBlock-roadmap .roadmap-progress .roadmap-title__name:before {
-  width: 21.51px;
-  height: 21.51px;
-  background-position: -2540px 0px;
-}
-.contentBlock-roadmap .roadmap-waiting .roadmap-title {
-  color: #F15A24;
-  border-color: #F15A24;
-}
-.contentBlock-roadmap .roadmap-waiting .roadmap-title__name:before {
-  width: 21.77px;
-  height: 21.61px;
-  background-position: -2562px 0px;
-}
-.contentBlock-roadmap .roadmap-planning .roadmap-title {
-  color: #F15A24;
-  border-color: #F15A24;
-}
-.contentBlock-roadmap .roadmap-planning .roadmap-title__name:before {
-  width: 27.83px;
-  height: 25.44px;
-  background-position: -2512px 0px;
 }
 
 /*--- VIDEOS ---*/
@@ -4844,6 +4800,8 @@ section {
 
 .sec-black {
   background-color: #000;
+}
+.sec-black, .sec-black h2 {
   color: #fff;
 }
 
@@ -4851,11 +4809,13 @@ section {
   background-color: #F2F2F2;
 }
 .sec-gray, .sec-gray h2 {
-  color: #000;
+  color: #fff;
 }
 
 .sec-gray-dark {
   background-color: #323234;
+}
+.sec-gray-dark, .sec-gray-dark h2 {
   color: #fff;
 }
 

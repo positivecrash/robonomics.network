@@ -225,20 +225,22 @@ section
 .sec-black
   {
     background-color: #000;
-    color: #fff;
+
+    &, h2 { color: #fff; }
   }
 
 .sec-gray
   {
     background-color: $c-gray-light;
     
-    &, h2 { color: #000; }
+    &, h2 { color: #fff; }
   }
 
 .sec-gray-dark
   {
     background-color: $c-gray-dark;
-    color: #fff;
+
+    &, h2 { color: #fff; }
   }
 
 .sec-orange

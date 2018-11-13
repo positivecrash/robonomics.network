@@ -418,103 +418,70 @@
 
 
 
-@mixin roadmapStage($color, $sprite){
-	.roadmap-title {
-		color: $color;
-		border-color: $color;
+
+.roadmap-title, .roadmap-desc
+	{
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 
-	.roadmap-title__name:before
-		{
-			@include get-sprite($sprite);
-		}
-}
+.roadmap-title
+	{
+		color: $c-orange;
+		border-bottom: 2px solid $c-orange;
+		margin-bottom: $vertical-rythm;
+		padding-bottom: 10px;
+		box-sizing: border-box;
+	}
 
-.contentBlock-roadmap
+
+.roadmap-title__in
 	{
 
-		.roadmap-title, .roadmap-desc
+		div
 			{
-				padding-left: 20px;
-				padding-right: 20px;
-			}
+				@extend %text_uppercase;
+				font-weight: 300;
 
-		.roadmap-title
-			{
-				color: $c-orange;
-				border-bottom: 2px solid $c-orange;
-				margin-bottom: $vertical-rythm;
-				padding-bottom: 10px;
-				box-sizing: border-box;
-			}
-
-
-		.roadmap-title__in
-			{
-
-				div
+				&:first-child
 					{
-						@extend %text_uppercase;
-						font-weight: 300;
-
-						&:first-child
-							{
-								font-size: 24px;
-								font-weight: 500;
-							}
+						font-size: 24px;
+						font-weight: 500;
 					}
 			}
-
-		.roadmap-title__name
-			{
-				white-space: nowrap;
-
-				&:before
-					{
-						content: "";
-						display: inline-block;
-						vertical-align: middle;
-						margin-right: 10px;
-					}
-
-				span
-					{
-						display: inline-block;
-						vertical-align: middle;
-						overflow: hidden;
-						white-space: normal;
-					}
-			}
-
-
-		.roadmap-desc
-			{
-				font-weight: 100;
-				letter-spacing: 1px;
-				color: #fff;
-			}
-
-
-		.row, div[class *= 'col-']
-			{
-				@extend %margPadNull;
-			}
-
-
-		.col-12
-			{
-				@include minTablet(){
-					text-align: center;
-				}
-			}
-
-
-		.roadmap-done { @include roadmapStage(#fff, 'status-done'); }
-		.roadmap-progress { @include roadmapStage($c-violet-light, 'status-progress'); }
-		.roadmap-waiting { @include roadmapStage($c-orange, 'status-waiting'); }
-		.roadmap-planning { @include roadmapStage($c-orange, 'status-planning'); }
 	}
 
+.roadmap-title__name
+	{
+		white-space: nowrap;
+	}
+
+
+.roadmap-desc
+	{
+		letter-spacing: 1px;
+		color: #fff;
+	}
+
+
+.row, div[class *= 'col-']
+	{
+		@extend %margPadNull;
+	}
+
+
+.col-12
+	{
+		@include minTablet(){
+			text-align: center;
+		}
+	}
+
+
+// .roadmap-done { @include roadmapStage(#fff, 'status-done'); }
+// .roadmap-progress { @include roadmapStage($c-violet-light, 'status-progress'); }
+// .roadmap-waiting { @include roadmapStage($c-orange, 'status-waiting'); }
+// .roadmap-planning { @include roadmapStage($c-orange, 'status-planning'); }
 
 
 
