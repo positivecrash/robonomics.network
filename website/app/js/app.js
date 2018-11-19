@@ -2,7 +2,7 @@ window.addEventListener('load', function(){
 
 	/*
 	Check elemen in view
-	1-inview.js
+	0-inview.js
 	*/
 	function IfInView(){
 		var 

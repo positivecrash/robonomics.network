@@ -1,4 +1,4 @@
-.release
+.timeline
 	{
 		border-left: 2px solid $c-gray-mid;
 		padding-left: 30px;
@@ -19,14 +19,14 @@
 		}
 	}
 
-.release-type
+.timeline-type
 	{
 		@extend %text_uppercase;
 		font-weight: 500;
 		margin-bottom: $vertical-rythm/2;
 	}
 
-.release-desc
+.timeline-desc
 	{
 		font-size: $font-size-base - 4;
 
@@ -34,4 +34,12 @@
 			{
 				margin-bottom: $vertical-rythm/2;
 			}
+	}
+
+
+.timeline-orange
+	{
+		&:before{
+			background: $c-orange;
+		}
 	}

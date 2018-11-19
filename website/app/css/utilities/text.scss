@@ -355,8 +355,24 @@ table
 	{
 		display: inline-block;
 		padding: 2px 8px;
+		color: rgba(#fff, .8);
+		margin-right: 15px;
+		margin-bottom: 5px;
+		font-weight: 400;
+
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+
+a.label-blue, a.label-dark{
+	transition: all 0.2s ease-out;
+
+	color: rgba(#fff, .8);
+	&:hover{
 		color: #fff;
 	}
+}
 
 .label-blue
 	{

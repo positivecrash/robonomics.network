@@ -1871,7 +1871,7 @@ a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, i
   padding-right: 0 !important;
 }
 
-table th, input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line, a.btn__text_orange, .msg_ok, .msg_error, .msg_wait, #header-link__down a, #header-banner--text, .roadmap-title__in div, .release-type, .section__contents > .secw-narrow a {
+table th, input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line, a.btn__text_orange, .msg_ok, .msg_error, .msg_wait, #header-link__down a, #header-banner--text, .roadmap-title__in div, .timeline-type, .section__contents > .secw-narrow a {
   text-transform: uppercase;
   letter-spacing: 1.2px;
 }
@@ -2188,6 +2188,20 @@ table.responsive td:before {
 .label-blue, .label-dark {
   display: inline-block;
   padding: 2px 8px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-right: 15px;
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+.label-blue:last-child, .label-dark:last-child {
+  margin-right: 0;
+}
+
+a.label-blue, a.label-dark {
+  transition: all 0.2s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+}
+a.label-blue:hover, a.label-dark:hover {
   color: #fff;
 }
 
@@ -4267,13 +4281,13 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
   }
 }
 
-.release {
+.timeline {
   border-left: 2px solid #A0A0A0;
   padding-left: 30px;
   position: relative;
   padding-bottom: 54px;
 }
-.release:before {
+.timeline:before {
   content: "";
   background: #A0A0A0;
   display: block;
@@ -4285,16 +4299,20 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
   left: -11px;
 }
 
-.release-type {
+.timeline-type {
   font-weight: 500;
   margin-bottom: 13.5px;
 }
 
-.release-desc {
+.timeline-desc {
   font-size: 14px;
 }
-.release-desc p, .release-desc li {
+.timeline-desc p, .timeline-desc li {
   margin-bottom: 13.5px;
+}
+
+.timeline-orange:before {
+  background: #F15A24;
 }
 
 html, body {

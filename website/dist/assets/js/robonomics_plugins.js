@@ -2,7 +2,7 @@ window.addEventListener('load', function(){
 
 	/*
 	Check elemen in view
-	1-inview.js
+	0-inview.js
 	*/
 	function IfInView(){
 		var 
@@ -26,24 +26,6 @@ function getCookie(name) {
   ));
   return matches ? decodeURIComponent(matches[1]) : undefined;
 }
-/* 0-cookie.js requires */
-
-window.addEventListener('load', function(){
-	var
-		agreementMsg      = document.querySelector('#js-cookiePolicy'),
-		agreementBtn      = document.querySelector('#js-cookiePolicy .btn'),
-		agreementCookie   = 'policy';
-
-		if (agreementMsg && agreementBtn){
-			if(!getCookie(agreementCookie))
-				agreementMsg.style.display = 'block';
-
-			agreementBtn.addEventListener('click', function(){
-				document.cookie = agreementCookie+'=true';
-				agreementMsg.style.display = 'none';
-			});
-		}
-}, false);
 /*
 Took on  https://stackoverflow.com/questions/487073/check-if-element-is-visible-after-scrolling
 demo - http://jsfiddle.net/W33YR/411/
@@ -78,6 +60,25 @@ var visibleY = function(el){
 // document.addEventListener('scroll', IfInView);
 // document.addEventListener('resize', IfInView);
 
+
+/* 0-cookie.js requires */
+
+window.addEventListener('load', function(){
+	var
+		agreementMsg      = document.querySelector('#js-cookiePolicy'),
+		agreementBtn      = document.querySelector('#js-cookiePolicy .btn'),
+		agreementCookie   = 'policy';
+
+		if (agreementMsg && agreementBtn){
+			if(!getCookie(agreementCookie))
+				agreementMsg.style.display = 'block';
+
+			agreementBtn.addEventListener('click', function(){
+				document.cookie = agreementCookie+'=true';
+				agreementMsg.style.display = 'none';
+			});
+		}
+}, false);
 // Expands and reduces some list
 //
 // HTML example
