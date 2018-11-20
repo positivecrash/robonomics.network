@@ -2150,6 +2150,10 @@ table.responsive td:before {
   margin-right: 10px;
 }
 
+.m-b-sec {
+  margin-bottom: 67.5px;
+}
+
 /*====== end of Margins & paddings ======*/
 /*====== Other ======*/
 .embed-video iframe, .embed-video object, .embed-video embed {
@@ -4303,6 +4307,14 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
   }
 }
 
+/* XRT TGE */
+#i-nagele {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+  margin-left: 20px;
+}
+
 .timeline {
   border-left: 2px solid #A0A0A0;
   padding-left: 30px;
@@ -4580,7 +4592,7 @@ section {
 
 .sec-city {
   box-sizing: border-box;
-  min-height: 373.5px;
+  min-height: 306px;
 }
 .sec-city h2, .sec-city h3 {
   font-weight: 500;
