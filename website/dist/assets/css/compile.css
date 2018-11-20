@@ -2905,7 +2905,7 @@ header[role='banner'] .el-social {
   border-radius: 2px;
   transition: all .3s ease-in-out;
 }
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 920px) {
   .hamburger {
     animation: 0.2s FadeIn 0.2s linear forwards;
   }
@@ -2929,12 +2929,12 @@ header[role='banner'] .el-social {
   transform: translateY(-10px) rotate(-45deg);
 }
 
-@media screen and (min-width: 890px) {
+@media screen and (min-width: 920px) {
   .nav-mobilehide {
     animation: 0.2s FadeIn 0.2s linear forwards;
   }
 }
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 920px) {
   .nav-mobilehide {
     display: none;
   }
@@ -3166,7 +3166,7 @@ header[role='banner'] .el-social {
   animation: FadeIn ease-in-out forwards;
   animation-duration: 0.4s;
 }
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 920px) {
   #header-index .snapsvgoutside-text {
     display: none;
   }
@@ -4477,7 +4477,7 @@ body {
   height: 100%;
   z-index: 0;
 }
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 920px) {
   .snapsvg-wrap line, .snapsvg-wrap text {
     display: none;
   }
