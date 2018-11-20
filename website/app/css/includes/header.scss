@@ -324,12 +324,18 @@ header[role='banner']
 
 
 /*====== MIDDLE SECTION ======*/
-#header-mid
+.header-mid
   {
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
 
+    padding-top: $margin-sec;
+    padding-bottom: $margin-sec;
+  }
+
+#header-index .header-mid
+  {
     padding-top: 100px;
     padding-bottom: 100px;
 
@@ -357,7 +363,7 @@ header[role='banner']
     }
   }
 
-  /*====== end of MIDDLE SECTION ======*/
+/*====== end of MIDDLE SECTION ======*/
 
 
 

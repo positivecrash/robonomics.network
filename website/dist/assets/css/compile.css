@@ -2993,19 +2993,24 @@ header[role='banner'] .el-social {
 
 /*====== end of Header navigation ======*/
 /*====== MIDDLE SECTION ======*/
-#header-mid {
+.header-mid {
   position: relative;
   box-sizing: border-box;
   overflow: hidden;
+  padding-top: 67.5px;
+  padding-bottom: 67.5px;
+}
+
+#header-index .header-mid {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-#header-mid h1 {
+#header-index .header-mid h1 {
   font-weight: 300;
   text-align: center;
 }
 @media screen and (max-width: 576px) {
-  #header-mid {
+  #header-index .header-mid {
     padding-bottom: 67.5px;
   }
 }
