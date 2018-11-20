@@ -117,6 +117,15 @@ jQuery(document).ready(function($){
     }
 
 
+    if ( $('.roadmap-title').length > 0 )
+        {
+            set_height('.roadmap-title__in', '.roadmap-title', false);
+
+            $w.on('resize', function(){
+                set_height('.roadmap-title__in', '.roadmap-title', false);
+            });
+    }
+
     if ( $('.jquery-seth').length > 0 )
         {
             if ( $w.width() > 768)

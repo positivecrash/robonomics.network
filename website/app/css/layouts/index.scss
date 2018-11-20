@@ -28,16 +28,16 @@
 
 				&:first-child
 					{
-						font-size: 24px;
+						font-size: 22px;
 						font-weight: 500;
 					}
 			}
 	}
 
-.roadmap-title__name
-	{
-		white-space: nowrap;
-	}
+// .roadmap-title__name
+// 	{
+// 		white-space: nowrap;
+// 	}
 
 .roadmap-title__date
 	{
@@ -60,11 +60,6 @@
 		color: #fff;
 	}
 
-
-.row, div[class *= 'col-']
-	{
-		@extend %margPadNull;
-	}
 
 
 .col-12

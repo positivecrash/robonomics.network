@@ -1864,13 +1864,6 @@ a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, i
   z-index: 1;
 }
 
-.row, div[class*='col-'] {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
 table th, input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line, a.btn__text_orange, .msg_ok, .msg_error, .msg_wait, #header-link__down a, #header-banner--text, .roadmap-title__in div, .timeline-type, .section__contents > .secw-narrow a {
   text-transform: uppercase;
   letter-spacing: 1.2px;
@@ -4191,12 +4184,8 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
   font-weight: 300;
 }
 .roadmap-title__in div:first-child {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
-}
-
-.roadmap-title__name {
-  white-space: nowrap;
 }
 
 .roadmap-title__date {
