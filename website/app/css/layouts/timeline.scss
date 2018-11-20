@@ -17,6 +17,10 @@
 			top: 0;
 			left: -11px;
 		}
+
+		&.timeline-end{
+			border-left: 0;
+		}
 	}
 
 .timeline-type
@@ -41,5 +45,13 @@
 	{
 		&:before{
 			background: $c-orange;
+		}
+	}
+
+
+.timeline-green
+	{
+		&:before{
+			background: $c-green;
 		}
 	}

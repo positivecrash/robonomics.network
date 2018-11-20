@@ -232,8 +232,6 @@ section
 .sec-gray
   {
     background-color: $c-gray-light;
-    
-    &, h2 { color: #fff; }
   }
 
 .sec-gray-dark
@@ -277,7 +275,7 @@ section
 .sec-city
   {
     box-sizing: border-box;
-    min-height: 306px;
+    min-height: 306px + $margin-sec;
     
     h2, h3 { font-weight: 500; }
 

@@ -1927,6 +1927,11 @@ h5 {
   font-size: 18px;
 }
 
+.t-superbig {
+  font-size: 34px;
+  font-weight: 900;
+}
+
 .t-big {
   font-size: 22px;
 }
@@ -1991,6 +1996,11 @@ a:hover {
 .t-red {
   color: #E84004;
   color: #E84004 !important;
+}
+
+.t-orange {
+  color: #F15A24;
+  color: #F15A24 !important;
 }
 
 .text-case_normal {
@@ -2130,6 +2140,10 @@ table.responsive td:before {
 .col-null {
   margin: 0 !important;
   padding: 0 !important;
+}
+
+.m-b-5 {
+  margin-bottom: 5px;
 }
 
 .m-r-10 {
@@ -4306,6 +4320,9 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
   top: 0;
   left: -11px;
 }
+.timeline.timeline-end {
+  border-left: 0;
+}
 
 .timeline-type {
   font-weight: 500;
@@ -4321,6 +4338,10 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 
 .timeline-orange:before {
   background: #F15A24;
+}
+
+.timeline-green:before {
+  background: #54CE63;
 }
 
 html, body {
@@ -4523,9 +4544,6 @@ section {
 .sec-gray {
   background-color: #F2F2F2;
 }
-.sec-gray, .sec-gray h2 {
-  color: #fff;
-}
 
 .sec-gray-dark {
   background-color: #323234;
@@ -4562,7 +4580,7 @@ section {
 
 .sec-city {
   box-sizing: border-box;
-  min-height: 306px;
+  min-height: 373.5px;
 }
 .sec-city h2, .sec-city h3 {
   font-weight: 500;

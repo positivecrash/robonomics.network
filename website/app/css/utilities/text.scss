@@ -56,16 +56,20 @@ h2, h3
 
 h5 { font-size: $font-size-base; }
 
+.t-superbig
+	{
+		font-size: $font-size-base + 16;
+		font-weight: 900;
+	}
+
 .t-big
 	{
 		font-size: $font-size-base + 4;
-		// font-weight: 300;
 	}
 
 .t-mid
 	{
 		font-size: $font-size-base + 2;
-		// font-weight: 300;
 	}
 /*====== end of Text sizes & Headers ======*/
 
@@ -125,6 +129,7 @@ a
 .t-blue { color: $c-blue; color: $c-blue !important; }
 .t-green { color: $c-green; color: $c-green !important; }
 .t-red { color: $c-red; color: $c-red !important; }
+.t-orange { color: $c-orange; color: $c-orange !important; }
 
 
 .text-case_normal
@@ -279,6 +284,8 @@ table
 	margin: 0 !important;
 	padding: 0 !important;
 }
+
+.m-b-5 { margin-bottom: 5px; }
 
 .m-r-10 { margin-right: 10px; }
 

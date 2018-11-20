@@ -112,12 +112,21 @@ jQuery(document).ready(function($){
     }
 
 
-    if ( $('.roadmap-title').length > 0 )
+    function unset_height(set){
+        $(set).height('auto');
+    }
+
+
+    if ( $('.jquery-seth').length > 0 )
         {
-            set_height('.roadmap-title__in', '.roadmap-title', false);
+            if ( $w.width() > 768)
+                set_height('.jquery-seth', '.jquery-seth', false);
 
             $w.on('resize', function(){
-                set_height('.roadmap-title__in', '.roadmap-title', false);
+                if ( $w.width() > 768)
+                    set_height('.jquery-seth', '.jquery-seth', false);
+                else
+                    unset_height('.jquery-seth');
             });
         }
     
