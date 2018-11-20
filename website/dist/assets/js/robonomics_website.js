@@ -1,6 +1,8 @@
 /*JavaScript*/
 
-var scroll = new SmoothScroll('a[data-scroll]');
+if ( $('a[data-scroll]').length > 0 ){
+    var scroll = new SmoothScroll('a[data-scroll]');
+}
 
 
 
