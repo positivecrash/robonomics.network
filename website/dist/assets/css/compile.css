@@ -2208,6 +2208,9 @@ a.label-blue:hover, a.label-dark:hover {
 .label-blue {
   background-color: #03A5ED;
 }
+.label-blue.active {
+  background-color: #282B38;
+}
 
 .label-dark {
   background-color: #000;

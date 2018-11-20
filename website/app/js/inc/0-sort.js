@@ -1,23 +1,38 @@
-var sortTag = function(tag){
-	var tagName = 'data-sort-data';
+var showSorted = function(tag, tagLink, tagSec, active){
 
-	var data = document.querySelectorAll('['+tagName+']');
+	var sec = document.querySelectorAll('[data-' + tagSec + ']');
+	var link = document.querySelectorAll('[data-' + tagLink + ']');
 
-	console.log('tag: ' + tag);
-	console.log('data: ' + data);
+	for (var i = 0; i < sec.length; i++) {
 
-	for (var i = 0; i < data.length; i++) {
-		console.log(data[i].innerHTML);
+		sec[i].style.display = 'block';
+
+		if( (tag != 0) ){
+
+			if( sec[i].getAttribute('data-' + tagSec) != tag ){
+				sec[i].style.display = 'none';
+			}
+		}
 	}
 }
 
+var sort = function(tagLink, tagSec, active){
 
+	var sec = document.querySelectorAll('[data-' + tagSec + ']');
+	var link = document.querySelectorAll('[data-' + tagLink + ']');
 
-window.addEventListener('load', function(){
-	var tag = document.querySelector('[data-sort]');
+	for (var i = 0; i < link.length; i++) {
 
-	tag.addEventListener('click', function(){
-		console.log('test');
-		sortTag(4);
-	});
-}, false);
+		link[i].addEventListener('click', function(){
+
+			for (var j = 0; j < link.length; j++) {
+				link[j].classList.remove(active);
+			}
+
+			this.classList.add(active);
+			showSorted( this.getAttribute('data-' + tagLink), tagLink, tagSec, active);
+		});
+	}
+
+	
+}

@@ -377,6 +377,10 @@ a.label-blue, a.label-dark{
 .label-blue
 	{
 		background-color: $c-blue;
+
+		&.active{
+			background-color: $c-violet-dark;
+		}
 	}
 
 .label-dark

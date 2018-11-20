@@ -1,3 +1,6 @@
-// window.addEventListener('load', function(){
+window.addEventListener('load', function(){
 
-// }, false);
+	//sort tags, '0-sort.js' required
+	sort('sort', 'sort-sec', 'active');
+
+}, false);
