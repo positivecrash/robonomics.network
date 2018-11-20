@@ -1,0 +1,90 @@
+footer(role='contentinfo')
+	#footer-nav_lined
+		.secw-base
+			span Resources:
+			a(href="#", target="_blank") Docs
+			span &bull;
+			a(href="#") LOGO & ASSETS
+
+	section.sec-black
+		.secw-base
+			.row
+				.col-md-6
+					section
+						a(href="#").sec-synopsis
+							include ../mixins/svg.pug
+							+xrt_lined()
+
+							.sec-synopsis__text
+								h2 Robonomics network
+								p Платформа робономики – инфраструктура сети Ethereum для Умных Городов и Индустрии 4.0
+
+					section
+						h2 Новости
+
+						<a class="twitter-timeline" data-height="520" data-theme="dark" data-link-color="#03a5ed" allowtransparency="true" data-chrome="nofooter noborders transparent noscrollbar noheader" href="https://twitter.com/AIRA_Robonomics?ref_src=twsrc%5Etfw">Tweets by AIRA_Robonomics</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+				.col-md-6
+					section
+						h2 Технологии
+						.sec-techs
+							span.sprite-basic-ethereum
+							span.sprite-basic-aira
+							span.sprite-basic-ros
+							span.sprite-basic-ipfs
+							span.sprite-basic-nixos
+
+					section
+						h2 Сообщество
+						.row
+							.col-sm-6
+								p: a(href="#", target="_blank").link-social
+									span.icon: i.sprite-basic-github
+									span GitHub
+
+								p: a(href="#", target="_blank").link-social
+									span.icon: i.sprite-basic-medium
+									span Blog (EN)
+
+								p: a(href="#", target="_blank").link-social
+									span.icon: i.sprite-basic-blog
+									span Blog (RU)
+
+								p: a(href="#", target="_blank").link-social
+									span.icon: i.sprite-basic-twitter
+									span Twitter
+
+								p: a(href="#", target="_blank").link-social
+									span.icon: i.sprite-basic-youtube
+									span YouTube
+
+							.col-sm-6
+								p: a(href="#", target="_blank").link-social
+									span.icon: i.sprite-basic-telegram
+									span Telegram chat
+
+								p: a(href="#", target="_blank").link-social
+									span.icon: i.sprite-basic-facebook
+									span Facebook
+
+								p: a(href="#", target="_blank").link-social
+									span.icon: i.sprite-basic-forum
+									span BitcoinTalk
+
+					section
+						h2 Контакты
+						p
+							a(href="") research@aira.life
+							| &nbsp;– Research department (global vision and partnership)
+
+						p
+							a(href="") engineering@aira.life
+							| &nbsp;– Engineer department (tech support)
+
+						p
+							a(href="") community@aira.life
+							| &nbsp;– Community department (design and talk)
+
+						p
+							a(href="") webmaster@robonomics.network
+							| &nbsp;– Your suggetions for the website

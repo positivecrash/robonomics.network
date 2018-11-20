@@ -1,0 +1,60 @@
+/*====== Fonts ======*/
+$font-family-base:  'Roboto', Arial, Helvetica, sans-serif;
+$scale: 1.5; //для вычисления интерлиньяжа
+$scale-sm: 1.2; //для вычисления интерлиньяжа заголовков
+$font-size-base: 18px;
+$font-size-title: 36px; //h1
+
+
+/*====== Margins, paddings ======*/
+$vertical-rythm: $font-size-base * $scale;
+$margin-sec: $vertical-rythm * 2.5;
+$padding-fields: 20px;
+
+
+/*====== Bootstrap ======*/
+$bootstrap-sm: 576px;
+$bootstrap-md: 768px;
+
+
+/*====== Media queries ======*/
+$mq-desktop: 1280px;
+$mq-tablet: $bootstrap-md;
+$mq-mobile: $bootstrap-sm;
+
+$mq-mobileCanvas: 890px;
+$mq-menuhide: $mq-mobileCanvas;
+
+
+
+
+/*====== Colors ======*/
+$c-blue: #03A5ED;
+$c-violet-dark: #282B38;
+$c-violet-mid: #42475F;
+$c-violet-light: #B5C0F1;
+$c-gray-dark: #323234;
+$c-gray-mid: #A0A0A0;
+$c-gray: #ccc;
+$c-gray-light: #F2F2F2;
+$c-gray-blue: #70797C;
+$c-green: #54CE63;
+$c-red: #E84004;
+$c-orange: #F15A24;
+$c-yellow: #EAAB01;
+
+$c-blue-mute: #357B9E;
+$c-blue-mute-2: #6D8CAD;
+$c-blue-mute-3: #007AB1;
+$c-blue-mute-4: #004462;
+
+$c-text: #000;
+$c-link: $c-blue;
+
+
+
+
+/*====== Classes ======*/
+$modernizr-nosvg: '.no-svg';
+$modernizr-svg: '.svg';
+$modernizr-cssanimations: '.cssanimations';
