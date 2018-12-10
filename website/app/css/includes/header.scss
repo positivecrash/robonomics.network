@@ -16,6 +16,7 @@ header[role='banner']
   {
     position: relative;
     z-index: 1000;
+    background-color: #fff;
 
     // &.fixed
     //   {
@@ -337,13 +338,14 @@ header[role='banner']
 #header-index .header-mid
   {
     padding-top: 100px;
-    padding-bottom: 100px;
+    // padding-bottom: 100px;
+    padding-bottom: 0;
 
-    h1 { font-weight: 300; text-align: center; }
+    h1 { text-align: center; }
 
-    @include mobile(){
-      padding-bottom: $margin-sec;
-    }
+    // @include mobile(){
+    //   padding-bottom: $margin-sec;
+    // }
   }
 
 
@@ -498,9 +500,15 @@ $delay: 1s;
 #header-index
   {
     text-align: center;
-    min-height: 780px;
+    min-height: 800px;
     padding-top: 110px;
-    padding-bottom: 120px;
+    // padding-bottom: 120px;
+    padding-bottom: 47px;
+
+    @include mobile(){
+      height: auto;
+      padding-bottom: 114px;
+    }
     
     #header-top
       {
@@ -638,3 +646,27 @@ $delay: 1s;
         text-align: center;
       }
   }
+
+
+#header-airalink
+  {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    span, img{
+      display: inline-block;
+      // vertical-align: bottom;
+    }
+
+    img{
+      width: 120px;
+      margin-left: 15px;
+    }
+  }
+

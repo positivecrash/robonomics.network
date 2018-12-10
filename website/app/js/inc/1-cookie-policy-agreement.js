@@ -11,8 +11,11 @@ window.addEventListener('load', function(){
 				agreementMsg.style.display = 'block';
 
 			agreementBtn.addEventListener('click', function(){
-				document.cookie = agreementCookie+'=true';
+				var date = new Date(new Date().getTime() + 3600 * 1000 * 24 * 365);
+				document.cookie = agreementCookie+'=true; expires=' + date.toUTCString();
 				agreementMsg.style.display = 'none';
 			});
 		}
+
+		console.log(getCookie(agreementCookie));
 }, false);

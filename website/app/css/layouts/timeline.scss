@@ -43,6 +43,8 @@
 
 .timeline-orange
 	{
+		border-color: $c-orange;
+
 		&:before{
 			background: $c-orange;
 		}
@@ -51,6 +53,8 @@
 
 .timeline-green
 	{
+		border-color: $c-green;
+		
 		&:before{
 			background: $c-green;
 		}

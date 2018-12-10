@@ -1933,6 +1933,10 @@ h5 {
   font-size: 20px;
 }
 
+.t-small {
+  font-size: 16px;
+}
+
 /*====== end of Text sizes & Headers ======*/
 /*====== Text styles ======*/
 body {
@@ -2122,6 +2126,10 @@ table.responsive td:before {
   margin-bottom: 13.5px;
 }
 
+.m-t-half {
+  margin-top: 13.5px;
+}
+
 .p-t-0 {
   padding-top: 0;
 }
@@ -2145,6 +2153,10 @@ table.responsive td:before {
 
 .m-b-sec {
   margin-bottom: 67.5px;
+}
+
+.m-t-sec {
+  margin-top: 67.5px;
 }
 
 /*====== end of Margins & paddings ======*/
@@ -2827,6 +2839,7 @@ header[role='banner'] .el-social {
 #header-top {
   position: relative;
   z-index: 1000;
+  background-color: #fff;
 }
 #header-top #header-top--nav {
   display: table;
@@ -3017,16 +3030,10 @@ header[role='banner'] .el-social {
 
 #header-index .header-mid {
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 0;
 }
 #header-index .header-mid h1 {
-  font-weight: 300;
   text-align: center;
-}
-@media screen and (max-width: 576px) {
-  #header-index .header-mid {
-    padding-bottom: 67.5px;
-  }
 }
 
 #logo-ethereum {
@@ -3157,9 +3164,15 @@ header[role='banner'] .el-social {
 /*====== end of TITLES ======*/
 #header-index {
   text-align: center;
-  min-height: 780px;
+  min-height: 800px;
   padding-top: 110px;
-  padding-bottom: 120px;
+  padding-bottom: 47px;
+}
+@media screen and (max-width: 576px) {
+  #header-index {
+    height: auto;
+    padding-bottom: 114px;
+  }
 }
 #header-index #header-top {
   animation-delay: 4s;
@@ -3296,6 +3309,23 @@ header[role='banner'] .el-social {
 #header-banner--text span.secw-base {
   display: block;
   text-align: center;
+}
+
+#header-airalink {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#header-airalink span, #header-airalink img {
+  display: inline-block;
+}
+#header-airalink img {
+  width: 120px;
+  margin-left: 15px;
 }
 
 footer[role='contentinfo'] {
@@ -4337,10 +4367,16 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
   margin-bottom: 13.5px;
 }
 
+.timeline-orange {
+  border-color: #F15A24;
+}
 .timeline-orange:before {
   background: #F15A24;
 }
 
+.timeline-green {
+  border-color: #54CE63;
+}
 .timeline-green:before {
   background: #54CE63;
 }
