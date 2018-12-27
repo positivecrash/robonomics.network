@@ -3019,7 +3019,7 @@ header[role='banner'] .el-social {
 }
 
 #header-index .header-mid {
-  padding-top: 100px;
+  padding-top: 0;
   padding-bottom: 0;
 }
 #header-index .header-mid h1 {
@@ -3186,7 +3186,7 @@ header[role='banner'] .el-social {
   }
 }
 #header-index #header-index__ethereum {
-  top: -33px;
+  top: 14px;
 }
 #header-index #header-index__ethereum span:nth-child(1) {
   animation-delay: 2.2s;
@@ -3213,7 +3213,7 @@ header[role='banner'] .el-social {
   animation-delay: 3.6s;
 }
 #header-index #header-index__robonomics {
-  top: 236px;
+  top: 196px;
 }
 #header-index #header-index__robonomics span:nth-child(1) {
   animation-delay: 2.2s;
