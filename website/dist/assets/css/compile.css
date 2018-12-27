@@ -1840,7 +1840,7 @@ body, input:not([type='submit']):not([type='button']), input[type='submit'], inp
   letter-spacing: 0;
 }
 
-a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line, a.btn__text_orange, .header-top__nav a, #header-link__down a, #header-banner--text, .link-social, .sec-synopsis, .section__contents > .secw-narrow a, a:hover, input[type='submit']:hover, input[type='button']:hover, button:hover, input.btn-red:hover, input.btn-blue:hover, .btn-line:hover, #header-link__down a:hover, #header-banner--text:hover, .link-social:hover, .sec-synopsis:hover, .section__contents > .secw-narrow a:hover, a:focus, input[type='submit']:focus, input[type='button']:focus, button:focus, input.btn-red:focus, input.btn-blue:focus, .btn-line:focus, #header-link__down a:focus, #header-banner--text:focus, .link-social:focus, .sec-synopsis:focus, .section__contents > .secw-narrow a:focus, a:visited, input[type='submit']:visited, input[type='button']:visited, button:visited, input.btn-red:visited, input.btn-blue:visited, .btn-line:visited, #header-link__down a:visited, #header-banner--text:visited, .link-social:visited, .sec-synopsis:visited, .section__contents > .secw-narrow a:visited {
+a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line, .btn-line--orange, .header-top__nav a, #header-link__down a, #header-banner--text, .link-social, .sec-synopsis, .section__contents > .secw-narrow a, a:hover, input[type='submit']:hover, input[type='button']:hover, button:hover, input.btn-red:hover, input.btn-blue:hover, .btn-line:hover, .btn-line--orange:hover, #header-link__down a:hover, #header-banner--text:hover, .link-social:hover, .sec-synopsis:hover, .section__contents > .secw-narrow a:hover, a:focus, input[type='submit']:focus, input[type='button']:focus, button:focus, input.btn-red:focus, input.btn-blue:focus, .btn-line:focus, .btn-line--orange:focus, #header-link__down a:focus, #header-banner--text:focus, .link-social:focus, .sec-synopsis:focus, .section__contents > .secw-narrow a:focus, a:visited, input[type='submit']:visited, input[type='button']:visited, button:visited, input.btn-red:visited, input.btn-blue:visited, .btn-line:visited, .btn-line--orange:visited, #header-link__down a:visited, #header-banner--text:visited, .link-social:visited, .sec-synopsis:visited, .section__contents > .secw-narrow a:visited {
   text-decoration: none;
   text-decoration: none !important;
 }
@@ -1864,7 +1864,7 @@ a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, i
   z-index: 1;
 }
 
-table th, input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line, a.btn__text_orange, .msg_ok, .msg_error, .msg_wait, #header-link__down a, #header-banner--text, .roadmap-title__in div, .timeline-type, .section__contents > .secw-narrow a {
+table th, input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line, .msg_ok, .msg_error, .msg_wait, #header-link__down a, #header-banner--text, .roadmap-title__in div, .timeline-type, .section__contents > .secw-narrow a {
   text-transform: uppercase;
   letter-spacing: 1.2px;
 }
@@ -2151,6 +2151,10 @@ table.responsive td:before {
   margin-right: 10px;
 }
 
+.m-t-25 {
+  margin-top: 25px;
+}
+
 .m-b-sec {
   margin-bottom: 67.5px;
 }
@@ -2333,13 +2337,6 @@ input[disabled][type='submit'], input[disabled][type='button'], button[disabled]
   padding: 5px 10px;
 }
 
-a.btn__text_orange {
-  display: inline-block;
-  font-size: 20px;
-  font-weight: 400;
-  transition: 0.2s color ease-in;
-}
-
 /*======== INPUTS =========*/
 input:not([type='submit']):not([type='button']) {
   color: #000;
@@ -2376,21 +2373,14 @@ a.btn-blue:hover, input.btn-blue:hover, button.btn-blue:hover {
   background-color: #0282bb;
 }
 
-a.btn__text_orange {
+.btn-line--orange {
   color: #F15A24;
+  border: 1px solid #F15A24;
+  background-color: #fff;
 }
-a.btn__text_orange:hover {
-  color: #54CE63;
-}
-
-.btn-line {
-  color: #03A5ED;
-  border: 1px solid #03A5ED;
-  background-color: transparent;
-}
-.btn-line:hover {
-  color: #54CE63;
-  border-color: #54CE63;
+.btn-line--orange:hover {
+  color: #F15A24;
+  border-color: #F15A24;
 }
 
 @keyframes rotateLoader {
@@ -3196,7 +3186,7 @@ header[role='banner'] .el-social {
   }
 }
 #header-index #header-index__ethereum {
-  top: 10px;
+  top: -33px;
 }
 #header-index #header-index__ethereum span:nth-child(1) {
   animation-delay: 2.2s;
@@ -3223,8 +3213,7 @@ header[role='banner'] .el-social {
   animation-delay: 3.6s;
 }
 #header-index #header-index__robonomics {
-  color: #F15A24;
-  top: 188px;
+  top: 236px;
 }
 #header-index #header-index__robonomics span:nth-child(1) {
   animation-delay: 2.2s;
@@ -3326,6 +3315,15 @@ header[role='banner'] .el-social {
 #header-airalink img {
   width: 120px;
   margin-left: 15px;
+}
+
+#header-btns {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#header-btns a {
+  display: block;
 }
 
 footer[role='contentinfo'] {

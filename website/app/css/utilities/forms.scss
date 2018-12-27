@@ -82,12 +82,12 @@ $fontsize-btn: 20px;
 }
 
 %btn_lined{
-	@extend %text_uppercase;
+	// @extend %text_uppercase;
 	@extend %link_noline;
-	display: inline-block;
-	font-size: $fontsize-btn;
-	font-weight: 400;
-	transition: 0.2s color ease-in;
+	// display: inline-block;
+	// font-size: $fontsize-btn;
+	// font-weight: 400;
+	// transition: 0.2s color ease-in;
 }
 
 @mixin btn_col($back, $text: #fff){
@@ -99,10 +99,10 @@ $fontsize-btn: 20px;
 	}
 }
 
-@mixin btn_col_lined($color: $c-link, $color_hover: $c-green){
+@mixin btn_col_lined($color: $c-link, $color_hover: $c-green, $back: #fff){
 	color: $color;
 	border: 1px solid $color;
-	background-color: transparent;
+	background-color: $back;
 
 	&:hover{
 		color: $color_hover;
@@ -156,20 +156,15 @@ a.btn-blue, input.btn-blue, button.btn-blue{
 }
 
 
-a.btn__text_orange{
+.btn-line--orange{
 	@extend %btn_lined;
-	color: $c-orange;
-
-	&:hover{
-		color: $c-green;
-	}
+	@include btn_col_lined($c-orange, $c-orange);
 }
 
 .btn-line
 	{
 		@extend %form_e_base;
 		@extend %form_b_base;
-		@include btn_col_lined();
 	}
 
 .btn.btn-small

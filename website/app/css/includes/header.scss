@@ -540,7 +540,8 @@ $delay: 1s;
 
     #header-index__ethereum
       {
-        top: 10px;
+        // top: 10px;
+        top: -33px;
 
         @for $i from 1 through 8
         {
@@ -553,8 +554,9 @@ $delay: 1s;
 
     #header-index__robonomics
       {
-        color: $c-orange;
-        top: 188px;
+        // color: $c-orange;
+        // top: 188px;
+        top: 236px;
 
         @for $i from 1 through 10
         {
@@ -670,3 +672,14 @@ $delay: 1s;
     }
   }
 
+
+#header-btns
+  {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+
+    a{
+      display: block;
+    }
+  }
