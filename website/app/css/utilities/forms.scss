@@ -99,7 +99,7 @@ $fontsize-btn: 20px;
 	}
 }
 
-@mixin btn_col_lined($color: $c-link, $color_hover: $c-green, $back: #fff){
+@mixin btn_col_lined($color: $c-green, $color_hover: darken($color, 10%), $back: #fff){
 	color: $color;
 	border: 1px solid $color;
 	background-color: $back;
@@ -107,6 +107,7 @@ $fontsize-btn: 20px;
 	&:hover{
 		color: $color_hover;
 		border-color: $color_hover;
+		background-color: $back;
 	}
 }
 
@@ -156,16 +157,25 @@ a.btn-blue, input.btn-blue, button.btn-blue{
 }
 
 
-.btn-line--orange{
-	@extend %btn_lined;
-	@include btn_col_lined($c-orange, $c-orange);
-}
+
 
 .btn-line
 	{
 		@extend %form_e_base;
 		@extend %form_b_base;
 	}
+
+.btn-line.btn-green
+	{
+		@extend %btn_lined;
+		@include btn_col_lined();
+	}
+
+.btn-line--orange{
+	@extend %btn_lined;
+	@include btn_col_lined($c-orange, darken($c-orange, 10%));
+}
+
 
 .btn.btn-small
 	{

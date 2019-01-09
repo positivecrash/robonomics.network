@@ -142,6 +142,10 @@ a
 		text-transform: none;
 	}
 
+.t-uppercase { @extend %text_uppercase; }
+ 
+.t-w-norm { font-weight: 400; }
+
 /*====== end of Text styles ======*/
 
 
@@ -301,6 +305,17 @@ table
 .m-t-sec { margin-top: $margin-sec;  }
 
 /*====== end of Margins & paddings ======*/
+
+
+.container--separate-row{
+	.row{
+		margin-top: 30px;
+		
+		&:first-child{
+			margin-top: 0;
+		}
+	}
+}
 
 
 

@@ -1,0 +1,60 @@
+extends extends/layout.pug
+include mixins/sections.pug
+
+block head
+	- var pageTitle = 'Robot economic infrastructure'
+
+block content
+	header(role='banner').screen
+		include mixins/sections.pug
+		+header_top()
+
+		.header-mid
+			.secw-base: h1.t-center Robonomics token generation event
+
+			section.secw-narrow
+				section(style="max-width:450px")
+					p: a.btn-green.d-b(href="#") Добавьте меня в whitelist
+					p: a.btn-green.btn-line.d-b(href="#") Пройти опрос
+				section
+					p: b.t-uppercase.t-orange Status of auction: waiting for beginning
+					p.t-small
+						| Ожидаем мнение Financial Market Authority (FMA)
+						br/
+						| Последнее обновление 10 декабря 2018
+				section
+					p: b.t-uppercase Token in a nutshell
+					.row.t-small
+						.col-md-4
+							| Token standard:
+							br/
+							| Erc20
+
+						.col-md-4
+							| Token type:
+							br/
+							| Utility
+
+						.col-md-4
+							| Primary target users:
+							br/
+							| Industry 4.0 and smart cities engineers
+
+
+				section.t-small
+					b Scammer alert
+					br/
+					| No one from robonomics.network / AIRA team will send you a private message containing any contribution address or offering any bonus. Please be on the lookout for scammers who impersonate admins and send private messages with fake ETH address.
+
+
+	main(role="main")
+		.separator-dark
+
+		section
+			.secw-base
+				h2.t-center Детали
+				p.t-mid.t-w-norm После альфа лето 2018 и бета осень 2018 релизов Робономики в Ethereum mainnet, 
+					a(href="") корневая команда разработчиков 
+					| предлагает сообществу принять участие в оценке начальной стоимости XRT.
+				
+		+widget_newssubscription_light()
