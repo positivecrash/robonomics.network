@@ -51,8 +51,17 @@ h2, h3
 	{
 		font-weight: 300;
 		color: $c-orange;
+
+		&.title-dark { color: $c-text; }
 	}
 
+h2 {
+		&.title-dark { font-size: $font-size-title - 4; }
+}
+
+h3 {
+		&.title-dark { font-size: $font-size-title - 8; }
+}
 
 h5 { font-size: $font-size-base; }
 
@@ -74,7 +83,8 @@ h5 { font-size: $font-size-base; }
 
 .t-small
 	{
-		font-size: $font-size-base - 2;
+		font-size: $font-size-base - 3;
+		line-height: 1.2;
 	}
 /*====== end of Text sizes & Headers ======*/
 
@@ -254,6 +264,21 @@ table
 		&.responsive{
 			@include responsiveTable($mq-tablet);
 		}
+
+		&.clear
+			{
+				td, th{
+					padding: 5px $vertical-rythm 2px 0;
+					border: 0;
+				}
+
+				th{
+					background: transparent;
+					text-transform: none;
+					letter-spacing: 0;
+					font-weight: 500;
+				}
+			}
 	}
 
 

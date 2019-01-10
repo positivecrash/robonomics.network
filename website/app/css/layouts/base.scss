@@ -154,6 +154,13 @@ body
     }
 
   }
+
+.row-marged_cols{
+  *[class*='col-md']
+      {
+        margin-bottom: $vertical-rythm;
+      }
+}
 /*====== end of Bootstrap ======*/
 
 

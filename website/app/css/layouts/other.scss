@@ -78,3 +78,31 @@
   width: 100px;
   margin-left: 20px;
 }
+
+.tge-users
+  {
+    .img-block{
+      max-height: 120px;
+      margin-bottom: $vertical-rythm;
+    }
+  }
+
+.team-avatar{
+  position: relative;
+  margin-bottom: $vertical-rythm;
+
+  .team-avatar-links{
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+
+    a{
+      display: inline-block;
+      margin-right: 10px;
+
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}

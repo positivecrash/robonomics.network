@@ -1,5 +1,5 @@
 $icons: (
-    sprite: (width: 2624px, height: 153.86px, pngPath: '../i/sprite.png?5', svgPath: '../i/sprite.svg?5'),
+    sprite: (width: 2724px, height: 153.86px, pngPath: '../i/sprite.png?5', svgPath: '../i/sprite.svg?5'),
     aira: (width: 100.23px, height: 23.44px, backgroundX: 0px, backgroundY: 0px),
     anchor: (width: 15.08px, height: 17.09px, backgroundX: -101px, backgroundY: 0px),
     blog: (width: 20.33px, height: 20.33px, backgroundX: -117px, backgroundY: 0px),
@@ -45,12 +45,17 @@ $icons: (
     robotHand2-8: (width: 58.97px, height: 36.88px, backgroundX: -2319px, backgroundY: 0px),
     robotHand2-9: (width: 24.54px, height: 22.76px, backgroundX: -2378px, backgroundY: 0px),
     ros: (width: 87.51px, height: 23.15px, backgroundX: -2403px, backgroundY: 0px),
-    status-done: (width: 21.47px, height: 12.36px, backgroundX: -2491px, backgroundY: 0px),
-    status-progress: (width: 18.7px, height: 18.77px, backgroundX: -2513px, backgroundY: 0px),
-    status-waiting: (width: 18.88px, height: 18.77px, backgroundX: -2532px, backgroundY: 0px),
-    telegram: (width: 24.3px, height: 21.16px, backgroundX: -2551px, backgroundY: 0px),
-    twitter: (width: 22.3px, height: 18.1px, backgroundX: -2576px, backgroundY: 0px),
-    youtube: (width: 24.2px, height: 17.03px, backgroundX: -2599px, backgroundY: 0px),
+    socials_edu: (width: 20px, height: 20px, backgroundX: -2491px, backgroundY: 0px),
+    socials_github: (width: 20px, height: 20px, backgroundX: -2511px, backgroundY: 0px),
+    socials_linkedin: (width: 20px, height: 20px, backgroundX: -2531px, backgroundY: 0px),
+    socials_medium: (width: 20px, height: 20px, backgroundX: -2551px, backgroundY: 0px),
+    socials_twitter: (width: 20px, height: 20px, backgroundX: -2571px, backgroundY: 0px),
+    status-done: (width: 21.47px, height: 12.36px, backgroundX: -2591px, backgroundY: 0px),
+    status-progress: (width: 18.7px, height: 18.77px, backgroundX: -2613px, backgroundY: 0px),
+    status-waiting: (width: 18.88px, height: 18.77px, backgroundX: -2632px, backgroundY: 0px),
+    telegram: (width: 24.3px, height: 21.16px, backgroundX: -2651px, backgroundY: 0px),
+    twitter: (width: 22.3px, height: 18.1px, backgroundX: -2676px, backgroundY: 0px),
+    youtube: (width: 24.2px, height: 17.03px, backgroundX: -2699px, backgroundY: 0px),
 );
 
 $sprite: map-get($icons, sprite);
@@ -249,6 +254,26 @@ $sprite: map-get($icons, sprite);
 }
 .sprite-basic-ros{
   @include get-sprite('ros');
+  display: inline-block;
+}
+.sprite-basic-socials_edu{
+  @include get-sprite('socials_edu');
+  display: inline-block;
+}
+.sprite-basic-socials_github{
+  @include get-sprite('socials_github');
+  display: inline-block;
+}
+.sprite-basic-socials_linkedin{
+  @include get-sprite('socials_linkedin');
+  display: inline-block;
+}
+.sprite-basic-socials_medium{
+  @include get-sprite('socials_medium');
+  display: inline-block;
+}
+.sprite-basic-socials_twitter{
+  @include get-sprite('socials_twitter');
   display: inline-block;
 }
 .sprite-basic-status-done{

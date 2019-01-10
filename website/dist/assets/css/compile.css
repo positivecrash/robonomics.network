@@ -1915,6 +1915,17 @@ h2, h3 {
   font-weight: 300;
   color: #F15A24;
 }
+h2.title-dark, h3.title-dark {
+  color: #000;
+}
+
+h2.title-dark {
+  font-size: 32px;
+}
+
+h3.title-dark {
+  font-size: 28px;
+}
 
 h5 {
   font-size: 18px;
@@ -1934,7 +1945,8 @@ h5 {
 }
 
 .t-small {
-  font-size: 16px;
+  font-size: 15px;
+  line-height: 1.2;
 }
 
 /*====== end of Text sizes & Headers ======*/
@@ -2101,6 +2113,16 @@ table.responsive td:before {
   table.responsive td:before {
     display: inline-block;
   }
+}
+table.clear td, table.clear th {
+  padding: 5px 27px 2px 0;
+  border: 0;
+}
+table.clear th {
+  background: transparent;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
 }
 
 .img-block {
@@ -2448,7 +2470,7 @@ span.loader {
   font-size: 26px;
 }
 
-.sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-blog, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-facebook, .sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-forum, .sprite-basic-github, .sprite-basic-hourglass, .sprite-basic-ipfs, .sprite-basic-medium, .sprite-basic-nixos, .sprite-basic-ok, .sprite-basic-reddit, .sprite-basic-robotHand1-1, .sprite-basic-robotHand1-10, .sprite-basic-robotHand1-11, .sprite-basic-robotHand1-2, .sprite-basic-robotHand1-3, .sprite-basic-robotHand1-4, .sprite-basic-robotHand1-5, .sprite-basic-robotHand1-6, .sprite-basic-robotHand1-7, .sprite-basic-robotHand1-8, .sprite-basic-robotHand1-9, .sprite-basic-robotHand2-1, .sprite-basic-robotHand2-10, .sprite-basic-robotHand2-11, .sprite-basic-robotHand2-12, .sprite-basic-robotHand2-13, .sprite-basic-robotHand2-14, .sprite-basic-robotHand2-15, .sprite-basic-robotHand2-2, .sprite-basic-robotHand2-3, .sprite-basic-robotHand2-4, .sprite-basic-robotHand2-5, .sprite-basic-robotHand2-6, .sprite-basic-robotHand2-7, .sprite-basic-robotHand2-8, .sprite-basic-robotHand2-9, .sprite-basic-ros, .sprite-basic-status-done, .sprite-basic-status-progress, .sprite-basic-status-waiting, .sprite-basic-telegram, .sprite-basic-twitter, .sprite-basic-youtube, .roadmap-done .roadmap-title__date:before, .roadmap-progress .roadmap-title__date:before, .roadmap-waiting .roadmap-title__date:before, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .section__contents a.js-expand-toggle:after {
+.sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-blog, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-facebook, .sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-forum, .sprite-basic-github, .sprite-basic-hourglass, .sprite-basic-ipfs, .sprite-basic-medium, .sprite-basic-nixos, .sprite-basic-ok, .sprite-basic-reddit, .sprite-basic-robotHand1-1, .sprite-basic-robotHand1-10, .sprite-basic-robotHand1-11, .sprite-basic-robotHand1-2, .sprite-basic-robotHand1-3, .sprite-basic-robotHand1-4, .sprite-basic-robotHand1-5, .sprite-basic-robotHand1-6, .sprite-basic-robotHand1-7, .sprite-basic-robotHand1-8, .sprite-basic-robotHand1-9, .sprite-basic-robotHand2-1, .sprite-basic-robotHand2-10, .sprite-basic-robotHand2-11, .sprite-basic-robotHand2-12, .sprite-basic-robotHand2-13, .sprite-basic-robotHand2-14, .sprite-basic-robotHand2-15, .sprite-basic-robotHand2-2, .sprite-basic-robotHand2-3, .sprite-basic-robotHand2-4, .sprite-basic-robotHand2-5, .sprite-basic-robotHand2-6, .sprite-basic-robotHand2-7, .sprite-basic-robotHand2-8, .sprite-basic-robotHand2-9, .sprite-basic-ros, .sprite-basic-socials_edu, .sprite-basic-socials_github, .sprite-basic-socials_linkedin, .sprite-basic-socials_medium, .sprite-basic-socials_twitter, .sprite-basic-status-done, .sprite-basic-status-progress, .sprite-basic-status-waiting, .sprite-basic-telegram, .sprite-basic-twitter, .sprite-basic-youtube, .roadmap-done .roadmap-title__date:before, .roadmap-progress .roadmap-title__date:before, .roadmap-waiting .roadmap-title__date:before, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .section__contents a.js-expand-toggle:after {
   background-image: url("../i/sprite.svg?5");
 }
 
@@ -2767,45 +2789,80 @@ span.loader {
   display: inline-block;
 }
 
+.sprite-basic-socials_edu {
+  width: 20px;
+  height: 20px;
+  background-position: -2491px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-socials_github {
+  width: 20px;
+  height: 20px;
+  background-position: -2511px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-socials_linkedin {
+  width: 20px;
+  height: 20px;
+  background-position: -2531px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-socials_medium {
+  width: 20px;
+  height: 20px;
+  background-position: -2551px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-socials_twitter {
+  width: 20px;
+  height: 20px;
+  background-position: -2571px 0px;
+  display: inline-block;
+}
+
 .sprite-basic-status-done {
   width: 21.47px;
   height: 12.36px;
-  background-position: -2491px 0px;
+  background-position: -2591px 0px;
   display: inline-block;
 }
 
 .sprite-basic-status-progress {
   width: 18.7px;
   height: 18.77px;
-  background-position: -2513px 0px;
+  background-position: -2613px 0px;
   display: inline-block;
 }
 
 .sprite-basic-status-waiting {
   width: 18.88px;
   height: 18.77px;
-  background-position: -2532px 0px;
+  background-position: -2632px 0px;
   display: inline-block;
 }
 
 .sprite-basic-telegram {
   width: 24.3px;
   height: 21.16px;
-  background-position: -2551px 0px;
+  background-position: -2651px 0px;
   display: inline-block;
 }
 
 .sprite-basic-twitter {
   width: 22.3px;
   height: 18.1px;
-  background-position: -2576px 0px;
+  background-position: -2676px 0px;
   display: inline-block;
 }
 
 .sprite-basic-youtube {
   width: 24.2px;
   height: 17.03px;
-  background-position: -2599px 0px;
+  background-position: -2699px 0px;
   display: inline-block;
 }
 
@@ -2842,7 +2899,6 @@ span.loader {
 
 header[role='banner'] {
   position: relative;
-  padding-bottom: 67.5px;
 }
 header[role='banner'] .el-social {
   background-color: #fff;
@@ -4269,7 +4325,7 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 .roadmap-done .roadmap-title__date:before {
   width: 21.47px;
   height: 12.36px;
-  background-position: -2491px 0px;
+  background-position: -2591px 0px;
 }
 
 .roadmap-progress .roadmap-title {
@@ -4279,13 +4335,13 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 .roadmap-progress .roadmap-title__date:before {
   width: 18.7px;
   height: 18.77px;
-  background-position: -2513px 0px;
+  background-position: -2613px 0px;
 }
 
 .roadmap-waiting .roadmap-title__date:before {
   width: 18.88px;
   height: 18.77px;
-  background-position: -2532px 0px;
+  background-position: -2632px 0px;
 }
 
 #index-releaseLink {
@@ -4353,6 +4409,28 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
   vertical-align: middle;
   width: 100px;
   margin-left: 20px;
+}
+
+.tge-users .img-block {
+  max-height: 120px;
+  margin-bottom: 27px;
+}
+
+.team-avatar {
+  position: relative;
+  margin-bottom: 27px;
+}
+.team-avatar .team-avatar-links {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
+.team-avatar .team-avatar-links a {
+  display: inline-block;
+  margin-right: 10px;
+}
+.team-avatar .team-avatar-links a:last-child {
+  margin-right: 0;
 }
 
 .timeline {
@@ -4543,6 +4621,10 @@ body {
   .row *[class*='col-md'] {
     margin-bottom: 27px;
   }
+}
+
+.row-marged_cols *[class*='col-md'] {
+  margin-bottom: 27px;
 }
 
 /*====== end of Bootstrap ======*/
