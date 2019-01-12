@@ -9,15 +9,16 @@ block content
 		include mixins/sections.pug
 		+header_top()
 
-		.header-mid
+	main(role="main")
+		section
 			.secw-base: h1.t-center Robonomics token generation event
 
 			section.secw-narrow
 				section(style="max-width:450px")
 					p: a.btn-green.d-b(href="#") Добавьте меня в whitelist
-					p: a.btn-green.btn-line.d-b(href="#") Пройти опрос
+					p: a.btn-green.btn-line.d-b(href="https://docs.google.com/forms/d/1V9ubpWrDD1B0Y4SgqiGj8VjUgB52zKWU5TYR3s_jQH4", target="_blank") Пройти опрос
 				section
-					p: b.t-uppercase.t-orange Status of auction: waiting for beginning
+					p: b.t-uppercase.t-orange Статус аукциона: скоро начало
 					p.t-small
 						| Ожидаем мнение Financial Market Authority (FMA)
 						br/
@@ -26,28 +27,26 @@ block content
 					p: b.t-uppercase Token in a nutshell
 					.row.t-small
 						.col-md-4
-							| Token standard:
+							| Стандарт токена:
 							br/
 							| Erc20
 
 						.col-md-4
-							| Token type:
+							| Тип токена:
 							br/
 							| Utility
 
 						.col-md-4
-							| Primary target users:
+							| Преимущественная целевая группа:
 							br/
-							| Industry 4.0 and smart cities engineers
+							| Инженеры Индустрии 4.0 и умных городов
 
 
 				section.t-small
 					b Scammer alert
 					br/
-					| No one from robonomics.network / AIRA team will send you a private message containing any contribution address or offering any bonus. Please be on the lookout for scammers who impersonate admins and send private messages with fake ETH address.
+					| Никто из robonomics.network и (или) команды AIRA (Airalab) не будет присылать вам личные сообщения, содержащие какие-либо адреса для участия в ТГЕ или предложения каких-либо бонусов. Пожалуйста, остерегайтесь мошенников, которые присылают вам поддельные ETH адреса в личных сообщениях.
 
-
-	main(role="main")
 		.separator-dark
 
 		section
@@ -55,7 +54,7 @@ block content
 				h2.t-center.title-dark Детали
 				p.t-mid.t-w-norm.text-hyphened
 					| После альфа лето 2018 и бета осень 2018 релизов Робономики в Ethereum mainnet, 
-					a(href="") корневая команда разработчиков 
+					a(href="#team", data-scroll) корневая команда разработчиков 
 					| предлагает сообществу принять участие в оценке начальной стоимости XRT.
 
 				section.row
@@ -65,7 +64,7 @@ block content
 							li Цена XRT начинается с максимальной и снижается со временем.
 							li Каждый участник аукциона получит XRT по минимальной / финальной цене.
 					.col-md-6
-						p: img.img-block(alt="", src="assets/i/tge-distribution@2x.png", style="width: 100%; max-width: 250px; margin-left: 0;")
+						p: img.img-block(alt="Доли эмиссии токена XRT", src="assets/i/tge-distribution@2x.png", style="width: 250px; margin-left: 0;")
 						p
 							b 77% 
 							| – Предложено для голландского аукциона
@@ -77,18 +76,18 @@ block content
 							| – Распределено ранее
 
 				p.text-hyphened Оценка будет проходить в форме Голландского аукциона. Максимальная сумма сбора ограничена 10,000 ETH. Бонусов нет. Финальная цена аукциона определит начальный множитель последующей эмиссии XRT. Сразу после аукциона XRT могут быть использованы для начала работы провайдером сети Робономика. Пользователи сети также смогут использовать XRT для оплаты транзакций по запуску роботов с помощью Ethereum компьютера. Подробнее 
-					a(href="", target="_blank") White paper: глава 6 “Robonomics Token, XRT”
+					a(href="https://static.robonomics.network/docs/whitepaper/Robonomics-whitepaper-ru.pdf", target="_blank") White paper: глава 6 “Robonomics Token, XRT”
 
 				section
 					p: b.t-uppercase На что планируем тратить
 					.row
 						.col-md-6
 							p Полученные от сообщества ETH и XRT, выделяемые на гранты, будут расходоваться корневой 
-								a(href="") командой разработчиков Airalab 
+								a(href="#team", data-scroll) командой разработчиков Airalab 
 								| с целью выпуска новых релизов программного обеспечения на 
-								a(href="") GitHub; 
+								a(href="https://github.com/airalab", target="_blank") GitHub; 
 								| улучшения 
-								a(href="") технической и пользовательской документации
+								a(href="https://aira.readthedocs.io/", target="_blank") технической и пользовательской документации
 								| ; обеспечения бесплатной онлайн поддержки пользователей в течении последующих 2 лет.
 
 							section
@@ -101,18 +100,22 @@ block content
 									tbody
 										tr
 											td Новые релизы
-											td 40%
-											td 60%
+											td 50%
+											td 50%
 										tr
 											td Документация
-											td 50%
 											td 20%
+											td 15%
 										tr
 											td Онлайн поддержка
-											td 10%
+											td 5%
+											td 15%
+										tr
+											td Построение сообщества
+											td 25%
 											td 20%
 						.col-md-6
-							img.img-block(alt="", src="assets/i/tge-money@2x.png", style="width: 100%; max-width: 450px; margin-left: 0;")
+							img.img-block(alt="", src="assets/i/tge-money-ru@2x.png", style="width: 550px; margin-left: 0;")
 
 		.sec-gray-dark
 			section
@@ -123,7 +126,7 @@ block content
 				.secw-base.t-center
 					h2.t-center Экосистема
 					section: a.d-b(href=""): img.img-block(src="assets/i/ecosystem.jpg", style="width: 800px")
-					a.t-orange.t-uppercase.t-w-norm(href="#") Посмотреть видео
+					a.t-orange.t-uppercase.t-w-norm(href="https://youtu.be/zvhYJpdKU9E", target="_blank") Посмотреть видео
 
 			.separator-light
 			section
@@ -141,7 +144,7 @@ block content
 								img.img-block(src="assets/i/tge-user-3.png")
 								p.text-hyphened Провайдеры Робономики могут открывать рынки IoT данных, контролировать беспилотный трафик и даже управлять запуском целых заводов получая с каждой новой транзакции оплату от сети.
 
-		section
+		section#team
 			.secw-base
 				h2.t-center.title-dark Корневые разработчики Airalab
 
@@ -151,9 +154,9 @@ block content
 							.team-avatar
 								img.img-block(src="assets/i/avatar-Lonshakov.jpg")
 								.team-avatar-links
-									a(href="", target="_blank"): span.sprite-basic-socials_linkedin
-									a(href="", target="_blank"): span.sprite-basic-socials_twitter
-									a(href="", target="_blank"): span.sprite-basic-socials_medium
+									a(href="https://www.linkedin.com/in/ensrationis/", target="_blank"): span.sprite-basic-socials_linkedin
+									a(href="https://twitter.com/EnsRationis", target="_blank"): span.sprite-basic-socials_twitter
+									a(href="https://blog.aira.life/@ensrationis", target="_blank"): span.sprite-basic-socials_medium
 
 							.t-small
 								p: b Сергей Лоншаков
@@ -162,8 +165,8 @@ block content
 							.team-avatar
 								img.img-block(src="assets/i/avatar-Kapitonov.jpg")
 								.team-avatar-links
-									a(href="", target="_blank"): span.sprite-basic-socials_linkedin
-									a(href="", target="_blank"): span.sprite-basic-socials_edu
+									a(href="https://www.linkedin.com/in/kapitonovaleksandr/", target="_blank"): span.sprite-basic-socials_linkedin
+									a(href="http://csi.ifmo.ru/en/about/faculty/kapitonov.html", target="_blank"): span.sprite-basic-socials_edu
 
 							.t-small
 								p: b Александр Капитонов
@@ -172,9 +175,9 @@ block content
 							.team-avatar
 								img.img-block(src="assets/i/avatar-Krupenkin.jpg")
 								.team-avatar-links
-									a(href="", target="_blank"): span.sprite-basic-socials_linkedin
-									a(href="", target="_blank"): span.sprite-basic-socials_github
-									a(href="", target="_blank"): span.sprite-basic-socials_medium
+									a(href="https://www.linkedin.com/in/krupenkin/", target="_blank"): span.sprite-basic-socials_linkedin
+									a(href="https://github.com/akru", target="_blank"): span.sprite-basic-socials_github
+									a(href="https://blog.aira.life/@akru", target="_blank"): span.sprite-basic-socials_medium
 
 							.t-small
 								p: b Александр Крупенькин
@@ -183,7 +186,7 @@ block content
 							.team-avatar
 								img.img-block(src="assets/i/avatar-Starostin.jpg")
 								.team-avatar-links
-									a(href="", target="_blank"): span.sprite-basic-socials_github
+									a(href="https://github.com/vol4tim", target="_blank"): span.sprite-basic-socials_github
 
 							.t-small
 								p: b Александр Старостин 
@@ -192,13 +195,13 @@ block content
 							.team-avatar
 								img.img-block(src="assets/i/avatar-Radchenko.jpg")
 								.team-avatar-links
-									a(href="", target="_blank"): span.sprite-basic-socials_linkedin
+									a(href="https://www.linkedin.com/in/eugene-radchenko/", target="_blank"): span.sprite-basic-socials_linkedin
 
 							.t-small
 								p: b Евгений Радченко
 								p Системный инженер
 
-				.t-center: a.t-orange.t-uppercase.t-w-norm(href="#") Посмотреть всех участников сообщества
+				.t-center: a.t-orange.t-uppercase.t-w-norm(href="https://aira.life/team/", target="_blank") Посмотреть всех участников сообщества
 
 		.separator-dark
 
@@ -209,31 +212,31 @@ block content
 				section
 					.row.row-marged_cols
 						.col-md-4
-							a(href="", target="_blank"): img.img-block(alt="", src="assets/i/media-forklog.png", style="width: 175px")
+							a(href="https://forklog.com/plavayushhij-dron-ot-airalab-vyyavil-kriticheski-nizkij-uroven-soderzhaniya-kisloroda-v-volge/", target="_blank"): img.img-block(alt="", src="assets/i/media-forklog.png", style="width: 175px")
 
 						.col-md-4
-							a(href="", target="_blank"): img.img-block(alt="", src="assets/i/media-forbes.png", style="width: 129px")
+							a(href="http://www.forbes.ru/tehnologii/335829-dumayu-mnogie-gotovy-zaplatit-za-vozmozhnost-smenit-sferu-obzora-i-fokus-kamery-na", target="_blank"): img.img-block(alt="", src="assets/i/media-forbes.png", style="width: 129px")
 
 						.col-md-4
-							a(href="", target="_blank"): img.img-block(alt="", src="assets/i/media-NewsBTC.png", style="width: 173px")
+							a(href="https://www.newsbtc.com/2018/11/26/4-blockchain-projects-solving-real-world-problems/", target="_blank"): img.img-block(alt="", src="assets/i/media-NewsBTC.png", style="width: 173px")
 
 						.col-md-4
-							a(href="", target="_blank"): img.img-block(alt="", src="assets/i/media-Bitcoinist.png", style="width: 228px")
+							a(href="https://bitcoinist.com/countries-and-enterprises-can-access-green-capital-market-thanks-to-blockchain-technology/", target="_blank"): img.img-block(alt="", src="assets/i/media-Bitcoinist.png", style="width: 228px")
 
 						.col-md-4
-							a(href="", target="_blank"): img.img-block(alt="", src="assets/i/media-digitaltrends.png", style="width: 241px")
+							a(href="https://www.digitaltrends.com/cool-tech/blockchain-drone-ship-water-readings/", target="_blank"): img.img-block(alt="", src="assets/i/media-digitaltrends.png", style="width: 241px")
 
 						.col-md-4
-							a(href="", target="_blank"): img.img-block(alt="", src="assets/i/media-Nasdaq.png", style="width: 144px")
+							a(href="https://www.nasdaq.com/article/iot-is-still-centralized-and-vulnerable-whats-the-solution-cm1064831", target="_blank"): img.img-block(alt="", src="assets/i/media-Nasdaq.png", style="width: 144px")
 
 
 			section.secw-narrow
 				
 				ul.list-lined
-					li: a(href="", target="_blank") 4 Blockchain Projects Solving Real-World Problems
-					li: a(href="", target="_blank") IoT Is Still Centralized And Vulnerable, What’s The Solution?
-					li: a(href="", target="_blank") Russia goes all-in on buzzwords, builds solar-powered blockchain drone boat
+					li: a(href="https://www.newsbtc.com/2018/11/26/4-blockchain-projects-solving-real-world-problems/", target="_blank") 4 Blockchain Projects Solving Real-World Problems
+					li: a(href="https://www.nasdaq.com/article/iot-is-still-centralized-and-vulnerable-whats-the-solution-cm1064831", target="_blank") IoT Is Still Centralized And Vulnerable, What’s The Solution?
+					li: a(href="https://blog.aira.life/robotics-comes-to-help-to-environment-conscious-buyers-18f3388f40b8", target="_blank") Robonomics — A Brave New Economy
 
-			.t-center: a.t-orange.t-uppercase.t-w-norm(href="#") Больше статей
+			//- .t-center: a.t-orange.t-uppercase.t-w-norm(href="#") Больше статей
 					
 		+widget_newssubscription_light()

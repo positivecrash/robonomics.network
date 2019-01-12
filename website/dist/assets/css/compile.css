@@ -2380,6 +2380,11 @@ input:not([type='submit']):not([type='button']).error {
 input:not([type='submit']):not([type='button'])[disabled] {
   opacity: 0.8;
 }
+input:not([type='submit']):not([type='button']).inp-placeholder-small::placeholder {
+  font-size: 13px;
+  line-height: 1.2;
+  text-align: left;
+}
 
 /*======== BUTTONS =========*/
 input[type='submit'], input[type='button'], button, a.btn-green {

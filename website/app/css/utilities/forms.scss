@@ -129,6 +129,15 @@ input:not([type='submit']):not([type='button']){
   	{
   		opacity: 0.8;
   	}
+
+  &.inp-placeholder-small{
+	&::placeholder
+	  	{
+	  		font-size: $font-size-base - 5;
+	  		line-height: 1.2;
+	  		text-align: left;
+	  	}
+}
 }
 
 
@@ -251,3 +260,7 @@ span.loader
 				font-size: 26px;
 			}
 	}
+
+
+
+
