@@ -106,3 +106,14 @@
     }
   }
 }
+
+
+/*CF7*/
+.screen-reader-response, div.wpcf7 .form-inline .ajax-loader
+{ display: none; }
+
+.wpcf7-not-valid-tip{
+  font-size: $font-size-base - 3;
+  font-weight: 400;
+  color: $c-red;
+}

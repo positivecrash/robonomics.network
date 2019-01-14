@@ -1946,7 +1946,6 @@ h5 {
 
 .t-small {
   font-size: 15px;
-  line-height: 1.2;
 }
 
 /*====== end of Text sizes & Headers ======*/
@@ -2476,7 +2475,7 @@ span.loader {
 }
 
 .sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-blog, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-facebook, .sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-forum, .sprite-basic-github, .sprite-basic-hourglass, .sprite-basic-ipfs, .sprite-basic-medium, .sprite-basic-nixos, .sprite-basic-ok, .sprite-basic-reddit, .sprite-basic-robotHand1-1, .sprite-basic-robotHand1-10, .sprite-basic-robotHand1-11, .sprite-basic-robotHand1-2, .sprite-basic-robotHand1-3, .sprite-basic-robotHand1-4, .sprite-basic-robotHand1-5, .sprite-basic-robotHand1-6, .sprite-basic-robotHand1-7, .sprite-basic-robotHand1-8, .sprite-basic-robotHand1-9, .sprite-basic-robotHand2-1, .sprite-basic-robotHand2-10, .sprite-basic-robotHand2-11, .sprite-basic-robotHand2-12, .sprite-basic-robotHand2-13, .sprite-basic-robotHand2-14, .sprite-basic-robotHand2-15, .sprite-basic-robotHand2-2, .sprite-basic-robotHand2-3, .sprite-basic-robotHand2-4, .sprite-basic-robotHand2-5, .sprite-basic-robotHand2-6, .sprite-basic-robotHand2-7, .sprite-basic-robotHand2-8, .sprite-basic-robotHand2-9, .sprite-basic-ros, .sprite-basic-socials_edu, .sprite-basic-socials_github, .sprite-basic-socials_linkedin, .sprite-basic-socials_medium, .sprite-basic-socials_twitter, .sprite-basic-status-done, .sprite-basic-status-progress, .sprite-basic-status-waiting, .sprite-basic-telegram, .sprite-basic-twitter, .sprite-basic-youtube, .roadmap-done .roadmap-title__date:before, .roadmap-progress .roadmap-title__date:before, .roadmap-waiting .roadmap-title__date:before, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .section__contents a.js-expand-toggle:after {
-  background-image: url("../i/sprite.svg?5");
+  background-image: url("../i/sprite.svg?6");
 }
 
 .sprite-basic-aira {
@@ -4436,6 +4435,17 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 }
 .team-avatar .team-avatar-links a:last-child {
   margin-right: 0;
+}
+
+/*CF7*/
+.screen-reader-response, div.wpcf7 .form-inline .ajax-loader {
+  display: none;
+}
+
+.wpcf7-not-valid-tip {
+  font-size: 15px;
+  font-weight: 400;
+  color: #E84004;
 }
 
 .timeline {
