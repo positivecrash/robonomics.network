@@ -309,8 +309,11 @@ table
 .m-t-0 { margin-top: 0; }
 .m-b-0 { margin-bottom: 0; }
 
-.m-b-half { margin-bottom: $vertical-rythm/2; }
-.m-t-half { margin-top: $vertical-rythm/2; }
+.m-b-sec { margin-bottom: $margin-sec;  }
+.m-t-sec { margin-top: $margin-sec;  }
+
+.m-b-half { margin-bottom: $margin-sec/2; }
+.m-t-half { margin-top: $margin-sec/2; }
 
 .p-t-0 { padding-top: 0; }
 .p-b-0 { padding-bottom: 0; }
@@ -324,10 +327,9 @@ table
 
 .m-r-10 { margin-right: 10px; }
 
-.m-t-25 { margin-top: 25px; }
+.m-r-15 { margin-right: 15px; }
 
-.m-b-sec { margin-bottom: $margin-sec;  }
-.m-t-sec { margin-top: $margin-sec;  }
+.m-t-25 { margin-top: 25px; }
 
 /*====== end of Margins & paddings ======*/
 

@@ -41,6 +41,12 @@ body
   justify-content: center;
 }
 
+.valign-mid
+  {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
 /*====== Set width of container ======*/
 .secw-narrow { @include secw(720px); }
 .secw-base { @include secw($mq-desktop); }
@@ -658,3 +664,12 @@ section
     color: #fff;
   }
 
+
+
+.grayscale {
+  filter: grayscale(100%);
+
+  &.hover:hover{
+    filter: grayscale(0);
+  }
+}

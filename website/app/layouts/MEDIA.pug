@@ -1,0 +1,98 @@
+extends extends/layout.pug
+include mixins/sections.pug
+
+block head
+	- var pageTitle = 'Robot economic infrastructure'
+
+block content
+	header(role='banner')
+		include mixins/sections.pug
+		+header_top()
+
+	main(role="main")
+
+		section
+			.secw-narrow
+				h1 Медиа
+
+			.line-right-red
+				.secw-narrow
+					div
+		
+			
+			section.secw-narrow.m-t-half.grayscale.hover
+
+				.row.row-marged_cols
+					.col-md-4
+						a(href="https://forklog.com/plavayushhij-dron-ot-airalab-vyyavil-kriticheski-nizkij-uroven-soderzhaniya-kisloroda-v-volge/", target="_blank"): img.img-block(alt="", src="assets/i/media-forklog.png", style="width: 175px")
+
+					.col-md-4
+						a(href="http://www.forbes.ru/tehnologii/335829-dumayu-mnogie-gotovy-zaplatit-za-vozmozhnost-smenit-sferu-obzora-i-fokus-kamery-na", target="_blank"): img.img-block(alt="", src="assets/i/media-forbes.png", style="width: 129px")
+
+					.col-md-4
+						a(href="https://www.newsbtc.com/2018/11/26/4-blockchain-projects-solving-real-world-problems/", target="_blank"): img.img-block(alt="", src="assets/i/media-NewsBTC.png", style="width: 173px")
+
+					.col-md-4
+						a(href="https://bitcoinist.com/countries-and-enterprises-can-access-green-capital-market-thanks-to-blockchain-technology/", target="_blank"): img.img-block(alt="", src="assets/i/media-Bitcoinist.png", style="width: 228px")
+
+					.col-md-4
+						a(href="https://www.digitaltrends.com/cool-tech/blockchain-drone-ship-water-readings/", target="_blank"): img.img-block(alt="", src="assets/i/media-digitaltrends.png", style="width: 241px")
+
+					.col-md-4
+						a(href="https://www.nasdaq.com/article/iot-is-still-centralized-and-vulnerable-whats-the-solution-cm1064831", target="_blank"): img.img-block(alt="", src="assets/i/media-Nasdaq.png", style="width: 144px")
+
+
+			section.secw-narrow
+
+				ul.list-lined
+					li.show-reset.t-right(style="display:none"): a.m-r-15(href="javascript:;", data-sort="0"): b Show all languages
+
+					li(data-sort-sec="1")
+						a.m-r-15(href="javascript:;", data-sort="1", data-show=".show-reset"): span.sprite-basic-flag-en
+						a(href="https://www.nasdaq.com/article/iot-is-still-centralized-and-vulnerable-whats-the-solution-cm1064831", target="_blank") IoT Is Still Centralized And Vulnerable, What’s The Solution?
+
+					li(data-sort-sec="1")
+						a.m-r-15(href="javascript:;", data-sort="1", data-show=".show-reset"): span.sprite-basic-flag-en
+						a(href="https://www.newsbtc.com/2018/11/26/4-blockchain-projects-solving-real-world-problems/", target="_blank") 4 Blockchain Projects Solving Real-World Problems
+
+					li(data-sort-sec="1")
+						a.m-r-15(href="javascript:;", data-sort="1", data-show=".show-reset"): span.sprite-basic-flag-en
+						a(href="https://oracletimes.com/ethereum-smart-contracts-allow-robots-to-organize-themselves/", target="_blank") Ethereum smart contracts allow robots to organize themselves
+
+					li(data-sort-sec="2")
+						a.m-r-15(href="javascript:;", data-sort="2", data-show=".show-reset"): span.sprite-basic-flag-ru
+						a(href="https://robo-hunter.com/news/realno-li-obedinit-vse-zavodi-v-mire-v-odnu-globalnuy-set14254", target="_blank") Реально ли объединить все заводы в мире в одну глобальную сеть?
+					
+					li(data-sort-sec="1")
+						a.m-r-15(href="javascript:;", data-sort="1", data-show=".show-reset"): span.sprite-basic-flag-en
+						a(href="https://blog.aira.life/robotics-comes-to-help-to-environment-conscious-buyers-18f3388f40b8", target="_blank") Robonomics — A Brave New Economy
+
+					li(data-sort-sec="1")
+						a.m-r-15(href="javascript:;", data-sort="1", data-show=".show-reset"): span.sprite-basic-flag-en
+						a(href="https://medium.com/evercity-blog/robonomics-how-to-build-a-smart-sustainable-city-on-blockchain-fb8f071ec14a", target="_blank") Robonomics: how to build a smart sustainable city on blockchain
+
+					li(data-sort-sec="2")
+						a.m-r-15(href="javascript:;", data-sort="2", data-show=".show-reset"): span.sprite-basic-flag-ru
+						a(href="https://forklog.com/umnyj-gorod-na-volge-vypolnil-377-smart-kontraktov-dlya-dronov-sensorov-i-3d-printera/", target="_blank") Умный город на Волге выполнил 377 смарт-контрактов для дронов, сенсоров и 3D-принтера
+
+					li(data-sort-sec="2")
+						a.m-r-15(href="javascript:;", data-sort="2", data-show=".show-reset"): span.sprite-basic-flag-ru
+						a(href="https://gorodfinansov.ru/administratsiya-tolyatti-ispolzuet-drony-ot-airalab-dlya-monitoringa-lesnyh-pozharov-i-chernyh-raskopok.html", target="_blank") Администрация Тольятти использует дроны от Airalab для мониторинга лесных пожаров и черных раскопок
+
+					li(data-sort-sec="1")
+						a.m-r-15(href="javascript:;", data-sort="1", data-show=".show-reset"): span.sprite-basic-flag-en
+						a(href="http://news.ifmo.ru/en/startups_and_business/initiative/news/7458/", target="_blank") Results of European Parliament Discussion on Robot Economy
+
+					li(data-sort-sec="2")
+						a.m-r-15(href="javascript:;", data-sort="2", data-show=".show-reset"): span.sprite-basic-flag-ru
+						a(href="https://golos.io/ru--blokcheijn/@cryptoscope/airalab-i-microsoft-zapustili-proekt-dlya-raboty-s-vybrosami-v-atmosferu-na-platforme-ethereum", target="_blank") Airalab И Microsoft Запустили Проект Для Работы С Выбросами В Атмосферу На Платформе Ethereum
+
+
+					li.show-reset.t-right(style="display:none"): a.m-r-15(href="javascript:;", data-sort="0"): b Show all languages
+
+
+
+				// p
+				// 	a(href="javascript:;", data-sort="0") Reset language
+					
+		+widget_newssubscription_light()

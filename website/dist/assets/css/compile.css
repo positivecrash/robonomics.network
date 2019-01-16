@@ -2147,12 +2147,20 @@ table.clear th {
   margin-bottom: 0;
 }
 
+.m-b-sec {
+  margin-bottom: 67.5px;
+}
+
+.m-t-sec {
+  margin-top: 67.5px;
+}
+
 .m-b-half {
-  margin-bottom: 13.5px;
+  margin-bottom: 33.75px;
 }
 
 .m-t-half {
-  margin-top: 13.5px;
+  margin-top: 33.75px;
 }
 
 .p-t-0 {
@@ -2176,16 +2184,12 @@ table.clear th {
   margin-right: 10px;
 }
 
+.m-r-15 {
+  margin-right: 15px;
+}
+
 .m-t-25 {
   margin-top: 25px;
-}
-
-.m-b-sec {
-  margin-bottom: 67.5px;
-}
-
-.m-t-sec {
-  margin-top: 67.5px;
 }
 
 /*====== end of Margins & paddings ======*/
@@ -4528,6 +4532,11 @@ body {
   justify-content: center;
 }
 
+.valign-mid {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 /*====== Set width of container ======*/
 .secw-narrow {
   max-width: 680px;
@@ -4973,4 +4982,11 @@ section section li:last-child, section section p:last-child, section section blo
   bottom: 0;
   background-color: #000;
   color: #fff;
+}
+
+.grayscale {
+  filter: grayscale(100%);
+}
+.grayscale.hover:hover {
+  filter: grayscale(0);
 }

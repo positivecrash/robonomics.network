@@ -3,6 +3,9 @@ window.addEventListener('load', function(){
 	//sort tags, '0-sort.js' required
 	sort('sort', 'sort-sec', 'active');
 
+	//show info by click, '0-show.js' required
+	show('data-show');
+
 }, false);
 function getCookie(name) {
   var matches = document.cookie.match(new RegExp(
@@ -44,6 +47,25 @@ var visibleY = function(el){
 // document.addEventListener('scroll', IfInView);
 // document.addEventListener('resize', IfInView);
 
+var show = function(switcher){
+
+	var link = document.querySelectorAll('['+switcher+']');
+	var infoblock;
+
+	for (var i = 0; i < link.length; i++) {
+
+		link[i].addEventListener('click', function(){
+
+			infoblock = document.querySelectorAll(this.getAttribute(switcher));
+
+			for (var j = 0; j < infoblock.length; j++) {
+				infoblock[j].style.display = 'block';
+			}
+		});
+	}
+
+	
+}
 var showSorted = function(tag, tagLink, tagSec, active){
 
 	var sec = document.querySelectorAll('[data-' + tagSec + ']');
