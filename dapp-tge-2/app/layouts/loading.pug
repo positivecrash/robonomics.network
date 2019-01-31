@@ -1,139 +1,17 @@
-extends extends/layout.pug
+extends extends/layout_simple.pug
 include mixins/sections.pug
 
 block head
-	- var pageTitle = 'Robot economic infrastructure'
+	- var pageTitle = 'Loading dApp'
 
 block content
-	header(role='banner')#header-index.screen
-
-		+header_top()
-
-		.header-mid.screen.align-vertical
-			.el-FrontContent.secw-full
-				.el-FrontContent
-					div#header-logo-robonomics(data-xrange="20", data-yrange="20").plaxify
-						<svg class="logo-robonomics" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="196.9px" height="170.3px" viewBox="0 0 196.9 170.3" style="enable-background:new 0 0 196.9 170.3;" xml:space="preserve">
-							<g transform="translate(2530 155)">
-								<path class="line" d="M-2523.4,7.9l184.2,0.5l-91.7-158.1L-2523.4,7.9z"/>
-
-								<circle class="dot" cx="-2339.7" cy="8.7" r="6.6"/>
-								<circle class="dot" cx="-2523.4" cy="8.2" r="6.6"/>
-								<circle class="dot" cx="-2430.8" cy="-148.4" r="6.6"/>
-								
-								<path class="triangle-1" d="M-2477.3-18.3l92.1,0.3l-45.8-79L-2477.3-18.3z"/>
-								<path class="triangle-2" d="M-2431.2-18.1l46,0.1l-45.8-79L-2431.2-18.1z"/>
-								<path class="triangle-3" d="M-2477.3-18.3l92.1,0.3l-46-20.3L-2477.3-18.3z"/>
-							</g>
-						</svg>
-
-
-					img#logo-ethereum(alt="", src="assets/i/logo-ethereum.svg", data-xrange="50", data-yrange="50").plaxify
-
-
-					.secw-base
-						#header-title: h1 ПЛАТФОРМА РОБОНОМИКИ
-						#header-subtitle Инфраструктура сети Ethereum для интеграции кибер-физических систем в Умные города и Индустрию 4.0
-
-						#header-btns
-							a.btn-green.m-t-sec(href="#") Whitepaper
-							.m-t-25
-								a.btn-line.btn-line--orange(href="#") Subscribe for news
-
-				#header-index__ethereum.snapsvgoutside-text.plaxify(data-xrange="10", data-yrange="10")
-					span e
-					span t
-					span h
-					span e
-					span r
-					span e
-					span u
-					span m
-
-
-				#header-index__robonomics.snapsvgoutside-text.plaxify(data-xrange="10", data-yrange="10")
-					span r
-					span o
-					span b
-					span o
-					span n
-					span o
-					span m
-					span i
-					span c
-					span s
-
-
-			#snapsvg-index.snapsvg-wrap.plaxify(data-xrange="10", data-yrange="10")
-				svg.snapsvg
-
-		a#header-airalink.label-blue(href="https://aira.life/", target="_blank")
-			.secw-base
-				span Supported and developed by 
-				img(alt="", src="assets/i/logo-airalab.png")
-
-
-	main(role="main")
-
-		// .separator-dark.separator-animated-inview.js-checkInView
-		+widget_etherdevelopers()
-		.separator-dark.separator-animated-inview.js-checkInView
-		+widget_robotics()
-		.separator-dark.separator-animated-inview.js-checkInView
-		+widget_miners_bounty()
-
-
-		.sec-gray-dark
-			section
-				.secw-base
-					h2.t-center План развития инфраструктуры
-
-					.roadmap.row
-						.col-md-3.roadmap-done
-							.roadmap-title
-								.roadmap-title__in
-									div.roadmap-title__date Q1 2018
-									div.roadmap-title__name Lighthouse
-							.roadmap-desc Релиз сигнализирующий о начале работы платформы для разработчиков решений Умных городов и Индустрии 4.0. Следящие узлы системы сообщают в блоках сети Ethereum о поддержке релиза.
-
-						.col-md-3.roadmap-progress
-							.roadmap-title
-								.roadmap-title__in
-									div.roadmap-title__date Q2 2018
-									div.roadmap-title__name: span Observerer
-							.roadmap-desc С данного этапа начинается измерения важных для платформы показателей работы сети за счет сравнения результатов работы эталонной ноды и результатов, получаемых от сети.
-
-						.col-md-3.roadmap-waiting
-							.roadmap-title
-								.roadmap-title__in
-									div.roadmap-title__date Q1-Q2 2019
-									div.roadmap-title__name: span Cybernetics economy
-							.roadmap-desc Участники сети обладают необходимыми возможностями для работы умных городов и умных фабрик в ответ на экономически значимые транзакции.
-
-						.col-md-3.roadmap-waiting
-							.roadmap-title
-								.roadmap-title__in
-									div.roadmap-title__date Q3 2019 - Q2 2020
-									div.roadmap-title__name: span Lights-out
-							.roadmap-desc Сеть способна взять на себя задачи по управлению роботизированными цепочками обеспечения.
-
-			.separator-light.separator-animated-inview.js-checkInView
+	.container-basic
+		section.t-align_center
+			.loading-logo
+				img(alt="dApp logo", src="assets/i/logo-dapp-2.svg", style="width: 150px;")
+			.loading-title.title-pale XRT token generation event
 
 			section
-				.secw-base
-					h2.t-center Релизы и timeline
-
-				.secw-narrow
-					.timeline
-						.timeline-type Новый релиз
-						.timeline-title Robonomics Beta 3 communication
-						.timeline-desc
-							p This is next stable release of Robonomics communication stack. In this release introduced new liability execution engine. New liability engine support parallel and sandboxing liability execution.
-							a(href="#", target="_blank"): b Посмотрите на GitHub ↗
-				#index-releaseLink
-					.secw-narrow
-						a.btn__text_orange(href="#") Посмотреть timeline полностью
-
-
-
-		+widget_newssubscription_light()
+				.loader
+					.loader-ring.align-vertical.m-r-15
+					b.align-vertical.t-style_uppercase Loading

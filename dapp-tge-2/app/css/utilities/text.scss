@@ -80,12 +80,20 @@ a
 		hyphens: auto;
 	}
 
+.title-pale
+	{
+	  color: $c-violet-pale;
+	  @extend %text_uppercase;
+	}
+
 /*====== end of Text styles ======*/
 
 
 
 
 /*====== Text elements ======*/
+
+b { font-weight: 500; }
 
 li, p, blockquote
 	{

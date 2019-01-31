@@ -1843,7 +1843,7 @@ a, a.a-noline, a:hover, a:focus, a:visited {
   text-decoration: none !important;
 }
 
-h1, h2, h3, h4, h5, h6, .t-style_uppercase, table th, .header-title, nav {
+h1, h2, h3, h4, h5, h6, .t-style_uppercase, .title-pale, table th, nav, .loading-logo:after {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -1855,7 +1855,7 @@ h1, h2, h3, h4, h5, h6, .t-style_uppercase, table th, .header-title, nav {
   margin-right: auto;
 }
 
-.header-logo, .header-title, nav.nav-g > * {
+.header-logo, .header-title, nav.nav-g > *, .loading-logo {
   display: inline-block;
   vertical-align: middle;
 }
@@ -1952,8 +1952,16 @@ a.a-color_light.hover:hover {
   hyphens: auto;
 }
 
+.title-pale {
+  color: #535974;
+}
+
 /*====== end of Text styles ======*/
 /*====== Text elements ======*/
+b {
+  font-weight: 500;
+}
+
 li, p, blockquote {
   margin-bottom: 27px;
 }
@@ -2222,7 +2230,15 @@ table.clear th {
     transform: scale(1);
   }
 }
-.sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-i-menu-dark, .sprite-basic-i-menu-light, .sprite-basic-logo-aira, .sprite-basic-logo-robonomics {
+@keyframes Rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-jp, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-i-menu-dark, .sprite-basic-i-menu-light, .sprite-basic-logo-aira, .sprite-basic-logo-robonomics {
   background-image: url("../i/sprite.svg?6");
 }
 
@@ -2240,45 +2256,52 @@ table.clear th {
   display: inline-block;
 }
 
-.sprite-basic-flag-ru {
+.sprite-basic-flag-jp {
   width: 30px;
-  height: 19.7px;
+  height: 20px;
   background-position: -60px 0px;
   display: inline-block;
 }
 
-.sprite-basic-flag-zh {
+.sprite-basic-flag-ru {
   width: 30px;
   height: 19.7px;
   background-position: -90px 0px;
   display: inline-block;
 }
 
+.sprite-basic-flag-zh {
+  width: 30px;
+  height: 19.7px;
+  background-position: -120px 0px;
+  display: inline-block;
+}
+
 .sprite-basic-i-menu-dark {
   width: 30px;
   height: 30px;
-  background-position: -120px 0px;
+  background-position: -150px 0px;
   display: inline-block;
 }
 
 .sprite-basic-i-menu-light {
   width: 30px;
   height: 19.2px;
-  background-position: -150px 0px;
+  background-position: -180px 0px;
   display: inline-block;
 }
 
 .sprite-basic-logo-aira {
   width: 25.257px;
   height: 25.257px;
-  background-position: -180px 0px;
+  background-position: -210px 0px;
   display: inline-block;
 }
 
 .sprite-basic-logo-robonomics {
   width: 33.481px;
   height: 29.491px;
-  background-position: -206px 0px;
+  background-position: -236px 0px;
   display: inline-block;
 }
 
@@ -2299,6 +2322,7 @@ body {
   color: #fff;
   background-color: #040A36;
   background-image: linear-gradient(#23133b, #040a36);
+  height: auto;
 }
 
 /*====== Set width of container ======*/
@@ -2423,7 +2447,6 @@ section section li:last-child, section section p:last-child, section section blo
 }
 
 .header-title {
-  color: #535974;
   font-size: 20px;
 }
 @media screen and (max-width: 576px) {
@@ -2451,6 +2474,9 @@ section section li:last-child, section section p:last-child, section section blo
   padding-top: 10px;
 }
 .dropdown .dropdown-content-color {
+  right: -20px;
+}
+.dropdown .dropdown-content-color .inside {
   padding: 20px;
   background: #2e194e;
   border: 1px solid #535974;
@@ -2505,3 +2531,35 @@ nav.nav-g > *:last-child {
 }
 
 /*====== end of Random ======*/
+/*====== Loading ======*/
+.loading-logo {
+  position: relative;
+  padding-top: 20px;
+}
+.loading-logo:after {
+  content: "DAPP";
+  position: absolute;
+  right: -80px;
+  top: 0;
+  font-size: 30px;
+  color: #535974;
+}
+
+.loading-title {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.loader-ring {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  border-color: #fff;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  animation: 0.8s Rotate ease-in-out infinite;
+}
+
+/*====== end of Loading ======*/
