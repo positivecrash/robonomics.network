@@ -1,110 +1,136 @@
-extends extends/layout_simple.pug
-include mixins/sections.pug
+extends extends/layout_blank.pug
 
 block head
 	- var pageTitle = 'UI Kit for dApp'
 
 block content
-	.container-basic: h1 Варианты использования header
+	section
+		.container-basic: h1 Варианты использования header
 
-	header(role='banner')
+		header(role='banner')
+			.container-basic
+				.d-table.container-full
+					.align-vertical
+						a(href="/").header-logo: img(alt="dApp logo", src="assets/i/logo-dapp.svg")
+						.header-title.title-pale
+							| dapp 
+							b Name of dApp
+					.align-vertical.t-align_right
+						nav.nav-g
+							.dropdown
+								a(href="javascript:;"): span.sprite-basic-i-menu-dark
+								.dropdown-content.dropdown-content-color
+									.inside
+										a(href="#") Link 1
+										a(href="#") Link 2
+										a(href="#") Link 3
+										a(href="#") Link 4
+										a(href="#") Link 5
+							.dropdown
+								a(href="javascript:;").a-noline: span.sprite-basic-flag-en
+								.dropdown-content.dropdown-content-color
+									.inside
+										a(href="#").a-noline: span.sprite-basic-flag-ru
+										a(href="#").a-noline: span.sprite-basic-flag-de
+										a(href="#").a-noline: span.sprite-basic-flag-zh
+										a(href="#").a-noline: span.sprite-basic-flag-jp
+
+		
+		header(role='banner')
+			.container-basic
+				.d-table.container-full
+					.align-vertical
+						a(href="/").header-logo: img(alt="dApp logo", src="assets/i/logo-dapp.svg")
+						.header-title.title-pale
+							| dapp 
+							b Name of dApp
+					.align-vertical.t-align_right
+						nav.nav-g
+							a(href="#") Some link
+
+							.dropdown
+								a(href="javascript:;"): span.sprite-basic-i-menu-dark
+								.dropdown-content.dropdown-content-color
+									.inside
+										a(href="#") Link 1
+										a(href="#") Link 2
+										a(href="#") Link 3
+										a(href="#") Link 4
+										a(href="#") Link 5
+							.dropdown
+								a(href="javascript:;").a-noline: span.sprite-basic-flag-en
+								.dropdown-content.dropdown-content-color
+									.inside
+										a(href="#").a-noline: span.sprite-basic-flag-ru
+										a(href="#").a-noline: span.sprite-basic-flag-de
+										a(href="#").a-noline: span.sprite-basic-flag-zh
+										a(href="#").a-noline: span.sprite-basic-flag-jp
+
+
+
+		header(role='banner')
+			.container-basic
+				.d-table.container-full
+					.align-vertical
+						a(href="/").header-logo: img(alt="dApp logo", src="assets/i/logo-dapp.svg")
+					.align-vertical.t-align_right
+						nav.nav-g
+
+							.dropdown
+								a(href="javascript:;"): span.sprite-basic-i-menu-light
+								.dropdown-content
+									.inside
+										a(href="#") Link 1
+										a(href="#") Link 2
+										a(href="#") Link 3
+										a(href="#") Link 4
+										a(href="#") Link 5
+							.dropdown
+								a(href="javascript:;").a-noline: span.sprite-basic-flag-en
+								.dropdown-content
+									.inside
+										a(href="#").a-noline: span.sprite-basic-flag-ru
+										a(href="#").a-noline: span.sprite-basic-flag-de
+										a(href="#").a-noline: span.sprite-basic-flag-zh
+										a(href="#").a-noline: span.sprite-basic-flag-jp
+
+
+
+	section
 		.container-basic
-			.d-table.container-full
-				.align-vertical
-					a(href="/").header-logo: img(alt="dApp logo", src="assets/i/logo-dapp.svg")
-					.header-title.title-pale
-						| dapp 
-						b Name of dApp
-				.align-vertical.t-align_right
-					nav.nav-g
-						.dropdown
-							a(href="javascript:;"): span.sprite-basic-i-menu-dark
-							.dropdown-content.dropdown-content-color
-								.inside
-									a(href="#") Link 1
-									a(href="#") Link 2
-									a(href="#") Link 3
-									a(href="#") Link 4
-									a(href="#") Link 5
-						.dropdown
-							a(href="javascript:;").a-noline: span.sprite-basic-flag-en
-							.dropdown-content.dropdown-content-color
-								.inside
-									a(href="#").a-noline: span.sprite-basic-flag-ru
-									a(href="#").a-noline: span.sprite-basic-flag-de
-									a(href="#").a-noline: span.sprite-basic-flag-zh
-									a(href="#").a-noline: span.sprite-basic-flag-jp
+			h1 Варианты loader
 
-	
-	header(role='banner')
+			.m-b-15
+				.loader-ring.align-vertical.m-r-15
+
+			.m-b-15
+				.loader-ring.align-vertical.m-r-15
+				b.align-vertical.t-style_uppercase Loading
+
+
+	section
 		.container-basic
-			.d-table.container-full
-				.align-vertical
-					a(href="/").header-logo: img(alt="dApp logo", src="assets/i/logo-dapp.svg")
-					.header-title.title-pale
-						| dapp 
-						b Name of dApp
-				.align-vertical.t-align_right
-					nav.nav-g
-						a(href="#") Some link
+			h1 Варианты сообщений
 
-						.dropdown
-							a(href="javascript:;"): span.sprite-basic-i-menu-dark
-							.dropdown-content.dropdown-content-color
-								.inside
-									a(href="#") Link 1
-									a(href="#") Link 2
-									a(href="#") Link 3
-									a(href="#") Link 4
-									a(href="#") Link 5
-						.dropdown
-							a(href="javascript:;").a-noline: span.sprite-basic-flag-en
-							.dropdown-content.dropdown-content-color
-								.inside
-									a(href="#").a-noline: span.sprite-basic-flag-ru
-									a(href="#").a-noline: span.sprite-basic-flag-de
-									a(href="#").a-noline: span.sprite-basic-flag-zh
-									a(href="#").a-noline: span.sprite-basic-flag-jp
+			.msg-error.msg-icon
+				.msg-title Ошибка, заголовок
+				p Ошибка, пояснение
+
+			br/
+
+			.msg-error.msg-icon
+				.msg-title Ошибка без пояснения
+
+			br/
+
+			.msg-error
+				.msg-title Ошибка без иконки
 
 
-
-	header(role='banner')
-		.container-basic
-			.d-table.container-full
-				.align-vertical
-					a(href="/").header-logo: img(alt="dApp logo", src="assets/i/logo-dapp.svg")
-				.align-vertical.t-align_right
-					nav.nav-g
-
-						.dropdown
-							a(href="javascript:;"): span.sprite-basic-i-menu-light
-							.dropdown-content
-								.inside
-									a(href="#") Link 1
-									a(href="#") Link 2
-									a(href="#") Link 3
-									a(href="#") Link 4
-									a(href="#") Link 5
-						.dropdown
-							a(href="javascript:;").a-noline: span.sprite-basic-flag-en
-							.dropdown-content
-								.inside
-									a(href="#").a-noline: span.sprite-basic-flag-ru
-									a(href="#").a-noline: span.sprite-basic-flag-de
-									a(href="#").a-noline: span.sprite-basic-flag-zh
-									a(href="#").a-noline: span.sprite-basic-flag-jp
-
-
-
-	.container-basic
-		h1 Варианты loader
-
-		.m-b-15
-			.loader-ring.align-vertical.m-r-15
-
-		.m-b-15
-			.loader-ring.align-vertical.m-r-15
-			b.align-vertical.t-style_uppercase Loading
+			section.section-white
+				.msg-error.msg-icon
+					.msg-title Ошибка, заголовок
+					p Ошибка, пояснение
 
 
 

@@ -1,3 +1,39 @@
+.msg-error{
+	border-width: 1px;
+	border-style: solid;
+	padding: 20px;
+
+	.msg-title{
+		@extend %text_uppercase;
+		font-weight: 500;
+	}
+}
+
+.msg-icon{
+	position: relative;
+	padding-left: 60px;
+
+	&:before{
+		content:"";
+		position: absolute;
+		top: 20px;
+		left: 20px;
+	}
+}
+
+.msg-error{
+	border-color: $c-orange;
+
+	.msg-title{
+		color: $c-orange;
+	}
+
+	&.msg-icon:before{
+		@include get-sprite('i-error');
+	}
+}
+
+
 // /*======== FORMS VARIABLES & MIXINS & EXTENDS =========*/
 // $btn-padding-v: 10px;
 // $inp-padding-v: $btn-padding-v;
