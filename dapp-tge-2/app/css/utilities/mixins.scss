@@ -1,0 +1,53 @@
+@mixin secw($w)
+	{
+		max-width: $w - $padding-fields * 2; 
+		padding-left: $padding-fields; 
+		padding-right: $padding-fields; 
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+
+@mixin responsiveTable($breakpoint){
+  td:before {
+      content: attr(data-th)": ";
+      font-weight: bold;
+      margin-right: 30px;
+      display: none;
+  }
+
+
+  @media (max-width: $breakpoint){
+    th { display: none; }
+
+    td { 
+      display: block; 
+
+
+      &:first-child{
+      	background-color: $c-gray-light;
+      }
+      
+      &:before{
+        display: inline-block;
+      }
+    }
+  }
+}
+
+
+@mixin margins($value){
+  .m-#{$value} { margin: #{$value}px !important; }
+  .m-t-#{$value} { margin-top: #{$value}px; }
+  .m-r-#{$value} { margin-right: #{$value}px; }
+  .m-b-#{$value} { margin-bottom: #{$value}px; }
+  .m-l-#{$value} { margin-left: #{$value}px; }
+}
+
+@mixin paddings($value){
+  .p-#{$value} { padding: #{$value}px !important; }
+  .p-t-#{$value} { padding-top: #{$value}px; }
+  .p-r-#{$value} { padding-right: #{$value}px; }
+  .p-b-#{$value} { padding-bottom: #{$value}px; }
+  .p-l-#{$value} { padding-left: #{$value}px; }
+}

@@ -1,0 +1,90 @@
+extends extends/layout_simple.pug
+include mixins/sections.pug
+
+block head
+	- var pageTitle = 'UI Kit for dApp'
+
+block content
+	.container-basic: h1 Варианты использования header
+
+	header(role='banner')
+		.container-basic
+			.d-table.container-full
+				.align-vertical
+					a(href="/").header-logo: img(alt="dApp logo", src="assets/i/logo-dapp.svg")
+					.header-title
+						| dapp 
+						b Name of dApp
+				.align-vertical.t-align_right
+					nav.nav-g
+						.dropdown
+							a(href="javascript:;"): span.sprite-basic-i-menu-dark
+							.dropdown-content
+								.dropdown-content-color
+									a(href="#") Link 1
+									a(href="#") Link 2
+									a(href="#") Link 3
+									a(href="#") Link 4
+									a(href="#") Link 5
+						.dropdown
+							a(href="javascript:;").a-noline: span.sprite-basic-flag-en
+							.dropdown-content
+								.dropdown-content-color
+									a(href="#").a-noline: span.sprite-basic-flag-ru
+									a(href="#").a-noline: span.sprite-basic-flag-de
+									a(href="#").a-noline: span.sprite-basic-flag-zh
+
+	
+	header(role='banner')
+		.container-basic
+			.d-table.container-full
+				.align-vertical
+					a(href="/").header-logo: img(alt="dApp logo", src="assets/i/logo-dapp.svg")
+					.header-title
+						| dapp 
+						b Name of dApp
+				.align-vertical.t-align_right
+					nav.nav-g
+						a(href="#") Some link
+						
+						.dropdown
+							a(href="javascript:;"): span.sprite-basic-i-menu-dark
+							.dropdown-content
+								.dropdown-content-color
+									a(href="#") Link 1
+									a(href="#") Link 2
+									a(href="#") Link 3
+									a(href="#") Link 4
+									a(href="#") Link 5
+						.dropdown
+							a(href="javascript:;").a-noline: span.sprite-basic-flag-en
+							.dropdown-content
+								.dropdown-content-color
+									a(href="#").a-noline: span.sprite-basic-flag-ru
+									a(href="#").a-noline: span.sprite-basic-flag-de
+									a(href="#").a-noline: span.sprite-basic-flag-zh
+
+
+
+	header(role='banner')
+		.container-basic
+			.d-table.container-full
+				.align-vertical
+					a(href="/").header-logo: img(alt="dApp logo", src="assets/i/logo-dapp.svg")
+				.align-vertical.t-align_right
+					nav.nav-g
+
+						.dropdown
+							a(href="javascript:;"): span.sprite-basic-i-menu-light
+							.dropdown-content
+								a(href="#") Link 1
+								a(href="#") Link 2
+								a(href="#") Link 3
+								a(href="#") Link 4
+								a(href="#") Link 5
+						.dropdown
+							a(href="javascript:;").a-noline: span.sprite-basic-flag-en
+							.dropdown-content
+								a(href="#").a-noline: span.sprite-basic-flag-ru
+								a(href="#").a-noline: span.sprite-basic-flag-de
+								a(href="#").a-noline: span.sprite-basic-flag-zh
