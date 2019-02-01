@@ -132,17 +132,17 @@ footer[role='contentinfo']
 
 section
   {
-    margin-top: $margin-sec;
-    margin-bottom: $margin-sec;
+    padding-top: $margin-sec;
+    padding-bottom: $margin-sec;
     position: relative;
 
     section
     {
-      margin-top: $vertical-rythm*0.8;
-      margin-bottom: $vertical-rythm*0.8;
+      padding-top: $vertical-rythm*0.8;
+      padding-bottom: $vertical-rythm*0.8;
 
-      &:first-child { margin-top: 0; }
-      &:last-child { margin-bottom: 0; }
+      &:first-child { padding-top: 0; }
+      &:last-child { padding-bottom: 0; }
 
       li, p, blockquote, .m-b-base
         {
@@ -159,7 +159,10 @@ section
   {
       background-color: #fff;
       color: $c-text-dark;
-      padding: 30px 24px !important;
+      padding: 40px 50px 50px !important;
+
+      margin-top: $margin-sec;
+      margin-bottom: $margin-sec;
   }
 
 /*====== end of Sections ======*/
