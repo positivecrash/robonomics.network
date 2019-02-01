@@ -22,6 +22,7 @@ body
     color: $c-text-light;
     background-color: $c-violet-dark;
     background-image: linear-gradient($c-violet-red, $c-violet-dark);
+    background-repeat: no-repeat;
 
     height: auto;
   }

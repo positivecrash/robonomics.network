@@ -2361,6 +2361,7 @@ body {
   color: #fff;
   background-color: #040A36;
   background-image: linear-gradient(#23133b, #040a36);
+  background-repeat: no-repeat;
   height: auto;
 }
 
