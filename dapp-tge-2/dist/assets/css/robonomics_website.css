@@ -1829,7 +1829,7 @@ input, select {
 /*====== Bootstrap ======*/
 /*====== Media queries ======*/
 /*====== Colors ======*/
-.sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-jp, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-i-checked, .sprite-basic-i-error, .sprite-basic-i-menu-dark, .sprite-basic-i-menu-light, .sprite-basic-logo-aira, .sprite-basic-logo-robonomics, .msg-error.msg-icon:before, .msg-ok.msg-icon:before {
+.sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-jp, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-i-check, .sprite-basic-i-checked, .sprite-basic-i-error, .sprite-basic-i-menu-dark, .sprite-basic-i-menu-light, .sprite-basic-logo-aira, .sprite-basic-logo-robonomics, .msg-error.msg-icon:before, .msg-ok.msg-icon:before, .input-checkbox label:before {
   background-image: url("../i/sprite.svg?6");
 }
 
@@ -1868,45 +1868,52 @@ input, select {
   display: inline-block;
 }
 
+.sprite-basic-i-check {
+  width: 13.758px;
+  height: 9.899px;
+  background-position: -150px 0px;
+  display: inline-block;
+}
+
 .sprite-basic-i-checked {
   width: 22.45px;
   height: 22.451px;
-  background-position: -150px 0px;
+  background-position: -164px 0px;
   display: inline-block;
 }
 
 .sprite-basic-i-error {
   width: 22.446px;
   height: 22.446px;
-  background-position: -173px 0px;
+  background-position: -187px 0px;
   display: inline-block;
 }
 
 .sprite-basic-i-menu-dark {
   width: 30px;
   height: 30px;
-  background-position: -196px 0px;
+  background-position: -210px 0px;
   display: inline-block;
 }
 
 .sprite-basic-i-menu-light {
   width: 30px;
   height: 19.2px;
-  background-position: -226px 0px;
+  background-position: -240px 0px;
   display: inline-block;
 }
 
 .sprite-basic-logo-aira {
   width: 25.257px;
   height: 25.257px;
-  background-position: -256px 0px;
+  background-position: -270px 0px;
   display: inline-block;
 }
 
 .sprite-basic-logo-robonomics {
   width: 33.481px;
   height: 29.491px;
-  background-position: -282px 0px;
+  background-position: -296px 0px;
   display: inline-block;
 }
 
@@ -1936,7 +1943,7 @@ h1, h2, h3, h4, h5, h6, .t-style_uppercase, .title-pale, table th, .msg-error .m
   margin-right: auto;
 }
 
-.header-logo, .header-title, nav.nav-g > *, .loading-logo {
+.input-checkbox label, .input-checkbox input[type=checkbox], .header-logo, .header-title, nav.nav-g > *, .loading-logo {
   display: inline-block;
   vertical-align: middle;
 }
@@ -2326,6 +2333,7 @@ table.clear th {
     transform: rotate(360deg);
   }
 }
+/*======== messages =========*/
 .msg-error, .msg-ok {
   border-width: 1px;
   border-style: solid;
@@ -2355,7 +2363,7 @@ table.clear th {
 .msg-error.msg-icon:before {
   width: 22.446px;
   height: 22.446px;
-  background-position: -173px 0px;
+  background-position: -187px 0px;
 }
 
 .msg-ok {
@@ -2367,9 +2375,48 @@ table.clear th {
 .msg-ok.msg-icon:before {
   width: 22.45px;
   height: 22.451px;
-  background-position: -150px 0px;
+  background-position: -164px 0px;
 }
 
+/*======== end of messages =========*/
+/*======== inputs =========*/
+.input-checkbox label {
+  position: relative;
+  padding-left: 30px;
+}
+.input-checkbox label:after {
+  content: "";
+  background-color: #fff;
+  border: 1px solid #707070;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+.input-checkbox label:before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 4px;
+  z-index: 1;
+  width: 13.758px;
+  height: 9.899px;
+  background-position: -150px 0px;
+  opacity: 0;
+}
+.input-checkbox input[type=checkbox] {
+  display: none;
+}
+.input-checkbox input[type=checkbox]:checked + label:after {
+  border-color: #54CE63;
+}
+.input-checkbox input[type=checkbox]:checked + label:before {
+  opacity: 1;
+}
+
+/*======== end of inputs =========*/
 html, body {
   height: 100%;
   min-height: 100%;

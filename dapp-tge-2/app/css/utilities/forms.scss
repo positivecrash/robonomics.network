@@ -1,3 +1,4 @@
+/*======== messages =========*/
 .msg-error, .msg-ok{
 	border-width: 1px;
 	border-style: solid;
@@ -45,6 +46,56 @@
 		@include get-sprite('i-checked');
 	}
 }
+/*======== end of messages =========*/
+
+
+/*======== inputs =========*/
+
+.input-checkbox
+	{
+		label, input[type=checkbox] {
+			@extend %d-inlineblock;
+		}
+
+		label{
+			position: relative;
+			padding-left: 30px;
+
+			&:after{
+				content:"";
+				background-color: #fff;
+				border: 1px solid $c-gray-dark;
+				width: 20px;
+				height: 20px;
+
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 0;
+			}
+
+			&:before{
+				content:"";
+				position: absolute;
+				left: 3px;
+				top: 4px;
+				z-index: 1;
+				@include get-sprite('i-check');
+				opacity: 0;
+			}
+		}
+
+		input[type=checkbox] {
+			display: none;
+
+			&:checked + label{
+				&:after { border-color: $c-green; }
+				&:before{ opacity: 1; }
+			}
+		}
+	}
+
+/*======== end of inputs =========*/
 
 
 // /*======== FORMS VARIABLES & MIXINS & EXTENDS =========*/
