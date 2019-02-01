@@ -1,4 +1,4 @@
-.msg-error{
+.msg-error, .msg-ok{
 	border-width: 1px;
 	border-style: solid;
 	padding: 20px;
@@ -8,6 +8,7 @@
 		font-weight: 500;
 	}
 }
+
 
 .msg-icon{
 	position: relative;
@@ -30,6 +31,18 @@
 
 	&.msg-icon:before{
 		@include get-sprite('i-error');
+	}
+}
+
+.msg-ok{
+	border-color: $c-green;
+
+	.msg-title{
+		color: $c-green;
+	}
+
+	&.msg-icon:before{
+		@include get-sprite('i-checked');
 	}
 }
 

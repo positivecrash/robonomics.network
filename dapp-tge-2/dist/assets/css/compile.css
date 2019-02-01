@@ -1829,7 +1829,7 @@ input, select {
 /*====== Bootstrap ======*/
 /*====== Media queries ======*/
 /*====== Colors ======*/
-.sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-jp, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-i-error, .sprite-basic-i-menu-dark, .sprite-basic-i-menu-light, .sprite-basic-logo-aira, .sprite-basic-logo-robonomics, .msg-error.msg-icon:before {
+.sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-jp, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-i-checked, .sprite-basic-i-error, .sprite-basic-i-menu-dark, .sprite-basic-i-menu-light, .sprite-basic-logo-aira, .sprite-basic-logo-robonomics, .msg-error.msg-icon:before, .msg-ok.msg-icon:before {
   background-image: url("../i/sprite.svg?6");
 }
 
@@ -1868,38 +1868,45 @@ input, select {
   display: inline-block;
 }
 
+.sprite-basic-i-checked {
+  width: 22.45px;
+  height: 22.451px;
+  background-position: -150px 0px;
+  display: inline-block;
+}
+
 .sprite-basic-i-error {
   width: 22.446px;
   height: 22.446px;
-  background-position: -150px 0px;
+  background-position: -173px 0px;
   display: inline-block;
 }
 
 .sprite-basic-i-menu-dark {
   width: 30px;
   height: 30px;
-  background-position: -173px 0px;
+  background-position: -196px 0px;
   display: inline-block;
 }
 
 .sprite-basic-i-menu-light {
   width: 30px;
   height: 19.2px;
-  background-position: -203px 0px;
+  background-position: -226px 0px;
   display: inline-block;
 }
 
 .sprite-basic-logo-aira {
   width: 25.257px;
   height: 25.257px;
-  background-position: -233px 0px;
+  background-position: -256px 0px;
   display: inline-block;
 }
 
 .sprite-basic-logo-robonomics {
   width: 33.481px;
   height: 29.491px;
-  background-position: -259px 0px;
+  background-position: -282px 0px;
   display: inline-block;
 }
 
@@ -1917,7 +1924,7 @@ a, a.a-noline, a:hover, a:focus, a:visited {
   text-decoration: none !important;
 }
 
-h1, h2, h3, h4, h5, h6, .t-style_uppercase, .title-pale, table th, .msg-error .msg-title, nav, .loading-logo:after {
+h1, h2, h3, h4, h5, h6, .t-style_uppercase, .title-pale, table th, .msg-error .msg-title, .msg-ok .msg-title, nav, .loading-logo:after {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -2312,12 +2319,12 @@ table.clear th {
     transform: rotate(360deg);
   }
 }
-.msg-error {
+.msg-error, .msg-ok {
   border-width: 1px;
   border-style: solid;
   padding: 20px;
 }
-.msg-error .msg-title {
+.msg-error .msg-title, .msg-ok .msg-title {
   font-weight: 500;
 }
 
@@ -2341,6 +2348,18 @@ table.clear th {
 .msg-error.msg-icon:before {
   width: 22.446px;
   height: 22.446px;
+  background-position: -173px 0px;
+}
+
+.msg-ok {
+  border-color: #54CE63;
+}
+.msg-ok .msg-title {
+  color: #54CE63;
+}
+.msg-ok.msg-icon:before {
+  width: 22.45px;
+  height: 22.451px;
   background-position: -150px 0px;
 }
 

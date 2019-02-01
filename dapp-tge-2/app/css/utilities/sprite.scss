@@ -1,15 +1,16 @@
 $icons: (
-    sprite: (width: 293px, height: 30px, pngPath: '../i/sprite.png?6', svgPath: '../i/sprite.svg?6'),
+    sprite: (width: 316px, height: 30px, pngPath: '../i/sprite.png?6', svgPath: '../i/sprite.svg?6'),
     flag-de: (width: 30px, height: 19.7px, backgroundX: 0px, backgroundY: 0px),
     flag-en: (width: 30px, height: 19.7px, backgroundX: -30px, backgroundY: 0px),
     flag-jp: (width: 30px, height: 20px, backgroundX: -60px, backgroundY: 0px),
     flag-ru: (width: 30px, height: 19.7px, backgroundX: -90px, backgroundY: 0px),
     flag-zh: (width: 30px, height: 19.7px, backgroundX: -120px, backgroundY: 0px),
-    i-error: (width: 22.446px, height: 22.446px, backgroundX: -150px, backgroundY: 0px),
-    i-menu-dark: (width: 30px, height: 30px, backgroundX: -173px, backgroundY: 0px),
-    i-menu-light: (width: 30px, height: 19.2px, backgroundX: -203px, backgroundY: 0px),
-    logo-aira: (width: 25.257px, height: 25.257px, backgroundX: -233px, backgroundY: 0px),
-    logo-robonomics: (width: 33.481px, height: 29.491px, backgroundX: -259px, backgroundY: 0px),
+    i-checked: (width: 22.45px, height: 22.451px, backgroundX: -150px, backgroundY: 0px),
+    i-error: (width: 22.446px, height: 22.446px, backgroundX: -173px, backgroundY: 0px),
+    i-menu-dark: (width: 30px, height: 30px, backgroundX: -196px, backgroundY: 0px),
+    i-menu-light: (width: 30px, height: 19.2px, backgroundX: -226px, backgroundY: 0px),
+    logo-aira: (width: 25.257px, height: 25.257px, backgroundX: -256px, backgroundY: 0px),
+    logo-robonomics: (width: 33.481px, height: 29.491px, backgroundX: -282px, backgroundY: 0px),
 );
 
 $sprite: map-get($icons, sprite);
@@ -48,6 +49,10 @@ $sprite: map-get($icons, sprite);
 }
 .sprite-basic-flag-zh{
   @include get-sprite('flag-zh');
+  display: inline-block;
+}
+.sprite-basic-i-checked{
+  @include get-sprite('i-checked');
   display: inline-block;
 }
 .sprite-basic-i-error{
