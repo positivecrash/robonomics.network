@@ -337,16 +337,14 @@ nav.nav-g
 
 
 
-.separator-dark, .separator-light
+.separator-dark, .separator-light, .separator-pale
   {
     height: 1px;
     background-color: $c-text;
   }
 
-.separator-light
-  {
-    background-color: #fff;
-  }
+.separator-light { background-color: #fff; }
+.separator-pale { background-color: $c-violet-pale; }
 
 .separator-animated
   {
