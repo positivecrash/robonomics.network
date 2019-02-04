@@ -6,9 +6,11 @@ window.addEventListener('load', function(){
 	// //show info by click, '0-show.js' required
 	// show('data-show');
 
-	document.querySelector('.disabled').addEventListener("click", function(event){
-	  event.preventDefault()
-	});
+	if( document.querySelector('.disabled')){
+		document.querySelector('.disabled').addEventListener("click", function(event){
+		  event.preventDefault()
+		});
+	}
 
 
 

@@ -68,9 +68,9 @@ a
 .t-style_breakwords { word-break: break-all; }
 .t-style_nowrap { white-space: nowrap; }
 
-.t-align_center { text-align: center; }
-.t-align_right { text-align: right; }
-.t-align_left { text-align: left; }
+.t-align_center { text-align: center !important; }
+.t-align_right { text-align: right !important; }
+.t-align_left { text-align: left !important; }
 
 .t-style_uppercase { @extend %text_uppercase; }
 
@@ -84,6 +84,19 @@ a
 	{
 	  color: $c-violet-pale;
 	  @extend %text_uppercase;
+	}
+
+
+.t-color-red, a.t-color-red { color: $c-red; }
+.t-color-green, a.t-color-green { color: $c-green; }
+
+
+.code-overflow-line
+	{
+		max-width: 100%;
+		overflow-x: auto;
+		display: block;
+		white-space: nowrap;
 	}
 
 /*====== end of Text styles ======*/
@@ -189,15 +202,6 @@ table
 
 
 .i-block { @extend %i-block; }
-
-
-.section-overflowtext
-	{
-		border: 1px solid $c-gray;
-		padding: 20px;
-		max-height: 420px;
-		overflow-y: auto;
-	}
 
 /*====== end of Text elements ======*/
 
