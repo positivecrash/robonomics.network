@@ -133,6 +133,13 @@ code
 	    word-break: break-all;
 	}
 
+hr{
+	background-color: $c-gray;
+	border: 0;
+	height: 1px;
+	margin-top: $vertical-rythm;
+	margin-bottom: $vertical-rythm;
+}
 
 table
 	{

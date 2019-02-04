@@ -1917,7 +1917,7 @@ input, select {
   display: inline-block;
 }
 
-body {
+body, .btn-green, input[type="submit"], input[type="button"], .btn-green::placeholder, input[type="submit"]::placeholder, input[type="button"]::placeholder {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -1926,12 +1926,12 @@ body {
   letter-spacing: 0;
 }
 
-a, a.a-noline, a:hover, a:focus, a:visited {
+a, a.a-noline, .btn-green, input[type="submit"], input[type="button"], a:hover, .btn-green:hover, input[type="submit"]:hover, input[type="button"]:hover, a:focus, .btn-green:focus, input[type="submit"]:focus, input[type="button"]:focus, a:visited, .btn-green:visited, input[type="submit"]:visited, input[type="button"]:visited {
   text-decoration: none;
   text-decoration: none !important;
 }
 
-h1, h2, h3, h4, h5, h6, .t-style_uppercase, .title-pale, table th, .msg-error .msg-title, .msg-ok .msg-title, nav, .loading-logo:after {
+h1, h2, h3, h4, h5, h6, .t-style_uppercase, .title-pale, table th, .msg-error .msg-title, .msg-ok .msg-title, .btn-green, input[type="submit"], input[type="button"], nav, .loading-logo:after {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -1943,7 +1943,7 @@ h1, h2, h3, h4, h5, h6, .t-style_uppercase, .title-pale, table th, .msg-error .m
   margin-right: auto;
 }
 
-.input-checkbox label, .input-checkbox input[type=checkbox], .header-logo, .header-title, nav.nav-g > *, .loading-logo {
+.input-checkbox label, .input-checkbox input[type=checkbox], .input-radio label, .input-radio input[type=radio], .header-logo, .header-title, nav.nav-g > *, .loading-logo {
   display: inline-block;
   vertical-align: middle;
 }
@@ -2076,6 +2076,14 @@ blockquote {
 code {
   max-height: 120px;
   word-break: break-all;
+}
+
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 table td, table th {
@@ -2399,7 +2407,7 @@ table.clear th {
   content: "";
   position: absolute;
   left: 3px;
-  top: 4px;
+  top: 5px;
   z-index: 1;
   width: 13.758px;
   height: 9.899px;
@@ -2416,7 +2424,87 @@ table.clear th {
   opacity: 1;
 }
 
+.input-radio label {
+  position: relative;
+  padding-left: 30px;
+}
+.input-radio label:after {
+  content: "";
+  background-color: #fff;
+  border: 1px solid #707070;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+.input-radio label:before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  z-index: 1;
+  background-color: #54CE63;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  opacity: 0;
+}
+.input-radio input[type=radio] {
+  display: none;
+}
+.input-radio input[type=radio]:checked + label:after {
+  border-color: #54CE63;
+}
+.input-radio input[type=radio]:checked + label:before {
+  opacity: 1;
+}
+
 /*======== end of inputs =========*/
+/*======== buttons =========*/
+.btn-green, input[type="submit"], input[type="button"] {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding: 4px 15px;
+}
+[disabled].btn-green, input[disabled][type="submit"], input[disabled][type="button"], [disabled].btn-green:hover, input[disabled][type="submit"]:hover, input[disabled][type="button"]:hover, .disabled.btn-green, input.disabled[type="submit"], input.disabled[type="button"], .disabled.btn-green:hover, input.disabled[type="submit"]:hover, input.disabled[type="button"]:hover {
+  cursor: default;
+}
+.btn-green::placeholder, input[type="submit"]::placeholder, input[type="button"]::placeholder {
+  font-size: 16px;
+  color: #707070;
+}
+
+.btn-green, input[type="submit"], input[type="button"] {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+.btn-green, input[type="submit"], input[type="button"], .btn-green:hover, input[type="submit"]:hover, input[type="button"]:hover {
+  color: #fff;
+}
+[disabled].btn-green, input[disabled][type="submit"], input[disabled][type="button"], [disabled].btn-green:hover, input[disabled][type="submit"]:hover, input[disabled][type="button"]:hover, .disabled.btn-green, input.disabled[type="submit"], input.disabled[type="button"], .disabled.btn-green:hover, input.disabled[type="submit"]:hover, input.disabled[type="button"]:hover {
+  background-color: #ccc;
+}
+
+.btn-green, input[type="submit"], input[type="button"] {
+  background-color: #54CE63;
+}
+.btn-green:hover, input[type="submit"]:hover, input[type="button"]:hover {
+  background-color: #35ba46;
+}
+
+/*======== end of buttons =========*/
 html, body {
   height: 100%;
   min-height: 100%;
@@ -2553,6 +2641,12 @@ section section li:last-child, section section p:last-child, section section blo
   padding: 40px 50px 50px !important;
   margin-top: 60px;
   margin-bottom: 60px;
+}
+.section-white:first-child {
+  margin-top: 0;
+}
+.section-white:last-child {
+  margin-bottom: 0;
 }
 
 /*====== end of Sections ======*/

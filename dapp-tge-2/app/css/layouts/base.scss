@@ -163,6 +163,8 @@ section
 
       margin-top: $margin-sec;
       margin-bottom: $margin-sec;
+      &:first-child { margin-top: 0; }
+      &:last-child { margin-bottom: 0; }
   }
 
 /*====== end of Sections ======*/
