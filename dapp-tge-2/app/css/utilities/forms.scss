@@ -255,6 +255,16 @@ input:not([type='submit']):not([type='button'])
 	}
 }
 
+.btn-blue{
+	@extend %form_all_base;
+	@extend %form_button_base;
+	background-color: $c-blue;
+
+	&:hover{
+		background-color: darken($c-blue, 10%);
+	}
+}
+
 /*======== end of buttons =========*/
 
 
