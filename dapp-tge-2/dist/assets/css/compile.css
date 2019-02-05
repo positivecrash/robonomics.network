@@ -2109,6 +2109,10 @@ hr {
   margin-bottom: 24px;
 }
 
+table {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
 table td, table th {
   vertical-align: top;
   padding: 24px 16.8px;
@@ -2131,35 +2135,52 @@ table th {
   text-align: left;
   background: #F2F2F2;
 }
-table.responsive td:before {
+table caption {
+  font-weight: 500;
+  text-align: left;
+  padding-bottom: 4px;
+  color: #707070;
+}
+table.table-responsive td:before {
   content: attr(data-th) ": ";
-  font-weight: bold;
+  font-weight: 500;
   margin-right: 30px;
   display: none;
 }
 @media (max-width: 768px) {
-  table.responsive th {
+  table.table-responsive th {
     display: none;
   }
-  table.responsive td {
+  table.table-responsive td {
     display: block;
+    background-color: transparent !important;
   }
-  table.responsive td:first-child {
-    background-color: #F2F2F2;
+  table.table-responsive td:first-child {
+    background-color: #ccc !important;
   }
-  table.responsive td:before {
+  table.table-responsive td:before {
     display: inline-block;
   }
 }
-table.clear td, table.clear th {
+table.table-clear td, table.table-clear th {
   padding: 5px 24px 2px 0;
   border: 0;
 }
-table.clear th {
+table.table-clear th {
   background: transparent;
   text-transform: none;
   letter-spacing: 0;
   font-weight: 500;
+}
+table.table-spotted th {
+  background-color: #ccc;
+}
+table.table-spotted tbody tr:nth-child(even) {
+  background-color: #F2F2F2;
+}
+table.table-compact td, table.table-compact th {
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 /*====== end of Text elements ======*/
@@ -2529,6 +2550,10 @@ input:not([type='submit']):not([type='button']):focus {
 }
 input:not([type='submit']):not([type='button']).input-size_sm {
   width: 105px;
+  max-width: 100%;
+}
+input:not([type='submit']):not([type='button']).input-size_md {
+  width: 340px;
   max-width: 100%;
 }
 

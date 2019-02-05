@@ -159,6 +159,9 @@ hr{
 table
 	{
 
+		margin-top: $margin-sec;
+		margin-bottom: $margin-sec;
+
 		td, th {
 			vertical-align: top;
 			padding: $vertical-rythm $vertical-rythm * 0.7;
@@ -182,11 +185,18 @@ table
 			background: $c-gray-light;
 		}
 
-		&.responsive{
+		caption{
+			font-weight: 500;
+			text-align: left;
+			padding-bottom: 4px;
+			color: $c-gray-dark;
+		}
+
+		&.table-responsive{
 			@include responsiveTable($mq-tablet);
 		}
 
-		&.clear
+		&.table-clear
 			{
 				td, th{
 					padding: 5px $vertical-rythm 2px 0;
@@ -200,6 +210,25 @@ table
 					font-weight: 500;
 				}
 			}
+
+		&.table-spotted
+			{
+				th { background-color: $c-gray; }
+
+				tbody tr{
+					&:nth-child(even){
+						background-color: $c-gray-light;
+					}
+				}
+
+			}
+
+		&.table-compact{
+			td, th {
+				padding-top: $vertical-rythm * 0.5;
+				padding-bottom: $vertical-rythm * 0.5;
+			}
+		}
 	}
 
 

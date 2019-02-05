@@ -156,9 +156,10 @@ block content
 
 	section
 		.container-basic
-			h1 Варианты input
 
 			section.section-white
+				h1 Варианты input
+
 				p.input-checkbox
 					input(type="checkbox", name="check1", id="check1")
 					label(for="check1") I confirm something
@@ -174,10 +175,141 @@ block content
 
 				hr/
 				
+				p: input(type="text", placeholder="Placeholder here")
+				p: input.input-size_sm(type="number", placeholder="10", min="0.1")
+				p: input.input-size_md(type="text", placeholder="Input middle size")
+				p: input.container-full.t-align_left(type="text", placeholder="Input full size, text align left (optional)")
+
+				hr/
+				
 				p: a.btn-green(href="#") Submit link
 				p: input(type="submit", value="Submit input[submit]")
 				p: input(type="button", value="Submit input[button]")
 				p: a.btn-green.disabled(href="#") Submit link disabled
 				p: input(type="submit", value="Submit input[submit] disabled", disabled)
 				p: input(type="button", value="Submit input[button] disabled", disabled)
+				p: a.btn-blue(href="#") Secondary link
+				p: a.btn-blue.d-block(href="#") Fullwidth
+
+
+	section
+		.container-basic
+			section.section-white
+				h1 Таблицы
+
+				table
+					thead
+						tr
+							th Заголовок 1
+							th Заголовок 2
+							th Заголовок 3
+							th Заголовок 4
+					tbody
+						tr
+							td Lorem
+							td
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							td Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							td Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						tr
+							td Lorem
+							td
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							td Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							td Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						tr
+							td Lorem
+							td
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							td Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							td Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+				table.table-spotted.table-compact
+					caption.t-color-red Compact, spotted, with caption
+					thead
+						tr
+							th Заголовок 1
+							th Заголовок 2
+							th Заголовок 3
+							th Заголовок 4
+					tbody
+						tr
+							td Lorem
+							td Lorem
+							td Lorem
+							td Lorem
+						tr
+							td Lorem
+							td Lorem
+							td Lorem
+							td Lorem
+						tr
+							td Lorem
+							td Lorem
+							td Lorem
+							td Lorem
+
+				table.table-spotted.table-compact.table-responsive
+					caption
+						span.t-color-red Responsive
+						|, compact, spotted, with caption
+					thead
+						tr
+							th Заголовок 1
+							th Заголовок 2
+							th Заголовок 3
+							th Заголовок 4
+					tbody
+						tr
+							td(data-th="Заголовок 1") Lorem
+							td(data-th="Заголовок 2") Lorem
+							td(data-th="Заголовок 3") Lorem
+							td(data-th="Заголовок 4") Lorem
+						tr
+							td(data-th="Заголовок 1") Lorem
+							td(data-th="Заголовок 2") Lorem
+							td(data-th="Заголовок 3") Lorem
+							td(data-th="Заголовок 4") Lorem
+						tr
+							td(data-th="Заголовок 1") Lorem
+							td(data-th="Заголовок 2") Lorem
+							td(data-th="Заголовок 3") Lorem
+							td(data-th="Заголовок 4") Lorem
+
+
+				table.table-clear.table-responsive
+					caption
+						span.t-color-red Clear
+						|, responsive, with caption
+					thead
+						tr
+							th Заголовок 1
+							th Заголовок 2
+							th Заголовок 3
+							th Заголовок 4
+					tbody
+						tr
+							td(data-th="Заголовок 1") Lorem
+							td(data-th="Заголовок 2") Lorem
+							td(data-th="Заголовок 3") Lorem
+							td(data-th="Заголовок 4") Lorem
+						tr
+							td(data-th="Заголовок 1") Lorem
+							td(data-th="Заголовок 2") Lorem
+							td(data-th="Заголовок 3") Lorem
+							td(data-th="Заголовок 4") Lorem
+						tr
+							td(data-th="Заголовок 1") Lorem
+							td(data-th="Заголовок 2") Lorem
+							td(data-th="Заголовок 3") Lorem
+							td(data-th="Заголовок 4") Lorem
+
+
 

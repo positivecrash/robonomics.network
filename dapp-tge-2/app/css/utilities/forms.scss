@@ -237,6 +237,11 @@ input:not([type='submit']):not([type='button'])
 				width: 105px;
 				max-width: 100%;
 			}
+
+		&.input-size_md{
+			width: 340px;
+			max-width: 100%;
+		}
 	}
 
 /*======== end of inputs =========*/

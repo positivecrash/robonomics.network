@@ -11,7 +11,7 @@
 @mixin responsiveTable($breakpoint){
   td:before {
       content: attr(data-th)": ";
-      font-weight: bold;
+      font-weight: 500;
       margin-right: 30px;
       display: none;
   }
@@ -21,11 +21,12 @@
     th { display: none; }
 
     td { 
-      display: block; 
+      display: block;
+      background-color: transparent !important;
 
 
       &:first-child{
-      	background-color: $c-gray-light;
+      	background-color: $c-gray !important;
       }
       
       &:before{

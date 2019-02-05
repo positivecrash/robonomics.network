@@ -139,8 +139,8 @@
     </section>
     <section>
       <div class="container-basic">
-        <h1>Варианты input</h1>
         <section class="section-white">
+          <h1>Варианты input</h1>
           <p class="input-checkbox">
             <input type="checkbox" name="check1" id="check1">
             <label for="check1">I confirm something</label>
@@ -152,6 +152,19 @@
           <p class="input-radio">
             <input type="radio" name="radiotest" id="radio2">
             <label for="radio2">I choose something</label>
+          </p>
+          <hr/>
+          <p>
+            <input type="text" placeholder="Placeholder here">
+          </p>
+          <p>
+            <input class="input-size_sm" type="number" placeholder="10" min="0.1">
+          </p>
+          <p>
+            <input class="input-size_md" type="text" placeholder="Input middle size">
+          </p>
+          <p>
+            <input class="container-full t-align_left" type="text" placeholder="Input full size, text align left (optional)">
           </p>
           <hr/>
           <p><a class="btn-green" href="#">Submit link</a></p>
@@ -168,6 +181,150 @@
           <p>
             <input type="button" value="Submit input[button] disabled" disabled>
           </p>
+          <p><a class="btn-blue" href="#">Secondary link</a></p>
+          <p><a class="btn-blue d-block" href="#">Fullwidth</a></p>
+        </section>
+      </div>
+    </section>
+    <section>
+      <div class="container-basic">
+        <section class="section-white">
+          <h1>Таблицы</h1>
+          <table>
+            <thead>
+              <tr>
+                <th>Заголовок 1</th>
+                <th>Заголовок 2</th>
+                <th>Заголовок 3</th>
+                <th>Заголовок 4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lorem</td>
+                <td>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+              </tr>
+              <tr>
+                <td>Lorem</td>
+                <td>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+              </tr>
+              <tr>
+                <td>Lorem</td>
+                <td>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table-spotted table-compact">
+            <caption class="t-color-red">Compact, spotted, with caption</caption>
+            <thead>
+              <tr>
+                <th>Заголовок 1</th>
+                <th>Заголовок 2</th>
+                <th>Заголовок 3</th>
+                <th>Заголовок 4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lorem</td>
+                <td>Lorem</td>
+                <td>Lorem</td>
+                <td>Lorem</td>
+              </tr>
+              <tr>
+                <td>Lorem</td>
+                <td>Lorem</td>
+                <td>Lorem</td>
+                <td>Lorem</td>
+              </tr>
+              <tr>
+                <td>Lorem</td>
+                <td>Lorem</td>
+                <td>Lorem</td>
+                <td>Lorem</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table-spotted table-compact table-responsive">
+            <caption><span class="t-color-red">Responsive</span>, compact, spotted, with caption</caption>
+            <thead>
+              <tr>
+                <th>Заголовок 1</th>
+                <th>Заголовок 2</th>
+                <th>Заголовок 3</th>
+                <th>Заголовок 4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-th="Заголовок 1">Lorem</td>
+                <td data-th="Заголовок 2">Lorem</td>
+                <td data-th="Заголовок 3">Lorem</td>
+                <td data-th="Заголовок 4">Lorem</td>
+              </tr>
+              <tr>
+                <td data-th="Заголовок 1">Lorem</td>
+                <td data-th="Заголовок 2">Lorem</td>
+                <td data-th="Заголовок 3">Lorem</td>
+                <td data-th="Заголовок 4">Lorem</td>
+              </tr>
+              <tr>
+                <td data-th="Заголовок 1">Lorem</td>
+                <td data-th="Заголовок 2">Lorem</td>
+                <td data-th="Заголовок 3">Lorem</td>
+                <td data-th="Заголовок 4">Lorem</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table-clear table-responsive">
+            <caption><span class="t-color-red">Clear</span>, responsive, with caption</caption>
+            <thead>
+              <tr>
+                <th>Заголовок 1</th>
+                <th>Заголовок 2</th>
+                <th>Заголовок 3</th>
+                <th>Заголовок 4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-th="Заголовок 1">Lorem</td>
+                <td data-th="Заголовок 2">Lorem</td>
+                <td data-th="Заголовок 3">Lorem</td>
+                <td data-th="Заголовок 4">Lorem</td>
+              </tr>
+              <tr>
+                <td data-th="Заголовок 1">Lorem</td>
+                <td data-th="Заголовок 2">Lorem</td>
+                <td data-th="Заголовок 3">Lorem</td>
+                <td data-th="Заголовок 4">Lorem</td>
+              </tr>
+              <tr>
+                <td data-th="Заголовок 1">Lorem</td>
+                <td data-th="Заголовок 2">Lorem</td>
+                <td data-th="Заголовок 3">Lorem</td>
+                <td data-th="Заголовок 4">Lorem</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
       </div>
     </section>
