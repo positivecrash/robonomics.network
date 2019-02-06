@@ -232,16 +232,40 @@ input:not([type='submit']):not([type='button'])
 	  		border-color: $c-text-dark;
 	  	}
 
-		&.input-size_sm
-			{
-				width: 105px;
-				max-width: 100%;
-			}
+	}
 
-		&.input-size_md{
-			width: 340px;
-			max-width: 100%;
-		}
+
+select{
+	@extend %form_all_base;
+	@extend %form_input_base;
+
+	appearance: none;
+	-webkit-appearance: none;
+
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
+	margin: 0;
+	outline: none;
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+	&::-ms-expand { display: none; } /*ie fix*/
+
+	background-image: image-url('select.png');
+	padding: 6px;
+    padding-right: 24px;
+}
+
+.input-size_sm
+	{
+		width: 105px;
+		max-width: 100%;
+	}
+
+.input-size_md
+	{
+		width: 340px;
+		max-width: 100%;
 	}
 
 /*======== end of inputs =========*/

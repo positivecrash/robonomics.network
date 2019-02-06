@@ -1917,7 +1917,7 @@ input, select {
   display: inline-block;
 }
 
-body, input:not([type='submit']):not([type='button']), .btn-green, input[type="submit"], input[type="button"], .btn-blue, input:not([type='button']):not([type='submit'])::placeholder, .btn-green::placeholder, input[type="submit"]::placeholder, input[type="button"]::placeholder, .btn-blue::placeholder {
+body, input:not([type='submit']):not([type='button']), select, .btn-green, input[type="submit"], input[type="button"], .btn-blue, input:not([type='button']):not([type='submit'])::placeholder, select::placeholder, .btn-green::placeholder, input[type="submit"]::placeholder, input[type="button"]::placeholder, .btn-blue::placeholder {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -1931,7 +1931,7 @@ a, a.a-noline, .btn-green, input[type="submit"], input[type="button"], .btn-blue
   text-decoration: none !important;
 }
 
-h1, h2, h3, h4, h5, h6, .t-style_uppercase, .title-pale, table th, input:not([type='submit']):not([type='button']), .btn-green, input[type="submit"], input[type="button"], .btn-blue, .msg-error .msg-title, .msg-ok .msg-title, nav, .loading-logo:after, .tge-finish_contribution {
+h1, h2, h3, h4, h5, h6, .t-style_uppercase, .title-pale, table th, input:not([type='submit']):not([type='button']), select, .btn-green, input[type="submit"], input[type="button"], .btn-blue, .msg-error .msg-title, .msg-ok .msg-title, nav, .loading-logo:after, .tge-finish_contribution {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -2378,7 +2378,7 @@ table.table-compact td, table.table-compact th {
     transform: rotate(360deg);
   }
 }
-input:not([type='submit']):not([type='button']), .btn-green, input[type="submit"], input[type="button"], .btn-blue {
+input:not([type='submit']):not([type='button']), select, .btn-green, input[type="submit"], input[type="button"], .btn-blue {
   font-size: 16px;
   font-weight: 500;
   text-align: center;
@@ -2388,15 +2388,15 @@ input:not([type='submit']):not([type='button']), .btn-green, input[type="submit"
   box-sizing: border-box;
   padding: 4px 15px;
 }
-input[disabled]:not([type='submit']):not([type='button']), [disabled].btn-green, input[disabled][type="submit"], input[disabled][type="button"], [disabled].btn-blue, input[disabled]:hover:not([type='submit']):not([type='button']), [disabled].btn-green:hover, input[disabled][type="submit"]:hover, input[disabled][type="button"]:hover, [disabled].btn-blue:hover, input.disabled:not([type='submit']):not([type='button']), .disabled.btn-green, input.disabled[type="submit"], input.disabled[type="button"], .disabled.btn-blue, input.disabled:hover:not([type='submit']):not([type='button']), .disabled.btn-green:hover, input.disabled[type="submit"]:hover, input.disabled[type="button"]:hover, .disabled.btn-blue:hover {
+input[disabled]:not([type='submit']):not([type='button']), select[disabled], [disabled].btn-green, input[disabled][type="submit"], input[disabled][type="button"], [disabled].btn-blue, input[disabled]:hover:not([type='submit']):not([type='button']), select[disabled]:hover, [disabled].btn-green:hover, input[disabled][type="submit"]:hover, input[disabled][type="button"]:hover, [disabled].btn-blue:hover, input.disabled:not([type='submit']):not([type='button']), select.disabled, .disabled.btn-green, input.disabled[type="submit"], input.disabled[type="button"], .disabled.btn-blue, input.disabled:hover:not([type='submit']):not([type='button']), select.disabled:hover, .disabled.btn-green:hover, input.disabled[type="submit"]:hover, input.disabled[type="button"]:hover, .disabled.btn-blue:hover {
   cursor: default;
 }
-input:not([type='button']):not([type='submit'])::placeholder, .btn-green::placeholder, input[type="submit"]::placeholder, input[type="button"]::placeholder, .btn-blue::placeholder {
+input:not([type='button']):not([type='submit'])::placeholder, select::placeholder, .btn-green::placeholder, input[type="submit"]::placeholder, input[type="button"]::placeholder, .btn-blue::placeholder {
   font-size: 16px;
   color: #707070;
 }
 
-input:not([type='submit']):not([type='button']) {
+input:not([type='submit']):not([type='button']), select {
   background-color: #fff;
   border: 1px solid #707070;
   color: #000;
@@ -2548,11 +2548,32 @@ input:not([type='submit']):not([type='button'])[disabled], input:not([type='subm
 input:not([type='submit']):not([type='button']):focus {
   border-color: #000;
 }
-input:not([type='submit']):not([type='button']).input-size_sm {
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+  outline: none;
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  /*ie fix*/
+  background-image: url('../i/select.png?1549473096');
+  padding: 6px;
+  padding-right: 24px;
+}
+select::-ms-expand {
+  display: none;
+}
+
+.input-size_sm {
   width: 105px;
   max-width: 100%;
 }
-input:not([type='submit']):not([type='button']).input-size_md {
+
+.input-size_md {
   width: 340px;
   max-width: 100%;
 }
