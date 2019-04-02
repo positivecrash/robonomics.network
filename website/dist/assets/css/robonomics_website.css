@@ -2392,6 +2392,13 @@ input:not([type='submit']):not([type='button']).inp-placeholder-small::placehold
   line-height: 1.2;
   text-align: left;
 }
+input:not([type='submit']):not([type='button']).inp-vivid {
+  border-width: 2px;
+  border-color: #323234;
+}
+input:not([type='submit']):not([type='button']).inp-vivid::placeholder {
+  color: #323234;
+}
 
 /*======== BUTTONS =========*/
 input[type='submit'], input[type='button'], button, a.btn-green {

@@ -137,7 +137,16 @@ input:not([type='submit']):not([type='button']){
 	  		line-height: 1.2;
 	  		text-align: left;
 	  	}
-}
+	}
+
+	&.inp-vivid{
+		border-width: 2px;
+		border-color: $c-gray-dark;
+
+		&::placeholder{
+			color: $c-gray-dark;
+		}
+	}
 }
 
 
