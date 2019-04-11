@@ -2653,7 +2653,6 @@ body {
   animation: 0.4s FadeIn ease-in forwards;
   color: #fff;
   background-color: #03A5ED;
-  height: auto;
 }
 body a {
   color: #fff;
@@ -2702,6 +2701,12 @@ header[role='banner'] {
   padding-bottom: 50px;
   position: relative;
   z-index: 1;
+}
+header[role='banner'].header-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 footer[role='contentinfo'] {
@@ -2766,6 +2771,10 @@ main[role='main'] {
 /*====== Transitions ======*/
 /*====== end of Transitions ======*/
 /*====== Bootstrap ======*/
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
 @media screen and (max-width: 576px) {
   .row *[class*='col-md'] {
     margin-bottom: 24px;
@@ -2864,6 +2873,12 @@ section section li:last-child, section section p:last-child, section section blo
 }
 .section-white.section-small:last-child, .section-bordered.section-small:last-child {
   margin-bottom: 0;
+}
+
+.section-screen {
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
 }
 
 /*====== end of Sections ======*/
@@ -2986,6 +3001,7 @@ nav.nav-g > *:last-child {
 }
 
 /*====== end of Loading ======*/
+/* Sensor sidebar */
 .sensor-sidebar section {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -3014,4 +3030,21 @@ nav.nav-g > *:last-child {
   font-size: 2.5rem;
   line-height: 1;
   text-transform: uppercase;
+}
+
+/* Sensor content */
+#sensor-wrap {
+  padding-top: 7.5rem;
+}
+
+#sensor-content-chart {
+  position: relative;
+  height: 60%;
+  background-color: red;
+}
+
+#sensor-content-info {
+  position: relative;
+  height: 40%;
+  background-color: blue;
 }

@@ -6,21 +6,36 @@ window.addEventListener('load', function(){
 	// //show info by click, '0-show.js' required
 	// show('data-show');
 
-	if( document.querySelector('.disabled')){
-		document.querySelector('.disabled').addEventListener("click", function(event){
-		  event.preventDefault()
+	// if( document.querySelector('.disabled')){
+	// 	document.querySelector('.disabled').addEventListener("click", function(event){
+	// 	  event.preventDefault()
+	// 	});
+	// }
+
+
+
+	/*
+	Check elemen in view
+	0-inview.js
+	*/
+	function IfInView(){
+		var 
+			el = document.querySelectorAll('.js-checkInView'),
+			classview = 'isInView';
+
+		el.forEach(function(item){
+			if(visibleY(item))
+				item.classList.add(classview);
 		});
 	}
+
+	IfInView();
+	document.addEventListener('scroll', IfInView);
+	document.addEventListener('resize', IfInView);
 
 
 
 }, false);
-function getCookie(name) {
-  var matches = document.cookie.match(new RegExp(
-    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-  ));
-  return matches ? decodeURIComponent(matches[1]) : undefined;
-}
 /*
 Took on  https://stackoverflow.com/questions/487073/check-if-element-is-visible-after-scrolling
 demo - http://jsfiddle.net/W33YR/411/
@@ -112,46 +127,37 @@ var sort = function(tagLink, tagSec, active){
 
 	
 }
-/* 0-cookie.js requires */
+function openTab(evt, tabID) {
 
-window.addEventListener('load', function(){
-	var
-		agreementMsg      = document.querySelector('#js-cookiePolicy'),
-		agreementBtn      = document.querySelector('#js-cookiePolicy .btn'),
-		agreementCookie   = 'policy';
+    var i, tabcontent, tablinks;
 
-		if (agreementMsg && agreementBtn){
-			if(!getCookie(agreementCookie))
-				agreementMsg.style.display = 'block';
+    tabcontent = document.getElementsByClassName("js-tabcontent");
 
-			agreementBtn.addEventListener('click', function(){
-				var date = new Date(new Date().getTime() + 3600 * 1000 * 24 * 365);
-				document.cookie = agreementCookie+'=true; expires=' + date.toUTCString();
-				agreementMsg.style.display = 'none';
-			});
-		}
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
 
-		console.log(getCookie(agreementCookie));
-}, false);
-window.addEventListener('load', function(){
 
-	/*
-	Check elemen in view
-	0-inview.js
-	*/
-	function IfInView(){
-		var 
-			el = document.querySelectorAll('.js-checkInView'),
-			classview = 'isInView';
+    tablinks = document.getElementsByClassName("js-tablink");
 
-		el.forEach(function(item){
-			if(visibleY(item))
-				item.classList.add(classview);
-		});
-	}
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
 
-	IfInView();
-	document.addEventListener('scroll', IfInView);
-	document.addEventListener('resize', IfInView);
+    document.getElementById(tabID).style.display = "block";
+    evt.currentTarget.className += " active";
+}
 
-}, false);
+
+/*
+Usage:
+
+<a href="#" class="tablink active" onclick="openTab(event, 'Tab1')">Tab1Name</a>
+<a href="#" class="tablink" onclick="openTab(event, 'Tab2')">Tab2Name</a>
+<a href="#" class="tablink" onclick="openTab(event, 'Tab3')">Tab3Name</a>
+
+<div id="Tab1" class="tabcontent" style="display:block"></div>
+<div id="Tab2" class="tabcontent"></div>
+<div id="Tab3" class="tabcontent"></div>
+
+*/

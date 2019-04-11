@@ -22,8 +22,6 @@ body
     color: $c-text-light;
     background-color: $c-blue;
 
-    height: auto;
-
     a{
       color: #fff;
 
@@ -63,6 +61,13 @@ body
 /*====== Set width of container ======*/
 .container-basic { @include secw($mq-desktop); }
 .container-full {  width: 100%; box-sizing: border-box; }
+.container-paddings
+  {
+    padding-left: $padding-fields; 
+    padding-right: $padding-fields; 
+    margin-left: auto;
+    margin-right: auto;
+  }
 /*====== end of Set width of container ======*/
 
 
@@ -76,6 +81,14 @@ header[role='banner']
 
     position: relative;
     z-index: 1;
+
+    &.header-absolute
+      {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
   }
 
 footer[role='contentinfo']
@@ -151,6 +164,9 @@ main[role='main']
 /*====== Bootstrap ======*/
 .row
   {
+
+    margin-left: 0;
+    margin-right: 0;
 
     @media screen and (max-width: $bootstrap-sm){
       *[class*='col-md']
@@ -253,6 +269,14 @@ section
     margin-bottom: $margin-sec*0.3;
     &:first-child { margin-top: 0; }
     &:last-child { margin-bottom: 0; }
+  }
+
+
+.section-screen
+  {
+    box-sizing: border-box;
+    height: 100%;
+    position: relative;
   }
 
 

@@ -40,8 +40,8 @@ var path = {
     },
 
     filename:{
-        css: 'robonomics_website',
-        js: 'robonomics_plugins.js'
+        css: 'website',
+        js: 'plugins.js'
     }
 
 }

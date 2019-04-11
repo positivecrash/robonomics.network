@@ -1,4 +1,4 @@
-extends extends/layout_header_2.pug
+extends extends/layout_blank.pug
 
 block head
 	- var pageTitle = 'Sensor Page'
@@ -8,31 +8,80 @@ block html
 	- var bodyclass = 'body-background'
 
 block content
+	
+	header.header-absolute(role='banner')
+		.container-paddings
+			.d-table.container-full
+				.align-vertical
+					a(href="/").header-logo: img(alt="dApp logo", src="assets/i/logo-dapp.svg")
+					.header-title
+						b ROBONOMICS SENSORS NETWORK
+				.align-vertical.t-align_right
+					b 21.03.2019
+	.row.section-screen#sensor-wrap
+		.col-md-10
+			#sensor-content-chart
 
-	.container-basic
-		.row
-			.col-md-10 dlffpd
-			.col-md-2.sensor-sidebar
-				section.sec-icon
-					.sec-icon--icon
-						span.sprite-basic-i-temp
-					.sec-icon--content
-						.sec-icon--title температура
-						.sec-icon--text +1 °C
+			#sensor-content-info
 
-				section.sec-icon
-					.sec-icon--icon
-						span.sprite-basic-i-pressure
-					.sec-icon--content
-						.sec-icon--title давление
-						.sec-icon--text 761 мм
+				a(href="javascript:;", onclick="openTab(event, 'tab1')").js-tablink.active.sensor-tablink
 
-				section.sec-icon
-					.sec-icon--icon
-						span.sprite-basic-i-humidity
-					.sec-icon--content
-						.sec-icon--title влажность
-						.sec-icon--text 86%
+					span.sensor-tablink-sign.status-up &uarr;
+					span.sensor-tablink-text
+						| PM
+						sub 1
+
+				a(href="javascript:;", onclick="openTab(event, 'tab2')").js-tablink.sensor-tablink
+					span.sensor-tablink-sign.status-up &uarr;
+					span.sensor-tablink-text
+						| PM
+						sub 2.5
+
+				a(href="javascript:;", onclick="openTab(event, 'tab3')").js-tablink.sensor-tablink
+					span.sensor-tablink-sign.status-down &darr;
+					span.sensor-tablink-text CO
+
+				a(href="javascript:;", onclick="openTab(event, 'tab4')").js-tablink.sensor-tablink
+					span.sensor-tablink-sign.status-none –
+					span.sensor-tablink-text NO
+
+				a(href="javascript:;", onclick="openTab(event, 'tab5')").js-tablink.sensor-tablink
+					span.sensor-tablink-sign.status-none –
+					span.sensor-tablink-text
+						| SO
+						sub 2
+
+				#tab1.js-tabcontent(style="display:block") 1
+				#tab2.js-tabcontent 2
+				#tab3.js-tabcontent 3
+				#tab4.js-tabcontent 4
+				#tab5.js-tabcontent 5
+
 
 				section.section-bordered
-					img.i-block(alt="", src="assets/i/qr-sensor_dapp.svg")
+					p Указанные данные не являются юридически значимой информацией для общего пользования и специальной информацией в соответствии с Федеральным законом от 19.07.1998 г. № 113-ФЗ «О гидрометеорологической службе».
+
+		.col-md-2.sensor-sidebar
+			section.sec-icon
+				.sec-icon--icon
+					span.sprite-basic-i-temp
+				.sec-icon--content
+					.sec-icon--title температура
+					.sec-icon--text +1 °C
+
+			section.sec-icon
+				.sec-icon--icon
+					span.sprite-basic-i-pressure
+				.sec-icon--content
+					.sec-icon--title давление
+					.sec-icon--text 761 мм
+
+			section.sec-icon
+				.sec-icon--icon
+					span.sprite-basic-i-humidity
+				.sec-icon--content
+					.sec-icon--title влажность
+					.sec-icon--text 86%
+
+			section.section-bordered
+				img.i-block(alt="", src="assets/i/qr-sensor_dapp.svg")

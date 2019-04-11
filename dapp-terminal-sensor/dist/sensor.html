@@ -6,18 +6,18 @@
     <title>Sensor Page | robonomics.network</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <link href="assets/css/robonomics_website.min.css?v=1" rel="stylesheet">
+    <link href="assets/css/website.min.css?v=1" rel="stylesheet">
     <script src="assets/js/jquery-2.1.4.min.js?v=1"></script>
-    <script src="assets/js/robonomics_plugins.min.js?v=1"></script>
-    <script src="assets/js/robonomics_website.js?v=1"></script>
+    <script src="assets/js/plugins.min.js?v=1"></script>
+    <script src="assets/js/website.js?v=1"></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
   </head>
   <body class="body-background" style="background-image:url(/assets/i/backgrounds/Vysota-2.jpg)">
-    <header role="banner">
-      <div class="container-basic">
+    <header class="header-absolute" role="banner">
+      <div class="container-paddings">
         <div class="d-table container-full">
           <div class="align-vertical"><a class="header-logo" href="/"><img alt="dApp logo" src="assets/i/logo-dapp.svg"></a>
             <div class="header-title"><b>ROBONOMICS SENSORS NETWORK</b></div>
@@ -26,36 +26,44 @@
         </div>
       </div>
     </header>
-    <main role="main">
-      <div class="container-basic">
-        <div class="row">
-          <div class="col-md-10">dlffpd</div>
-          <div class="col-md-2 sensor-sidebar">
-            <section class="sec-icon">
-              <div class="sec-icon--icon"><span class="sprite-basic-i-temp"></span></div>
-              <div class="sec-icon--content">
-                <div class="sec-icon--title">температура</div>
-                <div class="sec-icon--text">+1 °C</div>
-              </div>
-            </section>
-            <section class="sec-icon">
-              <div class="sec-icon--icon"><span class="sprite-basic-i-pressure"></span></div>
-              <div class="sec-icon--content">
-                <div class="sec-icon--title">давление</div>
-                <div class="sec-icon--text">761 мм</div>
-              </div>
-            </section>
-            <section class="sec-icon">
-              <div class="sec-icon--icon"><span class="sprite-basic-i-humidity"></span></div>
-              <div class="sec-icon--content">
-                <div class="sec-icon--title">влажность</div>
-                <div class="sec-icon--text">86%</div>
-              </div>
-            </section>
-            <section class="section-bordered"><img class="i-block" alt="" src="assets/i/qr-sensor_dapp.svg"></section>
-          </div>
+    <div class="row section-screen" id="sensor-wrap">
+      <div class="col-md-10">
+        <div id="sensor-content-chart"></div>
+        <div id="sensor-content-info"><a class="js-tablink active sensor-tablink" href="javascript:;" onclick="openTab(event, 'tab1')"><span class="sensor-tablink-sign status-up">&uarr;</span><span class="sensor-tablink-text">PM<sub>1</sub></span></a><a class="js-tablink sensor-tablink" href="javascript:;" onclick="openTab(event, 'tab2')"><span class="sensor-tablink-sign status-up">&uarr;</span><span class="sensor-tablink-text">PM<sub>2.5</sub></span></a><a class="js-tablink sensor-tablink" href="javascript:;" onclick="openTab(event, 'tab3')"><span class="sensor-tablink-sign status-down">&darr;</span><span class="sensor-tablink-text">CO</span></a><a class="js-tablink sensor-tablink" href="javascript:;" onclick="openTab(event, 'tab4')"><span class="sensor-tablink-sign status-none">–</span><span class="sensor-tablink-text">NO</span></a><a class="js-tablink sensor-tablink" href="javascript:;" onclick="openTab(event, 'tab5')"><span class="sensor-tablink-sign status-none">–</span><span class="sensor-tablink-text">SO<sub>2</sub></span></a>
+          <div class="js-tabcontent" id="tab1" style="display:block">1</div>
+          <div class="js-tabcontent" id="tab2">2</div>
+          <div class="js-tabcontent" id="tab3">3</div>
+          <div class="js-tabcontent" id="tab4">4</div>
+          <div class="js-tabcontent" id="tab5">5</div>
+          <section class="section-bordered">
+            <p>Указанные данные не являются юридически значимой информацией для общего пользования и специальной информацией в соответствии с Федеральным законом от 19.07.1998 г. № 113-ФЗ «О гидрометеорологической службе».</p>
+          </section>
         </div>
       </div>
-    </main>
+      <div class="col-md-2 sensor-sidebar">
+        <section class="sec-icon">
+          <div class="sec-icon--icon"><span class="sprite-basic-i-temp"></span></div>
+          <div class="sec-icon--content">
+            <div class="sec-icon--title">температура</div>
+            <div class="sec-icon--text">+1 °C</div>
+          </div>
+        </section>
+        <section class="sec-icon">
+          <div class="sec-icon--icon"><span class="sprite-basic-i-pressure"></span></div>
+          <div class="sec-icon--content">
+            <div class="sec-icon--title">давление</div>
+            <div class="sec-icon--text">761 мм</div>
+          </div>
+        </section>
+        <section class="sec-icon">
+          <div class="sec-icon--icon"><span class="sprite-basic-i-humidity"></span></div>
+          <div class="sec-icon--content">
+            <div class="sec-icon--title">влажность</div>
+            <div class="sec-icon--text">86%</div>
+          </div>
+        </section>
+        <section class="section-bordered"><img class="i-block" alt="" src="assets/i/qr-sensor_dapp.svg"></section>
+      </div>
+    </div>
   </body>
 </html>

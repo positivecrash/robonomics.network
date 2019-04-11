@@ -1,3 +1,5 @@
+/* Sensor sidebar */
+
 .sensor-sidebar
 	{
 		section
@@ -24,7 +26,7 @@
 		width: rem(50px);
 	}
 
-.sec-icon--title 
+.sec-icon--title
 	{
 		font-size: rem(16px);
 		text-transform: lowercase;
@@ -36,4 +38,78 @@
 		font-size: rem(40px);
 		line-height: 1;
 		text-transform: uppercase;
+	}
+
+
+/* Sensor content */
+
+#sensor-wrap
+	{
+		padding-top: rem(120px);
+	}
+
+#sensor-content-chart
+	{
+		position: relative;
+		height: 60%;
+	}
+
+#sensor-content-info
+	{
+		position: relative;
+		height: 40%;
+	}
+
+
+
+/* Tabs */
+
+.js-tabcontent
+	{
+		display: none;
+	}
+
+.sensor-tablink
+	{
+		display: inline-block;
+
+		white-space: nowrap;
+		background-color: #fff;
+		color: #000;
+
+		font-family: $font-family-second;
+		font-size: rem(40px);
+		line-height: 1;
+		font-weight: bold;
+
+		margin-left: rem(30px);
+
+		&:first-child{
+			margin-left: 0;
+		}
+
+		sub{
+			font-size: rem(20px);
+			padding-left: rem(4px);
+		}
+
+		&.active{
+			.status-down, .status-up, .status-none { color: #fff; }
+			.status-down { background-color: $c-green; }
+			.status-up { background-color: $c-red; }
+			.status-none { background-color: $c-blue; }
+		}
+	}
+
+.sensor-tablink-sign, .sensor-tablink-text
+	{
+		display: inline-block;
+		padding: rem(15px);
+	}
+
+.sensor-tablink-sign
+	{
+		background-color: #E2E2E2;
+		padding-left: rem(25px);
+		padding-right: rem(25px);
 	}
