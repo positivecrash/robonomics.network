@@ -1,0 +1,18 @@
+extends extends/layout_header_1.pug
+
+block head
+	- var pageTitle = 'Loading dApp'
+
+block html
+	- var bodyback = 'background-image:url(/assets/i/backgrounds/Vysota-2.jpg)'
+	- var bodyclass = 'body-background'
+
+block content
+
+	.container-basic
+		section
+			.msg-error.msg-icon
+				.msg-title Plugin required for application operation
+				p
+					b Please, setup: 
+						a(href="https://metamask.io/", target="_blank").t-style_uppercase Metamask

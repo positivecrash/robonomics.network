@@ -1,0 +1,52 @@
+%width_base
+	{
+		max-width: $mq-desktop - $padding-fields * 2; 
+		padding-left: $padding-fields; 
+		padding-right: $padding-fields; 
+		margin: 0 auto;
+	}
+
+%font_base
+	{
+		font-family: $font-family-base;
+		font-weight: 300;
+		font-size: $font-size-base;
+		line-height: 1.5;
+
+		word-spacing: normal;
+		letter-spacing: 0;
+	}
+
+
+%link_noline
+	{
+	  &, &:hover, &:focus, &:visited{
+	    text-decoration: none;
+	    text-decoration: none !important;
+	  }
+	}
+
+
+%FrontContent
+	{
+	 	position: relative;
+    	z-index: 1;
+	}
+
+%text_uppercase
+	{
+		text-transform: uppercase;
+        letter-spacing: 1px;
+	}
+
+%i-block{
+	display: block;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+%d-inlineblock{
+	display: inline-block;
+    vertical-align: middle;
+}

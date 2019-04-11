@@ -1,0 +1,21 @@
+extends extends/layout_footer.pug
+
+block head
+	- var pageTitle = 'Loading dApp'
+
+block html
+	- var bodyback = 'background-image:url(/assets/i/backgrounds/Vysota-2.jpg)'
+	- var bodyclass = 'body-background'
+
+
+block content
+	.container-basic
+		section.t-align_center
+			.loading-logo
+				img(alt="dApp logo", src="assets/i/logo-dapp-2.svg", style="width: 150px;")
+			.loading-title Мониторинг качества воздуха
+
+			section
+				.loader
+					.loader-ring.align-vertical.m-r-15
+					b.align-vertical.t-style_uppercase Loading

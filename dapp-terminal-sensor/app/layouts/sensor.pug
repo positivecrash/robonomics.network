@@ -1,0 +1,38 @@
+extends extends/layout_header_2.pug
+
+block head
+	- var pageTitle = 'Sensor Page'
+
+block html
+	- var bodyback = 'background-image:url(/assets/i/backgrounds/Vysota-2.jpg)'
+	- var bodyclass = 'body-background'
+
+block content
+
+	.container-basic
+		.row
+			.col-md-10 dlffpd
+			.col-md-2.sensor-sidebar
+				section.sec-icon
+					.sec-icon--icon
+						span.sprite-basic-i-temp
+					.sec-icon--content
+						.sec-icon--title температура
+						.sec-icon--text +1 °C
+
+				section.sec-icon
+					.sec-icon--icon
+						span.sprite-basic-i-pressure
+					.sec-icon--content
+						.sec-icon--title давление
+						.sec-icon--text 761 мм
+
+				section.sec-icon
+					.sec-icon--icon
+						span.sprite-basic-i-humidity
+					.sec-icon--content
+						.sec-icon--title влажность
+						.sec-icon--text 86%
+
+				section.section-bordered
+					img.i-block(alt="", src="assets/i/qr-sensor_dapp.svg")

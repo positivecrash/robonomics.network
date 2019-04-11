@@ -1,0 +1,39 @@
+.sensor-sidebar
+	{
+		section
+	  	{
+		    padding-top: $margin-sec/2;
+		    padding-bottom: $margin-sec/2;
+		}
+	}
+
+
+.sec-icon
+	{
+		white-space: nowrap;
+	}
+
+.sec-icon--icon, .sec-icon--content
+	{
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+.sec-icon--icon
+	{
+		width: rem(50px);
+	}
+
+.sec-icon--title 
+	{
+		font-size: rem(16px);
+		text-transform: lowercase;
+	}
+
+.sec-icon--text
+	{
+		font-family: $font-family-second;
+		font-size: rem(40px);
+		line-height: 1;
+		text-transform: uppercase;
+	}

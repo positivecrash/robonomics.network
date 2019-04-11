@@ -1,0 +1,39 @@
+doctype html
+
+block html
+html(lang='ru')
+	
+	head
+		meta(http-equiv="Content-Type" content="text/html;charset=UTF-8")
+		meta(name='viewport' content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		
+		block head
+		title #{pageTitle} | robonomics.network
+		meta(name='description' content=pageDescription || '')
+		meta(name='keywords' content=pageKeywords || '')
+
+		link(href='assets/css/robonomics_website.min.css?v=1' rel='stylesheet')
+			
+		script(src='assets/js/jquery-2.1.4.min.js?v=1')
+		script(src='assets/js/robonomics_plugins.min.js?v=1')
+		script(src='assets/js/robonomics_website.js?v=1')
+
+		link(rel="icon" href="favicon.ico" type="image/x-icon")
+		link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
+		link(rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png")
+		link(rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png")
+
+	body(class=bodyclass, style=bodyback)
+		header(role='banner')
+			.container-basic
+				.d-table.container-full
+					.align-vertical
+						a(href="/").header-logo: img(alt="dApp logo", src="assets/i/logo-dapp.svg")
+						.header-title
+							b ROBONOMICS SENSORS NETWORK
+					.align-vertical.t-align_right
+						b 21.03.2019
+
+		
+		main(role="main")
+			block content
