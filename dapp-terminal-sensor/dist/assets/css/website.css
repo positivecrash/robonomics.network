@@ -1829,7 +1829,7 @@ input, select {
 /*====== Bootstrap ======*/
 /*====== Media queries ======*/
 /*====== Colors ======*/
-.sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-jp, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-i-check, .sprite-basic-i-checked, .sprite-basic-i-error, .sprite-basic-i-humidity, .sprite-basic-i-menu-dark, .sprite-basic-i-menu-light, .sprite-basic-i-pressure, .sprite-basic-i-temp, .sprite-basic-logo-aira, .sprite-basic-logo-robonomics, .msg-error.msg-icon:before, .msg-ok.msg-icon:before, .input-checkbox label:before {
+.sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-jp, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-i-check, .sprite-basic-i-checked, .sprite-basic-i-error, .sprite-basic-i-humidity, .sprite-basic-i-menu-dark, .sprite-basic-i-menu-light, .sprite-basic-i-pressure, .sprite-basic-i-temp, .sprite-basic-logo-aira, .sprite-basic-logo-robonomics, .sprite-basic-man-status-ok, .sprite-basic-man-status-warning, .msg-error.msg-icon:before, .msg-ok.msg-icon:before, .input-checkbox label:before, .sensor-tabcontent-value.status-ok:after, .sensor-tabcontent-value.status-warning:after {
   background-image: url("../i/sprite.svg?6");
 }
 
@@ -1938,6 +1938,20 @@ input, select {
   display: inline-block;
 }
 
+.sprite-basic-man-status-ok {
+  width: 100.98px;
+  height: 129.99px;
+  background-position: -432px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-man-status-warning {
+  width: 100.98px;
+  height: 129.99px;
+  background-position: -533px 0px;
+  display: inline-block;
+}
+
 body, input:not([type='submit']):not([type='button']), select, .btn-green, input[type="submit"], input[type="button"], .btn-blue, input:not([type='button']):not([type='submit'])::placeholder, select::placeholder, .btn-green::placeholder, input[type="submit"]::placeholder, input[type="button"]::placeholder, .btn-blue::placeholder {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 300;
@@ -1971,27 +1985,27 @@ h1, h2, h3, h4, h5, h6, .t-style_uppercase, .title-pale, table th, input:not([ty
 
 @font-face {
   font-family: "Roboto";
-  src: url('../fonts/Roboto-Regular.eot?1554982603');
-  src: url('../fonts/Roboto-Regular.eot?&1554982603#iefix') format('embedded-opentype'), url('../fonts/Roboto-Regular.woff?1554982603') format('woff'), url('../fonts/Roboto-Regular.ttf?1357675200') format('truetype');
+  src: url('../fonts/Roboto-Regular.eot?1555007095');
+  src: url('../fonts/Roboto-Regular.eot?&1555007095#iefix') format('embedded-opentype'), url('../fonts/Roboto-Regular.woff?1555007095') format('woff'), url('../fonts/Roboto-Regular.ttf?1357675200') format('truetype');
   font-weight: normal;
 }
 @font-face {
   font-family: "Roboto";
-  src: url('../fonts/Roboto-Bold.eot?1554982603');
-  src: url('../fonts/Roboto-Bold.eot?&1554982603#iefix') format('embedded-opentype'), url('../fonts/Roboto-Bold.woff?1554982603') format('woff'), url('../fonts/Roboto-Bold.ttf?1357675200') format('truetype');
+  src: url('../fonts/Roboto-Bold.eot?1555007094');
+  src: url('../fonts/Roboto-Bold.eot?&1555007094#iefix') format('embedded-opentype'), url('../fonts/Roboto-Bold.woff?1555007094') format('woff'), url('../fonts/Roboto-Bold.ttf?1357675200') format('truetype');
   font-weight: bold;
 }
 @font-face {
   font-family: "Roboto";
-  src: url('../fonts/Roboto-Italic.eot?1554982603');
-  src: url('../fonts/Roboto-Italic.eot?&1554982603#iefix') format('embedded-opentype'), url('../fonts/Roboto-Italic.woff?1554982603') format('woff'), url('../fonts/Roboto-Italic.ttf?1357675200') format('truetype');
+  src: url('../fonts/Roboto-Italic.eot?1555007095');
+  src: url('../fonts/Roboto-Italic.eot?&1555007095#iefix') format('embedded-opentype'), url('../fonts/Roboto-Italic.woff?1555007095') format('woff'), url('../fonts/Roboto-Italic.ttf?1357675200') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: "Bebas Neue";
-  src: url('../fonts/BebasNeueBold.eot?1554982602');
-  src: url('../fonts/BebasNeueBold.eot?&1554982602#iefix') format('embedded-opentype'), url('../fonts/BebasNeueBold.woff?1554982602') format('woff'), url('../fonts/BebasNeueBold.ttf?1554951858') format('truetype');
+  src: url('../fonts/BebasNeueBold.eot?1555007094');
+  src: url('../fonts/BebasNeueBold.eot?&1555007094#iefix') format('embedded-opentype'), url('../fonts/BebasNeueBold.woff?1555007094') format('woff'), url('../fonts/BebasNeueBold.ttf?1554951858') format('truetype');
   font-weight: bold;
 }
 /*====== Text sizes & Headers ======*/
@@ -2153,6 +2167,10 @@ hr {
   height: 1px;
   margin-top: 24px;
   margin-bottom: 24px;
+}
+hr.hr-small {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 
 table {
@@ -2653,6 +2671,7 @@ body {
   animation: 0.4s FadeIn ease-in forwards;
   color: #fff;
   background-color: #03A5ED;
+  padding-bottom: 15px;
 }
 body a {
   color: #fff;
@@ -2886,6 +2905,7 @@ section section li:last-child, section section p:last-child, section section blo
   box-sizing: border-box;
   height: 100%;
   position: relative;
+  overflow-y: scroll;
 }
 
 /*====== end of Sections ======*/
@@ -3049,11 +3069,6 @@ nav.nav-g > *:last-child {
   height: 60%;
 }
 
-#sensor-content-info {
-  position: relative;
-  height: 40%;
-}
-
 /* Tabs */
 .js-tabcontent {
   display: none;
@@ -3068,35 +3083,120 @@ nav.nav-g > *:last-child {
   font-size: 2.5rem;
   line-height: 1;
   font-weight: bold;
-  margin-left: 1.875rem;
+  margin-right: 1.875rem;
+  margin-bottom: 1.875rem;
 }
-.sensor-tablink:first-child {
-  margin-left: 0;
+.sensor-tablink:last-child {
+  margin-right: 0;
 }
 .sensor-tablink sub {
   font-size: 1.25rem;
   padding-left: 0.25rem;
 }
-.sensor-tablink.active .status-down, .sensor-tablink.active .status-up, .sensor-tablink.active .status-none {
+.sensor-tablink.active .sensor-tablink-sign {
+  background-color: #232323;
   color: #fff;
 }
-.sensor-tablink.active .status-down {
-  background-color: #54CE63;
-}
-.sensor-tablink.active .status-up {
-  background-color: #E84004;
-}
-.sensor-tablink.active .status-none {
-  background-color: #03A5ED;
-}
 
-.sensor-tablink-sign, .sensor-tablink-text {
+.sensor-tablink-sign, .sensor-tablink-text, .sensor-tabcontent-value, .sensor-tabcontent-info {
   display: inline-block;
   padding: 0.9375rem;
+  box-sizing: border-box;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
 }
 
 .sensor-tablink-sign {
-  background-color: #E2E2E2;
   padding-left: 1.5625rem;
   padding-right: 1.5625rem;
+  background-color: #E2E2E2;
+  color: #000;
+}
+
+.sensor-tabcontent {
+  margin-bottom: 1.875rem;
+  background-color: #fff;
+  color: #000;
+  position: relative;
+}
+.sensor-tabcontent:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 30%;
+  background-color: #232323;
+  z-index: 0;
+}
+
+.sensor-tabcontent-value {
+  width: 30%;
+}
+.sensor-tabcontent-value.status-ok, .sensor-tabcontent-value.status-warning {
+  position: relative;
+  padding-left: 115px;
+}
+.sensor-tabcontent-value.status-ok:before, .sensor-tabcontent-value.status-ok:after, .sensor-tabcontent-value.status-warning:before, .sensor-tabcontent-value.status-warning:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.sensor-tabcontent-value.status-ok:before, .sensor-tabcontent-value.status-warning:before {
+  background-color: #000;
+  width: 100px;
+  height: 100%;
+}
+.sensor-tabcontent-value.status-ok:after {
+  width: 100.98px;
+  height: 129.99px;
+  background-position: -432px 0px;
+}
+.sensor-tabcontent-value.status-warning:after {
+  width: 100.98px;
+  height: 129.99px;
+  background-position: -533px 0px;
+}
+
+.sensor-tabcontent-info {
+  width: 69%;
+}
+
+.sensor-value {
+  font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+  font-size: 1.625rem;
+  line-height: 1;
+  margin-top: 0.125rem;
+}
+
+#tab1, #tablink-1.active {
+  background-color: #D10078;
+  color: #fff;
+}
+
+#tab2, #tablink-2.active {
+  background-color: #987AFF;
+  color: #fff;
+}
+
+#tab3, #tablink-3.active {
+  background-color: #da00ff;
+  color: #fff;
+}
+
+#tab4, #tablink-4.active {
+  background-color: #ff9b00;
+  color: #fff;
+}
+
+#tab5, #tablink-5.active {
+  background-color: #00DFA6;
+  color: #fff;
+}
+
+#tab6, #tablink-6.active {
+  background-color: #DDD700;
+  color: #fff;
 }

@@ -22,6 +22,8 @@ body
     color: $c-text-light;
     background-color: $c-blue;
 
+    padding-bottom: 15px;
+
     a{
       color: #fff;
 
@@ -277,6 +279,8 @@ section
     box-sizing: border-box;
     height: 100%;
     position: relative;
+
+    overflow-y: scroll;
   }
 
 

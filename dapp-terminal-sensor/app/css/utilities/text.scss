@@ -159,6 +159,12 @@ hr{
 	height: 1px;
 	margin-top: $vertical-rythm;
 	margin-bottom: $vertical-rythm;
+
+	&.hr-small
+		{
+			margin-top: rem(4px);
+			margin-bottom: rem(4px);
+		}
 }
 
 table

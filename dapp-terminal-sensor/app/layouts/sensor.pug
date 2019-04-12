@@ -4,7 +4,7 @@ block head
 	- var pageTitle = 'Sensor Page'
 
 block html
-	- var bodyback = 'background-image:url(/assets/i/backgrounds/Vysota-2.jpg)'
+	// - var bodyback = 'background-image:url(/assets/i/backgrounds/Vysota-2.jpg)'
 	- var bodyclass = 'body-background'
 
 block content
@@ -19,49 +19,121 @@ block content
 				.align-vertical.t-align_right
 					b 21.03.2019
 	.row.section-screen#sensor-wrap
-		.col-md-10
+		.col-10
 			#sensor-content-chart
 
 			#sensor-content-info
 
-				a(href="javascript:;", onclick="openTab(event, 'tab1')").js-tablink.active.sensor-tablink
+				a(href="javascript:;", onclick="openTab(event, 'tab1')").js-tablink.active.sensor-tablink#tablink-1
 
-					span.sensor-tablink-sign.status-up &uarr;
+					span.sensor-tablink-sign.status-danger &uarr;
 					span.sensor-tablink-text
 						| PM
 						sub 1
 
-				a(href="javascript:;", onclick="openTab(event, 'tab2')").js-tablink.sensor-tablink
-					span.sensor-tablink-sign.status-up &uarr;
+				a(href="javascript:;", onclick="openTab(event, 'tab2')").js-tablink.sensor-tablink#tablink-2
+					span.sensor-tablink-sign.status-danger &uarr;
 					span.sensor-tablink-text
 						| PM
 						sub 2.5
 
-				a(href="javascript:;", onclick="openTab(event, 'tab3')").js-tablink.sensor-tablink
-					span.sensor-tablink-sign.status-down &darr;
+				a(href="javascript:;", onclick="openTab(event, 'tab3')").js-tablink.sensor-tablink#tablink-3
+					span.sensor-tablink-sign.status-danger &uarr;
+					span.sensor-tablink-text
+						| PM
+						sub 10
+
+				a(href="javascript:;", onclick="openTab(event, 'tab4')").js-tablink.sensor-tablink#tablink-4
+					span.sensor-tablink-sign &darr;
 					span.sensor-tablink-text CO
 
-				a(href="javascript:;", onclick="openTab(event, 'tab4')").js-tablink.sensor-tablink
-					span.sensor-tablink-sign.status-none –
+				a(href="javascript:;", onclick="openTab(event, 'tab5')").js-tablink.sensor-tablink#tablink-5
+					span.sensor-tablink-sign –
 					span.sensor-tablink-text NO
 
-				a(href="javascript:;", onclick="openTab(event, 'tab5')").js-tablink.sensor-tablink
-					span.sensor-tablink-sign.status-none –
+				a(href="javascript:;", onclick="openTab(event, 'tab6')").js-tablink.sensor-tablink#tablink-6
+					span.sensor-tablink-sign –
 					span.sensor-tablink-text
 						| SO
 						sub 2
 
-				#tab1.js-tabcontent(style="display:block") 1
-				#tab2.js-tabcontent 2
-				#tab3.js-tabcontent 3
-				#tab4.js-tabcontent 4
-				#tab5.js-tabcontent 5
+				#tab1.js-tabcontent.sensor-tabcontent(style="display:block")
+					.sensor-tabcontent-value.status-warning
+						p
+							| текущее значение:
+							br/
+							span.sensor-value 14 мкг/м3
+
+						hr.hr-small
+						p норма: < 150 мкг/м3
+					.sensor-tabcontent-info
+						p PM1 – это частицы размером меньше 1 мкм (тысячная доля миллиметра). Тело человека имеет ряд природных барьеров против PM10 и PM2.5, таких как волоски и слизистые оболочки, однако они не защищают от PM1. Эти мелкие частицы могут привести к развитию респираторных и других серьезных заболеваний.
+
+				#tab2.js-tabcontent.sensor-tabcontent
+					.sensor-tabcontent-value.status-warning
+						p
+							| текущее значение:
+							br/
+							span.sensor-value 14 мкг/м3
+
+						hr.hr-small
+						p норма: < 150 мкг/м3
+					.sensor-tabcontent-info
+						p PM1 – это частицы размером меньше 1 мкм (тысячная доля миллиметра). Тело человека имеет ряд природных барьеров против PM10 и PM2.5, таких как волоски и слизистые оболочки, однако они не защищают от PM1. Эти мелкие частицы могут привести к развитию респираторных и других серьезных заболеваний.
+
+				#tab3.js-tabcontent.sensor-tabcontent
+					.sensor-tabcontent-value.status-warning
+						p
+							| текущее значение:
+							br/
+							span.sensor-value 14 мкг/м3
+
+						hr.hr-small
+						p норма: < 150 мкг/м3
+					.sensor-tabcontent-info
+						p PM1 – это частицы размером меньше 1 мкм (тысячная доля миллиметра). Тело человека имеет ряд природных барьеров против PM10 и PM2.5, таких как волоски и слизистые оболочки, однако они не защищают от PM1. Эти мелкие частицы могут привести к развитию респираторных и других серьезных заболеваний.
+
+				#tab4.js-tabcontent.sensor-tabcontent
+					.sensor-tabcontent-value.status-ok
+						p
+							| текущее значение:
+							br/
+							span.sensor-value 14 мкг/м3
+
+						hr.hr-small
+						p норма: < 150 мкг/м3
+					.sensor-tabcontent-info
+						p PM1 – это частицы размером меньше 1 мкм (тысячная доля миллиметра). Тело человека имеет ряд природных барьеров против PM10 и PM2.5, таких как волоски и слизистые оболочки, однако они не защищают от PM1. Эти мелкие частицы могут привести к развитию респираторных и других серьезных заболеваний.
+
+				#tab5.js-tabcontent.sensor-tabcontent
+					.sensor-tabcontent-value.status-ok
+						p
+							| текущее значение:
+							br/
+							span.sensor-value 14 мкг/м3
+
+						hr.hr-small
+						p норма: < 150 мкг/м3
+					.sensor-tabcontent-info
+						p PM1 – это частицы размером меньше 1 мкм (тысячная доля миллиметра). Тело человека имеет ряд природных барьеров против PM10 и PM2.5, таких как волоски и слизистые оболочки, однако они не защищают от PM1. Эти мелкие частицы могут привести к развитию респираторных и других серьезных заболеваний.
+
+				#tab6.js-tabcontent.sensor-tabcontent
+					.sensor-tabcontent-value.status-ok
+						p
+							| текущее значение:
+							br/
+							span.sensor-value 14 мкг/м3
+
+						hr.hr-small
+						p норма: < 150 мкг/м3
+					.sensor-tabcontent-info
+						p PM1 – это частицы размером меньше 1 мкм (тысячная доля миллиметра). Тело человека имеет ряд природных барьеров против PM10 и PM2.5, таких как волоски и слизистые оболочки, однако они не защищают от PM1. Эти мелкие частицы могут привести к развитию респираторных и других серьезных заболеваний.
 
 
 				section.section-bordered
 					p Указанные данные не являются юридически значимой информацией для общего пользования и специальной информацией в соответствии с Федеральным законом от 19.07.1998 г. № 113-ФЗ «О гидрометеорологической службе».
 
-		.col-md-2.sensor-sidebar
+		.col-2.sensor-sidebar
 			section.sec-icon
 				.sec-icon--icon
 					span.sprite-basic-i-temp
