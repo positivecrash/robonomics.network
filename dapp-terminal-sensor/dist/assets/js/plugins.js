@@ -1,19 +1,5 @@
 window.addEventListener('load', function(){
 
-	// //sort tags, '0-sort.js' required
-	// sort('sort', 'sort-sec', 'active');
-
-	// //show info by click, '0-show.js' required
-	// show('data-show');
-
-	// if( document.querySelector('.disabled')){
-	// 	document.querySelector('.disabled').addEventListener("click", function(event){
-	// 	  event.preventDefault()
-	// 	});
-	// }
-
-
-
 	/*
 	Check elemen in view
 	0-inview.js
@@ -70,63 +56,6 @@ var visibleY = function(el){
 // document.addEventListener('scroll', IfInView);
 // document.addEventListener('resize', IfInView);
 
-var show = function(switcher){
-
-	var link = document.querySelectorAll('['+switcher+']');
-	var infoblock;
-
-	for (var i = 0; i < link.length; i++) {
-
-		link[i].addEventListener('click', function(){
-
-			infoblock = document.querySelectorAll(this.getAttribute(switcher));
-
-			for (var j = 0; j < infoblock.length; j++) {
-				infoblock[j].style.display = 'block';
-			}
-		});
-	}
-
-	
-}
-var showSorted = function(tag, tagLink, tagSec, active){
-
-	var sec = document.querySelectorAll('[data-' + tagSec + ']');
-	var link = document.querySelectorAll('[data-' + tagLink + ']');
-
-	for (var i = 0; i < sec.length; i++) {
-
-		sec[i].style.display = 'block';
-
-		if( (tag != 0) ){
-
-			if( sec[i].getAttribute('data-' + tagSec) != tag ){
-				sec[i].style.display = 'none';
-			}
-		}
-	}
-}
-
-var sort = function(tagLink, tagSec, active){
-
-	var sec = document.querySelectorAll('[data-' + tagSec + ']');
-	var link = document.querySelectorAll('[data-' + tagLink + ']');
-
-	for (var i = 0; i < link.length; i++) {
-
-		link[i].addEventListener('click', function(){
-
-			for (var j = 0; j < link.length; j++) {
-				link[j].classList.remove(active);
-			}
-
-			this.classList.add(active);
-			showSorted( this.getAttribute('data-' + tagLink), tagLink, tagSec, active);
-		});
-	}
-
-	
-}
 function openTab(evt, tabID) {
 
     var i, tabcontent, tablinks;
