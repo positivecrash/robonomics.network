@@ -16,11 +16,12 @@ block content
 					a(href="/").header-logo: img(alt="dApp logo", src="assets/i/logo-dapp.svg")
 					.header-title
 						b ROBONOMICS SENSORS NETWORK
-				.align-vertical.t-align_right
-					b 21.03.2019
+				// .align-vertical.t-align_right
+					
 	.row.section-screen#sensor-wrap
 		.col-10
 			#sensor-content-chart
+				#chart-container
 
 			#sensor-content-info
 
@@ -134,26 +135,29 @@ block content
 					p Указанные данные не являются юридически значимой информацией для общего пользования и специальной информацией в соответствии с Федеральным законом от 19.07.1998 г. № 113-ФЗ «О гидрометеорологической службе».
 
 		.col-2.sensor-sidebar
+			section.p-t-0
+				.t-big 21.03.2019
+
 			section.sec-icon
 				.sec-icon--icon
 					span.sprite-basic-i-temp
 				.sec-icon--content
 					.sec-icon--title температура
-					.sec-icon--text +1 °C
+					.t-big +1 °C
 
 			section.sec-icon
 				.sec-icon--icon
 					span.sprite-basic-i-pressure
 				.sec-icon--content
 					.sec-icon--title давление
-					.sec-icon--text 761 мм
+					.t-big 761 мм
 
 			section.sec-icon
 				.sec-icon--icon
 					span.sprite-basic-i-humidity
 				.sec-icon--content
 					.sec-icon--title влажность
-					.sec-icon--text 86%
+					.t-big 86%
 
 			section.section-bordered
 				img.i-block(alt="", src="assets/i/qr-sensor_dapp.svg")
