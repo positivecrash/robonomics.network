@@ -1824,12 +1824,20 @@ input, select {
   vertical-align: middle;
 }
 
+sup {
+  vertical-align: super;
+}
+
+sub {
+  vertical-align: sub;
+}
+
 /*====== Fonts ======*/
 /*====== Margins, paddings ======*/
 /*====== Bootstrap ======*/
 /*====== Media queries ======*/
 /*====== Colors ======*/
-.sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-jp, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-i-check, .sprite-basic-i-checked, .sprite-basic-i-error, .sprite-basic-i-humidity, .sprite-basic-i-menu-dark, .sprite-basic-i-menu-light, .sprite-basic-i-pressure, .sprite-basic-i-temp, .sprite-basic-logo-aira, .sprite-basic-logo-robonomics, .sprite-basic-man-status-ok, .sprite-basic-man-status-warning, .msg-error.msg-icon:before, .msg-ok.msg-icon:before, .input-checkbox label:before, .sensor-tabcontent-value.status-ok:after, .sensor-tabcontent-value.status-warning:after {
+.sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-jp, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-i-check, .sprite-basic-i-checked, .sprite-basic-i-error, .sprite-basic-i-humidity, .sprite-basic-i-menu-dark, .sprite-basic-i-menu-light, .sprite-basic-i-pressure, .sprite-basic-i-temp, .sprite-basic-logo-aira, .sprite-basic-logo-robonomics, .sprite-basic-man-status-ok, .sprite-basic-man-status-warning, .msg-error.msg-icon:before, .msg-ok.msg-icon:before, .input-checkbox label:before, .js-tabcontent.status-ok .sensor-status:before, .js-tabcontent.status-warning .sensor-status:before {
   background-image: url("../i/sprite.svg?6");
 }
 
@@ -2723,10 +2731,11 @@ body a.hover:hover {
 /*====== end of Set width of container ======*/
 /*====== Basic elements ======*/
 header[role='banner'] {
-  padding-top: 30px;
-  padding-bottom: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   position: relative;
   z-index: 1;
+  background-color: #03A5ED;
 }
 header[role='banner'].header-absolute {
   position: absolute;
@@ -3055,7 +3064,6 @@ nav.nav-g > *:last-child {
 .t-big {
   font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
   font-size: 2.5rem;
-  line-height: 1;
   text-transform: uppercase;
 }
 
@@ -3066,7 +3074,7 @@ nav.nav-g > *:last-child {
 
 #sensor-content-chart {
   position: relative;
-  height: 60%;
+  min-height: 520px;
   box-sizing: border-box;
   padding-bottom: 1.875rem;
 }
@@ -3074,6 +3082,33 @@ nav.nav-g > *:last-child {
 /* Tabs */
 .js-tabcontent {
   display: none;
+}
+.js-tabcontent.status-ok .sensor-status, .js-tabcontent.status-warning .sensor-status {
+  background-color: #000;
+  width: 100px;
+  height: 100%;
+  z-index: 1;
+}
+.js-tabcontent.status-ok .sensor-status, .js-tabcontent.status-ok .sensor-status:before, .js-tabcontent.status-warning .sensor-status, .js-tabcontent.status-warning .sensor-status:before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.js-tabcontent.status-ok .sensor-status:before, .js-tabcontent.status-warning .sensor-status:before {
+  content: "";
+}
+.js-tabcontent.status-ok .sensor-tabcontent-value, .js-tabcontent.status-warning .sensor-tabcontent-value {
+  padding-left: 115px;
+}
+.js-tabcontent.status-ok .sensor-status:before {
+  width: 100.98px;
+  height: 129.99px;
+  background-position: -432px 0px;
+}
+.js-tabcontent.status-warning .sensor-status:before {
+  width: 100.98px;
+  height: 129.99px;
+  background-position: -533px 0px;
 }
 
 .sensor-tablink {
@@ -3083,7 +3118,6 @@ nav.nav-g > *:last-child {
   color: #000;
   font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
   font-size: 2.5rem;
-  line-height: 1;
   font-weight: bold;
   margin-right: 1.875rem;
   margin-bottom: 1.875rem;
@@ -3104,7 +3138,7 @@ nav.nav-g > *:last-child {
   display: inline-block;
   padding: 0.9375rem;
   box-sizing: border-box;
-  vertical-align: middle;
+  vertical-align: top;
   position: relative;
   z-index: 1;
 }
@@ -3136,31 +3170,6 @@ nav.nav-g > *:last-child {
 .sensor-tabcontent-value {
   width: 30%;
 }
-.sensor-tabcontent-value.status-ok, .sensor-tabcontent-value.status-warning {
-  position: relative;
-  padding-left: 115px;
-}
-.sensor-tabcontent-value.status-ok:before, .sensor-tabcontent-value.status-ok:after, .sensor-tabcontent-value.status-warning:before, .sensor-tabcontent-value.status-warning:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.sensor-tabcontent-value.status-ok:before, .sensor-tabcontent-value.status-warning:before {
-  background-color: #000;
-  width: 100px;
-  height: 100%;
-}
-.sensor-tabcontent-value.status-ok:after {
-  width: 100.98px;
-  height: 129.99px;
-  background-position: -432px 0px;
-}
-.sensor-tabcontent-value.status-warning:after {
-  width: 100.98px;
-  height: 129.99px;
-  background-position: -533px 0px;
-}
 
 .sensor-tabcontent-info {
   width: 69%;
@@ -3169,7 +3178,6 @@ nav.nav-g > *:last-child {
 .sensor-value {
   font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
   font-size: 1.625rem;
-  line-height: 1;
   margin-top: 0.125rem;
 }
 
@@ -3194,12 +3202,12 @@ nav.nav-g > *:last-child {
 }
 
 #tab5, #tablink-5.active {
-  background-color: #00DFA6;
+  background-color: #03b8c1;
   color: #fff;
 }
 
 #tab6, #tablink-6.active {
-  background-color: #DDD700;
+  background-color: #bbb606;
   color: #fff;
 }
 

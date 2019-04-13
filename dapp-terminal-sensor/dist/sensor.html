@@ -36,63 +36,66 @@
         </div>
         <div id="sensor-content-info"><a class="js-tablink active sensor-tablink" href="javascript:;" onclick="openTab(event, 'tab1')" id="tablink-1"><span class="sensor-tablink-sign">&uarr;</span><span class="sensor-tablink-text">PM<sub>1</sub></span></a><a class="js-tablink sensor-tablink" href="javascript:;" onclick="openTab(event, 'tab2')" id="tablink-2"><span class="sensor-tablink-sign">&uarr;</span><span class="sensor-tablink-text">PM<sub>2.5</sub></span></a><a class="js-tablink sensor-tablink" href="javascript:;" onclick="openTab(event, 'tab3')" id="tablink-3"><span class="sensor-tablink-sign">&uarr;</span><span class="sensor-tablink-text">PM<sub>10</sub></span></a><a class="js-tablink sensor-tablink" href="javascript:;" onclick="openTab(event, 'tab4')" id="tablink-4"><span class="sensor-tablink-sign">&darr;</span><span class="sensor-tablink-text">CO</span></a><a class="js-tablink sensor-tablink" href="javascript:;" onclick="openTab(event, 'tab5')" id="tablink-5"><span class="sensor-tablink-sign">–</span><span class="sensor-tablink-text">NO</span></a><a class="js-tablink sensor-tablink" href="javascript:;" onclick="openTab(event, 'tab6')" id="tablink-6"><span class="sensor-tablink-sign">–</span><span class="sensor-tablink-text">SO<sub>2</sub></span></a>
           <div class="js-tabcontent sensor-tabcontent" id="tab1" style="display:block">
-            <div class="sensor-tabcontent-value status-warning">
-              <p>текущее значение:<br/><span class="sensor-value">14 мкг/м3</span></p>
-              <hr class="hr-small">
-              <p>норма: < 150 мкг/м3</p>
+            <div class="sensor-tabcontent-value">
+              <p>текущее значение:<br/><span class="sensor-value">0 мкг/ м<sup>3</sup></span></p>
             </div>
             <div class="sensor-tabcontent-info">
-              <p>PM1 – это частицы размером меньше 1 мкм (тысячная доля миллиметра). Тело человека имеет ряд природных барьеров против PM10 и PM2.5, таких как волоски и слизистые оболочки, однако они не защищают от PM1. Эти мелкие частицы могут привести к развитию респираторных и других серьезных заболеваний.</p>
+              <p>PM<sub>1</sub>, PM<sub>2.5</sub>, PM<sub>10</sub> - "particulate matter" или взвешенные вещества (ВВ). PM<sub>1</sub> – это частицы размером меньше 1 мкм (тысячная доля миллиметра). Природные барьеры в теле человека (волоски и слизистые оболочки) могут быть эффективны против PM<sub>10</sub> и PM<sub>2.5</sub>, но не защищают от PM<sub>1</sub>. Эти мелкие частицы могут привести к развитию респираторных и других серьезных заболеваний. Для PM<sub>1</sub> на сегодняшний день не установлены нормативы в РФ. Особенно опасно сочетание высоких концентраций PM и SO<sub>2</sub>.</p>
             </div>
           </div>
-          <div class="js-tabcontent sensor-tabcontent" id="tab2">
-            <div class="sensor-tabcontent-value status-warning">
-              <p>текущее значение:<br/><span class="sensor-value">14 мкг/м3</span></p>
+          <div class="js-tabcontent sensor-tabcontent status-warning" id="tab2">
+            <div class="sensor-status"></div>
+            <div class="sensor-tabcontent-value">
+              <p>текущее значение:<br/><span class="sensor-value">72 мкг/м<sup>3</sup></span></p>
               <hr class="hr-small">
-              <p>норма: < 150 мкг/м3</p>
+              <p>норма: < 35 мкг/м<sup>3</sup></p>
             </div>
             <div class="sensor-tabcontent-info">
-              <p>PM1 – это частицы размером меньше 1 мкм (тысячная доля миллиметра). Тело человека имеет ряд природных барьеров против PM10 и PM2.5, таких как волоски и слизистые оболочки, однако они не защищают от PM1. Эти мелкие частицы могут привести к развитию респираторных и других серьезных заболеваний.</p>
+              <p>PM<sub>1</sub>, PM<sub>2.5</sub>, PM<sub>10</sub> - "particulate matter" или взвешенные вещества (ВВ). В состав PM<sub>2.5</sub> входят твердые микрочастицы и мельчайшие капельки жидкостей (продукты сгорания, органические частицы). PM<sub>2.5</sub> есть и в лесу, и на море, но именно в городе представляют наибольшую опасность. Во-первых, обычно их в городе намного больше, а во-вторых, химический состав мелкодисперсного аэрозоля в городе опаснее, чем на природе. Особенно опасно сочетание высоких концентраций PM и SO<sub>2</sub>.</p>
             </div>
           </div>
-          <div class="js-tabcontent sensor-tabcontent" id="tab3">
-            <div class="sensor-tabcontent-value status-warning">
-              <p>текущее значение:<br/><span class="sensor-value">14 мкг/м3</span></p>
+          <div class="js-tabcontent sensor-tabcontent status-warning" id="tab3">
+            <div class="sensor-status"></div>
+            <div class="sensor-tabcontent-value">
+              <p>текущее значение:<br/><span class="sensor-value">75 мкг/м<sup>3</sup></span></p>
               <hr class="hr-small">
-              <p>норма: < 150 мкг/м3</p>
+              <p>норма: < 60 мкг/м<sup>3</sup></p>
             </div>
             <div class="sensor-tabcontent-info">
-              <p>PM1 – это частицы размером меньше 1 мкм (тысячная доля миллиметра). Тело человека имеет ряд природных барьеров против PM10 и PM2.5, таких как волоски и слизистые оболочки, однако они не защищают от PM1. Эти мелкие частицы могут привести к развитию респираторных и других серьезных заболеваний.</p>
+              <p>PM<sub>1</sub>, PM<sub>2.5</sub>, PM<sub>10</sub> - "particulate matter" или взвешенные вещества (ВВ). PM<sub>10</sub> - пыль, пыльца, плесень. Люди с хроническими нарушениями в легких, с сердечно-сосудистыми заболеваниями, с астмой, частыми простудными заболеваниями, пожилые и дети особенно чувствительны к влиянию мелких взвешенных частиц диаметром менее 10 микрон (РМ<sub>10</sub>). Особенно опасно сочетание высоких концентраций PM и SO<sub>2</sub>.</p>
             </div>
           </div>
-          <div class="js-tabcontent sensor-tabcontent" id="tab4">
-            <div class="sensor-tabcontent-value status-ok">
-              <p>текущее значение:<br/><span class="sensor-value">14 мкг/м3</span></p>
+          <div class="js-tabcontent sensor-tabcontent status-ok" id="tab4">
+            <div class="sensor-status"></div>
+            <div class="sensor-tabcontent-value">
+              <p>текущее значение:<br/><span class="sensor-value">1.2 мг/м<sup>3</sup></span></p>
               <hr class="hr-small">
-              <p>норма: < 150 мкг/м3</p>
+              <p>норма: < 3 мг/м3</p>
             </div>
             <div class="sensor-tabcontent-info">
-              <p>PM1 – это частицы размером меньше 1 мкм (тысячная доля миллиметра). Тело человека имеет ряд природных барьеров против PM10 и PM2.5, таких как волоски и слизистые оболочки, однако они не защищают от PM1. Эти мелкие частицы могут привести к развитию респираторных и других серьезных заболеваний.</p>
+              <p>CO - оксид углерода или "угарный газ" является широко распространенным загрязнителем атмосферного воздуха. Оксид углерода получается при сжигании органического материала, типа угля, древесины, бумаги, масла, бензина, газа, взрывчатых веществ или карбонатных материалов любого другого типа в условиях недостатка воздуха или кислорода. Двигатели транспортных средств производят от 55 до 60% всего количества СО искусственного происхождения. Оксид углерода является токсичным газом, попадая в организм человека  снижает способность гемоглобина переносить и поставлять кислород.</p>
             </div>
           </div>
-          <div class="js-tabcontent sensor-tabcontent" id="tab5">
-            <div class="sensor-tabcontent-value status-ok">
-              <p>текущее значение:<br/><span class="sensor-value">14 мкг/м3</span></p>
+          <div class="js-tabcontent sensor-tabcontent status-ok" id="tab5">
+            <div class="sensor-status"></div>
+            <div class="sensor-tabcontent-value">
+              <p>текущее значение:<br/><span class="sensor-value">0 мкг/м3</span></p>
               <hr class="hr-small">
-              <p>норма: < 150 мкг/м3</p>
+              <p>норма: < 0.06 мг/м<sup>3</sup></p>
             </div>
             <div class="sensor-tabcontent-info">
-              <p>PM1 – это частицы размером меньше 1 мкм (тысячная доля миллиметра). Тело человека имеет ряд природных барьеров против PM10 и PM2.5, таких как волоски и слизистые оболочки, однако они не защищают от PM1. Эти мелкие частицы могут привести к развитию респираторных и других серьезных заболеваний.</p>
+              <p>NO – оксид азота, относится к опасным загрязняющим веществам. Техногенные источники поступления оксидов азота в атмосферу: энергетика, сжигание топлива; автотранспорт; промышленность (цветная металлургия, коксохимическая и нефтехимическая отрасли). Основным источником образования техногенных оксидов азота (до 80 % от всего объема) является азот топлива (при сгорании топлива в любых двигателях). NO занимают второе место после SO<sub>2</sub> по вкладу в увеличение кислотности осадков. В дополнение к косвенному воздействию (кислотный дождь), длительное воздействие диоксида азота в концентрации 470-1880 мкг/м3 может подавлять рост некоторых растений. Значимость атмосферных эффектов оксидов азота связана с ухудшением видимости. Диоксид азота играет важную роль в образовании фотохимического смога. Оксиды азота могут отрицательно влиять на здоровье сами по себе и в комбинации с другими загрязняющими веществами.</p>
             </div>
           </div>
-          <div class="js-tabcontent sensor-tabcontent" id="tab6">
-            <div class="sensor-tabcontent-value status-ok">
-              <p>текущее значение:<br/><span class="sensor-value">14 мкг/м3</span></p>
+          <div class="js-tabcontent sensor-tabcontent status-warning" id="tab6">
+            <div class="sensor-status"></div>
+            <div class="sensor-tabcontent-value">
+              <p>текущее значение:<br/><span class="sensor-value">1.616573 мг/м<sup>3</sup></span></p>
               <hr class="hr-small">
-              <p>норма: < 150 мкг/м3</p>
+              <p>норма: < 0.05 мг/м<sup>3</sup></p>
             </div>
             <div class="sensor-tabcontent-info">
-              <p>PM1 – это частицы размером меньше 1 мкм (тысячная доля миллиметра). Тело человека имеет ряд природных барьеров против PM10 и PM2.5, таких как волоски и слизистые оболочки, однако они не защищают от PM1. Эти мелкие частицы могут привести к развитию респираторных и других серьезных заболеваний.</p>
+              <p>SO<sub>2</sub> – диоксид серы, бесцветный газ с острым запахом. Взаимодействуя с атмосферной влагой, оксиды серы (SO2 и SO3) образуют кислотные осадки (дождь, туман, снег), которые оказывают негативное влияние на окружающую среду: повышается кислотность рек и озер, что приводит к сокращению численности, видового разнообразия животных и растений; ухудшается качество сельскохозяйственной продукции, питьевой воды, атмосферного воздуха, что оказывает негативное влияние на здоровье населения; ускоряется разрушение стройматериалов и красок, наносится вред зданиям, памятникам и другим предметам культурного наследия. Особенно опасно сочетание высоких концентраций SO<sub>2</sub> и PM.</p>
             </div>
           </div>
           <section class="section-bordered">

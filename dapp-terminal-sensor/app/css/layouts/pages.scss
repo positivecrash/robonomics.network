@@ -36,7 +36,6 @@
 	{
 		font-family: $font-family-second;
 		font-size: rem(40px);
-		line-height: 1;
 		text-transform: uppercase;
 	}
 
@@ -51,7 +50,7 @@
 #sensor-content-chart
 	{
 		position: relative;
-		height: 60%;
+		min-height: 520px;
 
 		box-sizing: border-box;
 		padding-bottom: rem(30px);
@@ -69,12 +68,50 @@ $c-tab1: #D10078;
 $c-tab2: #987AFF;
 $c-tab3: #da00ff;
 $c-tab4: #ff9b00;
-$c-tab5: #00DFA6;
-$c-tab6: #DDD700;
+$c-tab5: #03b8c1;
+$c-tab6: #bbb606;
 
 .js-tabcontent
 	{
 		display: none;
+
+		&.status-ok, &.status-warning
+			{
+				.sensor-status
+					{
+						background-color: #000;
+						width: 100px;
+						height: 100%;
+						z-index: 1;
+
+						&, &:before
+							{
+								position: absolute;
+								bottom: 0;
+								left: 0;
+							}
+
+						&:before
+							{
+								content: "";
+							}
+					}
+
+				.sensor-tabcontent-value
+					{
+						padding-left: 115px;
+					}
+			}
+
+		&.status-ok
+			{
+				.sensor-status:before { @include get-sprite('man-status-ok'); }
+			}
+
+		&.status-warning
+			{
+				.sensor-status:before { @include get-sprite('man-status-warning'); }
+			}
 	}
 
 .sensor-tablink
@@ -87,7 +124,6 @@ $c-tab6: #DDD700;
 
 		font-family: $font-family-second;
 		font-size: rem(40px);
-		line-height: 1;
 		font-weight: bold;
 
 		margin-right: rem(30px);
@@ -117,7 +153,7 @@ $c-tab6: #DDD700;
 		display: inline-block;
 		padding: rem(15px);
 		box-sizing: border-box;
-		vertical-align: middle;
+		vertical-align: top;
 
 		position: relative;
 		z-index: 1;
@@ -156,38 +192,6 @@ $c-tab6: #DDD700;
 .sensor-tabcontent-value
 	{
 		width: 30%;
-
-		&.status-ok, &.status-warning
-			{
-				position: relative;
-				padding-left: 115px;
-
-				&:before, &:after
-					{
-						content: "";
-						position: absolute;
-						bottom: 0;
-						left: 0;
-					}
-
-				&:before
-					{
-						background-color: #000;
-						width: 100px;
-						height: 100%;
-					}
-			}
-
-		&.status-ok
-			{
-				&:after { @include get-sprite('man-status-ok'); }
-			}
-
-		&.status-warning
-			{
-				&:after { @include get-sprite('man-status-warning'); }
-			}
-		
 	}
 
 .sensor-tabcontent-info
@@ -199,7 +203,6 @@ $c-tab6: #DDD700;
 	{
 		font-family: $font-family-second;
 		font-size: rem(26px);
-		line-height: 1;
 		margin-top: rem(2px);
 	}
 

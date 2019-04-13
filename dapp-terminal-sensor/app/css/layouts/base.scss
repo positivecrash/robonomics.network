@@ -78,11 +78,12 @@ body
 
 header[role='banner']
   {
-    padding-top: 30px;
-    padding-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     position: relative;
     z-index: 1;
+    background-color: $c-blue;
 
     &.header-absolute
       {
