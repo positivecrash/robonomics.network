@@ -2674,6 +2674,7 @@ html {
   -moz-user-select: none;
   -khtml-user-select: none;
   user-select: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
