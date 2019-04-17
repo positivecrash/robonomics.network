@@ -1,5 +1,5 @@
 $icons: (
-    sprite: (width: 634px, height: 129.99px, pngPath: '../i/sprite.png?6', svgPath: '../i/sprite.svg?6'),
+    sprite: (width: 634px, height: 130px, pngPath: '../i/sprite.png?6', svgPath: '../i/sprite.svg?6'),
     flag-de: (width: 30px, height: 19.7px, backgroundX: 0px, backgroundY: 0px),
     flag-en: (width: 30px, height: 19.7px, backgroundX: -30px, backgroundY: 0px),
     flag-jp: (width: 30px, height: 20px, backgroundX: -60px, backgroundY: 0px),
@@ -15,8 +15,8 @@ $icons: (
     i-temp: (width: 26.82px, height: 73.14px, backgroundX: -345px, backgroundY: 0px),
     logo-aira: (width: 25.257px, height: 25.257px, backgroundX: -372px, backgroundY: 0px),
     logo-robonomics: (width: 33.481px, height: 29.491px, backgroundX: -398px, backgroundY: 0px),
-    man-status-ok: (width: 100.98px, height: 129.99px, backgroundX: -432px, backgroundY: 0px),
-    man-status-warning: (width: 100.98px, height: 129.99px, backgroundX: -533px, backgroundY: 0px),
+    man-status-ok: (width: 101px, height: 130px, backgroundX: -432px, backgroundY: 0px),
+    man-status-warning: (width: 101px, height: 130px, backgroundX: -533px, backgroundY: 0px),
 );
 
 $sprite: map-get($icons, sprite);
