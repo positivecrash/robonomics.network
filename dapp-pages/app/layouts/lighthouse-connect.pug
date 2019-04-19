@@ -9,164 +9,46 @@ block html
 block content
 
 	.container-basic
-		section.section-white.p-relative
+		h1 Connect to lighthouse
 
-			h1 Lighthouse 
-				sup.t-label-gray.d-ib.t-small a.lighthouse.5.robonomics.eth
-
-			.row
-				.col-lg-6
-					.section-bordered.m-t-0.m-b-0
-						p.t-big.t-style_uppercase Providers
-
-						p: b 1. Provider #1
-						| adress: 
-						a(href="javascript:;", onclick="clipboard.copy('0x6EFBA8fb2AC5b6730729a972eC224426a287C3Ad')", title="copy to clipboard")
-							b 0x6EFBA8fb2AC5b6730729a972eC224426a287C3Ad
-							span.sprite-basic-copy.m-l-10.align-vertical
-						br/
-						| quota: 
-						b 0 / 1
-						br/
-						| balance: 
-						b 3.091 ETH
-						br/
-						| last block: 
-						b more than 100 blocks ago
-						hr/
-						p: b 1. Provider #2
-						| adress: 
-						a(href="javascript:;", onclick="clipboard.copy('0x6EFBA8fb2AC5b6730729a972eC224426a287C3Ad')", title="copy to clipboard")
-							b 0x6EFBA8fb2AC5b6730729a972eC224426a287C3Ad
-							span.sprite-basic-copy.m-l-10.align-vertical
-						br/
-						| quota: 
-						b 0 / 1
-						br/
-						| balance: 
-						b 3.091 ETH
-						br/
-						| last block: 
-						b more than 100 blocks ago
+		.row
+			.col-md-6
+				.m-t-0.m-b-0.section-white
+					p.t-big.t-style_uppercase Choose existing lighthouse
 					
-				.col-lg-3
-					.section-bordered.m-t-0.m-b-0
-						p.t-big.t-style_uppercase Lighthouse details
-						section.section-small
-							p Contract adress:
-							p.code-overflow-line: b 0x28f95c484ee55E6aB8A2feF72EB51bC65cdd4324
+					.input-radio
+						input(type="radio", name="chooselighthouse", id="lighthouse1", checked)
+						label(for="lighthouse1")
+							b a.lighthouse.5.robonomics.eth
+							.t-small 0x28f95c484ee55E6aB8A2feF72EB51bC65cdd4324
+					
+					hr/
+					.input-radio
+						input(type="radio", name="chooselighthouse", id="lighthouse2")
+						label(for="lighthouse2")
+							b a.lighthouse.5.robonomics.eth
+							.t-small 0xD40AC7F1e5401e03D00F5aeC1779D8e5Af4CF9f1
 
-						section.section-small
-							p Balance:
-							p: b 0.000001 XRT
+					input.m-b-10.m-t-sec(type="text", value="a.lighthouse.5.robonomics.eth", placeholder="Name of the lighthouse",).container-full.t-align_left
+					p 0xD40AC7F1e5401e03D00F5aeC1779D8e5Af4CF9f1
 
-						section.section-small
-							p Minimal stake per quote:
-							p: b 0.000001 XRT
+					a.btn-green(href="#") Connect to the network
+				
 
-				.col-lg-3
-					.section-bordered.m-t-0.m-b-0
-						p.t-big.t-style_uppercase Account details
-						span Your balance:
+			.col-md-6
+				.section-white.m-t-0.m-b-0
+					p.t-big.t-style_uppercase Create your own lighthouse
+					.m-b-half
+						label Name of the lighthouse
 						br/
-						b.t-big.t-style_uppercase 0 XRT
-						hr/
-						.row
-							.col-lg-5
-								span Available for trade:
-								br/
-								b.t-big.t-style_uppercase 0 XRT
-							.col-lg-7
-								.m-b-10
-									input.input-size_sm(type="number", value="1", min="1")
-									span.t-small.m-l-10 XRT
-								button(disabled) Approve
-						hr/
-						.row
-							.col-lg-5
-								span Available for work at the lighthouse:
-								br/
-								b.t-big.t-style_uppercase 0 XRT
-							.col-md-7
-								.m-b-10
-									input.input-size_sm(type="number", value="1", min="1")
-									span.t-small.m-l-10 quotes
-								button(disabled) Approve
+						input.container-full.t-align_left(type="text")
+					.m-b-half
+						label Minimal stake to get one quota (XRT)
+						br/
+						input(type="text", value="0.000001")
+					.m-b-half
+						label Silence timeout for provider in blocks
+						br/ 
+						input(type="text", value="25")
+					a.btn-blue(href="#") Create lighthouse and connect to the network
 
-			.lighthouse-status.sleep(title="Sleeping (no events more then 2 blocks)")
-				span.sprite-basic-sleep
-
-			// .lighthouse-status
-			// 	span.sprite-basic-work
-
-
-		section.section-white
-			h1 Market
-
-			.row
-				.col-sm-4
-					.t-big.t-style_uppercase
-						b Demand
-						a.btn-blue.m-l-20(href="#") test
-
-					hr.hr-lg.hr-green
-
-					p
-						.t-small Sent from account:
-						b.code-overflow-line 0x40c550146C0F1d22166846D90fbeAB427021C8d3
-					p
-						.t-small Demand program description:
-						b.code-overflow-line QmfCcLKrTCuXsf6bHbVupVv4zsbs6kjqTQ7DRftGqMLjdW
-
-					p
-						.t-small Data for program execution:
-						b.code-overflow-line Qmbm3o2wkqseSEi5F69CPAuDrsKnrwTJ3HN5FVLPgLHKUm
-
-					p
-						.t-small 0x7dE91B204C1C737bcEe6F000AAA6569Cf7061cb7 cost:
-						b 0
-
-					p
-						.t-small Valid before:
-						b 7594666 block
-
-					p
-						.t-small Status:
-						b Without observing network
-
-					hr.hr-lg.hr-green
-
-					p
-						.t-small Sent from account:
-						b.code-overflow-line 0x40c550146C0F1d22166846D90fbeAB427021C8d3
-					p
-						.t-small Demand program description:
-						b.code-overflow-line QmfCcLKrTCuXsf6bHbVupVv4zsbs6kjqTQ7DRftGqMLjdW
-
-					p
-						.t-small Data for program execution:
-						b.code-overflow-line Qmbm3o2wkqseSEi5F69CPAuDrsKnrwTJ3HN5FVLPgLHKUm
-
-					p
-						.t-small 0x7dE91B204C1C737bcEe6F000AAA6569Cf7061cb7 cost:
-						b 0
-
-					p
-						.t-small Valid before:
-						b 7594666 block
-
-					p
-						.t-small Status:
-						b Without observing network
-
-
-				.col-sm-4
-					.t-big.t-style_uppercase
-						b Offer
-						a.btn-blue.m-l-20(href="#") test
-					hr.hr-lg.hr-green
-
-				.col-sm-4
-					.t-big.t-style_uppercase
-						b Liabilities
-					hr.hr-lg.hr-green

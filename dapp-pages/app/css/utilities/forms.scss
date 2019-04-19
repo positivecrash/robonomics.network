@@ -300,6 +300,16 @@ select{
 	}
 }
 
+.btn-orange{
+	@extend %form_all_base;
+	@extend %form_button_base;
+	background-color: $c-orange;
+
+	&:hover{
+		background-color: darken($c-orange, 10%);
+	}
+}
+
 /*======== end of buttons =========*/
 
 

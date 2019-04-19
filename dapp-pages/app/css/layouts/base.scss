@@ -120,7 +120,7 @@ main[role='main']
 .row
   {
 
-    @media screen and (max-width: $bootstrap-sm){
+    @media screen and (max-width: $bootstrap-md){
       *[class*='col-md']
         {
           margin-bottom: $vertical-rythm;

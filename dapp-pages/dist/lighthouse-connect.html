@@ -29,118 +29,46 @@
     </header>
     <main role="main">
       <div class="container-basic">
-        <section class="section-white p-relative">
-          <h1>Lighthouse <sup class="t-label-gray d-ib t-small">a.lighthouse.5.robonomics.eth</sup></h1>
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="section-bordered m-t-0 m-b-0">
-                <p class="t-big t-style_uppercase">Providers</p>
-                <p><b>1. Provider #1</b></p>adress: <a href="javascript:;" onclick="clipboard.copy('0x6EFBA8fb2AC5b6730729a972eC224426a287C3Ad')" title="copy to clipboard"><b>0x6EFBA8fb2AC5b6730729a972eC224426a287C3Ad</b><span class="sprite-basic-copy m-l-10 align-vertical"></span></a><br/>quota: <b>0 / 1</b><br/>balance: <b>3.091 ETH</b><br/>last block: <b>more than 100 blocks ago</b>
-                <hr/>
-                <p><b>1. Provider #2</b></p>adress: <a href="javascript:;" onclick="clipboard.copy('0x6EFBA8fb2AC5b6730729a972eC224426a287C3Ad')" title="copy to clipboard"><b>0x6EFBA8fb2AC5b6730729a972eC224426a287C3Ad</b><span class="sprite-basic-copy m-l-10 align-vertical"></span></a><br/>quota: <b>0 / 1</b><br/>balance: <b>3.091 ETH</b><br/>last block: <b>more than 100 blocks ago</b>
+        <h1>Connect to lighthouse</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="m-t-0 m-b-0 section-white">
+              <p class="t-big t-style_uppercase">Choose existing lighthouse</p>
+              <div class="input-radio">
+                <input type="radio" name="chooselighthouse" id="lighthouse1" checked>
+                <label for="lighthouse1"><b>a.lighthouse.5.robonomics.eth</b>
+                  <div class="t-small">0x28f95c484ee55E6aB8A2feF72EB51bC65cdd4324</div>
+                </label>
               </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="section-bordered m-t-0 m-b-0">
-                <p class="t-big t-style_uppercase">Lighthouse details</p>
-                <section class="section-small">
-                  <p>Contract adress:</p>
-                  <p class="code-overflow-line"><b>0x28f95c484ee55E6aB8A2feF72EB51bC65cdd4324</b></p>
-                </section>
-                <section class="section-small">
-                  <p>Balance:</p>
-                  <p><b>0.000001 XRT</b></p>
-                </section>
-                <section class="section-small">
-                  <p>Minimal stake per quote:</p>
-                  <p><b>0.000001 XRT</b></p>
-                </section>
+              <hr/>
+              <div class="input-radio">
+                <input type="radio" name="chooselighthouse" id="lighthouse2">
+                <label for="lighthouse2"><b>a.lighthouse.5.robonomics.eth</b>
+                  <div class="t-small">0xD40AC7F1e5401e03D00F5aeC1779D8e5Af4CF9f1</div>
+                </label>
               </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="section-bordered m-t-0 m-b-0">
-                <p class="t-big t-style_uppercase">Account details</p><span>Your balance:</span><br/><b class="t-big t-style_uppercase">0 XRT</b>
-                <hr/>
-                <div class="row">
-                  <div class="col-lg-5"><span>Available for trade:</span><br/><b class="t-big t-style_uppercase">0 XRT</b></div>
-                  <div class="col-lg-7">
-                    <div class="m-b-10">
-                      <input class="input-size_sm" type="number" value="1" min="1"><span class="t-small m-l-10">XRT</span>
-                    </div>
-                    <button disabled>Approve</button>
-                  </div>
-                </div>
-                <hr/>
-                <div class="row">
-                  <div class="col-lg-5"><span>Available for work at the lighthouse:</span><br/><b class="t-big t-style_uppercase">0 XRT</b></div>
-                  <div class="col-md-7">
-                    <div class="m-b-10">
-                      <input class="input-size_sm" type="number" value="1" min="1"><span class="t-small m-l-10">quotes</span>
-                    </div>
-                    <button disabled>Approve</button>
-                  </div>
-                </div>
-              </div>
+              <input class="m-b-10 m-t-sec container-full t-align_left" type="text" value="a.lighthouse.5.robonomics.eth" placeholder="Name of the lighthouse">
+              <p>0xD40AC7F1e5401e03D00F5aeC1779D8e5Af4CF9f1</p><a class="btn-green" href="#">Connect to the network</a>
             </div>
           </div>
-          <div class="lighthouse-status sleep" title="Sleeping (no events more then 2 blocks)"><span class="sprite-basic-sleep"></span></div>
-          <!-- .lighthouse-status-->
-          <!-- 	span.sprite-basic-work-->
-        </section>
-        <section class="section-white">
-          <h1>Market</h1>
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="t-big t-style_uppercase"><b>Demand</b><a class="btn-blue m-l-20" href="#">test</a></div>
-              <hr class="hr-lg hr-green">
-              <p>
-                <div class="t-small">Sent from account:</div><b class="code-overflow-line">0x40c550146C0F1d22166846D90fbeAB427021C8d3</b>
-              </p>
-              <p>
-                <div class="t-small">Demand program description:</div><b class="code-overflow-line">QmfCcLKrTCuXsf6bHbVupVv4zsbs6kjqTQ7DRftGqMLjdW</b>
-              </p>
-              <p>
-                <div class="t-small">Data for program execution:</div><b class="code-overflow-line">Qmbm3o2wkqseSEi5F69CPAuDrsKnrwTJ3HN5FVLPgLHKUm</b>
-              </p>
-              <p>
-                <div class="t-small">0x7dE91B204C1C737bcEe6F000AAA6569Cf7061cb7 cost:</div><b>0</b>
-              </p>
-              <p>
-                <div class="t-small">Valid before:</div><b>7594666 block</b>
-              </p>
-              <p>
-                <div class="t-small">Status:</div><b>Without observing network</b>
-              </p>
-              <hr class="hr-lg hr-green">
-              <p>
-                <div class="t-small">Sent from account:</div><b class="code-overflow-line">0x40c550146C0F1d22166846D90fbeAB427021C8d3</b>
-              </p>
-              <p>
-                <div class="t-small">Demand program description:</div><b class="code-overflow-line">QmfCcLKrTCuXsf6bHbVupVv4zsbs6kjqTQ7DRftGqMLjdW</b>
-              </p>
-              <p>
-                <div class="t-small">Data for program execution:</div><b class="code-overflow-line">Qmbm3o2wkqseSEi5F69CPAuDrsKnrwTJ3HN5FVLPgLHKUm</b>
-              </p>
-              <p>
-                <div class="t-small">0x7dE91B204C1C737bcEe6F000AAA6569Cf7061cb7 cost:</div><b>0</b>
-              </p>
-              <p>
-                <div class="t-small">Valid before:</div><b>7594666 block</b>
-              </p>
-              <p>
-                <div class="t-small">Status:</div><b>Without observing network</b>
-              </p>
-            </div>
-            <div class="col-sm-4">
-              <div class="t-big t-style_uppercase"><b>Offer</b><a class="btn-blue m-l-20" href="#">test</a></div>
-              <hr class="hr-lg hr-green">
-            </div>
-            <div class="col-sm-4">
-              <div class="t-big t-style_uppercase"><b>Liabilities</b></div>
-              <hr class="hr-lg hr-green">
+          <div class="col-md-6">
+            <div class="section-white m-t-0 m-b-0">
+              <p class="t-big t-style_uppercase">Create your own lighthouse</p>
+              <div class="m-b-half">
+                <label>Name of the lighthouse</label><br/>
+                <input class="container-full t-align_left" type="text">
+              </div>
+              <div class="m-b-half">
+                <label>Minimal stake to get one quota (XRT)</label><br/>
+                <input type="text" value="0.000001">
+              </div>
+              <div class="m-b-half">
+                <label>Silence timeout for provider in blocks</label><br/> 
+                <input type="text" value="25">
+              </div><a class="btn-blue" href="#">Create lighthouse and connect to the network</a>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </main>
     <footer role="contentinfo">
