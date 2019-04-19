@@ -6,8 +6,7 @@ html(lang='ru')
 	head
 		meta(http-equiv="Content-Type" content="text/html;charset=UTF-8")
 		meta(name='viewport' content="width=device-width, initial-scale=1, shrink-to-fit=no")
-		
-		block head
+
 		title #{pageTitle} | robonomics.network
 		meta(name='description' content=pageDescription || '')
 		meta(name='keywords' content=pageKeywords || '')
@@ -33,8 +32,9 @@ html(lang='ru')
 					.align-vertical
 						a(href="/").header-logo: img(alt="dApp logo", src="assets/i/logo-dapp.svg")
 						.header-title.title-pale
-							| dapp 
-							b XRT token generation event
+							| dApp 
+							//- b XRT token generation event
+							b=headerlogo_title
 					.align-vertical.t-align_right
 						nav.nav-g
 							.dropdown

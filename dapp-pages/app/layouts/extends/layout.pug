@@ -2,22 +2,20 @@ doctype html
 
 block html
 html(lang='ru')
+	
 	head
 		meta(http-equiv="Content-Type" content="text/html;charset=UTF-8")
 		meta(name='viewport' content="width=device-width, initial-scale=1, shrink-to-fit=no")
-		
-		block head
-		title #{pageTitle} | robonomics.network
-		meta(name='description' content=pageDescription || '')
-		meta(name='keywords' content=pageKeywords || '')
+
+		title #{meta_title} | robonomics.network
+		meta(name='description' content=meta_description || '')
+		meta(name='keywords' content=meta_keywords || '')
 
 		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,900&amp;subset=cyrillic,cyrillic-ext" type="text/css" media="all")
-
 
 		link(href='assets/css/robonomics_website.min.css?v=1' rel='stylesheet')
 			
 		script(src='assets/js/jquery-2.1.4.min.js?v=1')
-		//- script(src="http://code.jquery.com/jquery-2.2.4.min.js", integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=", crossorigin="anonymous")
 		script(src='assets/js/robonomics_plugins.min.js?v=1')
 		script(src='assets/js/robonomics_website.js?v=1')
 
@@ -25,10 +23,16 @@ html(lang='ru')
 		link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
 		link(rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png")
 		link(rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png")
-	body
-		include ../includes/header.pug
 
-		main(role="main")
+	body(class=bodyclass)
+		if header
+			include ../includes/header.pug
+		
+		if header || footer
+			main(role="main")
+				block content
+		else
 			block content
 
-		include ../includes/footer.pug
+		if footer
+			include ../includes/footer.pug

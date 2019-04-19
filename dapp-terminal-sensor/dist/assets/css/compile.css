@@ -1838,7 +1838,7 @@ sub {
 /*====== Media queries ======*/
 /*====== Colors ======*/
 .sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-jp, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-i-check, .sprite-basic-i-checked, .sprite-basic-i-error, .sprite-basic-i-humidity, .sprite-basic-i-menu-dark, .sprite-basic-i-menu-light, .sprite-basic-i-pressure, .sprite-basic-i-temp, .sprite-basic-logo-aira, .sprite-basic-logo-robonomics, .sprite-basic-man-status-ok, .sprite-basic-man-status-warning, .msg-error.msg-icon:before, .msg-ok.msg-icon:before, .input-checkbox label:before, .js-tabcontent.status-ok .sensor-status:before, .js-tabcontent.status-warning .sensor-status:before {
-  background-image: url("../i/sprite.svg?6");
+  background-image: url("../i/sprite.svg?1");
 }
 
 .sprite-basic-flag-de {
@@ -1993,27 +1993,27 @@ h1, h2, h3, h4, h5, h6, .t-style_uppercase, .title-pale, table th, input:not([ty
 
 @font-face {
   font-family: "Roboto";
-  src: url('../fonts/Roboto-Regular.eot?1555482353');
-  src: url('../fonts/Roboto-Regular.eot?&1555482353#iefix') format('embedded-opentype'), url('../fonts/Roboto-Regular.woff?1555482353') format('woff'), url('../fonts/Roboto-Regular.ttf?1357675200') format('truetype');
+  src: url('../fonts/Roboto-Regular.eot?1555500888');
+  src: url('../fonts/Roboto-Regular.eot?&1555500888#iefix') format('embedded-opentype'), url('../fonts/Roboto-Regular.woff?1555500888') format('woff'), url('../fonts/Roboto-Regular.ttf?1357675200') format('truetype');
   font-weight: normal;
 }
 @font-face {
   font-family: "Roboto";
-  src: url('../fonts/Roboto-Bold.eot?1555482352');
-  src: url('../fonts/Roboto-Bold.eot?&1555482352#iefix') format('embedded-opentype'), url('../fonts/Roboto-Bold.woff?1555482352') format('woff'), url('../fonts/Roboto-Bold.ttf?1357675200') format('truetype');
+  src: url('../fonts/Roboto-Bold.eot?1555500888');
+  src: url('../fonts/Roboto-Bold.eot?&1555500888#iefix') format('embedded-opentype'), url('../fonts/Roboto-Bold.woff?1555500888') format('woff'), url('../fonts/Roboto-Bold.ttf?1357675200') format('truetype');
   font-weight: bold;
 }
 @font-face {
   font-family: "Roboto";
-  src: url('../fonts/Roboto-Italic.eot?1555482352');
-  src: url('../fonts/Roboto-Italic.eot?&1555482352#iefix') format('embedded-opentype'), url('../fonts/Roboto-Italic.woff?1555482352') format('woff'), url('../fonts/Roboto-Italic.ttf?1357675200') format('truetype');
+  src: url('../fonts/Roboto-Italic.eot?1555500888');
+  src: url('../fonts/Roboto-Italic.eot?&1555500888#iefix') format('embedded-opentype'), url('../fonts/Roboto-Italic.woff?1555500888') format('woff'), url('../fonts/Roboto-Italic.ttf?1357675200') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: "Bebas Neue";
-  src: url('../fonts/BebasNeueBold.eot?1555482352');
-  src: url('../fonts/BebasNeueBold.eot?&1555482352#iefix') format('embedded-opentype'), url('../fonts/BebasNeueBold.woff?1555482352') format('woff'), url('../fonts/BebasNeueBold.ttf?1554951858') format('truetype');
+  src: url('../fonts/BebasNeueBold.eot?1555500888');
+  src: url('../fonts/BebasNeueBold.eot?&1555500888#iefix') format('embedded-opentype'), url('../fonts/BebasNeueBold.woff?1555500888') format('woff'), url('../fonts/BebasNeueBold.ttf?1554951858') format('truetype');
   font-weight: bold;
 }
 /*====== Text sizes & Headers ======*/
@@ -2746,6 +2746,9 @@ header[role='banner'].header-absolute {
   top: 0;
   left: 0;
   right: 0;
+}
+header[role='banner'].header-dark {
+  background-color: #232323;
 }
 
 footer[role='contentinfo'] {

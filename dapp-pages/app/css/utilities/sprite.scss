@@ -1,17 +1,22 @@
 $icons: (
-    sprite: (width: 330px, height: 30px, pngPath: '../i/sprite.png?6', svgPath: '../i/sprite.svg?6'),
-    flag-de: (width: 30px, height: 19.7px, backgroundX: 0px, backgroundY: 0px),
-    flag-en: (width: 30px, height: 19.7px, backgroundX: -30px, backgroundY: 0px),
-    flag-jp: (width: 30px, height: 20px, backgroundX: -60px, backgroundY: 0px),
-    flag-ru: (width: 30px, height: 19.7px, backgroundX: -90px, backgroundY: 0px),
-    flag-zh: (width: 30px, height: 19.7px, backgroundX: -120px, backgroundY: 0px),
-    i-check: (width: 13.758px, height: 9.899px, backgroundX: -150px, backgroundY: 0px),
-    i-checked: (width: 22.45px, height: 22.451px, backgroundX: -164px, backgroundY: 0px),
-    i-error: (width: 22.446px, height: 22.446px, backgroundX: -187px, backgroundY: 0px),
-    i-menu-dark: (width: 30px, height: 30px, backgroundX: -210px, backgroundY: 0px),
-    i-menu-light: (width: 30px, height: 19.2px, backgroundX: -240px, backgroundY: 0px),
-    logo-aira: (width: 25.257px, height: 25.257px, backgroundX: -270px, backgroundY: 0px),
-    logo-robonomics: (width: 33.481px, height: 29.491px, backgroundX: -296px, backgroundY: 0px),
+    sprite: (width: 487px, height: 30px, pngPath: '../i/sprite.png?6', svgPath: '../i/sprite.svg?6'),
+    copy: (width: 16.87px, height: 21.07px, backgroundX: 0px, backgroundY: 0px),
+    flag-de: (width: 30px, height: 19.7px, backgroundX: -17px, backgroundY: 0px),
+    flag-en: (width: 30px, height: 19.7px, backgroundX: -47px, backgroundY: 0px),
+    flag-jp: (width: 30px, height: 20px, backgroundX: -77px, backgroundY: 0px),
+    flag-ru: (width: 30px, height: 19.7px, backgroundX: -107px, backgroundY: 0px),
+    flag-zh: (width: 30px, height: 19.7px, backgroundX: -137px, backgroundY: 0px),
+    i-check: (width: 13.758px, height: 9.899px, backgroundX: -167px, backgroundY: 0px),
+    i-checked: (width: 22.45px, height: 22.451px, backgroundX: -181px, backgroundY: 0px),
+    i-error: (width: 22.446px, height: 22.446px, backgroundX: -204px, backgroundY: 0px),
+    i-menu-dark: (width: 30px, height: 30px, backgroundX: -227px, backgroundY: 0px),
+    i-menu-light: (width: 30px, height: 19.2px, backgroundX: -257px, backgroundY: 0px),
+    logo-aira: (width: 25.257px, height: 25.257px, backgroundX: -287px, backgroundY: 0px),
+    logo-aira-pale: (width: 25.3px, height: 25.3px, backgroundX: -313px, backgroundY: 0px),
+    logo-robonomics: (width: 33.481px, height: 29.491px, backgroundX: -339px, backgroundY: 0px),
+    logo-robonomics-pale: (width: 33.5px, height: 29.5px, backgroundX: -373px, backgroundY: 0px),
+    sleep: (width: 39.8px, height: 28px, backgroundX: -407px, backgroundY: 0px),
+    work: (width: 39.8px, height: 28px, backgroundX: -447px, backgroundY: 0px),
 );
 
 $sprite: map-get($icons, sprite);
@@ -32,6 +37,10 @@ $sprite: map-get($icons, sprite);
     // .svg & { @extend %back_svg; }
 }
 
+.sprite-basic-copy{
+  @include get-sprite('copy');
+  display: inline-block;
+}
 .sprite-basic-flag-de{
   @include get-sprite('flag-de');
   display: inline-block;
@@ -76,7 +85,23 @@ $sprite: map-get($icons, sprite);
   @include get-sprite('logo-aira');
   display: inline-block;
 }
+.sprite-basic-logo-aira-pale{
+  @include get-sprite('logo-aira-pale');
+  display: inline-block;
+}
 .sprite-basic-logo-robonomics{
   @include get-sprite('logo-robonomics');
+  display: inline-block;
+}
+.sprite-basic-logo-robonomics-pale{
+  @include get-sprite('logo-robonomics-pale');
+  display: inline-block;
+}
+.sprite-basic-sleep{
+  @include get-sprite('sleep');
+  display: inline-block;
+}
+.sprite-basic-work{
+  @include get-sprite('work');
   display: inline-block;
 }

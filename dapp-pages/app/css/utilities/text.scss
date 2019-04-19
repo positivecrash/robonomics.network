@@ -61,6 +61,14 @@ a
 			}
 		}
 
+		&.a-color_pale {
+			color: $c-violet-pale;
+
+			&.hover:hover{
+				color: $c-orange;
+			}
+		}
+
 		&.a-noline { @extend %link_noline; }
 	}
 
@@ -97,9 +105,19 @@ a
 	{
 		max-width: 100%;
 		overflow-x: auto;
-		display: block;
+		display: inline-block;
 		white-space: nowrap;
 	}
+
+.t-label-blue, .t-label-orange, .t-label-gray
+	{
+		padding: 4px 10px;
+		color: #fff;
+	}
+
+.t-label-blue { background-color: $c-blue; }
+.t-label-orange { background-color: $c-orange; }
+.t-label-gray { background-color: $c-gray; color: #000; }
 
 /*====== end of Text styles ======*/
 
@@ -154,6 +172,15 @@ hr{
 	height: 1px;
 	margin-top: $vertical-rythm;
 	margin-bottom: $vertical-rythm;
+
+	&.hr-lg{
+		height: 3px;
+	}
+
+	&.hr-green
+		{
+			background-color: $c-green;
+		}
 }
 
 table

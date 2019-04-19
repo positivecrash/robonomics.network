@@ -258,11 +258,17 @@ select{
 
 .input-size_sm
 	{
-		width: 105px;
+		width: 65px;
 		max-width: 100%;
 	}
 
 .input-size_md
+	{
+		width: 105px;
+		max-width: 100%;
+	}
+
+.input-size_lg
 	{
 		width: 340px;
 		max-width: 100%;
@@ -274,7 +280,7 @@ select{
 
 /*======== buttons =========*/
 
-.btn-green, input[type="submit"], input[type="button"]{
+.btn-green, input[type="submit"], input[type="button"], button{
 	@extend %form_all_base;
 	@extend %form_button_base;
 	background-color: $c-green;

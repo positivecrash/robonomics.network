@@ -99,6 +99,11 @@ header[role='banner']
         left: 0;
         right: 0;
       }
+
+    &.header-dark
+      {
+        background-color: #232323;
+      }
   }
 
 footer[role='contentinfo']

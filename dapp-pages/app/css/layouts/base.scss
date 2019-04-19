@@ -94,6 +94,8 @@ main[role='main']
 
 .align-vertical { vertical-align: middle; }
 
+.p-relative { position: relative;  }
+
 /*====== Flow elements ======*/
 
 
@@ -125,14 +127,21 @@ main[role='main']
         }
     }
 
+    @media screen and (max-width: $bootstrap-lg){
+      *[class*='col-lg']
+        {
+          margin-bottom: $vertical-rythm;
+        }
+    }
+
   }
 
-.row-marged_cols{
-  *[class*='col-md']
-      {
-        margin-bottom: $vertical-rythm;
-      }
-}
+// .row-marged_cols{
+//   *[class*='col-']
+//       {
+//         margin-bottom: $vertical-rythm;
+//       }
+// }
 /*====== end of Bootstrap ======*/
 
 
@@ -206,6 +215,15 @@ section
 
       &:first-child { padding-top: 0; }
       &:last-child { padding-bottom: 0; }
+
+      li, p, blockquote
+      {
+        margin-bottom: 4px;
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
   }
 
 
