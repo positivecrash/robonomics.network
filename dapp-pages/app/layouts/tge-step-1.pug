@@ -4,33 +4,21 @@ block html
 	- var meta_title = 'Step 1 | TGE XRT'
 	- var logo_title = 'XRT token generation event'
 	- var header = true
-	// - var header_container = 'container-padding'
+	- var header_container = 'container-padding'
 	- var footer = true
-	// - var footer_container = 'container-padding'
+	- var footer_container = 'container-padding'
 
 block content
 
-	.container-basic
+	.container-padding
 		section.section-white
-			h1 Add contribution to wallet
+			p: b Держатель токенов Aira!
+			p С твоей помощью мы проделали путь от прототипа программного обеспечения Aira до платформы Робономика. Два года работы, более 50 релизов в 6 репозиториях на GitHub, тысячи коммитов целой группы разработчиков. Твоя поддержка привела к появлению новой технологии, которая в дальнейшем призвана подчинить роботов децентрализованному компьютеру Ethereum.  - ты помог этому. Спасибо!
+			p Важно понимать, что это не конец пути, а только самое начало. Мы создали новую технологию, теперь ее нужно растить и обучать других пользоваться Робономикой.
+			p Токен платформы Робономика мы назвали XRT (Robonomics token). У тебя есть два варианта действий - пройти KYC и ожидать запуска голландского аукциона или в 2 шага получить уже сегодня XRT.
 
-			.row.row-marged_cols
-				.col-md-4
-					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-					p.t-color-red Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+		section.section-white
+			.row
 				.col-md-8
-					section.section-small
-						p: b 1. Check your account:
-
-						section.section-bordered.m-t-0
-							code.code-overflow-line 0x002f60d5794055ad13bf3247aa1d005db3d06f4r
-							p.t-color-red You need to pass KYC
-							a.btn-green(href="#") Pass KYS
-
-					section.section-small
-						p: b 2. How much ETH would you like to contribute?
-						p
-							input.input-size_sm.t-align_right.m-r-20(type="text", disabled, placeholder="10")
-							b ETH
-						a.btn-green.disabled(href="#") Proceed
+				.col-md-4

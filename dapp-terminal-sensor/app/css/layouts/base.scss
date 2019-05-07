@@ -27,7 +27,7 @@ body
     animation: 0.4s FadeIn ease-in forwards;
 
     color: $c-text-light;
-    background-color: $c-blue;
+    background-color: #2B689F;
 
     padding-bottom: 15px;
 
@@ -41,8 +41,9 @@ body
   }
 
 
-.body-background
+body.body-background
   {
+    background-color: $c-blue;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
