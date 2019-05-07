@@ -32,6 +32,7 @@ body
 /*====== Set width of container ======*/
 .container-basic { @include secw($mq-desktop); }
 .container-full {  width: 100%; box-sizing: border-box; }
+.container-padding { @include secw(100%); }
 /*====== end of Set width of container ======*/
 
 

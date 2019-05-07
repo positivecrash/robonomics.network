@@ -2,6 +2,15 @@
 	{
 		background-color: #13022B;
 		background-image: none;
+
+		main[role='main']
+			{
+				padding-bottom: 20px;
+
+				@include mobile(){
+					padding-bottom: 20px;
+				}
+			}
 	}
 
 .tge-finish_container

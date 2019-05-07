@@ -1,5 +1,8 @@
+if !header_container
+	- var header_container = 'container-basic'
+
 header(role='banner')
-	.container-basic
+	div(class=header_container)
 		.d-table.container-full
 			.align-vertical
 				a(href="/").header-logo: img(alt="dApp logo", src="assets/i/logo-dapp.svg")
@@ -16,4 +19,4 @@ header(role='banner')
 								a(href="#").a-noline: span.sprite-basic-flag-ru
 								a(href="#").a-noline: span.sprite-basic-flag-de
 								a(href="#").a-noline: span.sprite-basic-flag-zh
-								a(href="#").a-noline: span.sprite-basic-flag-jp
+								a(href="#").a-noline: span.sprite-basic-flag-jp	}

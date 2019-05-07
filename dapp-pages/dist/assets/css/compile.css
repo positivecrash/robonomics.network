@@ -2723,6 +2723,14 @@ body {
   box-sizing: border-box;
 }
 
+.container-padding {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 /*====== end of Set width of container ======*/
 /*====== Basic elements ======*/
 header[role='banner'] {
@@ -3028,6 +3036,14 @@ nav.nav-g > *:last-child {
 .tge-finish {
   background-color: #13022B;
   background-image: none;
+}
+.tge-finish main[role='main'] {
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 576px) {
+  .tge-finish main[role='main'] {
+    padding-bottom: 20px;
+  }
 }
 
 .tge-finish_container {

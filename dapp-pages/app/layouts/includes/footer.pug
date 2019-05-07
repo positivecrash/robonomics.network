@@ -1,5 +1,8 @@
+if !footer_container
+	- var footer_container = 'container-basic'
+
 footer(role='contentinfo')
-	.container-basic
+	div(class=footer_container)
 		.separator-pale.separator-animated.js-checkInView
 
 		.p-10
