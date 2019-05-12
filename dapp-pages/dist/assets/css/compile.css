@@ -3332,10 +3332,6 @@ header[role='banner'] .dropdown .dropdown-content {
   color: #6e1484;
 }
 
-.sidebar nav .active:before {
-  border-radius: 0 4px 4px 0;
-}
-
 .panel-top {
   padding: 10px;
   border: 1px solid #000;
