@@ -1,21 +1,17 @@
-html, body
+html
   {
     height: 100%;
     min-height: 100%;
   }
 
-
-html
+html, body
   {
     position: relative;
-    overflow-x: hidden;
   }
 
 
 body
   {
-    position: relative;
-
     opacity: 0;
     animation: 0.4s FadeIn ease-in forwards;
 
@@ -23,8 +19,6 @@ body
     background-color: $c-violet-dark;
     background-image: linear-gradient($c-violet-red, $c-violet-dark);
     background-repeat: no-repeat;
-
-    height: auto;
   }
 
 
@@ -41,9 +35,37 @@ body
 
 header[role='banner']
   {
-    padding-top: 30px;
-    padding-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+
+    &.header-solid
+      {
+        background-color: lighten($c-violet-red, 2%);
+        // background-color: #271c4e;
+      }
   }
+
+.header-logo
+  {
+    @extend %d-inlineblock;
+    max-width: 35px;
+    margin-right: 20px;
+
+    img{  @extend %i-block; }
+  }
+
+.header-title
+  {
+    @extend %d-inlineblock;
+    font-size: 18px;
+
+    @include mobile(){
+      display: none;
+    }
+  }
+
+
+
 
 footer[role='contentinfo']
   {
@@ -55,6 +77,7 @@ footer[role='contentinfo']
 
 main[role='main']
   {
+    padding-top: 20px;
     padding-bottom: 120px;
 
     @include mobile(){
@@ -83,8 +106,8 @@ main[role='main']
     }
   }
 
-.d-table_row { display: table-row; }
-.d-table_cell { display: table-cell; }
+.d-table_row, .d-table--row { display: table-row; }
+.d-table_cell, .d-table--cell { display: table-cell; }
 
 .d-inlineblock
   {
@@ -118,6 +141,9 @@ main[role='main']
 
 
 /*====== Bootstrap ======*/
+
+.row-wrap { overflow-x: hidden; }
+
 .row
   {
 
@@ -151,39 +177,60 @@ main[role='main']
 
 section
   {
-    padding-top: $margin-sec;
+    // padding-top: $margin-sec;
     padding-bottom: $margin-sec;
     position: relative;
 
-    section
+    section, &.section-color-small
     {
-      padding-top: $margin-sec*0.5;
-      padding-bottom: $margin-sec*0.5;
+      // padding-top: $margin-sec/2;
+      padding-bottom: $margin-sec/2;
 
-      &:first-child { padding-top: 0; }
+      // &:first-child { padding-top: 0; }
       &:last-child { padding-bottom: 0; }
 
       li, p, blockquote, .m-b-base
         {
           margin-bottom: $vertical-rythm/2;
 
-          &:last-child{
-            margin-bottom: 0;
-          }
+          &:last-child {  margin-bottom: 0; }
+        }
+
+      table
+        {
+          margin-top: $vertical-rythm;
+          margin-bottom: $vertical-rythm;
+
+          &:last-child { margin-bottom: 0; }
+          &:first-child{ margin-top: 0; }
         }
     }
+
+
+    &.section-white, &.section-pale
+      {
+        // margin-top: $margin-sec;
+        margin-bottom: $margin-sec;
+
+        &:first-child { margin-top: 0; }
+        &:last-child { margin-bottom: 0; }
+      }
+
+    &.section-color-small
+      {
+        // margin-top: $margin-sec/2;
+        margin-bottom: $margin-sec/2;
+
+        &:first-child { margin-top: 0; }
+        &:last-child { margin-bottom: 0; }
+      }
   }
 
-.section-white
-  {
-      background-color: #fff;
-      color: $c-text-dark;
-      padding: 40px 50px 50px !important;
 
-      margin-top: $margin-sec;
-      margin-bottom: $margin-sec;
-      &:first-child { margin-top: 0; }
-      &:last-child { margin-bottom: 0; }
+.section-white, .section-pale
+  {
+      padding: 40px 50px 50px !important;
+      // border-radius: 4px;
 
       @include mobile(){
         padding-left: 20px !important;
@@ -191,15 +238,56 @@ section
       }
   }
 
+.section-pale
+  {
+      background-color: $c-violet-pale;
+      color: #fff;
+
+      a { color: #fff; }
+  }
+
+#{$class-nightmode} .section-pale
+  {
+    background-color: #1b0136;
+    color: #b6b6b6;
+  }
+
+
+.section-white
+  {
+      background-color: #fff;
+      color: #000;
+  }
+
+#{$class-nightmode} .section-white {
+      background-color: $c-night-whiteBack;
+      color: #ccc;
+}
+
+
+
+.section-color-small
+  {
+    padding: 20px !important;
+  }
+
+
+
 .section-bordered
   {
       padding: 15px !important;
-      border: 1px solid $c-gray;
+      box-shadow: 0 4px 8px rgba(0,0,0,.47);
 
       margin-top: $margin-sec*0.5;
       margin-bottom: $margin-sec*0.5;
+
       &:first-child { margin-top: 0; }
       &:last-child { margin-bottom: 0; }
+
+      &.section-overflowtext
+        {
+          border: 10px solid #fff;
+        }
   }
 
 .section-overflowtext
@@ -240,28 +328,6 @@ section
 /*====== end of Sections ======*/
 
 
-/*====== Header ======*/
-.header-logo
-  {
-    @extend %d-inlineblock;
-    max-height: 40px;
-    margin-right: 20px;
-
-    img{  @extend %i-block; }
-  }
-
-.header-title
-  {
-    @extend %d-inlineblock;
-    font-size: 20px;
-
-    @include mobile(){
-      display: none;
-    }
-  }
-/*====== end of Header ======*/
-
-
 
 
 /*====== Navigation ======*/
@@ -277,8 +343,8 @@ section
 
         position: absolute;
         top: 100%;
-        right: 0;
-        z-index: 1;
+        left: 0;
+        z-index: 10;
         text-align: left;
 
         box-sizing: border-box;
@@ -290,14 +356,6 @@ section
 
     .dropdown-content-color{
       right: -20px;
-
-      .inside
-        {
-          padding: 20px;
-          background: lighten($c-violet-red, 5%);
-          border: 1px solid $c-violet-pale;
-          border-radius: 4px;
-        }
     }
 
     &:hover
@@ -318,34 +376,57 @@ section
           &:last-child { border-bottom: none; margin-bottom: 0; }
         }
       }
+
+
+    &.dropdown-color, .dropdown-content-color .inside{
+      padding: 20px;
+      background: lighten($c-violet-red, 5%);
+      border: 1px solid $c-violet-pale;
+      border-radius: 4px;
+    }
+
+    &.dropdown-color
+      {
+        padding: 10px 20px;
+
+        a { display: block; }
+      }
   }
 
 
-nav
-  {
-    @extend %text_uppercase;
+header[role='banner']
+{
+  nav
+    {
+      @extend %text_uppercase;
 
-    &, a{
-      color: #fff;
+      &, a{
+        color: #fff;
 
-      &:hover{
-        color: $c-orange;
+        &:hover{
+          color: $c-orange;
+        }
       }
     }
-  }
 
 
-nav.nav-g
-  {
-    & > * {
-      @extend %d-inlineblock;
-      margin-right: 30px;
+  nav.nav-g
+    {
+      & > * {
+        @extend %d-inlineblock;
+        margin-right: 30px;
 
-      &:last-child{
-        margin-right: 0;
+        &:last-child{
+          margin-right: 0;
+        }
       }
     }
+
+  .dropdown .dropdown-content{
+    left: auto;
+    right: 0;
   }
+}
 
 /*====== end of Navigation ======*/
 

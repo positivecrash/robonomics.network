@@ -1,0 +1,14 @@
+extends extends/layout_header_1.pug
+
+block html
+	- var meta_title = 'Loading dApp'
+
+block content
+
+	.container-basic
+		section
+			.msg-error.msg-icon
+				.msg-title Plugin required for application operation
+				p
+					b Please, setup: 
+						a(href="https://metamask.io/", target="_blank").t-style_uppercase Metamask

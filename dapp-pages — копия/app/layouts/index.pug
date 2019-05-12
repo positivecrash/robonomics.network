@@ -1,0 +1,322 @@
+extends extends/layout_blank.pug
+
+block head
+	- var pageTitle = 'UI Kit for dApp'
+
+block content
+	section
+		.container-basic: h1 Варианты использования header
+
+		header(role='banner')
+			.container-basic
+				.d-table.container-full
+					.align-vertical
+						a(href="/").header-logo: img(alt="dApp logo", src="assets/i/logo-dapp.svg")
+						.header-title.title-pale
+							| dapp 
+							b Name of dApp
+					.align-vertical.t-align_right
+						nav.nav-g
+							.dropdown
+								a(href="javascript:;"): span.sprite-basic-i-menu-dark
+								.dropdown-content.dropdown-content-color
+									.inside
+										a(href="#") Link 1
+										a(href="#") Link 2
+										a(href="#") Link 3
+										a(href="#") Link 4
+										a(href="#") Link 5
+							.dropdown
+								a(href="javascript:;").a-noline: span.sprite-basic-flag-en
+								.dropdown-content.dropdown-content-color
+									.inside
+										a(href="#").a-noline: span.sprite-basic-flag-ru
+										a(href="#").a-noline: span.sprite-basic-flag-de
+										a(href="#").a-noline: span.sprite-basic-flag-zh
+										a(href="#").a-noline: span.sprite-basic-flag-jp
+
+		
+		header(role='banner')
+			.container-basic
+				.d-table.container-full
+					.align-vertical
+						a(href="/").header-logo: img(alt="dApp logo", src="assets/i/logo-dapp.svg")
+						.header-title.title-pale
+							| dapp 
+							b Name of dApp
+					.align-vertical.t-align_right
+						nav.nav-g
+							a(href="#") Some link
+
+							.dropdown
+								a(href="javascript:;"): span.sprite-basic-i-menu-dark
+								.dropdown-content.dropdown-content-color
+									.inside
+										a(href="#") Link 1
+										a(href="#") Link 2
+										a(href="#") Link 3
+										a(href="#") Link 4
+										a(href="#") Link 5
+							.dropdown
+								a(href="javascript:;").a-noline: span.sprite-basic-flag-en
+								.dropdown-content.dropdown-content-color
+									.inside
+										a(href="#").a-noline: span.sprite-basic-flag-ru
+										a(href="#").a-noline: span.sprite-basic-flag-de
+										a(href="#").a-noline: span.sprite-basic-flag-zh
+										a(href="#").a-noline: span.sprite-basic-flag-jp
+
+
+
+		header(role='banner')
+			.container-basic
+				.d-table.container-full
+					.align-vertical
+						a(href="/").header-logo: img(alt="dApp logo", src="assets/i/logo-dapp.svg")
+					.align-vertical.t-align_right
+						nav.nav-g
+
+							.dropdown
+								a(href="javascript:;"): span.sprite-basic-i-menu-light
+								.dropdown-content
+									.inside
+										a(href="#") Link 1
+										a(href="#") Link 2
+										a(href="#") Link 3
+										a(href="#") Link 4
+										a(href="#") Link 5
+							.dropdown
+								a(href="javascript:;").a-noline: span.sprite-basic-flag-en
+								.dropdown-content
+									.inside
+										a(href="#").a-noline: span.sprite-basic-flag-ru
+										a(href="#").a-noline: span.sprite-basic-flag-de
+										a(href="#").a-noline: span.sprite-basic-flag-zh
+										a(href="#").a-noline: span.sprite-basic-flag-jp
+
+
+
+	section
+		.container-basic
+			h1 Варианты loader
+
+			.m-b-15
+				.loader-ring.align-vertical.m-r-15
+
+			.m-b-15
+				.loader-ring.align-vertical.m-r-15
+				b.align-vertical.t-style_uppercase Loading
+
+
+	section
+		.container-basic
+			h1 Варианты сообщений
+
+			.msg-error.msg-icon
+				.msg-title Ошибка, заголовок
+				p Ошибка, пояснение
+
+			br/
+
+			.msg-error.msg-icon
+				.msg-title Ошибка без пояснения
+
+			br/
+
+			.msg-error
+				.msg-title Ошибка без иконки
+
+
+			section.section-white
+				.msg-error.msg-icon
+					.msg-title Ошибка, заголовок
+					p Ошибка, пояснение
+
+
+			.msg-ok.msg-icon
+				.msg-title Сообщение, заголовок
+				p Сообщение, пояснение
+
+			br/
+
+			.msg-ok.msg-icon
+				.msg-title Сообщение без пояснения
+
+			br/
+
+			.msg-ok
+				.msg-title Сообщение без иконки
+
+
+			section.section-white
+				.msg-ok.msg-icon
+					.msg-title Сообщение, заголовок
+					p Сообщение, пояснение
+
+
+	section
+		.container-basic
+
+			section.section-white
+				h1 Варианты input
+
+				p.input-checkbox
+					input(type="checkbox", name="check1", id="check1")
+					label(for="check1") I confirm something
+
+
+				p.input-radio
+					input(type="radio", name="radiotest", id="radio1")
+					label(for="radio1") I choose something
+
+				p.input-radio
+					input(type="radio", name="radiotest", id="radio2")
+					label(for="radio2") I choose something
+
+				hr/
+				
+				p: input(type="text", placeholder="Placeholder here")
+				p: input.input-size_sm(type="number", placeholder="10", min="0.1")
+				p: input.input-size_md(type="text", placeholder="Input middle size")
+				p: input.container-full.t-align_left(type="text", placeholder="Input full size, text align left (optional)")
+
+				p
+					select.input-size_sm
+						option 16r6r6r6r666
+						option 2
+						option 3
+						option 4
+
+				hr/
+				
+				p: a.btn-green(href="#") Submit link
+				p: input(type="submit", value="Submit input[submit]")
+				p: input(type="button", value="Submit input[button]")
+				p: a.btn-green.disabled(href="#") Submit link disabled
+				p: input(type="submit", value="Submit input[submit] disabled", disabled)
+				p: input(type="button", value="Submit input[button] disabled", disabled)
+				p: a.btn-blue(href="#") Secondary link
+				p: a.btn-blue.d-block(href="#") Fullwidth
+
+
+	section
+		.container-basic
+			section.section-white
+				h1 Таблицы
+
+				table
+					thead
+						tr
+							th Заголовок 1
+							th Заголовок 2
+							th Заголовок 3
+							th Заголовок 4
+					tbody
+						tr
+							td Lorem
+							td
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							td Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							td Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						tr
+							td Lorem
+							td
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							td Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							td Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						tr
+							td Lorem
+							td
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							td Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							td Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+				table.table-spotted.table-compact
+					caption.t-color-red Compact, spotted, with caption
+					thead
+						tr
+							th Заголовок 1
+							th Заголовок 2
+							th Заголовок 3
+							th Заголовок 4
+					tbody
+						tr
+							td Lorem
+							td Lorem
+							td Lorem
+							td Lorem
+						tr
+							td Lorem
+							td Lorem
+							td Lorem
+							td Lorem
+						tr
+							td Lorem
+							td Lorem
+							td Lorem
+							td Lorem
+
+				table.table-spotted.table-compact.table-responsive
+					caption
+						span.t-color-red Responsive
+						|, compact, spotted, with caption
+					thead
+						tr
+							th Заголовок 1
+							th Заголовок 2
+							th Заголовок 3
+							th Заголовок 4
+					tbody
+						tr
+							td(data-th="Заголовок 1") Lorem
+							td(data-th="Заголовок 2") Lorem
+							td(data-th="Заголовок 3") Lorem
+							td(data-th="Заголовок 4") Lorem
+						tr
+							td(data-th="Заголовок 1") Lorem
+							td(data-th="Заголовок 2") Lorem
+							td(data-th="Заголовок 3") Lorem
+							td(data-th="Заголовок 4") Lorem
+						tr
+							td(data-th="Заголовок 1") Lorem
+							td(data-th="Заголовок 2") Lorem
+							td(data-th="Заголовок 3") Lorem
+							td(data-th="Заголовок 4") Lorem
+
+
+				table.table-clear.table-responsive
+					caption
+						span.t-color-red Clear
+						|, responsive, with caption
+					thead
+						tr
+							th Заголовок 1
+							th Заголовок 2
+							th Заголовок 3
+							th Заголовок 4
+					tbody
+						tr
+							td(data-th="Заголовок 1") Lorem
+							td(data-th="Заголовок 2") Lorem
+							td(data-th="Заголовок 3") Lorem
+							td(data-th="Заголовок 4") Lorem
+						tr
+							td(data-th="Заголовок 1") Lorem
+							td(data-th="Заголовок 2") Lorem
+							td(data-th="Заголовок 3") Lorem
+							td(data-th="Заголовок 4") Lorem
+						tr
+							td(data-th="Заголовок 1") Lorem
+							td(data-th="Заголовок 2") Lorem
+							td(data-th="Заголовок 3") Lorem
+							td(data-th="Заголовок 4") Lorem
+
+
+

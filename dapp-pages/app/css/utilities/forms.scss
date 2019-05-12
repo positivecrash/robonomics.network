@@ -6,6 +6,10 @@ $c-input-placeholder: $c-gray-dark;
 $padding-input-v: 4px;
 $padding-input-g: 15px;
 
+$padding-input-sm-v: 2px;
+$padding-input-sm-g: 10px;
+$fontsize-btn-sm: $font-size-base - 3;
+
 %form_all_base{
 	@extend %font_base;
 	@extend %text_uppercase;
@@ -61,6 +65,12 @@ $padding-input-g: 15px;
 				background-color: $c-gray;
 			}
 	}
+
+	&.btn-small
+		{
+			padding: $padding-input-sm-v $padding-input-sm-g;
+			font-size: $fontsize-btn-sm;
+		}
 }
 
 

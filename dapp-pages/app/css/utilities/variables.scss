@@ -3,7 +3,7 @@ $font-family-base:  'Roboto', Arial, Helvetica, sans-serif;
 $scale: 1.5; //для вычисления интерлиньяжа
 $scale-sm: 1.2; //для вычисления интерлиньяжа заголовков
 $font-size-base: 16px;
-$font-size-title: 36px; //h1
+$font-size-title: 30px; //h1
 
 
 /*====== Margins, paddings ======*/
@@ -66,4 +66,15 @@ $c-neonblue: #6CEFFB;
 $c-text-dark: #000;
 $c-text-light: #fff;
 
+$c-night-whiteBack: #271c4e;
+$c-night-whiteCol: #ccc;
+
+
+$c-sidebar-back: lighten($c-violet-red, 12%);
+// #69137f
+
+
+
+/*====== Classes ======*/
+$class-nightmode: '.night';
 

@@ -1,0 +1,54 @@
+extends extends/layout.pug
+
+block html
+	- var meta_title = 'Robonomics Lighthouse'
+	- var logo_title = 'Robonomics Lighthouse'
+	- var header = true
+	- var footer = true
+
+block content
+
+	.container-basic
+		h1 Connect to lighthouse
+
+		.row
+			.col-md-6
+				.m-t-0.m-b-0.section-white
+					p.t-big.t-style_uppercase Choose existing lighthouse
+					
+					.input-radio
+						input(type="radio", name="chooselighthouse", id="lighthouse1", checked)
+						label(for="lighthouse1")
+							b a.lighthouse.5.robonomics.eth
+							.t-small 0x28f95c484ee55E6aB8A2feF72EB51bC65cdd4324
+					
+					hr/
+					.input-radio
+						input(type="radio", name="chooselighthouse", id="lighthouse2")
+						label(for="lighthouse2")
+							b a.lighthouse.5.robonomics.eth
+							.t-small 0xD40AC7F1e5401e03D00F5aeC1779D8e5Af4CF9f1
+
+					input.m-b-10.m-t-sec(type="text", value="a.lighthouse.5.robonomics.eth", placeholder="Name of the lighthouse",).container-full.t-align_left
+					p 0xD40AC7F1e5401e03D00F5aeC1779D8e5Af4CF9f1
+
+					a.btn-green(href="#") Connect to the network
+				
+
+			.col-md-6
+				.section-white.m-t-0.m-b-0
+					p.t-big.t-style_uppercase Create your own lighthouse
+					.m-b-half
+						label Name of the lighthouse
+						br/
+						input.container-full.t-align_left(type="text")
+					.m-b-half
+						label Minimal stake to get one quota (XRT)
+						br/
+						input(type="text", value="0.000001")
+					.m-b-half
+						label Silence timeout for provider in blocks
+						br/ 
+						input(type="text", value="25")
+					a.btn-blue(href="#") Create lighthouse and connect to the network
+

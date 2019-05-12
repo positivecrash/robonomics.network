@@ -1,0 +1,487 @@
+html, body
+  {
+    position: relative;
+    height: 100%;
+    min-height: 100%;
+  }
+
+
+body
+  {
+    opacity: 0;
+    animation: 0.4s FadeIn ease-in forwards;
+
+    color: $c-text-light;
+    background-color: $c-violet-dark;
+    background-image: linear-gradient($c-violet-red, $c-violet-dark);
+    background-repeat: no-repeat;
+
+    height: auto;
+  }
+
+
+
+/*====== Set width of container ======*/
+.container-basic { @include secw($mq-desktop); }
+.container-full {  width: 100%; box-sizing: border-box; }
+.container-padding { @include secw(100%); }
+/*====== end of Set width of container ======*/
+
+
+
+/*====== Basic elements ======*/
+
+header[role='banner']
+  {
+    padding-top: 10px;
+    padding-bottom: 15px;
+
+    &.header-solid
+      {
+        background-color: lighten($c-violet-red, 2%);
+        // background-color: #271c4e;
+      }
+  }
+
+.header-logo
+  {
+    @extend %d-inlineblock;
+    max-width: 35px;
+    margin-right: 20px;
+
+    img{  @extend %i-block; }
+  }
+
+.header-title
+  {
+    @extend %d-inlineblock;
+    font-size: 18px;
+
+    @include mobile(){
+      display: none;
+    }
+  }
+
+
+
+
+footer[role='contentinfo']
+  {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+main[role='main']
+  {
+    padding-top: 20px;
+    padding-bottom: 120px;
+
+    @include mobile(){
+      padding-bottom: 200px;
+    }
+  }
+/*====== end of Basic elements ======*/
+
+
+
+
+
+/*====== Flow elements ======*/
+
+.f-zoom { overflow: hidden; }
+.f-left { float: left; }
+.f-right { float: right; }
+
+
+.d-table
+  {
+    display: table;
+
+    & > *{
+      display: table-cell;
+    }
+  }
+
+.d-table_row { display: table-row; }
+.d-table_cell { display: table-cell; }
+
+.d-inlineblock
+  {
+    display: inline-block !important;
+    vertical-align: middle;
+  }
+.d-block { display: block !important; }
+
+.align-vertical { vertical-align: middle; }
+
+.p-relative { position: relative;  }
+
+/*====== Flow elements ======*/
+
+
+
+
+
+
+/*====== Transitions ======*/
+
+// .fadeOut, .visible { transition: 0.3s ease-in-out opacity; }
+// .fadeOut { visibility: hidden; opacity: 0; }
+// .visible { opacity: 1; visibility: visible; }
+
+/*====== end of Transitions ======*/
+
+
+
+
+
+
+/*====== Bootstrap ======*/
+
+.row-wrap { overflow-x: hidden; }
+
+.row
+  {
+
+    @media screen and (max-width: $bootstrap-md){
+      *[class*='col-md']
+        {
+          margin-bottom: $vertical-rythm;
+        }
+    }
+
+    @media screen and (max-width: $bootstrap-lg){
+      *[class*='col-lg']
+        {
+          margin-bottom: $vertical-rythm;
+        }
+    }
+
+  }
+
+// .row-marged_cols{
+//   *[class*='col-']
+//       {
+//         margin-bottom: $vertical-rythm;
+//       }
+// }
+/*====== end of Bootstrap ======*/
+
+
+
+/*====== Sections ======*/
+
+section
+  {
+    // padding-top: $margin-sec;
+    padding-bottom: $margin-sec;
+    position: relative;
+
+    section, &.section-color-small
+    {
+      // padding-top: $margin-sec/2;
+      padding-bottom: $margin-sec/2;
+
+      // &:first-child { padding-top: 0; }
+      &:last-child { padding-bottom: 0; }
+
+      li, p, blockquote, .m-b-base
+        {
+          margin-bottom: $vertical-rythm/2;
+
+          &:last-child {  margin-bottom: 0; }
+        }
+
+      table
+        {
+          margin-top: $vertical-rythm;
+          margin-bottom: $vertical-rythm;
+
+          &:last-child { margin-bottom: 0; }
+          &:first-child{ margin-top: 0; }
+        }
+    }
+
+
+    &.section-white, &.section-pale
+      {
+        margin-top: $margin-sec;
+        margin-bottom: $margin-sec;
+
+        &:first-child { margin-top: 0; }
+        &:last-child { margin-bottom: 0; }
+      }
+
+    &.section-color-small
+      {
+        margin-top: $margin-sec/2;
+        margin-bottom: $margin-sec/2;
+
+        &:first-child { margin-top: 0; }
+        &:last-child { margin-bottom: 0; }
+      }
+  }
+
+
+.section-white, .section-pale
+  {
+      padding: 40px 50px 50px !important;
+      // border-radius: 4px;
+
+      @include mobile(){
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+  }
+
+.section-pale
+  {
+      background-color: $c-violet-pale;
+      color: #fff;
+
+      a { color: #fff; }
+  }
+
+#{$class-nightmode} .section-pale
+  {
+    background-color: #1b0136;
+    color: #b6b6b6;
+  }
+
+
+.section-white
+  {
+      background-color: #fff;
+      color: #000;
+  }
+
+#{$class-nightmode} .section-white {
+      background-color: $c-night-whiteBack;
+      color: #ccc;
+}
+
+
+
+.section-color-small
+  {
+    padding: 20px !important;
+  }
+
+
+
+.section-bordered
+  {
+      padding: 15px !important;
+      box-shadow: 0 4px 8px rgba(0,0,0,.47);
+
+      margin-top: $margin-sec*0.5;
+      margin-bottom: $margin-sec*0.5;
+
+      &:first-child { margin-top: 0; }
+      &:last-child { margin-bottom: 0; }
+
+      &.section-overflowtext
+        {
+          border: 10px solid #fff;
+        }
+  }
+
+.section-overflowtext
+  {
+    max-height: 420px;
+    overflow-y: auto;
+  }
+
+
+.section-small
+  {
+      padding-top: $margin-sec*0.3;
+      padding-bottom: $margin-sec*0.3;
+
+      &:first-child { padding-top: 0; }
+      &:last-child { padding-bottom: 0; }
+
+      li, p, blockquote
+      {
+        margin-bottom: 4px;
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+  }
+
+
+.section-white.section-small, .section-bordered.section-small
+  {
+    margin-top: $margin-sec*0.3;
+    margin-bottom: $margin-sec*0.3;
+    &:first-child { margin-top: 0; }
+    &:last-child { margin-bottom: 0; }
+  }
+
+
+/*====== end of Sections ======*/
+
+
+
+
+/*====== Navigation ======*/
+
+.dropdown
+  {
+    position: relative;
+
+    & > .dropdown-content
+      {
+        visibility: hidden;
+        opacity: 0;
+
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 1;
+        text-align: left;
+
+        box-sizing: border-box;
+        max-height: calc(100vh - 61px);
+        overflow-y: auto;
+
+        padding-top: 10px;
+      }
+
+    .dropdown-content-color{
+      right: -20px;
+
+      .inside
+        {
+          padding: 20px;
+          background: lighten($c-violet-red, 5%);
+          border: 1px solid $c-violet-pale;
+          border-radius: 4px;
+        }
+    }
+
+    &:hover
+      {
+        & > .dropdown-content { animation: 0.2s FadeIn 0.4s ease-out forwards; }
+      }
+
+
+    .dropdown-content
+      {
+        a{
+          display: block;
+          margin: 10px 0;
+          // border-bottom: 1px solid $c-violet-pale;
+          white-space: nowrap;
+
+          &:first-child { margin-top: 0; }
+          &:last-child { border-bottom: none; margin-bottom: 0; }
+        }
+      }
+  }
+
+
+nav
+  {
+    @extend %text_uppercase;
+
+    &, a{
+      color: #fff;
+
+      &:hover{
+        color: $c-orange;
+      }
+    }
+  }
+
+
+nav.nav-g
+  {
+    & > * {
+      @extend %d-inlineblock;
+      margin-right: 30px;
+
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+
+/*====== end of Navigation ======*/
+
+
+
+
+/*====== Random ======*/
+
+
+
+.separator-dark, .separator-light, .separator-pale
+  {
+    height: 1px;
+    background-color: $c-text;
+  }
+
+.separator-light { background-color: #fff; }
+.separator-pale { background-color: $c-violet-pale; }
+
+.separator-animated
+  {
+    transform: scale(0);
+    
+    &.isInView { animation: ScaleIn 0.6s 0.8s ease-in-out forwards; }
+  }
+
+
+ 
+/*====== end of Random ======*/
+
+
+
+
+/*====== Loading ======*/
+
+.loading-logo {
+  position: relative;
+  @extend %d-inlineblock;
+  padding-top: 20px;
+
+  &:after{
+    content:"DAPP";
+
+    position: absolute;
+    right: - 80px;
+    top: 0;
+
+    font-size: 30px;
+    color: $c-violet-pale;
+    @extend %text_uppercase;
+  }
+}
+
+.loading-title{
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.loader-ring
+ {
+   position: relative;
+   display: inline-block;
+   height: 20px;
+   width: 20px;
+   border-radius: 20px;
+   border-color: #fff;
+   border-top: 2px solid #fff;
+   border-right: 2px solid #fff;
+
+   animation: 0.8s Rotate ease-in-out infinite;
+ }
+
+/*====== end of Loading ======*/
+
+

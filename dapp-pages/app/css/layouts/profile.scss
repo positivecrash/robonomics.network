@@ -1,0 +1,139 @@
+.avatar-small
+	{
+		display: inline-block;
+		width: 25px;
+		height: 25px;
+		border-radius: 13px;
+	}
+
+
+.container-w-sidebar
+  {
+    height: 100%;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: box;
+    
+    -ms-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    box-orient: horizontal;
+
+    .sidebar
+      {
+        width: 250px;
+        -ms-flex: 0 250px;
+        -webkit-box-flex:  0;
+        -moz-box-flex:  0;
+        -ms-box-flex:  0;
+        box-flex:  0;
+      }
+
+    .content
+      {
+        -ms-flex: 1;
+       -webkit-box-flex: 1;
+       -moz-box-flex: 1;
+       -ms-box-flex: 1;
+       box-flex: 1;  
+      }
+  }
+
+.sidebar-in { padding: 20px; }
+.content-in { padding: 20px 40px; }
+
+.sidebar
+  {
+    background-color: $c-sidebar-back;
+
+    .a-icon
+      {
+        color: $c-sidebar-back;
+        background-color: $c-violet-pale;
+        &:hover { background-color: $c-violet-light; }
+      }
+
+    .d-table--cell
+      {
+        padding: 10px 0;
+        border-bottom: 1px solid darken($c-sidebar-back,10%);
+      }
+
+    .d-table--row:last-child .d-table--cell{
+      border-bottom: 0;
+    }
+
+    nav
+      {
+
+        a
+          {
+            display: block;
+            @extend %link_noline;
+            font-weight: 500;
+            color: #fff;
+
+            padding: 5px 0;
+          }
+      }
+  }
+
+
+.sidebar-highlight, .sidebar nav .active
+	{
+		position: relative;
+
+    section, span{
+      position: relative;
+      z-index: 1;
+    }
+
+    &:before{
+      content:"";
+      position: absolute;
+      z-index: 0;
+      left: -20px;
+      top: 0;
+      bottom: 0;
+      right: -30px;
+      background-color: lighten($c-sidebar-back, 20%);
+      border-width: 1px 1px 1px 0;
+      border-style: solid;
+      border-color: #000;
+    }
+	}
+
+.sidebar-highlight
+	{
+		padding-bottom: 0;
+    &:before { background-color: #6e1484; }
+
+    .a-icon { background-color: #b9639b; color: #6e1484; }
+	}
+
+.sidebar nav .active:before
+	{
+    // border-radius: 0 0 30px 0;
+		border-radius: 0 4px 4px 0;
+	}
+
+
+
+.panel-top
+  {
+    padding: 10px;
+    border: 1px solid #000;
+    background-color: $c-sidebar-back;
+
+    .d-table--cell
+      {
+        padding: 0 40px;
+        border-right: 1px solid #000;
+        vertical-align: middle;
+
+        &:last-child { border: 0; }
+      }
+  }

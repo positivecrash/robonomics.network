@@ -1,0 +1,586 @@
+$fontsize-input: $font-size-base;
+$fontsize-btn: $fontsize-input;
+$c-input-background: #fff;
+$c-input-border: $c-gray-dark;
+$c-input-placeholder: $c-gray-dark;
+$padding-input-v: 4px;
+$padding-input-g: 15px;
+
+%form_all_base{
+	@extend %font_base;
+	@extend %text_uppercase;
+	font-size: $fontsize-input;
+	font-weight: 500;
+	text-align: center;
+  	border-radius: 4px;
+
+  	display: inline-block;
+  	vertical-align: middle;
+  	box-sizing: border-box;
+  	padding: $padding-input-v $padding-input-g;
+
+  	&[disabled], &.disabled{
+  		&, &:hover{
+			cursor: default;
+  		}
+  	}
+
+  	&::placeholder
+	  	{
+	  		@extend %font_base;
+	  		font-size: $fontsize-input;
+	  		color: $c-input-placeholder;
+	  	}
+}
+
+%form_input_base{
+	background-color: $c-input-background;
+  	border: 1px solid $c-input-border;
+  	color: $c-text-dark;
+}
+
+%form_button_base{
+	@extend %link_noline;
+
+  	appearance: none;
+  	-webkit-appearance: none;
+  	border: 0;
+  	cursor: pointer;
+  	
+  	font-size: $fontsize-btn;
+
+  	transition: all 0.2s ease-in-out;
+
+  	&, &:hover{
+		color: $c-text-light;
+  	}
+
+	&[disabled], &.disabled{
+		&, &:hover
+			{
+				background-color: $c-gray;
+			}
+	}
+}
+
+
+
+/*======== messages =========*/
+.msg-error, .msg-ok{
+	border-width: 1px;
+	border-style: solid;
+	padding: 20px;
+
+	.msg-title{
+		@extend %text_uppercase;
+		font-weight: 500;
+	}
+}
+
+
+.msg-icon{
+	position: relative;
+	padding-left: 60px;
+
+	&:before{
+		content:"";
+		position: absolute;
+		top: 20px;
+		left: 20px;
+	}
+}
+
+.msg-error{
+	border-color: $c-orange;
+
+	.msg-title{
+		color: $c-orange;
+	}
+
+	&.msg-icon:before{
+		@include get-sprite('i-error');
+	}
+}
+
+.msg-ok{
+	border-color: $c-green;
+
+	.msg-title{
+		color: $c-green;
+	}
+
+	&.msg-icon:before{
+		@include get-sprite('i-checked');
+	}
+}
+/*======== end of messages =========*/
+
+
+/*======== inputs =========*/
+
+.input-checkbox
+	{
+		label, input[type=checkbox] {
+			@extend %d-inlineblock;
+		}
+
+		label{
+			position: relative;
+			padding-left: 30px;
+
+			&:after{
+				content:"";
+				background-color: #fff;
+				border: 1px solid $c-gray-dark;
+				width: 20px;
+				height: 20px;
+
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 0;
+			}
+
+			&:before{
+				content:"";
+				position: absolute;
+				left: 3px;
+				top: 5px;
+				z-index: 1;
+				@include get-sprite('i-check');
+				opacity: 0;
+			}
+		}
+
+		input[type=checkbox] {
+			display: none;
+
+			&:checked + label{
+				&:after { border-color: $c-green; }
+				&:before{ opacity: 1; }
+			}
+		}
+	}
+
+
+
+.input-radio
+	{
+		label, input[type=radio] {
+			@extend %d-inlineblock;
+		}
+
+		label{
+			position: relative;
+			padding-left: 30px;
+
+			&:after{
+				content:"";
+				background-color: #fff;
+				border: 1px solid $c-gray-dark;
+				width: 20px;
+				height: 20px;
+				border-radius: 10px;
+
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 0;
+			}
+
+			&:before{
+				content:"";
+				position: absolute;
+				left: 4px;
+				top: 4px;
+				z-index: 1;
+				background-color: $c-green;
+				width: 12px;
+				height: 12px;
+				border-radius: 6px;
+				opacity: 0;
+			}
+		}
+
+		input[type=radio] {
+			display: none;
+
+			&:checked + label{
+				&:after { border-color: $c-green; }
+				&:before{ opacity: 1; }
+			}
+		}
+	}
+
+
+input:not([type='submit']):not([type='button'])
+	{
+		@extend %form_all_base;
+		@extend %form_input_base;
+
+
+		&[disabled]
+	  		{
+	  			background-color: $c-gray-light;
+	  			border-color: $c-gray;
+	  			
+	  			&, &::placeholder
+	  				{ color: $c-gray-dark; }
+	  		}
+
+	  	&:focus{
+	  		border-color: $c-text-dark;
+	  	}
+
+	}
+
+
+select{
+	@extend %form_all_base;
+	@extend %form_input_base;
+
+	appearance: none;
+	-webkit-appearance: none;
+
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
+	margin: 0;
+	outline: none;
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+	&::-ms-expand { display: none; } /*ie fix*/
+
+	background-image: image-url('select.png');
+	padding: 6px;
+    padding-right: 24px;
+}
+
+.input-size_sm
+	{
+		width: 65px;
+		max-width: 100%;
+	}
+
+.input-size_md
+	{
+		width: 105px;
+		max-width: 100%;
+	}
+
+.input-size_lg
+	{
+		width: 340px;
+		max-width: 100%;
+	}
+
+/*======== end of inputs =========*/
+
+
+
+/*======== buttons =========*/
+
+.btn-green, input[type="submit"], input[type="button"], button{
+	@extend %form_all_base;
+	@extend %form_button_base;
+	background-color: $c-green;
+
+	&:hover{
+		background-color: darken($c-green, 10%);
+	}
+}
+
+.btn-blue{
+	@extend %form_all_base;
+	@extend %form_button_base;
+	background-color: $c-blue;
+
+	&:hover{
+		background-color: darken($c-blue, 10%);
+	}
+}
+
+.btn-orange{
+	@extend %form_all_base;
+	@extend %form_button_base;
+	background-color: $c-orange;
+
+	&:hover{
+		background-color: darken($c-orange, 10%);
+	}
+}
+
+/*======== end of buttons =========*/
+
+
+
+
+
+
+
+// /*======== FORMS VARIABLES & MIXINS & EXTENDS =========*/
+// $btn-padding-v: 10px;
+// $inp-padding-v: $btn-padding-v;
+// $inp-padding-g: 20px;
+
+// $inp-margin-b: $vertical-rythm * 0.7;
+
+// $color-input-background: #fff;
+// $color-input-border: $c-gray-mid;
+// $color-input-text: $c-text;
+// $color-input-placeholder: $c-gray-mid;
+// $color-disabled-button-background: $c-violet-dark;
+// $color-error: $c-red;
+// $color-ok: $c-green;
+// $color-wait: $c-yellow;
+
+// $fontsize-input: $font-size-base;
+// $fontsize-btn: 20px;
+
+// %form_e_base{
+// 	@extend %font_base;
+// 	@extend %text_uppercase;
+// 	font-size: $fontsize-input;
+// 	font-weight: 500;
+// 	text-align: center;
+// 	background-color: $color-input-background;
+//   	border: 1px solid $color-input-border;
+//   	border-radius: 4px;
+
+//   	display: inline-block;
+//   	box-sizing: border-box;
+//   	padding: $inp-padding-v $inp-padding-g;
+
+//   	&[disabled], &.disabled{
+// 	    cursor: default;
+//   	}
+
+//   	&::placeholder
+// 	  	{
+// 	  		@extend %font_base;
+// 	  		font-size: $fontsize-input;
+// 	  		color: $color-input-placeholder;
+// 	  	}
+
+// 	&.error
+// 		{
+// 			border-color: $color-error;
+// 		}
+// }
+
+// %form_b_base{
+// 	@extend %link_noline;
+
+//   	appearance: none;
+//   	-webkit-appearance: none;
+//   	border: 0;
+//   	cursor: pointer;
+//   	transition: all 0.2s ease-in-out;
+//   	letter-spacing: 2px;
+//   	word-spacing: 3px;
+//   	font-size: $fontsize-btn;
+
+//   	&.error
+// 		{
+// 			&, &:hover { background-color: $color-error; }
+// 		}
+
+// 	&[disabled], &.disabled{
+// 		&, &:hover
+// 			{
+// 				background-color: $color-disabled-button-background;
+// 				cursor: default;
+// 			}
+// 	}
+// }
+
+// %form_b_small{
+// 	letter-spacing: 1px;
+// 	word-spacing: normal;
+// 	font-size: $font-size-base;
+// 	padding: $inp-padding-v/2 $inp-padding-g/2;
+// }
+
+// %btn_lined{
+// 	// @extend %text_uppercase;
+// 	@extend %link_noline;
+// 	// display: inline-block;
+// 	// font-size: $fontsize-btn;
+// 	// font-weight: 400;
+// 	// transition: 0.2s color ease-in;
+// }
+
+// @mixin btn_col($back, $text: #fff){
+// 	background-color: $back;
+// 	color: $text;
+
+// 	&:hover{
+// 		background-color: darken($back, 10%);
+// 	}
+// }
+
+// @mixin btn_col_lined($color: $c-green, $color_hover: darken($color, 10%), $back: #fff){
+// 	color: $color;
+// 	border: 1px solid $color;
+// 	background-color: $back;
+
+// 	&:hover{
+// 		color: $color_hover;
+// 		border-color: $color_hover;
+// 		background-color: $back;
+// 	}
+// }
+
+
+
+
+// /*======== INPUTS =========*/
+
+// input:not([type='submit']):not([type='button']){
+//   @extend %form_e_base;
+//   color: $color-input-text;
+
+//   &.error
+//   	{
+//   		border-color: $color-error;
+//   	}
+
+//   &[disabled]
+//   	{
+//   		opacity: 0.8;
+//   	}
+
+//   &.inp-placeholder-small{
+// 	&::placeholder
+// 	  	{
+// 	  		font-size: $font-size-base - 5;
+// 	  		line-height: 1.2;
+// 	  		text-align: left;
+// 	  	}
+// }
+// }
+
+
+
+// /*======== BUTTONS =========*/
+// input[type='submit'], input[type='button'], button, a.btn-green{
+
+// 	@extend %form_e_base;
+// 	@extend %form_b_base;
+// 	@include btn_col($c-green);
+// 	@extend %link_noline;
+// }
+
+// a.btn-red, input.btn-red, button.btn-red{
+// 	@extend %form_e_base;
+// 	@extend %form_b_base;
+
+// 	@include btn_col($c-orange);
+// }
+
+// a.btn-blue, input.btn-blue, button.btn-blue{
+// 	@extend %form_e_base;
+// 	@extend %form_b_base;
+
+// 	@include btn_col($c-blue);
+// }
+
+
+
+
+// .btn-line
+// 	{
+// 		@extend %form_e_base;
+// 		@extend %form_b_base;
+// 	}
+
+// .btn-line.btn-green
+// 	{
+// 		@extend %btn_lined;
+// 		@include btn_col_lined();
+// 	}
+
+// .btn-line--orange{
+// 	@extend %btn_lined;
+// 	@include btn_col_lined($c-orange, darken($c-orange, 10%));
+// }
+
+
+// .btn.btn-small
+// 	{
+// 		@extend %form_b_small;
+// 	}
+
+
+
+
+// @keyframes rotateLoader
+// 	{
+// 		0%
+// 			{
+// 				transform:rotate(0deg);
+// 			}
+// 		100%
+// 			{
+// 				transform:rotate(360deg);
+// 			}
+// 	}
+
+// span.loader
+// 	{
+// 		position: relative;
+// 		display: inline-block;
+// 		height: 20px;
+// 		width: 20px;
+// 		border-radius: 20px;
+// 		border-color: rgba($color-input-text, 5);
+// 		border-top: 1px solid $color-input-text;
+// 		border-right: 1px solid $color-input-text;
+
+// 		animation: 0.8s rotateLoader ease-in-out infinite;
+// 	}
+
+
+
+
+
+// .msg_ok, .msg_error, .msg_wait
+// 	{
+// 		@extend %font_base;
+// 		@extend %text_uppercase;
+// 		font-weight: 500;
+// 	}
+
+// .msg_error
+// 	{
+// 		&:before
+// 			{
+// 				content: "✘ ";
+// 				color: $color-error;
+// 				font-size: 26px;
+// 			}
+// 	}
+
+// .msg_ok
+// 	{
+// 		&:before
+// 			{
+// 				content: "✓ ";
+// 				color: $color-ok;
+// 				font-size: 26px;
+// 			}
+// 	}
+
+// .msg_wait
+// 	{
+// 		&:before
+// 			{
+// 				content: "✓ ";
+// 				color: $color-wait;
+// 				font-size: 26px;
+// 			}
+// 	}
+
+
+
+
