@@ -4,21 +4,14 @@ include mixins/sections.pug
 block html
 	- var meta_title = 'Перегонный куб Aira токенов в XRT'
 	- var logo_title = 'Robonomics network account'
-	// - var header = true
-	// - var header_class = 'header-solid'
-	// - var header_container = 'container-padding'
-	// - var footer = true
-	// - var footer_container = 'container-padding'
-	// - var bodyclass = 'night'
 
 block content
 
 	.container-w-sidebar
 		.sidebar
 			.sidebar-in
-				section
+				section.m-t-10
 					a(href="/").d-block: img.i-block(alt="dApp logo", src="assets/i/logo-dapp-text.svg")
-					// .title-pale.t-small: b dApp tools
 
 				section
 					section
@@ -44,50 +37,6 @@ block content
 							a(href="#")
 								span.sprite-basic-cursor.align-vertical.m-r-10
 								span.align-vertical aira.life
-
-
-				// section.sidebar-highlight
-				// 	section
-				// 		.d-table.container-full
-				// 			.d-table--row
-				// 				.d-table--cell
-				// 					a.a-color--light(href="#")
-				// 						+avatar('avatar-small align-vertical m-r-15')
-				// 						b 0x40c5...c8d3
-				// 				.d-table--cell.t-right.t-align--right
-				// 					a(href="#").m-l-30.a-icon.align-vertical: span i
-				// 			.d-table--row
-				// 				.d-table--cell
-				// 					a(href="#").m-r-15.align-vertical.d-inlineblock
-				// 						span.sprite-basic-user-unknown
-				// 					a(href="#").btn-orange.align-vertical.btn-small You need KYS
-				// 				.d-table--cell.t-right.t-align--right
-				// 					a(href="#").m-l-30.a-icon.align-vertical: span i
-
-
-				// 	section
-				// 		.d-table.container-full
-				// 			.d-table--row
-				// 				.d-table--cell
-				// 					span.sprite-basic-token-aira.m-r-15.align-vertical
-				// 					b.t-mid 2,100 
-				// 					span.t-small AIRA
-				// 				.d-table--cell.t-align--right
-				// 					a(href="#").m-l-30.a-icon.align-vertical: span i
-				// 			.d-table--row
-				// 				.d-table--cell
-				// 					span.sprite-basic-token-airakys.m-r-15.align-vertical
-				// 					b.t-mid 0 
-				// 					span.t-small AIRA KYC
-				// 				.d-table--cell.t-align--right
-				// 					a(href="#").m-l-30.a-icon.align-vertical: span i
-				// 			.d-table--row
-				// 				.d-table--cell
-				// 					span.sprite-basic-token-xrt.m-r-15.align-vertical
-				// 					b.t-mid 0 
-				// 					span.t-small XRT
-				// 				.d-table--cell.t-align--right
-				// 					a(href="#").m-l-30.a-icon.align-vertical: span i
 
 
 		.content
@@ -122,11 +71,11 @@ block content
 										.inside
 											a(href="#").a-noline: span.sprite-basic-flag-ru.d-block
 
-				// h1 Перегонный куб Aira токенов в XRT
+				
 
-				section.section-white
-					.section-overflowtext
-						h2 Письмо разработчиков
+				section
+					h1 Перегонный куб Aira токенов в XRT
+					.section-overflowtext.section-border
 						p: b Держатель токенов Aira!
 						p С твоей помощью мы проделали путь от прототипа программного обеспечения Aira до платформы Робономика. Два года работы, более 50 релизов в 6 репозиториях на GitHub, тысячи коммитов целой группы разработчиков. Твоя поддержка привела к появлению новой технологии, которая в дальнейшем призвана подчинить роботов децентрализованному компьютеру Ethereum.  - ты помог этому. Спасибо
 						p Важно понимать, что это не конец пути, а только самое начало. Мы создали новую технологию, теперь ее нужно растить и обучать других пользоваться Робономикой. 
@@ -157,41 +106,40 @@ block content
 								tr
 									td Токен Aira и Aira KYC не будет предлагаться разработчиками на дексы.
 									td XRT будет предлагаться разработчиками и сообществом для добавления на биржи.
-					a(href="#") Развернуть
+					a(href="#") Развернуть письмо разработчиков
 
 
-				section.section-white
+				section.section-color.section-color--highlight
 
 					h2 Перегонный куб Aira токенов в XRT
 
-					section
-						.row
-							.col-md-4.t-align--center
-								.section-bordered
-									img.i-block(alt="", src="assets/i/cube/i-cube-1.jpg", style="max-height: 80px;margin:0 auto")
+					.row
+						.col-md-4.t-align--center
+							.section-color.section-color--highlight.section-shade
+								img.i-block(alt="", src="assets/i/cube/i-cube-1.jpg", style="max-height: 80px;margin:0 auto")
+								br/
+								h3 Passing KYC
+								a(href="#")
+									+avatar('avatar-small align-vertical')
+									b 0x40c5...c8d3
+								p.t-color-green KYC passed
+						.col-md-4.t-align--center
+							.section-color.section-color--highlight.section-shade
+								img.i-block(alt="", src="assets/i/cube/i-cube-2.jpg", style="max-height: 80px;margin:0 auto")
+								br/
+								h3 AIRA -> AIRA KYC
+								input(type="text", value="2100")
+								span AIRA
+								a(href="#").btn-green Convert to AIRA KYC
+						.col-md-4.t-align--center
+							.section-color.section-color--highlight.section-shade
+								div(style="filter: grayscale(1) blur(1px);")
+									img.i-block(alt="", src="assets/i/cube/i-cube-3.jpg", style="max-height: 80px;margin:0 auto")
 									br/
-									h3 Passing KYC
-									a(href="#")
-										+avatar('avatar-small align-vertical')
-										b 0x40c5...c8d3
-									p.t-color-green KYC passed
-							.col-md-4.t-align--center
-								.section-bordered
-									img.i-block(alt="", src="assets/i/cube/i-cube-2.jpg", style="max-height: 80px;margin:0 auto")
-									br/
-									h3 AIRA -> AIRA KYC
-									input(type="text", value="2100")
-									span AIRA
-									a(href="#").btn-green Convert to AIRA KYC
-							.col-md-4.t-align--center
-								.section-bordered
-									div(style="filter: grayscale(1) blur(1px);")
-										img.i-block(alt="", src="assets/i/cube/i-cube-3.jpg", style="max-height: 80px;margin:0 auto")
-										br/
-										h3 AIRA KYC -> XRT
-										input(type="text")
-										span AIRA KYC
-										a(href="#").btn-green Convert to XRT
+									h3 AIRA KYC -> XRT
+									input(type="text")
+									span AIRA KYC
+									a(href="#").btn-green Convert to XRT
 
 					p
 						b Совет: 
