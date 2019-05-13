@@ -30,57 +30,19 @@ $mq-menuhide: $mq-mobileCanvas;
 
 
 /*====== Colors ======*/
-$c-violet-dark: #282B38;
-$c-violet-mid: #42475F;
-$c-violet-light: #B5C0F1;
-$c-gray-dark: #323234;
-$c-gray-mid: #A0A0A0;
-
-$c-yellow: #EAAB01;
-
-$c-blue-mute: #357B9E;
-$c-blue-mute-2: #6D8CAD;
-$c-blue-mute-3: #007AB1;
-$c-blue-mute-4: #004462;
-
-
-// $c-link: $c-blue;
-
-
 $c-blue: #03A5ED;
 $c-orange: #F15A24;
 $c-green: #54CE63;
-$c-gray: #ccc;
 $c-red: #E84004;
-$c-gray-dark: #707070;
-$c-gray-light: #F2F2F2;
-$c-violet-pale: #7481b9;
-$c-violet-dark: #040A36;
-$c-violet-red: #000;
-// $c-violet-red: #02345a;
-// $c-violet-red: #3a3882;
-// $c-violet-red: #410c4e;
-$c-violet-light: #B5C0F1;
-$c-neoncrimson: #E942F6;
-$c-neonblue: #6CEFFB;
-
-$c-text-dark: #000;
-$c-text-light: #fff;
-
-$c-night-whiteBack: #271c4e;
-$c-night-whiteCol: #ccc;
-
-
-$c-sidebar-back: lighten($c-violet-red, 12%);
-// #69137f
-
-
+$c-violet: #7481b9;
 
 $c-text: #fff;
 $c-background: #2f2f2f;
+$c-link: $c-blue;
+$c-sidebar-background: darken($c-background, 5%);
 
 
 
 /*====== Classes ======*/
-$class-nightmode: '.night';
+// $class-nightmode: '.night';
 

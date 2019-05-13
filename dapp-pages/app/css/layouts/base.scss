@@ -30,57 +30,18 @@ body
 
 
 /*====== Basic elements ======*/
-
-header[role='banner']
+nav
   {
-    padding-top: 10px;
-    padding-bottom: 15px;
 
-    &.header-solid
+    a
       {
-        background-color: lighten($c-violet-red, 2%);
-        // background-color: #271c4e;
+        display: block;
+        @extend %link_noline;
+        font-weight: 500;
+        color: #fff;
+
+        padding: 5px 0;
       }
-  }
-
-.header-logo
-  {
-    @extend %d-inlineblock;
-    max-width: 35px;
-    margin-right: 20px;
-
-    img{  @extend %i-block; }
-  }
-
-.header-title
-  {
-    @extend %d-inlineblock;
-    font-size: 18px;
-
-    @include mobile(){
-      display: none;
-    }
-  }
-
-
-
-
-footer[role='contentinfo']
-  {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-
-main[role='main']
-  {
-    padding-top: 20px;
-    padding-bottom: 120px;
-
-    @include mobile(){
-      padding-bottom: 200px;
-    }
   }
 /*====== end of Basic elements ======*/
 
@@ -104,19 +65,13 @@ main[role='main']
     }
   }
 
-.d-table_row, .d-table--row { display: table-row; }
-.d-table_cell, .d-table--cell { display: table-cell; }
+.d-table--row { display: table-row; }
+.d-table--cell { display: table-cell; }
 
-.d-inlineblock
-  {
-    display: inline-block !important;
-    vertical-align: middle;
-  }
+.d-inlineblock { display: inline-block !important; }
 .d-block { display: block !important; }
 
-.align-vertical { vertical-align: middle; }
-
-.p-relative { position: relative;  }
+.align-vertical { display: inline-block; vertical-align: middle; }
 
 /*====== Flow elements ======*/
 
@@ -140,8 +95,6 @@ main[role='main']
 
 /*====== Bootstrap ======*/
 
-.row-wrap { overflow-x: hidden; }
-
 .row
   {
 
@@ -161,12 +114,6 @@ main[role='main']
 
   }
 
-// .row-marged_cols{
-//   *[class*='col-']
-//       {
-//         margin-bottom: $vertical-rythm;
-//       }
-// }
 /*====== end of Bootstrap ======*/
 
 
@@ -232,6 +179,10 @@ section
       {
         @include sectionBorder($c-background, $c-text);
       }
+
+    table th, table td { border-color: darken($c-text, 20%); }
+    table th { background-color: darken($c-text, 10%); }
+    .table-striped tbody tr:nth-child(even){ background-color: darken($c-text, 5%); }
   }
 
 .section-shade
@@ -272,17 +223,8 @@ section
         left: 0;
         z-index: 10;
         text-align: left;
-
-        box-sizing: border-box;
-        max-height: calc(100vh - 61px);
-        overflow-y: auto;
-
         padding-top: 10px;
       }
-
-    .dropdown-content-color{
-      right: -20px;
-    }
 
     &:hover
       {
@@ -290,69 +232,13 @@ section
       }
 
 
-    .dropdown-content
-      {
-        a{
-          display: block;
-          margin: 10px 0;
-          // border-bottom: 1px solid $c-violet-pale;
-          white-space: nowrap;
-
-          &:first-child { margin-top: 0; }
-          &:last-child { border-bottom: none; margin-bottom: 0; }
-        }
-      }
-
-
-    &.dropdown-color, .dropdown-content-color .inside{
-      padding: 20px;
-      background: lighten($c-violet-red, 5%);
-      border: 1px solid $c-violet-pale;
+    &.dropdown-color, &.dropdown-color .inside{
+      padding: 10px 20px;
+      background: darken($c-background, 5%);
+      border: 1px solid $c-violet;
       border-radius: 4px;
     }
-
-    &.dropdown-color
-      {
-        padding: 10px 20px;
-
-        a { display: block; }
-      }
   }
-
-
-header[role='banner']
-{
-  nav
-    {
-      @extend %text_uppercase;
-
-      &, a{
-        color: #fff;
-
-        &:hover{
-          color: $c-orange;
-        }
-      }
-    }
-
-
-  nav.nav-g
-    {
-      & > * {
-        @extend %d-inlineblock;
-        margin-right: 30px;
-
-        &:last-child{
-          margin-right: 0;
-        }
-      }
-    }
-
-  .dropdown .dropdown-content{
-    left: auto;
-    right: 0;
-  }
-}
 
 /*====== end of Navigation ======*/
 
@@ -370,7 +256,7 @@ header[role='banner']
   }
 
 .separator-light { background-color: #fff; }
-.separator-pale { background-color: $c-violet-pale; }
+.separator-pale { background-color: $c-violet; }
 
 .separator-animated
   {
@@ -382,49 +268,3 @@ header[role='banner']
 
  
 /*====== end of Random ======*/
-
-
-
-
-/*====== Loading ======*/
-
-.loading-logo {
-  position: relative;
-  @extend %d-inlineblock;
-  padding-top: 20px;
-
-  &:after{
-    content:"DAPP";
-
-    position: absolute;
-    right: - 80px;
-    top: 0;
-
-    font-size: 30px;
-    color: $c-violet-pale;
-    @extend %text_uppercase;
-  }
-}
-
-.loading-title{
-  font-size: 26px;
-  font-weight: 500;
-}
-
-.loader-ring
- {
-   position: relative;
-   display: inline-block;
-   height: 20px;
-   width: 20px;
-   border-radius: 20px;
-   border-color: #fff;
-   border-top: 2px solid #fff;
-   border-right: 2px solid #fff;
-
-   animation: 0.8s Rotate ease-in-out infinite;
- }
-
-/*====== end of Loading ======*/
-
-

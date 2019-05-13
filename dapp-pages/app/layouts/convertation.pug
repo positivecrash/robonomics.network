@@ -46,30 +46,32 @@ block content
 						.d-table--row
 							.d-table--cell
 								a(href="#")
-									+avatar('avatar-small align-vertical')
+									+avatar('avatar-small align-vertical m-r-10')
 									b 0x40c5...c8d3
-								a(href="#").a-icon.align-vertical: span i
+								a(href="#").a-icon.align-vertical: b i
 							// .d-table--cell
 							// 	a(href="#").btn-orange.align-vertical.btn-small You need KYS
 							// 	a(href="#").a-icon.align-vertical: span i
 							.d-table--cell
-								b.t-mid 2,100
+								b.t-md 2,100
 								span AIRA
-								a(href="#").a-icon.align-vertical: span i
+								a(href="#").a-icon.align-vertical: b i
 							.d-table--cell
-								b.t-mid 0
+								b.t-md 0
 								span AIRA KYC
-								a(href="#").a-icon.align-vertical: span i
+								a(href="#").a-icon.align-vertical: b i
 							.d-table--cell
-								b.t-mid 0
+								b.t-md 0
 								span XRT
-								a(href="#").a-icon.align-vertical: span i
+								a(href="#").a-icon.align-vertical: b i
 							.d-table--cell
 								.dropdown.dropdown-color
 									a(href="javascript:;").a-noline: span.sprite-basic-flag-en.d-block
-									.dropdown-content.dropdown-content-color
+									.dropdown-content
 										.inside
-											a(href="#").a-noline: span.sprite-basic-flag-ru.d-block
+											nav
+												a(href="#").a-noline
+													i.sprite-basic-flag-ru
 
 				
 
@@ -82,30 +84,30 @@ block content
 						p Токен платформы Робономика мы назвали XRT (Robonomics token). У тебя есть два варианта действий - пройти KYC и ожидать запуска голландского аукциона или в 2 шага получить уже сегодня XRT.
 						p: b В чем разница этих вариантов для держателя Aira токенов:
 
-						table
+						table.table-striped.table-responsive
 							thead
 								tr
 									th Aira >> Aira KYC
 									th Aira >> Aira KYC >> XRT
 							tbody
 								tr
-									td Всегда есть возможность превратить Aira KYC в XRT без участия разработчиков. Отправив транзакцию к перегонному кубу Aira KYC >> XRT.
-									td Обратно перегнать токены XRT в Aira KYC не получиться.
+									td(data-th="Aira >> Aira KYC") Всегда есть возможность превратить Aira KYC в XRT без участия разработчиков. Отправив транзакцию к перегонному кубу Aira KYC >> XRT.
+									td(data-th="Aira >> Aira KYC >> XRT") Обратно перегнать токены XRT в Aira KYC не получиться.
 								tr
-									td По результату голландского аукциона 1 Aira KYC может превратиться в N XRT, но не менее 1 к 1.
-									td Если вы сделали оба шага и получили XRT рассчитывать на приумножение количества XRT не получиться. 
+									td(data-th="Aira >> Aira KYC") По результату голландского аукциона 1 Aira KYC может превратиться в N XRT, но не менее 1 к 1.
+									td(data-th="Aira >> Aira KYC >> XRT") Если вы сделали оба шага и получили XRT рассчитывать на приумножение количества XRT не получиться. 
 								tr
-									td Aira KYC нельзя использовать, чтобы стать провайдером Робономики.
-									td XRT может использоваться для обеспечения квоты на маяке Робономики.
+									td(data-th="Aira >> Aira KYC") Aira KYC нельзя использовать, чтобы стать провайдером Робономики.
+									td(data-th="Aira >> Aira KYC >> XRT") XRT может использоваться для обеспечения квоты на маяке Робономики.
 								tr
-									td Aira KYC нельзя использовать, чтобы оплатить комиссию провайдерам Робономики.
-									td С помощью XRT можно оплачивать транзакции в сети Робономика. ETH не потребуется.
+									td(data-th="Aira >> Aira KYC") Aira KYC нельзя использовать, чтобы оплатить комиссию провайдерам Робономики.
+									td(data-th="Aira >> Aira KYC >> XRT") С помощью XRT можно оплачивать транзакции в сети Робономика. ETH не потребуется.
 								tr
-									td Aira KYC не планируется использовать при голосовании ДАО Робономики.
-									td XRT можно использовать для создания предложений в ДАО Робономика о запуске голландского аукциона, смене команды управляющих ENS записью Robonomics.eth.
+									td(data-th="Aira >> Aira KYC") Aira KYC не планируется использовать при голосовании ДАО Робономики.
+									td(data-th="Aira >> Aira KYC >> XRT") XRT можно использовать для создания предложений в ДАО Робономика о запуске голландского аукциона, смене команды управляющих ENS записью Robonomics.eth.
 								tr
-									td Токен Aira и Aira KYC не будет предлагаться разработчиками на дексы.
-									td XRT будет предлагаться разработчиками и сообществом для добавления на биржи.
+									td(data-th="Aira >> Aira KYC") Токен Aira и Aira KYC не будет предлагаться разработчиками на дексы.
+									td(data-th="Aira >> Aira KYC >> XRT") XRT будет предлагаться разработчиками и сообществом для добавления на биржи.
 					a(href="#") Развернуть письмо разработчиков
 
 
