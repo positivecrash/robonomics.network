@@ -115,34 +115,66 @@ block content
 
 					h2 К действию!
 
-					.row
+					section.row
 						.col-md-4.t-align--center
 							.section-color.section-color--highlight.section-shade
+								h3 1. Passing KYC
 								img.i-block(alt="", src="assets/i/cube/i-cube-1.jpg", style="max-height: 80px;margin:0 auto")
 								br/
-								h3 Passing KYC
+								p
+									a(href="#")
+										+avatar('avatar-small align-vertical m-r-10')
+										b 0x40c5...c8d3
+								a(href="#").btn-orange Pass KYS
+						.col-md-4.t-align--center
+							.section-color.section-color--highlight.section-shade.section-disabled
+								h3 2. AIRA -> AIRA KYC
+								img.i-block(alt="", src="assets/i/cube/i-cube-2.jpg", style="max-height: 80px;margin:0 auto")
+								br/
+								p
+									input.input-line.input-size_md(type="text", value="2100")
+									span AIRA
+								a(href="#").btn-green Convert to AIRA KYC
+						.col-md-4.t-align--center
+							.section-color.section-color--highlight.section-shade.section-disabled
+								h3 3. AIRA KYC -> XRT
+								img.i-block(alt="", src="assets/i/cube/i-cube-3.jpg", style="max-height: 80px;margin:0 auto")
+								br/
+								p
+									input.input-line.input-size_md(type="text")
+									span AIRA KYC
+								a(href="#").btn-green Convert to XRT
+
+
+					section.row
+						.col-md-4.t-align--center
+							.section-color.section-color--highlight.section-shade
+								h3 1. Passing KYC
+								img.i-block(alt="", src="assets/i/cube/i-cube-1.jpg", style="max-height: 80px;margin:0 auto")
+								br/
 								a(href="#")
-									+avatar('avatar-small align-vertical')
+									+avatar('avatar-small align-vertical m-r-10')
 									b 0x40c5...c8d3
 								p.t-color-green KYC passed
 						.col-md-4.t-align--center
 							.section-color.section-color--highlight.section-shade
+								h3 2. AIRA -> AIRA KYC
 								img.i-block(alt="", src="assets/i/cube/i-cube-2.jpg", style="max-height: 80px;margin:0 auto")
 								br/
-								h3 AIRA -> AIRA KYC
-								input(type="text", value="2100")
-								span AIRA
+								p
+									input.input-line.input-size_md(type="text", value="2100")
+									span AIRA
 								a(href="#").btn-green Convert to AIRA KYC
 						.col-md-4.t-align--center
-							.section-color.section-color--highlight.section-shade
-								div(style="filter: grayscale(1); opacity: 0.7;")
-									img.i-block(alt="", src="assets/i/cube/i-cube-3.jpg", style="max-height: 80px;margin:0 auto")
-									br/
-									h3 AIRA KYC -> XRT
-									input(type="text")
+							.section-color.section-color--highlight.section-shade.section-disabled
+								h3 3. AIRA KYC -> XRT
+								img.i-block(alt="", src="assets/i/cube/i-cube-3.jpg", style="max-height: 80px;margin:0 auto")
+								br/
+								p
+									input.input-line.input-size_md(type="text")
 									span AIRA KYC
-									a(href="#").btn-green Convert to XRT
+								a(href="#").btn-green Convert to XRT
 
-					p
+					section
 						b Совет: 
 						| важно превратить свои Aira токены, как можно раньше в Aira KYC, но не обязательно превращать все свои токены Aira KYC в XRT. Если вы хотите стать провайдером или пользоваться сетью, вы можете пользоваться перегонным кубом Aira KYC >> XRT в любое время для перегонки любого количества Aira KYC неограниченное количество раз.

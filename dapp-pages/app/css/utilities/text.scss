@@ -204,7 +204,7 @@ table
 		white-space: nowrap;
 	}
 
-.t-label--blue, .t-label--orange, .t-label--gray
+.t-label--blue, .t-label--orange, .t-label--green 
 	{
 		padding: 4px 10px;
 		color: #fff;
@@ -212,6 +212,7 @@ table
 
 .t-label--blue { background-color: $c-blue; }
 .t-label--orange { background-color: $c-orange; }
+.t-label--green { background-color: $c-green; }
 
 .i-block { @extend %i-block; }
 

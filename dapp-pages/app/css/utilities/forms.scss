@@ -229,6 +229,13 @@ input:not([type='submit']):not([type='button'])
 		@extend %form_input_base;
 
 
+		&.input-line
+			{
+				border-width: 0 0 1px;
+				border-radius: 0;
+			}
+
+
 		// &[disabled]
 	 //  		{
 	 //  			background-color: $c-gray-light;
