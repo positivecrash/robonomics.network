@@ -2017,7 +2017,7 @@ sub {
   display: inline-block;
 }
 
-body, input:not([type='submit']):not([type='button']), select, .btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange, input:not([type='button']):not([type='submit'])::placeholder, select::placeholder, .btn-green::placeholder, input[type="submit"]::placeholder, input[type="button"]::placeholder, button::placeholder, .btn-blue::placeholder, .btn-orange::placeholder {
+body, input:not([type='submit']):not([type='button']), select, .btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange, .btn-violet, input:not([type='button']):not([type='submit'])::placeholder, select::placeholder, .btn-green::placeholder, input[type="submit"]::placeholder, input[type="button"]::placeholder, button::placeholder, .btn-blue::placeholder, .btn-orange::placeholder, .btn-violet::placeholder {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -2026,12 +2026,12 @@ body, input:not([type='submit']):not([type='button']), select, .btn-green, input
   letter-spacing: 0;
 }
 
-a, a.a-noline, a.a-icon, .btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange, nav a, a:hover, .btn-green:hover, input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn-blue:hover, .btn-orange:hover, a:focus, .btn-green:focus, input[type="submit"]:focus, input[type="button"]:focus, button:focus, .btn-blue:focus, .btn-orange:focus, a:visited, .btn-green:visited, input[type="submit"]:visited, input[type="button"]:visited, button:visited, .btn-blue:visited, .btn-orange:visited {
+a, a.a-noline, a.a-icon, .btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange, .btn-violet, nav a, a:hover, .btn-green:hover, input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn-blue:hover, .btn-orange:hover, .btn-violet:hover, a:focus, .btn-green:focus, input[type="submit"]:focus, input[type="button"]:focus, button:focus, .btn-blue:focus, .btn-orange:focus, .btn-violet:focus, a:visited, .btn-green:visited, input[type="submit"]:visited, input[type="button"]:visited, button:visited, .btn-blue:visited, .btn-orange:visited, .btn-violet:visited {
   text-decoration: none;
   text-decoration: none !important;
 }
 
-h1, h2, h3, h4, h5, h6, table th, .t-uppercase, input:not([type='submit']):not([type='button']), select, .btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange, .msg-error .msg-title, .msg-ok .msg-title, .loading-logo:after {
+h1, h2, h3, h4, h5, h6, table th, .t-uppercase, input:not([type='submit']):not([type='button']), select, .btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange, .btn-violet, .msg-error .msg-title, .msg-ok .msg-title, .loading-logo:after {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -2498,7 +2498,7 @@ table caption {
     transform: rotate(360deg);
   }
 }
-input:not([type='submit']):not([type='button']), select, .btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange {
+input:not([type='submit']):not([type='button']), select, .btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange, .btn-violet {
   font-size: 16px;
   font-weight: 500;
   text-align: center;
@@ -2508,10 +2508,10 @@ input:not([type='submit']):not([type='button']), select, .btn-green, input[type=
   box-sizing: border-box;
   padding: 4px 15px;
 }
-input[disabled]:not([type='submit']):not([type='button']), select[disabled], [disabled].btn-green, input[disabled][type="submit"], input[disabled][type="button"], button[disabled], [disabled].btn-blue, [disabled].btn-orange, input[disabled]:hover:not([type='submit']):not([type='button']), select[disabled]:hover, [disabled].btn-green:hover, input[disabled][type="submit"]:hover, input[disabled][type="button"]:hover, button[disabled]:hover, [disabled].btn-blue:hover, [disabled].btn-orange:hover, input.disabled:not([type='submit']):not([type='button']), select.disabled, .disabled.btn-green, input.disabled[type="submit"], input.disabled[type="button"], button.disabled, .disabled.btn-blue, .disabled.btn-orange, input.disabled:hover:not([type='submit']):not([type='button']), select.disabled:hover, .disabled.btn-green:hover, input.disabled[type="submit"]:hover, input.disabled[type="button"]:hover, button.disabled:hover, .disabled.btn-blue:hover, .disabled.btn-orange:hover {
+input[disabled]:not([type='submit']):not([type='button']), select[disabled], [disabled].btn-green, input[disabled][type="submit"], input[disabled][type="button"], button[disabled], [disabled].btn-blue, [disabled].btn-orange, [disabled].btn-violet, input[disabled]:hover:not([type='submit']):not([type='button']), select[disabled]:hover, [disabled].btn-green:hover, input[disabled][type="submit"]:hover, input[disabled][type="button"]:hover, button[disabled]:hover, [disabled].btn-blue:hover, [disabled].btn-orange:hover, [disabled].btn-violet:hover, input.disabled:not([type='submit']):not([type='button']), select.disabled, .disabled.btn-green, input.disabled[type="submit"], input.disabled[type="button"], button.disabled, .disabled.btn-blue, .disabled.btn-orange, .disabled.btn-violet, input.disabled:hover:not([type='submit']):not([type='button']), select.disabled:hover, .disabled.btn-green:hover, input.disabled[type="submit"]:hover, input.disabled[type="button"]:hover, button.disabled:hover, .disabled.btn-blue:hover, .disabled.btn-orange:hover, .disabled.btn-violet:hover {
   cursor: default;
 }
-input:not([type='button']):not([type='submit'])::placeholder, select::placeholder, .btn-green::placeholder, input[type="submit"]::placeholder, input[type="button"]::placeholder, button::placeholder, .btn-blue::placeholder, .btn-orange::placeholder {
+input:not([type='button']):not([type='submit'])::placeholder, select::placeholder, .btn-green::placeholder, input[type="submit"]::placeholder, input[type="button"]::placeholder, button::placeholder, .btn-blue::placeholder, .btn-orange::placeholder, .btn-violet::placeholder {
   font-size: 16px;
   color: #090909;
 }
@@ -2522,7 +2522,7 @@ input:not([type='submit']):not([type='button']), select {
   color: #090909;
 }
 
-.btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange {
+.btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange, .btn-violet {
   appearance: none;
   -webkit-appearance: none;
   border: 0;
@@ -2530,10 +2530,13 @@ input:not([type='submit']):not([type='button']), select {
   font-size: 16px;
   transition: all 0.2s ease-in-out;
 }
-[disabled].btn-green, input[disabled][type="submit"], input[disabled][type="button"], button[disabled], [disabled].btn-blue, [disabled].btn-orange, [disabled].btn-green:hover, input[disabled][type="submit"]:hover, input[disabled][type="button"]:hover, button[disabled]:hover, [disabled].btn-blue:hover, [disabled].btn-orange:hover, .disabled.btn-green, input.disabled[type="submit"], input.disabled[type="button"], button.disabled, .disabled.btn-blue, .disabled.btn-orange, .disabled.btn-green:hover, input.disabled[type="submit"]:hover, input.disabled[type="button"]:hover, button.disabled:hover, .disabled.btn-blue:hover, .disabled.btn-orange:hover {
+.btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange, .btn-violet, .btn-green:hover, input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn-blue:hover, .btn-orange:hover, .btn-violet:hover {
+  color: #fff;
+}
+[disabled].btn-green, input[disabled][type="submit"], input[disabled][type="button"], button[disabled], [disabled].btn-blue, [disabled].btn-orange, [disabled].btn-violet, [disabled].btn-green:hover, input[disabled][type="submit"]:hover, input[disabled][type="button"]:hover, button[disabled]:hover, [disabled].btn-blue:hover, [disabled].btn-orange:hover, [disabled].btn-violet:hover, .disabled.btn-green, input.disabled[type="submit"], input.disabled[type="button"], button.disabled, .disabled.btn-blue, .disabled.btn-orange, .disabled.btn-violet, .disabled.btn-green:hover, input.disabled[type="submit"]:hover, input.disabled[type="button"]:hover, button.disabled:hover, .disabled.btn-blue:hover, .disabled.btn-orange:hover, .disabled.btn-violet:hover {
   opacity: 0.5;
 }
-.btn-small.btn-green, input.btn-small[type="submit"], input.btn-small[type="button"], button.btn-small, .btn-small.btn-blue, .btn-small.btn-orange {
+.btn-small.btn-green, input.btn-small[type="submit"], input.btn-small[type="button"], button.btn-small, .btn-small.btn-blue, .btn-small.btn-orange, .btn-small.btn-violet {
   padding: 2px 10px;
   font-size: 13px;
 }
@@ -2716,6 +2719,18 @@ select::-ms-expand {
   background-color: #d4420e;
 }
 
+.btn-violet {
+  background-color: #7481b9;
+}
+.btn-violet:hover {
+  background-color: #5463a6;
+}
+
+.btn-simple {
+  border-radius: 0;
+  font-weight: 300;
+}
+
 /*======== end of buttons =========*/
 html {
   height: 100%;
@@ -2893,7 +2908,7 @@ section section:last-child {
 }
 
 .section-border {
-  outline: 1px solid rgba(255, 255, 255, 0.4);
+  outline: 1px solid rgba(116, 129, 185, 0.4);
   border: 20px solid #2f2f2f;
 }
 

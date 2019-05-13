@@ -56,6 +56,8 @@ $fontsize-btn-sm: $font-size-base - 3;
 
   	transition: all 0.2s ease-in-out;
 
+  	&, &:hover { color: $c-text; }
+
 
 	&[disabled], &.disabled{
 		&, &:hover
@@ -316,6 +318,21 @@ select{
 	&:hover{
 		background-color: darken($c-orange, 10%);
 	}
+}
+
+.btn-violet{
+	@extend %form_all_base;
+	@extend %form_button_base;
+	background-color: $c-violet;
+
+	&:hover{
+		background-color: darken($c-violet, 10%);
+	}
+}
+
+.btn-simple{
+	border-radius: 0;
+	font-weight: 300;
 }
 
 /*======== end of buttons =========*/
