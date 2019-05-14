@@ -2522,8 +2522,11 @@ input:not([type='button']):not([type='submit'])::placeholder, select::placeholde
 
 input:not([type='submit']):not([type='button']), select {
   background-color: #fff;
-  border: 1px solid #090909;
+  border: 1px solid #a2a2a2;
   color: #090909;
+}
+input:focus:not([type='submit']):not([type='button']), select:focus {
+  border-color: #555555;
 }
 
 .btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange, .btn-violet {
@@ -2599,7 +2602,7 @@ input:not([type='submit']):not([type='button']), select {
 .input-checkbox label:after {
   content: "";
   background-color: #fff;
-  border: 1px solid #090909;
+  border: 1px solid #a2a2a2;
   width: 20px;
   height: 20px;
   position: absolute;
@@ -2635,7 +2638,7 @@ input:not([type='submit']):not([type='button']), select {
 .input-radio label:after {
   content: "";
   background-color: #fff;
-  border: 1px solid #090909;
+  border: 1px solid #a2a2a2;
   width: 20px;
   height: 20px;
   border-radius: 10px;

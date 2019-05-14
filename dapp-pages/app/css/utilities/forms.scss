@@ -1,7 +1,7 @@
 $fontsize-input: $font-size-base;
 $fontsize-btn: $fontsize-input;
 $c-input-background: #fff;
-$c-input-border: darken($c-background, 15%);
+$c-input-border: lighten($c-background, 45%);
 $c-input-placeholder: darken($c-background, 15%);
 $c-input-text: darken($c-background, 15%);
 $padding-input-v: 4px;
@@ -42,6 +42,8 @@ $fontsize-btn-sm: $font-size-base - 3;
 	background-color: $c-input-background;
   	border: 1px solid $c-input-border;
   	color: $c-input-text;
+
+  	&:focus{ border-color: darken($c-input-border, 30%); }
 }
 
 %form_button_base{
