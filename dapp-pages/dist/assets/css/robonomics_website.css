@@ -1838,7 +1838,7 @@ sub {
 /*====== Media queries ======*/
 /*====== Colors ======*/
 /*====== Classes ======*/
-.sprite-basic-copy, .sprite-basic-cursor, .sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-jp, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-github, .sprite-basic-i-check, .sprite-basic-i-checked, .sprite-basic-i-error, .sprite-basic-i-menu-dark, .sprite-basic-i-menu-light, .sprite-basic-logo-aira, .sprite-basic-logo-aira-pale, .sprite-basic-logo-robonomics, .sprite-basic-logo-robonomics-pale, .sprite-basic-reddit, .sprite-basic-reddit-2, .sprite-basic-sleep, .sprite-basic-token-aira, .sprite-basic-token-airakys, .sprite-basic-token-xrt, .sprite-basic-user-unknown, .sprite-basic-work, .msg-error.msg-icon:before, .msg-ok.msg-icon:before, .input-checkbox label:before {
+.sprite-basic-copy, .sprite-basic-cursor, .sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-jp, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-github, .sprite-basic-i-check, .sprite-basic-i-checked, .sprite-basic-i-close, .sprite-basic-i-error, .sprite-basic-i-nav, .sprite-basic-i-profile, .sprite-basic-logo-aira, .sprite-basic-logo-aira-pale, .sprite-basic-logo-robonomics, .sprite-basic-logo-robonomics-pale, .sprite-basic-reddit, .sprite-basic-reddit-2, .sprite-basic-sleep, .sprite-basic-token-aira, .sprite-basic-token-airakys, .sprite-basic-token-xrt, .sprite-basic-user-unknown, .sprite-basic-work, .msg-error.msg-icon:before, .msg-ok.msg-icon:before, .input-checkbox label:before {
   background-image: url("../i/sprite.svg?6");
 }
 
@@ -1912,108 +1912,115 @@ sub {
   display: inline-block;
 }
 
-.sprite-basic-i-error {
-  width: 22.446px;
-  height: 22.446px;
+.sprite-basic-i-close {
+  width: 16.2px;
+  height: 16.2px;
   background-position: -194px 0px;
   display: inline-block;
 }
 
-.sprite-basic-i-menu-dark {
-  width: 30px;
-  height: 30px;
-  background-position: -217px 0px;
+.sprite-basic-i-error {
+  width: 22.446px;
+  height: 22.446px;
+  background-position: -211px 0px;
   display: inline-block;
 }
 
-.sprite-basic-i-menu-light {
-  width: 30px;
-  height: 19.2px;
-  background-position: -247px 0px;
+.sprite-basic-i-nav {
+  width: 21.6px;
+  height: 20px;
+  background-position: -234px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-i-profile {
+  width: 16px;
+  height: 21px;
+  background-position: -256px 0px;
   display: inline-block;
 }
 
 .sprite-basic-logo-aira {
   width: 25.257px;
   height: 25.257px;
-  background-position: -277px 0px;
+  background-position: -272px 0px;
   display: inline-block;
 }
 
 .sprite-basic-logo-aira-pale {
   width: 25.3px;
   height: 25.3px;
-  background-position: -303px 0px;
+  background-position: -298px 0px;
   display: inline-block;
 }
 
 .sprite-basic-logo-robonomics {
   width: 33.481px;
   height: 29.491px;
-  background-position: -329px 0px;
+  background-position: -324px 0px;
   display: inline-block;
 }
 
 .sprite-basic-logo-robonomics-pale {
   width: 33.5px;
   height: 29.5px;
-  background-position: -363px 0px;
+  background-position: -358px 0px;
   display: inline-block;
 }
 
 .sprite-basic-reddit {
   width: 15px;
   height: 12.5px;
-  background-position: -397px 0px;
+  background-position: -392px 0px;
   display: inline-block;
 }
 
 .sprite-basic-reddit-2 {
   width: 15px;
   height: 20.5px;
-  background-position: -412px 0px;
+  background-position: -407px 0px;
   display: inline-block;
 }
 
 .sprite-basic-sleep {
   width: 39.8px;
   height: 28px;
-  background-position: -427px 0px;
+  background-position: -422px 0px;
   display: inline-block;
 }
 
 .sprite-basic-token-aira {
   width: 25px;
   height: 25px;
-  background-position: -467px 0px;
+  background-position: -462px 0px;
   display: inline-block;
 }
 
 .sprite-basic-token-airakys {
   width: 25px;
   height: 25px;
-  background-position: -492px 0px;
+  background-position: -487px 0px;
   display: inline-block;
 }
 
 .sprite-basic-token-xrt {
   width: 25px;
   height: 25px;
-  background-position: -517px 0px;
+  background-position: -512px 0px;
   display: inline-block;
 }
 
 .sprite-basic-user-unknown {
   width: 25px;
   height: 23.4px;
-  background-position: -542px 0px;
+  background-position: -537px 0px;
   display: inline-block;
 }
 
 .sprite-basic-work {
   width: 39.8px;
   height: 28px;
-  background-position: -567px 0px;
+  background-position: -562px 0px;
   display: inline-block;
 }
 
@@ -2578,7 +2585,7 @@ input:focus:not([type='submit']):not([type='button']), select:focus {
 .msg-error.msg-icon:before {
   width: 22.446px;
   height: 22.446px;
-  background-position: -194px 0px;
+  background-position: -211px 0px;
 }
 
 .msg-ok {
@@ -3108,19 +3115,67 @@ section section:last-child {
   padding: 10px 0;
   border: 1px solid #000;
   background-color: #222222;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 40px;
 }
-.panel-top .d-table--cell {
+.panel-top:last-child {
+  margin-right: 0;
+}
+
+.panel-top--cell {
+  display: inline-block;
+  vertical-align: middle;
   padding: 0 25px;
   border-right: 1px solid #000;
-  vertical-align: middle;
 }
-.panel-top .d-table--cell:last-child {
+.panel-top--cell:last-child {
   border: 0;
 }
-.panel-top .d-table--cell > * {
+.panel-top--cell > * {
   margin-right: 10px;
   vertical-align: middle;
 }
-.panel-top .d-table--cell > *:last-child {
+.panel-top--cell > *:last-child {
   margin-right: 0;
+}
+
+.nav-tog {
+  display: none;
+}
+
+.nav-popup--close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: none;
+}
+
+@media screen and (max-width: 1120px) {
+  .nav-tog {
+    display: inline-block;
+  }
+
+  body .nav-popup {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100% !important;
+    box-sizing: border-box;
+    padding: 40px;
+    background-color: #222222;
+  }
+  body .nav-popup .panel-top--cell {
+    display: block;
+    padding: 10px 0;
+    border: 0;
+  }
+
+  .nav-popup--close {
+    display: block;
+  }
 }

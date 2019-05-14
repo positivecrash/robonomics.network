@@ -9,8 +9,16 @@ window.addEventListener('load', function(){
 		});
 	}
 
+}, false);
 
 
+window.addEventListener('resize', function(){
+	if(window.innerWidth > 1120){
+		document.querySelector('.nav-popup').style.display = 'block';
+	}
+	else{
+		document.querySelector('.nav-popup').style.display = 'none';
+	}
 }, false);
 //  Import support https://stackoverflow.com/questions/13673346/supporting-both-commonjs-and-amd
 (function(name, definition) {
@@ -227,20 +235,24 @@ var visibleY = function(el){
 // document.addEventListener('scroll', IfInView);
 // document.addEventListener('resize', IfInView);
 
+function isVisible(element){
+	if (element.offsetWidth > 0 && element.offsetHeight > 0)
+		return true;
+}
+
+
 var show = function(link, block, textShow, textHide){
 
 	var infoblock = document.querySelectorAll(block);
 
 	for (var j = 0; j < infoblock.length; j++) {
-		if (infoblock[j].style.display === 'none'){
-			infoblock[j].style.display = 'block';
-
-			if(textShow) link.innerHTML = textShow;
+		if (isVisible(infoblock[j])){
+			infoblock[j].style.display = 'none';
+			if(textHide) link.innerHTML = textHide;
 		}
 		else{
-			infoblock[j].style.display = 'none';
-
-			if(textHide) link.innerHTML = textHide;
+			infoblock[j].style.display = 'block';
+			if(textShow) link.innerHTML = textShow;
 		}
 	}
 	
@@ -283,27 +295,6 @@ var sort = function(tagLink, tagSec, active){
 
 	
 }
-/* 0-cookie.js requires */
-
-window.addEventListener('load', function(){
-	var
-		agreementMsg      = document.querySelector('#js-cookiePolicy'),
-		agreementBtn      = document.querySelector('#js-cookiePolicy .btn'),
-		agreementCookie   = 'policy';
-
-		if (agreementMsg && agreementBtn){
-			if(!getCookie(agreementCookie))
-				agreementMsg.style.display = 'block';
-
-			agreementBtn.addEventListener('click', function(){
-				var date = new Date(new Date().getTime() + 3600 * 1000 * 24 * 365);
-				document.cookie = agreementCookie+'=true; expires=' + date.toUTCString();
-				agreementMsg.style.display = 'none';
-			});
-		}
-
-		console.log(getCookie(agreementCookie));
-}, false);
 window.addEventListener('load', function(){
 
 	/*

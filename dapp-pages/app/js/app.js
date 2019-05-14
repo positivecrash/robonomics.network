@@ -9,6 +9,14 @@ window.addEventListener('load', function(){
 		});
 	}
 
+}, false);
 
 
+window.addEventListener('resize', function(){
+	if(window.innerWidth > 1120){
+		document.querySelector('.nav-popup').style.display = 'block';
+	}
+	else{
+		document.querySelector('.nav-popup').style.display = 'none';
+	}
 }, false);
