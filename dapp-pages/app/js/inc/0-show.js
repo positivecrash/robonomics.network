@@ -1,19 +1,18 @@
-var show = function(switcher){
+var show = function(link, block, textShow, textHide){
 
-	var link = document.querySelectorAll('['+switcher+']');
-	var infoblock;
+	var infoblock = document.querySelectorAll(block);
 
-	for (var i = 0; i < link.length; i++) {
+	for (var j = 0; j < infoblock.length; j++) {
+		if (infoblock[j].style.display === 'none'){
+			infoblock[j].style.display = 'block';
 
-		link[i].addEventListener('click', function(){
+			if(textShow) link.innerHTML = textShow;
+		}
+		else{
+			infoblock[j].style.display = 'none';
 
-			infoblock = document.querySelectorAll(this.getAttribute(switcher));
-
-			for (var j = 0; j < infoblock.length; j++) {
-				infoblock[j].style.display = 'block';
-			}
-		});
+			if(textHide) link.innerHTML = textHide;
+		}
 	}
-
 	
 }

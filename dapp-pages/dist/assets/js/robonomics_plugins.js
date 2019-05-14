@@ -3,9 +3,6 @@ window.addEventListener('load', function(){
 	// //sort tags, '0-sort.js' required
 	// sort('sort', 'sort-sec', 'active');
 
-	// //show info by click, '0-show.js' required
-	// show('data-show');
-
 	if( document.querySelector('.disabled')){
 		document.querySelector('.disabled').addEventListener("click", function(event){
 		  event.preventDefault()
@@ -230,23 +227,22 @@ var visibleY = function(el){
 // document.addEventListener('scroll', IfInView);
 // document.addEventListener('resize', IfInView);
 
-var show = function(switcher){
+var show = function(link, block, textShow, textHide){
 
-	var link = document.querySelectorAll('['+switcher+']');
-	var infoblock;
+	var infoblock = document.querySelectorAll(block);
 
-	for (var i = 0; i < link.length; i++) {
+	for (var j = 0; j < infoblock.length; j++) {
+		if (infoblock[j].style.display === 'none'){
+			infoblock[j].style.display = 'block';
 
-		link[i].addEventListener('click', function(){
+			if(textShow) link.innerHTML = textShow;
+		}
+		else{
+			infoblock[j].style.display = 'none';
 
-			infoblock = document.querySelectorAll(this.getAttribute(switcher));
-
-			for (var j = 0; j < infoblock.length; j++) {
-				infoblock[j].style.display = 'block';
-			}
-		});
+			if(textHide) link.innerHTML = textHide;
+		}
 	}
-
 	
 }
 var showSorted = function(tag, tagLink, tagSec, active){
