@@ -33,6 +33,7 @@ body { @extend %font_base; }
 h1 { font-size: $font-size-title; }
 h5 { font-size: $font-size-base; }
 
+.t-gt { font-size: $font-size-base * 4; }
 .t-lg { font-size: $font-size-base + 8; }
 .t-md { font-size: $font-size-base + 4; }
 .t-sm { font-size: $font-size-base - 3; }
@@ -121,8 +122,8 @@ hr{
 table
 	{
 
-		margin-top: $margin-sec;
-		margin-bottom: $margin-sec;
+		margin-top: $vertical-rythm;
+		margin-bottom: $vertical-rythm;
 
 		td, th {
 			padding: 10px 20px;
@@ -132,19 +133,25 @@ table
 		th{
 			@extend %text_uppercase;
 			text-align: left;
-			background-color: darken($c-background, 5%);
+			background-color: darken($c-background, 10%);
+		}
+
+		td{
+			background-color: darken($c-background, 3%);
 		}
 
 		caption{
-			font-weight: 500;
 			text-align: left;
-			padding-bottom: 4px;
-			opacity: .6;
+			padding: 5px 20px;
+			@extend %text_uppercase;
+			// background-color: darken($c-violet, 30%);
+			background-color: darken($c-background, 10%);
+			color: lighten($c-violet, 10%);
 		}
 	}
 
 .table-responsive { @include responsiveTable($mq-tablet); }
-.table-striped tbody tr:nth-child(even){ background-color: darken($c-background, 3%); }
+.table-striped tbody tr:nth-child(even) td{ background-color: darken($c-background, 5%); }
 
 
 /*====== end of Text elements ======*/
@@ -194,6 +201,7 @@ table
 
 .t-color-red, a.t-color-red { color: $c-red; }
 .t-color-green, a.t-color-green { color: $c-green; }
+.t-color-violet, a.t-color-violet { color: $c-violet; }
 
 
 .code-overflow-line

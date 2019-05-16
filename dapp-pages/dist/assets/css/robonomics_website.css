@@ -2038,7 +2038,7 @@ a, a.a-noline, a.a-icon, .btn-green, input[type="submit"], input[type="button"],
   text-decoration: none !important;
 }
 
-h1, h2, h3, h4, h5, h6, table th, .t-uppercase, input:not([type='submit']):not([type='button']), select, .btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange, .btn-violet, .msg-error .msg-title, .msg-ok .msg-title, .loading-logo:after {
+h1, h2, h3, h4, h5, h6, table th, table caption, .t-uppercase, input:not([type='submit']):not([type='button']), select, .btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange, .btn-violet, .msg-error .msg-title, .msg-ok .msg-title, .loading-logo:after {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -2100,6 +2100,10 @@ h1 {
 
 h5 {
   font-size: 16px;
+}
+
+.t-gt {
+  font-size: 64px;
 }
 
 .t-lg {
@@ -2176,8 +2180,8 @@ hr.hr-lg {
 }
 
 table {
-  margin-top: 45px;
-  margin-bottom: 45px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 table td, table th {
   padding: 10px 20px;
@@ -2185,13 +2189,16 @@ table td, table th {
 }
 table th {
   text-align: left;
-  background-color: #222222;
+  background-color: #161616;
+}
+table td {
+  background-color: #272727;
 }
 table caption {
-  font-weight: 500;
   text-align: left;
-  padding-bottom: 4px;
-  opacity: .6;
+  padding: 5px 20px;
+  background-color: #161616;
+  color: #96a0ca;
 }
 
 .table-responsive td:before {
@@ -2213,8 +2220,8 @@ table caption {
   }
 }
 
-.table-striped tbody tr:nth-child(even) {
-  background-color: #272727;
+.table-striped tbody tr:nth-child(even) td {
+  background-color: #222222;
 }
 
 /*====== end of Text elements ======*/
@@ -2447,6 +2454,10 @@ table caption {
 
 .t-color-green, a.t-color-green {
   color: #54CE63;
+}
+
+.t-color-violet, a.t-color-violet {
+  color: #7481b9;
 }
 
 .code-overflow-line {
@@ -2765,6 +2776,7 @@ body {
   animation: 0.4s FadeIn ease-in forwards;
   color: #fff;
   background-color: #2f2f2f;
+  height: 100%;
 }
 
 /*====== Set width of container ======*/
@@ -2886,13 +2898,7 @@ section section:last-child {
 }
 
 .section-color {
-  padding: 40px;
-}
-@media screen and (max-width: 576px) {
-  .section-color {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
+  padding: 20px;
 }
 .section-color.section-size-sm {
   padding: 15px;

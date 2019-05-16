@@ -3,7 +3,6 @@ include mixins/sections.pug
 
 block html
 	- var meta_title = 'Aira tokens → XRT alembic'
-	- var logo_title = 'Robonomics network account'
 
 block content
 
@@ -16,9 +15,8 @@ block content
 				section
 					section
 						nav
-							a(href="#").active
-								span Tokens alembic
-							a(href="#") Lighthouses
+							a(href="#").active: span Tokens alembic
+							a(href="#"): span Lighthouses
 
 					section
 						nav

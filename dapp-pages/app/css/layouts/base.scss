@@ -17,6 +17,8 @@ body
 
     color: $c-text;
     background-color: $c-background;
+
+    height: 100%;
   }
 
 
@@ -150,14 +152,7 @@ section
 
 .section-color
   {
-    padding: 40px;
-
-    @include mobile()
-    {
-      padding-left: 20px !important;
-      padding-right: 20px !important;
-    }
-
+    padding: 20px;
 
     &.section-size-sm{
       padding: 15px;
