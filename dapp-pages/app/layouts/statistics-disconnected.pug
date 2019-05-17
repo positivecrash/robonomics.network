@@ -1,0 +1,195 @@
+extends extends/layout.pug
+include mixins/sections.pug
+
+block html
+	- var meta_title = 'Statistics of Robonomics'
+
+block content
+
+	.sidebar.nav-popup#nav-sidebar
+		.sidebar-in
+			section.m-t-10
+				img.i-block(alt="dApp logo", src="assets/i/logo-dapp-text.svg")
+
+			section
+				section
+					nav
+						a(href="#"): span Tokens alembic
+						a(href="#").active: span Statistics of Robonomics
+						a(href="#"): span Lighthouses
+
+				section
+					nav
+						a(href="#")
+							span.sprite-basic-github.align-vertical.m-r-10
+							span.align-vertical Github
+
+						a(href="#")
+							span.sprite-basic-reddit-2.align-vertical.m-r-10
+							span.align-vertical Reddit
+
+						a(href="#")
+							span.sprite-basic-cursor.align-vertical.m-r-10
+							span.align-vertical robonomomics.network
+
+						a(href="#")
+							span.sprite-basic-cursor.align-vertical.m-r-10
+							span.align-vertical aira.life
+
+			a.nav-popup--close.sprite-basic-i-close(href="#", onclick="show(this, '#nav-sidebar');return false;")
+
+
+	.content
+		.content-in
+			section
+				.panel-top
+					.panel-top--cell.nav-tog
+						a.sprite-basic-i-nav(href="#", onclick="show(this, '#nav-sidebar');return false;")
+					.panel-top--cell.nav-tog
+						a.sprite-basic-i-profile(href="#", onclick="show(this, '#nav-account');return false;")
+					#nav-account.panel-top--cell.nav-popup
+						a.nav-popup--close.sprite-basic-i-close(href="#", onclick="show(this, '#nav-account');return false;")
+						.panel-top--cell
+							a(href="#")
+								+avatar('avatar-small align-vertical m-r-10')
+								b 0x40c5...c8d3
+							// a(href="#").a-icon.align-vertical: b i
+						.panel-top--cell
+							b.t-md 2,100
+							span AIRA
+							// a(href="#").a-icon.align-vertical: b i
+						.panel-top--cell
+							b.t-md 0
+							span AIRA KYC
+							// a(href="#").a-icon.align-vertical: b i
+						.panel-top--cell
+							b.t-md 0
+							span XRT
+							// a(href="#").a-icon.align-vertical: b i
+						
+					// .panel-top--cell
+					// 	.dropdown.dropdown-color
+					// 		a(href="javascript:;").a-noline: span.sprite-basic-flag-en.d-block
+					// 		.dropdown-content
+					// 			.inside
+					// 				nav
+					// 					a(href="#").a-noline
+					// 						i.sprite-basic-flag-ru
+
+			
+
+			section
+				h1
+					span.d-block Statistics of Robonomics network
+					span.t-label--orange.t-sm.align-top No connection
+
+			p
+				span.loader-ring.align-vertical.m-r-15
+				b.align-vertical.t-uppercase Waiting for IPFS data
+
+			section.row.section-disabled
+				.col-md-4
+					.section-border
+						.t-align--center
+							h3.t-color-violet Robotics under Ethereum control
+							.t-gt –
+						.expand-statistic-1(style="display:none")
+							table.container-full.table-striped
+								caption Total launched by Robonomics gen 5
+								tbody
+									tr
+										td last 24 hours 
+										td 0
+									tr
+										td last week
+										td 0
+									tr
+										td last month
+										td 0
+
+							table.container-full.table-striped
+								caption Amount of finalized contract liabilities
+								tbody
+									tr
+										td last 24 hours 
+										td 0
+									tr
+										td last week
+										td 0
+									tr
+										td last month
+										td 0
+
+					a.btn-violet.container-full.btn-simple(href="#", onclick="show(this, '.expand-statistic-1', '&uarr; Minimize &uarr;', '&darr; Expand &darr;');return false;") &darr; Expand &darr;
+				.col-md-4
+					.section-border
+						.t-align--center
+							h3.t-color-violet Amount of recycling gas
+							.t-gt –
+						.expand-statistic-2(style="display:none")
+							table.container-full.table-striped
+								caption Full amount of utilized gas
+								tbody
+									tr
+										td last 24 hours 
+										td 0
+									tr
+										td last week
+										td 0
+									tr
+										td last month
+										td 0
+
+							table.container-full.table-striped
+								caption Profit amount of utilized gas
+								tbody
+									tr
+										td last 24 hours 
+										td 0
+									tr
+										td last week
+										td 0
+									tr
+										td last month
+										td 0
+
+					a.btn-violet.container-full.btn-simple(href="#", onclick="show(this, '.expand-statistic-2', '&uarr; Minimize &uarr;', '&darr; Expand &darr;');return false;") &darr; Expand &darr;
+				.col-md-4
+					.section-border
+						.t-align--center
+							h3.t-color-violet Robonomics token, XRT
+							.t-gt –
+						.expand-statistic-3(style="display:none")
+							section
+								a(hred="#", target="_blank") xrt.5.robonomics.eth
+								br/
+								b Token address: 
+								code.code-overflow-line 0x7dE91B204C1C737bcEe6F000AAA6569Cf7061cb7
+							table.container-full.table-striped
+								caption Token statistics
+								tbody
+									tr
+										td Total amount of XRT in circulation:
+										td 1 003.13 XRT
+									tr
+										td Providers reward per tx ~
+										td 0.15 XRT
+
+					a.btn-violet.container-full.btn-simple(href="#", onclick="show(this, '.expand-statistic-3', '&uarr; Minimize &uarr;', '&darr; Expand &darr;');return false;") &darr; Expand &darr;
+
+
+			section.section-disabled
+				h2 Robonomics Telemetry
+				table.container-full.table-striped
+					thead
+						tr
+							th ipns
+							th address eth
+							th lighthouse
+							th provider
+							th peers
+							th date
+							th network
+					tbody
+						tr
+							td(colspan="7") No data available

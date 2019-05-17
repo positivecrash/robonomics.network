@@ -1,14 +1,9 @@
-html
-  {
-    height: 100%;
-    min-height: 100%;
-  }
-
 html, body
   {
     position: relative;
+    height: 100%;
+    min-height: 100%;
   }
-
 
 body
   {
@@ -18,7 +13,7 @@ body
     color: $c-text;
     background-color: $c-background;
 
-    height: 100%;
+    height: auto;
   }
 
 
@@ -74,6 +69,7 @@ nav
 .d-block { display: block !important; }
 
 .align-vertical { display: inline-block; vertical-align: middle; }
+.align-top { display: inline-block; vertical-align: top; }
 
 /*====== Flow elements ======*/
 
@@ -123,8 +119,9 @@ nav
 /*====== Sections ======*/
 
 @mixin sectionMargins($margin){
+  margin-top: $margin;
   margin-bottom: $margin;
-  &:last-child { margin-bottom: 0; }
+  // &:last-child { margin-bottom: 0; }
 }
 
 @mixin sectionBorder($border, $back){
@@ -205,6 +202,11 @@ section
     opacity: 0.7;
     pointer-events: none;
   }
+
+.content-in > section{
+  &:first-child { margin-top: 0; }
+  &:last-child { margin-bottom: 0; }
+}
 
 /*====== end of Sections ======*/
 

@@ -14,8 +14,8 @@ body { @extend %font_base; }
 
 #{headings(1,2)}
 	{
-		margin-top: $margin-sec;
-		margin-bottom: $vertical-rythm;
+		margin-top: $margin-sec*2;
+		margin-bottom: $vertical-rythm/2;
 
 		&:first-child { margin-top: 0; }
 	}
@@ -33,7 +33,7 @@ body { @extend %font_base; }
 h1 { font-size: $font-size-title; }
 h5 { font-size: $font-size-base; }
 
-.t-gt { font-size: $font-size-base * 4; }
+.t-gt { font-size: $font-size-base * 2; }
 .t-lg { font-size: $font-size-base + 8; }
 .t-md { font-size: $font-size-base + 4; }
 .t-sm { font-size: $font-size-base - 3; }
@@ -134,6 +134,7 @@ table
 			@extend %text_uppercase;
 			text-align: left;
 			background-color: darken($c-background, 10%);
+			font-weight: 400;
 		}
 
 		td{

@@ -2075,8 +2075,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2 {
-  margin-top: 45px;
-  margin-bottom: 24px;
+  margin-top: 90px;
+  margin-bottom: 12px;
 }
 h1:first-child, h2:first-child {
   margin-top: 0;
@@ -2103,7 +2103,7 @@ h5 {
 }
 
 .t-gt {
-  font-size: 64px;
+  font-size: 32px;
 }
 
 .t-lg {
@@ -2190,6 +2190,7 @@ table td, table th {
 table th {
   text-align: left;
   background-color: #161616;
+  font-weight: 400;
 }
 table td {
   background-color: #272727;
@@ -2762,13 +2763,10 @@ select::-ms-expand {
 }
 
 /*======== end of buttons =========*/
-html {
-  height: 100%;
-  min-height: 100%;
-}
-
 html, body {
   position: relative;
+  height: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -2776,7 +2774,7 @@ body {
   animation: 0.4s FadeIn ease-in forwards;
   color: #fff;
   background-color: #2f2f2f;
-  height: 100%;
+  height: auto;
 }
 
 /*====== Set width of container ======*/
@@ -2853,6 +2851,11 @@ nav a {
   vertical-align: middle;
 }
 
+.align-top {
+  display: inline-block;
+  vertical-align: top;
+}
+
 /*====== Flow elements ======*/
 /*====== Transitions ======*/
 /*====== end of Transitions ======*/
@@ -2872,29 +2875,21 @@ nav a {
 /*====== Sections ======*/
 section {
   position: relative;
+  margin-top: 45px;
   margin-bottom: 45px;
 }
-section:last-child {
-  margin-bottom: 0;
-}
 section section {
+  margin-top: 22.5px;
   margin-bottom: 22.5px;
-}
-section section:last-child {
-  margin-bottom: 0;
 }
 
 .section-size-sm {
+  margin-top: 10px;
   margin-bottom: 10px;
 }
-.section-size-sm:last-child {
-  margin-bottom: 0;
-}
 .section-size-sm section {
+  margin-top: 5px;
   margin-bottom: 5px;
-}
-.section-size-sm section:last-child {
-  margin-bottom: 0;
 }
 
 .section-color {
@@ -2947,6 +2942,13 @@ section section:last-child {
   filter: grayscale(1);
   opacity: 0.7;
   pointer-events: none;
+}
+
+.content-in > section:first-child {
+  margin-top: 0;
+}
+.content-in > section:last-child {
+  margin-bottom: 0;
 }
 
 /*====== end of Sections ======*/
@@ -3048,33 +3050,15 @@ section section:last-child {
   border-radius: 13px;
 }
 
-.container-w-sidebar {
-  height: 100%;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-box;
-  display: box;
-  -ms-flex-direction: row;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  -ms-box-orient: horizontal;
-  box-orient: horizontal;
+body {
+  display: flex;
+  flex-grow: 1;
 }
-.container-w-sidebar .sidebar {
-  width: 250px;
-  -ms-flex: 0 250px;
-  -webkit-box-flex: 0;
-  -moz-box-flex: 0;
-  -ms-box-flex: 0;
-  box-flex: 0;
+body .sidebar {
+  min-width: 250px;
 }
-.container-w-sidebar .content {
-  -ms-flex: 1;
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -ms-box-flex: 1;
-  box-flex: 1;
+body .content {
+  width: 100%;
 }
 
 .sidebar-in {
