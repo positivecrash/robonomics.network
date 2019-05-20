@@ -3050,14 +3050,14 @@ section section {
   border-radius: 13px;
 }
 
-body {
+.wrap-flexsols {
   display: flex;
   flex-grow: 1;
 }
-body .sidebar {
+.wrap-flexsols .sidebar {
   min-width: 250px;
 }
-body .content {
+.wrap-flexsols .content {
   width: 100%;
 }
 

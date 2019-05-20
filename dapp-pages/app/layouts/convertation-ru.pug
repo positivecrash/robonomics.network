@@ -3,189 +3,189 @@ include mixins/sections.pug
 
 block html
 	- var meta_title = 'Перегонный куб Aira токенов в XRT'
+	- var bodyclass = 'wrap-flexsols'
 
 block content
 
-	.container-w-sidebar
-		.sidebar.nav-popup#nav-sidebar
-			.sidebar-in
-				section.m-t-10
-					img.i-block(alt="dApp logo", src="assets/i/logo-dapp-text.svg")
+	.sidebar.nav-popup#nav-sidebar
+		.sidebar-in
+			section.m-t-10
+				img.i-block(alt="dApp logo", src="assets/i/logo-dapp-text.svg")
+
+			section
+				section
+					nav
+						a(href="#").active
+							span Перегонный куб
+						a(href="#") Маяки
 
 				section
-					section
-						nav
-							a(href="#").active
-								span Перегонный куб
-							a(href="#") Маяки
+					nav
+						a(href="#")
+							span.sprite-basic-github.align-vertical.m-r-10
+							span.align-vertical Github
 
-					section
-						nav
-							a(href="#")
-								span.sprite-basic-github.align-vertical.m-r-10
-								span.align-vertical Github
+						a(href="#")
+							span.sprite-basic-reddit-2.align-vertical.m-r-10
+							span.align-vertical Reddit
 
-							a(href="#")
-								span.sprite-basic-reddit-2.align-vertical.m-r-10
-								span.align-vertical Reddit
+						a(href="#")
+							span.sprite-basic-cursor.align-vertical.m-r-10
+							span.align-vertical robonomomics.network
 
-							a(href="#")
-								span.sprite-basic-cursor.align-vertical.m-r-10
-								span.align-vertical robonomomics.network
+						a(href="#")
+							span.sprite-basic-cursor.align-vertical.m-r-10
+							span.align-vertical aira.life
 
-							a(href="#")
-								span.sprite-basic-cursor.align-vertical.m-r-10
-								span.align-vertical aira.life
-
-				a.nav-popup--close.sprite-basic-i-close(href="#", onclick="show(this, '#nav-sidebar');return false;")
+			a.nav-popup--close.sprite-basic-i-close(href="#", onclick="show(this, '#nav-sidebar');return false;")
 
 
-		.content
-			.content-in
-				section
-					.panel-top
-						.panel-top--cell.nav-tog
-							a.sprite-basic-i-nav(href="#", onclick="show(this, '#nav-sidebar');return false;")
-						.panel-top--cell.nav-tog
-							a.sprite-basic-i-profile(href="#", onclick="show(this, '#nav-account');return false;")
-						#nav-account.panel-top--cell.nav-popup
-							a.nav-popup--close.sprite-basic-i-close(href="#", onclick="show(this, '#nav-account');return false;")
-							.panel-top--cell
-								a(href="#")
-									+avatar('avatar-small align-vertical m-r-10')
-									b 0x40c5...c8d3
-								// a(href="#").a-icon.align-vertical: b i
-							.panel-top--cell
-								b.t-md 2,100
-								span AIRA
-								// a(href="#").a-icon.align-vertical: b i
-							.panel-top--cell
-								b.t-md 0
-								span AIRA KYC
-								// a(href="#").a-icon.align-vertical: b i
-							.panel-top--cell
-								b.t-md 0
-								span XRT
-								// a(href="#").a-icon.align-vertical: b i
-							
+	.content
+		.content-in
+			section
+				.panel-top
+					.panel-top--cell.nav-tog
+						a.sprite-basic-i-nav(href="#", onclick="show(this, '#nav-sidebar');return false;")
+					.panel-top--cell.nav-tog
+						a.sprite-basic-i-profile(href="#", onclick="show(this, '#nav-account');return false;")
+					#nav-account.panel-top--cell.nav-popup
+						a.nav-popup--close.sprite-basic-i-close(href="#", onclick="show(this, '#nav-account');return false;")
 						.panel-top--cell
-							.dropdown.dropdown-color
-								a(href="javascript:;").a-noline: span.sprite-basic-flag-en.d-block
-								.dropdown-content
-									.inside
-										nav
-											a(href="#").a-noline
-												i.sprite-basic-flag-ru
+							a(href="#")
+								+avatar('avatar-small align-vertical m-r-10')
+								b 0x40c5...c8d3
+							// a(href="#").a-icon.align-vertical: b i
+						.panel-top--cell
+							b.t-md 2,100
+							span AIRA
+							// a(href="#").a-icon.align-vertical: b i
+						.panel-top--cell
+							b.t-md 0
+							span AIRA KYC
+							// a(href="#").a-icon.align-vertical: b i
+						.panel-top--cell
+							b.t-md 0
+							span XRT
+							// a(href="#").a-icon.align-vertical: b i
+						
+					.panel-top--cell
+						.dropdown.dropdown-color
+							a(href="javascript:;").a-noline: span.sprite-basic-flag-en.d-block
+							.dropdown-content
+								.inside
+									nav
+										a(href="#").a-noline
+											i.sprite-basic-flag-ru
 
-				
+			
 
-				section
-					h1 Перегонный куб Aira токенов в XRT
-					// .section-overflowtext.section-border
-					.section-border
-						p: b Держатель токенов Aira!
-						p С твоей помощью мы проделали путь от прототипа программного обеспечения 
-							a(href="http://aira.life", target="_blank") Aira 
-							| до 
-							a(href="http://robonomics.network", target="_blank") платформы Робономика
-							|. Два года работы, более 50 релизов в 
-							a(href="https://github.com/airalab", target="_blank") 6 репозиториях на GitHub
-							|, тысячи коммитов целой группы разработчиков. Твоя поддержка привела к появлению новой технологии, которая в дальнейшем призвана подчинить роботов децентрализованному компьютеру Ethereum. Ты помог этому. Спасибо!
-						p Важно понимать, что это не конец пути, а только самое начало. Мы создали новую технологию, теперь ее нужно растить и обучать сообщество пользоваться Робономикой. 
-						p Токен платформы Робономика мы назвали XRT (Robonomics token). У тебя есть два варианта действий – пройти KYC и ожидать запуска Голландского аукциона или в 2 шага получить XRT уже сегодня.
-						#intro(style="display:none")
-							p: b В чем разница этих вариантов для держателя Aira токенов:
+			section
+				h1 Перегонный куб Aira токенов в XRT
+				// .section-overflowtext.section-border
+				.section-border
+					p: b Держатель токенов Aira!
+					p С твоей помощью мы проделали путь от прототипа программного обеспечения 
+						a(href="http://aira.life", target="_blank") Aira 
+						| до 
+						a(href="http://robonomics.network", target="_blank") платформы Робономика
+						|. Два года работы, более 50 релизов в 
+						a(href="https://github.com/airalab", target="_blank") 6 репозиториях на GitHub
+						|, тысячи коммитов целой группы разработчиков. Твоя поддержка привела к появлению новой технологии, которая в дальнейшем призвана подчинить роботов децентрализованному компьютеру Ethereum. Ты помог этому. Спасибо!
+					p Важно понимать, что это не конец пути, а только самое начало. Мы создали новую технологию, теперь ее нужно растить и обучать сообщество пользоваться Робономикой. 
+					p Токен платформы Робономика мы назвали XRT (Robonomics token). У тебя есть два варианта действий – пройти KYC и ожидать запуска Голландского аукциона или в 2 шага получить XRT уже сегодня.
+					#intro(style="display:none")
+						p: b В чем разница этих вариантов для держателя Aira токенов:
 
-							table.table-striped.table-responsive
-								thead
-									tr
-										th Aira → Aira KYC
-										th Aira → Aira KYC → XRT
-								tbody
-									tr
-										td(data-th="Aira → Aira KYC") Всегда есть возможность превратить Aira KYC в XRT без участия разработчиков, отправив транзакцию к перегонному кубу Aira KYC → XRT
-										td(data-th="Aira → Aira KYC → XRT") Обратно перегнать токены XRT в Aira KYC не получится
-									tr
-										td(data-th="Aira → Aira KYC") По результату Голландского аукциона 1 Aira KYC может превратиться в N XRT, но не менее 1:1
-										td(data-th="Aira → Aira KYC → XRT") Если вы сделали оба шага и получили XRT, рассчитывать на приумножение количества XRT не получится 
-									tr
-										td(data-th="Aira → Aira KYC") Aira KYC нельзя использовать, чтобы стать провайдером Робономики
-										td(data-th="Aira → Aira KYC → XRT") XRT может использоваться для обеспечения квоты на маяке Робономики
-									tr
-										td(data-th="Aira → Aira KYC") Aira KYC нельзя использовать, чтобы оплатить комиссию провайдерам Робономики
-										td(data-th="Aira → Aira KYC → XRT") С помощью XRT можно оплачивать транзакции в сети Робономика - ETH не потребуется
-									tr
-										td(data-th="Aira → Aira KYC") Aira KYC не планируется использовать при голосовании ДАО Робономики
-										td(data-th="Aira → Aira KYC → XRT") XRT можно использовать для создания предложений в ДАО Робономики о запуске Голландского аукциона, смене команды управляющих ENS записью Robonomics.eth
-									tr
-										td(data-th="Aira → Aira KYC") Токен Aira и Aira KYC не будут предлагаться разработчиками на дексы
-										td(data-th="Aira → Aira KYC → XRT") XRT будет предлагаться разработчиками и сообществом для добавления на биржи
-					a.btn-violet.container-full.btn-simple(href="#", onclick="show(this, '#intro', '&uarr; Свернуть письмо разработчиков &uarr;', '&darr; Развернуть письмо разработчиков &darr;');return false;") &darr; Развернуть письмо разработчиков &darr;
+						table.table-striped.table-responsive
+							thead
+								tr
+									th Aira → Aira KYC
+									th Aira → Aira KYC → XRT
+							tbody
+								tr
+									td(data-th="Aira → Aira KYC") Всегда есть возможность превратить Aira KYC в XRT без участия разработчиков, отправив транзакцию к перегонному кубу Aira KYC → XRT
+									td(data-th="Aira → Aira KYC → XRT") Обратно перегнать токены XRT в Aira KYC не получится
+								tr
+									td(data-th="Aira → Aira KYC") По результату Голландского аукциона 1 Aira KYC может превратиться в N XRT, но не менее 1:1
+									td(data-th="Aira → Aira KYC → XRT") Если вы сделали оба шага и получили XRT, рассчитывать на приумножение количества XRT не получится 
+								tr
+									td(data-th="Aira → Aira KYC") Aira KYC нельзя использовать, чтобы стать провайдером Робономики
+									td(data-th="Aira → Aira KYC → XRT") XRT может использоваться для обеспечения квоты на маяке Робономики
+								tr
+									td(data-th="Aira → Aira KYC") Aira KYC нельзя использовать, чтобы оплатить комиссию провайдерам Робономики
+									td(data-th="Aira → Aira KYC → XRT") С помощью XRT можно оплачивать транзакции в сети Робономика - ETH не потребуется
+								tr
+									td(data-th="Aira → Aira KYC") Aira KYC не планируется использовать при голосовании ДАО Робономики
+									td(data-th="Aira → Aira KYC → XRT") XRT можно использовать для создания предложений в ДАО Робономики о запуске Голландского аукциона, смене команды управляющих ENS записью Robonomics.eth
+								tr
+									td(data-th="Aira → Aira KYC") Токен Aira и Aira KYC не будут предлагаться разработчиками на дексы
+									td(data-th="Aira → Aira KYC → XRT") XRT будет предлагаться разработчиками и сообществом для добавления на биржи
+				a.btn-violet.container-full.btn-simple(href="#", onclick="show(this, '#intro', '&uarr; Свернуть письмо разработчиков &uarr;', '&darr; Развернуть письмо разработчиков &darr;');return false;") &darr; Развернуть письмо разработчиков &darr;
 
-				section.section-color.section-color--highlight
+			section.section-color.section-color--highlight
 
-					h2 К действию!
+				h2 К действию!
 
-					section.row
-						.col-md-4.t-align--center
-							.section-color.section-color--highlight.section-shade
-								h3 1. Прохождение KYC
-								img.i-block(alt="", src="assets/i/cube/i-cube-1.jpg", style="max-height: 80px;margin:0 auto")
-								br/
-								p
-									a(href="#")
-										+avatar('avatar-small align-vertical m-r-10')
-										b 0x40c5...c8d3
-								a(href="#").btn-orange Пройти KYS
-						.col-md-4.t-align--center
-							.section-color.section-color--highlight.section-shade.section-disabled
-								h3 2. Aira → Aira KYC
-								img.i-block(alt="", src="assets/i/cube/i-cube-2.jpg", style="max-height: 80px;margin:0 auto")
-								br/
-								p
-									input.input-line.input-size_md(type="text", value="2100")
-									span AIRA
-								a(href="#").btn-green Конвертировать в AIRA KYC
-						.col-md-4.t-align--center
-							.section-color.section-color--highlight.section-shade.section-disabled
-								h3 3. Aira KYC → XRT
-								img.i-block(alt="", src="assets/i/cube/i-cube-3.jpg", style="max-height: 80px;margin:0 auto")
-								br/
-								p
-									input.input-line.input-size_md(type="text")
-									span AIRA KYC
-								a(href="#").btn-green Конвертировать в XRT
-
-
-					section.row
-						.col-md-4.t-align--center
-							.section-color.section-color--highlight.section-shade
-								h3 1. Прохождение KYC
-								img.i-block(alt="", src="assets/i/cube/i-cube-1.jpg", style="max-height: 80px;margin:0 auto")
-								br/
+				section.row
+					.col-md-4.t-align--center
+						.section-color.section-color--highlight.section-shade
+							h3 1. Прохождение KYC
+							img.i-block(alt="", src="assets/i/cube/i-cube-1.jpg", style="max-height: 80px;margin:0 auto")
+							br/
+							p
 								a(href="#")
 									+avatar('avatar-small align-vertical m-r-10')
 									b 0x40c5...c8d3
-								p.t-color-green KYC пройден
-						.col-md-4.t-align--center
-							.section-color.section-color--highlight.section-shade
-								h3 2. Aira → Aira KYC
-								img.i-block(alt="", src="assets/i/cube/i-cube-2.jpg", style="max-height: 80px;margin:0 auto")
-								br/
-								p
-									input.input-line.input-size_md(type="text", value="2100")
-									span AIRA
-								a(href="#").btn-green Конвертировать в AIRA KYC
-						.col-md-4.t-align--center
-							.section-color.section-color--highlight.section-shade.section-disabled
-								h3 3. Aira KYC → XRT
-								img.i-block(alt="", src="assets/i/cube/i-cube-3.jpg", style="max-height: 80px;margin:0 auto")
-								br/
-								p
-									input.input-line.input-size_md(type="text")
-									span AIRA KYC
-								a(href="#").btn-green Конвертировать в XRT
+							a(href="#").btn-orange Пройти KYS
+					.col-md-4.t-align--center
+						.section-color.section-color--highlight.section-shade.section-disabled
+							h3 2. Aira → Aira KYC
+							img.i-block(alt="", src="assets/i/cube/i-cube-2.jpg", style="max-height: 80px;margin:0 auto")
+							br/
+							p
+								input.input-line.input-size_md(type="text", value="2100")
+								span AIRA
+							a(href="#").btn-green Конвертировать в AIRA KYC
+					.col-md-4.t-align--center
+						.section-color.section-color--highlight.section-shade.section-disabled
+							h3 3. Aira KYC → XRT
+							img.i-block(alt="", src="assets/i/cube/i-cube-3.jpg", style="max-height: 80px;margin:0 auto")
+							br/
+							p
+								input.input-line.input-size_md(type="text")
+								span AIRA KYC
+							a(href="#").btn-green Конвертировать в XRT
 
-					section
-						b Совет: 
-						| важно превратить свои Aira токены в Aira KYC как можно раньше, но не обязательно превращать все свои токены Aira KYC в XRT. Если вы хотите стать провайдером или пользоваться сетью, вы можете пользоваться перегонным кубом Aira KYC → XRT в любое время для перегонки любого количества Aira KYC неограниченное количество раз.
+
+				section.row
+					.col-md-4.t-align--center
+						.section-color.section-color--highlight.section-shade
+							h3 1. Прохождение KYC
+							img.i-block(alt="", src="assets/i/cube/i-cube-1.jpg", style="max-height: 80px;margin:0 auto")
+							br/
+							a(href="#")
+								+avatar('avatar-small align-vertical m-r-10')
+								b 0x40c5...c8d3
+							p.t-color-green KYC пройден
+					.col-md-4.t-align--center
+						.section-color.section-color--highlight.section-shade
+							h3 2. Aira → Aira KYC
+							img.i-block(alt="", src="assets/i/cube/i-cube-2.jpg", style="max-height: 80px;margin:0 auto")
+							br/
+							p
+								input.input-line.input-size_md(type="text", value="2100")
+								span AIRA
+							a(href="#").btn-green Конвертировать в AIRA KYC
+					.col-md-4.t-align--center
+						.section-color.section-color--highlight.section-shade.section-disabled
+							h3 3. Aira KYC → XRT
+							img.i-block(alt="", src="assets/i/cube/i-cube-3.jpg", style="max-height: 80px;margin:0 auto")
+							br/
+							p
+								input.input-line.input-size_md(type="text")
+								span AIRA KYC
+							a(href="#").btn-green Конвертировать в XRT
+
+				section
+					b Совет: 
+					| важно превратить свои Aira токены в Aira KYC как можно раньше, но не обязательно превращать все свои токены Aira KYC в XRT. Если вы хотите стать провайдером или пользоваться сетью, вы можете пользоваться перегонным кубом Aira KYC → XRT в любое время для перегонки любого количества Aira KYC неограниченное количество раз.
