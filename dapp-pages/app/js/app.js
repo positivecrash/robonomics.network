@@ -12,11 +12,12 @@ window.addEventListener('load', function(){
 }, false);
 
 
+
 window.addEventListener('resize', function(){
 	if(window.innerWidth > 1120){
-		document.querySelector('.nav-popup').style.display = 'block';
+		document.querySelector('.sidebar').classList.remove('closed');
 	}
 	else{
-		document.querySelector('.nav-popup').style.display = 'none';
+		document.querySelector('.sidebar').classList.add('closed');
 	}
 }, false);

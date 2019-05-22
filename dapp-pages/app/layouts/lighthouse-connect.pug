@@ -7,7 +7,7 @@ block html
 
 block content
 
-	.sidebar.nav-popup#nav-sidebar
+	.sidebar#nav-sidebar
 		.sidebar-in
 			section.m-t-10
 				img.i-block(alt="dApp logo", src="assets/i/logo-dapp-text.svg")
@@ -15,9 +15,9 @@ block content
 			section
 				section
 					nav
-						a(href="#"): span Tokens alembic
-						a(href="#").active: span Statistics of Robonomics
-						a(href="#"): span Lighthouses
+						a(href="#").active: span Lighthouses
+						a(href="#"): span Statistics
+						a(href="#"): span AIRA to XRT
 
 				section
 					nav
@@ -37,35 +37,29 @@ block content
 							span.sprite-basic-cursor.align-vertical.m-r-10
 							span.align-vertical aira.life
 
-			a.nav-popup--close.sprite-basic-i-close(href="#", onclick="show(this, '#nav-sidebar');return false;")
+		a.sidebar-toggle(href="#")
 
 
 	.content
 		.content-in
 			section
 				.panel-top
-					.panel-top--cell.nav-tog
-						a.sprite-basic-i-nav(href="#", onclick="show(this, '#nav-sidebar');return false;")
-					.panel-top--cell.nav-tog
-						a.sprite-basic-i-profile(href="#", onclick="show(this, '#nav-account');return false;")
-					#nav-account.panel-top--cell.nav-popup
-						a.nav-popup--close.sprite-basic-i-close(href="#", onclick="show(this, '#nav-account');return false;")
-						.panel-top--cell
-							a(href="#")
-								+avatar('avatar-small align-vertical m-r-10')
-								b 0x40c5...c8d3
-						.panel-top--cell
-							b.t-md 2,100
-							span AIRA
-						.panel-top--cell
-							b.t-md 0
-							span AIRA KYC
-						.panel-top--cell
-							b.t-md 0
-							span XRT
+					.panel-top--cell
+						a(href="#")
+							+avatar('avatar-small align-vertical m-r-10')
+							b 0x40c5...c8d3
+					.panel-top--cell
+						b.t-md 2,100
+						span AIRA
+					.panel-top--cell
+						b.t-md 0
+						span AIRA KYC
+					.panel-top--cell
+						b.t-md 0
+						span XRT
 
 			section
-				h1 Connect to lighthouse
+				h1 Lighthouses
 
 
 				.row
