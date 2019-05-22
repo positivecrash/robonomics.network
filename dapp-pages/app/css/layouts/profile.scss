@@ -58,6 +58,16 @@ $w-sidebarContent: 230px;
       }
   }
 
+@media screen and (max-width: 1024px) 
+  {
+    .sidebar.opened {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      z-index: 100;
+    }
+  }
+
 .sidebar-toggle
   {
     position: absolute;
