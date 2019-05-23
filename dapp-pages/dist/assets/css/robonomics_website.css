@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Bootstrap Grid v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -2485,6 +2486,16 @@ table caption {
   background-color: #54CE63;
 }
 
+.sidebar.opened .sidebar-in {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.sidebar.closed .sidebar-in {
+  visibility: visible;
+  opacity: 1;
+}
+
 @keyframes FadeOut {
   0% {
     visibility: visible;
@@ -3074,6 +3085,10 @@ section section {
     transform: translateX(0);
   }
 }
+.sidebar, .content {
+  transition: all 0.4s ease-in;
+}
+
 .sidebar {
   background-color: #222222;
   position: relative;
@@ -3083,19 +3098,21 @@ section section {
 .sidebar nav a {
   white-space: nowrap;
 }
-.sidebar.opened {
-  animation: 0.4s ease-in SidebarOpen forwards;
-}
 .sidebar.opened .sidebar-toggle:before {
-  content: "<<";
+  content: "◄";
+}
+.sidebar.opened .sidebar-in {
+  animation: 0.8s ease-in FadeIn forwards;
+  transform: translateX(0);
 }
 .sidebar.closed {
   width: 25px;
 }
 .sidebar.closed .sidebar-toggle:before {
-  content: ">>";
+  content: "►";
 }
 .sidebar.closed .sidebar-in {
+  animation: 0.8s ease-in FadeOut forwards;
   transform: translateX(-230px);
 }
 
@@ -3122,7 +3139,7 @@ section section {
   border-right: 2px solid #000;
 }
 .sidebar-toggle:before {
-  content: "<<";
+  content: "◄";
 }
 .sidebar-toggle:hover {
   background-color: #03A5ED;

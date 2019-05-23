@@ -4,6 +4,12 @@
     	opacity: 0;
 	}
 
+%FadeIn
+	{
+		visibility: visible;
+    	opacity: 1;
+	}
+
 @keyframes FadeOut
 	{
 	  0% {
