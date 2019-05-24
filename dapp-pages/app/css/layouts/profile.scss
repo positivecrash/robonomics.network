@@ -32,7 +32,7 @@ $w-sidebarContent: 230px;
      }
  }
 
- .sidebar, .content { transition: all 0.4s ease-in; }
+ .sidebar.opened, .content { transition: all 0.4s ease-in; }
 
 
 .sidebar

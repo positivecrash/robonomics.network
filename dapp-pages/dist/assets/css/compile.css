@@ -2039,7 +2039,7 @@ a, a.a-noline, a.a-icon, .btn-green, input[type="submit"], input[type="button"],
   text-decoration: none !important;
 }
 
-h1, h2, h3, h4, h5, h6, table th, table caption, .t-uppercase, input:not([type='submit']):not([type='button']), select, .btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange, .btn-violet, .msg-error .msg-title, .msg-ok .msg-title, .loading-logo:after {
+h1, h2, h3, h4, h5, h6, table th, table caption, .t-uppercase, .msg-error .msg-title, .msg-ok .msg-title, .loading-logo:after {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -2535,19 +2535,19 @@ table caption {
 input:not([type='submit']):not([type='button']), select, .btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange, .btn-violet {
   font-size: 16px;
   font-weight: 500;
-  text-align: center;
   border-radius: 4px;
   display: inline-block;
   vertical-align: middle;
   box-sizing: border-box;
-  padding: 4px 15px;
+  padding: 10px 15px;
 }
 input[disabled]:not([type='submit']):not([type='button']), select[disabled], [disabled].btn-green, input[disabled][type="submit"], input[disabled][type="button"], button[disabled], [disabled].btn-blue, [disabled].btn-orange, [disabled].btn-violet, input[disabled]:hover:not([type='submit']):not([type='button']), select[disabled]:hover, [disabled].btn-green:hover, input[disabled][type="submit"]:hover, input[disabled][type="button"]:hover, button[disabled]:hover, [disabled].btn-blue:hover, [disabled].btn-orange:hover, [disabled].btn-violet:hover, input.disabled:not([type='submit']):not([type='button']), select.disabled, .disabled.btn-green, input.disabled[type="submit"], input.disabled[type="button"], button.disabled, .disabled.btn-blue, .disabled.btn-orange, .disabled.btn-violet, input.disabled:hover:not([type='submit']):not([type='button']), select.disabled:hover, .disabled.btn-green:hover, input.disabled[type="submit"]:hover, input.disabled[type="button"]:hover, button.disabled:hover, .disabled.btn-blue:hover, .disabled.btn-orange:hover, .disabled.btn-violet:hover {
   cursor: default;
 }
 input:not([type='button']):not([type='submit'])::placeholder, select::placeholder, .btn-green::placeholder, input[type="submit"]::placeholder, input[type="button"]::placeholder, button::placeholder, .btn-blue::placeholder, .btn-orange::placeholder, .btn-violet::placeholder {
   font-size: 16px;
-  color: #090909;
+  color: #6f6f6f;
+  transition: 0.2s ease all;
 }
 
 input:not([type='submit']):not([type='button']), select {
@@ -2565,6 +2565,7 @@ input:focus:not([type='submit']):not([type='button']), select:focus {
   border: 0;
   cursor: pointer;
   font-size: 16px;
+  text-align: center;
   transition: all 0.2s ease-in-out;
 }
 .btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange, .btn-violet, .btn-green:hover, input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn-blue:hover, .btn-orange:hover, .btn-violet:hover {
@@ -2703,6 +2704,11 @@ input:not([type='submit']):not([type='button']).input-line {
   border-width: 0 0 1px;
   border-radius: 0;
 }
+input:not([type='submit']):not([type='button']).input-placeholder--move:focus::placeholder {
+  position: relative;
+  top: -10px;
+  font-size: 12px;
+}
 
 select {
   appearance: none;
@@ -2723,18 +2729,18 @@ select::-ms-expand {
   display: none;
 }
 
-.input-size_sm {
+.input-size--sm {
   width: 65px;
   max-width: 100%;
 }
 
-.input-size_md {
-  width: 105px;
+.input-size--md {
+  width: 150px;
   max-width: 100%;
 }
 
-.input-size_lg {
-  width: 340px;
+.input-size--lg {
+  width: 600px;
   max-width: 100%;
 }
 
@@ -3085,7 +3091,7 @@ section section {
     transform: translateX(0);
   }
 }
-.sidebar, .content {
+.sidebar.opened, .content {
   transition: all 0.4s ease-in;
 }
 
