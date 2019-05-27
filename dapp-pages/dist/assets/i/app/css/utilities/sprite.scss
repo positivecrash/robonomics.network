@@ -1,32 +1,31 @@
 $icons: (
-    sprite: (width: 610px, height: 29.5px, pngPath: '../i/sprite.png?6', svgPath: '../i/sprite.svg?6'),
-    back: (width: 8px, height: 15px, backgroundX: 0px, backgroundY: 0px),
-    copy: (width: 16.87px, height: 21.07px, backgroundX: -8px, backgroundY: 0px),
-    cursor: (width: 15px, height: 15px, backgroundX: -25px, backgroundY: 0px),
-    flag-de: (width: 22px, height: 14.4px, backgroundX: -40px, backgroundY: 0px),
-    flag-en: (width: 22px, height: 14.4px, backgroundX: -62px, backgroundY: 0px),
-    flag-jp: (width: 22px, height: 14.7px, backgroundX: -84px, backgroundY: 0px),
-    flag-ru: (width: 22px, height: 14.4px, backgroundX: -106px, backgroundY: 0px),
-    flag-zh: (width: 22px, height: 14.4px, backgroundX: -128px, backgroundY: 0px),
-    github: (width: 15px, height: 17.2px, backgroundX: -150px, backgroundY: 0px),
-    i-check: (width: 13.758px, height: 9.899px, backgroundX: -165px, backgroundY: 0px),
-    i-checked: (width: 22.45px, height: 22.451px, backgroundX: -179px, backgroundY: 0px),
-    i-close: (width: 16.2px, height: 16.2px, backgroundX: -202px, backgroundY: 0px),
-    i-error: (width: 22.446px, height: 22.446px, backgroundX: -219px, backgroundY: 0px),
-    i-nav: (width: 21.6px, height: 20px, backgroundX: -242px, backgroundY: 0px),
-    i-profile: (width: 16px, height: 21px, backgroundX: -264px, backgroundY: 0px),
-    logo-aira: (width: 25.257px, height: 25.257px, backgroundX: -280px, backgroundY: 0px),
-    logo-aira-pale: (width: 25.3px, height: 25.3px, backgroundX: -306px, backgroundY: 0px),
-    logo-robonomics: (width: 33.481px, height: 29.491px, backgroundX: -332px, backgroundY: 0px),
-    logo-robonomics-pale: (width: 33.5px, height: 29.5px, backgroundX: -366px, backgroundY: 0px),
-    reddit: (width: 15px, height: 12.5px, backgroundX: -400px, backgroundY: 0px),
-    reddit-2: (width: 15px, height: 20.5px, backgroundX: -415px, backgroundY: 0px),
-    sleep: (width: 39.8px, height: 28px, backgroundX: -430px, backgroundY: 0px),
-    token-aira: (width: 25px, height: 25px, backgroundX: -470px, backgroundY: 0px),
-    token-airakys: (width: 25px, height: 25px, backgroundX: -495px, backgroundY: 0px),
-    token-xrt: (width: 25px, height: 25px, backgroundX: -520px, backgroundY: 0px),
-    user-unknown: (width: 25px, height: 23.4px, backgroundX: -545px, backgroundY: 0px),
-    work: (width: 39.8px, height: 28px, backgroundX: -570px, backgroundY: 0px),
+    sprite: (width: 602px, height: 29.5px, pngPath: '../i/sprite.png?6', svgPath: '../i/sprite.svg?6'),
+    copy: (width: 16.87px, height: 21.07px, backgroundX: 0px, backgroundY: 0px),
+    cursor: (width: 15px, height: 15px, backgroundX: -17px, backgroundY: 0px),
+    flag-de: (width: 22px, height: 14.4px, backgroundX: -32px, backgroundY: 0px),
+    flag-en: (width: 22px, height: 14.4px, backgroundX: -54px, backgroundY: 0px),
+    flag-jp: (width: 22px, height: 14.7px, backgroundX: -76px, backgroundY: 0px),
+    flag-ru: (width: 22px, height: 14.4px, backgroundX: -98px, backgroundY: 0px),
+    flag-zh: (width: 22px, height: 14.4px, backgroundX: -120px, backgroundY: 0px),
+    github: (width: 15px, height: 17.2px, backgroundX: -142px, backgroundY: 0px),
+    i-check: (width: 13.758px, height: 9.899px, backgroundX: -157px, backgroundY: 0px),
+    i-checked: (width: 22.45px, height: 22.451px, backgroundX: -171px, backgroundY: 0px),
+    i-close: (width: 16.2px, height: 16.2px, backgroundX: -194px, backgroundY: 0px),
+    i-error: (width: 22.446px, height: 22.446px, backgroundX: -211px, backgroundY: 0px),
+    i-nav: (width: 21.6px, height: 20px, backgroundX: -234px, backgroundY: 0px),
+    i-profile: (width: 16px, height: 21px, backgroundX: -256px, backgroundY: 0px),
+    logo-aira: (width: 25.257px, height: 25.257px, backgroundX: -272px, backgroundY: 0px),
+    logo-aira-pale: (width: 25.3px, height: 25.3px, backgroundX: -298px, backgroundY: 0px),
+    logo-robonomics: (width: 33.481px, height: 29.491px, backgroundX: -324px, backgroundY: 0px),
+    logo-robonomics-pale: (width: 33.5px, height: 29.5px, backgroundX: -358px, backgroundY: 0px),
+    reddit: (width: 15px, height: 12.5px, backgroundX: -392px, backgroundY: 0px),
+    reddit-2: (width: 15px, height: 20.5px, backgroundX: -407px, backgroundY: 0px),
+    sleep: (width: 39.8px, height: 28px, backgroundX: -422px, backgroundY: 0px),
+    token-aira: (width: 25px, height: 25px, backgroundX: -462px, backgroundY: 0px),
+    token-airakys: (width: 25px, height: 25px, backgroundX: -487px, backgroundY: 0px),
+    token-xrt: (width: 25px, height: 25px, backgroundX: -512px, backgroundY: 0px),
+    user-unknown: (width: 25px, height: 23.4px, backgroundX: -537px, backgroundY: 0px),
+    work: (width: 39.8px, height: 28px, backgroundX: -562px, backgroundY: 0px),
 );
 
 $sprite: map-get($icons, sprite);
@@ -47,10 +46,6 @@ $sprite: map-get($icons, sprite);
     // .svg & { @extend %back_svg; }
 }
 
-.sprite-basic-back{
-  @include get-sprite('back');
-  display: inline-block;
-}
 .sprite-basic-copy{
   @include get-sprite('copy');
   display: inline-block;

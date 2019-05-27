@@ -18,8 +18,6 @@ var gulp             = require('gulp'),
 
     iconfont         = require('gulp-iconfont'),
     // iconfontCss      = require('gulp-iconfont-css'),
-    // async            = require('async'),
-    // consolidate      = require('gulp-consolidate'),
 
     browserSync      = require('browser-sync');
 
@@ -48,7 +46,7 @@ var path = {
     filename:{
         css: 'robonomics_website',
         js: 'robonomics_plugins.js',
-        fonticons: 'iconsfont'
+        fonticons: 'iconfont'
     }
 
 }
@@ -150,38 +148,40 @@ gulp.task('iconfont', function(){
     return gulp.src([path.file.fonticons])
     .pipe(iconfont({
       fontName: path.filename.fonticons, // required
-      prependUnicode: true, // recommended option
+      // prependUnicode: true, // recommended option
       formats: ['ttf', 'eot', 'woff'],
+      normalize: true,
+      fontHeight: 1000,
+      prependUnicode: true
      }))
+    // .on('glyphs', function(glyphs, options) {
+    //         console.log(glyphs, options);
+    //   })
     .pipe(gulp.dest(path.folder.fonts));
 });
 
 
-
-// gulp.task('iconfont', function(done){
-//   var iconStream = gulp.src([path.file.fonticons])
-//     .pipe(iconfont({ fontName: path.filename.fonticons }));
- 
-//   async.parallel([
-//     function handleGlyphs (cb) {
-//       iconStream.on('glyphs', function(glyphs, options) {
-//         gulp.src(path.folder.csstemplates +'template-icofont.scss')
-//           .pipe(consolidate('lodash', {
-//             glyphs: glyphs,
-//             fontName: path.filename.fonticons,
-//             fontPath: path.folder.fonts,
-//             className: 's'
-//           }))
-//           .pipe(gulp.dest(path.folder.css))
-//           .on('finish', cb);
-//       });
-//     },
-//     function handleFonts (cb) {
-//       iconStream
-//         .pipe(gulp.dest(path.folder.fonts))
-//         .on('finish', cb);
-//     }
-//   ], done);
+// gulp.task('iconfont', function(){
+//   gulp.src([path.file.fonticons])
+//     .pipe(iconfontCss({
+//       fontName: path.filename.fonticons,
+//       path: path.folder.csstemplates +'template-iconfont.scss',
+//       targetPath: path.folder.sass + '/utilities/iconfont.scss',
+//       // fontPath: ''
+//       fontPath: path.folder.fonts
+//     }))
+//     .pipe(iconfont({
+//       fontName: path.filename.fonticons,
+//       formats: ['ttf', 'eot', 'woff'],
+//       normalize: true,
+//       fontHeight: 1000,
+//       prependUnicode: true
+//      }))
+//     .on('glyphs', function(glyphs, options) {
+//             console.log(glyphs, options);
+//       })
+//     .pipe(gulp.dest(path.folder.fonts))
+//     .pipe(browserSync.reload({stream:true}));
 // });
 
 
@@ -210,4 +210,4 @@ gulp.task('watch', function() {
 
 
 //default
-gulp.task('default', ['css', 'js', 'layouts', 'sprite', 'iconfont', 'watch', 'browserSync']);
+gulp.task('default', ['css', 'js', 'layouts', 'sprite', 'iconfont', 'watch']);

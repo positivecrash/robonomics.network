@@ -36,6 +36,8 @@ $fontsize-btn-sm: $font-size-base - 3;
 	  		color: $c-input-placeholder;
 	  		transition: 0.2s ease all;
 	  	}
+
+	 &.input-sm{ padding: $padding-input-sm-v $padding-input-sm-g; }
 }
 
 %form_input_base{
@@ -68,12 +70,6 @@ $fontsize-btn-sm: $font-size-base - 3;
 				opacity: 0.5;
 			}
 	}
-
-	&.btn-small
-		{
-			padding: $padding-input-sm-v $padding-input-sm-g;
-			font-size: $fontsize-btn-sm;
-		}
 }
 
 

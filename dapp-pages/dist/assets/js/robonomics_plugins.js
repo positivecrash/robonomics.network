@@ -1,15 +1,24 @@
-// window.addEventListener('load', function(){
+window.addEventListener('load', function(){
 
-// 	// //sort tags, '0-sort.js' required
-// 	// sort('sort', 'sort-sec', 'active');
+	
+	// func isVisible from 0-show.js
+	if( document.querySelector('.window-head-toggle')){
+		document.querySelector('.window-head-toggle').addEventListener("click", function(event){
+		  event.preventDefault();
 
-// 	if( document.querySelector('.disabled')){
-// 		document.querySelector('.disabled').addEventListener("click", function(event){
-// 		  event.preventDefault()
-// 		});
-// 	}
+		  var content = this.closest('.window').children[1];
+		  if(isVisible(content)){
+		  	content.style.display = 'none';
+		  	this.innerHTML = '+';
+		  }
+		  else{
+		  	content.style.display = 'block';
+		  	this.innerHTML = '–';
+		  }
+		});
+	}
 
-// }, false);
+}, false);
 //  Import support https://stackoverflow.com/questions/13673346/supporting-both-commonjs-and-amd
 (function(name, definition) {
     if (typeof module !== "undefined") { module.exports = definition(); }

@@ -121,7 +121,7 @@ blockquote
 	}
 
 hr{
-	background-color: $c-violet;
+	background-color: lighten($c-background, 60%);
 	border: 0;
 	height: 1px;
 	margin-top: $vertical-rythm/2;
@@ -141,7 +141,7 @@ table
 		margin-bottom: $vertical-rythm;
 
 		td, th {
-			padding: 10px 20px;
+			padding: 5px $padding-fields-in;
 			border-bottom: 1px solid darken($c-background, 15%);
 		}
 
@@ -158,7 +158,7 @@ table
 
 		caption{
 			text-align: left;
-			padding: 5px 20px;
+			padding: 5px $padding-fields-in;
 			@extend %text_uppercase;
 			// background-color: darken($c-violet, 30%);
 			background-color: darken($c-background, 10%);
@@ -230,7 +230,7 @@ table
 
 .t-label--blue, .t-label--orange, .t-label--green, .t-label--violet, .t-label--gray
 	{
-		padding: 10px 20px;
+		padding: 5px $padding-fields-in;
 		color: #fff;
 
 		&.t-sm{

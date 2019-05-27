@@ -2046,7 +2046,7 @@ a, a.a-noline, a.a-icon, a.a-icon--border, .btn-green, input[type="submit"], inp
   text-decoration: none !important;
 }
 
-h1, h2, h3, h4, h5, h6, table th, table caption, .t-uppercase, .msg-error .msg-title, .msg-ok .msg-title, .loading-logo:after {
+h1, h2, h3, h4, h5, h6, table th, table caption, .t-uppercase, .msg-error .msg-title, .msg-ok .msg-title, .window-head, .loading-logo:after {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -2063,7 +2063,7 @@ h1, h2, h3, h4, h5, h6, table th, table caption, .t-uppercase, .msg-error .msg-t
   vertical-align: middle;
 }
 
-a.a-icon > span, a.a-icon > b, a.a-icon--border > span, a.a-icon--border > b, .lighthouse-status, .sidebar-toggle {
+a.a-icon > span, a.a-icon > b, a.a-icon--border > span, a.a-icon--border > b, .sidebar-toggle {
   display: flex;
   text-align: center;
   align-items: center;
@@ -2188,7 +2188,7 @@ blockquote {
 }
 
 hr {
-  background-color: #7481b9;
+  background-color: #c8c8c8;
   border: 0;
   height: 1px;
   margin-top: 12px;
@@ -2205,7 +2205,7 @@ table {
   margin-bottom: 24px;
 }
 table td, table th {
-  padding: 10px 20px;
+  padding: 5px 10px;
   border-bottom: 1px solid #090909;
 }
 table th {
@@ -2218,7 +2218,7 @@ table td {
 }
 table caption {
   text-align: left;
-  padding: 5px 20px;
+  padding: 5px 10px;
   background-color: #161616;
   color: #96a0ca;
 }
@@ -2490,7 +2490,7 @@ table caption {
 }
 
 .t-label--blue, .t-label--orange, .t-label--green, .t-label--violet, .t-label--gray {
-  padding: 10px 20px;
+  padding: 5px 10px;
   color: #fff;
 }
 .t-label--blue.t-sm, .t-label--orange.t-sm, .t-label--green.t-sm, .t-label--violet.t-sm, .t-label--gray.t-sm {
@@ -2580,6 +2580,9 @@ input:not([type='button']):not([type='submit'])::placeholder, select::placeholde
   color: #6f6f6f;
   transition: 0.2s ease all;
 }
+input.input-sm:not([type='submit']):not([type='button']), select.input-sm, .input-sm.btn-green, input.input-sm[type="submit"], input.input-sm[type="button"], button.input-sm, .input-sm.btn-blue, .input-sm.btn-orange, .input-sm.btn-violet {
+  padding: 2px 10px;
+}
 
 input:not([type='submit']):not([type='button']), select {
   background-color: #fff;
@@ -2604,10 +2607,6 @@ input:focus:not([type='submit']):not([type='button']), select:focus {
 }
 [disabled].btn-green, input[disabled][type="submit"], input[disabled][type="button"], button[disabled], [disabled].btn-blue, [disabled].btn-orange, [disabled].btn-violet, [disabled].btn-green:hover, input[disabled][type="submit"]:hover, input[disabled][type="button"]:hover, button[disabled]:hover, [disabled].btn-blue:hover, [disabled].btn-orange:hover, [disabled].btn-violet:hover, .disabled.btn-green, input.disabled[type="submit"], input.disabled[type="button"], button.disabled, .disabled.btn-blue, .disabled.btn-orange, .disabled.btn-violet, .disabled.btn-green:hover, input.disabled[type="submit"]:hover, input.disabled[type="button"]:hover, button.disabled:hover, .disabled.btn-blue:hover, .disabled.btn-orange:hover, .disabled.btn-violet:hover {
   opacity: 0.5;
-}
-.btn-small.btn-green, input.btn-small[type="submit"], input.btn-small[type="button"], button.btn-small, .btn-small.btn-blue, .btn-small.btn-orange, .btn-small.btn-violet {
-  padding: 2px 10px;
-  font-size: 13px;
 }
 
 /*======== messages =========*/
@@ -2814,14 +2813,14 @@ select::-ms-expand {
 /*======== end of buttons =========*/
 /* Icons */
 @font-face {
-  font-family: 'iconsfont';
-  src: url("../fonts/iconsfont.eot");
-  src: url("../fonts/iconsfont.eot") format("embedded-opentype"), url("../fonts/iconsfont.ttf") format("truetype"), url("../fonts/iconsfont.woff") format("woff"), url("../fonts/iconsfont.svg") format("svg");
+  font-family: 'iconfont';
+  src: url("../fonts/iconfont.eot");
+  src: url("../fonts/iconfont.eot") format("embedded-opentype"), url("../fonts/iconfont.ttf") format("truetype"), url("../fonts/iconfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
-.i-back {
-  font-family: 'iconsfont';
+.i-back, .i-copy {
+  font-family: 'iconfont';
   speak: none;
   font-size: 100%;
   font-style: normal;
@@ -2835,6 +2834,10 @@ select::-ms-expand {
 
 .i-back:before {
   content: "";
+}
+
+.i-copy:before {
+  content: "";
 }
 
 html, body {
@@ -2966,34 +2969,37 @@ section section {
   margin-bottom: 5px;
 }
 
-.section-color {
+.section-color, .window-content {
   padding: 20px;
 }
-.section-color.section-size-sm {
+.section-color.section-size-sm, .window-content.section-size-sm {
   padding: 15px;
 }
 @media screen and (max-width: 576px) {
-  .section-color.section-size-sm {
+  .section-color.section-size-sm, .window-content.section-size-sm {
     padding-left: 5px !important;
     padding-right: 5px !important;
   }
 }
 
-.section-color--highlight {
+.section-color--highlight, .window-content {
   background-color: #fff;
   color: #2f2f2f;
 }
-.section-color--highlight .section-border {
+.section-color--highlight .section-border, .window-content .section-border {
   outline: 1px solid rgba(47, 47, 47, 0.4);
   border: 20px solid #fff;
 }
-.section-color--highlight table th, .section-color--highlight table td {
+.section-color--highlight table th, .section-color--highlight table td, .window-content table th, .window-content table td {
   border-color: #cccccc;
 }
-.section-color--highlight table th {
+.section-color--highlight table th, .window-content table th {
   background-color: #e6e6e6;
 }
-.section-color--highlight .table-striped tbody tr:nth-child(even) {
+.section-color--highlight table td, .window-content table td {
+  background-color: #fff;
+}
+.section-color--highlight .table-striped tbody tr:nth-child(even), .window-content .table-striped tbody tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
@@ -3023,6 +3029,23 @@ section section {
 }
 .content-in > section:last-child {
   margin-bottom: 0;
+}
+
+.window-head {
+  background-color: #7c7c7c;
+  padding: 5px 10px;
+  display: table;
+  width: 100%;
+  box-sizing: border-box;
+}
+.window-head span, .window-head a {
+  color: #fff;
+  display: table-cell;
+  vertical-align: middle;
+}
+.window-head .window-head-toggle {
+  text-align: right;
+  font-size: 21px;
 }
 
 /*====== end of Sections ======*/
@@ -3101,20 +3124,6 @@ section section {
   border-top: 2px solid #fff;
   border-right: 2px solid #fff;
   animation: 0.8s Rotate ease-in-out infinite;
-}
-
-.lighthouse-status {
-  position: absolute;
-  top: 40px;
-  right: 40px;
-  background-color: #54CE63;
-  color: #fff;
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-}
-.lighthouse-status.sleep {
-  background-color: #F15A24;
 }
 
 .avatar-small {

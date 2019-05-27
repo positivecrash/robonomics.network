@@ -59,54 +59,91 @@ block content
 						span.t-sm XRT
 
 			section
-				// table
-				// 	tr
-				// 		td
-				// 			a(href=""): b Back to list
-				// 		td
-				// 			b a.lighthouse.5.robonomics.eth
-				// 			br/
-				// 			i.t-sm 0x28f95c484ee55E6aB8A2feF72EB51bC65cdd4324
-				// 		td
-				// 			b.align-vertical.m-r-10.t-color-red Sleeping
-				// 			a(href="#").a-icon.align-vertical: b i
-
-			section
 				h2
 					a(href="#").align-vertical.m-r-10.i-back
-					// a(href="#").align-vertical.m-r-10: i.sprite-basic-back
-					span.align-vertical.m-r-20 airalab.lighthouse.5.robonomics.eth
-					// span.t-sm.t-label--orange.align-vertical airalab.lighthouse.5.robonomics.eth
+					span.align-vertical.m-r-20.breakwords airalab.lighthouse.5.robonomics.eth
 
 				.row
+					.col-lg-4.col-md-5.order-md-last
+						section
+							.t-label--gray.t-uppercase Lighthouse details
+							.section-color.section-color--highlight
+
+								p
+									span.t-sm Lighthouse contract address:
+									br/
+									a(href="#", target="_blank").align-vertical.m-r-10
+										+avatar('avatar-small align-vertical m-r-10')
+										b 0xD40A...F9f1
+									a(href="#").align-vertical: i.i-copy.d-block
+								hr/
+								p
+									span.t-sm Balance:
+									br/
+									b 3000 XRT
+								hr/
+								p
+									span.t-sm Minimal stake per quote:
+									br/
+									b 1000 XRT
+								hr/
+								p
+									span.t-sm Available for work at the lighthouse:
+									br/
+									b 0 XRT
+								hr/
+								p
+									span.t-sm Available for work:
+									br/
+									input(type="text", value="0").input-size--sm.m-r-10.input-sm
+									button.btn-green.input-sm Approve quotes
+								hr/
+								p
+									span.t-sm Available for trade:
+									br/
+									input(type="text", value="0").input-size--sm.m-r-10.input-sm
+									button.btn-green.input-sm Approve XRT
+
 					.col-lg-8.col-md-7
-						.t-label--gray.t-uppercase Lighthouse details
-						.section-color.section-color--highlight test
+						section.window
+							.window-head
+								span Providers
+								a.window-head-toggle(href="#") –
+							.window-content.p-0
+								table.container-full.m-t-0.m-b-0
+									thead
+										tr
+											th #
+											th Address
+											th Quota
+											th Balance
+											th Status
+									tbody
+										tr
+											td 1
+											td
+												a(href="#", target="_blank").align-vertical.m-r-10
+													+avatar('avatar-small align-vertical m-r-10')
+													b 0x4200...1680 
+												a(href="#").align-vertical: i.i-copy.d-block
+											td  1
+											td  0.092 ETH
+											td Active
+										tr
+											td 2
+											td
+												a(href="#", target="_blank").align-vertical.m-r-10
+													+avatar('avatar-small align-vertical m-r-10')
+													b 0x4bed...df5a
+												a(href="#").align-vertical: i.i-copy.d-block
+											td  2 / 2
+											td  0.005 ETH
+											td Sleepimg
 
-					.col-lg-4.col-md-5
-						.t-label--gray.t-uppercase Lighthouse details
-						.section-color.section-color--highlight
+						section
+							.t-label--gray.t-uppercase Lighthouse test
+							.section-color.section-color--highlight test
 
-							p
-								span.t-sm Lighthouse contract address:
-								br/
-								a(href="#"): b 0xD40A...F9f1
-							p
-								span.t-sm Balance:
-								br/
-								b 3000 XRT
-							p
-								span.t-sm Minimal stake per quote:
-								br/
-								b 1000 XRT
-							p
-								span.t-sm Available for work at the lighthouse:
-								br/
-								b 0 XRT
-							p
-								span.t-sm Available for trade:
-								br/
-								input(type="text", value="0").input-size--sm.m-r-10
-								button.btn-green Approve XRT
+
 
 

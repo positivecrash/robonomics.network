@@ -1,17 +1,16 @@
 /* Icons */
 @font-face {
-	font-family: 'iconsfont';
-	src:url('../fonts/iconsfont.eot');
-	src:url('../fonts/iconsfont.eot') format('embedded-opentype'),
-		url('../fonts/iconsfont.ttf') format('truetype'),
-		url('../fonts/iconsfont.woff') format('woff'),
-		url('../fonts/iconsfont.svg') format('svg');
+	font-family: 'iconfont';
+	src:url('../fonts/iconfont.eot');
+	src:url('../fonts/iconfont.eot') format('embedded-opentype'),
+		url('../fonts/iconfont.ttf') format('truetype'),
+		url('../fonts/iconfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 
 %iconsfont{
-	font-family: 'iconsfont';
+	font-family: 'iconfont';
 	speak: none;
 	font-size: 100%;
 	font-style: normal;
@@ -29,3 +28,4 @@
 }
 
 .i-back { @include icon('\EA01'); }
+.i-copy { @include icon('\EA02'); }
