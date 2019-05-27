@@ -43,33 +43,35 @@
         </section>
         <section>
           <section>
-            <p><b>Connect to lighthouse</b></p>
+            <h2>Connect to lighthouse</h2>
             <div class="input-size--lg">
               <select id="select-lighthouseConnect"></select>
             </div>
           </section>
-          <div id="lighthouse-connection"></div>
+          <section id="lighthouse-connection"></section>
+          <button class="btn-green">Connect</button>
           <script>
             var select = new SlimSelect({
             	select: '#select-lighthouseConnect',
             	valuesUseText: false, // Use text instead of innerHTML for selected values - default false
             	data: [
             		{placeholder: true, text: 'Choose lighthouse'},
-            		{innerHTML: '<b>a.lighthouse.5.robonomics.eth&nbsp;</b><br/><span class="t-small">0x28f95c484ee55E6aB8A2feF72EB51bC65cdd4324</span>', text: 'a.lighthouse.5.robonomics.eth', value: 'select1'},
-            		{innerHTML: '<b>airalab.lighthouse.5.robonomics.eth&nbsp;</b><br/><span class="t-small">0xD40AC7F1e5401e03D00F5aeC1779D8e5Af4CF9f1</span>', text: 'airalab.lighthouse.5.robonomics.eth', value: 'select2'},
-            		{innerHTML: '<b>mobilerobotics.lighthouse.5.robonomics.eth&nbsp;</b><br/><span class="t-small">0x8165ad3d400bda2be5fe27254a5e55e0f393921f</span>', text: 'mobilerobotics.lighthouse.5.robonomics.eth', value: 'select3'},
+            		{innerHTML: '<b>a.lighthouse.5.robonomics.eth</b>&nbsp;<br/><span class="t-small">0x28f95c484ee55E6aB8A2feF72EB51bC65cdd4324</span>', text: 'a.lighthouse.5.robonomics.eth', value: 'select1'},
+            		{innerHTML: '<b>airalab.lighthouse.5.robonomics.eth</b>&nbsp;<br/><span class="t-small">0xD40AC7F1e5401e03D00F5aeC1779D8e5Af4CF9f1</span>', text: 'airalab.lighthouse.5.robonomics.eth', value: 'select2'},
+            		{innerHTML: '<b>mobilerobotics.lighthouse.5.robonomics.eth</b>&nbsp;<br/><span class="t-small">0x8165ad3d400bda2be5fe27254a5e55e0f393921f</span>', text: 'mobilerobotics.lighthouse.5.robonomics.eth', value: 'select3'},
             		{innerHTML: '<b>New lighthouse</b>', text: 'create new lighthouse', value: 'new', class:'type-new'}
             	],
             	onChange: (info) => {
-            	    // console.log(info);
+            	    console.log(info);
             	    if(info.class == 'type-new'){
             			document.querySelectorAll('#lighthouse-connection')[0].innerHTML = '<p><label class="t-sm">Name of the lighthouse</label><br/><input type="text" value="" class="input-size--lg"/></p>'
             			+ '<p><label class="t-sm">Minimal stake to get one quota (XRT)</label><br/><input type="number" value="0.000001" class="input-size--md"/></p>'
-            			+ '<p><label class="t-sm">Silence timeout for provider in blocks</label><br/><input type="number" value="25" class="input-size--sm"/></p>'
-            			+ '<br/><button class="btn-blue">Create and connect</button>';
+            			+ '<p><label class="t-sm">Silence timeout for provider in blocks</label><br/><input type="number" value="25" class="input-size--sm"/></p>';
+            			// + '<br/><button class="btn-blue">Create and connect</button>';
             	    }
             	    else{
-            	    	document.querySelectorAll('#lighthouse-connection')[0].innerHTML = '<button class="btn-green">Connect</button>';
+            	    	document.querySelectorAll('#lighthouse-connection')[0].innerHTML = info.innerHTML;
+            	    	// document.querySelectorAll('#lighthouse-connection')[0].innerHTML = '<button class="btn-green">Connect</button>';
             	    }  	
               	}
             });

@@ -31,7 +31,12 @@
     "pug-loader": "^2.4.0"
   },
   "dependencies": {
+    "async": "^3.0.1",
     "browser-sync": "^2.26.0",
+    "gulp-consolidate": "^0.2.0",
+    "gulp-iconfont": "^10.0.2",
+    "gulp-iconfont-css": "^3.0.0",
+    "gulp-svgicons2svgfont": "^5.0.1",
     "vue-static-terminal": "^1.0.2"
   }
 }

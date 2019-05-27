@@ -57,7 +57,7 @@ a
 
 		&.a-noline { @extend %link_noline; }
 
-		&.a-icon{
+		&.a-icon, &.a-icon--border{
 			@extend %link_noline;
 			display: inline-block;
 			width: 20px;
@@ -65,11 +65,26 @@ a
 			border-radius: 13px;
 			background-color: $c-violet;
 			color: #fff;
+			font-weight: 300;
+			text-transform: none;
 
-			span, b{
+			& > span, & > b{
 				@extend %flex_center;
 				width: 20px;
 				height: 20px;
+			}
+		}
+
+		&.a-icon--border{
+			background-color: transparent;
+			border: 1px solid $c-blue;
+			color: $c-blue;
+			width: 26px;
+			height: 26px;
+
+			& > span, & > b{
+				width: 24px;
+				height: 24px;
 			}
 		}
 	}
@@ -213,15 +228,21 @@ table
 		white-space: nowrap;
 	}
 
-.t-label--blue, .t-label--orange, .t-label--green 
+.t-label--blue, .t-label--orange, .t-label--green, .t-label--violet, .t-label--gray
 	{
-		padding: 4px 10px;
+		padding: 10px 20px;
 		color: #fff;
+
+		&.t-sm{
+			padding: 5px 10px;
+		}
 	}
 
 .t-label--blue { background-color: $c-blue; }
 .t-label--orange { background-color: $c-orange; }
 .t-label--green { background-color: $c-green; }
+.t-label--violet { background-color: $c-violet; }
+.t-label--gray { background-color: lighten($c-background, 30%); }
 
 .i-block { @extend %i-block; }
 

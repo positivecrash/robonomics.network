@@ -16,6 +16,11 @@ var gulp             = require('gulp'),
     ttf2eot          = require('gulp-ttf2eot'),
     ttf2woff         = require('gulp-ttf2woff'),
 
+    iconfont         = require('gulp-iconfont'),
+    // iconfontCss      = require('gulp-iconfont-css'),
+    // async            = require('async'),
+    // consolidate      = require('gulp-consolidate'),
+
     browserSync      = require('browser-sync');
 
 
@@ -26,10 +31,12 @@ var path = {
         cssall: 'app/css/**/*.scss',
         jsall: 'app/js/**/*.js',
         layoutsall: 'app/layouts/**/*.pug',
+        fonticons: 'app/fonticons/*.svg'
     },
 
     folder:{
         css: 'dist/assets/css/',
+        fonts: 'dist/assets/fonts/',
         sass: 'app/css/',
         image: 'dist/assets/i/',
         sprites: 'app/sprite/',
@@ -40,7 +47,8 @@ var path = {
 
     filename:{
         css: 'robonomics_website',
-        js: 'robonomics_plugins.js'
+        js: 'robonomics_plugins.js',
+        fonticons: 'iconsfont'
     }
 
 }
@@ -110,8 +118,8 @@ gulp.task('svgSprite', function () {
                 "bust": false,
                 "render": {
                     "scss": {
-                        "dest": "../../../app/css/utilities/sprite.scss",
-                        "template": path.folder.csstemplates + "/sprite-template.scss"
+                        "dest": path.folder.sass + 'utilities/sprite.scss',
+                        "template": path.folder.csstemplates + 'template-sprite.scss'
                     }
                 }
             }
@@ -123,18 +131,6 @@ gulp.task('svgSprite', function () {
   return merge(basic);
 
 });
-
-
-
-// gulp.task('pngSprite', ['svgSprite'], function() {
-//     var basic = gulp.src(path.folder.image + '/sprite.svg')
-//         .pipe(svg2png())
-//         .pipe(image())
-//         .pipe(gulp.dest(path.folder.image))
-//         .pipe(browserSync.reload({stream:true}));
-
-//   return merge(basic);
-// });
 
 gulp.task('sprite', ['svgSprite']);
 
@@ -148,6 +144,47 @@ gulp.task('browserSync', function() {
     notify: false
   });
 });
+
+
+gulp.task('iconfont', function(){
+    return gulp.src([path.file.fonticons])
+    .pipe(iconfont({
+      fontName: path.filename.fonticons, // required
+      prependUnicode: true, // recommended option
+      formats: ['ttf', 'eot', 'woff'],
+     }))
+    .pipe(gulp.dest(path.folder.fonts));
+});
+
+
+
+// gulp.task('iconfont', function(done){
+//   var iconStream = gulp.src([path.file.fonticons])
+//     .pipe(iconfont({ fontName: path.filename.fonticons }));
+ 
+//   async.parallel([
+//     function handleGlyphs (cb) {
+//       iconStream.on('glyphs', function(glyphs, options) {
+//         gulp.src(path.folder.csstemplates +'template-icofont.scss')
+//           .pipe(consolidate('lodash', {
+//             glyphs: glyphs,
+//             fontName: path.filename.fonticons,
+//             fontPath: path.folder.fonts,
+//             className: 's'
+//           }))
+//           .pipe(gulp.dest(path.folder.css))
+//           .on('finish', cb);
+//       });
+//     },
+//     function handleFonts (cb) {
+//       iconStream
+//         .pipe(gulp.dest(path.folder.fonts))
+//         .on('finish', cb);
+//     }
+//   ], done);
+// });
+
+
 
 
 // Watch
@@ -164,10 +201,13 @@ gulp.task('watch', function() {
 
 
 	// //svg and png sprites
-	gulp.watch([path.folder.sprites + '/basic/*.svg'], ['sprite']);
+    gulp.watch([path.folder.sprites + '/basic/*.svg'], ['sprite']);
+
+    // font icons
+	gulp.watch(path.file.fonticons, ['iconfont']);
 
 });
 
 
 //default
-gulp.task('default', ['css', 'js', 'layouts', 'sprite', 'watch', 'browserSync']);
+gulp.task('default', ['css', 'js', 'layouts', 'sprite', 'iconfont', 'watch', 'browserSync']);

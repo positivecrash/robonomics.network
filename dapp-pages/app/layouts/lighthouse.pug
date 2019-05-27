@@ -1,172 +1,112 @@
 extends extends/layout.pug
+include mixins/sections.pug
 
 block html
 	- var meta_title = 'Robonomics Lighthouse'
-	- var logo_title = 'Robonomics Lighthouse'
-	- var header = true
-	- var footer = true
+	- var bodyclass = 'wrap-flexsols'
 
 block content
 
-	.container-basic
-		section.section-white.p-relative
+	.sidebar
+		.sidebar-in
+			section.m-t-10
+				img.i-block(alt="dApp logo", src="assets/i/logo-dapp-text.svg")
 
-			h1 Lighthouse 
-				sup.t-label-gray.d-ib.t-small a.lighthouse.5.robonomics.eth
+			section
+				section
+					nav
+						a(href="#").active: span Lighthouses
+						a(href="#"): span Statistics
+						a(href="#"): span AIRA to XRT
 
-			.row
-				.col-lg-6
-					.section-bordered.m-t-0.m-b-0
-						p.t-big.t-style_uppercase Providers
+				section
+					nav
+						a(href="#")
+							span.sprite-basic-github.align-vertical.m-r-10
+							span.align-vertical Github
 
-						p: b 1. Provider #1
-						| adress: 
-						a(href="javascript:;", onclick="clipboard.copy('0x6EFBA8fb2AC5b6730729a972eC224426a287C3Ad')", title="copy to clipboard")
-							b 0x6EFBA8fb2AC5b6730729a972eC224426a287C3Ad
-							span.sprite-basic-copy.m-l-10.align-vertical
-						br/
-						| quota: 
-						b 0 / 1
-						br/
-						| balance: 
-						b 3.091 ETH
-						br/
-						| last block: 
-						b more than 100 blocks ago
-						hr/
-						p: b 1. Provider #2
-						| adress: 
-						a(href="javascript:;", onclick="clipboard.copy('0x6EFBA8fb2AC5b6730729a972eC224426a287C3Ad')", title="copy to clipboard")
-							b 0x6EFBA8fb2AC5b6730729a972eC224426a287C3Ad
-							span.sprite-basic-copy.m-l-10.align-vertical
-						br/
-						| quota: 
-						b 0 / 1
-						br/
-						| balance: 
-						b 3.091 ETH
-						br/
-						| last block: 
-						b more than 100 blocks ago
-					
-				.col-lg-3
-					.section-bordered.m-t-0.m-b-0
-						p.t-big.t-style_uppercase Lighthouse details
-						section.section-small
-							p Contract adress:
-							p.code-overflow-line: b 0x28f95c484ee55E6aB8A2feF72EB51bC65cdd4324
+						a(href="#")
+							span.sprite-basic-reddit-2.align-vertical.m-r-10
+							span.align-vertical Reddit
 
-						section.section-small
-							p Balance:
-							p: b 0.000001 XRT
+						a(href="#")
+							span.sprite-basic-cursor.align-vertical.m-r-10
+							span.align-vertical robonomomics.network
 
-						section.section-small
-							p Minimal stake per quote:
-							p: b 0.000001 XRT
+						a(href="#")
+							span.sprite-basic-cursor.align-vertical.m-r-10
+							span.align-vertical aira.life
 
-				.col-lg-3
-					.section-bordered.m-t-0.m-b-0
-						p.t-big.t-style_uppercase Account details
-						span Your balance:
-						br/
-						b.t-big.t-style_uppercase 0 XRT
-						hr/
-						.row
-							.col-lg-5
-								span Available for trade:
-								br/
-								b.t-big.t-style_uppercase 0 XRT
-							.col-lg-7
-								.m-b-10
-									input.input-size_sm(type="number", value="1", min="1")
-									span.t-small.m-l-10 XRT
-								button(disabled) Approve
-						hr/
-						.row
-							.col-lg-5
-								span Available for work at the lighthouse:
-								br/
-								b.t-big.t-style_uppercase 0 XRT
-							.col-md-7
-								.m-b-10
-									input.input-size_sm(type="number", value="1", min="1")
-									span.t-small.m-l-10 quotes
-								button(disabled) Approve
-
-			.lighthouse-status.sleep(title="Sleeping (no events more then 2 blocks)")
-				span.sprite-basic-sleep
-
-			// .lighthouse-status
-			// 	span.sprite-basic-work
+		a.sidebar-toggle(href="#")
 
 
-		section.section-white
-			h1 Market
-
-			.row
-				.col-sm-4
-					.t-big.t-style_uppercase
-						b Demand
-						a.btn-blue.m-l-20(href="#") test
-
-					hr.hr-lg.hr-green
-
-					p
-						.t-small Sent from account:
-						b.code-overflow-line 0x40c550146C0F1d22166846D90fbeAB427021C8d3
-					p
-						.t-small Demand program description:
-						b.code-overflow-line QmfCcLKrTCuXsf6bHbVupVv4zsbs6kjqTQ7DRftGqMLjdW
-
-					p
-						.t-small Data for program execution:
-						b.code-overflow-line Qmbm3o2wkqseSEi5F69CPAuDrsKnrwTJ3HN5FVLPgLHKUm
-
-					p
-						.t-small 0x7dE91B204C1C737bcEe6F000AAA6569Cf7061cb7 cost:
+	.content
+		.content-in
+			section
+				.panel-top
+					.panel-top--cell
+						a(href="#")
+							+avatar('avatar-small align-vertical m-r-10')
+							b 0x40c5...c8d3
+					.panel-top--cell
+						b 2,100
+						span.t-sm AIRA
+					.panel-top--cell
 						b 0
-
-					p
-						.t-small Valid before:
-						b 7594666 block
-
-					p
-						.t-small Status:
-						b Without observing network
-
-					hr.hr-lg.hr-green
-
-					p
-						.t-small Sent from account:
-						b.code-overflow-line 0x40c550146C0F1d22166846D90fbeAB427021C8d3
-					p
-						.t-small Demand program description:
-						b.code-overflow-line QmfCcLKrTCuXsf6bHbVupVv4zsbs6kjqTQ7DRftGqMLjdW
-
-					p
-						.t-small Data for program execution:
-						b.code-overflow-line Qmbm3o2wkqseSEi5F69CPAuDrsKnrwTJ3HN5FVLPgLHKUm
-
-					p
-						.t-small 0x7dE91B204C1C737bcEe6F000AAA6569Cf7061cb7 cost:
+						span.t-sm AIRA KYC
+					.panel-top--cell
 						b 0
+						span.t-sm XRT
 
-					p
-						.t-small Valid before:
-						b 7594666 block
+			section
+				// table
+				// 	tr
+				// 		td
+				// 			a(href=""): b Back to list
+				// 		td
+				// 			b a.lighthouse.5.robonomics.eth
+				// 			br/
+				// 			i.t-sm 0x28f95c484ee55E6aB8A2feF72EB51bC65cdd4324
+				// 		td
+				// 			b.align-vertical.m-r-10.t-color-red Sleeping
+				// 			a(href="#").a-icon.align-vertical: b i
 
-					p
-						.t-small Status:
-						b Without observing network
+			section
+				h2
+					a(href="#").align-vertical.m-r-10.i-back
+					// a(href="#").align-vertical.m-r-10: i.sprite-basic-back
+					span.align-vertical.m-r-20 airalab.lighthouse.5.robonomics.eth
+					// span.t-sm.t-label--orange.align-vertical airalab.lighthouse.5.robonomics.eth
+
+				.row
+					.col-lg-8.col-md-7
+						.t-label--gray.t-uppercase Lighthouse details
+						.section-color.section-color--highlight test
+
+					.col-lg-4.col-md-5
+						.t-label--gray.t-uppercase Lighthouse details
+						.section-color.section-color--highlight
+
+							p
+								span.t-sm Lighthouse contract address:
+								br/
+								a(href="#"): b 0xD40A...F9f1
+							p
+								span.t-sm Balance:
+								br/
+								b 3000 XRT
+							p
+								span.t-sm Minimal stake per quote:
+								br/
+								b 1000 XRT
+							p
+								span.t-sm Available for work at the lighthouse:
+								br/
+								b 0 XRT
+							p
+								span.t-sm Available for trade:
+								br/
+								input(type="text", value="0").input-size--sm.m-r-10
+								button.btn-green Approve XRT
 
 
-				.col-sm-4
-					.t-big.t-style_uppercase
-						b Offer
-						a.btn-blue.m-l-20(href="#") test
-					hr.hr-lg.hr-green
-
-				.col-sm-4
-					.t-big.t-style_uppercase
-						b Liabilities
-					hr.hr-lg.hr-green

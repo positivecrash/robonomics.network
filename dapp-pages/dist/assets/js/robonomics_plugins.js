@@ -341,13 +341,12 @@ var sidebarDetect = function (event) {
 		classClose = 'closed',
 		cookie;
 
-	if(window.innerWidth > 1024){
+	cookie = getCookie('sidebarTog');
+	console.log('sidebar status – '+cookie);
 
-		cookie = getCookie('sidebarTog');
+	if(window.innerWidth > 1280){
 
-		console.log('sidebar status – '+cookie);
-
-		if(!cookie || cookie=='open'){
+		if(!cookie || cookie == 'open'){
 			sidebar.classList.remove(classClose);
 		}
 		else{
