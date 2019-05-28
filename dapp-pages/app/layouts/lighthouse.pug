@@ -7,38 +7,7 @@ block html
 
 block content
 
-	.sidebar
-		.sidebar-in
-			section.m-t-10
-				img.i-block(alt="dApp logo", src="assets/i/logo-dapp-text.svg")
-
-			section
-				section
-					nav
-						a(href="#").active: span Lighthouses
-						a(href="#"): span Statistics
-						a(href="#"): span AIRA to XRT
-
-				section
-					nav
-						a(href="#")
-							span.sprite-basic-github.align-vertical.m-r-10
-							span.align-vertical Github
-
-						a(href="#")
-							span.sprite-basic-reddit-2.align-vertical.m-r-10
-							span.align-vertical Reddit
-
-						a(href="#")
-							span.sprite-basic-cursor.align-vertical.m-r-10
-							span.align-vertical robonomomics.network
-
-						a(href="#")
-							span.sprite-basic-cursor.align-vertical.m-r-10
-							span.align-vertical aira.life
-
-		a.sidebar-toggle(href="#")
-
+	+sidebar(1)
 
 	.content
 		.content-in
@@ -66,50 +35,56 @@ block content
 				.row
 					.col-lg-4.col-md-5.order-md-last
 						section
-							.t-label--gray.t-uppercase Lighthouse details
-							.section-color.section-color--highlight
-
-								p
-									span.t-sm Lighthouse contract address:
-									br/
-									a(href="#", target="_blank").align-vertical.m-r-10
-										+avatar('avatar-small align-vertical m-r-10')
-										b 0xD40A...F9f1
-									a(href="#").align-vertical: i.i-copy.d-block
-								hr/
-								p
-									span.t-sm Balance:
-									br/
-									b 3000 XRT
-								hr/
-								p
-									span.t-sm Minimal stake per quote:
-									br/
-									b 1000 XRT
-								hr/
-								p
-									span.t-sm Available for work at the lighthouse:
-									br/
-									b 0 XRT
-								hr/
-								p
-									span.t-sm Available for work:
-									br/
-									input(type="text", value="0").input-size--sm.m-r-10.input-sm
-									button.btn-green.input-sm Approve quotes
-								hr/
-								p
-									span.t-sm Available for trade:
-									br/
-									input(type="text", value="0").input-size--sm.m-r-10.input-sm
-									button.btn-green.input-sm Approve XRT
+							section.window
+								.window-head
+									span Lighthouse details
+								.window-content.window-content-light
+									p
+										span.t-sm Lighthouse contract address:
+										br/
+										a(href="#", target="_blank").align-vertical.m-r-10
+											+avatar('avatar-small align-vertical m-r-10')
+											b 0xD40A...F9f1
+										a(href="#").align-vertical: i.i-copy.d-block
+									hr/
+									p
+										span.t-sm Lighthouse status:
+										br/
+										b Sleeping (no events more then 2 blocks)
+									hr/
+									p
+										span.t-sm Balance:
+										br/
+										b 3000 XRT
+									hr/
+									p
+										span.t-sm Minimal stake per quote:
+										br/
+										b 1000 XRT
+									hr/
+									p
+										span.t-sm Available for work at the lighthouse:
+										br/
+										b 0 XRT
+									hr/
+									p
+										span.t-sm Available for work:
+										br/
+										input(type="text", value="0").input-size--sm.m-r-10.input-sm
+										button.btn-blue.input-sm(disabled) Approve quotes
+									hr/
+									p
+										span.t-sm Available for trade:
+										br/
+										input(type="text", value="0").input-size--sm.m-r-10.input-sm
+										button.btn-blue.input-sm Approve XRT
 
 					.col-lg-8.col-md-7
 						section.window
 							.window-head
 								span Providers
 								a.window-head-toggle(href="#") –
-							.window-content.p-0
+							.window-content.p-0.window-content-light
 								table.container-full.m-t-0.m-b-0
 									thead
 										tr
@@ -140,10 +115,166 @@ block content
 											td  0.005 ETH
 											td Sleepimg
 
-						section
-							.t-label--gray.t-uppercase Lighthouse test
-							.section-color.section-color--highlight test
+						section.m-t-40
+							h2 Test lighthouse
+							.row
+								.col-lg-4
+									.window
+										.window-head
+											span Demand
+											a(href="#").btn-green.input-sm Test
+										.window-content
+											.section-color.section-color--highlight.m-t-10
+												p
+													span.t-sm Sent from account:
+													br/
+													a(href="#", target="_blank").align-vertical.m-r-10
+														+avatar('avatar-small align-vertical m-r-10')
+														b 0x40c5...C8d3
+													a(href="#").align-vertical: i.i-copy.d-block
+												p
+													span.t-sm Demand program description:
+													br/
+													a(href="#", target="_blank").align-vertical.m-r-10
+														b QmfCcL...LjdW
+												p
+													span.t-sm Data for program execution:
+													br/
+													a(href="#", target="_blank").align-vertical.m-r-10
+														b Qmbm3o...HKUm
+												p
+													a.t-sm(href="#",target="_blank") Payment token 
+													span.t-sm cost:
+													br/
+													b 0
+												p
+													span.t-sm Valid before:
+													br/
+													b 7841762 block
+												p
+													span.t-sm Status:
+													br/
+													b Without observing network
 
+											.section-color.section-color--highlight.m-t-10
+												p
+													span.t-sm Sent from account:
+													br/
+													a(href="#", target="_blank").align-vertical.m-r-10
+														+avatar('avatar-small align-vertical m-r-10')
+														b 0x40c5...C8d3
+													a(href="#").align-vertical: i.i-copy.d-block
+												p
+													span.t-sm Demand program description:
+													br/
+													a(href="#", target="_blank").align-vertical.m-r-10
+														b QmfCcL...LjdW
+												p
+													span.t-sm Data for program execution:
+													br/
+													a(href="#", target="_blank").align-vertical.m-r-10
+														b Qmbm3o...HKUm
+												p
+													a.t-sm(href="#",target="_blank") Payment token 
+													span.t-sm cost:
+													br/
+													b 0
+												p
+													span.t-sm Valid before:
+													br/
+													b 7841762 block
+												p
+													span.t-sm Status:
+													br/
+													b Without observing network
 
+								.col-lg-4
+									.window
+										.window-head
+											span Offer
+											a(href="#").btn-green.input-sm Test
+										.window-content
+											.section-color.section-color--highlight.m-t-10
+												p
+													span.t-sm Sent from account:
+													br/
+													a(href="#", target="_blank").align-vertical.m-r-10
+														+avatar('avatar-small align-vertical m-r-10')
+														b 0x40c5...C8d3
+													a(href="#").align-vertical: i.i-copy.d-block
+												p
+													span.t-sm Demand program description:
+													br/
+													a(href="#", target="_blank").align-vertical.m-r-10
+														b QmfCcL...LjdW
+												p
+													span.t-sm Data for program execution:
+													br/
+													a(href="#", target="_blank").align-vertical.m-r-10
+														b Qmbm3o...HKUm
+												p
+													a.t-sm(href="#",target="_blank") Payment token 
+													span.t-sm cost:
+													br/
+													b 0
+												p
+													span.t-sm Valid before:
+													br/
+													b 7841762 block
+												p
+													span.t-sm Status:
+													br/
+													b Without observing network
 
+								.col-lg-4
+									.window
+										.window-head
+											span Liabilities
+										.window-content
+											.section-color.section-color--highlight.m-t-10
+												p
+													span.t-sm Liability:
+													br/
+													a(href="#", target="_blank").align-vertical.m-r-10
+														+avatar('avatar-small align-vertical m-r-10')
+														b 0xEcBA...fcCb
+													a(href="#").align-vertical: i.i-copy.d-block
+												p
+													span.t-sm Provider address:
+													br/
+													a(href="#", target="_blank").align-vertical.m-r-10
+														+avatar('avatar-small align-vertical m-r-10')
+														b 0x4200...1680
+													a(href="#").align-vertical: i.i-copy.d-block
+												p
+													span.t-sm Program description:
+													br/
+													a(href="#", target="_blank").align-vertical.m-r-10
+														b QmfCcL...LjdW
+												p
+													span.t-sm Data for program execution:
+													br/
+													a(href="#", target="_blank").align-vertical.m-r-10
+														b Qmbm3o...HKUm
+												p
+													a.t-sm(href="#",target="_blank") Payment token 
+													span.t-sm cost:
+													br/
+													b 0
+												p
+													span.t-sm Promisee:
+													br/
+													a(href="#", target="_blank").align-vertical.m-r-10
+														+avatar('avatar-small align-vertical m-r-10')
+														b 0x40c5...C8d3
+													a(href="#").align-vertical: i.i-copy.d-block
+												p
+													span.t-sm Promisor:
+													br/
+													a(href="#", target="_blank").align-vertical.m-r-10
+														+avatar('avatar-small align-vertical m-r-10')
+														b 0x40c5...C8d3
+													a(href="#").align-vertical: i.i-copy.d-block
+												p
+													button.btn-green.input-sm.container-full Post result
 

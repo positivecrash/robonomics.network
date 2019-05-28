@@ -147,22 +147,22 @@ section
     }
 }
 
-.section-color, .window-content
+.section-color, .window-content-light
   {
     padding: 20px;
 
     &.section-size-sm{
-      padding: 15px;
+      padding: 5px;
 
-      @include mobile()
-      {
-        padding-left: 5px !important;
-        padding-right: 5px !important;
-      }
+      // @include mobile()
+      // {
+      //   padding-left: 5px !important;
+      //   padding-right: 5px !important;
+      // }
     }
   }
 
-.section-color--highlight, .window-content
+.section-color--highlight, .window-content-light
   {
     background-color: $c-text;
     color: $c-background;
@@ -221,7 +221,7 @@ section
     width: 100%;
     box-sizing: border-box;
 
-    span, a 
+    & > * 
       {
         color: #fff;
         display: table-cell;

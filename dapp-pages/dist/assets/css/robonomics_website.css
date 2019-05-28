@@ -2819,7 +2819,7 @@ select::-ms-expand {
   font-weight: normal;
   font-style: normal;
 }
-.i-back, .i-copy {
+.i-back, .i-copy, .i-cursor, .i-github, .i-reddit {
   font-family: 'iconfont';
   speak: none;
   font-size: 100%;
@@ -2838,6 +2838,18 @@ select::-ms-expand {
 
 .i-copy:before {
   content: "";
+}
+
+.i-cursor:before {
+  content: "";
+}
+
+.i-github:before {
+  content: "";
+}
+
+.i-reddit:before {
+  content: "";
 }
 
 html, body {
@@ -2969,37 +2981,31 @@ section section {
   margin-bottom: 5px;
 }
 
-.section-color, .window-content {
+.section-color, .window-content-light {
   padding: 20px;
 }
-.section-color.section-size-sm, .window-content.section-size-sm {
-  padding: 15px;
-}
-@media screen and (max-width: 576px) {
-  .section-color.section-size-sm, .window-content.section-size-sm {
-    padding-left: 5px !important;
-    padding-right: 5px !important;
-  }
+.section-color.section-size-sm, .window-content-light.section-size-sm {
+  padding: 5px;
 }
 
-.section-color--highlight, .window-content {
+.section-color--highlight, .window-content-light {
   background-color: #fff;
   color: #2f2f2f;
 }
-.section-color--highlight .section-border, .window-content .section-border {
+.section-color--highlight .section-border, .window-content-light .section-border {
   outline: 1px solid rgba(47, 47, 47, 0.4);
   border: 20px solid #fff;
 }
-.section-color--highlight table th, .section-color--highlight table td, .window-content table th, .window-content table td {
+.section-color--highlight table th, .section-color--highlight table td, .window-content-light table th, .window-content-light table td {
   border-color: #cccccc;
 }
-.section-color--highlight table th, .window-content table th {
+.section-color--highlight table th, .window-content-light table th {
   background-color: #e6e6e6;
 }
-.section-color--highlight table td, .window-content table td {
+.section-color--highlight table td, .window-content-light table td {
   background-color: #fff;
 }
-.section-color--highlight .table-striped tbody tr:nth-child(even), .window-content .table-striped tbody tr:nth-child(even) {
+.section-color--highlight .table-striped tbody tr:nth-child(even), .window-content-light .table-striped tbody tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
@@ -3038,7 +3044,7 @@ section section {
   width: 100%;
   box-sizing: border-box;
 }
-.window-head span, .window-head a {
+.window-head > * {
   color: #fff;
   display: table-cell;
   vertical-align: middle;

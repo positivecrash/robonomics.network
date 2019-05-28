@@ -313,6 +313,12 @@ select{
 	&:hover{
 		background-color: darken($c-green, 10%);
 	}
+
+	// &.btn-line{
+	// 	border: 1px solid $c-green;
+	// 	background-color: transparent;
+	// 	color: $c-green;
+	// }
 }
 
 .btn-blue{
