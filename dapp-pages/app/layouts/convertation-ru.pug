@@ -7,75 +7,13 @@ block html
 
 block content
 
-	.sidebar.nav-popup#nav-sidebar
-		.sidebar-in
-			section.m-t-10
-				img.i-block(alt="dApp logo", src="assets/i/logo-dapp-text.svg")
-
-			section
-				section
-					nav
-						a(href="#").active
-							span Перегонный куб
-						a(href="#") Маяки
-
-				section
-					nav
-						a(href="#")
-							span.sprite-basic-github.align-vertical.m-r-10
-							span.align-vertical Github
-
-						a(href="#")
-							span.sprite-basic-reddit-2.align-vertical.m-r-10
-							span.align-vertical Reddit
-
-						a(href="#")
-							span.sprite-basic-cursor.align-vertical.m-r-10
-							span.align-vertical robonomomics.network
-
-						a(href="#")
-							span.sprite-basic-cursor.align-vertical.m-r-10
-							span.align-vertical aira.life
-
-			a.nav-popup--close.sprite-basic-i-close(href="#", onclick="show(this, '#nav-sidebar');return false;")
+	+sidebar(3)
 
 
 	.content
 		.content-in
 			section
-				.panel-top
-					.panel-top--cell.nav-tog
-						a.sprite-basic-i-nav(href="#", onclick="show(this, '#nav-sidebar');return false;")
-					.panel-top--cell.nav-tog
-						a.sprite-basic-i-profile(href="#", onclick="show(this, '#nav-account');return false;")
-					#nav-account.panel-top--cell.nav-popup
-						a.nav-popup--close.sprite-basic-i-close(href="#", onclick="show(this, '#nav-account');return false;")
-						.panel-top--cell
-							a(href="#")
-								+avatar('avatar-small align-vertical m-r-10')
-								b 0x40c5...c8d3
-							// a(href="#").a-icon.align-vertical: b i
-						.panel-top--cell
-							b.t-md 2,100
-							span AIRA
-							// a(href="#").a-icon.align-vertical: b i
-						.panel-top--cell
-							b.t-md 0
-							span AIRA KYC
-							// a(href="#").a-icon.align-vertical: b i
-						.panel-top--cell
-							b.t-md 0
-							span XRT
-							// a(href="#").a-icon.align-vertical: b i
-						
-					.panel-top--cell
-						.dropdown.dropdown-color
-							a(href="javascript:;").a-noline: span.sprite-basic-flag-en.d-block
-							.dropdown-content
-								.inside
-									nav
-										a(href="#").a-noline
-											i.sprite-basic-flag-ru
+				+panelTop(true)
 
 			
 
