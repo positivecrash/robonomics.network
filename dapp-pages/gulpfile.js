@@ -70,8 +70,8 @@ gulp.task('css', function() {
             basename: path.filename.css,
             suffix: '.min'
         }))
-		.pipe(gulp.dest(path.folder.css))
-        .pipe(browserSync.reload({stream:true}));
+		.pipe(gulp.dest(path.folder.css));
+        // .pipe(browserSync.reload({stream:true}));
 });
 
 
@@ -82,8 +82,8 @@ gulp.task('js', function() {
 		.pipe(gulp.dest(path.folder.js))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(uglify())
-		.pipe(gulp.dest(path.folder.js))
-        .pipe(browserSync.reload({stream:true}));
+		.pipe(gulp.dest(path.folder.js));
+        // .pipe(browserSync.reload({stream:true}));
 });
 
 
@@ -92,8 +92,8 @@ gulp.task('layouts', function() {
     .pipe(pug({
       pretty: true
     }))
-    .pipe(gulp.dest(path.folder.layouts))
-    .pipe(browserSync.reload({stream:true}));
+    .pipe(gulp.dest(path.folder.layouts));
+    // .pipe(browserSync.reload({stream:true}));
 });
 
 
@@ -116,15 +116,16 @@ gulp.task('svgSprite', function () {
                 "bust": false,
                 "render": {
                     "scss": {
-                        "dest": path.folder.sass + 'utilities/sprite.scss',
+                        "dest":  "../../../app/css/utilities/sprite.scss",
+                        // "dest": path.folder.sass + 'utilities/sprite.scss',
                         "template": path.folder.csstemplates + 'template-sprite.scss'
                     }
                 }
             }
         }
     }))
-    .pipe(gulp.dest(path.folder.image))
-    .pipe(browserSync.reload({stream:true}));
+    .pipe(gulp.dest(path.folder.image));
+    // .pipe(browserSync.reload({stream:true}));
 
   return merge(basic);
 
@@ -148,7 +149,6 @@ gulp.task('iconfont', function(){
     return gulp.src([path.file.fonticons])
     .pipe(iconfont({
       fontName: path.filename.fonticons, // required
-      // prependUnicode: true, // recommended option
       formats: ['ttf', 'eot', 'woff'],
       normalize: true,
       fontHeight: 1000,

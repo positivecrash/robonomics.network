@@ -7,56 +7,12 @@ block html
 
 block content
 
-	.sidebar
-		.sidebar-in
-			section.m-t-10
-				img.i-block(alt="dApp logo", src="assets/i/logo-dapp-text.svg")
-
-			section
-				section
-					nav
-						a(href="#").active: span Lighthouses
-						a(href="#"): span Statistics
-						a(href="#"): span AIRA to XRT
-
-				section
-					nav
-						a(href="#")
-							span.sprite-basic-github.align-vertical.m-r-10
-							span.align-vertical Github
-
-						a(href="#")
-							span.sprite-basic-reddit-2.align-vertical.m-r-10
-							span.align-vertical Reddit
-
-						a(href="#")
-							span.sprite-basic-cursor.align-vertical.m-r-10
-							span.align-vertical robonomomics.network
-
-						a(href="#")
-							span.sprite-basic-cursor.align-vertical.m-r-10
-							span.align-vertical aira.life
-
-		a.sidebar-toggle(href="#")
-
+	+sidebar(1)
 
 	.content
 		.content-in
 			section
-				.panel-top
-					.panel-top--cell
-						a(href="#")
-							+avatar('avatar-small align-vertical m-r-10')
-							b 0x40c5...c8d3
-					.panel-top--cell
-						b 2,100
-						span.t-sm AIRA
-					.panel-top--cell
-						b 0
-						span.t-sm AIRA KYC
-					.panel-top--cell
-						b 0
-						span.t-sm XRT
+				+panelTop(false)
 
 			section
 
