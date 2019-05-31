@@ -651,28 +651,6 @@ $delay: 1s;
   }
 
 
-#header-airalink
-  {
-    display: block;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    span, img{
-      display: inline-block;
-      // vertical-align: bottom;
-    }
-
-    img{
-      width: 120px;
-      margin-left: 15px;
-    }
-  }
-
 
 #header-btns
   {
@@ -682,5 +660,45 @@ $delay: 1s;
 
     a{
       display: block;
+    }
+  }
+
+
+.header-screenstick
+  {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: table;
+    width: 100%;
+
+    & > a{
+      display: table-cell;
+      vertical-align: middle;
+      &, &:hover { color: #fff; }
+
+      &:nth-child(1){ background-color: $c-blue; }
+      &:nth-child(2){ background-color: $c-violet-mid; }
+      &:nth-child(3){ background-color: #c22d90; }
+      &:nth-child(4){ background-color: #5CA870; }
+
+      @include mobile(){ vertical-align: top; }
+    }
+
+    span.t-small{
+      display: block;
+      margin-bottom: 3px;
+    }
+
+
+    .small{
+      display: none;
+      @include mobile(){ display: inline-block; }
+    }
+
+    .large{
+      @include mobile(){ display: none; }
     }
   }

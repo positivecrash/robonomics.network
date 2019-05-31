@@ -2489,8 +2489,8 @@ span.loader {
   font-size: 26px;
 }
 
-.sprite-basic-aira, .sprite-basic-anchor, .sprite-basic-blog, .sprite-basic-ethereum, .sprite-basic-expand-arrow, .sprite-basic-facebook, .sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-forum, .sprite-basic-github, .sprite-basic-hourglass, .sprite-basic-ipfs, .sprite-basic-medium, .sprite-basic-nixos, .sprite-basic-ok, .sprite-basic-polkadot, .sprite-basic-reddit, .sprite-basic-robotHand1-1, .sprite-basic-robotHand1-10, .sprite-basic-robotHand1-11, .sprite-basic-robotHand1-2, .sprite-basic-robotHand1-3, .sprite-basic-robotHand1-4, .sprite-basic-robotHand1-5, .sprite-basic-robotHand1-6, .sprite-basic-robotHand1-7, .sprite-basic-robotHand1-8, .sprite-basic-robotHand1-9, .sprite-basic-robotHand2-1, .sprite-basic-robotHand2-10, .sprite-basic-robotHand2-11, .sprite-basic-robotHand2-12, .sprite-basic-robotHand2-13, .sprite-basic-robotHand2-14, .sprite-basic-robotHand2-15, .sprite-basic-robotHand2-2, .sprite-basic-robotHand2-3, .sprite-basic-robotHand2-4, .sprite-basic-robotHand2-5, .sprite-basic-robotHand2-6, .sprite-basic-robotHand2-7, .sprite-basic-robotHand2-8, .sprite-basic-robotHand2-9, .sprite-basic-ros, .sprite-basic-socials_edu, .sprite-basic-socials_github, .sprite-basic-socials_linkedin, .sprite-basic-socials_medium, .sprite-basic-socials_twitter, .sprite-basic-status-done, .sprite-basic-status-progress, .sprite-basic-status-waiting, .sprite-basic-telegram, .sprite-basic-twitter, .sprite-basic-youtube, .roadmap-done .roadmap-title__date:before, .roadmap-progress .roadmap-title__date:before, .roadmap-waiting .roadmap-title__date:before, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .section__contents a.js-expand-toggle:after {
-  background-image: url("../i/sprite.svg?7");
+.sprite-basic-aira, .sprite-basic-aira-sign, .sprite-basic-airalab, .sprite-basic-anchor, .sprite-basic-blog, .sprite-basic-civic, .sprite-basic-civic-sign, .sprite-basic-ethereum, .sprite-basic-ethereum-text, .sprite-basic-expand-arrow, .sprite-basic-facebook, .sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-forum, .sprite-basic-github, .sprite-basic-hourglass, .sprite-basic-ipfs, .sprite-basic-medium, .sprite-basic-nixos, .sprite-basic-ok, .sprite-basic-polkadot, .sprite-basic-polkadot-sign, .sprite-basic-reddit, .sprite-basic-robotHand1-1, .sprite-basic-robotHand1-10, .sprite-basic-robotHand1-11, .sprite-basic-robotHand1-2, .sprite-basic-robotHand1-3, .sprite-basic-robotHand1-4, .sprite-basic-robotHand1-5, .sprite-basic-robotHand1-6, .sprite-basic-robotHand1-7, .sprite-basic-robotHand1-8, .sprite-basic-robotHand1-9, .sprite-basic-robotHand2-1, .sprite-basic-robotHand2-10, .sprite-basic-robotHand2-11, .sprite-basic-robotHand2-12, .sprite-basic-robotHand2-13, .sprite-basic-robotHand2-14, .sprite-basic-robotHand2-15, .sprite-basic-robotHand2-2, .sprite-basic-robotHand2-3, .sprite-basic-robotHand2-4, .sprite-basic-robotHand2-5, .sprite-basic-robotHand2-6, .sprite-basic-robotHand2-7, .sprite-basic-robotHand2-8, .sprite-basic-robotHand2-9, .sprite-basic-ros, .sprite-basic-socials_edu, .sprite-basic-socials_github, .sprite-basic-socials_linkedin, .sprite-basic-socials_medium, .sprite-basic-socials_twitter, .sprite-basic-status-done, .sprite-basic-status-progress, .sprite-basic-status-waiting, .sprite-basic-telegram, .sprite-basic-twitter, .sprite-basic-youtube, .roadmap-done .roadmap-title__date:before, .roadmap-progress .roadmap-title__date:before, .roadmap-waiting .roadmap-title__date:before, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .section__contents a.js-expand-toggle:after {
+  background-image: url("../i/sprite.svg?8");
 }
 
 .sprite-basic-aira {
@@ -2500,395 +2500,437 @@ span.loader {
   display: inline-block;
 }
 
+.sprite-basic-aira-sign {
+  width: 48.842px;
+  height: 48.842px;
+  background-position: -101px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-airalab {
+  width: 126px;
+  height: 21px;
+  background-position: -150px 0px;
+  display: inline-block;
+}
+
 .sprite-basic-anchor {
   width: 15.08px;
   height: 17.09px;
-  background-position: -101px 0px;
+  background-position: -276px 0px;
   display: inline-block;
 }
 
 .sprite-basic-blog {
   width: 20.33px;
   height: 20.33px;
-  background-position: -117px 0px;
+  background-position: -292px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-civic {
+  width: 110.48px;
+  height: 39.415px;
+  background-position: -313px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-civic-sign {
+  width: 42.821px;
+  height: 43.48px;
+  background-position: -424px 0px;
   display: inline-block;
 }
 
 .sprite-basic-ethereum {
   width: 35.84px;
   height: 58.02px;
-  background-position: -138px 0px;
+  background-position: -467px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-ethereum-text {
+  width: 135px;
+  height: 32.586px;
+  background-position: -503px 0px;
   display: inline-block;
 }
 
 .sprite-basic-expand-arrow {
   width: 13.13px;
   height: 18.67px;
-  background-position: -174px 0px;
+  background-position: -638px 0px;
   display: inline-block;
 }
 
 .sprite-basic-facebook {
   width: 21.4px;
   height: 21.4px;
-  background-position: -188px 0px;
+  background-position: -652px 0px;
   display: inline-block;
 }
 
 .sprite-basic-flag-de {
   width: 30px;
   height: 19.7px;
-  background-position: -210px 0px;
+  background-position: -674px 0px;
   display: inline-block;
 }
 
 .sprite-basic-flag-en {
   width: 30px;
   height: 19.7px;
-  background-position: -240px 0px;
+  background-position: -704px 0px;
   display: inline-block;
 }
 
 .sprite-basic-flag-ru {
   width: 30px;
   height: 19.7px;
-  background-position: -270px 0px;
+  background-position: -734px 0px;
   display: inline-block;
 }
 
 .sprite-basic-flag-zh {
   width: 30px;
   height: 19.7px;
-  background-position: -300px 0px;
+  background-position: -764px 0px;
   display: inline-block;
 }
 
 .sprite-basic-forum {
   width: 24.3px;
   height: 19.72px;
-  background-position: -330px 0px;
+  background-position: -794px 0px;
   display: inline-block;
 }
 
 .sprite-basic-github {
   width: 20.33px;
   height: 23.34px;
-  background-position: -355px 0px;
+  background-position: -819px 0px;
   display: inline-block;
 }
 
 .sprite-basic-hourglass {
   width: 21.32px;
   height: 25.58px;
-  background-position: -376px 0px;
+  background-position: -840px 0px;
   display: inline-block;
 }
 
 .sprite-basic-ipfs {
   width: 103.48px;
   height: 45.02px;
-  background-position: -398px 0px;
+  background-position: -862px 0px;
   display: inline-block;
 }
 
 .sprite-basic-medium {
   width: 18.92px;
   height: 15px;
-  background-position: -502px 0px;
+  background-position: -966px 0px;
   display: inline-block;
 }
 
 .sprite-basic-nixos {
   width: 121.4px;
   height: 36.65px;
-  background-position: -521px 0px;
+  background-position: -985px 0px;
   display: inline-block;
 }
 
 .sprite-basic-ok {
   width: 27.96px;
   height: 19.66px;
-  background-position: -643px 0px;
+  background-position: -1107px 0px;
   display: inline-block;
 }
 
 .sprite-basic-polkadot {
-  width: 117.675px;
-  height: 30.336px;
-  background-position: -671px 0px;
+  width: 144.318px;
+  height: 39.478px;
+  background-position: -1135px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-polkadot-sign {
+  width: 36.017px;
+  height: 39.478px;
+  background-position: -1280px 0px;
   display: inline-block;
 }
 
 .sprite-basic-reddit {
   width: 22.59px;
   height: 18.82px;
-  background-position: -789px 0px;
+  background-position: -1317px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-1 {
   width: 208.11px;
   height: 153.86px;
-  background-position: -812px 0px;
+  background-position: -1340px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-10 {
   width: 53.19px;
   height: 68.43px;
-  background-position: -1021px 0px;
+  background-position: -1549px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-11 {
   width: 56.02px;
   height: 40.45px;
-  background-position: -1075px 0px;
+  background-position: -1603px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-2 {
   width: 50.93px;
   height: 35.61px;
-  background-position: -1132px 0px;
+  background-position: -1660px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-3 {
   width: 108.83px;
   height: 67.61px;
-  background-position: -1183px 0px;
+  background-position: -1711px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-4 {
   width: 64.44px;
   height: 34.66px;
-  background-position: -1292px 0px;
+  background-position: -1820px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-5 {
   width: 92.05px;
   height: 32.75px;
-  background-position: -1357px 0px;
+  background-position: -1885px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-6 {
   width: 87.6px;
   height: 57.13px;
-  background-position: -1450px 0px;
+  background-position: -1978px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-7 {
   width: 34.23px;
   height: 64.42px;
-  background-position: -1538px 0px;
+  background-position: -2066px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-8 {
   width: 74.52px;
   height: 54.09px;
-  background-position: -1573px 0px;
+  background-position: -2101px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-9 {
   width: 21.51px;
   height: 64.4px;
-  background-position: -1648px 0px;
+  background-position: -2176px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-1 {
   width: 76.41px;
   height: 34.5px;
-  background-position: -1670px 0px;
+  background-position: -2198px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-10 {
   width: 39.31px;
   height: 76.01px;
-  background-position: -1747px 0px;
+  background-position: -2275px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-11 {
   width: 58.88px;
   height: 37.54px;
-  background-position: -1787px 0px;
+  background-position: -2315px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-12 {
   width: 23.99px;
   height: 23.39px;
-  background-position: -1846px 0px;
+  background-position: -2374px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-13 {
   width: 25.26px;
   height: 76.06px;
-  background-position: -1870px 0px;
+  background-position: -2398px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-14 {
   width: 56.95px;
   height: 22.94px;
-  background-position: -1896px 0px;
+  background-position: -2424px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-15 {
   width: 133px;
   height: 62.47px;
-  background-position: -1953px 0px;
+  background-position: -2481px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-2 {
   width: 27.91px;
   height: 15.6px;
-  background-position: -2086px 0px;
+  background-position: -2614px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-3 {
   width: 71.75px;
   height: 29.37px;
-  background-position: -2114px 0px;
+  background-position: -2642px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-4 {
   width: 102.09px;
   height: 96.76px;
-  background-position: -2186px 0px;
+  background-position: -2714px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-5 {
   width: 65.19px;
   height: 26.05px;
-  background-position: -2289px 0px;
+  background-position: -2817px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-6 {
   width: 28.22px;
   height: 13.99px;
-  background-position: -2355px 0px;
+  background-position: -2883px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-7 {
   width: 52.99px;
   height: 26.05px;
-  background-position: -2384px 0px;
+  background-position: -2912px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-8 {
   width: 58.97px;
   height: 36.88px;
-  background-position: -2437px 0px;
+  background-position: -2965px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-9 {
   width: 24.54px;
   height: 22.76px;
-  background-position: -2496px 0px;
+  background-position: -3024px 0px;
   display: inline-block;
 }
 
 .sprite-basic-ros {
   width: 87.51px;
   height: 23.15px;
-  background-position: -2521px 0px;
+  background-position: -3049px 0px;
   display: inline-block;
 }
 
 .sprite-basic-socials_edu {
   width: 20px;
   height: 20px;
-  background-position: -2609px 0px;
+  background-position: -3137px 0px;
   display: inline-block;
 }
 
 .sprite-basic-socials_github {
   width: 20px;
   height: 20px;
-  background-position: -2629px 0px;
+  background-position: -3157px 0px;
   display: inline-block;
 }
 
 .sprite-basic-socials_linkedin {
   width: 20px;
   height: 20px;
-  background-position: -2649px 0px;
+  background-position: -3177px 0px;
   display: inline-block;
 }
 
 .sprite-basic-socials_medium {
   width: 20px;
   height: 20px;
-  background-position: -2669px 0px;
+  background-position: -3197px 0px;
   display: inline-block;
 }
 
 .sprite-basic-socials_twitter {
   width: 20px;
   height: 20px;
-  background-position: -2689px 0px;
+  background-position: -3217px 0px;
   display: inline-block;
 }
 
 .sprite-basic-status-done {
   width: 21.47px;
   height: 12.36px;
-  background-position: -2709px 0px;
+  background-position: -3237px 0px;
   display: inline-block;
 }
 
 .sprite-basic-status-progress {
   width: 18.7px;
   height: 18.77px;
-  background-position: -2731px 0px;
+  background-position: -3259px 0px;
   display: inline-block;
 }
 
 .sprite-basic-status-waiting {
   width: 18.88px;
   height: 18.77px;
-  background-position: -2750px 0px;
+  background-position: -3278px 0px;
   display: inline-block;
 }
 
 .sprite-basic-telegram {
   width: 24.3px;
   height: 21.16px;
-  background-position: -2769px 0px;
+  background-position: -3297px 0px;
   display: inline-block;
 }
 
 .sprite-basic-twitter {
   width: 22.3px;
   height: 18.1px;
-  background-position: -2794px 0px;
+  background-position: -3322px 0px;
   display: inline-block;
 }
 
 .sprite-basic-youtube {
   width: 24.2px;
   height: 17.03px;
-  background-position: -2817px 0px;
+  background-position: -3345px 0px;
   display: inline-block;
 }
 
@@ -3405,23 +3447,6 @@ header[role='banner'] .el-social {
   text-align: center;
 }
 
-#header-airalink {
-  display: block;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-#header-airalink span, #header-airalink img {
-  display: inline-block;
-}
-#header-airalink img {
-  width: 120px;
-  margin-left: 15px;
-}
-
 #header-btns {
   width: 100%;
   max-width: 300px;
@@ -3429,6 +3454,56 @@ header[role='banner'] .el-social {
 }
 #header-btns a {
   display: block;
+}
+
+.header-screenstick {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: table;
+  width: 100%;
+}
+.header-screenstick > a {
+  display: table-cell;
+  vertical-align: middle;
+}
+.header-screenstick > a, .header-screenstick > a:hover {
+  color: #fff;
+}
+.header-screenstick > a:nth-child(1) {
+  background-color: #03A5ED;
+}
+.header-screenstick > a:nth-child(2) {
+  background-color: #42475F;
+}
+.header-screenstick > a:nth-child(3) {
+  background-color: #c22d90;
+}
+.header-screenstick > a:nth-child(4) {
+  background-color: #5CA870;
+}
+@media screen and (max-width: 576px) {
+  .header-screenstick > a {
+    vertical-align: top;
+  }
+}
+.header-screenstick span.t-small {
+  display: block;
+  margin-bottom: 3px;
+}
+.header-screenstick .small {
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  .header-screenstick .small {
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header-screenstick .large {
+    display: none;
+  }
 }
 
 footer[role='contentinfo'] {
@@ -4351,7 +4426,7 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 .roadmap-done .roadmap-title__date:before {
   width: 21.47px;
   height: 12.36px;
-  background-position: -2709px 0px;
+  background-position: -3237px 0px;
 }
 
 .roadmap-progress .roadmap-title {
@@ -4361,13 +4436,13 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 .roadmap-progress .roadmap-title__date:before {
   width: 18.7px;
   height: 18.77px;
-  background-position: -2731px 0px;
+  background-position: -3259px 0px;
 }
 
 .roadmap-waiting .roadmap-title__date:before {
   width: 18.88px;
   height: 18.77px;
-  background-position: -2750px 0px;
+  background-position: -3278px 0px;
 }
 
 #index-releaseLink {
@@ -4960,7 +5035,7 @@ section section li:last-child, section section p:last-child, section section blo
 .section__contents > .secw-narrow a:not(.js-expand-toggle):after {
   width: 15.08px;
   height: 17.09px;
-  background-position: -101px 0px;
+  background-position: -276px 0px;
 }
 .section__contents > .secw-narrow a:not(.js-expand-toggle):hover:after {
   animation: 0.4s FadeIn forwards;
@@ -4977,7 +5052,7 @@ section section li:last-child, section section p:last-child, section section blo
 .section__contents a.js-expand-toggle:after {
   width: 13.13px;
   height: 18.67px;
-  background-position: -174px 0px;
+  background-position: -638px 0px;
 }
 .section__contents a.js-expand-toggle.open:hover:after {
   animation: 0.4s 0.6s BounceVertical ease-in-out 3;
