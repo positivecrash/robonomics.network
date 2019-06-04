@@ -169,6 +169,9 @@ table
 .table-responsive { @include responsiveTable($mq-tablet); }
 .table-striped tbody tr:nth-child(even) td{ background-color: darken($c-background, 5%); }
 
+.table-space--10 { border-spacing: 10px; }
+.table-fixed { table-layout: fixed }
+
 
 /*====== end of Text elements ======*/
 

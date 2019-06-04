@@ -2232,6 +2232,14 @@ table caption {
   background-color: #222222;
 }
 
+.table-space--10 {
+  border-spacing: 10px;
+}
+
+.table-fixed {
+  table-layout: fixed;
+}
+
 /*====== end of Text elements ======*/
 /*====== Margins & paddings ======*/
 .m-0 {
@@ -2905,10 +2913,6 @@ nav a {
 }
 .d-table > * {
   display: table-cell;
-}
-
-.d-table-space--10 {
-  border-spacing: 10px;
 }
 
 .d-table--row {
