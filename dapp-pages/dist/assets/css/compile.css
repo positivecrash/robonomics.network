@@ -2719,6 +2719,8 @@ input:focus:not([type='submit']):not([type='button']), select:focus {
 input:not([type='submit']):not([type='button']).input-line {
   border-width: 0 0 1px;
   border-radius: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 input:not([type='submit']):not([type='button']).input-placeholder--move:focus::placeholder {
   position: relative;
@@ -2903,6 +2905,10 @@ nav a {
 }
 .d-table > * {
   display: table-cell;
+}
+
+.d-table-space--10 {
+  border-spacing: 10px;
 }
 
 .d-table--row {

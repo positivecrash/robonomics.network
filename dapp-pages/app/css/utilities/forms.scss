@@ -232,6 +232,8 @@ input:not([type='submit']):not([type='button'])
 			{
 				border-width: 0 0 1px;
 				border-radius: 0;
+				padding-top: 0;
+				padding-bottom: 0;
 			}
 
 		&.input-placeholder--move {
