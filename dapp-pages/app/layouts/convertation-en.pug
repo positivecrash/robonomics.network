@@ -60,46 +60,6 @@ block content
 									td(data-th="Aira → Aira KYC → XRT") XRT will be offered by the developers and community to be added to exchanges
 
 
-				// .section-border
-				// 	p: b Dear Aira tokens holder,
-				// 	p With your help, we have come all the way from the 
-				// 		a(href="http://aira.life", target="_blank") Aira 
-				// 		| software prototype to the 
-				// 		a(href="http://robonomics.network", target="_blank") Robonomics platform
-				// 		|. Two years of work, more than 50 releases in  
-				// 		a(href="https://github.com/airalab", target="_blank") 6 repositories on GitHub
-				// 		|, thousands of commits of the whole group of developers. Your support has led to the emergence of a new technology, which further aims to subdue robots to the Ethereum decentralized computer. You helped it. Thank you!
-				// 	p It is important to understand that this is not the end of the road, but only the very beginning. We have created this new technology, now it needs to grow and also we should train the community to use Robonomics. 
-				// 	p The token of the Robonomics platform is called XRT (Robonomics token). You have two options - go through the KYC procedure and wait for the Dutch auction launch, or get the XRT today in 2 steps.
-				// 	#intro(style="display:none")
-				// 		p: b What is the difference between these options for the Aira tokens holder:
-
-				// 		table.table-striped.table-responsive
-				// 			thead
-				// 				tr
-				// 					th Aira → Aira KYC
-				// 					th Aira → Aira KYC → XRT
-				// 			tbody
-				// 				tr
-				// 					td(data-th="Aira → Aira KYC") It is always possible to transform Aira KYC into XRT without the developers’ participation, sending the transaction to the alembic Aira KYC →  XRT
-				// 					td(data-th="Aira → Aira KYC → XRT") It is not possible to transfer XRT tokens back into Aira KYC
-				// 				tr
-				// 					td(data-th="Aira → Aira KYC") According to the Dutch auction result, 1 Aira KYC can turn into N XRT, but not less than 1:1
-				// 					td(data-th="Aira → Aira KYC → XRT") If you have taken both steps and got XRT, you cannot count on increasing the number of XRTs.
-				// 				tr
-				// 					td(data-th="Aira → Aira KYC") Aira KYC cannot be used to become a Robonomics provider
-				// 					td(data-th="Aira → Aira KYC → XRT") XRT can be used to secure a quota at the Robonomics lighthouse
-				// 				tr
-				// 					td(data-th="Aira → Aira KYC") Aira KYC cannot be used to pay the commission to the Robonomics providers
-				// 					td(data-th="Aira → Aira KYC → XRT") You can pay for transactions in the Robonomics network with XRT - ETH is not required
-				// 				tr
-				// 					td(data-th="Aira → Aira KYC") Aira KYC is not planned to be used for the Robonomics DAO voting
-				// 					td(data-th="Aira → Aira KYC → XRT") XRT can be used to create offers in the Robonomics DAO about the Dutch auction launch, the change of the team, which manages the ENS record Robonomics.eth
-				// 				tr
-				// 					td(data-th="Aira → Aira KYC") Aira and Aira KYC tokens will not be offered by the developers for dex
-				// 					td(data-th="Aira → Aira KYC → XRT") XRT will be offered by the developers and community to be added to exchanges
-
-				//- a.btn-violet.container-full.btn-simple(href="#", onclick="show(this, '#intro', '&uarr; Minimize the developers&#8217; letter &uarr;', '&darr; Expand the developers&#8217; letter &darr;');return false;") &darr; Expand the developers&#8217; letter &darr;
 
 			section.section-color.section-color--highlight
 
@@ -124,7 +84,7 @@ block content
 							p
 								input.input-line.input-size--sm(type="text", value="1")
 								span AIRA
-							a(href="#").btn-green Convert to AIRA KYC
+							button.btn-green Convert to AIRA KYC
 					.d-table--cell.section-color.section-color--highlight.section-shade.section-disabled
 							h3 3. Aira KYC → XRT
 							img.i-block(alt="", src="assets/i/cube/i-cube-3.jpg", style="max-height: 80px;margin:0 auto")
@@ -132,7 +92,41 @@ block content
 							p
 								input.input-line.input-size--sm(type="text")
 								span AIRA KYC
-							a(href="#").btn-green Convert to XRT
+							button.btn-green Convert to XRT
+
+				section.t-align--center.d-table.container-full.table-space--10.table-fixed
+					.d-table--cell.section-color.section-color--highlight.section-shade
+						h3 1. Passing KYC
+						img.i-block(alt="", src="assets/i/cube/i-cube-1.jpg", style="max-height: 80px;margin:0 auto")
+						br/
+						a(href="#")
+							+avatar('avatar-small align-vertical m-r-10')
+							b 0x40c5...c8d3
+						p.t-color-green KYC passed
+					
+					.d-table--cell.section-color.section-color--highlight.section-shade
+						h3 2. Aira → Aira KYC
+						img.i-block(alt="", src="assets/i/cube/i-cube-2.jpg", style="max-height: 80px;margin:0 auto")
+						br/
+						p
+							input.input-line.input-size--sm(type="text", value="1")
+							span AIRA
+						p
+							button.btn-green(disabled)
+								span.align-vertical Convert to AIRA KYC
+								.loader-ring.align-vertical.m-l-10
+						p.t-sm Wait for 
+							a(href="", target="_blank") transaction 
+							| to be mined
+
+					.d-table--cell.section-color.section-color--highlight.section-shade
+						h3 3. Aira KYC → XRT
+						img.i-block(alt="", src="assets/i/cube/i-cube-3.jpg", style="max-height: 80px;margin:0 auto")
+						br/
+						p
+							input.input-line.input-size--sm(type="text")
+							span AIRA KYC
+						button.btn-green Convert to XRT
 
 
 

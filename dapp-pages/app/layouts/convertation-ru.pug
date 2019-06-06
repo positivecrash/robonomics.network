@@ -19,19 +19,22 @@ block content
 
 			section
 				h1 Перегонный куб Aira токенов в XRT
-				// .section-overflowtext.section-border
-				.section-border
-					p: b Держатель токенов Aira!
-					p С твоей помощью мы проделали путь от прототипа программного обеспечения 
-						a(href="http://aira.life", target="_blank") Aira 
-						| до 
-						a(href="http://robonomics.network", target="_blank") платформы Робономика
-						|. Два года работы, более 50 релизов в 
-						a(href="https://github.com/airalab", target="_blank") 6 репозиториях на GitHub
-						|, тысячи коммитов целой группы разработчиков. Твоя поддержка привела к появлению новой технологии, которая в дальнейшем призвана подчинить роботов децентрализованному компьютеру Ethereum. Ты помог этому. Спасибо!
-					p Важно понимать, что это не конец пути, а только самое начало. Мы создали новую технологию, теперь ее нужно растить и обучать сообщество пользоваться Робономикой. 
-					p Токен платформы Робономика мы назвали XRT (Robonomics token). У тебя есть два варианта действий – пройти KYC и ожидать запуска Голландского аукциона или в 2 шага получить XRT уже сегодня.
-					#intro(style="display:none")
+				section.window#window-developletter
+					.window-head.window-head--violet
+						span Письмо разработчиков
+						a.window-head-toggle(href="#") –
+					.window-content.window-content-light
+
+						p: b Держатель токенов Aira!
+						p С твоей помощью мы проделали путь от прототипа программного обеспечения 
+							a(href="http://aira.life", target="_blank") Aira 
+							| до 
+							a(href="http://robonomics.network", target="_blank") платформы Робономика
+							|. Два года работы, более 50 релизов в 
+							a(href="https://github.com/airalab", target="_blank") 6 репозиториях на GitHub
+							|, тысячи коммитов целой группы разработчиков. Твоя поддержка привела к появлению новой технологии, которая в дальнейшем призвана подчинить роботов децентрализованному компьютеру Ethereum. Ты помог этому. Спасибо!
+						p Важно понимать, что это не конец пути, а только самое начало. Мы создали новую технологию, теперь ее нужно растить и обучать сообщество пользоваться Робономикой. 
+						p Токен платформы Робономика мы назвали XRT (Robonomics token). У тебя есть два варианта действий – пройти KYC и ожидать запуска Голландского аукциона или в 2 шага получить XRT уже сегодня.
 						p: b В чем разница этих вариантов для держателя Aira токенов:
 
 						table.table-striped.table-responsive
@@ -58,7 +61,7 @@ block content
 								tr
 									td(data-th="Aira → Aira KYC") Токен Aira и Aira KYC не будут предлагаться разработчиками на дексы
 									td(data-th="Aira → Aira KYC → XRT") XRT будет предлагаться разработчиками и сообществом для добавления на биржи
-				a.btn-violet.container-full.btn-simple(href="#", onclick="show(this, '#intro', '&uarr; Свернуть письмо разработчиков &uarr;', '&darr; Развернуть письмо разработчиков &darr;');return false;") &darr; Развернуть письмо разработчиков &darr;
+
 
 			section.section-color.section-color--highlight
 
@@ -74,7 +77,7 @@ block content
 								a(href="#")
 									+avatar('avatar-small align-vertical m-r-10')
 									b 0x40c5...c8d3
-							a(href="#").btn-orange Пройти KYS
+							button.btn-orange Пройти KYS
 					
 					.d-table--cell.section-color.section-color--highlight.section-shade.section-disabled
 							h3 2. Aira → Aira KYC
@@ -83,7 +86,7 @@ block content
 							p
 								input.input-line.input-size--sm(type="text", value="1")
 								span AIRA
-							a(href="#").btn-green Конвертировать в AIRA KYC
+							button.btn-green Конвертировать в AIRA KYC
 					.d-table--cell.section-color.section-color--highlight.section-shade.section-disabled
 							h3 3. Aira KYC → XRT
 							img.i-block(alt="", src="assets/i/cube/i-cube-3.jpg", style="max-height: 80px;margin:0 auto")
@@ -91,7 +94,43 @@ block content
 							p
 								input.input-line.input-size--sm(type="text")
 								span AIRA KYC
-							a(href="#").btn-green Конвертировать в XRT
+							button.btn-green Конвертировать в XRT
+
+
+				section.t-align--center.d-table.container-full.table-space--10.table-fixed
+					.d-table--cell.section-color.section-color--highlight.section-shade
+						h3 1. Passing KYC
+						img.i-block(alt="", src="assets/i/cube/i-cube-1.jpg", style="max-height: 80px;margin:0 auto")
+						br/
+						a(href="#")
+							+avatar('avatar-small align-vertical m-r-10')
+							b 0x40c5...c8d3
+						p.t-color-green KYC пройден
+					
+					.d-table--cell.section-color.section-color--highlight.section-shade
+						h3 2. Aira → Aira KYC
+						img.i-block(alt="", src="assets/i/cube/i-cube-2.jpg", style="max-height: 80px;margin:0 auto")
+						br/
+						p
+							input.input-line.input-size--sm(type="text", value="1")
+							span AIRA
+						p
+							button.btn-green(disabled)
+								span.align-vertical Конвертировать в AIRA KYC
+								.loader-ring.align-vertical.m-l-10
+						p.t-sm Подождите исполнения 
+							a(href="", target="_blank") транзакции
+
+
+					.d-table--cell.section-color.section-color--highlight.section-shade
+						h3 3. Aira KYC → XRT
+						img.i-block(alt="", src="assets/i/cube/i-cube-3.jpg", style="max-height: 80px;margin:0 auto")
+						br/
+						p
+							input.input-line.input-size--sm(type="text")
+							span AIRA KYC
+						button.btn-green Конвертировать в XRT
+
 
 
 
@@ -112,7 +151,7 @@ block content
 						p
 							input.input-line.input-size--sm(type="text", value="1")
 							span AIRA
-						a(href="#").btn-green Конвертировать в AIRA KYC
+						button.btn-green Конвертировать в AIRA KYC
 					.d-table--cell.section-color.section-color--highlight.section-shade
 						h3 3. Aira KYC → XRT
 						img.i-block(alt="", src="assets/i/cube/i-cube-3.jpg", style="max-height: 80px;margin:0 auto")
@@ -120,7 +159,7 @@ block content
 						p
 							input.input-line.input-size--sm(type="text")
 							span AIRA KYC
-						a(href="#").btn-green Конвертировать в XRT
+						button.btn-green Конвертировать в XRT
 
 
 				section
