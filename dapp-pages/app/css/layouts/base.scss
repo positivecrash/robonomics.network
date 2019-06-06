@@ -175,7 +175,7 @@ section
     table th, table td { border-color: darken($c-text, 20%); }
     table th { background-color: darken($c-text, 10%); }
     table td { background-color: $c-text; }
-    .table-striped tbody tr:nth-child(even){ background-color: darken($c-text, 5%); }
+    .table-striped tbody tr:nth-child(even) td{ background-color: darken($c-text, 5%); }
   }
 
 .section-shade
@@ -232,8 +232,16 @@ section
       {
         text-align: right;
         font-size: $font-size-base + 5;
+        transition: 0.2s all ease;
+
+        &:hover{
+          color: $c-text;
+          font-weight: 500;
+        }
       }
   }
+
+.window-head--violet { background-color: $c-violet; }
 /*====== end of Sections ======*/
 
 
