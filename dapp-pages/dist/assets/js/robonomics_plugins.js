@@ -33,14 +33,16 @@ function windowSlide(){
 
 		for (var i = 0; i < w.length; i++) {
 
-			wID = w[i].closest('.window').getAttribute('id');
-	  		
-	  		if(getCookie(wID)){
-	  			if(getCookie(wID) == 'hide') { hide = true; }
-	  			if(getCookie(wID) == 'show') { hide = false; }
+			if( w[i].closest('.window').getAttribute('id'))
+				{
+					wID = w[i].closest('.window').getAttribute('id');
+			  		if(getCookie(wID)){
+			  			if(getCookie(wID) == 'hide') { hide = true; }
+			  			if(getCookie(wID) == 'show') { hide = false; }
 
-	  			windowSlideAct(w[i], hide);
-	  		}
+			  			windowSlideAct(w[i], hide);
+			  		}
+			  	}
 
 			w[i].addEventListener("click", function(event){
 		  		event.preventDefault();
