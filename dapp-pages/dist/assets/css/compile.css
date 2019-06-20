@@ -2056,7 +2056,7 @@ a.a-icon > span, a.a-icon > b, a.a-icon--border > span, a.a-icon--border > b, .s
   justify-content: center;
 }
 
-.wrap-flexsols, .sidebar {
+.flexsols {
   display: flex;
   flex-grow: 1;
 }
@@ -3220,6 +3220,9 @@ section section {
 
 .sidebar {
   height: 100vh;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
 .sidebar nav a {
   white-space: nowrap;
@@ -3276,4 +3279,20 @@ section section {
 }
 .sidebar-i--lg#sidebar-i-nav.on {
   transform: rotate(-180deg);
+}
+
+@media screen and (max-width: 1140px) {
+  #sidebar-nav1 {
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  #sidebar-nav0 {
+    visibility: visible;
+    opacity: 1;
+    width: auto;
+    height: auto;
+  }
 }

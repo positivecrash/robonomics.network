@@ -311,7 +311,7 @@ function action(e){
 			close[0].classList.toggle(classClose);
 		}
 
-	setCookie(open[0].getAttribute('id'), e.classList.contains(classSwitchOn));
+	// setCookie(open[0].getAttribute('id'), e.classList.contains(classSwitchOn));
 }
 
 // function setAction(e){
@@ -336,26 +336,6 @@ function init(){
 		});
 
 	});
-
-	// if(e)
-	// 	{
-	// 		console.log(e.length);
-	// 		for (var i = 0; i < e.length; i++)
-	// 			{
-	// 				console.log(e[i].getAttribute(dataElOpen));
-	// 				e[i].addEventListener("click", function(event){
-	// 					event.preventDefault();
-	// 					action(this);
-	// 				});
-
-	// 				// if( getCookie(e[i].getAttribute('show-onopen')) ){
-	// 				// 	console.log(e[i].getAttribute('show-onopen')+' = ');
-	// 				// 	console.log(getCookie(e[i].getAttribute('show-onopen')));
-	// 				// }
-						
-	// 				// console.log(document.cookie);
-	// 			}
-	// 	}
 }
 
 
