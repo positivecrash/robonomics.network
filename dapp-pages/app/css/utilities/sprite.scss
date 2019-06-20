@@ -1,11 +1,8 @@
 $icons: (
-    sprite: (width: 142px, height: 28px, pngPath: '../i/sprite.png?6', svgPath: '../i/sprite.svg?6'),
+    sprite: (width: 60px, height: 22.451px, pngPath: '../i/sprite.png?6', svgPath: '../i/sprite.svg?6'),
     i-check: (width: 13.758px, height: 9.899px, backgroundX: 0px, backgroundY: 0px),
     i-checked: (width: 22.45px, height: 22.451px, backgroundX: -14px, backgroundY: 0px),
-    i-close: (width: 16.2px, height: 16.2px, backgroundX: -37px, backgroundY: 0px),
-    i-error: (width: 22.446px, height: 22.446px, backgroundX: -54px, backgroundY: 0px),
-    user-unknown: (width: 25px, height: 23.4px, backgroundX: -77px, backgroundY: 0px),
-    work: (width: 39.8px, height: 28px, backgroundX: -102px, backgroundY: 0px),
+    i-error: (width: 22.446px, height: 22.446px, backgroundX: -37px, backgroundY: 0px),
 );
 
 $sprite: map-get($icons, sprite);
@@ -34,19 +31,7 @@ $sprite: map-get($icons, sprite);
   @include get-sprite('i-checked');
   display: inline-block;
 }
-.sprite-basic-i-close{
-  @include get-sprite('i-close');
-  display: inline-block;
-}
 .sprite-basic-i-error{
   @include get-sprite('i-error');
-  display: inline-block;
-}
-.sprite-basic-user-unknown{
-  @include get-sprite('user-unknown');
-  display: inline-block;
-}
-.sprite-basic-work{
-  @include get-sprite('work');
   display: inline-block;
 }

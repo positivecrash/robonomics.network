@@ -1839,7 +1839,7 @@ sub {
 /*====== Media queries ======*/
 /*====== Colors ======*/
 /*====== Classes ======*/
-.sprite-basic-i-check, .sprite-basic-i-checked, .sprite-basic-i-close, .sprite-basic-i-error, .sprite-basic-user-unknown, .sprite-basic-work, .msg-error.msg-icon:before, .msg-ok.msg-icon:before, .input-checkbox label:before {
+.sprite-basic-i-check, .sprite-basic-i-checked, .sprite-basic-i-error, .msg-error.msg-icon:before, .msg-ok.msg-icon:before, .input-checkbox label:before {
   background-image: url("../i/sprite.svg?6");
 }
 
@@ -1857,31 +1857,10 @@ sub {
   display: inline-block;
 }
 
-.sprite-basic-i-close {
-  width: 16.2px;
-  height: 16.2px;
-  background-position: -37px 0px;
-  display: inline-block;
-}
-
 .sprite-basic-i-error {
   width: 22.446px;
   height: 22.446px;
-  background-position: -54px 0px;
-  display: inline-block;
-}
-
-.sprite-basic-user-unknown {
-  width: 25px;
-  height: 23.4px;
-  background-position: -77px 0px;
-  display: inline-block;
-}
-
-.sprite-basic-work {
-  width: 39.8px;
-  height: 28px;
-  background-position: -102px 0px;
+  background-position: -37px 0px;
   display: inline-block;
 }
 
@@ -2525,7 +2504,7 @@ input:focus:not([type='submit']):not([type='button']), select:focus {
 .msg-error.msg-icon:before {
   width: 22.446px;
   height: 22.446px;
-  background-position: -54px 0px;
+  background-position: -37px 0px;
 }
 
 .msg-ok {
