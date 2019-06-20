@@ -1,9 +1,10 @@
+/*
+	Dependencies
+	0-inview.js
+*/
+
 window.addEventListener('load', function(){
 
-	/*
-	Check elemen in view
-	0-inview.js
-	*/
 	function IfInView(){
 		var 
 			el = document.querySelectorAll('.js-checkInView'),

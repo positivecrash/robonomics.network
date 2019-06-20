@@ -1,24 +1,18 @@
-%FadeOut
-	{
-		visibility: hidden;
-    	opacity: 0;
-	}
-
-%FadeIn
-	{
-		visibility: visible;
-    	opacity: 1;
-	}
-
 @keyframes FadeOut
 	{
 	  0% {
 	    visibility: visible;
+	    // display: block;
 		opacity: 1;
+		width: auto;
+  		height: auto;
 	  }
 	  100% {
 	    visibility: hidden;
+	    // display: none;
 		opacity: 0;
+		width: 0;
+ 	 	height: 0;
 	  }
 	}
 
@@ -27,11 +21,17 @@
 	{
 	  0% {
 	    visibility: hidden;
+	    // display: none;
 		opacity: 0;
+		width: 0;
+ 	 	height: 0;
 	  }
 	  100% {
 	    visibility: visible;
+	    // display: block;
 		opacity: 1;
+		width: auto;
+  		height: auto;
 	  }
 	}
 
@@ -58,5 +58,18 @@
    100%
      {
        transform:rotate(360deg);
+     }
+ }
+
+
+ @keyframes SlideRight
+ {
+   0%
+     {
+       transform: translateX(-100%);
+     }
+   100%
+     {
+      transform: translateX(0);
      }
  }

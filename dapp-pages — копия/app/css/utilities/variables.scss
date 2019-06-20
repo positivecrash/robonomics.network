@@ -1,0 +1,49 @@
+/*====== Fonts ======*/
+$font-family-base:  'Roboto', Arial, Helvetica, sans-serif;
+$scale: 1.5; //для вычисления интерлиньяжа
+$scale-sm: 1.2; //для вычисления интерлиньяжа заголовков
+$font-size-base: 16px;
+$font-size-title: 30px; //h1
+
+
+/*====== Margins, paddings ======*/
+$vertical-rythm: $font-size-base * $scale;
+$margin-sec: 45px;
+$padding-fields: 20px;
+$padding-fields-in: 10px;
+
+
+/*====== Bootstrap ======*/
+$bootstrap-sm: 576px;
+$bootstrap-md: 768px;
+$bootstrap-lg: 992px;
+
+
+/*====== Media queries ======*/
+$mq-desktop: 1280px;
+$mq-tablet: $bootstrap-md;
+$mq-mobile: $bootstrap-sm;
+
+$mq-mobileCanvas: 920px;
+$mq-menuhide: $mq-mobileCanvas;
+
+
+
+
+/*====== Colors ======*/
+$c-blue: #03A5ED;
+$c-orange: #F15A24;
+$c-green: #54CE63;
+$c-red: #E84004;
+$c-violet: #7481b9;
+
+$c-text: #fff;
+$c-background: #2f2f2f;
+$c-link: $c-blue;
+$c-sidebar-background: darken($c-background, 5%);
+
+
+
+/*====== Classes ======*/
+// $class-nightmode: '.night';
+

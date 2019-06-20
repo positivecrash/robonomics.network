@@ -6,128 +6,6 @@
 		border-radius: 13px;
 	}
 
-.wrap-flexsols
-  {
-    display: flex;
-    flex-grow: 1;
-
-    .content { width: 100% }
-  }
-
-.sidebar-in { padding: 20px; }
-.content-in { padding: 20px 40px; }
-
-
-$w-sidebarToggle: 25px;
-$w-sidebarContent: 230px;
-@keyframes SidebarOpen
- {
-   0%
-     {
-       transform: translateX(-$w-sidebarContent);
-     }
-   100%
-     {
-       transform: translateX(0);
-     }
- }
-
- .sidebar.opened, .content { transition: all 0.4s ease-in; }
-
-
-.sidebar
-  {
-    background-color: $c-sidebar-background;
-    position: relative;
-    padding-right: $w-sidebarToggle;
-    width: $w-sidebarContent + $w-sidebarToggle;
-
-    nav a { white-space: nowrap; }
-
-    &.opened
-      {
-        .sidebar-toggle:before { content: "◄"; }
-        // .sidebar-in { animation: 0.4s ease-in SidebarOpen forwards; }
-        .sidebar-in {
-          @extend %FadeOut;
-          animation: 0.8s ease-in FadeIn forwards;
-          transform: translateX(0);
-        }
-      }
-
-    &.closed
-      {
-        width: $w-sidebarToggle;
-
-
-        .sidebar-toggle:before { content: "►"; }
-        .sidebar-in{
-          @extend %FadeIn;
-          animation: 0.8s ease-in FadeOut forwards;
-          transform: translateX(-$w-sidebarContent);
-        }
-      }
-  }
-
-@media screen and (max-width: 1280px)
-  {
-    .sidebar.opened {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      z-index: 100;
-    }
-  }
-
-.sidebar-toggle
-  {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: $w-sidebarToggle;
-    z-index: 0;
-
-    background-color: lighten($c-sidebar-background, 10%);
-    color: gray;
-    font-weight: 500;
-
-    box-sizing: border-box;
-
-    @extend %flex_center;
-
-    border-left: 1px solid gray;
-    border-right: 2px solid #000;
-
-    &:before { content: "◄"; }
-
-    &:hover{
-      background-color: $c-blue;
-      color: #fff;
-    }
-  }
-
-
-.sidebar nav .active
-	{
-		position: relative;
-
-    section, span{
-      position: relative;
-      z-index: 1;
-    }
-
-    &:before{
-      content:"";
-      position: absolute;
-      z-index: 0;
-      left: -20px;
-      top: 0;
-      bottom: 0;
-      right: -20px;
-      background-color: lighten($c-sidebar-background, 5%);
-    }
-	}
 
 
 .panel-top
@@ -135,13 +13,7 @@ $w-sidebarContent: 230px;
     padding: 10px 0;
     border: 1px solid #000;
     background-color: $c-sidebar-background;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 40px;
-
-    &:last-child{
-      margin-right: 0;
-    }
+    margin: 40px 20px 0;
   }
 
 .panel-top--cell

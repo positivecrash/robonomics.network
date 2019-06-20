@@ -1,0 +1,19 @@
+extends extends/layout.pug
+
+block html
+	- var meta_title = 'Loading dApp'
+
+block content
+
+	.container-basic
+		section.t-align--center
+			.loading-logo
+				img(alt="dApp logo", src="assets/i/logo-dapp-2.svg", style="width: 150px;")
+			.loading-title.title-pale robonomics.network
+
+
+		.msg-error.msg-icon
+			.msg-title Plugin required for application operation
+			p
+				b Please, setup: 
+					a(href="https://metamask.io/", target="_blank").t-style_uppercase Metamask

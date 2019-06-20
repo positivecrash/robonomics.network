@@ -1,4 +1,4 @@
-mixin panelTop($multilang)
+mixin panelTop()
 	.panel-top
 		.panel-top--cell
 			a(href="#")
@@ -14,25 +14,34 @@ mixin panelTop($multilang)
 			b 0
 			span.t-sm XRT
 
-		if $multilang
-			.panel-top--cell
-				.dropdown.dropdown-color
-					a(href="javascript:;").a-noline: span.sprite-basic-flag-en.d-block
-					.dropdown-content
-						.inside
-							nav
-								a(href="#").a-noline: span.sprite-basic-flag-ru
+		
 
 
-mixin sidebar($navActive)
+mixin sidebar($navActive, $multilang)
 	.sidebar
-		.sidebar-in
-			section.m-t-10
-				img.i-block(alt="dApp logo", src="assets/i/logo-dapp-text.svg")
-
-			section
+		.sidebar-col.sidebar-col--sm
+			.sidebar-col-in
 				section
-					nav
+					a(href="/")
+						img(alt="dApp logo", src="assets/i/logo-dapp-sign.svg")
+
+				section
+					a#sidebar-i-nav(href="javascript:;", show-onopen="#sidebar-nav1", show-onclose="#sidebar-nav0" ).sidebar-i--lg <
+					if $multilang
+						a(href="javascript:;", show-onopen="#sidebar-lang").sidebar-i--lg EN
+
+				section.sidebar-col--bottom
+					a(href="javascript:;",  show-onopen="#sidebar-info").sidebar-i--lg ?
+
+
+		.sidebar-col.open#sidebar-nav1
+			.sidebar-col-in
+				section
+					a(href="/")
+						img(alt="dApp logo", src="assets/i/logo-dapp-text.svg")
+
+				section
+					nav.nav-vertical
 						if $navActive == 1
 							a(href="#").active: span Lighthouses
 						else
@@ -48,8 +57,37 @@ mixin sidebar($navActive)
 						else
 							a(href="#"): span AIRA to XRT
 
+
+		.sidebar-col.sidebar-col-padding.slide-right.close#sidebar-nav0
+			.sidebar-col-in
 				section
-					nav
+					nav.nav-vertical
+						if $navActive == 1
+							a(href="#").active: span L
+						else
+							a(href="#"): span L
+
+						if $navActive == 2
+							a(href="#").active: span S
+						else
+							a(href="#"): span S
+
+						if $navActive == 3
+							a(href="#").active: span A
+						else
+							a(href="#"): span A
+		
+		.sidebar-col.sidebar-col-padding.slide-right.close#sidebar-lang
+			.sidebar-col-in
+				section
+					nav.nav-vertical
+						a(href="#").active: span English
+						a(href="#"): span Русский
+
+		.sidebar-col.sidebar-col-padding.slide-right.close#sidebar-info
+			.sidebar-col-in
+				section
+					nav.nav-vertical
 						a(href="#")
 							span.i-github.align-vertical.m-r-10
 							span.align-vertical Github
@@ -65,9 +103,6 @@ mixin sidebar($navActive)
 						a(href="#")
 							span.i-cursor.align-vertical.m-r-10
 							span.align-vertical aira.life
-
-		a.sidebar-toggle(href="#")
-
 
 
 

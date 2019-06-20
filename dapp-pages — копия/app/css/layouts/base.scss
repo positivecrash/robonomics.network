@@ -1,0 +1,310 @@
+html, body
+  {
+    position: relative;
+    height: 100%;
+    min-height: 100%;
+  }
+
+body
+  {
+    opacity: 0;
+    animation: 0.4s FadeIn ease-in forwards;
+
+    color: $c-text;
+    background-color: $c-background;
+
+    height: auto;
+  }
+
+
+
+/*====== Set width of container ======*/
+.container-basic { @include secw($mq-desktop); }
+.container-full {  width: 100%; box-sizing: border-box; }
+.container-padding { @include secw(100%); }
+/*====== end of Set width of container ======*/
+
+
+
+/*====== Basic elements ======*/
+nav
+  {
+
+    a
+      {
+        display: block;
+        @extend %link_noline;
+        font-weight: 500;
+        color: #fff;
+
+        padding: 5px 0;
+      }
+  }
+/*====== end of Basic elements ======*/
+
+
+
+
+
+/*====== Flow elements ======*/
+
+.f-zoom { overflow: hidden; }
+.f-left { float: left; }
+.f-right { float: right; }
+
+
+.d-table
+  {
+    display: table;
+
+    & > *{
+      display: table-cell;
+    }
+  }
+
+.d-table--row { display: table-row; }
+.d-table--cell { display: table-cell; }
+
+.d-inlineblock { display: inline-block !important; }
+.d-block { display: block !important; }
+
+.align-vertical { display: inline-block; vertical-align: middle; }
+.align-top { display: inline-block; vertical-align: top; }
+
+/*====== Flow elements ======*/
+
+
+
+
+
+
+/*====== Transitions ======*/
+
+// .fadeOut, .visible { transition: 0.3s ease-in-out opacity; }
+// .fadeOut { visibility: hidden; opacity: 0; }
+// .visible { opacity: 1; visibility: visible; }
+
+/*====== end of Transitions ======*/
+
+
+
+
+
+
+/*====== Bootstrap ======*/
+
+.row
+  {
+
+    @media screen and (max-width: $bootstrap-md){
+      *[class*='col-md']
+        {
+          margin-bottom: $vertical-rythm;
+        }
+    }
+
+    @media screen and (max-width: $bootstrap-lg){
+      *[class*='col-lg']
+        {
+          margin-bottom: $vertical-rythm;
+        }
+    }
+
+  }
+
+/*====== end of Bootstrap ======*/
+
+
+
+/*====== Sections ======*/
+
+@mixin sectionMargins($margin){
+  margin-top: $margin;
+  margin-bottom: $margin;
+  // &:last-child { margin-bottom: 0; }
+}
+
+@mixin sectionBorder($border, $back){
+  outline: 1px solid rgba($border, .4);
+  border: 20px solid $back;
+}
+
+section
+  {
+    position: relative;
+    @include sectionMargins($margin-sec);
+
+    section{
+      @include sectionMargins($margin-sec/2);
+    }
+  }
+
+.section-size-sm {
+    @include sectionMargins(10px);
+
+    section{
+      @include sectionMargins(5px);
+    }
+}
+
+.section-color, .window-content-light
+  {
+    padding: 20px;
+
+    &.section-size-sm{
+      padding: 5px;
+
+      // @include mobile()
+      // {
+      //   padding-left: 5px !important;
+      //   padding-right: 5px !important;
+      // }
+    }
+  }
+
+.section-color--highlight, .window-content-light
+  {
+    background-color: $c-text;
+    color: $c-background;
+
+    .section-border
+      {
+        @include sectionBorder($c-background, $c-text);
+      }
+
+    table th, table td { border-color: darken($c-text, 20%); }
+    table th { background-color: darken($c-text, 10%); }
+    table td { background-color: $c-text; }
+    .table-striped tbody tr:nth-child(even) td{ background-color: darken($c-text, 5%); }
+  }
+
+.section-shade
+  {
+    box-shadow: 0 4px 8px rgba(0,0,0,.47);
+  }
+
+.section-border
+  {
+    @include sectionBorder($c-violet, $c-background);
+    // @include sectionBorder($c-text, $c-background);
+  }
+
+.section-overflowtext
+  {
+    max-height: 250px;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+
+
+.section-disabled
+  {
+    filter: grayscale(1);
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+.content-in > section{
+  &:first-child { margin-top: 0; }
+  &:last-child { margin-bottom: 0; }
+}
+
+
+
+.window-head
+  {
+    background-color: lighten($c-background, 30%);
+    padding: 5px $padding-fields-in;
+    @extend %text_uppercase;
+
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+
+    & > * 
+      {
+        color: #fff;
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+    .window-head-toggle
+      {
+        text-align: right;
+        font-size: $font-size-base + 5;
+        transition: 0.2s all ease;
+
+        &:hover{
+          color: $c-text;
+          font-weight: 500;
+        }
+      }
+  }
+
+.window-head--violet { background-color: $c-violet; }
+/*====== end of Sections ======*/
+
+
+
+
+/*====== Navigation ======*/
+
+.dropdown
+  {
+    position: relative;
+
+    & > .dropdown-content
+      {
+        visibility: hidden;
+        opacity: 0;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+        text-align: left;
+        padding-top: 10px;
+      }
+
+    &:hover
+      {
+        & > .dropdown-content { animation: 0.2s FadeIn 0.4s ease-out forwards; }
+      }
+
+
+    &.dropdown-color, &.dropdown-color .inside{
+      padding: 8px 15px;
+      background: darken($c-background, 5%);
+      border: 1px solid $c-violet;
+      border-radius: 4px;
+    }
+  }
+
+/*====== end of Navigation ======*/
+
+
+
+
+/*====== Random ======*/
+
+
+
+.separator-dark, .separator-light, .separator-pale
+  {
+    height: 1px;
+    background-color: $c-text;
+  }
+
+.separator-light { background-color: #fff; }
+.separator-pale { background-color: $c-violet; }
+
+.separator-animated
+  {
+    transform: scale(0);
+    
+    &.isInView { animation: ScaleIn 0.6s 0.8s ease-in-out forwards; }
+  }
+
+
+ 
+/*====== end of Random ======*/

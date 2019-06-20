@@ -7,12 +7,13 @@ block html
 
 block content
 
-	+sidebar(3)
+	+sidebar(3, true)
 
 	.content
+		+panelTop()
 		.content-in
-			section
-				+panelTop(true)
+			// section
+			// 	+panelTop()
 			
 			section
 				h1 Aira tokens → XRT alembic

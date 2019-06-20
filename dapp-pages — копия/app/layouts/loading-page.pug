@@ -1,0 +1,19 @@
+extends extends/layout.pug
+include mixins/sections.pug
+
+block html
+	- var meta_title = 'Loading dApp'
+	- var bodyclass = 'wrap-flexsols'
+
+block content
+	+sidebar(3)
+
+	.content
+		.content-in
+			section
+				+panelTop(true)
+
+			section
+				.loader
+					.loader-ring.align-vertical.m-r-15
+					// b.align-vertical.t-style_uppercase Loading

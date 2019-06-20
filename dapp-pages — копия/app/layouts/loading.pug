@@ -1,0 +1,16 @@
+extends extends/layout.pug
+
+block html
+	- var meta_title = 'Loading dApp'
+
+block content
+	.container-basic
+		section.t-align--center
+			.loading-logo
+				img(alt="dApp logo", src="assets/i/logo-dapp-2.svg", style="width: 150px;")
+			.loading-title.title-pale robonomics.network
+
+			section
+				.loader
+					.loader-ring.align-vertical.m-r-15
+					b.align-vertical.t-style_uppercase Loading

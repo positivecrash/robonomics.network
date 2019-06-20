@@ -1,0 +1,23 @@
+if !header_container
+	- var header_container = 'container-basic'
+
+header(role='banner', class=header_class)
+	div(class=header_container)
+		.d-table.container-full
+			.align-vertical
+				a(href="/").header-logo: img(alt="dApp logo", src="assets/i/logo-dapp.svg")
+				.header-title.title-pale
+					| dApp 
+					b #{logo_title}
+
+			.align-vertical.t-align_right
+				nav.nav-g
+					.dropdown
+						a(href="javascript:;").a-noline: span.sprite-basic-flag-en
+						.dropdown-content.dropdown-content-color
+							.inside
+								nav
+									a(href="#").a-noline: span.sprite-basic-flag-ru
+									a(href="#").a-noline: span.sprite-basic-flag-de
+									a(href="#").a-noline: span.sprite-basic-flag-zh
+									a(href="#").a-noline: span.sprite-basic-flag-jp

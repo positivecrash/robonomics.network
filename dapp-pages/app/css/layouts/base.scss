@@ -27,18 +27,28 @@ body
 
 
 /*====== Basic elements ======*/
-nav
+.nav-vertical a, .nav-gorizontal a
   {
+    @extend %link_noline;
+    font-weight: 500;
+  }
 
-    a
-      {
-        display: block;
-        @extend %link_noline;
-        font-weight: 500;
-        color: #fff;
+.nav-vertical a
+  {
+    display: block;
+    padding: 5px 0;
 
-        padding: 5px 0;
-      }
+    &:first-child{ padding-top: 0; }
+    &:last-child{ padding-bottom: 0; }
+  }
+
+.nav-gorizontal a
+  {
+    display: inline-block;
+    padding: 0 5px;
+
+    &:first-child{ padding-left: 0; }
+    &:last-child{ padding-right: 0; }
   }
 /*====== end of Basic elements ======*/
 
@@ -308,3 +318,23 @@ section
 
  
 /*====== end of Random ======*/
+
+
+
+
+/* action states (1-actions.js) */
+.open { @extend %visible; }
+.close { @extend %hidden; }
+
+.slide-right
+{
+  &.open
+    {
+      transform: translateX(-100%);
+      @extend %hidden;
+      animation: 0.2s SlideRight 0.2s ease forwards,  0.2s FadeIn 0.2s ease forwards;
+    }
+}
+
+
+

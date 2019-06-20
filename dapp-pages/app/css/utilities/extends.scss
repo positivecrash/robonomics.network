@@ -59,3 +59,28 @@
   justify-content: center;
 }
 
+%flex_columns{
+	display: flex;
+	flex-grow: 1;
+}
+
+
+
+%hidden
+	{
+		visibility: hidden;
+		// display: none;
+		opacity: 0;
+		width: 0;
+ 	 	height: 0;
+	}
+
+%visible
+	{
+		visibility: visible;
+		// display: block;
+  		opacity: 1;
+  		width: auto;
+  		height: auto;
+	}
+

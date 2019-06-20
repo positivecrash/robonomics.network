@@ -1,0 +1,41 @@
+doctype html
+
+block html
+html(lang='ru')
+	
+	head
+		meta(http-equiv="Content-Type" content="text/html;charset=UTF-8")
+		meta(name='viewport' content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+		title #{meta_title} | robonomics.network
+		meta(name='description' content=meta_description || '')
+		meta(name='keywords' content=meta_keywords || '')
+
+		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,900&amp;subset=cyrillic,cyrillic-ext" type="text/css" media="all")
+
+		link(href='https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.20.0/slimselect.min.css' rel='stylesheet')
+		//- link(href='assets/js/⁨choices⁩/public⁩/⁨assets⁩/⁨styles/choices.min.css' rel='stylesheet')
+		link(href='assets/css/robonomics_website.min.css?v=1' rel='stylesheet')
+			
+		script(src='assets/js/robonomics_plugins.min.js?v=1')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.20.0/slimselect.min.js')
+		//- script(src='assets/js/⁨choices⁩/public⁩/⁨assets⁩/⁨scripts⁩/choices.min.js')
+		script(src='assets/js/robonomics_website.js?v=1')
+
+		link(rel="icon" href="favicon.ico" type="image/x-icon")
+		link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
+		link(rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png")
+		link(rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png")
+
+	body(class=bodyclass)
+		if header
+			include ../includes/header.pug
+		
+		if header || footer
+			main(role="main")
+				block content
+		else
+			block content
+
+		if footer
+			include ../includes/footer.pug
