@@ -2840,7 +2840,7 @@ select::-ms-expand {
   font-weight: normal;
   font-style: normal;
 }
-.i-back, .i-copy, .i-cursor, .i-github, .i-reddit {
+.i-back, .i-copy, .i-cursor, .i-github, .i-reddit, .i-lighthouse, .i-piechart, .i-transfer {
   font-family: 'iconfont';
   speak: none;
   font-size: 100%;
@@ -2871,6 +2871,18 @@ select::-ms-expand {
 
 .i-reddit:before {
   content: "";
+}
+
+.i-lighthouse:before {
+  content: "";
+}
+
+.i-piechart:before {
+  content: "";
+}
+
+.i-transfer:before {
+  content: "";
 }
 
 html, body {
@@ -3227,6 +3239,9 @@ section section {
 .sidebar nav a {
   white-space: nowrap;
 }
+.sidebar span[class^='i-'] {
+  margin-right: 10px;
+}
 
 .content-in {
   padding: 40px 20px;
@@ -3240,11 +3255,6 @@ section section {
 }
 .sidebar-col section:first-child {
   margin-top: 0;
-}
-
-.sidebar-col--sm .sidebar-col-in {
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 .sidebar-col--bottom {
@@ -3263,36 +3273,19 @@ section section {
   width: 42px;
   height: 42px;
   border-radius: 21px;
-  border: 1px solid #fff;
+  border-width: 1px;
+  border-style: solid;
   margin: 0 auto 20px;
   transition: 0.2s all ease;
-}
-.sidebar-i--lg, .sidebar-i--lg:hover {
-  color: #fff;
 }
 .sidebar-i--lg:last-child {
   margin-bottom: 0;
 }
-.sidebar-i--lg.on {
-  background-color: #fff;
-  color: #2f2f2f;
-}
-.sidebar-i--lg#sidebar-i-nav.on {
+.sidebar-i--lg#sidebar-show--nav.on {
   transform: rotate(-180deg);
 }
 
-@media screen and (max-width: 1140px) {
-  #sidebar-nav1 {
-    visibility: hidden;
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-
-  #sidebar-nav0 {
-    visibility: visible;
-    opacity: 1;
-    width: auto;
-    height: auto;
-  }
+#sidebar-nav0 span[class^='i-'] {
+  font-size: 32px;
+  margin-right: 0;
 }

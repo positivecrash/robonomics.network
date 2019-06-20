@@ -283,52 +283,92 @@ var sort = function(tagLink, tagSec, active){
 var classOpen = 'open',
 	classClose = 'close',
 	classSwitchOn = 'on',
-	dataElOpen = 'show-onopen',
-	dataElClose = 'show-onclose';
+	showON = 'show-on',
+	showOFF = 'show-off';
 
 
-function getEl(e, attr){
-	return document.querySelectorAll( e.getAttribute(attr) );
+function setCookie(e, state){
+	date = new Date(new Date().getTime() + 3600 * 1000 * 24 * 365);
+	document.cookie = e +'=' + state + '; expires=' + date.toUTCString();
 }
 
-// function setCookie(e, state){
-// 	date = new Date(new Date().getTime() + 3600 * 1000 * 24 * 365);
-// 	document.cookie = e +'=' + state + '; expires=' + date.toUTCString();
-// }
+function toggleEl(e){
+	e.classList.toggle(classOpen);
+	e.classList.toggle(classClose);
+}
+
+function openEl(e){
+	e.classList.add(classOpen);
+	e.classList.remove(classClose);
+}
+
+function closeEl(e){
+	e.classList.add(classClose);
+	e.classList.remove(classOpen);
+}
+
+
+function state(e, state){
+
+	var open, close;
+
+	if(state == 'true'){
+
+		e.classList.add(classSwitchOn);
+		open = document.querySelectorAll( e.getAttribute(showON) );
+		openEl(open[0]);
+
+		if( e.getAttribute(showOFF) ){
+			close = document.querySelectorAll( e.getAttribute(showOFF) );
+			closeEl(close[0]);
+		}
+	}
+	else{
+
+		e.classList.remove(classSwitchOn);
+		open = document.querySelectorAll( e.getAttribute(showON) );
+		closeEl(open[0]);
+
+		if( e.getAttribute(showOFF) ){
+			close = document.querySelectorAll( e.getAttribute(showOFF) );
+			openEl(close[0]);
+		}
+	}
+	
+}
+
 
 function action(e){
+
+	var open, close;
+
 	e.classList.toggle(classSwitchOn);
 
-	var open = getEl(e, dataElOpen);
-	open[0].classList.toggle(classOpen);
-	open[0].classList.toggle(classClose);
+	open = document.querySelectorAll( e.getAttribute(showON) );
+	toggleEl(open[0]);
 
-	if ( e.getAttribute(dataElClose) )
+	if ( e.getAttribute(showOFF) )
 		{
-			var close = getEl(e, dataElClose);
-
-			close[0].classList.toggle(classOpen);
-			close[0].classList.toggle(classClose);
+			close = document.querySelectorAll( e.getAttribute(showOFF) );
+			toggleEl(close[0]);
 		}
 
-	// setCookie(open[0].getAttribute('id'), e.classList.contains(classSwitchOn));
+	setCookie(e.getAttribute('id'), e.classList.contains(classSwitchOn));
 }
 
-// function setAction(e){
-// 	e.classList.add(classSwitchOn);
-// 	var open = getEl(e, dataElOpen);
-// 	open[0].classList.add(classOpen);
-// }
+
 
 function init(){
 
-	var e = document.querySelectorAll('['+dataElOpen+']');
+	// console.log(document.cookie);
+
+	var e = document.querySelectorAll('['+showON+']');
 
 	e.forEach(function(i){
 
-		// if( getCookie(i.getAttribute(dataElOpen)) == 'true' ){
-		// 	setAction(i);
-		// }
+		if( getCookie(i.getAttribute('id')) ){
+			state(i, getCookie(i.getAttribute('id')));
+		}
 
 		i.addEventListener("click", function(event){
 			event.preventDefault();

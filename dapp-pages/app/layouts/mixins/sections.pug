@@ -26,12 +26,12 @@ mixin sidebar($navActive, $multilang)
 						img(alt="dApp logo", src="assets/i/logo-dapp-sign.svg")
 
 				section
-					a#sidebar-i-nav(href="javascript:;", show-onopen="#sidebar-nav1", show-onclose="#sidebar-nav0" ).sidebar-i--lg <
+					a#sidebar-show--nav(href="javascript:;", show-on="#sidebar-nav0", show-off="#sidebar-nav1" ).sidebar-i--lg <
 					if $multilang
-						a(href="javascript:;", show-onopen="#sidebar-lang").sidebar-i--lg EN
+						a#sidebar-show--lang(href="javascript:;", show-on="#sidebar-lang").sidebar-i--lg EN
 
 				section.sidebar-col--bottom
-					a(href="javascript:;",  show-onopen="#sidebar-info").sidebar-i--lg ?
+					a#sidebar-show--info(href="javascript:;",  show-on="#sidebar-info").sidebar-i--lg ?
 
 
 		.sidebar-col.open#sidebar-nav1
@@ -43,19 +43,31 @@ mixin sidebar($navActive, $multilang)
 				section
 					nav.nav-vertical
 						if $navActive == 1
-							a(href="#").active: span Lighthouses
+							a(href="#").active
+								span.i-lighthouse.align-vertical
+								span.align-vertical Lighthouses
 						else
-							a(href="#"): span Lighthouses
+							a(href="#")
+								span.i-lighthouse.align-vertical
+								span.align-vertical Lighthouses
 
 						if $navActive == 2
-							a(href="#").active: span Statistics
+							a(href="#").active
+								span.i-piechart.align-vertical
+								span.align-vertical Statistics
 						else
-							a(href="#"): span Statistics
+							a(href="#")
+								span.i-piechart.align-vertical
+								span.align-vertical Statistics
 
 						if $navActive == 3
-							a(href="#").active: span AIRA to XRT
+							a(href="#").active
+								span.i-transfer.align-vertical
+								span.align-vertical AIRA to XRT
 						else
-							a(href="#"): span AIRA to XRT
+							a(href="#")
+								span.i-transfer.align-vertical
+								span.align-vertical AIRA to XRT
 
 
 		.sidebar-col.sidebar-col-padding.slide-right.close#sidebar-nav0
@@ -63,19 +75,19 @@ mixin sidebar($navActive, $multilang)
 				section
 					nav.nav-vertical
 						if $navActive == 1
-							a(href="#").active: span L
+							a(href="#").active: span.i-lighthouse
 						else
-							a(href="#"): span L
+							a(href="#"): span.i-lighthouse
 
 						if $navActive == 2
-							a(href="#").active: span S
+							a(href="#").active: span.i-piechart
 						else
-							a(href="#"): span S
+							a(href="#"): span.i-piechart
 
 						if $navActive == 3
-							a(href="#").active: span A
+							a(href="#").active: span.i-transfer
 						else
-							a(href="#"): span A
+							a(href="#"): span.i-transfer
 		
 		.sidebar-col.sidebar-col-padding.slide-right.close#sidebar-lang
 			.sidebar-col-in
@@ -89,19 +101,19 @@ mixin sidebar($navActive, $multilang)
 				section
 					nav.nav-vertical
 						a(href="#")
-							span.i-github.align-vertical.m-r-10
+							span.i-github.align-vertical
 							span.align-vertical Github
 
 						a(href="#")
-							span.i-reddit.align-vertical.m-r-10
+							span.i-reddit.align-vertical
 							span.align-vertical Reddit
 
 						a(href="#")
-							span.i-cursor.align-vertical.m-r-10
+							span.i-cursor.align-vertical
 							span.align-vertical robonomomics.network
 
 						a(href="#")
-							span.i-cursor.align-vertical.m-r-10
+							span.i-cursor.align-vertical
 							span.align-vertical aira.life
 
 
