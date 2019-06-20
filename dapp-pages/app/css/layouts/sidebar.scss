@@ -1,4 +1,4 @@
-.flexsols { @extend %flex_columns; }
+.flexcols { @extend %flex_columns; }
 
 .sidebar
   {
@@ -12,6 +12,7 @@
     span[class^='i-'] { margin-right: 10px; }
   }
 
+.content { width: 100%; }
 .content-in { padding: 40px 20px; }
 
 .sidebar-col

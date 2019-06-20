@@ -3,16 +3,14 @@ include mixins/sections.pug
 
 block html
 	- var meta_title = 'Loading dApp'
-	- var bodyclass = 'wrap-flexsols'
+	- var bodyclass = 'flexcols'
 
 block content
 	+sidebar(3, true)
 
 	.content
+		+panelTop()
 		.content-in
-			section
-				+panelTop()
-
 			section
 				.loader
 					.loader-ring.align-vertical.m-r-15

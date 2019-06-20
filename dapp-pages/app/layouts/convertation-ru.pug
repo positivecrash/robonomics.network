@@ -3,20 +3,15 @@ include mixins/sections.pug
 
 block html
 	- var meta_title = 'Перегонный куб Aira токенов в XRT'
-	- var bodyclass = 'wrap-flexsols'
+	- var bodyclass = 'flexcols'
 
 block content
 
 	+sidebar(3, true)
 
-
 	.content
+		+panelTop()
 		.content-in
-			section
-				+panelTop()
-
-			
-
 			section
 				h1 Перегонный куб Aira токенов в XRT
 				section.window#window-developletter

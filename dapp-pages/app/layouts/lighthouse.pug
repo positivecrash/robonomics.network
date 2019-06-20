@@ -3,17 +3,15 @@ include mixins/sections.pug
 
 block html
 	- var meta_title = 'Robonomics Lighthouse'
-	- var bodyclass = 'wrap-flexsols'
+	- var bodyclass = 'flexcols'
 
 block content
 
 	+sidebar(1, false)
 
 	.content
+		+panelTop()
 		.content-in
-			section
-				+panelTop()
-
 			section
 				h2
 					a(href="#").align-vertical.m-r-10.i-back

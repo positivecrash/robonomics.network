@@ -3,7 +3,7 @@ include mixins/sections.pug
 
 block html
 	- var meta_title = 'Statistics of Robonomics'
-	- var bodyclass = 'wrap-flexsols'
+	- var bodyclass = 'flexcols'
 
 block content
 
@@ -11,12 +11,9 @@ block content
 
 
 	.content
+		+panelTop()
 		.content-in
-			section
-				+panelTop()
-
-			
-
+	
 			section
 				h1
 					span.d-block Statistics of Robonomics network

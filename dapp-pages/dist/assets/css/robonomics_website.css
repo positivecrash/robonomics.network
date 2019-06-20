@@ -2056,7 +2056,7 @@ a.a-icon > span, a.a-icon > b, a.a-icon--border > span, a.a-icon--border > b, .s
   justify-content: center;
 }
 
-.flexsols {
+.flexcols {
   display: flex;
   flex-grow: 1;
 }
@@ -2887,8 +2887,6 @@ select::-ms-expand {
 
 html, body {
   position: relative;
-  height: 100%;
-  min-height: 100%;
 }
 
 body {
@@ -2896,7 +2894,6 @@ body {
   animation: 0.4s FadeIn ease-in forwards;
   color: #fff;
   background-color: #2f2f2f;
-  height: auto;
 }
 
 /*====== Set width of container ======*/
@@ -3245,6 +3242,10 @@ section section {
 }
 .sidebar span[class^='i-'] {
   margin-right: 10px;
+}
+
+.content {
+  width: 100%;
 }
 
 .content-in {
