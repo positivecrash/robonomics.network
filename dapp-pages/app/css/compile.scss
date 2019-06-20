@@ -5,9 +5,7 @@
 
 @import "utilities/my_reset";
 @import "utilities/variables";
-
 @import "utilities/sprite";
-
 @import "utilities/media";
 @import "utilities/extends";
 @import "utilities/mixins";
@@ -16,7 +14,8 @@
 @import "utilities/forms";
 @import "utilities/fonticons";
 
+@import "modules/profile";
+@import "modules/sidebar";
+
 @import "layouts/base";
 @import "layouts/loading";
-@import "layouts/profile";
-@import "layouts/sidebar";
