@@ -82,3 +82,10 @@
   		height: auto;
 	}
 
+%position_sticky__top{
+	position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 100;
+}
+

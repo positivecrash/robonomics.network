@@ -1,0 +1,57 @@
+@mixin fullcoloring($background, $border, $color){
+  background-color: $background;
+  border-color: $border;
+  color: $color;
+}
+
+@mixin theme (
+
+  $theme-class:               '.theme-light',
+  
+  $section-background:        #ffffff,
+  $section-textcolor:         #6c757e,
+  $section-border:            darken($section-background, 8%), // #e7eaf3
+
+  $section-background-dark:   darken($section-background, 3%), // #f8f9fa
+  $section-textcolor-dark:    darken($section-textcolor, 3%),
+  $section-border-dark:       darken($section-background, 10%),
+
+  $section-boxshadow:         rgba(189,197,209,.2),
+
+  $body-background:           darken($section-background, 6%),
+  $body-textcolor:            $section-textcolor-dark
+
+){
+
+  #{$theme-class} //body class for theme
+  {
+    background-color: $body-background;
+    color: $body-textcolor;
+
+    .sidebar-col
+      {
+        @include fullcoloring($section-background, $section-border, $section-textcolor);
+
+        &.open{
+          @include fullcoloring($section-background-dark, $section-border-dark, $section-textcolor-dark);
+        }
+      }
+
+
+    .panel-top
+      {
+        // border-bottom-color: blue;
+
+        .panel-top--cell { border-color: $section-border-dark; }
+      }
+
+    .section-light
+      {
+
+        @include fullcoloring($section-background, $section-border, $section-textcolor);
+        box-shadow: 0 .5rem 1.2rem $section-boxshadow;
+        
+      }
+  }
+
+}

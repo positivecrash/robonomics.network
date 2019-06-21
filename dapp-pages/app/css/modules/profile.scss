@@ -1,6 +1,5 @@
 .avatar-small
 	{
-		display: inline-block;
 		width: 25px;
 		height: 25px;
 		border-radius: 13px;
@@ -11,14 +10,11 @@
 .panel-top
   {
     padding: 10px 0;
-    border: 1px solid #000;
-    background-color: $c-sidebar-background;
+    border-width: 1px 1px 3px;
+    border-style: solid;
     margin: 40px 20px 0;
 
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    z-index: 100;
+    @extend %position_sticky__top;
   }
 
 .panel-top--cell
@@ -26,7 +22,8 @@
     display: inline-block;
     vertical-align: middle;
     padding: 0 25px;
-    border-right: 1px solid #000;
+    border-width: 0 1px 0 0;
+    border-style: solid;
 
     &:last-child { border: 0; }
 

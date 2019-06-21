@@ -3,7 +3,7 @@ include mixins/sections.pug
 
 block html
 	- var meta_title = 'Aira tokens → XRT alembic'
-	- var bodyclass = 'flexcols'
+	- var bodyclass = 'flexcols theme-light'
 
 block content
 
@@ -14,9 +14,8 @@ block content
 		.content-in
 			section
 				h1 Aira tokens → XRT alembic
-				// .section-overflowtext.section-border
-				section.window#window-developletter
-					.window-head.window-head--violet
+				section.section-light.window#window-developletter
+					.window-head
 						span The developers&#8217; letter
 						a.window-head-toggle(href="#") –
 					.window-content.window-content-light

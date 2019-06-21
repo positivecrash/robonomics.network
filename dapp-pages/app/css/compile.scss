@@ -14,8 +14,12 @@
 @import "utilities/forms";
 @import "utilities/fonticons";
 
+@import "modules/sections";
 @import "modules/profile";
 @import "modules/sidebar";
 
 @import "layouts/base";
 @import "layouts/loading";
+
+@import "themes/theme-light";
+@import "themes/theme-dark";
