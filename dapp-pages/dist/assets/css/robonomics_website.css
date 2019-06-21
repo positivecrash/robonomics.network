@@ -2686,7 +2686,7 @@ select::-ms-expand {
   font-weight: normal;
   font-style: normal;
 }
-.i-back, .i-copy, .i-cursor, .i-github, .i-reddit, .i-lighthouse, .i-piechart, .i-transfer {
+.i-back, .i-copy, .i-cursor, .i-github, .i-reddit, .i-lighthouse, .i-piechart, .i-transfer, .i-day, .i-night, .i-multicolor {
   font-family: 'iconfont';
   speak: none;
   font-size: 100%;
@@ -2729,6 +2729,18 @@ select::-ms-expand {
 
 .i-transfer:before {
   content: "";
+}
+
+.i-day:before {
+  content: "";
+}
+
+.i-night:before {
+  content: "󪀐";
+}
+
+.i-multicolor:before {
+  content: "󪀑";
 }
 
 .avatar-small {

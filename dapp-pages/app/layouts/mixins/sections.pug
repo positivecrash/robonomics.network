@@ -28,10 +28,12 @@ mixin sidebar($navActive, $multilang)
 				section
 					a#sidebar-show--nav(href="javascript:;", show-on="#sidebar-nav0", show-off="#sidebar-nav1" ).sidebar-i--lg <
 					if $multilang
-						a#sidebar-show--lang(href="javascript:;", show-on="#sidebar-lang").sidebar-i--lg EN
+						a(href="javascript:;", show-on="#sidebar-lang").sidebar-i--lg EN
+					a(href="javascript:;", show-on="#sidebar-theme").sidebar-i--lg
+						i.i-day
 
 				section.sidebar-col--bottom
-					a#sidebar-show--info(href="javascript:;",  show-on="#sidebar-info").sidebar-i--lg ?
+					a(href="javascript:;",  show-on="#sidebar-info").sidebar-i--lg ?
 
 
 		.sidebar-col.open#sidebar-nav1
@@ -115,6 +117,22 @@ mixin sidebar($navActive, $multilang)
 						a(href="#")
 							span.i-cursor.align-vertical
 							span.align-vertical aira.life
+
+		.sidebar-col.sidebar-col-padding.slide-right.close#sidebar-theme
+			.sidebar-col-in
+				section
+					nav.nav-vertical
+						a(href="#")
+							span.i-day.align-vertical
+							span.align-vertical Light mode
+
+						a(href="#")
+							span.i-night.align-vertical
+							span.align-vertical Night mode
+
+						a(href="#")
+							span.i-multicolor.align-vertical
+							span.align-vertical Multicolor
 
 
 

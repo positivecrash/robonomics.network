@@ -77,7 +77,8 @@ function action(e){
 			toggleEl(close[0]);
 		}
 
-	setCookie(e.getAttribute('id'), e.classList.contains(classSwitchOn));
+	if( e.getAttribute('id') )
+		setCookie(e.getAttribute('id'), e.classList.contains(classSwitchOn));
 }
 
 
@@ -90,7 +91,7 @@ function init(){
 
 	e.forEach(function(i){
 
-		if( getCookie(i.getAttribute('id')) ){
+		if( i.getAttribute('id') && getCookie(i.getAttribute('id')) ){
 			state(i, getCookie(i.getAttribute('id')));
 		}
 

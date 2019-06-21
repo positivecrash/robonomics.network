@@ -353,7 +353,8 @@ function action(e){
 			toggleEl(close[0]);
 		}
 
-	setCookie(e.getAttribute('id'), e.classList.contains(classSwitchOn));
+	if( e.getAttribute('id') )
+		setCookie(e.getAttribute('id'), e.classList.contains(classSwitchOn));
 }
 
 
@@ -366,7 +367,7 @@ function init(){
 
 	e.forEach(function(i){
 
-		if( getCookie(i.getAttribute('id')) ){
+		if( i.getAttribute('id') && getCookie(i.getAttribute('id')) ){
 			state(i, getCookie(i.getAttribute('id')));
 		}
 
@@ -403,59 +404,6 @@ window.addEventListener('load', function(){
 	document.addEventListener('resize', IfInView);
 
 }, false);
-// window.addEventListener('load', function(){
-
-// 	var sidebar = document.querySelector('.sidebar'),
-// 		classClose = 'closed',
-// 		classOpen = 'opened',
-// 		date;
-
-// 	document.querySelector('.sidebar-toggle').addEventListener("click", function(event){
-// 	  event.preventDefault();
-
-// 	  if(sidebar.classList.contains(classClose)){
-// 	  	sidebar.classList.remove(classClose);
-// 	  	sidebar.classList.add(classOpen);
-
-// 	  	date = new Date(new Date().getTime() + 3600 * 1000 * 24 * 365);
-// 		document.cookie = 'sidebarTog=open; expires=' + date.toUTCString();
-// 	  }
-// 	  else{
-// 	  	sidebar.classList.add(classClose);
-// 	  	sidebar.classList.remove(classOpen);
-// 	  	date = new Date(new Date().getTime() + 3600 * 1000 * 24 * 365);
-// 		document.cookie = 'sidebarTog=close; expires=' + date.toUTCString();
-// 	  }
-// 	});
-
-// }, false);
-
-
-
-// var sidebarDetect = function (event) {
-// 	var sidebar = document.querySelector('.sidebar'),
-// 		classClose = 'closed',
-// 		cookie;
-
-// 	cookie = getCookie('sidebarTog');
-// 	console.log('sidebar status – '+cookie);
-
-// 	if(window.innerWidth > 1280){
-
-// 		if(!cookie || cookie == 'open'){
-// 			sidebar.classList.remove(classClose);
-// 		}
-// 		else{
-// 			sidebar.classList.add(classClose);
-// 		}
-// 	}
-// 	else{
-// 		sidebar.classList.add(classClose);
-// 	}
-// };
-
-// window.addEventListener('load', sidebarDetect, false);
-// window.addEventListener('resize', sidebarDetect, false);
 /*
 	Dependencies
 	0-cookie.js
