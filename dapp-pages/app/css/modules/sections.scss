@@ -3,12 +3,10 @@
   margin-bottom: $margin;
 }
 
-@mixin sectionBorder($border, $back){
-  outline: 1px solid rgba($border, .4);
-  border: 20px solid $back;
-}
-
-// *[class *= 'section-'] { border-radius: 6px; }
+// @mixin sectionBorder($border, $back){
+//   outline: 1px solid rgba($border, .4);
+//   border: 20px solid $back;
+// }
 
 section
   {
@@ -18,11 +16,21 @@ section
     section{
       @include sectionMargins($margin-sec/2);
     }
-
-    *[class *= 'section-'] { border-radius: 6px; }
   }
 
+*[class *= 'section-']
+  {
+    border-radius: 6px;
+    padding: 20px;
+    border-style: solid;
+    border-width: 1px;
+  }
+
+
 .section-size-sm {
+    border-radius: 4px;
+    padding: 5px;
+
     @include sectionMargins(10px);
 
     section{
@@ -30,48 +38,41 @@ section
     }
 }
 
-.section-color, .window-content-light
-  {
-    padding: 20px;
 
-    &.section-size-sm{
-      padding: 5px;
-    }
-  }
 
-.section-color--highlight, .window-content-light
-  {
-    background-color: $c-text;
-    color: $c-background;
+// .section-color--highlight, .window-content-light
+//   {
+//     background-color: $c-text;
+//     color: $c-background;
 
-    .section-border
-      {
-        @include sectionBorder($c-background, $c-text);
-      }
+//     .section-border
+//       {
+//         @include sectionBorder($c-background, $c-text);
+//       }
 
-    table th, table td { border-color: darken($c-text, 20%); }
-    table th { background-color: darken($c-text, 10%); }
-    table td { background-color: $c-text; }
-    .table-striped tbody tr:nth-child(even) td{ background-color: darken($c-text, 5%); }
-  }
+//     table th, table td { border-color: darken($c-text, 20%); }
+//     table th { background-color: darken($c-text, 10%); }
+//     table td { background-color: $c-text; }
+//     .table-striped tbody tr:nth-child(even) td{ background-color: darken($c-text, 5%); }
+//   }
 
-.section-shade
-  {
-    box-shadow: 0 4px 8px rgba(0,0,0,.47);
-  }
+// .section-shade
+//   {
+//     box-shadow: 0 4px 8px rgba(0,0,0,.47);
+//   }
 
-.section-border
-  {
-    @include sectionBorder($c-violet, $c-background);
-    // @include sectionBorder($c-text, $c-background);
-  }
+// .section-border
+//   {
+//     @include sectionBorder($c-violet, $c-background);
+//     // @include sectionBorder($c-text, $c-background);
+//   }
 
-.section-overflowtext
-  {
-    max-height: 250px;
-    overflow-y: auto;
-    box-sizing: border-box;
-  }
+// .section-overflowtext
+//   {
+//     max-height: 250px;
+//     overflow-y: auto;
+//     box-sizing: border-box;
+//   }
 
 
 .section-disabled
@@ -90,12 +91,13 @@ section
 
 .window-head
   {
-    padding: 5px $padding-fields-in;
     @extend %text_uppercase;
 
     display: table;
     width: 100%;
     box-sizing: border-box;
+
+    font-size: $font-size-title - 4 * 3;
 
     & > * 
       {
@@ -110,8 +112,9 @@ section
         transition: 0.2s all ease;
 
         &:hover{
-          color: $c-text;
           font-weight: 500;
         }
       }
   }
+
+.window-content { margin-top: $margin-sec/2; }

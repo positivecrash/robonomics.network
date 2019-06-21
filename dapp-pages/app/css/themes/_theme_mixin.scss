@@ -10,13 +10,16 @@
   
   $section-background:        #ffffff,
   $section-textcolor:         #6c757e,
-  $section-border:            darken($section-background, 8%), // #e7eaf3
-
-  $section-background-dark:   darken($section-background, 3%), // #f8f9fa
-  $section-textcolor-dark:    darken($section-textcolor, 3%),
-  $section-border-dark:       darken($section-background, 10%),
-
+  $section-border:            darken($section-background, 8%),
   $section-boxshadow:         rgba(189,197,209,.2),
+
+  $section-background-mid:   darken($section-background, 2.5%),
+  $section-textcolor-mid:    darken($section-textcolor, 3%),
+  $section-border-mid:       darken($section-background, 6%),
+
+  $section-background-dark:   darken($section-background, 3.5%),
+  $section-textcolor-dark:    darken($section-textcolor, 3%),
+  $section-border-dark:       darken($section-background, 12%),
 
   $body-background:           darken($section-background, 6%),
   $body-textcolor:            $section-textcolor-dark
@@ -38,19 +41,30 @@
       }
 
 
+
+
     .panel-top
       {
-        // border-bottom-color: blue;
-
         .panel-top--cell { border-color: $section-border-dark; }
       }
 
+
+
+
     .section-light
       {
-
         @include fullcoloring($section-background, $section-border, $section-textcolor);
         box-shadow: 0 .5rem 1.2rem $section-boxshadow;
-        
+      }
+
+    .section-dark
+      {
+        @include fullcoloring($section-background-dark, $section-border-dark, $section-textcolor-dark);
+      }
+
+    .section-mid
+      {
+        @include fullcoloring($section-background-mid, $section-border-mid, $section-textcolor-mid);
       }
   }
 
