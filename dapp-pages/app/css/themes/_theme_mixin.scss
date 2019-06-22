@@ -4,6 +4,14 @@
   color: $color;
 }
 
+@mixin btn($text, $background){
+  color: $text;
+  background-color: $background;
+
+  &:not([disabled]):hover { background-color: darken($background, 10%); }
+}
+
+
 @mixin theme (
 
   $theme-class:               '.theme-light',
@@ -13,16 +21,23 @@
   $section-border:            darken($section-background, 8%),
   $section-boxshadow:         rgba(189,197,209,.2),
 
-  $section-background-mid:   darken($section-background, 2.5%),
-  $section-textcolor-mid:    darken($section-textcolor, 3%),
-  $section-border-mid:       darken($section-background, 6%),
+  $section-background-mid:    darken($section-background, 2.5%),
+  $section-textcolor-mid:     darken($section-textcolor, 3%),
+  $section-border-mid:        darken($section-background, 6%),
 
   $section-background-dark:   darken($section-background, 3.5%),
   $section-textcolor-dark:    darken($section-textcolor, 3%),
   $section-border-dark:       darken($section-background, 12%),
 
   $body-background:           darken($section-background, 6%),
-  $body-textcolor:            $section-textcolor-dark
+  $body-textcolor:            $section-textcolor-dark,
+
+  $green:                     #54CE63,
+  $orange:                    #F15A24,
+  $blue:                      #03A5ED,
+  $red:                       #E84004,
+
+  $btn-textcolor:             #ffffff
 
 ){
 
@@ -66,6 +81,26 @@
       {
         @include fullcoloring($section-background-mid, $section-border-mid, $section-textcolor-mid);
       }
+
+
+
+    input:not([type='submit']):not([type='button'])
+    {
+      border-color: rgba($body-textcolor, .5);
+      background-color: $section-background;
+      color: $body-textcolor;
+
+      &.input-line
+          {
+            background-color: transparent;
+          }
+    }
+
+
+    input[type="submit"], input[type="button"], button, .btn-blue{
+      @include btn($btn-textcolor, $blue);
+    }
+
   }
 
 }

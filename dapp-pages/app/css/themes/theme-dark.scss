@@ -5,5 +5,12 @@
   
 	$section-background:        #2f2f2f,
 	$section-textcolor:         #f2f2f2,
-	$section-boxshadow:         rgba(#000000,.2)
+	$section-boxshadow:         rgba(#000000,.2),
+
+	$green:                     darken(#54CE63, 10%),
+    $orange:                    darken(#F15A24, 10%),
+    $blue:                      darken(#03A5ED, 10%),
+    $red:                       darken(#E84004, 10%),
+
+    $btn-textcolor:             darken(#ffffff, 10%)
 );

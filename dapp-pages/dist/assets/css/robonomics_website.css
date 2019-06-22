@@ -1839,7 +1839,7 @@ sub {
 /*====== Media queries ======*/
 /*====== Colors ======*/
 /*====== Classes ======*/
-.sprite-basic-i-check, .sprite-basic-i-checked, .sprite-basic-i-error, .msg-error.msg-icon:before, .msg-ok.msg-icon:before, .input-checkbox label:before {
+.sprite-basic-i-check, .sprite-basic-i-checked, .sprite-basic-i-error {
   background-image: url("../i/sprite.svg?6");
 }
 
@@ -1864,7 +1864,7 @@ sub {
   display: inline-block;
 }
 
-body, input:not([type='submit']):not([type='button']), select, .btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange, .btn-violet, input:not([type='button']):not([type='submit'])::placeholder, select::placeholder, .btn-green::placeholder, input[type="submit"]::placeholder, input[type="button"]::placeholder, button::placeholder, .btn-blue::placeholder, .btn-orange::placeholder, .btn-violet::placeholder {
+body, input:not([type='submit']):not([type='button']), input[type="submit"], input[type="button"], button, *[class*='btn-'] {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -1873,12 +1873,12 @@ body, input:not([type='submit']):not([type='button']), select, .btn-green, input
   letter-spacing: 0;
 }
 
-a, a.a-noline, a.a-icon, a.a-icon--border, .btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange, .btn-violet, .nav-vertical a, .nav-gorizontal a, a:hover, .btn-green:hover, input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn-blue:hover, .btn-orange:hover, .btn-violet:hover, a:focus, .btn-green:focus, input[type="submit"]:focus, input[type="button"]:focus, button:focus, .btn-blue:focus, .btn-orange:focus, .btn-violet:focus, a:visited, .btn-green:visited, input[type="submit"]:visited, input[type="button"]:visited, button:visited, .btn-blue:visited, .btn-orange:visited, .btn-violet:visited {
+a, a.a-noline, a.a-icon, a.a-icon--border, input[type="submit"], input[type="button"], button, *[class*='btn-'], .nav-vertical a, .nav-gorizontal a, a:hover, input[type="submit"]:hover, input[type="button"]:hover, button:hover, [class*='btn-']:hover, a:focus, input[type="submit"]:focus, input[type="button"]:focus, button:focus, [class*='btn-']:focus, a:visited, input[type="submit"]:visited, input[type="button"]:visited, button:visited, [class*='btn-']:visited {
   text-decoration: none;
   text-decoration: none !important;
 }
 
-h1, h2, h3, h4, h5, h6, table th, table caption, .t-uppercase, .msg-error .msg-title, .msg-ok .msg-title, .window-head, .loading-logo:after {
+h1, h2, h3, h4, h5, h6, table th, table caption, .t-uppercase, .window-head, .loading-logo:after {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -1890,7 +1890,7 @@ h1, h2, h3, h4, h5, h6, table th, table caption, .t-uppercase, .msg-error .msg-t
   margin-right: auto;
 }
 
-.input-checkbox label, .input-checkbox input[type=checkbox], .input-radio label, .input-radio input[type=radio], .loading-logo {
+.loading-logo {
   display: inline-block;
   vertical-align: middle;
 }
@@ -2435,37 +2435,17 @@ table caption {
     transform: translateX(0);
   }
 }
-input:not([type='submit']):not([type='button']), select, .btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange, .btn-violet {
+input:not([type='submit']):not([type='button']), input[type="submit"], input[type="button"], button, *[class*='btn-'] {
   font-size: 16px;
   font-weight: 500;
-  border-radius: 4px;
+  border-radius: 6px;
   display: inline-block;
   vertical-align: middle;
   box-sizing: border-box;
-  padding: 10px 15px;
-}
-input[disabled]:not([type='submit']):not([type='button']), select[disabled], [disabled].btn-green, input[disabled][type="submit"], input[disabled][type="button"], button[disabled], [disabled].btn-blue, [disabled].btn-orange, [disabled].btn-violet, input[disabled]:hover:not([type='submit']):not([type='button']), select[disabled]:hover, [disabled].btn-green:hover, input[disabled][type="submit"]:hover, input[disabled][type="button"]:hover, button[disabled]:hover, [disabled].btn-blue:hover, [disabled].btn-orange:hover, [disabled].btn-violet:hover, input.disabled:not([type='submit']):not([type='button']), select.disabled, .disabled.btn-green, input.disabled[type="submit"], input.disabled[type="button"], button.disabled, .disabled.btn-blue, .disabled.btn-orange, .disabled.btn-violet, input.disabled:hover:not([type='submit']):not([type='button']), select.disabled:hover, .disabled.btn-green:hover, input.disabled[type="submit"]:hover, input.disabled[type="button"]:hover, button.disabled:hover, .disabled.btn-blue:hover, .disabled.btn-orange:hover, .disabled.btn-violet:hover {
-  cursor: default;
-}
-input:not([type='button']):not([type='submit'])::placeholder, select::placeholder, .btn-green::placeholder, input[type="submit"]::placeholder, input[type="button"]::placeholder, button::placeholder, .btn-blue::placeholder, .btn-orange::placeholder, .btn-violet::placeholder {
-  font-size: 16px;
-  color: #6f6f6f;
-  transition: 0.2s ease all;
-}
-input.input-sm:not([type='submit']):not([type='button']), select.input-sm, .input-sm.btn-green, input.input-sm[type="submit"], input.input-sm[type="button"], button.input-sm, .input-sm.btn-blue, .input-sm.btn-orange, .input-sm.btn-violet {
-  padding: 2px 10px;
+  padding: 6px 10px;
 }
 
-input:not([type='submit']):not([type='button']), select {
-  background-color: #fff;
-  border: 1px solid #a2a2a2;
-  color: #090909;
-}
-input:focus:not([type='submit']):not([type='button']), select:focus {
-  border-color: #555555;
-}
-
-.btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange, .btn-violet {
+input[type="submit"], input[type="button"], button, *[class*='btn-'] {
   appearance: none;
   -webkit-appearance: none;
   border: 0;
@@ -2474,163 +2454,19 @@ input:focus:not([type='submit']):not([type='button']), select:focus {
   text-align: center;
   transition: all 0.2s ease-in-out;
 }
-.btn-green, input[type="submit"], input[type="button"], button, .btn-blue, .btn-orange, .btn-violet, .btn-green:hover, input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn-blue:hover, .btn-orange:hover, .btn-violet:hover {
-  color: #fff;
-}
-[disabled].btn-green, input[disabled][type="submit"], input[disabled][type="button"], button[disabled], [disabled].btn-blue, [disabled].btn-orange, [disabled].btn-violet, [disabled].btn-green:hover, input[disabled][type="submit"]:hover, input[disabled][type="button"]:hover, button[disabled]:hover, [disabled].btn-blue:hover, [disabled].btn-orange:hover, [disabled].btn-violet:hover, .disabled.btn-green, input.disabled[type="submit"], input.disabled[type="button"], button.disabled, .disabled.btn-blue, .disabled.btn-orange, .disabled.btn-violet, .disabled.btn-green:hover, input.disabled[type="submit"]:hover, input.disabled[type="button"]:hover, button.disabled:hover, .disabled.btn-blue:hover, .disabled.btn-orange:hover, .disabled.btn-violet:hover {
+input[disabled][type="submit"], input[disabled][type="button"], button[disabled], [disabled][class*='btn-'], input[disabled][type="submit"]:hover, input[disabled][type="button"]:hover, button[disabled]:hover, [disabled][class*='btn-']:hover {
   opacity: 0.5;
 }
 
-/*======== messages =========*/
-.msg-error, .msg-ok {
+input:not([type='submit']):not([type='button']) {
   border-width: 1px;
   border-style: solid;
-  padding: 20px;
 }
-.msg-error .msg-title, .msg-ok .msg-title {
-  font-weight: 500;
-}
-
-.msg-icon {
-  position: relative;
-  padding-left: 60px;
-}
-.msg-icon:before {
-  content: "";
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-.msg-error {
-  border-color: #F15A24;
-}
-.msg-error .msg-title {
-  color: #F15A24;
-}
-.msg-error.msg-icon:before {
-  width: 22.446px;
-  height: 22.446px;
-  background-position: -37px 0px;
-}
-
-.msg-ok {
-  border-color: #54CE63;
-}
-.msg-ok .msg-title {
-  color: #54CE63;
-}
-.msg-ok.msg-icon:before {
-  width: 22.45px;
-  height: 22.451px;
-  background-position: -14px 0px;
-}
-
-/*======== end of messages =========*/
-/*======== inputs =========*/
-.input-checkbox label {
-  position: relative;
-  padding-left: 30px;
-}
-.input-checkbox label:after {
-  content: "";
-  background-color: #fff;
-  border: 1px solid #a2a2a2;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 0;
-}
-.input-checkbox label:before {
-  content: "";
-  position: absolute;
-  left: 3px;
-  top: 5px;
-  z-index: 1;
-  width: 13.758px;
-  height: 9.899px;
-  background-position: 0px 0px;
-  opacity: 0;
-}
-.input-checkbox input[type=checkbox] {
-  display: none;
-}
-.input-checkbox input[type=checkbox]:checked + label:after {
-  border-color: #54CE63;
-}
-.input-checkbox input[type=checkbox]:checked + label:before {
-  opacity: 1;
-}
-
-.input-radio label {
-  position: relative;
-  padding-left: 30px;
-}
-.input-radio label:after {
-  content: "";
-  background-color: #fff;
-  border: 1px solid #a2a2a2;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 0;
-}
-.input-radio label:before {
-  content: "";
-  position: absolute;
-  left: 4px;
-  top: 4px;
-  z-index: 1;
-  background-color: #54CE63;
-  width: 12px;
-  height: 12px;
-  border-radius: 6px;
-  opacity: 0;
-}
-.input-radio input[type=radio] {
-  display: none;
-}
-.input-radio input[type=radio]:checked + label:after {
-  border-color: #54CE63;
-}
-.input-radio input[type=radio]:checked + label:before {
-  opacity: 1;
-}
-
 input:not([type='submit']):not([type='button']).input-line {
   border-width: 0 0 1px;
   border-radius: 0;
   padding-top: 0;
   padding-bottom: 0;
-}
-input:not([type='submit']):not([type='button']).input-placeholder--move:focus::placeholder {
-  position: relative;
-  top: -10px;
-  font-size: 12px;
-}
-
-select {
-  appearance: none;
-  -webkit-appearance: none;
-  position: relative;
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 0;
-  outline: none;
-  background-repeat: no-repeat;
-  background-position: 100% 50%;
-  /*ie fix*/
-  background-image: url('../i/select.png?1549473096');
-  padding: 6px;
-  padding-right: 24px;
-}
-select::-ms-expand {
-  display: none;
 }
 
 .input-size--sm {
@@ -2649,42 +2485,6 @@ select::-ms-expand {
   max-width: 100%;
 }
 
-/*======== end of inputs =========*/
-/*======== buttons =========*/
-.btn-green, input[type="submit"], input[type="button"], button {
-  background-color: #54CE63;
-}
-.btn-green:hover, input[type="submit"]:hover, input[type="button"]:hover, button:hover {
-  background-color: #35ba46;
-}
-
-.btn-blue {
-  background-color: #03A5ED;
-}
-.btn-blue:hover {
-  background-color: #0282bb;
-}
-
-.btn-orange {
-  background-color: #F15A24;
-}
-.btn-orange:hover {
-  background-color: #d4420e;
-}
-
-.btn-violet {
-  background-color: #7481b9;
-}
-.btn-violet:hover {
-  background-color: #5463a6;
-}
-
-.btn-simple {
-  border-radius: 0;
-  font-weight: 300;
-}
-
-/*======== end of buttons =========*/
 /* Icons */
 @font-face {
   font-family: 'iconfont';
@@ -3147,6 +2947,21 @@ body {
   border-color: #f0f0f0;
   color: #656d76;
 }
+.theme-light input:not([type='submit']):not([type='button']) {
+  border-color: rgba(101, 109, 118, 0.5);
+  background-color: #ffffff;
+  color: #656d76;
+}
+.theme-light input:not([type='submit']):not([type='button']).input-line {
+  background-color: transparent;
+}
+.theme-light input[type="submit"], .theme-light input[type="button"], .theme-light button, .theme-light .btn-blue {
+  color: #ffffff;
+  background-color: #03A5ED;
+}
+.theme-light input[type="submit"]:not([disabled]):hover, .theme-light input[type="button"]:not([disabled]):hover, .theme-light button:not([disabled]):hover, .theme-light .btn-blue:not([disabled]):hover {
+  background-color: #0282bb;
+}
 
 .theme-dark {
   background-color: #202020;
@@ -3180,4 +2995,19 @@ body {
   background-color: #292929;
   border-color: #202020;
   color: #eaeaea;
+}
+.theme-dark input:not([type='submit']):not([type='button']) {
+  border-color: rgba(234, 234, 234, 0.5);
+  background-color: #2f2f2f;
+  color: #eaeaea;
+}
+.theme-dark input:not([type='submit']):not([type='button']).input-line {
+  background-color: transparent;
+}
+.theme-dark input[type="submit"], .theme-dark input[type="button"], .theme-dark button, .theme-dark .btn-blue {
+  color: #e6e6e6;
+  background-color: #0282bb;
+}
+.theme-dark input[type="submit"]:not([disabled]):hover, .theme-dark input[type="button"]:not([disabled]):hover, .theme-dark button:not([disabled]):hover, .theme-dark .btn-blue:not([disabled]):hover {
+  background-color: #025f88;
 }
