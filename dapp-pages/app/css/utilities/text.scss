@@ -142,32 +142,27 @@ table
 
 		td, th {
 			padding: 5px $padding-fields-in;
-			border-bottom: 1px solid darken($c-background, 15%);
+			border-width: 0 0 1px;
+			border-style: solid;
+			transition: 0.2s ease all;
 		}
 
 		th{
 			@extend %text_uppercase;
 			text-align: left;
-			background-color: darken($c-background, 10%);
 			font-weight: 400;
-		}
-
-		td{
-			background-color: darken($c-background, 3%);
+			border-width: 1px 0;
 		}
 
 		caption{
 			text-align: left;
 			padding: 5px $padding-fields-in;
 			@extend %text_uppercase;
-			// background-color: darken($c-violet, 30%);
-			background-color: darken($c-background, 10%);
-			color: lighten($c-violet, 10%);
+			font-size: $font-size-base * 0.75;
 		}
 	}
 
 .table-responsive { @include responsiveTable($mq-tablet); }
-.table-striped tbody tr:nth-child(even) td{ background-color: darken($c-background, 5%); }
 
 .table-space--10 { border-spacing: 10px; }
 .table-fixed { table-layout: fixed }

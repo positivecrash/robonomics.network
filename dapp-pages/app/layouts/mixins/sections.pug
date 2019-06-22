@@ -4,15 +4,17 @@ mixin panelTop()
 			a(href="#")
 				+avatar('avatar-small align-vertical m-r-10')
 				b 0x40c5...c8d3
-		.panel-top--cell
+		.panel-top--cell.disabled(title="Only for Mainnet")
 			b 2,100
 			span.t-sm AIRA
-		.panel-top--cell
+		.panel-top--cell.disabled(title="Only for Mainnet")
 			b 0
-			span.t-sm AIRA KYC
+			span.t-sm AIRA ID
 		.panel-top--cell
 			b 0
 			span.t-sm XRT
+		.panel-top--cell
+			.label Sidechain
 
 		
 
@@ -98,6 +100,23 @@ mixin sidebar($navActive, $multilang)
 						a(href="#").active: span English
 						a(href="#"): span Русский
 
+		.sidebar-col.sidebar-col-padding.slide-right.close#sidebar-theme
+			.sidebar-col-in
+				section
+					nav.nav-vertical
+						a(href="#")
+							span.i-day.align-vertical
+							span.align-vertical Light mode
+
+						a(href="#")
+							span.i-night.align-vertical
+							span.align-vertical Night mode
+
+						a(href="#")
+							span.i-multicolor.align-vertical
+							span.align-vertical Multicolor
+
+
 		.sidebar-col.sidebar-col-padding.slide-right.close#sidebar-info
 			.sidebar-col-in
 				section
@@ -118,21 +137,7 @@ mixin sidebar($navActive, $multilang)
 							span.i-cursor.align-vertical
 							span.align-vertical aira.life
 
-		.sidebar-col.sidebar-col-padding.slide-right.close#sidebar-theme
-			.sidebar-col-in
-				section
-					nav.nav-vertical
-						a(href="#")
-							span.i-day.align-vertical
-							span.align-vertical Light mode
-
-						a(href="#")
-							span.i-night.align-vertical
-							span.align-vertical Night mode
-
-						a(href="#")
-							span.i-multicolor.align-vertical
-							span.align-vertical Multicolor
+		
 
 
 

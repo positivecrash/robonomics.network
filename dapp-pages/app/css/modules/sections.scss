@@ -3,11 +3,6 @@
   margin-bottom: $margin;
 }
 
-// @mixin sectionBorder($border, $back){
-//   outline: 1px solid rgba($border, .4);
-//   border: 20px solid $back;
-// }
-
 section
   {
     position: relative;
@@ -40,33 +35,6 @@ section
 
 
 
-// .section-color--highlight, .window-content-light
-//   {
-//     background-color: $c-text;
-//     color: $c-background;
-
-//     .section-border
-//       {
-//         @include sectionBorder($c-background, $c-text);
-//       }
-
-//     table th, table td { border-color: darken($c-text, 20%); }
-//     table th { background-color: darken($c-text, 10%); }
-//     table td { background-color: $c-text; }
-//     .table-striped tbody tr:nth-child(even) td{ background-color: darken($c-text, 5%); }
-//   }
-
-// .section-shade
-//   {
-//     box-shadow: 0 4px 8px rgba(0,0,0,.47);
-//   }
-
-// .section-border
-//   {
-//     @include sectionBorder($c-violet, $c-background);
-//     // @include sectionBorder($c-text, $c-background);
-//   }
-
 // .section-overflowtext
 //   {
 //     max-height: 250px;
@@ -74,13 +42,6 @@ section
 //     box-sizing: border-box;
 //   }
 
-
-.section-disabled
-  {
-    filter: grayscale(1);
-    opacity: 0.7;
-    pointer-events: none;
-  }
 
 .content-in > section{
   &:first-child { margin-top: 0; }

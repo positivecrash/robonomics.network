@@ -24,10 +24,18 @@
   	transition: all 0.2s ease-in-out;
 
   	&[disabled]{
+  		cursor: default;
+
 		&, &:hover
 			{
 				opacity: 0.5;
 			}
+	}
+
+	&.container-full{
+		max-width: 300px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 

@@ -2064,21 +2064,19 @@ table {
 }
 table td, table th {
   padding: 5px 10px;
-  border-bottom: 1px solid #090909;
+  border-width: 0 0 1px;
+  border-style: solid;
+  transition: 0.2s ease all;
 }
 table th {
   text-align: left;
-  background-color: #161616;
   font-weight: 400;
-}
-table td {
-  background-color: #272727;
+  border-width: 1px 0;
 }
 table caption {
   text-align: left;
   padding: 5px 10px;
-  background-color: #161616;
-  color: #96a0ca;
+  font-size: 12px;
 }
 
 .table-responsive td:before {
@@ -2098,10 +2096,6 @@ table caption {
   .table-responsive td:before {
     display: inline-block;
   }
-}
-
-.table-striped tbody tr:nth-child(even) td {
-  background-color: #222222;
 }
 
 .table-space--10 {
@@ -2454,8 +2448,16 @@ input[type="submit"], input[type="button"], button, *[class*='btn-'] {
   text-align: center;
   transition: all 0.2s ease-in-out;
 }
+input[disabled][type="submit"], input[disabled][type="button"], button[disabled], [disabled][class*='btn-'] {
+  cursor: default;
+}
 input[disabled][type="submit"], input[disabled][type="button"], button[disabled], [disabled][class*='btn-'], input[disabled][type="submit"]:hover, input[disabled][type="button"]:hover, button[disabled]:hover, [disabled][class*='btn-']:hover {
   opacity: 0.5;
+}
+input.container-full[type="submit"], input.container-full[type="button"], button.container-full, .container-full[class*='btn-'] {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 input:not([type='submit']):not([type='button']) {
@@ -2576,12 +2578,6 @@ section section {
 .section-size-sm section {
   margin-top: 5px;
   margin-bottom: 5px;
-}
-
-.section-disabled {
-  filter: grayscale(1);
-  opacity: 0.7;
-  pointer-events: none;
 }
 
 .content-in > section:first-child {
@@ -2884,6 +2880,12 @@ body {
   animation: 0.2s SlideRight 0.2s ease forwards,  0.2s FadeIn 0.2s ease forwards;
 }
 
+.disabled {
+  filter: grayscale(1);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .loading-logo {
   position: relative;
   padding-top: 20px;
@@ -2928,6 +2930,21 @@ body {
   border-color: #e0e0e0;
   color: #656d76;
 }
+.theme-light .sidebar-col nav a {
+  color: #656d76;
+}
+.theme-light .sidebar-col nav a:not([class*='active']):hover {
+  color: #03A5ED;
+}
+.theme-light .sidebar-col nav a.active {
+  opacity: 0.7;
+  cursor: default;
+}
+.theme-light .sidebar-i--lg.on {
+  background-color: #f6f6f6;
+  border-color: #6c757e;
+  color: #6c757e;
+}
 .theme-light .panel-top .panel-top--cell {
   border-color: #e0e0e0;
 }
@@ -2962,6 +2979,24 @@ body {
 .theme-light input[type="submit"]:not([disabled]):hover, .theme-light input[type="button"]:not([disabled]):hover, .theme-light button:not([disabled]):hover, .theme-light .btn-blue:not([disabled]):hover {
   background-color: #0282bb;
 }
+.theme-light .btn-green {
+  color: #ffffff;
+  background-color: #54CE63;
+}
+.theme-light .btn-green:not([disabled]):hover {
+  background-color: #35ba46;
+}
+.theme-light table td {
+  border-color: #e6e6e6;
+}
+.theme-light table th {
+  background-color: #f2f2f2;
+  color: #656d76;
+  border-color: #d9d9d9;
+}
+.theme-light table.table-hover tr:hover td {
+  background-color: #f7f7f7;
+}
 
 .theme-dark {
   background-color: #202020;
@@ -2976,6 +3011,21 @@ body {
   background-color: #262626;
   border-color: #101010;
   color: #eaeaea;
+}
+.theme-dark .sidebar-col nav a {
+  color: #eaeaea;
+}
+.theme-dark .sidebar-col nav a:not([class*='active']):hover {
+  color: #0282bb;
+}
+.theme-dark .sidebar-col nav a.active {
+  opacity: 0.7;
+  cursor: default;
+}
+.theme-dark .sidebar-i--lg.on {
+  background-color: #262626;
+  border-color: #f2f2f2;
+  color: #f2f2f2;
 }
 .theme-dark .panel-top .panel-top--cell {
   border-color: #101010;
@@ -3010,4 +3060,22 @@ body {
 }
 .theme-dark input[type="submit"]:not([disabled]):hover, .theme-dark input[type="button"]:not([disabled]):hover, .theme-dark button:not([disabled]):hover, .theme-dark .btn-blue:not([disabled]):hover {
   background-color: #025f88;
+}
+.theme-dark .btn-green {
+  color: #e6e6e6;
+  background-color: #35ba46;
+}
+.theme-dark .btn-green:not([disabled]):hover {
+  background-color: #2a9237;
+}
+.theme-dark table td {
+  border-color: #161616;
+}
+.theme-dark table th {
+  background-color: #222222;
+  color: #eaeaea;
+  border-color: #090909;
+}
+.theme-dark table.table-hover tr:hover td {
+  background-color: #272727;
 }

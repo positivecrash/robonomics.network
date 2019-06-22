@@ -53,6 +53,18 @@
         &.open{
           @include fullcoloring($section-background-dark, $section-border-dark, $section-textcolor-dark);
         }
+
+        nav a{
+          color: $body-textcolor;
+
+          &:not([class *= 'active']):hover { color: $blue; }
+          &.active { opacity: 0.7; cursor: default; }
+        }
+      }
+
+    .sidebar-i--lg.on
+      {
+        @include fullcoloring($section-background-dark, $section-textcolor, $section-textcolor);
       }
 
 
@@ -84,6 +96,9 @@
 
 
 
+
+
+
     input:not([type='submit']):not([type='button'])
     {
       border-color: rgba($body-textcolor, .5);
@@ -100,6 +115,23 @@
     input[type="submit"], input[type="button"], button, .btn-blue{
       @include btn($btn-textcolor, $blue);
     }
+
+    .btn-green{ @include btn($btn-textcolor, $green); }
+
+
+
+
+    table
+      {
+
+        td { border-color: darken($section-background, 10%); }
+        th {
+          background-color: darken($section-background, 5%);
+          color: $section-textcolor-dark;
+          border-color: darken($section-background, 15%);
+        }
+        &.table-hover tr:hover td { background-color: darken($section-background, 3%); }
+      }
 
   }
 

@@ -51,12 +51,6 @@
     transition: 0.2s all ease;
 
     &:last-child { margin-bottom: 0; }
-
-    // &.on{
-    //   background-color: $c-text;
-    //   color: $c-background;
-    // }
-
     &#sidebar-show--nav.on{ transform:rotate(-180deg); }
   }
 
@@ -65,9 +59,4 @@
     font-size: $font-size-base*2;
     margin-right: 0;
   }
-
-
-// .sidebar nav .active
-// 	{
-// 	}
 
