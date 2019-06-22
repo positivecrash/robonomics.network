@@ -314,25 +314,29 @@ function state(e, state){
 
 	if(state == 'true'){
 
-		e.classList.add(classSwitchOn);
-		open = document.querySelectorAll( e.getAttribute(showON) );
-		openEl(open[0]);
-
 		if( e.getAttribute(showOFF) ){
 			close = document.querySelectorAll( e.getAttribute(showOFF) );
 			closeEl(close[0]);
 		}
+
+		e.classList.add(classSwitchOn);
+		open = document.querySelectorAll( e.getAttribute(showON) );
+		openEl(open[0]);
+
+		
 	}
 	else{
-
-		e.classList.remove(classSwitchOn);
-		open = document.querySelectorAll( e.getAttribute(showON) );
-		closeEl(open[0]);
 
 		if( e.getAttribute(showOFF) ){
 			close = document.querySelectorAll( e.getAttribute(showOFF) );
 			openEl(close[0]);
 		}
+
+		e.classList.remove(classSwitchOn);
+		open = document.querySelectorAll( e.getAttribute(showON) );
+		closeEl(open[0]);
+
+		
 	}
 	
 }
@@ -344,14 +348,15 @@ function action(e){
 
 	e.classList.toggle(classSwitchOn);
 
-	open = document.querySelectorAll( e.getAttribute(showON) );
-	toggleEl(open[0]);
-
 	if ( e.getAttribute(showOFF) )
 		{
 			close = document.querySelectorAll( e.getAttribute(showOFF) );
 			toggleEl(close[0]);
 		}
+
+	open = document.querySelectorAll( e.getAttribute(showON) );
+	toggleEl(open[0]);
+	
 
 	if( e.getAttribute('id') )
 		setCookie(e.getAttribute('id'), e.classList.contains(classSwitchOn));
