@@ -1840,7 +1840,7 @@ body, input:not([type='submit']):not([type='button']), input[type='submit'], inp
   letter-spacing: 0;
 }
 
-a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line, .btn-line.btn-green, .btn-line--orange, .header-top__nav a, #header-link__down a, #header-banner--text, .link-social, .sec-synopsis, .section__contents > .secw-narrow a, a:hover, input[type='submit']:hover, input[type='button']:hover, button:hover, input.btn-red:hover, input.btn-blue:hover, .btn-line:hover, .btn-line--orange:hover, #header-link__down a:hover, #header-banner--text:hover, .link-social:hover, .sec-synopsis:hover, .section__contents > .secw-narrow a:hover, a:focus, input[type='submit']:focus, input[type='button']:focus, button:focus, input.btn-red:focus, input.btn-blue:focus, .btn-line:focus, .btn-line--orange:focus, #header-link__down a:focus, #header-banner--text:focus, .link-social:focus, .sec-synopsis:focus, .section__contents > .secw-narrow a:focus, a:visited, input[type='submit']:visited, input[type='button']:visited, button:visited, input.btn-red:visited, input.btn-blue:visited, .btn-line:visited, .btn-line--orange:visited, #header-link__down a:visited, #header-banner--text:visited, .link-social:visited, .sec-synopsis:visited, .section__contents > .secw-narrow a:visited {
+a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line, .btn-line.btn-green, .btn-line--orange, .header-top__nav a, #header-banner--text, .link-social, .sec-synopsis, .section__contents > .secw-narrow a, a:hover, input[type='submit']:hover, input[type='button']:hover, button:hover, input.btn-red:hover, input.btn-blue:hover, .btn-line:hover, .btn-line--orange:hover, #header-banner--text:hover, .link-social:hover, .sec-synopsis:hover, .section__contents > .secw-narrow a:hover, a:focus, input[type='submit']:focus, input[type='button']:focus, button:focus, input.btn-red:focus, input.btn-blue:focus, .btn-line:focus, .btn-line--orange:focus, #header-banner--text:focus, .link-social:focus, .sec-synopsis:focus, .section__contents > .secw-narrow a:focus, a:visited, input[type='submit']:visited, input[type='button']:visited, button:visited, input.btn-red:visited, input.btn-blue:visited, .btn-line:visited, .btn-line--orange:visited, #header-banner--text:visited, .link-social:visited, .sec-synopsis:visited, .section__contents > .secw-narrow a:visited {
   text-decoration: none;
   text-decoration: none !important;
 }
@@ -1864,7 +1864,7 @@ a, input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, i
   z-index: 1;
 }
 
-.t-uppercase, table th, input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line, .msg_ok, .msg_error, .msg_wait, #header-link__down a, #header-banner--text, .roadmap-title__in div, .timeline-type, .section__contents > .secw-narrow a {
+.t-uppercase, table th, input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line, .msg_ok, .msg_error, .msg_wait, #header-banner--text, .roadmap-title__in div, .timeline-type, .section__contents > .secw-narrow a {
   text-transform: uppercase;
   letter-spacing: 1.2px;
 }
@@ -2283,7 +2283,7 @@ a.label-blue:hover, a.label-dark:hover {
   background-color: #000;
 }
 
-.hamburger, .nav-mobilehide, #logo-ethereum, #header-logo-robonomics, .logo-robonomics .dot, #header-index .snapsvgoutside-text span, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .js-listexpand .hidden {
+.hamburger, .nav-mobilehide, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .js-listexpand .hidden {
   visibility: hidden;
   opacity: 0;
 }
@@ -3051,6 +3051,20 @@ header[role='banner'] .el-social {
   transform-origin: 0 0;
 }
 
+#header-banner--text {
+  display: block;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-color: #F15A24;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+#header-banner--text span.secw-base {
+  display: block;
+  text-align: center;
+}
+
 /*====== end of Top section ======*/
 /*====== Header navigation ======*/
 .hamburger {
@@ -3156,356 +3170,6 @@ header[role='banner'] .el-social {
 }
 
 /*====== end of Header navigation ======*/
-/*====== MIDDLE SECTION ======*/
-.header-mid {
-  position: relative;
-  box-sizing: border-box;
-  overflow: hidden;
-  padding-top: 67.5px;
-  padding-bottom: 67.5px;
-}
-
-#header-index .header-mid {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-#header-index .header-mid h1 {
-  text-align: center;
-}
-
-#logo-ethereum {
-  position: absolute;
-  width: 37px;
-  top: 17px;
-  left: 50%;
-  margin-left: -198px;
-  animation: 0.5s FadeIn 1s ease forwards;
-}
-@media screen and (max-width: 576px) {
-  #logo-ethereum {
-    display: none;
-  }
-}
-
-/*====== end of MIDDLE SECTION ======*/
-/*====== LOGO ROBONOMICS ======*/
-@keyframes logo-triangle-1 {
-  0% {
-    fill: #03A5ED;
-  }
-  25% {
-    fill: #03A5ED;
-  }
-  50% {
-    fill: #03A5ED;
-  }
-  75% {
-    fill: #B5C0F1;
-  }
-  100% {
-    fill: #03A5ED;
-  }
-}
-@keyframes logo-triangle-2 {
-  0% {
-    fill: #B5C0F1;
-  }
-  25% {
-    fill: #E0BDED;
-  }
-  50% {
-    fill: #03A5ED;
-  }
-  75% {
-    fill: #03A5ED;
-  }
-  100% {
-    fill: #B5C0F1;
-  }
-}
-@keyframes logo-triangle-3 {
-  0% {
-    fill: #42475F;
-  }
-  25% {
-    fill: #B5C0F1;
-  }
-  50% {
-    fill: #B5C0F1;
-  }
-  75% {
-    fill: #282B38;
-  }
-  100% {
-    fill: #42475F;
-  }
-}
-#header-logo-robonomics {
-  animation: 0.5s FadeIn 1s ease forwards;
-}
-
-.logo-robonomics .dot {
-  fill: #03A5ED;
-  animation: 0.5s FadeIn 4s ease forwards;
-}
-.logo-robonomics .line {
-  fill: #fff;
-  stroke: #03A5ED;
-  stroke-miterlimit: 10;
-  stroke-dasharray: 700;
-  stroke-dashoffset: 700;
-  animation: 1s DrawSvgPath 3s ease-in-out forwards;
-}
-.logo-robonomics .triangle-1 {
-  fill: #03A5ED;
-  animation: 15s logo-triangle-1 1s linear infinite;
-}
-.logo-robonomics .triangle-2 {
-  fill: #B5C0F1;
-  animation: 15s logo-triangle-2 1s linear infinite;
-}
-.logo-robonomics .triangle-3 {
-  fill: #42475F;
-  animation: 15s logo-triangle-3 1s linear infinite;
-}
-
-/*====== end of LOGO ROBONOMICS ======*/
-/*====== TITLES ======*/
-#header-title {
-  margin-top: 97px;
-}
-#header-title h1 {
-  color: #42475F;
-  font-size: 38px;
-  line-height: 1.2;
-  font-weight: 400;
-  letter-spacing: 3px;
-  background-color: #fff;
-  display: inline-block;
-  padding: 6px 20px 20px;
-  margin-bottom: 0;
-}
-@media screen and (max-width: 576px) {
-  #header-title h1 {
-    font-size: 32px;
-  }
-}
-
-#header-subtitle {
-  color: #42475F;
-  font-weight: 300;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/*====== end of TITLES ======*/
-#header-index {
-  text-align: center;
-  min-height: 800px;
-  padding-top: 110px;
-  padding-bottom: 47px;
-}
-@media screen and (max-width: 576px) {
-  #header-index {
-    height: auto;
-    padding-bottom: 114px;
-  }
-}
-#header-index #header-top {
-  animation-delay: 4s;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-#header-index .snapsvgoutside-text {
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-#header-index .snapsvgoutside-text span {
-  background-color: #fff;
-  animation: FadeIn ease-in-out forwards;
-  animation-duration: 0.4s;
-}
-@media screen and (max-width: 920px) {
-  #header-index .snapsvgoutside-text {
-    display: none;
-  }
-}
-#header-index #header-index__ethereum {
-  top: 14px;
-}
-#header-index #header-index__ethereum span:nth-child(1) {
-  animation-delay: 2.2s;
-}
-#header-index #header-index__ethereum span:nth-child(2) {
-  animation-delay: 2.4s;
-}
-#header-index #header-index__ethereum span:nth-child(3) {
-  animation-delay: 2.6s;
-}
-#header-index #header-index__ethereum span:nth-child(4) {
-  animation-delay: 2.8s;
-}
-#header-index #header-index__ethereum span:nth-child(5) {
-  animation-delay: 3s;
-}
-#header-index #header-index__ethereum span:nth-child(6) {
-  animation-delay: 3.2s;
-}
-#header-index #header-index__ethereum span:nth-child(7) {
-  animation-delay: 3.4s;
-}
-#header-index #header-index__ethereum span:nth-child(8) {
-  animation-delay: 3.6s;
-}
-#header-index #header-index__robonomics {
-  top: 196px;
-}
-#header-index #header-index__robonomics span:nth-child(1) {
-  animation-delay: 2.2s;
-}
-#header-index #header-index__robonomics span:nth-child(2) {
-  animation-delay: 2.4s;
-}
-#header-index #header-index__robonomics span:nth-child(3) {
-  animation-delay: 2.6s;
-}
-#header-index #header-index__robonomics span:nth-child(4) {
-  animation-delay: 2.8s;
-}
-#header-index #header-index__robonomics span:nth-child(5) {
-  animation-delay: 3s;
-}
-#header-index #header-index__robonomics span:nth-child(6) {
-  animation-delay: 3.2s;
-}
-#header-index #header-index__robonomics span:nth-child(7) {
-  animation-delay: 3.4s;
-}
-#header-index #header-index__robonomics span:nth-child(8) {
-  animation-delay: 3.6s;
-}
-#header-index #header-index__robonomics span:nth-child(9) {
-  animation-delay: 3.8s;
-}
-#header-index #header-index__robonomics span:nth-child(10) {
-  animation-delay: 4s;
-}
-#header-index #snapsvg-index {
-  height: auto;
-  bottom: 0;
-}
-
-#header-link__down {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 50px;
-  background-color: #fff;
-}
-#header-link__down a {
-  font-size: 20px;
-  line-height: 1;
-  color: #F15A24;
-  display: inline-block;
-  position: relative;
-  padding-bottom: 33px;
-}
-#header-link__down a:before, #header-link__down a:after {
-  content: "";
-  height: 1px;
-  background-color: #F15A24;
-  position: absolute;
-  width: 32px;
-  right: auto;
-  top: 40px;
-}
-#header-link__down a:before {
-  right: 50%;
-  transform: rotate(38deg);
-  margin-right: -3.5px;
-}
-#header-link__down a:after {
-  left: 50%;
-  transform: rotate(-38deg);
-  margin-left: -3.5px;
-}
-
-#header-banner--text {
-  display: block;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  background-color: #F15A24;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
-}
-#header-banner--text span.secw-base {
-  display: block;
-  text-align: center;
-}
-
-#header-btns {
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
-}
-#header-btns a {
-  display: block;
-}
-
-.header-screenstick {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: table;
-  width: 100%;
-}
-.header-screenstick > a {
-  display: table-cell;
-  vertical-align: middle;
-}
-.header-screenstick > a, .header-screenstick > a:hover {
-  color: #fff;
-}
-.header-screenstick > a:nth-child(1) {
-  background-color: #03A5ED;
-}
-.header-screenstick > a:nth-child(2) {
-  background-color: #42475F;
-}
-.header-screenstick > a:nth-child(3) {
-  background-color: #c22d90;
-}
-.header-screenstick > a:nth-child(4) {
-  background-color: #5CA870;
-}
-@media screen and (max-width: 576px) {
-  .header-screenstick > a {
-    vertical-align: top;
-  }
-}
-.header-screenstick span.t-small {
-  display: block;
-  margin-bottom: 3px;
-}
-.header-screenstick .small {
-  display: none;
-}
-@media screen and (max-width: 576px) {
-  .header-screenstick .small {
-    display: inline-block;
-  }
-}
-@media screen and (max-width: 576px) {
-  .header-screenstick .large {
-    display: none;
-  }
-}
-
 footer[role='contentinfo'] {
   font-weight: 300;
 }

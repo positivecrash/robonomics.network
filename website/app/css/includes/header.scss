@@ -1,7 +1,6 @@
 header[role='banner']
   {
     position: relative;
-    // padding-bottom: $margin-sec;
 
     .el-social
       {
@@ -17,25 +16,6 @@ header[role='banner']
     position: relative;
     z-index: 1000;
     background-color: #fff;
-
-    // &.fixed
-    //   {
-    //     position: fixed;
-    //     background-color: #000;
-    //     top: 0;
-    //     left: 0;
-    //     right: 0;
-
-    //     &, .header-top__nav > a , .header-top__nav .dropdown > a
-    //     { color: #fff; }
-
-    //     .header-top__nav .dropdown:hover > a
-    //     { color: $c-orange; }
-
-    //     .header-top__sec { padding: 4px 0; }
-    //     .hamburger .line { background-color: #fff; }
-    //     .hamburger.opened { top: 4px; }
-    //   }
 
 
     #header-top--nav
@@ -162,6 +142,28 @@ header[role='banner']
  
   }
 
+
+
+#header-banner--text
+  {
+    display: block;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    background-color: $c-orange;
+    color: #fff;
+    @extend %link_noline;
+
+    @extend %text_uppercase;
+    font-size: 14px;
+    font-weight: 500;
+
+    span.secw-base
+      {
+        display: block;
+        text-align: center;
+      }
+  }
 
 /*====== end of Top section ======*/
 
@@ -318,387 +320,3 @@ header[role='banner']
   }
 
 /*====== end of Header navigation ======*/
-
-
-
-
-
-
-/*====== MIDDLE SECTION ======*/
-.header-mid
-  {
-    position: relative;
-    box-sizing: border-box;
-    overflow: hidden;
-
-    padding-top: $margin-sec;
-    padding-bottom: $margin-sec;
-  }
-
-#header-index .header-mid
-  {
-    // padding-top: 100px;
-    padding-top: 0;
-    // padding-bottom: 100px;
-    padding-bottom: 0;
-
-    h1 { text-align: center; }
-
-    // @include mobile(){
-    //   padding-bottom: $margin-sec;
-    // }
-  }
-
-
-#logo-ethereum
-  {
-    position: absolute;
-    width: 37px;
-    top: 17px;
-    left: 50%;
-    margin-left: -198px;
-
-    @extend %FadeOut;
-    animation: 0.5s FadeIn 1s ease forwards;
-
-    @include mobile(){
-      display: none;
-    }
-  }
-
-/*====== end of MIDDLE SECTION ======*/
-
-
-
-
-
-
-
-/*====== LOGO ROBONOMICS ======*/
-
-@keyframes logo-triangle-1
-  {
-    0% { fill: $c-blue; }
-    25% { fill: $c-blue; }
-    50% { fill: $c-blue; }
-    75% { fill: $c-violet-light; }
-    100% { fill: $c-blue; }
-  }
-
-@keyframes logo-triangle-2
-  {
-    0% { fill: $c-violet-light; }
-    25% { fill: #E0BDED; }
-    50% { fill: $c-blue; }
-    75% { fill: $c-blue; }
-    100% { fill: $c-violet-light; }
-  }
-
-@keyframes logo-triangle-3
-  {
-    0% { fill: $c-violet-mid; }
-    25% { fill: $c-violet-light; }
-    50% { fill: $c-violet-light; }
-    75% { fill: $c-violet-dark; }
-    100% { fill: $c-violet-mid; }
-  }
-
-$duration: 15s;
-$delay: 1s;
-
-#header-logo-robonomics
-  {
-    @extend %FadeOut;
-    animation: 0.5s FadeIn 1s ease forwards;
-  }
-
-.logo-robonomics
-  {
-
-    .dot
-      {
-        fill: $c-blue;
-
-        @extend %FadeOut;
-        animation: 0.5s FadeIn 4s ease forwards;
-      }
-
-    .line
-      {
-        fill: #fff;
-        stroke: #03A5ED;
-        stroke-miterlimit:10;
-
-        stroke-dasharray: 700;
-        stroke-dashoffset: 700;
-        animation: 1s DrawSvgPath 3s ease-in-out forwards; 
-      }
-
-    .triangle-1
-      {
-        fill: $c-blue;
-        animation: $duration logo-triangle-1 $delay linear infinite;
-      }
-
-    .triangle-2
-      {
-        fill: $c-violet-light;
-        animation: $duration logo-triangle-2 $delay linear infinite;
-      }
-
-    .triangle-3
-      {
-        fill: $c-violet-mid;
-        animation: $duration logo-triangle-3 $delay linear infinite;
-      }
-  }
-
-
-/*====== end of LOGO ROBONOMICS ======*/
-
-
-
-/*====== TITLES ======*/
-
-#header-title
-  {
-    margin-top: 97px;
-
-    h1
-      {
-        color: $c-violet-mid;
-        font-size: 38px;
-        line-height: 1.2;
-        font-weight: 400;
-        letter-spacing: 3px;
-        background-color: #fff;
-
-        display: inline-block;
-        padding: 6px 20px 20px;
-        margin-bottom: 0;
-
-        @include mobile(){
-          font-size: 32px;
-        }
-        
-      }
-  }
-
-
-#header-subtitle
-  {
-    color: $c-violet-mid;
-    font-weight: 300;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-/*====== end of TITLES ======*/
-
-
-
-
-#header-index
-  {
-    text-align: center;
-    min-height: 800px;
-    padding-top: 110px;
-    // padding-bottom: 120px;
-    padding-bottom: 47px;
-
-    @include mobile(){
-      height: auto;
-      padding-bottom: 114px;
-    }
-    
-    #header-top
-      {
-        animation-delay: 4s;
-
-        position: absolute;
-        top: 0;
-        width: 100%;
-      }
-
-    .snapsvgoutside-text
-      {
-        position: absolute;
-        left: 0;
-        right: 0;
-
-        span {
-          @extend %FadeOut;
-          background-color: #fff;
-          animation: FadeIn ease-in-out forwards;
-          animation-duration: 0.4s;
-        }
-
-        @media screen and (max-width: $mq-menuhide) 
-          {
-            display: none
-          }
-      }
-
-    #header-index__ethereum
-      {
-        // top: 10px;
-        top: 14px;
-
-        @for $i from 1 through 8
-        {
-          span:nth-child(#{$i})
-            {
-              animation-delay: #{2+$i*0.2}s;
-            }
-        }
-      }
-
-    #header-index__robonomics
-      {
-        // color: $c-orange;
-        // top: 188px;
-        top: 196px;
-
-        @for $i from 1 through 10
-        {
-          span:nth-child(#{$i})
-            {
-              animation-delay: #{2+$i*0.2}s;
-            }
-        }
-      }
-
-
-    #snapsvg-index
-      {
-        height: auto;
-        bottom: 0;
-        // bottom: 128px;
-      }
-  }
-
-
-#header-link__down
-  {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 50px;
-    background-color: #fff;
-
-    a
-      {
-        font-size: 20px;
-        line-height: 1;
-        @extend %link_noline;
-        @extend %text_uppercase;
-        color: $c-orange;
-        display: inline-block;
-        position: relative;
-        padding-bottom: 33px;
-
-
-        &:before, &:after
-          {
-            content:"";
-            height: 1px;
-            background-color: $c-orange;
-            position: absolute;
-
-            width: 32px;
-            right: auto;
-            top: 40px;
-          }
-
-          &:before
-            {
-              right: 50%;
-              transform: rotate(38deg);
-              margin-right: -3.5px;
-            }
-
-          &:after
-            {
-              left: 50%;
-              transform: rotate(-38deg);
-              margin-left: -3.5px;
-            }
-      }
-  }
-
-
-
-#header-banner--text
-  {
-    display: block;
-    padding-top: 4px;
-    padding-bottom: 4px;
-
-    background-color: $c-orange;
-    color: #fff;
-    @extend %link_noline;
-
-    @extend %text_uppercase;
-    font-size: 14px;
-    font-weight: 500;
-
-    span.secw-base
-      {
-        display: block;
-        text-align: center;
-      }
-  }
-
-
-
-#header-btns
-  {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-
-    a{
-      display: block;
-    }
-  }
-
-
-.header-screenstick
-  {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    display: table;
-    width: 100%;
-
-    & > a{
-      display: table-cell;
-      vertical-align: middle;
-      &, &:hover { color: #fff; }
-
-      &:nth-child(1){ background-color: $c-blue; }
-      &:nth-child(2){ background-color: $c-violet-mid; }
-      &:nth-child(3){ background-color: #c22d90; }
-      &:nth-child(4){ background-color: #5CA870; }
-
-      @include mobile(){ vertical-align: top; }
-    }
-
-    span.t-small{
-      display: block;
-      margin-bottom: 3px;
-    }
-
-
-    .small{
-      display: none;
-      @include mobile(){ display: inline-block; }
-    }
-
-    .large{
-      @include mobile(){ display: none; }
-    }
-  }
