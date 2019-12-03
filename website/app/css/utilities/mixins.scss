@@ -1,59 +1,6 @@
-@mixin rem($property, $px1, $px2:'', $px3:'', $px4:'', $important: 'false')
-	{
-		$px_line: $px1;
-		$rem_line: '';
-
-		@if ($px1 != 'auto'){
-			$px_line: $px_line + px; 
-			$rem_line: $px1/16 + rem; 
-		}
-		@else{
-			$rem_line: $rem_line + 'auto';
-		}
-
-		@if ($px2 != '')
-		{ 
-			$px_line: $px_line + ' ' + $px2;
-			$rem_line: $rem_line + ' ';
-
-			@if ($px2 != 'auto'){
-				$px_line: $px_line + px; 
-				$rem_line: $rem_line + $px2/16 + rem; 
-			}
-			@else{
-				$rem_line: $rem_line + 'auto';
-			}
-		}
-		
-
-		@if ($px3 != '')
-		{ 
-			$px_line: $px_line + ' ' + $px3 + px; 
-			$rem_line: $rem_line + ' ' + $px3/16 + rem; 
-		}
-		
-
-		@if ($px4 != '') 
-		{ 
-			$px_line: $px_line + ' ' + $px4 + px; 
-			$rem_line: $rem_line + ' ' + $px4/16 + rem; 
-		}
-
-		@if($important == 'true')
-		{
-			$px_line: $px_line + ' !important';
-			$rem_line: $rem_line + ' !important';
-		}
-		
-
-	  	#{$property}: $px_line; 
-	  	#{$property}: $rem_line;
-	}
-
-
-
 @mixin secw($w)
 	{
+		width: 100%;
 		max-width: $w - $padding-fields * 2; 
 		padding-left: $padding-fields; 
 		padding-right: $padding-fields; 

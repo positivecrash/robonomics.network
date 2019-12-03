@@ -22,7 +22,7 @@ header[role='banner']
       {
         display: table;
         width: 100%;
-        padding-top: $padding-fields;
+        height: 10vh;
      }
   }
 
@@ -36,10 +36,12 @@ header[role='banner']
 
 #header-top__logo
   {
+    display: block;
+
     img
       {
         display: block;
-        height: 45px;
+        height: 3rem;
       }
   }
 
@@ -49,7 +51,7 @@ header[role='banner']
     & > *
       {
         display: inline-block;
-        margin-right: 60px;
+        margin-right: 3rem;
 
         &:last-child
           {
@@ -60,11 +62,10 @@ header[role='banner']
     a
       {
         @extend %link_noline;
-        font-weight: 500;
+        font-weight: 400;
         text-transform: uppercase;
         line-height: 1;
         letter-spacing: 1px;
-        color: $c-violet-mid;
 
         &, &:hover
           {
@@ -84,7 +85,7 @@ header[role='banner']
               {
                 content:"";
                 height: 1px;
-                background-color: $c-violet-dark;
+                background-color: $c-link;
                 position: absolute;
                 bottom: -2px;
                 transition: all 0.2s ease-in-out;
@@ -320,3 +321,21 @@ header[role='banner']
   }
 
 /*====== end of Header navigation ======*/
+
+
+
+
+#header-index--middle
+  {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+
+
+#header-index--bottom
+  {
+    background: $c-orange;
+    height: 30vh;
+  }
+

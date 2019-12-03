@@ -1889,30 +1889,29 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 2px;
+  font-weight: 400;
 }
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
   margin-top: 0;
 }
 
 h2 {
-  font-size: 28px;
+  font-size: -5.8rem;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: -9.8rem;
 }
 
 h4 {
-  font-size: 20px;
+  font-size: -13.8rem;
 }
 
 h1 {
-  font-size: 36px;
-  font-weight: 500;
+  font-size: 2.2rem;
 }
 
 h2, h3 {
-  font-weight: 300;
   color: #F15A24;
 }
 h2.title-dark, h3.title-dark {
@@ -1920,11 +1919,11 @@ h2.title-dark, h3.title-dark {
 }
 
 h2.title-dark {
-  font-size: 32px;
+  font-size: -1.8rem;
 }
 
 h3.title-dark {
-  font-size: 28px;
+  font-size: -5.8rem;
 }
 
 h5 {
@@ -2981,7 +2980,7 @@ header[role='banner'] .el-social {
 #header-top #header-top--nav {
   display: table;
   width: 100%;
-  padding-top: 20px;
+  height: 10vh;
 }
 
 .header-top__sec {
@@ -2989,24 +2988,26 @@ header[role='banner'] .el-social {
   vertical-align: middle;
 }
 
+#header-top__logo {
+  display: block;
+}
 #header-top__logo img {
   display: block;
-  height: 45px;
+  height: 3rem;
 }
 
 .header-top__nav > * {
   display: inline-block;
-  margin-right: 60px;
+  margin-right: 3rem;
 }
 .header-top__nav > *:last-child {
   margin-right: 0;
 }
 .header-top__nav a {
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 1px;
-  color: #42475F;
 }
 .header-top__nav a, .header-top__nav a:hover {
   text-decoration: none !important;
@@ -3017,7 +3018,7 @@ header[role='banner'] .el-social {
 .header-top__nav .dropdown > a:before, .header-top__nav .dropdown > a:after {
   content: "";
   height: 1px;
-  background-color: #282B38;
+  background-color: #03A5ED;
   position: absolute;
   bottom: -2px;
   transition: all 0.2s ease-in-out;
@@ -3170,6 +3171,17 @@ header[role='banner'] .el-social {
 }
 
 /*====== end of Header navigation ======*/
+#header-index--middle {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+#header-index--bottom {
+  background: #F15A24;
+  height: 30vh;
+}
+
 footer[role='contentinfo'] {
   font-weight: 300;
 }
@@ -4375,6 +4387,7 @@ body {
 
 /*====== Set width of container ======*/
 .secw-narrow {
+  width: 100%;
   max-width: 680px;
   padding-left: 20px;
   padding-right: 20px;
@@ -4384,6 +4397,7 @@ body {
 }
 
 .secw-base {
+  width: 100%;
   max-width: 1240px;
   padding-left: 20px;
   padding-right: 20px;
@@ -4576,7 +4590,7 @@ section section li:last-child, section section p:last-child, section section blo
 }
 .sec-orange h2 {
   font-weight: 500;
-  font-size: 28px;
+  font-size: -5.8rem;
 }
 .sec-orange a {
   font-size: 20px;
