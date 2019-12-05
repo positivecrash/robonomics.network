@@ -24,6 +24,62 @@
 
 
 
+.sheme-main
+	{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		align-content: stretch;
+
+		width: 100%;
+
+		.sheme-block{
+			width: (100%/5);
+			// min-width: 10rem;
+			min-height: 7.5rem;
+		}
+	}
+
+.sheme-block
+	{
+		position: relative;
+		overflow: hidden;
+
+		&:before{
+			content: "";
+			width: 200%;
+			height: 200%;
+
+			position: absolute;
+			z-index: 0;
+			top: -50%;
+			left: -50%;
+			right: 0;
+			bottom: 0;
+
+			background: linear-gradient(35deg, rgb(80, 220, 255), rgb(250, 90, 255));
+			animation: 4s 0.2s Gradient ease-out infinite;
+		}
+	}
+
+.sheme-block--content
+	{
+		background-color: #fff;
+
+		position: absolute;
+		z-index: 1;
+		top: 0.2rem;
+		left: 0.2rem;
+		right: 0.2rem;
+		bottom: 0.2rem;
+
+		display: flex;
+    	align-items: center;
+    	justify-content: center;
+	}
+
+
+
 .roadmap
 	{
 		margin-top: $margin-sec * 0.7;

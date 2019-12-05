@@ -2328,6 +2328,17 @@ a.label-blue:hover, a.label-dark:hover {
     transform: translateY(0);
   }
 }
+@keyframes Gradient {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(135deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 /*======== FORMS VARIABLES & MIXINS & EXTENDS =========*/
 input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line {
   font-size: 1.2rem;
@@ -3212,17 +3223,17 @@ header[role='banner'] .el-social {
 }
 
 /*====== end of Header navigation ======*/
-#header-index--middle {
-  height: 60vh;
+#header-index--middle, #header-index--bottom {
   display: flex;
   align-items: center;
 }
 
+#header-index--middle {
+  height: 60vh;
+}
+
 #header-index--bottom {
-  background: #F15A24;
   height: 30vh;
-  display: flex;
-  align-items: center;
 }
 
 footer[role='contentinfo'] {
@@ -4109,6 +4120,49 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
   vertical-align: middle;
   margin-right: 1.5rem;
   margin-bottom: 0.5rem;
+}
+
+.sheme-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+  width: 100%;
+}
+.sheme-main .sheme-block {
+  width: 20%;
+  min-height: 7.5rem;
+}
+
+.sheme-block {
+  position: relative;
+  overflow: hidden;
+}
+.sheme-block:before {
+  content: "";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  z-index: 0;
+  top: -50%;
+  left: -50%;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(35deg, #50dcff, #fa5aff);
+  animation: 4s 0.2s Gradient ease-out infinite;
+}
+
+.sheme-block--content {
+  background-color: #fff;
+  position: absolute;
+  z-index: 1;
+  top: 0.2rem;
+  left: 0.2rem;
+  right: 0.2rem;
+  bottom: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .roadmap {

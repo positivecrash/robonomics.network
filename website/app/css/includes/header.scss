@@ -322,19 +322,21 @@ header[role='banner']
 
 /*====== end of Header navigation ======*/
 
-#header-index--middle
+#header-index--middle, #header-index--bottom
   {
-    height: 60vh;
     display: flex;
     align-items: center;
   }
 
 
+#header-index--middle
+  {
+    height: 60vh;
+  }
+
+
 #header-index--bottom
   {
-    background: $c-orange;
     height: 30vh;
-    display: flex;
-    align-items: center;
   }
 
