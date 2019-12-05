@@ -1,3 +1,29 @@
+#index-header_text {
+	max-width: 26rem;
+}
+
+
+#index-header_logos
+	{
+		transition: 0.2s all ease-out;
+		filter: grayscale(100%);
+		opacity: .6;
+
+		&:hover{
+			filter: grayscale(0%);
+			opacity: 1;
+		}
+
+		span{
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 1.5rem;
+			margin-bottom: 0.5rem;
+		}
+	}
+
+
+
 .roadmap
 	{
 		margin-top: $margin-sec * 0.7;
@@ -101,15 +127,15 @@
 
 
 
-#index-releaseLink
-	{
-		position: relative;
-		top: -48px;
-		background: linear-gradient(rgba($c-gray-dark, 0), $c-gray-dark);
-		padding-top: 10px;
-		padding-bottom: 10px;
+// #index-releaseLink
+// 	{
+// 		position: relative;
+// 		top: -48px;
+// 		background: linear-gradient(rgba($c-gray-dark, 0), $c-gray-dark);
+// 		padding-top: 10px;
+// 		padding-bottom: 10px;
 
-		.btn__text_orange{
-			padding-left: 30px;
-		}
-	}
+// 		.btn__text_orange{
+// 			padding-left: 30px;
+// 		}
+// 	}

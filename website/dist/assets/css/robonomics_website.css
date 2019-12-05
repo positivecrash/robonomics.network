@@ -1833,7 +1833,7 @@ input, select {
 /*====== Classes ======*/
 body, input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line, input:not([type='button']):not([type='submit'])::placeholder, input[type='submit']::placeholder, input[type='button']::placeholder, button::placeholder, a.btn-green::placeholder, a.btn-red::placeholder, input.btn-red::placeholder, button.btn-red::placeholder, a.btn-blue::placeholder, input.btn-blue::placeholder, button.btn-blue::placeholder, .btn-line::placeholder, .msg_ok, .msg_error, .msg_wait {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 1.2rem;
   line-height: 1.5;
   font-weight: 300;
   word-spacing: normal;
@@ -1883,8 +1883,8 @@ html {
 /*====== Text sizes & Headers ======*/
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
-  margin-top: 67.5px;
-  margin-bottom: 13.5px;
+  margin-top: 4.5rem;
+  margin-bottom: 0.9rem;
   text-align: left;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1896,61 +1896,61 @@ h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, 
 }
 
 h2 {
-  font-size: -5.8rem;
+  font-size: -5.4rem;
 }
 
 h3 {
-  font-size: -9.8rem;
+  font-size: -9.4rem;
 }
 
 h4 {
-  font-size: -13.8rem;
+  font-size: -13.4rem;
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 2.6rem;
 }
 
 h2, h3 {
   color: #F15A24;
 }
 h2.title-dark, h3.title-dark {
-  color: #000;
+  color: #474747;
 }
 
 h2.title-dark {
-  font-size: -1.8rem;
+  font-size: -1.4rem;
 }
 
 h3.title-dark {
-  font-size: -5.8rem;
+  font-size: -5.4rem;
 }
 
 h5 {
-  font-size: 18px;
+  font-size: 1.2rem;
 }
 
 .t-superbig {
-  font-size: 34px;
+  font-size: 17.2rem;
   font-weight: 900;
 }
 
 .t-big {
-  font-size: 22px;
+  font-size: 5.2rem;
 }
 
 .t-mid {
-  font-size: 20px;
+  font-size: 3.2rem;
 }
 
 .t-small {
-  font-size: 15px;
+  font-size: -1.8rem;
 }
 
 /*====== end of Text sizes & Headers ======*/
 /*====== Text styles ======*/
 body {
-  color: #000;
+  color: #474747;
 }
 
 b {
@@ -2021,7 +2021,7 @@ a:hover {
 /*====== end of Text styles ======*/
 /*====== Text elements ======*/
 li, p, blockquote, .m-b-base {
-  margin-bottom: 27px;
+  margin-bottom: 1.8rem;
 }
 li:last-child, p:last-child, blockquote:last-child, .m-b-base:last-child {
   margin-bottom: 0;
@@ -2029,13 +2029,13 @@ li:last-child, p:last-child, blockquote:last-child, .m-b-base:last-child {
 
 ul, ol {
   margin-left: 20px;
-  margin-bottom: 27px;
+  margin-bottom: 1.8rem;
 }
 ul ul, ul ol, ol ul, ol ol {
-  margin-top: 27px;
+  margin-top: 1.8rem;
 }
 ul.list-small li, ol.list-small li {
-  margin-bottom: 13.5px;
+  margin-bottom: 0.9rem;
 }
 ul.list-small li:last-child, ol.list-small li:last-child {
   margin-bottom: 0;
@@ -2045,7 +2045,7 @@ ul.list-lined, ol.list-lined {
   margin-left: 0;
 }
 ul.list-lined li, ol.list-lined li {
-  padding: 27px 0;
+  padding: 1.8rem 0;
   margin: 0;
   border-bottom: 1px solid #A0A0A0;
 }
@@ -2062,7 +2062,7 @@ blockquote {
   border-style: solid;
   border-color: #F15A24;
   font-weight: 500;
-  padding: 9px 0;
+  padding: 0.6rem 0;
 }
 
 code {
@@ -2072,20 +2072,20 @@ code {
 
 table td, table th {
   vertical-align: top;
-  padding: 27px 18.9px;
+  padding: 1.8rem 1.26rem;
   border: 1px solid #A0A0A0;
 }
 @media screen and (max-width: 768px) {
   table td, table th {
-    padding: 8.1px;
+    padding: 0.54rem;
   }
 }
 @media screen and (max-width: 576px) {
   table th {
-    font-size: 13px;
+    font-size: -3.8rem;
   }
   table td {
-    font-size: 15px;
+    font-size: -1.8rem;
   }
 }
 table th {
@@ -2113,7 +2113,7 @@ table.responsive td:before {
   }
 }
 table.clear td, table.clear th {
-  padding: 5px 27px 2px 0;
+  padding: 5px 1.8rem 2px 0;
   border: 0;
 }
 table.clear th {
@@ -2147,19 +2147,19 @@ table.clear th {
 }
 
 .m-b-sec {
-  margin-bottom: 67.5px;
+  margin-bottom: 4.5rem;
 }
 
 .m-t-sec {
-  margin-top: 67.5px;
+  margin-top: 4.5rem;
 }
 
 .m-b-half {
-  margin-bottom: 33.75px;
+  margin-bottom: 2.25rem;
 }
 
 .m-t-half {
-  margin-top: 33.75px;
+  margin-top: 2.25rem;
 }
 
 .p-t-0 {
@@ -2279,7 +2279,7 @@ a.label-blue:hover, a.label-dark:hover {
 }
 
 .label-dark {
-  background-color: #000;
+  background-color: #474747;
 }
 
 .hamburger, .nav-mobilehide, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .js-listexpand .hidden {
@@ -2330,7 +2330,7 @@ a.label-blue:hover, a.label-dark:hover {
 }
 /*======== FORMS VARIABLES & MIXINS & EXTENDS =========*/
 input:not([type='submit']):not([type='button']), input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, .btn-line {
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: 500;
   text-align: center;
   background-color: #fff;
@@ -2344,7 +2344,7 @@ input[disabled]:not([type='submit']):not([type='button']), input[disabled][type=
   cursor: default;
 }
 input:not([type='button']):not([type='submit'])::placeholder, input[type='submit']::placeholder, input[type='button']::placeholder, button::placeholder, a.btn-green::placeholder, a.btn-red::placeholder, input.btn-red::placeholder, button.btn-red::placeholder, a.btn-blue::placeholder, input.btn-blue::placeholder, button.btn-blue::placeholder, .btn-line::placeholder {
-  font-size: 18px;
+  font-size: 1.2rem;
   color: #A0A0A0;
 }
 input.error:not([type='submit']):not([type='button']), input.error[type='submit'], input.error[type='button'], button.error, a.error.btn-green, a.error.btn-red, input.error.btn-red, a.error.btn-blue, input.error.btn-blue, .error.btn-line {
@@ -2357,7 +2357,6 @@ input[type='submit'], input[type='button'], button, a.btn-green, a.btn-red, inpu
   border: 0;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  letter-spacing: 2px;
   word-spacing: 3px;
   font-size: 20px;
 }
@@ -2372,13 +2371,13 @@ input[disabled][type='submit'], input[disabled][type='button'], button[disabled]
 .btn.btn-small {
   letter-spacing: 1px;
   word-spacing: normal;
-  font-size: 18px;
+  font-size: 1.2rem;
   padding: 5px 10px;
 }
 
 /*======== INPUTS =========*/
 input:not([type='submit']):not([type='button']) {
-  color: #000;
+  color: #474747;
 }
 input:not([type='submit']):not([type='button']).error {
   border-color: #E84004;
@@ -2387,7 +2386,7 @@ input:not([type='submit']):not([type='button'])[disabled] {
   opacity: 0.8;
 }
 input:not([type='submit']):not([type='button']).inp-placeholder-small::placeholder {
-  font-size: 13px;
+  font-size: -3.8rem;
   line-height: 1.2;
   text-align: left;
 }
@@ -2460,9 +2459,9 @@ span.loader {
   height: 20px;
   width: 20px;
   border-radius: 20px;
-  border-color: black;
-  border-top: 1px solid #000;
-  border-right: 1px solid #000;
+  border-color: #474747;
+  border-top: 1px solid #474747;
+  border-right: 1px solid #474747;
   animation: 0.8s rotateLoader ease-in-out infinite;
 }
 
@@ -2488,7 +2487,7 @@ span.loader {
   font-size: 26px;
 }
 
-.sprite-basic-aira, .sprite-basic-aira-sign, .sprite-basic-airalab, .sprite-basic-anchor, .sprite-basic-blog, .sprite-basic-civic, .sprite-basic-civic-sign, .sprite-basic-ethereum, .sprite-basic-ethereum-text, .sprite-basic-expand-arrow, .sprite-basic-facebook, .sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-forum, .sprite-basic-github, .sprite-basic-hourglass, .sprite-basic-ipfs, .sprite-basic-medium, .sprite-basic-nixos, .sprite-basic-ok, .sprite-basic-polkadot, .sprite-basic-polkadot-sign, .sprite-basic-reddit, .sprite-basic-robotHand1-1, .sprite-basic-robotHand1-10, .sprite-basic-robotHand1-11, .sprite-basic-robotHand1-2, .sprite-basic-robotHand1-3, .sprite-basic-robotHand1-4, .sprite-basic-robotHand1-5, .sprite-basic-robotHand1-6, .sprite-basic-robotHand1-7, .sprite-basic-robotHand1-8, .sprite-basic-robotHand1-9, .sprite-basic-robotHand2-1, .sprite-basic-robotHand2-10, .sprite-basic-robotHand2-11, .sprite-basic-robotHand2-12, .sprite-basic-robotHand2-13, .sprite-basic-robotHand2-14, .sprite-basic-robotHand2-15, .sprite-basic-robotHand2-2, .sprite-basic-robotHand2-3, .sprite-basic-robotHand2-4, .sprite-basic-robotHand2-5, .sprite-basic-robotHand2-6, .sprite-basic-robotHand2-7, .sprite-basic-robotHand2-8, .sprite-basic-robotHand2-9, .sprite-basic-ros, .sprite-basic-socials_edu, .sprite-basic-socials_github, .sprite-basic-socials_linkedin, .sprite-basic-socials_medium, .sprite-basic-socials_twitter, .sprite-basic-status-done, .sprite-basic-status-progress, .sprite-basic-status-waiting, .sprite-basic-telegram, .sprite-basic-twitter, .sprite-basic-youtube, .roadmap-done .roadmap-title__date:before, .roadmap-progress .roadmap-title__date:before, .roadmap-waiting .roadmap-title__date:before, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .section__contents a.js-expand-toggle:after {
+.sprite-basic-aira, .sprite-basic-aira-sign, .sprite-basic-airalab, .sprite-basic-anchor, .sprite-basic-blog, .sprite-basic-civic, .sprite-basic-civic-sign, .sprite-basic-ethereum, .sprite-basic-ethereum-text, .sprite-basic-expand-arrow, .sprite-basic-facebook, .sprite-basic-flag-de, .sprite-basic-flag-en, .sprite-basic-flag-ru, .sprite-basic-flag-zh, .sprite-basic-forum, .sprite-basic-github, .sprite-basic-hourglass, .sprite-basic-ipfs, .sprite-basic-logo-aira, .sprite-basic-logo-ethereum, .sprite-basic-logo-ipfs, .sprite-basic-logo-nixos, .sprite-basic-logo-polkadot, .sprite-basic-logo-ros, .sprite-basic-medium, .sprite-basic-nixos, .sprite-basic-ok, .sprite-basic-polkadot, .sprite-basic-polkadot-sign, .sprite-basic-reddit, .sprite-basic-robotHand1-1, .sprite-basic-robotHand1-10, .sprite-basic-robotHand1-11, .sprite-basic-robotHand1-2, .sprite-basic-robotHand1-3, .sprite-basic-robotHand1-4, .sprite-basic-robotHand1-5, .sprite-basic-robotHand1-6, .sprite-basic-robotHand1-7, .sprite-basic-robotHand1-8, .sprite-basic-robotHand1-9, .sprite-basic-robotHand2-1, .sprite-basic-robotHand2-10, .sprite-basic-robotHand2-11, .sprite-basic-robotHand2-12, .sprite-basic-robotHand2-13, .sprite-basic-robotHand2-14, .sprite-basic-robotHand2-15, .sprite-basic-robotHand2-2, .sprite-basic-robotHand2-3, .sprite-basic-robotHand2-4, .sprite-basic-robotHand2-5, .sprite-basic-robotHand2-6, .sprite-basic-robotHand2-7, .sprite-basic-robotHand2-8, .sprite-basic-robotHand2-9, .sprite-basic-ros, .sprite-basic-socials_edu, .sprite-basic-socials_github, .sprite-basic-socials_linkedin, .sprite-basic-socials_medium, .sprite-basic-socials_twitter, .sprite-basic-status-done, .sprite-basic-status-progress, .sprite-basic-status-waiting, .sprite-basic-telegram, .sprite-basic-twitter, .sprite-basic-youtube, .roadmap-done .roadmap-title__date:before, .roadmap-progress .roadmap-title__date:before, .roadmap-waiting .roadmap-title__date:before, .section__contents > .secw-narrow a:not(.js-expand-toggle):after, .section__contents a.js-expand-toggle:after {
   background-image: url("../i/sprite.svg?8");
 }
 
@@ -2625,311 +2624,353 @@ span.loader {
   display: inline-block;
 }
 
+.sprite-basic-logo-aira {
+  width: 83.5px;
+  height: 19.5px;
+  background-position: -966px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-logo-ethereum {
+  width: 143.1px;
+  height: 24.8px;
+  background-position: -1050px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-logo-ipfs {
+  width: 72.9px;
+  height: 28.8px;
+  background-position: -1194px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-logo-nixos {
+  width: 76.5px;
+  height: 22px;
+  background-position: -1267px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-logo-polkadot {
+  width: 83.1px;
+  height: 18.8px;
+  background-position: -1344px 0px;
+  display: inline-block;
+}
+
+.sprite-basic-logo-ros {
+  width: 64.5px;
+  height: 17.1px;
+  background-position: -1428px 0px;
+  display: inline-block;
+}
+
 .sprite-basic-medium {
   width: 18.92px;
   height: 15px;
-  background-position: -966px 0px;
+  background-position: -1493px 0px;
   display: inline-block;
 }
 
 .sprite-basic-nixos {
   width: 121.4px;
   height: 36.65px;
-  background-position: -985px 0px;
+  background-position: -1512px 0px;
   display: inline-block;
 }
 
 .sprite-basic-ok {
   width: 27.96px;
   height: 19.66px;
-  background-position: -1107px 0px;
+  background-position: -1634px 0px;
   display: inline-block;
 }
 
 .sprite-basic-polkadot {
   width: 144.318px;
   height: 39.478px;
-  background-position: -1135px 0px;
+  background-position: -1662px 0px;
   display: inline-block;
 }
 
 .sprite-basic-polkadot-sign {
   width: 36.017px;
   height: 39.478px;
-  background-position: -1280px 0px;
+  background-position: -1807px 0px;
   display: inline-block;
 }
 
 .sprite-basic-reddit {
   width: 22.59px;
   height: 18.82px;
-  background-position: -1317px 0px;
+  background-position: -1844px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-1 {
   width: 208.11px;
   height: 153.86px;
-  background-position: -1340px 0px;
+  background-position: -1867px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-10 {
   width: 53.19px;
   height: 68.43px;
-  background-position: -1549px 0px;
+  background-position: -2076px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-11 {
   width: 56.02px;
   height: 40.45px;
-  background-position: -1603px 0px;
+  background-position: -2130px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-2 {
   width: 50.93px;
   height: 35.61px;
-  background-position: -1660px 0px;
+  background-position: -2187px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-3 {
   width: 108.83px;
   height: 67.61px;
-  background-position: -1711px 0px;
+  background-position: -2238px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-4 {
   width: 64.44px;
   height: 34.66px;
-  background-position: -1820px 0px;
+  background-position: -2347px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-5 {
   width: 92.05px;
   height: 32.75px;
-  background-position: -1885px 0px;
+  background-position: -2412px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-6 {
   width: 87.6px;
   height: 57.13px;
-  background-position: -1978px 0px;
+  background-position: -2505px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-7 {
   width: 34.23px;
   height: 64.42px;
-  background-position: -2066px 0px;
+  background-position: -2593px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-8 {
   width: 74.52px;
   height: 54.09px;
-  background-position: -2101px 0px;
+  background-position: -2628px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand1-9 {
   width: 21.51px;
   height: 64.4px;
-  background-position: -2176px 0px;
+  background-position: -2703px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-1 {
   width: 76.41px;
   height: 34.5px;
-  background-position: -2198px 0px;
+  background-position: -2725px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-10 {
   width: 39.31px;
   height: 76.01px;
-  background-position: -2275px 0px;
+  background-position: -2802px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-11 {
   width: 58.88px;
   height: 37.54px;
-  background-position: -2315px 0px;
+  background-position: -2842px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-12 {
   width: 23.99px;
   height: 23.39px;
-  background-position: -2374px 0px;
+  background-position: -2901px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-13 {
   width: 25.26px;
   height: 76.06px;
-  background-position: -2398px 0px;
+  background-position: -2925px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-14 {
   width: 56.95px;
   height: 22.94px;
-  background-position: -2424px 0px;
+  background-position: -2951px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-15 {
   width: 133px;
   height: 62.47px;
-  background-position: -2481px 0px;
+  background-position: -3008px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-2 {
   width: 27.91px;
   height: 15.6px;
-  background-position: -2614px 0px;
+  background-position: -3141px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-3 {
   width: 71.75px;
   height: 29.37px;
-  background-position: -2642px 0px;
+  background-position: -3169px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-4 {
   width: 102.09px;
   height: 96.76px;
-  background-position: -2714px 0px;
+  background-position: -3241px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-5 {
   width: 65.19px;
   height: 26.05px;
-  background-position: -2817px 0px;
+  background-position: -3344px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-6 {
   width: 28.22px;
   height: 13.99px;
-  background-position: -2883px 0px;
+  background-position: -3410px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-7 {
   width: 52.99px;
   height: 26.05px;
-  background-position: -2912px 0px;
+  background-position: -3439px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-8 {
   width: 58.97px;
   height: 36.88px;
-  background-position: -2965px 0px;
+  background-position: -3492px 0px;
   display: inline-block;
 }
 
 .sprite-basic-robotHand2-9 {
   width: 24.54px;
   height: 22.76px;
-  background-position: -3024px 0px;
+  background-position: -3551px 0px;
   display: inline-block;
 }
 
 .sprite-basic-ros {
   width: 87.51px;
   height: 23.15px;
-  background-position: -3049px 0px;
+  background-position: -3576px 0px;
   display: inline-block;
 }
 
 .sprite-basic-socials_edu {
   width: 20px;
   height: 20px;
-  background-position: -3137px 0px;
+  background-position: -3664px 0px;
   display: inline-block;
 }
 
 .sprite-basic-socials_github {
   width: 20px;
   height: 20px;
-  background-position: -3157px 0px;
+  background-position: -3684px 0px;
   display: inline-block;
 }
 
 .sprite-basic-socials_linkedin {
   width: 20px;
   height: 20px;
-  background-position: -3177px 0px;
+  background-position: -3704px 0px;
   display: inline-block;
 }
 
 .sprite-basic-socials_medium {
   width: 20px;
   height: 20px;
-  background-position: -3197px 0px;
+  background-position: -3724px 0px;
   display: inline-block;
 }
 
 .sprite-basic-socials_twitter {
   width: 20px;
   height: 20px;
-  background-position: -3217px 0px;
+  background-position: -3744px 0px;
   display: inline-block;
 }
 
 .sprite-basic-status-done {
   width: 21.47px;
   height: 12.36px;
-  background-position: -3237px 0px;
+  background-position: -3764px 0px;
   display: inline-block;
 }
 
 .sprite-basic-status-progress {
   width: 18.7px;
   height: 18.77px;
-  background-position: -3259px 0px;
+  background-position: -3786px 0px;
   display: inline-block;
 }
 
 .sprite-basic-status-waiting {
   width: 18.88px;
   height: 18.77px;
-  background-position: -3278px 0px;
+  background-position: -3805px 0px;
   display: inline-block;
 }
 
 .sprite-basic-telegram {
   width: 24.3px;
   height: 21.16px;
-  background-position: -3297px 0px;
+  background-position: -3824px 0px;
   display: inline-block;
 }
 
 .sprite-basic-twitter {
   width: 22.3px;
   height: 18.1px;
-  background-position: -3322px 0px;
+  background-position: -3849px 0px;
   display: inline-block;
 }
 
 .sprite-basic-youtube {
   width: 24.2px;
   height: 17.03px;
-  background-position: -3345px 0px;
+  background-position: -3872px 0px;
   display: inline-block;
 }
 
@@ -3180,15 +3221,17 @@ header[role='banner'] .el-social {
 #header-index--bottom {
   background: #F15A24;
   height: 30vh;
+  display: flex;
+  align-items: center;
 }
 
 footer[role='contentinfo'] {
   font-weight: 300;
 }
 footer[role='contentinfo'] .col-md-6 section {
-  padding-left: 67.5px;
-  padding-top: 33.75px;
-  padding-bottom: 33.75px;
+  padding-left: 4.5rem;
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
 }
 footer[role='contentinfo'] .col-md-6 section:last-child {
   padding-bottom: 0;
@@ -3201,7 +3244,7 @@ footer[role='contentinfo'] h2 {
   text-align: left;
 }
 footer[role='contentinfo'] p {
-  margin-bottom: 13.5px;
+  margin-bottom: 0.9rem;
   line-height: 1.2;
 }
 footer[role='contentinfo'] .el-social {
@@ -3297,7 +3340,7 @@ footer[role='contentinfo'] .el-social:hover {
 
 /* БЛОК ДЛЯ МАЙНЕРОВ */
 section.widget-miners_bounty h2 {
-  margin-top: 27px;
+  margin-top: 1.8rem;
 }
 section.widget-miners_bounty .logo-robonomics-outline {
   height: 130px;
@@ -3726,19 +3769,19 @@ section.widget-robotics .secw-base {
 }
 section.widget-robotics .decor-arms {
   z-index: 0;
-  top: 71.25px;
+  top: -23.25rem;
 }
 @media screen and (max-width: 1360px) {
   section.widget-robotics {
-    padding-top: 261.25px;
+    padding-top: 10.75rem;
   }
   section.widget-robotics .decor-arms {
-    top: 101.25px;
+    top: 6.75rem;
   }
 }
 @media screen and (max-width: 712px) {
   section.widget-robotics {
-    padding-top: 101.25px;
+    padding-top: 6.75rem;
   }
   section.widget-robotics .decor-arms {
     display: none;
@@ -4048,8 +4091,28 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
     margin-bottom: 0;
   }
 }
+#index-header_text {
+  max-width: 26rem;
+}
+
+#index-header_logos {
+  transition: 0.2s all ease-out;
+  filter: grayscale(100%);
+  opacity: .6;
+}
+#index-header_logos:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+#index-header_logos span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .roadmap {
-  margin-top: 47.25px;
+  margin-top: 3.15rem;
 }
 
 .roadmap-title, .roadmap-desc {
@@ -4059,7 +4122,7 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 
 .roadmap-title {
   border-bottom: 2px solid rgba(204, 204, 204, 0.5);
-  margin-bottom: 27px;
+  margin-bottom: 1.8rem;
   padding-bottom: 10px;
   box-sizing: border-box;
 }
@@ -4102,7 +4165,7 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 .roadmap-done .roadmap-title__date:before {
   width: 21.47px;
   height: 12.36px;
-  background-position: -3237px 0px;
+  background-position: -3764px 0px;
 }
 
 .roadmap-progress .roadmap-title {
@@ -4112,24 +4175,13 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 .roadmap-progress .roadmap-title__date:before {
   width: 18.7px;
   height: 18.77px;
-  background-position: -3259px 0px;
+  background-position: -3786px 0px;
 }
 
 .roadmap-waiting .roadmap-title__date:before {
   width: 18.88px;
   height: 18.77px;
-  background-position: -3278px 0px;
-}
-
-#index-releaseLink {
-  position: relative;
-  top: -48px;
-  background: linear-gradient(rgba(50, 50, 52, 0), #323234);
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-#index-releaseLink .btn__text_orange {
-  padding-left: 30px;
+  background-position: -3805px 0px;
 }
 
 /* Page News subscription */
@@ -4140,7 +4192,7 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
   background-position: 100% 0;
 }
 #page-news .sec_mid__left {
-  top: 34px;
+  top: 2.4rem;
   right: 53%;
   bottom: 60px;
 }
@@ -4190,12 +4242,12 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 
 .tge-users .img-block {
   max-height: 120px;
-  margin-bottom: 27px;
+  margin-bottom: 1.8rem;
 }
 
 .team-avatar {
   position: relative;
-  margin-bottom: 27px;
+  margin-bottom: 1.8rem;
 }
 .team-avatar .team-avatar-links {
   position: absolute;
@@ -4212,7 +4264,7 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 
 .tge-progress-container {
   position: relative;
-  padding-left: 67.5px;
+  padding-left: 4.5rem;
 }
 
 .tge-progress {
@@ -4228,7 +4280,7 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 }
 .tge-progress .tge-progress-bar:before, .tge-progress .tge-progress-bar:after, .tge-progress .tge-progress-progress:before, .tge-progress .tge-progress-progress:after {
   content: "";
-  background-color: #000;
+  background-color: #474747;
   height: 2px;
   width: 20px;
   position: absolute;
@@ -4249,11 +4301,11 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 }
 .tge-progress .tge-progress-bar {
   height: 100%;
-  background-color: #000;
+  background-color: #474747;
   z-index: 0;
 }
 .tge-progress .tge-progress-bar:before, .tge-progress .tge-progress-bar:after {
-  background-color: #000;
+  background-color: #474747;
 }
 .tge-progress .tge-progress-progress {
   background-color: #F15A24;
@@ -4268,7 +4320,7 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 
 @media screen and (max-width: 1000px) {
   .tge-progress-container {
-    padding-top: 67.5px !important;
+    padding-top: 4.5rem !important;
     padding-left: 0;
   }
 
@@ -4295,7 +4347,7 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 }
 
 .wpcf7-not-valid-tip {
-  font-size: 15px;
+  font-size: -1.8rem;
   font-weight: 400;
   color: #E84004;
 }
@@ -4304,7 +4356,7 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
   border-left: 2px solid #A0A0A0;
   padding-left: 30px;
   position: relative;
-  padding-bottom: 54px;
+  padding-bottom: 3.6rem;
 }
 .timeline:before {
   content: "";
@@ -4323,14 +4375,14 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 
 .timeline-type {
   font-weight: 500;
-  margin-bottom: 13.5px;
+  margin-bottom: 0.9rem;
 }
 
 .timeline-desc {
-  font-size: 14px;
+  font-size: -2.8rem;
 }
 .timeline-desc p, .timeline-desc li {
-  margin-bottom: 13.5px;
+  margin-bottom: 0.9rem;
 }
 
 .timeline-orange {
@@ -4493,12 +4545,12 @@ body {
 /*====== Bootstrap ======*/
 @media screen and (max-width: 576px) {
   .row *[class*='col-md'] {
-    margin-bottom: 27px;
+    margin-bottom: 1.8rem;
   }
 }
 
 .row-marged_cols *[class*='col-md'] {
-  margin-bottom: 27px;
+  margin-bottom: 1.8rem;
 }
 
 /*====== end of Bootstrap ======*/
@@ -4533,13 +4585,13 @@ body {
 /*====== end of SNAP SVG ======*/
 /*====== Sections ======*/
 section {
-  padding-top: 67.5px;
-  padding-bottom: 67.5px;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
   position: relative;
 }
 section section {
-  padding-top: 21.6px;
-  padding-bottom: 21.6px;
+  padding-top: 1.44rem;
+  padding-bottom: 1.44rem;
 }
 section section:first-child {
   padding-top: 0;
@@ -4548,7 +4600,7 @@ section section:last-child {
   padding-bottom: 0;
 }
 section section li, section section p, section section blockquote, section section .m-b-base {
-  margin-bottom: 13.5px;
+  margin-bottom: 0.9rem;
 }
 section section li:last-child, section section p:last-child, section section blockquote:last-child, section section .m-b-base:last-child {
   margin-bottom: 0;
@@ -4557,8 +4609,8 @@ section section li:last-child, section section p:last-child, section section blo
 .sec-white {
   background-color: #fff;
   color: #42475F;
-  padding-top: 101.25px;
-  padding-bottom: 101.25px;
+  padding-top: 6.75rem;
+  padding-bottom: 6.75rem;
 }
 .sec-white h2 {
   color: #000;
@@ -4590,10 +4642,10 @@ section section li:last-child, section section p:last-child, section section blo
 }
 .sec-orange h2 {
   font-weight: 500;
-  font-size: -5.8rem;
+  font-size: -5.4rem;
 }
 .sec-orange a {
-  font-size: 20px;
+  font-size: 3.2rem;
   background-color: #fff;
   display: inline-block;
   padding: 2px 10px;
@@ -4698,13 +4750,13 @@ section section li:last-child, section section p:last-child, section section blo
   top: 14px;
 }
 .section__contents > .secw-narrow a {
-  font-size: 16px;
+  font-size: -0.8rem;
   font-weight: 500;
   display: block;
-  margin-bottom: 27px;
+  margin-bottom: 1.8rem;
 }
 .section__contents > .secw-narrow a:not(.js-expand-toggle) {
-  color: #000;
+  color: #474747;
 }
 .section__contents > .secw-narrow a:not(.js-expand-toggle):hover {
   color: #03A5ED;
@@ -4799,13 +4851,13 @@ section section li:last-child, section section p:last-child, section section blo
 /*====== end of Random ======*/
 @media screen and (max-width: 768px) {
   *[class^='col-'] {
-    margin-bottom: 27px;
+    margin-bottom: 1.8rem;
   }
 }
 
 .separator-dark, .separator-light {
   height: 1px;
-  background-color: #000;
+  background-color: #474747;
 }
 
 .separator-light {

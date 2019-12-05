@@ -1,5 +1,5 @@
 $icons: (
-    sprite: (width: 3370px, height: 153.86px, pngPath: '../i/sprite.png?8', svgPath: '../i/sprite.svg?8'),
+    sprite: (width: 3897px, height: 153.86px, pngPath: '../i/sprite.png?8', svgPath: '../i/sprite.svg?8'),
     aira: (width: 100.23px, height: 23.44px, backgroundX: 0px, backgroundY: 0px),
     aira-sign: (width: 48.842px, height: 48.842px, backgroundX: -101px, backgroundY: 0px),
     airalab: (width: 126px, height: 21px, backgroundX: -150px, backgroundY: 0px),
@@ -19,50 +19,56 @@ $icons: (
     github: (width: 20.33px, height: 23.34px, backgroundX: -819px, backgroundY: 0px),
     hourglass: (width: 21.32px, height: 25.58px, backgroundX: -840px, backgroundY: 0px),
     ipfs: (width: 103.48px, height: 45.02px, backgroundX: -862px, backgroundY: 0px),
-    medium: (width: 18.92px, height: 15px, backgroundX: -966px, backgroundY: 0px),
-    nixos: (width: 121.4px, height: 36.65px, backgroundX: -985px, backgroundY: 0px),
-    ok: (width: 27.96px, height: 19.66px, backgroundX: -1107px, backgroundY: 0px),
-    polkadot: (width: 144.318px, height: 39.478px, backgroundX: -1135px, backgroundY: 0px),
-    polkadot-sign: (width: 36.017px, height: 39.478px, backgroundX: -1280px, backgroundY: 0px),
-    reddit: (width: 22.59px, height: 18.82px, backgroundX: -1317px, backgroundY: 0px),
-    robotHand1-1: (width: 208.11px, height: 153.86px, backgroundX: -1340px, backgroundY: 0px),
-    robotHand1-10: (width: 53.19px, height: 68.43px, backgroundX: -1549px, backgroundY: 0px),
-    robotHand1-11: (width: 56.02px, height: 40.45px, backgroundX: -1603px, backgroundY: 0px),
-    robotHand1-2: (width: 50.93px, height: 35.61px, backgroundX: -1660px, backgroundY: 0px),
-    robotHand1-3: (width: 108.83px, height: 67.61px, backgroundX: -1711px, backgroundY: 0px),
-    robotHand1-4: (width: 64.44px, height: 34.66px, backgroundX: -1820px, backgroundY: 0px),
-    robotHand1-5: (width: 92.05px, height: 32.75px, backgroundX: -1885px, backgroundY: 0px),
-    robotHand1-6: (width: 87.6px, height: 57.13px, backgroundX: -1978px, backgroundY: 0px),
-    robotHand1-7: (width: 34.23px, height: 64.42px, backgroundX: -2066px, backgroundY: 0px),
-    robotHand1-8: (width: 74.52px, height: 54.09px, backgroundX: -2101px, backgroundY: 0px),
-    robotHand1-9: (width: 21.51px, height: 64.4px, backgroundX: -2176px, backgroundY: 0px),
-    robotHand2-1: (width: 76.41px, height: 34.5px, backgroundX: -2198px, backgroundY: 0px),
-    robotHand2-10: (width: 39.31px, height: 76.01px, backgroundX: -2275px, backgroundY: 0px),
-    robotHand2-11: (width: 58.88px, height: 37.54px, backgroundX: -2315px, backgroundY: 0px),
-    robotHand2-12: (width: 23.99px, height: 23.39px, backgroundX: -2374px, backgroundY: 0px),
-    robotHand2-13: (width: 25.26px, height: 76.06px, backgroundX: -2398px, backgroundY: 0px),
-    robotHand2-14: (width: 56.95px, height: 22.94px, backgroundX: -2424px, backgroundY: 0px),
-    robotHand2-15: (width: 133px, height: 62.47px, backgroundX: -2481px, backgroundY: 0px),
-    robotHand2-2: (width: 27.91px, height: 15.6px, backgroundX: -2614px, backgroundY: 0px),
-    robotHand2-3: (width: 71.75px, height: 29.37px, backgroundX: -2642px, backgroundY: 0px),
-    robotHand2-4: (width: 102.09px, height: 96.76px, backgroundX: -2714px, backgroundY: 0px),
-    robotHand2-5: (width: 65.19px, height: 26.05px, backgroundX: -2817px, backgroundY: 0px),
-    robotHand2-6: (width: 28.22px, height: 13.99px, backgroundX: -2883px, backgroundY: 0px),
-    robotHand2-7: (width: 52.99px, height: 26.05px, backgroundX: -2912px, backgroundY: 0px),
-    robotHand2-8: (width: 58.97px, height: 36.88px, backgroundX: -2965px, backgroundY: 0px),
-    robotHand2-9: (width: 24.54px, height: 22.76px, backgroundX: -3024px, backgroundY: 0px),
-    ros: (width: 87.51px, height: 23.15px, backgroundX: -3049px, backgroundY: 0px),
-    socials_edu: (width: 20px, height: 20px, backgroundX: -3137px, backgroundY: 0px),
-    socials_github: (width: 20px, height: 20px, backgroundX: -3157px, backgroundY: 0px),
-    socials_linkedin: (width: 20px, height: 20px, backgroundX: -3177px, backgroundY: 0px),
-    socials_medium: (width: 20px, height: 20px, backgroundX: -3197px, backgroundY: 0px),
-    socials_twitter: (width: 20px, height: 20px, backgroundX: -3217px, backgroundY: 0px),
-    status-done: (width: 21.47px, height: 12.36px, backgroundX: -3237px, backgroundY: 0px),
-    status-progress: (width: 18.7px, height: 18.77px, backgroundX: -3259px, backgroundY: 0px),
-    status-waiting: (width: 18.88px, height: 18.77px, backgroundX: -3278px, backgroundY: 0px),
-    telegram: (width: 24.3px, height: 21.16px, backgroundX: -3297px, backgroundY: 0px),
-    twitter: (width: 22.3px, height: 18.1px, backgroundX: -3322px, backgroundY: 0px),
-    youtube: (width: 24.2px, height: 17.03px, backgroundX: -3345px, backgroundY: 0px),
+    logo-aira: (width: 83.5px, height: 19.5px, backgroundX: -966px, backgroundY: 0px),
+    logo-ethereum: (width: 143.1px, height: 24.8px, backgroundX: -1050px, backgroundY: 0px),
+    logo-ipfs: (width: 72.9px, height: 28.8px, backgroundX: -1194px, backgroundY: 0px),
+    logo-nixos: (width: 76.5px, height: 22px, backgroundX: -1267px, backgroundY: 0px),
+    logo-polkadot: (width: 83.1px, height: 18.8px, backgroundX: -1344px, backgroundY: 0px),
+    logo-ros: (width: 64.5px, height: 17.1px, backgroundX: -1428px, backgroundY: 0px),
+    medium: (width: 18.92px, height: 15px, backgroundX: -1493px, backgroundY: 0px),
+    nixos: (width: 121.4px, height: 36.65px, backgroundX: -1512px, backgroundY: 0px),
+    ok: (width: 27.96px, height: 19.66px, backgroundX: -1634px, backgroundY: 0px),
+    polkadot: (width: 144.318px, height: 39.478px, backgroundX: -1662px, backgroundY: 0px),
+    polkadot-sign: (width: 36.017px, height: 39.478px, backgroundX: -1807px, backgroundY: 0px),
+    reddit: (width: 22.59px, height: 18.82px, backgroundX: -1844px, backgroundY: 0px),
+    robotHand1-1: (width: 208.11px, height: 153.86px, backgroundX: -1867px, backgroundY: 0px),
+    robotHand1-10: (width: 53.19px, height: 68.43px, backgroundX: -2076px, backgroundY: 0px),
+    robotHand1-11: (width: 56.02px, height: 40.45px, backgroundX: -2130px, backgroundY: 0px),
+    robotHand1-2: (width: 50.93px, height: 35.61px, backgroundX: -2187px, backgroundY: 0px),
+    robotHand1-3: (width: 108.83px, height: 67.61px, backgroundX: -2238px, backgroundY: 0px),
+    robotHand1-4: (width: 64.44px, height: 34.66px, backgroundX: -2347px, backgroundY: 0px),
+    robotHand1-5: (width: 92.05px, height: 32.75px, backgroundX: -2412px, backgroundY: 0px),
+    robotHand1-6: (width: 87.6px, height: 57.13px, backgroundX: -2505px, backgroundY: 0px),
+    robotHand1-7: (width: 34.23px, height: 64.42px, backgroundX: -2593px, backgroundY: 0px),
+    robotHand1-8: (width: 74.52px, height: 54.09px, backgroundX: -2628px, backgroundY: 0px),
+    robotHand1-9: (width: 21.51px, height: 64.4px, backgroundX: -2703px, backgroundY: 0px),
+    robotHand2-1: (width: 76.41px, height: 34.5px, backgroundX: -2725px, backgroundY: 0px),
+    robotHand2-10: (width: 39.31px, height: 76.01px, backgroundX: -2802px, backgroundY: 0px),
+    robotHand2-11: (width: 58.88px, height: 37.54px, backgroundX: -2842px, backgroundY: 0px),
+    robotHand2-12: (width: 23.99px, height: 23.39px, backgroundX: -2901px, backgroundY: 0px),
+    robotHand2-13: (width: 25.26px, height: 76.06px, backgroundX: -2925px, backgroundY: 0px),
+    robotHand2-14: (width: 56.95px, height: 22.94px, backgroundX: -2951px, backgroundY: 0px),
+    robotHand2-15: (width: 133px, height: 62.47px, backgroundX: -3008px, backgroundY: 0px),
+    robotHand2-2: (width: 27.91px, height: 15.6px, backgroundX: -3141px, backgroundY: 0px),
+    robotHand2-3: (width: 71.75px, height: 29.37px, backgroundX: -3169px, backgroundY: 0px),
+    robotHand2-4: (width: 102.09px, height: 96.76px, backgroundX: -3241px, backgroundY: 0px),
+    robotHand2-5: (width: 65.19px, height: 26.05px, backgroundX: -3344px, backgroundY: 0px),
+    robotHand2-6: (width: 28.22px, height: 13.99px, backgroundX: -3410px, backgroundY: 0px),
+    robotHand2-7: (width: 52.99px, height: 26.05px, backgroundX: -3439px, backgroundY: 0px),
+    robotHand2-8: (width: 58.97px, height: 36.88px, backgroundX: -3492px, backgroundY: 0px),
+    robotHand2-9: (width: 24.54px, height: 22.76px, backgroundX: -3551px, backgroundY: 0px),
+    ros: (width: 87.51px, height: 23.15px, backgroundX: -3576px, backgroundY: 0px),
+    socials_edu: (width: 20px, height: 20px, backgroundX: -3664px, backgroundY: 0px),
+    socials_github: (width: 20px, height: 20px, backgroundX: -3684px, backgroundY: 0px),
+    socials_linkedin: (width: 20px, height: 20px, backgroundX: -3704px, backgroundY: 0px),
+    socials_medium: (width: 20px, height: 20px, backgroundX: -3724px, backgroundY: 0px),
+    socials_twitter: (width: 20px, height: 20px, backgroundX: -3744px, backgroundY: 0px),
+    status-done: (width: 21.47px, height: 12.36px, backgroundX: -3764px, backgroundY: 0px),
+    status-progress: (width: 18.7px, height: 18.77px, backgroundX: -3786px, backgroundY: 0px),
+    status-waiting: (width: 18.88px, height: 18.77px, backgroundX: -3805px, backgroundY: 0px),
+    telegram: (width: 24.3px, height: 21.16px, backgroundX: -3824px, backgroundY: 0px),
+    twitter: (width: 22.3px, height: 18.1px, backgroundX: -3849px, backgroundY: 0px),
+    youtube: (width: 24.2px, height: 17.03px, backgroundX: -3872px, backgroundY: 0px),
 );
 
 $sprite: map-get($icons, sprite);
@@ -157,6 +163,30 @@ $sprite: map-get($icons, sprite);
 }
 .sprite-basic-ipfs{
   @include get-sprite('ipfs');
+  display: inline-block;
+}
+.sprite-basic-logo-aira{
+  @include get-sprite('logo-aira');
+  display: inline-block;
+}
+.sprite-basic-logo-ethereum{
+  @include get-sprite('logo-ethereum');
+  display: inline-block;
+}
+.sprite-basic-logo-ipfs{
+  @include get-sprite('logo-ipfs');
+  display: inline-block;
+}
+.sprite-basic-logo-nixos{
+  @include get-sprite('logo-nixos');
+  display: inline-block;
+}
+.sprite-basic-logo-polkadot{
+  @include get-sprite('logo-polkadot');
+  display: inline-block;
+}
+.sprite-basic-logo-ros{
+  @include get-sprite('logo-ros');
   display: inline-block;
 }
 .sprite-basic-medium{

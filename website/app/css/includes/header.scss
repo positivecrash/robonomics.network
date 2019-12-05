@@ -322,9 +322,6 @@ header[role='banner']
 
 /*====== end of Header navigation ======*/
 
-
-
-
 #header-index--middle
   {
     height: 60vh;
@@ -337,5 +334,7 @@ header[role='banner']
   {
     background: $c-orange;
     height: 30vh;
+    display: flex;
+    align-items: center;
   }
 
