@@ -548,23 +548,23 @@ section.widget-robotics
 		.decor-arms
 			{
 				z-index: 0;
-				top: $margin-sec*1.5 - 30;
+				top: $margin-sec*1.5;
 			}
 
 
 		@media screen and (max-width: 1360px) 
 			{
-				padding-top: $margin-sec*1.5 + 4rem;
+				padding-top: 260px;
 
 				.decor-arms
 					{
-						top: $margin-sec*1.5;
+						top: $margin-sec * 1.5;
 					}
 			}
 
 		@media screen and (max-width: 712px) 
 			{
-				padding-top: $margin-sec*1.5;
+				padding-top: $margin-sec * 1.5;
 
 				.decor-arms
 					{

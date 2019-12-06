@@ -1883,7 +1883,7 @@ html {
 /*====== Text sizes & Headers ======*/
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
-  margin-top: 4.5rem;
+  margin-top: 2rem;
   margin-bottom: 0.9rem;
   text-align: left;
   text-transform: uppercase;
@@ -2147,19 +2147,19 @@ table.clear th {
 }
 
 .m-b-sec {
-  margin-bottom: 4.5rem;
+  margin-bottom: 2rem;
 }
 
 .m-t-sec {
-  margin-top: 4.5rem;
+  margin-top: 2rem;
 }
 
 .m-b-half {
-  margin-bottom: 2.25rem;
+  margin-bottom: 1rem;
 }
 
 .m-t-half {
-  margin-top: 2.25rem;
+  margin-top: 1rem;
 }
 
 .p-t-0 {
@@ -2333,7 +2333,7 @@ a.label-blue:hover, a.label-dark:hover {
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(135deg);
+    transform: rotate(-135deg);
   }
   100% {
     transform: rotate(0deg);
@@ -3240,9 +3240,9 @@ footer[role='contentinfo'] {
   font-weight: 300;
 }
 footer[role='contentinfo'] .col-md-6 section {
-  padding-left: 4.5rem;
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 footer[role='contentinfo'] .col-md-6 section:last-child {
   padding-bottom: 0;
@@ -3780,19 +3780,19 @@ section.widget-robotics .secw-base {
 }
 section.widget-robotics .decor-arms {
   z-index: 0;
-  top: -23.25rem;
+  top: 3rem;
 }
 @media screen and (max-width: 1360px) {
   section.widget-robotics {
-    padding-top: 10.75rem;
+    padding-top: 260px;
   }
   section.widget-robotics .decor-arms {
-    top: 6.75rem;
+    top: 3rem;
   }
 }
 @media screen and (max-width: 712px) {
   section.widget-robotics {
-    padding-top: 6.75rem;
+    padding-top: 3rem;
   }
   section.widget-robotics .decor-arms {
     display: none;
@@ -4106,15 +4106,16 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
   max-width: 26rem;
 }
 
-#index-header_logos {
+#index-header_logos, #header-index--bottom .sheme-main {
   transition: 0.2s all ease-out;
   filter: grayscale(100%);
   opacity: .6;
 }
-#index-header_logos:hover {
+#index-header_logos:hover, #header-index--bottom .sheme-main:hover {
   filter: grayscale(0%);
   opacity: 1;
 }
+
 #index-header_logos span {
   display: inline-block;
   vertical-align: middle;
@@ -4123,25 +4124,41 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 }
 
 .sheme-main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-content: stretch;
+  display: table;
   width: 100%;
 }
+.sheme-main > div {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 1%;
+  height: 7.5rem;
+  position: relative;
+}
+.sheme-main > div:first-child {
+  padding-left: 0;
+}
+.sheme-main > div:last-child {
+  padding-right: 0;
+}
+.sheme-main > div.block {
+  width: 22%;
+}
+.sheme-main > div.arrow {
+  width: 12%;
+}
 .sheme-main .sheme-block {
-  width: 20%;
-  min-height: 7.5rem;
+  height: 100%;
 }
 
 .sheme-block {
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 .sheme-block:before {
   content: "";
   width: 200%;
-  height: 200%;
+  height: 250%;
   position: absolute;
   z-index: 0;
   top: -50%;
@@ -4149,7 +4166,6 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
   right: 0;
   bottom: 0;
   background: linear-gradient(35deg, #50dcff, #fa5aff);
-  animation: 4s 0.2s Gradient ease-out infinite;
 }
 
 .sheme-block--content {
@@ -4160,13 +4176,48 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
   left: 0.2rem;
   right: 0.2rem;
   bottom: 0.2rem;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.sheme-block--content_up {
+  text-transform: uppercase;
+}
+
+.sheme-arrow {
+  font-size: 0.8rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.sheme-arrow-top, .sheme-arrow-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.sheme-arrow-top {
+  top: 0;
+}
+
+.sheme-arrow-bottom {
+  bottom: 0;
+}
+
+@media screen and (max-width: 576px) {
+  .sheme-main {
+    display: none;
+  }
+
+  #header-index--middle {
+    height: 90vh;
+  }
+}
 .roadmap {
-  margin-top: 3.15rem;
+  margin-top: 1.4rem;
 }
 
 .roadmap-title, .roadmap-desc {
@@ -4236,6 +4287,55 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
   width: 18.88px;
   height: 18.77px;
   background-position: -3805px 0px;
+}
+
+.cssarrow {
+  position: relative;
+  height: 10px;
+  width: 100%;
+}
+.cssarrow:before, .cssarrow:after {
+  content: "";
+  position: absolute;
+}
+.cssarrow:before {
+  background-color: #474747;
+}
+.cssarrow:after {
+  width: 0;
+  height: 0;
+}
+
+.cssarrow-right:before {
+  left: 0;
+  right: 2px;
+  top: calc(50% - 0.5px);
+  height: 1px;
+}
+.cssarrow-right:after {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 10px solid #474747;
+  border-bottom: 5px solid transparent;
+  right: 0;
+  top: 0;
+}
+
+.cssarrow-left:before {
+  left: 2px;
+  right: 0;
+  top: calc(50% - 0.5px);
+  height: 1px;
+}
+.cssarrow-left:after {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-right: 10px solid #474747;
+  border-bottom: 5px solid transparent;
+  left: 0;
+  top: 0;
 }
 
 /* Page News subscription */
@@ -4318,7 +4418,7 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 
 .tge-progress-container {
   position: relative;
-  padding-left: 4.5rem;
+  padding-left: 2rem;
 }
 
 .tge-progress {
@@ -4374,7 +4474,7 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 
 @media screen and (max-width: 1000px) {
   .tge-progress-container {
-    padding-top: 4.5rem !important;
+    padding-top: 2rem !important;
     padding-left: 0;
   }
 
@@ -4639,8 +4739,8 @@ body {
 /*====== end of SNAP SVG ======*/
 /*====== Sections ======*/
 section {
-  padding-top: 4.5rem;
-  padding-bottom: 4.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   position: relative;
 }
 section section {
@@ -4663,8 +4763,8 @@ section section li:last-child, section section p:last-child, section section blo
 .sec-white {
   background-color: #fff;
   color: #42475F;
-  padding-top: 6.75rem;
-  padding-bottom: 6.75rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 .sec-white h2 {
   color: #000;
