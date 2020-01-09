@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="2416 95 37 59.9">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.6;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #15130f;
+      }
+
+      .cls-4 {
+        opacity: 0.45;
+      }
+
+      .cls-5 {
+        clip-path: url(#clip-path-2);
+      }
+
+      .cls-6 {
+        opacity: 0.8;
+      }
+
+      .cls-7 {
+        clip-path: url(#clip-path-3);
+      }
+
+      .cls-8 {
+        clip-path: url(#clip-path-4);
+      }
+
+      .cls-9 {
+        clip-path: url(#clip-path-5);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="36.8" height="19.2" transform="translate(0 22.2)"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_3" data-name="Rectangle 3" width="18.4" height="41.4" transform="translate(0.2)"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect id="Rectangle_4" data-name="Rectangle 4" width="18.4" height="41.4" transform="translate(18.6)"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <rect id="Rectangle_5" data-name="Rectangle 5" width="18.4" height="25.9" transform="translate(0 34)"/>
+    </clipPath>
+    <clipPath id="clip-path-5">
+      <rect id="Rectangle_6" data-name="Rectangle 6" width="18.4" height="25.9" transform="translate(18.4 34)"/>
+    </clipPath>
+  </defs>
+  <g id="Group_25" data-name="Group 25" transform="translate(2416 95)">
+    <g id="Group_12" data-name="Group 12" class="cls-1">
+      <g id="Group_11" data-name="Group 11">
+        <g id="Group_10" data-name="Group 10" class="cls-2">
+          <path id="Path_5" data-name="Path 5" class="cls-3" d="M18.4,22.2,0,30.5,18.4,41.4,36.8,30.5Z"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_15" data-name="Group 15" class="cls-4">
+      <g id="Group_14" data-name="Group 14">
+        <g id="Group_13" data-name="Group 13" class="cls-5">
+          <path id="Path_6" data-name="Path 6" class="cls-3" d="M.2,30.5,18.6,41.4V0Z"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_18" data-name="Group 18" class="cls-6">
+      <g id="Group_17" data-name="Group 17">
+        <g id="Group_16" data-name="Group 16" class="cls-7">
+          <path id="Path_7" data-name="Path 7" class="cls-3" d="M18.6,0V41.4L37,30.5Z"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_21" data-name="Group 21" class="cls-4">
+      <g id="Group_20" data-name="Group 20">
+        <g id="Group_19" data-name="Group 19" class="cls-8">
+          <path id="Path_8" data-name="Path 8" class="cls-3" d="M0,34,18.4,59.9v-15Z"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_24" data-name="Group 24" class="cls-6">
+      <g id="Group_23" data-name="Group 23">
+        <g id="Group_22" data-name="Group 22" class="cls-9">
+          <path id="Path_9" data-name="Path 9" class="cls-3" d="M18.4,44.9v15L36.8,34Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,38 @@
+extends extends/layout.pug
+
+block head
+	- var pageTitle = 'Robot economic infrastructure'
+
+block content
+	header(role='banner')
+		include mixins/sections.pug
+		+header_top()
+
+	main(role="main")
+		section
+			.secw-narrow
+				h1 Добавление в whitelist
+
+			section.section__intro.gray#page-news
+				.section__intro_content.secw-narrow
+					.row
+						.col-sm-6
+							form
+								p: input.secw-full.inp-placeholder-small(type="text", placeholder="Ваше имя")
+								p: input.secw-full.inp-placeholder-small(type="text", placeholder="Регион проживания")
+								p: input.secw-full.inp-placeholder-small(type="email", placeholder="Ваш e-mail")
+								p: input.secw-full.inp-placeholder-small(type="text", placeholder="Amount of potential commitment")
+								p: input.secw-full.inp-placeholder-small(type="button", value="Add")
+						.col-sm-6
+							.text-hyphened
+								section
+									p: b.t-uppercase.t-orange Status of auction: waiting for beginning
+									p.t-small
+										| Ожидаем мнение Financial Market Authority (FMA). Последнее обновление 10 декабря 2018
+								section.t-small
+									b Scammer alert
+									br/
+									| No one from robonomics.network / AIRA team will send you a private message containing any contribution address or offering any bonus. Please be on the lookout for scammers who impersonate admins and send private messages with fake ETH address.
+
+
+				.sec-dots__gray.sec_mid__left

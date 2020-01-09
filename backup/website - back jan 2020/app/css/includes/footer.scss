@@ -1,0 +1,159 @@
+footer[role='contentinfo']
+  {
+
+  	font-weight: 300;
+
+  	.col-md-6
+  		{
+
+	  		section
+		  		{	
+		  			padding-left: $margin-sec;
+		  			padding-top: $margin-sec/2;
+		  			padding-bottom: $margin-sec/2;
+
+		  			&:last-child
+		  				{
+		  					padding-bottom: 0;
+		  				}
+		  		}
+
+		  	&:first-child
+		  		{
+		  			section { padding-left: 0; }
+		  		}
+		  	}
+
+  	h2
+  		{
+  			margin-bottom: 22px;
+  			text-align: left;
+  		}
+
+  	p
+  		{
+  			margin-bottom: $vertical-rythm/2;
+  			line-height: 1.2;
+  		}
+
+  	.el-social
+  		{
+  			margin-right: 22px;
+  			transition: background-color 0.2s ease;
+
+  			&:last-child
+  				{
+  					margin-right: 0;
+  				}
+
+  			&:hover
+  				{
+  					background-color: #fff;
+  				}
+  		}
+  }
+
+
+.link-social
+	{
+		@extend %link_noline;
+		white-space: nowrap;
+		
+		&, &:hover { color: #fff; }
+
+		span
+			{
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 10px;
+
+				&:last-child { margin-right: 0; }
+
+				&.icon { width: 24px; }
+			}
+	}
+
+
+
+.sec-synopsis
+	{
+		display: block;
+		border: 1px solid $c-blue;
+		overflow: hidden;
+		padding: 20px;
+
+		@extend %link_noline;
+
+		&, h2
+			{
+				&, &:hover
+					{ color: $c-blue !important; }
+			}
+
+		h2 { font-size: 24px; }
+
+		.sec-synopsis__text
+			{	
+				padding-left: 144px;
+			}
+
+
+		.logo-robonomics-outline
+			{
+				width: 124px;
+				float: left;
+				
+				path
+					{ stroke: $c-blue; }
+
+				circle
+					{ fill: $c-blue; }
+			}
+	}
+
+
+
+
+#footer-nav_lined{
+	background-color: $c-blue-mute-3;
+	padding: 15px 0;
+	text-transform: uppercase;
+	font-weight: 500;
+	color: $c-blue-mute-4;
+	text-align: center;
+
+	span, a{
+		display: inline-block;
+		margin: 0 10px;
+
+		&:first-child{
+			margin-left: 0;
+		}
+
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+
+	a{
+		color: #fff;
+	}
+
+	span{
+		&:first-child{
+			margin-right: 20px;
+		}
+	}
+
+	@include mobile(){
+		text-align: center;
+
+		a, span{
+			display: block;
+		}
+
+		span:first-child{
+			display: none;
+		}
+	}
+}

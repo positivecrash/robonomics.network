@@ -1,0 +1,450 @@
+html
+	{ font-size: 100%; }
+
+
+
+body 
+	{ @extend %font_base; }
+
+
+
+
+
+/*====== Text sizes & Headers ======*/
+
+#{headings()}
+	{
+		line-height: 1.5;
+
+		margin-top: $margin-sec;
+  		margin-bottom: $vertical-rythm/2;
+  		text-align: left;
+
+  		text-transform: uppercase;
+        letter-spacing: 1px;
+	  	word-spacing: 2px;
+
+	  	font-weight: 400;
+
+  		&:first-child
+  			{
+  				margin-top: 0;
+  			}
+	}
+
+
+@for $i from 2 through 4
+	{
+	  h#{$i}
+		  {
+		  	font-size: $font-size-title - 4 * $i;
+		  }
+	}
+
+
+h1
+	{
+        font-size: $font-size-title;
+	}
+
+
+h2, h3
+	{
+		color: $c-orange;
+
+		&.title-dark { color: $c-text; }
+	}
+
+h2 {
+		&.title-dark { font-size: $font-size-title - 4; }
+}
+
+h3 {
+		&.title-dark { font-size: $font-size-title - 8; }
+}
+
+h5 { font-size: $font-size-base; }
+
+.t-superbig
+	{
+		font-size: $font-size-base + 16;
+		font-weight: 900;
+	}
+
+.t-big
+	{
+		font-size: $font-size-base + 4;
+	}
+
+.t-mid
+	{
+		font-size: $font-size-base + 2;
+	}
+
+.t-small
+	{
+		font-size: $font-size-base - 3;
+		// line-height: 1.2;
+	}
+/*====== end of Text sizes & Headers ======*/
+
+
+
+
+
+
+
+/*====== Text styles ======*/
+
+body
+	{
+		color: $c-text;
+	}
+
+
+b
+	{ font-weight: 500; }
+
+
+a 
+	{
+		color: $c-blue;
+		@extend %link_noline;
+
+		&:hover
+			{
+				color: lighten($c-blue, 10%);
+				text-decoration: underline;
+			}
+	}
+
+.text-hyphened
+	{
+		text-align: justify;
+		hyphens: auto;
+	}
+
+
+.t-break
+	{ word-break: break-all; }
+
+.t-nowrap
+	{ white-space: nowrap; }
+
+.t-center
+	{ text-align: center; }
+
+.t-right
+	{ text-align: right; }
+
+.t-left
+	{ text-align: left; }
+
+
+.t-blue { color: $c-blue; color: $c-blue !important; }
+.t-green { color: $c-green; color: $c-green !important; }
+.t-red { color: $c-red; color: $c-red !important; }
+.t-orange { color: $c-orange; color: $c-orange !important; }
+
+
+.text-case_normal
+	{
+		text-transform: none;
+	}
+
+.t-uppercase { @extend %text_uppercase; }
+ 
+.t-w-norm { font-weight: 400; }
+
+/*====== end of Text styles ======*/
+
+
+
+
+
+
+
+/*====== Text elements ======*/
+
+li, p, blockquote, .m-b-base
+	{
+	  margin-bottom: $vertical-rythm;
+
+	  &:last-child{
+	  	margin-bottom: 0;
+	  }
+	}
+
+
+ul, ol
+	{
+	  margin-left: 20px;
+	  margin-bottom: $vertical-rythm;
+
+	  ul, ol{
+	  	margin-top: $vertical-rythm;
+	  }
+
+	  &.list-small li{
+	  	margin-bottom: $vertical-rythm * 0.5;
+
+	  	&:last-child{
+	  		margin-bottom: 0;
+	  	}
+	  }
+
+	  &.list-lined
+	  	{
+	  		list-style: none;
+	  		margin-left: 0;
+
+		  	li
+		  		{
+					padding: $vertical-rythm 0;
+					margin: 0;
+					border-bottom: 1px solid $c-gray-mid;
+
+					&:last-child{
+						border-bottom: 0;
+						padding-bottom: 0;
+					}
+
+					&:first-child{
+						padding-top: 0;
+					}
+		  		}
+	  	}
+	}
+
+
+
+
+blockquote
+	{
+		border-width: 2px 0;
+		border-style: solid;
+		border-color: $c-orange;
+		font-weight: 500;
+		padding: $vertical-rythm/3 0;
+	}
+
+code
+	{
+	    max-height: 120px;
+	    word-break: break-all;
+	}
+
+
+table
+	{
+
+		td, th {
+			vertical-align: top;
+			padding: $vertical-rythm $vertical-rythm * 0.7;
+			border: 1px solid $c-gray-mid;
+		}
+
+		@include maxTablet(){
+			td, th {
+				padding: $vertical-rythm * 0.3;
+			}
+		}
+
+		@include mobile(){
+			th { font-size: $font-size-base - 5; }
+			td { font-size: $font-size-base - 3; }
+		}
+
+		th{
+			@extend %text_uppercase;
+			text-align: left;
+			background: $c-gray-light;
+		}
+
+		&.responsive{
+			@include responsiveTable($mq-tablet);
+		}
+
+		&.clear
+			{
+				td, th{
+					padding: 5px $vertical-rythm 2px 0;
+					border: 0;
+				}
+
+				th{
+					background: transparent;
+					text-transform: none;
+					letter-spacing: 0;
+					font-weight: 500;
+				}
+			}
+	}
+
+
+.img-block
+	{
+	  display: block;
+	  max-width: 100%;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+
+.img-fullback
+	{
+	  background-size: cover;
+	  background-repeat: no-repeat;
+	  background-position: 50% 50%;
+	}
+
+/*====== end of Text elements ======*/
+
+
+
+
+
+
+/*====== Margins & paddings ======*/
+
+.m-t-0 { margin-top: 0; }
+.m-b-0 { margin-bottom: 0; }
+
+.m-b-sec { margin-bottom: $margin-sec;  }
+.m-t-sec { margin-top: $margin-sec;  }
+
+.m-b-half { margin-bottom: $margin-sec/2; }
+.m-t-half { margin-top: $margin-sec/2; }
+
+.p-t-0 { padding-top: 0; }
+.p-b-0 { padding-bottom: 0; }
+
+.col-null {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.m-b-5 { margin-bottom: 5px; }
+
+.m-r-10 { margin-right: 10px; }
+.m-t-10 { margin-top: 10px; }
+
+.m-r-15 { margin-right: 15px; }
+
+.m-t-25 { margin-top: 25px; }
+
+/*====== end of Margins & paddings ======*/
+
+
+.container--separate-row{
+	.row{
+		margin-top: 30px;
+		
+		&:first-child{
+			margin-top: 0;
+		}
+	}
+}
+
+
+
+
+/*====== Other ======*/
+
+.embed-video
+	{
+	  iframe, object, embed{
+	    border: 0;
+	  }
+
+	  &.responsive-true{
+	    position: relative;
+	    padding-bottom: 56.2%;
+	    height: 0;
+	    overflow: hidden;
+
+	    iframe, object , embed{
+	      position: absolute;
+	      top: 0;
+	      left: 0;
+	      width: 100%;
+	      height: 100%;
+	    }
+	  }
+	}
+
+/*====== end of Other ======*/
+
+
+
+.line-right-red{
+	height: 6px;
+	position: relative;
+
+	div{
+		width: 100%;
+		height: 100%;
+	}
+
+	&:after{
+    	content: "";
+	    height: 6px;
+	    position: absolute;
+	    left: 50%;
+	    right: $padding-fields;
+	    top: 0;
+	}
+
+	div, &:after{
+		background-color: $c-orange;
+	}
+}
+
+.img-preview-vivid{
+	display: inline-block;
+	border: 10px solid $c-gray-blue;
+
+	img{
+		display: block;
+		max-width: 100%;
+	}
+}
+
+
+
+
+.label-blue, .label-dark
+	{
+		display: inline-block;
+		padding: 2px 8px;
+		color: rgba(#fff, .8);
+		margin-right: 15px;
+		margin-bottom: 5px;
+		font-weight: 400;
+
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+
+a.label-blue, a.label-dark{
+	transition: all 0.2s ease-out;
+
+	color: rgba(#fff, .8);
+	&:hover{
+		color: #fff;
+	}
+}
+
+.label-blue
+	{
+		background-color: $c-blue;
+
+		&.active{
+			background-color: $c-violet-dark;
+		}
+	}
+
+.label-dark
+	{
+		background-color: $c-text;
+	}

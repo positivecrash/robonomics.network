@@ -1,0 +1,307 @@
+#index-header_text {
+	max-width: 26rem;
+}
+
+
+#index-header_logos, #header-index--bottom .sheme-main
+	{
+		transition: 0.2s all ease-out;
+		filter: grayscale(100%);
+		opacity: .6;
+
+		&:hover{
+			filter: grayscale(0%);
+			opacity: 1;
+		}
+	}
+
+
+#index-header_logos {
+	span{
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 1.5rem;
+			margin-bottom: 0.5rem;
+		}
+}
+
+
+.sheme-main
+	{
+		display: table;
+		width: 100%;
+
+		& > div{
+			display: table-cell;
+			vertical-align: middle;
+			padding: 0 1%;
+			height: 7.5rem;
+			position: relative;
+
+			&:first-child { padding-left: 0 }
+			&:last-child { padding-right: 0 }
+
+			&.block{
+				width: 22%;
+			}
+
+			&.arrow{
+				width: 12%;
+			}
+		}
+
+		.sheme-block{
+			height: 100%;
+		}
+	}
+
+.sheme-block
+	{
+		position: relative;
+		overflow: hidden;
+		text-align: center;
+
+		&:before{
+			content: "";
+			width: 200%;
+			height: 250%;
+
+			position: absolute;
+			z-index: 0;
+			top: -50%;
+			left: -50%;
+			right: 0;
+			bottom: 0;
+
+			background: linear-gradient(35deg, rgb(80, 220, 255), rgb(250, 90, 255));
+			// animation: 4s 0.2s Gradient ease-out infinite;
+		}
+	}
+
+.sheme-block--content
+	{
+		background-color: #fff;
+
+		position: absolute;
+		z-index: 1;
+		top: 0.2rem;
+		left: 0.2rem;
+		right: 0.2rem;
+		bottom: 0.2rem;
+
+		padding: 0.5rem;
+
+		display: flex;
+    	align-items: center;
+    	justify-content: center;
+	}
+
+.sheme-block--content_up {
+	text-transform: uppercase;
+}
+
+
+.sheme-arrow{
+	font-size: 0.8rem;
+	white-space: nowrap;
+	text-transform: uppercase;
+	text-align: center;
+
+}
+
+.sheme-arrow-top, .sheme-arrow-bottom{
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.sheme-arrow-top { top: 0; }
+.sheme-arrow-bottom { bottom: 0; }
+
+
+
+@include mobile()
+	{
+	  	.sheme-main { display: none; }
+	  	#header-index--middle { height: 90vh; }
+	}
+
+
+.roadmap
+	{
+		margin-top: $margin-sec * 0.7;
+	}
+
+.roadmap-title, .roadmap-desc
+	{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+.roadmap-title
+	{
+		border-bottom: 2px solid rgba($c-gray, 0.5);
+		margin-bottom: $vertical-rythm;
+		padding-bottom: 10px;
+		box-sizing: border-box;
+	}
+
+
+.roadmap-title__in
+	{
+
+		div
+			{
+				@extend %text_uppercase;
+				font-weight: 300;
+
+				&:first-child
+					{
+						font-size: 22px;
+						font-weight: 500;
+					}
+			}
+	}
+
+// .roadmap-title__name
+// 	{
+// 		white-space: nowrap;
+// 	}
+
+.roadmap-title__date
+	{
+		position: relative;
+		display: inline-block;
+		padding-right: 30px;
+
+		&:before{
+			content:"";
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+
+
+.roadmap-desc
+	{
+		letter-spacing: 1px;
+		color: #fff;
+	}
+
+
+
+.col-12
+	{
+		@include minTablet(){
+			text-align: center;
+		}
+	}
+
+
+.roadmap-done
+	{
+		.roadmap-title
+			{
+				color: $c-green;
+				border-color: $c-green;
+			}
+
+		.roadmap-title__date:before { @include get-sprite('status-done'); }
+	}
+
+.roadmap-progress
+	{
+		.roadmap-title
+			{
+				color: $c-orange;
+				border-color: $c-orange;
+			}
+
+		.roadmap-title__date:before { @include get-sprite('status-progress'); }
+	}
+
+.roadmap-waiting .roadmap-title__date:before { @include get-sprite('status-waiting'); }
+
+
+
+
+
+
+
+
+.cssarrow{
+	position: relative;
+	height: 10px;
+	width: 100%;
+
+	&:before, &:after{
+		content: "";
+		position: absolute;
+	}
+
+	&:before{
+		background-color: $c-text;
+	}
+
+	&:after{
+		width: 0;
+      	height: 0;
+	}
+}
+
+.cssarrow-right{
+
+	&:before{
+		left: 0;
+		right: 2px;
+		top: calc(50% - 0.5px);
+		height: 1px;
+	}
+
+	&:after{
+		width: 0;
+      	height: 0;
+      	border-top: 5px solid transparent;
+      	border-left: 10px solid $c-text;
+      	border-bottom: 5px solid transparent;
+
+      	right: 0;
+      	top: 0;
+	}
+}
+
+.cssarrow-left{
+
+	&:before{
+		left: 2px;
+		right: 0;
+		top: calc(50% - 0.5px);
+		height: 1px;
+	}
+
+	&:after{
+		width: 0;
+      	height: 0;
+      	border-top: 5px solid transparent;
+      	border-right: 10px solid $c-text;
+      	border-bottom: 5px solid transparent;
+
+      	left: 0;
+      	top: 0;
+	}
+}
+
+
+// #index-releaseLink
+// 	{
+// 		position: relative;
+// 		top: -48px;
+// 		background: linear-gradient(rgba($c-gray-dark, 0), $c-gray-dark);
+// 		padding-top: 10px;
+// 		padding-bottom: 10px;
+
+// 		.btn__text_orange{
+// 			padding-left: 30px;
+// 		}
+// 	}

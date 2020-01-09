@@ -1,0 +1,122 @@
+extends extends/layout.pug
+include mixins/sections.pug
+
+block head
+	- var pageTitle = 'Robot economic infrastructure'
+
+block content
+	header(role='banner')#header-index.screen
+
+		+header_top()
+		#header-index--middle
+			.secw-base
+				h1 Платформа Робономики
+				#index-header_text
+					p Web3 Framework for smart cities and industry app developers
+					p#index-header_logos
+						span.sprite-basic-logo-ros
+						span.sprite-basic-logo-nixos
+						span.sprite-basic-logo-ipfs
+						span.sprite-basic-logo-aira
+						span.sprite-basic-logo-polkadot
+						span.sprite-basic-logo-ethereum
+
+					a.btn-green(href="https://aira.readthedocs.io/en/latest/getting_started.html" target="_blank") Getting started
+		#header-index--bottom
+			.secw-base
+				.sheme-main
+					div.block
+						.sheme-block
+							.sheme-block--content.sheme-block--content_up User (d)app
+							// .sheme-block--content.sheme-block--content_down Browser with Metamask
+
+					div.arrow
+						.sheme-arrow.sheme-arrow-top
+							span Function request
+							.cssarrow.cssarrow-right
+						.sheme-arrow.sheme-arrow-bottom
+							.cssarrow.cssarrow-left
+							span Report
+							
+
+					div.block
+						.sheme-block
+							.sheme-block--content.sheme-block--content_up Robonomics
+
+					div.arrow
+						.sheme-arrow.sheme-arrow-top
+							span Control
+							.cssarrow.cssarrow-right
+						.sheme-arrow.sheme-arrow-bottom
+							.cssarrow.cssarrow-left
+							span Log
+
+					div.block
+						.sheme-block
+							.sheme-block--content.sheme-block--content_up Robot-as-a-service
+
+
+	main(role="main")
+
+		.separator-dark.separator-animated-inview.js-checkInView
+		+widget_etherdevelopers()
+		.separator-dark.separator-animated-inview.js-checkInView
+		+widget_robotics()
+		.separator-dark.separator-animated-inview.js-checkInView
+		+widget_miners_bounty()
+
+
+		.sec-gray-dark
+			section
+				.secw-base
+					h2.t-center План развития инфраструктуры
+
+					.roadmap.row
+						.col-md-3.roadmap-done
+							.roadmap-title
+								.roadmap-title__in
+									div.roadmap-title__date Q1 2018
+									div.roadmap-title__name Lighthouse
+							.roadmap-desc Релиз сигнализирующий о начале работы платформы для разработчиков решений Умных городов и Индустрии 4.0. Следящие узлы системы сообщают в блоках сети Ethereum о поддержке релиза.
+
+						.col-md-3.roadmap-progress
+							.roadmap-title
+								.roadmap-title__in
+									div.roadmap-title__date Q2 2018
+									div.roadmap-title__name: span Observerer
+							.roadmap-desc С данного этапа начинается измерения важных для платформы показателей работы сети за счет сравнения результатов работы эталонной ноды и результатов, получаемых от сети.
+
+						.col-md-3.roadmap-waiting
+							.roadmap-title
+								.roadmap-title__in
+									div.roadmap-title__date Q1-Q2 2019
+									div.roadmap-title__name: span Cybernetics economy
+							.roadmap-desc Участники сети обладают необходимыми возможностями для работы умных городов и умных фабрик в ответ на экономически значимые транзакции.
+
+						.col-md-3.roadmap-waiting
+							.roadmap-title
+								.roadmap-title__in
+									div.roadmap-title__date Q3 2019 - Q2 2020
+									div.roadmap-title__name: span Lights-out
+							.roadmap-desc Сеть способна взять на себя задачи по управлению роботизированными цепочками обеспечения.
+
+			.separator-light.separator-animated-inview.js-checkInView
+
+			section
+				.secw-base
+					h2.t-center Релизы и timeline
+
+				.secw-narrow
+					.timeline
+						.timeline-type Новый релиз
+						.timeline-title Robonomics Beta 3 communication
+						.timeline-desc
+							p This is next stable release of Robonomics communication stack. In this release introduced new liability execution engine. New liability engine support parallel and sandboxing liability execution.
+							a(href="#", target="_blank"): b Посмотрите на GitHub ↗
+				#index-releaseLink
+					.secw-narrow
+						a.btn__text_orange(href="#") Посмотреть timeline полностью
+
+
+
+		+widget_newssubscription_light()

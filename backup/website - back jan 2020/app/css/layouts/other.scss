@@ -1,0 +1,224 @@
+/* Page News subscription */
+
+#page-news
+  {
+
+    // font-size: 16px;
+
+    h3{
+    	color: #000;
+    }
+
+    .sec-dots__gray
+      {
+        background-position: 100% 0;
+      }
+
+    .sec_mid__left
+      {
+        top: $vertical-rythm + 0.6rem;
+        right: 53%;
+        bottom: 60px;
+
+        &:before
+        {
+          content:"";
+          background-image: image-url('bg-news.png');
+          background-repeat: no-repeat;
+
+          position: absolute;
+          width: image-width('bg-news.png');
+          height: image-height('bg-news.png');
+          top: 100px;
+          right: 390px;
+        }
+
+        @include maxTablet(){
+          display: none;
+        }
+      }
+
+
+     .section__intro_content{
+     	min-height: 400px;
+     }
+
+  }
+
+
+
+
+/* Page Bounty for miners - alfa release */
+
+.section__firstTransaction
+	{
+		position: relative;
+
+		@media screen and (min-width: $bootstrap-sm){
+			&:after{
+				content:"";
+				width: 557px;
+				height: 299px;
+				background: image-url('XRT-first-transaction.png') no-repeat 0 0;
+				background-size: contain;
+
+				position: absolute;
+			    left: -300px;
+	    		bottom: -36px;
+			}
+		}
+		
+	}
+
+
+/* XRT TGE */
+#i-nagele{
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+  margin-left: 20px;
+}
+
+.tge-users
+  {
+    .img-block{
+      max-height: 120px;
+      margin-bottom: $vertical-rythm;
+    }
+  }
+
+.team-avatar{
+  position: relative;
+  margin-bottom: $vertical-rythm;
+
+  .team-avatar-links{
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+
+    a{
+      display: inline-block;
+      margin-right: 10px;
+
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.tge-progress-container{
+  position: relative;
+  padding-left: $margin-sec;
+}
+
+.tge-progress{
+
+  top: 0;
+  left: 0;
+  
+  &, .tge-progress-bar, .tge-progress-progress{
+    position: absolute;
+    bottom: 0;
+  }
+
+  .tge-progress-bar, .tge-progress-progress{
+    width: 2px;
+
+    &:before, &:after{
+      content:"";
+      background-color: $c-text;
+      height: 2px;
+      width: 20px;
+
+      position: absolute;
+      left: -8px;
+    }
+
+    &:before{
+      top: 0;
+    }
+
+    &:after{
+      bottom: 0;
+    }
+
+    p{
+      width: 150px;
+
+      position: absolute;
+      left: - 170px;
+      top: -10px;
+
+      text-align: right;
+    }
+  }
+
+  .tge-progress-bar{
+    height: 100%;
+    background-color: $c-text;
+    z-index: 0;
+
+    &:before, &:after{
+      background-color: $c-text;
+    }
+  }
+
+  .tge-progress-progress{
+    background-color: $c-orange;
+    z-index: 1;
+
+    p{
+      color: $c-orange;
+    }
+
+    &:before, &:after{
+      background-color: $c-orange;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) 
+  {
+
+    .tge-progress-container{
+      padding-top: $margin-sec !important;
+      padding-left: 0;
+    }
+
+
+    .tge-progress{
+      
+      &, .tge-progress-bar, .tge-progress-progress{
+        bottom: auto;
+        right: 0;
+
+        width: 100%;
+        height: 2px;
+
+        p{
+          top: 6px;
+          left: auto;
+          right: 0;
+        }
+      }
+
+      .tge-progress-progress{
+        width: 45%;
+        left: 0;
+        right: auto;
+      }
+
+    }
+  }
+
+
+/*CF7*/
+.screen-reader-response, div.wpcf7 .form-inline .ajax-loader
+{ display: none; }
+
+.wpcf7-not-valid-tip{
+  font-size: $font-size-base - 3;
+  font-weight: 400;
+  color: $c-red;
+}

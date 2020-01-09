@@ -1,0 +1,342 @@
+header[role='banner']
+  {
+    position: relative;
+
+    .el-social
+      {
+        background-color: #fff;
+      }
+  }
+
+
+/*====== Top section ======*/
+
+#header-top
+  {
+    position: relative;
+    z-index: 1000;
+    background-color: #fff;
+
+
+    #header-top--nav
+      {
+        display: table;
+        width: 100%;
+        height: 10vh;
+     }
+  }
+
+.header-top__sec
+  {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+
+
+#header-top__logo
+  {
+    display: block;
+
+    img
+      {
+        display: block;
+        height: 3rem;
+      }
+  }
+
+
+.header-top__nav
+  {
+    & > *
+      {
+        display: inline-block;
+        margin-right: 3rem;
+
+        &:last-child
+          {
+            margin-right: 0;
+          }
+      }
+
+    a
+      {
+        @extend %link_noline;
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 1;
+        letter-spacing: 1px;
+
+        &, &:hover
+          {
+            text-decoration: none !important;
+          }
+      }
+
+
+    .dropdown
+      {
+        & > a
+          {
+            position: relative;
+
+
+            &:before, &:after
+              {
+                content:"";
+                height: 1px;
+                background-color: $c-link;
+                position: absolute;
+                bottom: -2px;
+                transition: all 0.2s ease-in-out;
+                width: 50%;
+              }
+
+            &:before
+              {
+                left: 0;
+                right: 50%;
+              }
+
+            &:after
+              {
+                left: 50%;
+                right: 0;
+              }
+          }
+
+
+        &:hover
+          {
+            a
+              {
+                color: $c-orange;
+              }
+
+            & > a
+              {
+                &:before, &:after
+                  {
+                    bottom: -10px;
+                    width: 14px;
+                    left: 50%;
+                    right: auto;
+
+                    background-color: $c-orange;
+                  }
+
+                &:before
+                  {
+                    transform: rotate(30deg);
+                    transform-origin: 100% 0;
+                    margin-left: -13px;
+                  }
+
+                &:after
+                  {
+                    transform: rotate(-30deg);
+                    transform-origin: 0 0;
+                  }
+              }
+          }
+      }
+ 
+  }
+
+
+
+#header-banner--text
+  {
+    display: block;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    background-color: $c-orange;
+    color: #fff;
+    @extend %link_noline;
+
+    @extend %text_uppercase;
+    font-size: 14px;
+    font-weight: 500;
+
+    span.secw-base
+      {
+        display: block;
+        text-align: center;
+      }
+  }
+
+/*====== end of Top section ======*/
+
+
+
+
+
+
+
+
+/*====== Header navigation ======*/
+
+.hamburger
+  {
+    display: inline-block;
+    cursor: pointer;
+
+    .line
+      {
+        width: 30px;
+        height: 2px;
+        background-color: $c-violet-dark;
+        display: block;
+        margin: 8px auto;
+        border-radius: 2px;
+        transition: all .3s ease-in-out;
+      }
+
+     @extend %FadeOut;
+
+      @media screen and (max-width: $mq-menuhide) 
+        {
+          animation: 0.2s FadeIn 0.2s linear forwards;
+        }
+
+
+    &.opened
+      {
+        position: fixed;
+        z-index: 2;
+        top: 30px;
+        right: 20px;
+
+        .line
+          {
+            background-color: #fff;
+            &:nth-child(2){ opacity: 0; }
+            &:nth-child(1) { transform: translateY(10px) rotate(45deg); }
+            &:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
+          }
+      }
+  }
+
+
+.nav-mobilehide
+  {
+
+    @extend %FadeOut;
+
+    @media screen and (min-width: $mq-menuhide) 
+      {
+        animation: 0.2s FadeIn 0.2s linear forwards;
+      }
+
+    @media screen and (max-width: $mq-menuhide) 
+      {
+        display: none;
+
+        &.opened
+          {
+            display: block;
+            
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            overflow-y: auto;
+            
+            background: $c-violet-dark;
+            text-align: left;
+            padding: 120px 40px;
+            
+            animation: 0.1s FadeIn linear forwards;
+
+
+            .header-top__nav
+              {
+                & > a
+                 {
+                  color: #fff;
+                 }
+
+                & > *
+                  {
+                    display: block;
+
+                    margin-top: 30px;
+
+                    &:first-child
+                      {
+                        margin-top: 0;
+                      }
+                  }
+              }
+
+
+            .dropdown
+              {
+                margin-top: 50px;
+
+                &:first-child
+                  {
+                    margin-top: 0
+                  }
+
+                & > a
+                  {
+                    color: $c-orange;
+
+                    &:before, &:after
+                      {
+                        display: none;
+                      }
+                  }
+                
+              }
+
+            .dropdown-content
+              {
+                visibility: visible;
+                opacity: 1;
+                animation: none !important;
+
+                position: static;
+                text-align: left;
+                padding: 10px 0 0;
+
+                &, a { color: #fff; }
+              }
+
+            .el-social
+              {
+                margin-right: 15px;
+                border-color: #fff;
+
+                &:last-child { margin-right: 0; }
+              }
+          }
+
+
+      }
+  }
+
+/*====== end of Header navigation ======*/
+
+#header-index--middle, #header-index--bottom
+  {
+    display: flex;
+    align-items: center;
+  }
+
+
+#header-index--middle
+  {
+    height: 60vh;
+  }
+
+
+#header-index--bottom
+  {
+    height: 30vh;
+  }
+
