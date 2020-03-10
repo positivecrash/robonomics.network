@@ -1,3 +1,9 @@
+.timeline-global
+	{
+		margin: 4rem 0;
+	}
+
+
 .timeline
 	{
 		border-left: 2px solid $c-gray-mid;
@@ -23,11 +29,19 @@
 		}
 	}
 
+
 .timeline-type
 	{
 		@extend %text_uppercase;
 		font-weight: 500;
-		margin-bottom: $vertical-rythm/2;
+		// margin-bottom: $vertical-rythm/2;
+	}
+
+.timeline-title
+	{
+		text-transform: uppercase;
+		font-weight: 500;
+		margin-bottom: 1rem;
 	}
 
 .timeline-desc
@@ -48,6 +62,8 @@
 		&:before{
 			background: $c-orange;
 		}
+
+		.timeline-type, .timeline-title { color: $c-orange; }
 	}
 
 
@@ -58,4 +74,6 @@
 		&:before{
 			background: $c-green;
 		}
+
+		.timeline-type, .timeline-title { color: $c-green; }
 	}

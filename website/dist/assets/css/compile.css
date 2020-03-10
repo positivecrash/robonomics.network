@@ -1931,20 +1931,20 @@ h5 {
 }
 
 .t-superbig {
-  font-size: 17.2rem;
+  font-size: 2.4rem;
   font-weight: 900;
 }
 
 .t-big {
-  font-size: 5.2rem;
+  font-size: 1.8rem;
 }
 
 .t-mid {
-  font-size: 3.2rem;
+  font-size: 1.5rem;
 }
 
 .t-small {
-  font-size: -1.8rem;
+  font-size: 0.9rem;
 }
 
 /*====== end of Text sizes & Headers ======*/
@@ -3236,6 +3236,22 @@ header[role='banner'] .el-social {
   height: 30vh;
 }
 
+#header-index--middle {
+  position: relative;
+}
+#header-index--middle .decor-arms {
+  top: calc( 50% - 85px );
+}
+#header-index--middle h1 {
+  text-align: center;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 1300px) {
+  #header-index--middle .decor-arms {
+    display: none;
+  }
+}
+
 footer[role='contentinfo'] {
   font-weight: 300;
 }
@@ -3800,7 +3816,7 @@ section.widget-robotics .decor-arms {
 }
 
 /* подразумевается отложенная анимация */
-section.widget-robotics.js-checkInView .decor-arms .arm-1 span, section.widget-robotics.js-checkInView .decor-arms .arm-2 span {
+section.widget-robotics.js-checkInView .decor-arms .arm-1 span, section.widget-robotics.js-checkInView .decor-arms .arm-2 span, #header-index--middle .decor-arms .arm-1 span, #header-index--middle .decor-arms .arm-2 span {
   transform-origin: 50% 50%;
   animation-duration: 1.4s;
   animation-delay: 1.4s;
@@ -3808,193 +3824,193 @@ section.widget-robotics.js-checkInView .decor-arms .arm-1 span, section.widget-r
   animation-fill-mode: forwards;
 }
 @media screen and (min-width: 1600px) {
-  section.widget-robotics.js-checkInView .decor-arms .arm-1 span, section.widget-robotics.js-checkInView .decor-arms .arm-2 span {
+  section.widget-robotics.js-checkInView .decor-arms .arm-1 span, section.widget-robotics.js-checkInView .decor-arms .arm-2 span, #header-index--middle .decor-arms .arm-1 span, #header-index--middle .decor-arms .arm-2 span {
     animation-duration: 2.2s;
     animation-delay: 2.2s;
   }
 }
-section.widget-robotics.js-checkInView .decor-arms .arm-1 {
+section.widget-robotics.js-checkInView .decor-arms .arm-1, #header-index--middle .decor-arms .arm-1 {
   transform: translateX(-100px);
   opacity: 0;
 }
-section.widget-robotics.js-checkInView .decor-arms .arm-2 {
+section.widget-robotics.js-checkInView .decor-arms .arm-2, #header-index--middle .decor-arms .arm-2 {
   transform: translateX(100px);
   opacity: 0;
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand1-1 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-1, #header-index--middle .sprite-basic-robotHand1-1 {
   transform: translateY(-30px) rotate(19deg);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand1-2 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-2, #header-index--middle .sprite-basic-robotHand1-2 {
   transform: rotate(-15deg);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand1-3 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-3, #header-index--middle .sprite-basic-robotHand1-3 {
   transform-origin: 0 0 !important;
   transform: rotate(-25deg);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand1-4 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-4, #header-index--middle .sprite-basic-robotHand1-4 {
   transform: translateY(-17px) rotate(-11deg);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand1-5 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-5, #header-index--middle .sprite-basic-robotHand1-5 {
   transform: translateY(-39px) translateX(4px);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand1-6 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-6, #header-index--middle .sprite-basic-robotHand1-6 {
   transform: translateY(-39px) translateX(4px) rotate(-10deg);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand1-7 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-7, #header-index--middle .sprite-basic-robotHand1-7 {
   transform: translateY(-55px) translateX(45px) rotate(-78deg);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand1-8 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-8, #header-index--middle .sprite-basic-robotHand1-8 {
   transform: translateY(-32px) translateX(35px) rotate(-10deg);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand1-9 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-9, #header-index--middle .sprite-basic-robotHand1-9 {
   transform: translateY(-52px) translateX(50px) rotate(-55deg);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand1-10 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-10, #header-index--middle .sprite-basic-robotHand1-10 {
   transform-origin: 0 0 !important;
   transform: translateY(19px) translateX(-7px) rotate(-56deg);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand1-11 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand1-11, #header-index--middle .sprite-basic-robotHand1-11 {
   transform-origin: 0 0 !important;
   transform: translateY(-48px) translateX(27px) rotate(-32deg);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand2-1 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand2-1, #header-index--middle .sprite-basic-robotHand2-1 {
   transform: rotate(-3deg) translateY(8px) translateX(-3px);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand2-2 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand2-2, #header-index--middle .sprite-basic-robotHand2-2 {
   transform: rotate(8deg) translateY(9px) translateX(-6px);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand2-3 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand2-3, #header-index--middle .sprite-basic-robotHand2-3 {
   transform: rotate(-9deg) translateY(4px) translateX(-8px);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand2-4 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand2-4, #header-index--middle .sprite-basic-robotHand2-4 {
   transform: rotate(-9deg) translateY(4px);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand2-5 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand2-5, #header-index--middle .sprite-basic-robotHand2-5 {
   transform: rotate(-9deg) translateY(2px) translateX(3px);
   transform-origin: 100% 100%;
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand2-6 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand2-6, #header-index--middle .sprite-basic-robotHand2-6 {
   transform: rotate(8deg) translateY(10px) translateX(5px);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand2-7 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand2-7, #header-index--middle .sprite-basic-robotHand2-7 {
   transform: rotate(11deg) translateY(5px) translateX(6px);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand2-8 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand2-8, #header-index--middle .sprite-basic-robotHand2-8 {
   transform: rotate(-15deg) translateY(2px) translateX(3px);
   transform-origin: 100% 100%;
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand2-9 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand2-9, #header-index--middle .sprite-basic-robotHand2-9 {
   transform: rotate(-4deg) translateY(17px);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand2-10 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand2-10, #header-index--middle .sprite-basic-robotHand2-10 {
   transform: rotate(-62deg) translateY(24px) translateX(10px);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand2-11 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand2-11, #header-index--middle .sprite-basic-robotHand2-11 {
   transform: rotate(-18deg) translateY(2px) translateX(3px);
   transform-origin: 100% 100%;
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand2-12 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand2-12, #header-index--middle .sprite-basic-robotHand2-12 {
   transform: translateY(18px) translateX(2px);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand2-13 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand2-13, #header-index--middle .sprite-basic-robotHand2-13 {
   transform: rotate(-39deg) translateY(16px) translateX(6px);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand2-14 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand2-14, #header-index--middle .sprite-basic-robotHand2-14 {
   transform: rotate(10deg) translateY(2px);
 }
-section.widget-robotics.js-checkInView .sprite-basic-robotHand2-15 {
+section.widget-robotics.js-checkInView .sprite-basic-robotHand2-15, #header-index--middle .sprite-basic-robotHand2-15 {
   transform: rotate(10deg) translateY(14px);
 }
 
 /* а вот и анимация */
-section.widget-robotics.isInView .decor-arms .arm-1 {
+section.widget-robotics.isInView .decor-arms .arm-1, #header-index--middle .decor-arms .arm-1 {
   animation: robotHand1-show 0.8s 1.2s linear forwards;
 }
-section.widget-robotics.isInView .decor-arms .arm-2 {
+section.widget-robotics.isInView .decor-arms .arm-2, #header-index--middle .decor-arms .arm-2 {
   animation: robotHand2-show 0.8s 1.2s linear forwards;
 }
 @media screen and (min-width: 1600px) {
-  section.widget-robotics.isInView .decor-arms .arm-1, section.widget-robotics.isInView .decor-arms .arm-2 {
+  section.widget-robotics.isInView .decor-arms .arm-1, section.widget-robotics.isInView .decor-arms .arm-2, #header-index--middle .decor-arms .arm-1, #header-index--middle .decor-arms .arm-2 {
     animation-duration: 1.4s;
     animation-delay: 1.8s;
   }
 }
-section.widget-robotics.isInView .sprite-basic-robotHand1-1 {
+section.widget-robotics.isInView .sprite-basic-robotHand1-1, #header-index--middle .sprite-basic-robotHand1-1 {
   animation-name: robotHand1-1;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand1-2 {
+section.widget-robotics.isInView .sprite-basic-robotHand1-2, #header-index--middle .sprite-basic-robotHand1-2 {
   animation-name: robotHand1-2;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand1-3 {
+section.widget-robotics.isInView .sprite-basic-robotHand1-3, #header-index--middle .sprite-basic-robotHand1-3 {
   animation-name: robotHand1-3;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand1-4 {
+section.widget-robotics.isInView .sprite-basic-robotHand1-4, #header-index--middle .sprite-basic-robotHand1-4 {
   animation-name: robotHand1-4;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand1-5 {
+section.widget-robotics.isInView .sprite-basic-robotHand1-5, #header-index--middle .sprite-basic-robotHand1-5 {
   animation-name: robotHand1-5;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand1-6 {
+section.widget-robotics.isInView .sprite-basic-robotHand1-6, #header-index--middle .sprite-basic-robotHand1-6 {
   animation-name: robotHand1-6;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand1-7 {
+section.widget-robotics.isInView .sprite-basic-robotHand1-7, #header-index--middle .sprite-basic-robotHand1-7 {
   animation-name: robotHand1-7;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand1-8 {
+section.widget-robotics.isInView .sprite-basic-robotHand1-8, #header-index--middle .sprite-basic-robotHand1-8 {
   animation-name: robotHand1-8;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand1-9 {
+section.widget-robotics.isInView .sprite-basic-robotHand1-9, #header-index--middle .sprite-basic-robotHand1-9 {
   animation-name: robotHand1-9;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand1-10 {
+section.widget-robotics.isInView .sprite-basic-robotHand1-10, #header-index--middle .sprite-basic-robotHand1-10 {
   animation-name: robotHand1-10;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand1-11 {
+section.widget-robotics.isInView .sprite-basic-robotHand1-11, #header-index--middle .sprite-basic-robotHand1-11 {
   animation-name: robotHand1-11;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand2-1 {
+section.widget-robotics.isInView .sprite-basic-robotHand2-1, #header-index--middle .sprite-basic-robotHand2-1 {
   animation-name: robotHand2-1;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand2-2 {
+section.widget-robotics.isInView .sprite-basic-robotHand2-2, #header-index--middle .sprite-basic-robotHand2-2 {
   animation-name: robotHand2-2;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand2-3 {
+section.widget-robotics.isInView .sprite-basic-robotHand2-3, #header-index--middle .sprite-basic-robotHand2-3 {
   animation-name: robotHand2-3;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand2-4 {
+section.widget-robotics.isInView .sprite-basic-robotHand2-4, #header-index--middle .sprite-basic-robotHand2-4 {
   animation-name: robotHand2-4;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand2-5 {
+section.widget-robotics.isInView .sprite-basic-robotHand2-5, #header-index--middle .sprite-basic-robotHand2-5 {
   animation-name: robotHand2-5;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand2-6 {
+section.widget-robotics.isInView .sprite-basic-robotHand2-6, #header-index--middle .sprite-basic-robotHand2-6 {
   animation-name: robotHand2-6;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand2-7 {
+section.widget-robotics.isInView .sprite-basic-robotHand2-7, #header-index--middle .sprite-basic-robotHand2-7 {
   animation-name: robotHand2-7;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand2-8 {
+section.widget-robotics.isInView .sprite-basic-robotHand2-8, #header-index--middle .sprite-basic-robotHand2-8 {
   animation-name: robotHand2-8;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand2-9 {
+section.widget-robotics.isInView .sprite-basic-robotHand2-9, #header-index--middle .sprite-basic-robotHand2-9 {
   animation-name: robotHand2-9;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand2-10 {
+section.widget-robotics.isInView .sprite-basic-robotHand2-10, #header-index--middle .sprite-basic-robotHand2-10 {
   animation-name: robotHand2-10;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand2-11 {
+section.widget-robotics.isInView .sprite-basic-robotHand2-11, #header-index--middle .sprite-basic-robotHand2-11 {
   animation-name: robotHand2-11;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand2-12 {
+section.widget-robotics.isInView .sprite-basic-robotHand2-12, #header-index--middle .sprite-basic-robotHand2-12 {
   animation-name: robotHand2-12;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand2-13 {
+section.widget-robotics.isInView .sprite-basic-robotHand2-13, #header-index--middle .sprite-basic-robotHand2-13 {
   animation-name: robotHand2-13;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand2-14 {
+section.widget-robotics.isInView .sprite-basic-robotHand2-14, #header-index--middle .sprite-basic-robotHand2-14 {
   animation-name: robotHand2-14;
 }
-section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
+section.widget-robotics.isInView .sprite-basic-robotHand2-15, #header-index--middle .sprite-basic-robotHand2-15 {
   animation-name: robotHand2-15;
 }
 
@@ -4506,6 +4522,10 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
   color: #E84004;
 }
 
+.timeline-global {
+  margin: 4rem 0;
+}
+
 .timeline {
   border-left: 2px solid #A0A0A0;
   padding-left: 30px;
@@ -4529,7 +4549,12 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 
 .timeline-type {
   font-weight: 500;
-  margin-bottom: 0.9rem;
+}
+
+.timeline-title {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
 
 .timeline-desc {
@@ -4545,12 +4570,18 @@ section.widget-robotics.isInView .sprite-basic-robotHand2-15 {
 .timeline-orange:before {
   background: #F15A24;
 }
+.timeline-orange .timeline-type, .timeline-orange .timeline-title {
+  color: #F15A24;
+}
 
 .timeline-green {
   border-color: #54CE63;
 }
 .timeline-green:before {
   background: #54CE63;
+}
+.timeline-green .timeline-type, .timeline-green .timeline-title {
+  color: #54CE63;
 }
 
 html, body {

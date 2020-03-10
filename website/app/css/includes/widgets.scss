@@ -575,7 +575,7 @@ section.widget-robotics
 
 
 /* подразумевается отложенная анимация */
-section.widget-robotics.js-checkInView
+section.widget-robotics.js-checkInView, #header-index--middle
 	{
 		.decor-arms
 			{
@@ -657,7 +657,7 @@ section.widget-robotics.js-checkInView
 
 
 /* а вот и анимация */
-section.widget-robotics.isInView
+section.widget-robotics.isInView, #header-index--middle
 	{
 		.decor-arms
 			{

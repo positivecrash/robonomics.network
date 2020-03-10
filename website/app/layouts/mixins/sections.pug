@@ -17,10 +17,10 @@ mixin header_top()
 
 			.header-top__sec.t-right.nav-mobilehide
 				nav.header-top__nav
-					a(href="#") Whitepaper
-					a(href="#") TGE XRT
-					a(href="#") Сценарии
-					a(href="#") Timeline
+					a(href="#", target="_blank", rel="noreferrer") Github
+					a(href="#", target="_blank", rel="noreferrer") Dapp
+					a(href="#") Token
+					a(href="#") Docs
 					.dropdown
 						a(href="javascript:;") Join us
 						.dropdown-content
@@ -49,56 +49,46 @@ mixin widget_newssubscription_dark()
 				a(href="#").btn-green Подписаться
 
 
-mixin widget_miners_bounty()
-	section.widget-miners_bounty.sec-white
-		.secw-base.t-center
-			+xrt_lined()
-
-			h2.t-center Для майнеров: участвуйте в альфа релизе
-			.secw-narrow
-				p.t-center С июня 2018 года Робономика запустилась в Ethereum mainnet и абсолютно любой держатель ETH может стать её провайдером. Участвуйте и получайте вознаграждение за тестирование сети.
-				a.btn__text_orange(href="#") Подробнее
-
-
 mixin widget_robotics()
 	section.widget-robotics.sec-white.js-checkInView
 		.secw-base.t-center
 			h2.t-center Для робототехников
 			.secw-narrow
 				p.t-center Получите опыт применения p2p технологий в области построения мультиагентных систем. Например создайте открытую сенсорную сеть умного города, организуйте базу мобильной робототехники или подключите интернет сайт для заказа услуг 3D принтера.
-				a.btn__text_orange(href="#", target="_blank") В учебный центр &#8599;
+				//- a.btn__text_orange(href="#", target="_blank") В учебный центр &#8599;
+				a.btn__text_orange(href="#", target="_blank") В учебный центр
 
 		
-		.decor-arms
-			.arm-1
-				span.sprite-basic-robotHand1-1
-				span.sprite-basic-robotHand1-2
-				span.sprite-basic-robotHand1-3
-				span.sprite-basic-robotHand1-4
-				span.sprite-basic-robotHand1-5
-				span.sprite-basic-robotHand1-6
-				span.sprite-basic-robotHand1-7
-				span.sprite-basic-robotHand1-8
-				span.sprite-basic-robotHand1-9
-				span.sprite-basic-robotHand1-10
-				span.sprite-basic-robotHand1-11
+		//- .decor-arms
+		//- 	.arm-1
+		//- 		span.sprite-basic-robotHand1-1
+		//- 		span.sprite-basic-robotHand1-2
+		//- 		span.sprite-basic-robotHand1-3
+		//- 		span.sprite-basic-robotHand1-4
+		//- 		span.sprite-basic-robotHand1-5
+		//- 		span.sprite-basic-robotHand1-6
+		//- 		span.sprite-basic-robotHand1-7
+		//- 		span.sprite-basic-robotHand1-8
+		//- 		span.sprite-basic-robotHand1-9
+		//- 		span.sprite-basic-robotHand1-10
+		//- 		span.sprite-basic-robotHand1-11
 
-			.arm-2
-				span.sprite-basic-robotHand2-1
-				span.sprite-basic-robotHand2-2
-				span.sprite-basic-robotHand2-3
-				span.sprite-basic-robotHand2-4
-				span.sprite-basic-robotHand2-5
-				span.sprite-basic-robotHand2-6
-				span.sprite-basic-robotHand2-7
-				span.sprite-basic-robotHand2-8
-				span.sprite-basic-robotHand2-9
-				span.sprite-basic-robotHand2-10
-				span.sprite-basic-robotHand2-11
-				span.sprite-basic-robotHand2-12
-				span.sprite-basic-robotHand2-13
-				span.sprite-basic-robotHand2-14
-				span.sprite-basic-robotHand2-15
+		//- 	.arm-2
+		//- 		span.sprite-basic-robotHand2-1
+		//- 		span.sprite-basic-robotHand2-2
+		//- 		span.sprite-basic-robotHand2-3
+		//- 		span.sprite-basic-robotHand2-4
+		//- 		span.sprite-basic-robotHand2-5
+		//- 		span.sprite-basic-robotHand2-6
+		//- 		span.sprite-basic-robotHand2-7
+		//- 		span.sprite-basic-robotHand2-8
+		//- 		span.sprite-basic-robotHand2-9
+		//- 		span.sprite-basic-robotHand2-10
+		//- 		span.sprite-basic-robotHand2-11
+		//- 		span.sprite-basic-robotHand2-12
+		//- 		span.sprite-basic-robotHand2-13
+		//- 		span.sprite-basic-robotHand2-14
+		//- 		span.sprite-basic-robotHand2-15
 
 
 mixin widget_etherdevelopers()
@@ -107,5 +97,5 @@ mixin widget_etherdevelopers()
 			h2.t-center Для разработчиков Ethereum js: создавайте свои dapp умного города
 			.secw-narrow
 				p.t-center Обладая опытом работы с web3.js, вы сможете быстро разработать dApp по покупке услуг, оказываемых роботам. Создайте свой dApp умного города с помощью специально подготовленной нами библиотеки robonomics-js.
-				a.btn__text_orange(href="#", target="_blank") Перейти к документации  &#8599;
+				a.btn__text_orange(href="#", target="_blank") Перейти к документации
 

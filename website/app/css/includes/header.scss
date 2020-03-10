@@ -340,3 +340,27 @@ header[role='banner']
     height: 30vh;
   }
 
+
+
+#header-index--middle
+  {
+    position: relative;
+
+    .decor-arms{
+      top: calc( 50% - 85px );
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 1300px) 
+      {
+        .decor-arms
+          {
+            display: none;
+          }
+      }
+  }
+

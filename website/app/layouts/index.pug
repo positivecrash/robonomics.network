@@ -8,20 +8,54 @@ block content
 	header(role='banner')#header-index.screen
 
 		+header_top()
-		#header-index--middle
-			.secw-base
-				h1 Платформа Робономики
-				#index-header_text
-					p Web3 Framework for smart cities and industry app developers
-					p#index-header_logos
-						span.sprite-basic-logo-ros
-						span.sprite-basic-logo-nixos
-						span.sprite-basic-logo-ipfs
-						span.sprite-basic-logo-aira
-						span.sprite-basic-logo-polkadot
-						span.sprite-basic-logo-ethereum
 
-					a.btn-green(href="https://aira.readthedocs.io/en/latest/getting_started.html" target="_blank") Getting started
+		#header-index--middle
+			.secw-narrow.t-center
+				h1 Платформа Робономики
+
+				p Web3 Framework for smart cities and industry app developers
+
+				p#index-header_logos
+					span.sprite-basic-logo-ros
+					span.sprite-basic-logo-nixos
+					span.sprite-basic-logo-ipfs
+					span.sprite-basic-logo-aira
+					span.sprite-basic-logo-polkadot
+					span.sprite-basic-logo-ethereum
+
+				a.btn-green(href="https://aira.readthedocs.io/en/latest/getting_started.html", target="_blank", rel="noreferrer") Getting started
+
+			.decor-arms
+				.arm-1
+					span.sprite-basic-robotHand1-1
+					span.sprite-basic-robotHand1-2
+					span.sprite-basic-robotHand1-3
+					span.sprite-basic-robotHand1-4
+					span.sprite-basic-robotHand1-5
+					span.sprite-basic-robotHand1-6
+					span.sprite-basic-robotHand1-7
+					span.sprite-basic-robotHand1-8
+					span.sprite-basic-robotHand1-9
+					span.sprite-basic-robotHand1-10
+					span.sprite-basic-robotHand1-11
+
+				.arm-2
+					span.sprite-basic-robotHand2-1
+					span.sprite-basic-robotHand2-2
+					span.sprite-basic-robotHand2-3
+					span.sprite-basic-robotHand2-4
+					span.sprite-basic-robotHand2-5
+					span.sprite-basic-robotHand2-6
+					span.sprite-basic-robotHand2-7
+					span.sprite-basic-robotHand2-8
+					span.sprite-basic-robotHand2-9
+					span.sprite-basic-robotHand2-10
+					span.sprite-basic-robotHand2-11
+					span.sprite-basic-robotHand2-12
+					span.sprite-basic-robotHand2-13
+					span.sprite-basic-robotHand2-14
+					span.sprite-basic-robotHand2-15
+
 		#header-index--bottom
 			.secw-base
 				.sheme-main
@@ -62,61 +96,85 @@ block content
 		+widget_etherdevelopers()
 		.separator-dark.separator-animated-inview.js-checkInView
 		+widget_robotics()
-		.separator-dark.separator-animated-inview.js-checkInView
-		+widget_miners_bounty()
 
 
 		.sec-gray-dark
+			// section
+			// 	.secw-base
+			// 		h2.t-center План развития инфраструктуры
+
+			// 		.roadmap.row
+			// 			.col-md-3.roadmap-done
+			// 				.roadmap-title
+			// 					.roadmap-title__in
+			// 						div.roadmap-title__date Q1 2018
+			// 						div.roadmap-title__name Lighthouse
+			// 				.roadmap-desc Релиз сигнализирующий о начале работы платформы для разработчиков решений Умных городов и Индустрии 4.0. Следящие узлы системы сообщают в блоках сети Ethereum о поддержке релиза.
+
+			// 			.col-md-3.roadmap-progress
+			// 				.roadmap-title
+			// 					.roadmap-title__in
+			// 						div.roadmap-title__date Q2 2018
+			// 						div.roadmap-title__name: span Observerer
+			// 				.roadmap-desc С данного этапа начинается измерения важных для платформы показателей работы сети за счет сравнения результатов работы эталонной ноды и результатов, получаемых от сети.
+
+			// 			.col-md-3.roadmap-waiting
+			// 				.roadmap-title
+			// 					.roadmap-title__in
+			// 						div.roadmap-title__date Q1-Q2 2019
+			// 						div.roadmap-title__name: span Cybernetics economy
+			// 				.roadmap-desc Участники сети обладают необходимыми возможностями для работы умных городов и умных фабрик в ответ на экономически значимые транзакции.
+
+			// 			.col-md-3.roadmap-waiting
+			// 				.roadmap-title
+			// 					.roadmap-title__in
+			// 						div.roadmap-title__date Q3 2019 - Q2 2020
+			// 						div.roadmap-title__name: span Lights-out
+			// 				.roadmap-desc Сеть способна взять на себя задачи по управлению роботизированными цепочками обеспечения.
+
+			// .separator-light.separator-animated-inview.js-checkInView
+
 			section
 				.secw-base
-					h2.t-center План развития инфраструктуры
-
-					.roadmap.row
-						.col-md-3.roadmap-done
-							.roadmap-title
-								.roadmap-title__in
-									div.roadmap-title__date Q1 2018
-									div.roadmap-title__name Lighthouse
-							.roadmap-desc Релиз сигнализирующий о начале работы платформы для разработчиков решений Умных городов и Индустрии 4.0. Следящие узлы системы сообщают в блоках сети Ethereum о поддержке релиза.
-
-						.col-md-3.roadmap-progress
-							.roadmap-title
-								.roadmap-title__in
-									div.roadmap-title__date Q2 2018
-									div.roadmap-title__name: span Observerer
-							.roadmap-desc С данного этапа начинается измерения важных для платформы показателей работы сети за счет сравнения результатов работы эталонной ноды и результатов, получаемых от сети.
-
-						.col-md-3.roadmap-waiting
-							.roadmap-title
-								.roadmap-title__in
-									div.roadmap-title__date Q1-Q2 2019
-									div.roadmap-title__name: span Cybernetics economy
-							.roadmap-desc Участники сети обладают необходимыми возможностями для работы умных городов и умных фабрик в ответ на экономически значимые транзакции.
-
-						.col-md-3.roadmap-waiting
-							.roadmap-title
-								.roadmap-title__in
-									div.roadmap-title__date Q3 2019 - Q2 2020
-									div.roadmap-title__name: span Lights-out
-							.roadmap-desc Сеть способна взять на себя задачи по управлению роботизированными цепочками обеспечения.
-
-			.separator-light.separator-animated-inview.js-checkInView
-
-			section
-				.secw-base
-					h2.t-center Релизы и timeline
+					h2.t-center Сроки развития инфраструктуры и технологии
 
 				.secw-narrow
-					.timeline
-						.timeline-type Новый релиз
-						.timeline-title Robonomics Beta 3 communication
-						.timeline-desc
-							p This is next stable release of Robonomics communication stack. In this release introduced new liability execution engine. New liability engine support parallel and sandboxing liability execution.
-							a(href="#", target="_blank"): b Посмотрите на GitHub ↗
-				#index-releaseLink
-					.secw-narrow
-						a.btn__text_orange(href="#") Посмотреть timeline полностью
+					.timeline-global
+						.timeline.timeline-green
+							.timeline-type 2015 - 2017
+							.timeline-title Ethereum + Robot operating system R&D stage
+							.timeline-desc
+								p We identified a range of tasks, in which p2p technologies have capabilities that were not previously available for robotics, such as money for robots and smart contracts. These are examples of Robot-as-a-Service under decentralized computer control, i.e. economic agents on digital markets. That was our common vision of the next 4 years in work.
+								a(href="https://wiki.robonomics.network", target="_blank", rel="nofollow noopener noreferrer"): b Find our R&D in Wiki
+
+						.timeline.timeline-green
+							.timeline-type 2017
+							.timeline-title Robonomics network concept
+							.timeline-desc
+								p We formed a common concept for creating a decentralized network of providers for servicing Smart cities — the Robonomics network.
+								a(href="https://static.robonomics.network/docs/whitepaper/Robonomics-whitepaper-en.pdf", target="_blank", rel="nofollow noopener noreferrer"): b Read Robonomics whitepaper
+
+						.timeline.timeline-green
+							.timeline-type 2018
+							.timeline-title Alfa network over Ethereum and IPFS
+							.timeline-desc
+								p By November 2018, Airalab had alfa version of the Robonomics network running in Ethereum mainnet. Also we published on GitHub a set of tools for creating projects in the Robot-as-a-Service format and decentralized applications or serverless applications to work with the network.
+								a(href="http://dapp.robonomics.network/", target="_blank", rel="nofollow noopener noreferrer"): b Go to Robonomics Dapp
+
+						.timeline.timeline-green
+							.timeline-type 2019
+							.timeline-title Robonomics as web3 framework
+							.timeline-desc
+								p The IoT market is only growing up, which means that for connecting robots there is a huge opportunity to use web3 technologies straight away to organize human-to-machine and m2m communication. Cryptocurrencies, smart contracts, sovereign identification can be a strong driver for the development of Robot-as-a-Service around the world.
+								// a(href="#", target="_blank", rel="nofollow noopener noreferrer"): b Go to Robonomics Dapp
+
+						.timeline.timeline-orange
+							.timeline-type Today
+							.timeline-title On top of two world computers and Aragon DAO for the Community
+							.timeline-desc
+								p We continue to work with developing the Robonomics platform over Ethereum and Polkadot networks as universal L2 solution for Robot-as-a-Service/IoT nodes. There are more releases on GitHub and new cool tech under armor. We invite developers to our community to spread web3+robotics. Besides the community is welcome to participate in our project life from spring 2020 due to Aragon DAO.
+								a(href="https://blog.aira.life/robonomics-roadmap2020-77befa1da095", target="_blank", rel="nofollow noopener noreferrer"): b More in Robonomics Roadmap 2020
 
 
 
-		+widget_newssubscription_light()
+		// +widget_newssubscription_light()

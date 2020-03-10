@@ -16,6 +16,7 @@ var gulp             = require('gulp'),
     ttf2eot          = require('gulp-ttf2eot'),
     ttf2woff         = require('gulp-ttf2woff'),
 
+    iconfont         = require('gulp-iconfont')
     browserSync      = require('browser-sync');
 
 
@@ -25,68 +26,86 @@ var path = {
         csscompile: 'app/css/compile.scss',
         cssall: 'app/css/**/*.scss',
         jsall: 'app/js/**/*.js',
+        layoutscompile: 'app/layouts/*.pug',
         layoutsall: 'app/layouts/**/*.pug',
+        fonticons: 'app/fonticons/*.svg'
     },
 
     folder:{
         css: 'dist/assets/css/',
+        fonts: 'dist/assets/fonts/',
         sass: 'app/css/',
         image: 'dist/assets/i/',
-        sprites: 'app/sprite/',
         js: 'dist/assets/js/',
         layouts: 'dist/',
-        csstemplates: 'app/css/templates/'
+        csstemplates: 'app/css/templates/',
+        sprites: 'app/sprite/'
     },
 
     filename:{
-        css: 'robonomics_website',
-        js: 'robonomics_plugins.js'
+        css: 'website',
+        js: 'website.js',
+        fonticons: 'iconfont'
     }
 
 }
 
 
 gulp.task('css', function() {
-	return gulp.src([path.file.csscompile])
-		.pipe(compass({
-			css: path.folder.css,
-			sass: path.folder.sass,
-			image: path.folder.image
-		}))
-		.pipe(rename({
-            basename: path.filename.css
+    return gulp.src([path.file.csscompile])
+        .pipe(compass({
+            css: path.folder.css,
+            sass: path.folder.sass,
+            image: path.folder.image,
+            font: path.folder.fonts
         }))
         .pipe(gulp.dest(path.folder.css))
         .pipe(cleancss({
           compatibility: 'ie8'
         }))
-		.pipe(rename({
+        .pipe(rename({
             basename: path.filename.css,
             suffix: '.min'
         }))
-		.pipe(gulp.dest(path.folder.css))
+        .pipe(gulp.dest(path.folder.css))
         .pipe(browserSync.reload({stream:true}));
 });
 
 
 
+
 gulp.task('js', function() {
-	return gulp.src([path.file.jsall])
-		.pipe(concat(path.filename.js))
-		.pipe(gulp.dest(path.folder.js))
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(uglify())
-		.pipe(gulp.dest(path.folder.js))
+    return gulp.src([path.file.jsall])
+        .pipe(concat(path.filename.js))
+        .pipe(gulp.dest(path.folder.js))
+        .pipe(rename({ suffix: '.min' }))
+        // .pipe(uglify())
+        .pipe(gulp.dest(path.folder.js))
         .pipe(browserSync.reload({stream:true}));
 });
 
 
 gulp.task('layouts', function() {
-  return gulp.src([path.file.layoutsall])
+  return gulp.src([path.file.layoutscompile])
     .pipe(pug({
       pretty: true
     }))
     .pipe(gulp.dest(path.folder.layouts))
+    .pipe(browserSync.reload({stream:true}));
+});
+
+
+
+gulp.task('iconfont', function(){
+    return gulp.src([path.file.fonticons])
+    .pipe(iconfont({
+      fontName: path.filename.fonticons, // required
+      formats: ['ttf', 'eot', 'woff'],
+      normalize: true,
+      fontHeight: 1000,
+      prependUnicode: true
+     }))
+    .pipe(gulp.dest(path.folder.fonts))
     .pipe(browserSync.reload({stream:true}));
 });
 
@@ -120,37 +139,9 @@ gulp.task('svgSprite', function () {
     .pipe(gulp.dest(path.folder.image))
     .pipe(browserSync.reload({stream:true}));
 
-
-    var browsers = gulp.src(path.folder.sprites + '/browsers/*.svg')
-    .pipe(image())
-    .pipe(svgSprite({
-        "mode": {
-            "css": {
-                "spacing": {
-                    "padding": 2
-                },
-                "dest": "./",
-                "layout": "vertical",
-                "sprite": "sprite_browsers.svg",
-                "bust": false,
-                "render": {
-                    "scss": {
-                        "dest": "../../../app/css/utilities/spriteBrowsers.scss",
-                        "template": path.folder.csstemplates + "/sprite-browsers-template.scss"
-                    }
-                }
-            }
-        }
-    }))
-    .pipe(gulp.dest(path.folder.image))
-    .pipe(browserSync.reload({stream:true}));
-
-
-  return merge(basic, browsers);
+  return merge(basic);
 
 });
-
-
 
 gulp.task('pngSprite', ['svgSprite'], function() {
     var basic = gulp.src(path.folder.image + '/sprite.svg')
@@ -159,16 +150,13 @@ gulp.task('pngSprite', ['svgSprite'], function() {
         .pipe(gulp.dest(path.folder.image))
         .pipe(browserSync.reload({stream:true}));
 
-    var browsers = gulp.src(path.folder.image + '/sprite_browsers.svg')
-        .pipe(svg2png())
-        .pipe(image())
-        .pipe(gulp.dest(path.folder.image))
-        .pipe(browserSync.reload({stream:true}));
-
-  return merge(basic, browsers);
+  return merge(basic);
 });
 
 gulp.task('sprite', ['pngSprite']);
+
+
+
 
 gulp.task('browserSync', function() {
   browserSync({
@@ -182,24 +170,27 @@ gulp.task('browserSync', function() {
 });
 
 
+
 // Watch
 gulp.task('watch', function() {
 
-	//watch .scss files
-	gulp.watch(path.file.cssall, ['css']);
+    //watch .scss files
+    gulp.watch(path.file.cssall, ['css']);
 
-	//watch .js files
-	gulp.watch(path.file.jsall, ['js']);
+    //watch .js files
+    gulp.watch(path.file.jsall, ['js']);
 
-	// //watch .pug files
-	gulp.watch(path.file.layoutsall, ['layouts']);
+    // //watch .pug files
+    gulp.watch(path.file.layoutsall, ['layouts']);
 
+    // font icons
+    gulp.watch(path.file.fonticons, ['iconfont']);
 
-	// //svg and png sprites
-	gulp.watch([path.folder.sprites + '/basic/*.svg', path.folder.sprites + '/browsers/*.svg'], ['sprite']);
+    // //svg and png sprites
+    gulp.watch([path.folder.sprites + '/basic/*.svg'], ['sprite']);
 
 });
 
 
 //default
-gulp.task('default', ['css', 'js', 'layouts', 'sprite', 'watch', 'browserSync']);
+gulp.task('default', ['css', 'js', 'layouts', 'iconfont', 'sprite', 'watch', 'browserSync' ]);
